@@ -1,0 +1,239 @@
+{
+  "site": {
+    "name": "Alepo Signal",
+    "tagline": "The future is technology.",
+    "description": "Field notes from the people building carrier-grade AAA, 5G core and digital BSS for operators on five continents.",
+    "url": "https://www.alepo.com",
+    "nav": [
+      { "label": "Solutions", "href": "https://www.alepo.com/solutions" },
+      { "label": "Resources", "href": "https://www.alepo.com/resources" },
+      { "label": "Company", "href": "https://www.alepo.com/company" }
+    ],
+    "stats": [
+      { "value": 20, "suffix": "+", "label": "years in AAA" },
+      { "value": 35, "suffix": "+", "label": "carrier deployments" },
+      { "value": 99.999, "suffix": "%", "label": "availability", "decimals": 3 },
+      { "value": 5, "suffix": "", "label": "continents served" }
+    ],
+    "ticker": ["RADIUS", "Diameter", "HTTP/2", "TACACS+", "5G SBA", "AUSF", "UDM", "SMF", "eSIM", "Wi-Fi 7", "FTTH", "Kubernetes"]
+  },
+  "categories": [
+    { "id": "aaa", "label": "AAA & Security", "hue": "cyan" },
+    { "id": "5g", "label": "5G Core", "hue": "violet" },
+    { "id": "bss", "label": "Digital BSS", "hue": "teal" },
+    { "id": "ai", "label": "AI in Telecom", "hue": "mint" },
+    { "id": "cloud", "label": "Cloud Native", "hue": "indigo" }
+  ],
+  "posts": [
+    {
+      "slug": "tacacs-plus-every-command-authorized",
+      "title": "Every login authenticated. Every command authorized. Every session recorded.",
+      "dek": "Why network device administration is the last unguarded door in most operator networks, and how per-command TACACS+ authorization closes it.",
+      "category": "aaa",
+      "tags": ["TACACS+", "Zero Trust", "NetOps"],
+      "author": { "name": "Priya Raman", "role": "Principal Architect, AAA" },
+      "date": "2026-09-11",
+      "readTime": 7,
+      "featured": true,
+      "seed": 11,
+      "body": [
+        { "type": "p", "text": "Most operators can tell you exactly which subscriber attached to which cell at 03:14 last Tuesday. Far fewer can tell you which engineer typed `no shutdown` on a core router at the same moment. Subscriber access is instrumented to the packet. Administrative access to the network itself often still runs on shared credentials and a hope that nobody keeps a grudge." },
+        { "type": "h2", "text": "The asymmetry nobody budgets for" },
+        { "type": "p", "text": "RADIUS was built for subscribers: one authentication, one accounting stream, thousands of sessions per second. TACACS+ was built for people: separate authentication, authorization and accounting phases, so that every individual command a person issues can be checked before the device runs it. That separation is the whole point. A junior engineer can be allowed to read interface counters but not to change a route map, and the decision happens centrally, not in a per-device config file." },
+        { "type": "callout", "title": "Per-command authorization in one sentence", "text": "The device asks the server \"may this user run this exact command right now?\" and logs the answer either way." },
+        { "type": "h2", "text": "What changes when accountability is individual" },
+        { "type": "list", "items": [
+          "Shared enable passwords disappear, because there is nothing left that needs one.",
+          "Change windows become auditable to the person and the keystroke, not to a shift.",
+          "Anomaly detection gets a real signal: a config-write from an account that has only ever read counters is an alert, not noise.",
+          "Offboarding becomes a single revocation instead of a fleet-wide credential rotation."
+        ] },
+        { "type": "quote", "text": "Alepo eased our network transformation journey. One of its greatest benefits was eliminating network disruptions and lags, helping us improve customer satisfaction and reduce churn rates.", "cite": "Genius Sihlongonyane, CIO, Eswatini Mobile" },
+        { "type": "h2", "text": "Deploying it without a forklift" },
+        { "type": "p", "text": "TACACS+ servers do not need to be heavy. Ours runs as a containerised pod beside the same AAA cluster that already serves RADIUS and Diameter, shares its policy store, and takes its user directory from your existing LDAP or IdP. Routers, switches, firewalls, WLCs and BNGs point at a virtual IP; the cluster handles failover. Rollout is device by device, and the day-one policy can simply mirror today's privilege levels before you tighten them." }
+      ]
+    },
+    {
+      "slug": "aaa-inside-the-5g-service-based-architecture",
+      "title": "Where AAA lives inside a 5G service-based architecture",
+      "dek": "AUSF, UDM and SMF already speak HTTP/2. Here is how a converged AAA pod sits beside them in the same Kubernetes cluster without breaking the legacy RADIUS and Diameter estate.",
+      "category": "5g",
+      "tags": ["5G SBA", "HTTP/2", "Kubernetes", "Diameter"],
+      "author": { "name": "Daniel Okafor", "role": "Head of Core Network Engineering" },
+      "date": "2026-08-28",
+      "readTime": 9,
+      "featured": true,
+      "seed": 27,
+      "body": [
+        { "type": "p", "text": "The 5G core replaced point-to-point interfaces with a service bus. Network functions register with an NRF, discover each other, and talk JSON over HTTP/2. That is a very different world from the Diameter and RADIUS interfaces that still authenticate every fixed-line, Wi-Fi and 4G subscriber an operator has. The question is not whether to keep both. It is how to keep both without running two authentication truths." },
+        { "type": "h2", "text": "One pod, three protocols" },
+        { "type": "p", "text": "In the reference deployment we ship, the AAA pod terminates RADIUS from BNGs and access points, Diameter from the EPC, and HTTP/2 from the 5G core, and resolves all three against a single subscriber profile. The SMF asks for session policy the same way it asks any other NF. The AUSF and UDM keep their standard roles; AAA becomes the bridge that lets a subscriber roam from FTTH to 5G SA without a second identity." },
+        { "type": "list", "items": [
+          "Stateless workers scale horizontally on request rate, not on subscriber count.",
+          "Session state lives in a replicated in-memory store with a persistent write-behind.",
+          "Every protocol front-end is a separate container image, so a Diameter patch never touches the HTTP/2 path.",
+          "Rolling upgrades are ordinary Kubernetes rollouts with readiness gates on live authentication traffic."
+        ] },
+        { "type": "h2", "text": "Why 99.999% is a design constraint, not a marketing number" },
+        { "type": "p", "text": "Five nines is a little over five minutes of downtime a year. At that budget, a single failed upgrade consumes the whole allowance. The architecture above exists so that upgrades, node loss and even a full availability-zone failure are absorbed by the cluster while sessions continue. The measurement that matters is authentication success rate under fault, and that is the number we publish to customers." },
+        { "type": "callout", "title": "Interoperability checklist", "text": "Before cut-over, run the same subscriber through a RADIUS Access-Request, a Diameter AAR and an Nausf request. If the three answers differ, you have found a policy fork to close." }
+      ]
+    },
+    {
+      "slug": "billing-in-real-time-when-the-network-is-sliced",
+      "title": "Billing in real time when the network itself is sliced",
+      "dek": "Network slicing turns a subscription into a bundle of guarantees. A digital BSS has to charge for latency and reliability, not just gigabytes.",
+      "category": "bss",
+      "tags": ["Digital BSS", "Charging", "Network Slicing"],
+      "author": { "name": "Mariana Costa", "role": "Product Director, Digital BSS" },
+      "date": "2026-08-14",
+      "readTime": 6,
+      "featured": true,
+      "seed": 43,
+      "body": [
+        { "type": "p", "text": "A slice for an industrial customer promises a latency ceiling and an availability floor. The moment you promise those, you have to be able to prove them, price them and refund against them. Traditional billing systems rate on volume and duration. They have no field for \"the network was 4 ms slower than agreed between 14:00 and 14:20\"." },
+        { "type": "h2", "text": "From usage records to guarantee records" },
+        { "type": "p", "text": "Our charging function subscribes to slice telemetry the same way it subscribes to usage events. A guarantee record is created when a KPI leaves its agreed band and closed when it returns. Rating rules then price the breach exactly as they would price an overage, only in the other direction. The customer's invoice shows the credit line by line, generated automatically, with no dispute ticket." },
+        { "type": "quote", "text": "Enterprise customers do not want to be told the network was fine. They want to be shown, and they want the invoice to already reflect it.", "cite": "Mariana Costa" },
+        { "type": "h2", "text": "What the product catalogue has to learn" },
+        { "type": "list", "items": [
+          "Guarantees are catalogue items with a price, a measurement source and a remedy.",
+          "A slice offer composes a connectivity product with one or more guarantees.",
+          "Self-care exposes live KPI status, because a customer who can see it will not call about it.",
+          "Partner settlement follows the same records when a slice spans a roaming or wholesale partner."
+        ] }
+      ]
+    },
+    {
+      "slug": "an-agent-in-the-noc-that-knows-when-to-say-no",
+      "title": "An AI agent in the NOC that knows when to say no",
+      "dek": "We gave an assistant read access to AAA logs and policy. The most useful thing it learned was how to decline a change it could not justify.",
+      "category": "ai",
+      "tags": ["AI", "NOC", "Observability"],
+      "author": { "name": "Priya Raman", "role": "Principal Architect, AAA" },
+      "date": "2026-07-30",
+      "readTime": 8,
+      "featured": false,
+      "seed": 58,
+      "body": [
+        { "type": "p", "text": "The pitch for AI in operations is usually speed: find the failing node faster, draft the change faster, close the ticket faster. Our field experience over the past year points somewhere less glamorous. The largest gains came from an assistant that reads authentication telemetry continuously and, when asked to act, explains what it would do and why, then waits." },
+        { "type": "h2", "text": "Reading is safe. Writing is a policy decision." },
+        { "type": "p", "text": "The agent has full read access to AAA accounting, TACACS+ command logs and policy definitions. Its write path goes through the same per-command authorization as a human engineer. When a suggested change falls outside its authorized scope, the answer it gives is a short explanation and a request for a named approver. It does not try to be clever about it. That single boundary is what let the operations team trust it." },
+        { "type": "callout", "title": "Three questions the agent answers well", "text": "Which subscribers are failing EAP and what do they have in common? Which devices received configuration writes outside a change window? Which policy rule is matching more often than it did last week?" },
+        { "type": "h2", "text": "What we would not automate yet" },
+        { "type": "p", "text": "Anything that touches live subscriber policy at scale stays human-approved. The model is good at noticing; it is not yet accountable. The audit trail, on the other hand, is fully automated, and a reviewer can replay every suggestion the agent made alongside the data it saw at the time." }
+      ]
+    },
+    {
+      "slug": "wifi-offload-openroaming-and-the-return-of-the-aaa-server",
+      "title": "Wi-Fi offload, OpenRoaming, and the quiet return of the AAA server",
+      "dek": "Passpoint and OpenRoaming make Wi-Fi feel like cellular. The thing that makes it work is a very fast, very boring RADIUS decision.",
+      "category": "aaa",
+      "tags": ["Wi-Fi", "OpenRoaming", "RADIUS", "EAP"],
+      "author": { "name": "Daniel Okafor", "role": "Head of Core Network Engineering" },
+      "date": "2026-07-09",
+      "readTime": 5,
+      "featured": false,
+      "seed": 71,
+      "body": [
+        { "type": "p", "text": "When a phone joins an OpenRoaming hotspot in an airport, the operator that owns the subscriber gets an EAP request from a network it has never seen before, via a federation it trusts, and has a few hundred milliseconds to decide. That decision is authentication, policy and accounting in one go. It is exactly what the AAA server was built for two decades ago, now at a scale and a latency budget nobody planned for then." },
+        { "type": "h2", "text": "Latency budgets across a federation" },
+        { "type": "p", "text": "Our benchmark for a full EAP-AKA exchange, including the HSS or UDM lookup, is under 40 ms at the server. The rest of the budget is consumed by the federation path. We publish that number because it is the one that decides whether the join feels instant or feels like Wi-Fi." },
+        { "type": "list", "items": [
+          "Identity: EAP-AKA or EAP-TLS bound to the SIM or a provisioned certificate.",
+          "Policy: the same bandwidth and content rules the subscriber has on cellular.",
+          "Accounting: interim updates that let the BSS rate Wi-Fi and cellular as one bundle.",
+          "Security: RadSec everywhere, because federation traffic crosses networks you do not own."
+        ] }
+      ]
+    },
+    {
+      "slug": "esim-onboarding-in-ninety-seconds",
+      "title": "eSIM onboarding in ninety seconds, end to end",
+      "dek": "From a QR code to a rated, authenticated session. A walkthrough of the BSS and AAA handshakes that make instant activation possible.",
+      "category": "bss",
+      "tags": ["eSIM", "Onboarding", "Digital BSS"],
+      "author": { "name": "Mariana Costa", "role": "Product Director, Digital BSS" },
+      "date": "2026-06-20",
+      "readTime": 6,
+      "featured": false,
+      "seed": 84,
+      "body": [
+        { "type": "p", "text": "Ninety seconds is the point at which a new subscriber stops feeling like they are waiting. Everything in the activation path is designed against that clock: the order, the profile download, the first attach and the first rated event." },
+        { "type": "h2", "text": "The four handshakes" },
+        { "type": "list", "items": [
+          "Order to entitlement: the BSS creates the subscription and pushes an entitlement to the SM-DP+.",
+          "Profile download: the device fetches the eSIM profile; the BSS is notified on install.",
+          "First attach: the core asks AAA, AAA already has the profile, the answer is yes.",
+          "First charge: the charging function opens a balance and the self-care app shows it live."
+        ] },
+        { "type": "p", "text": "Each step publishes an event. If any one of them takes longer than its budget, the onboarding dashboard shows the stall in real time, and the subscriber's app shows honest progress instead of a spinner." }
+      ]
+    },
+    {
+      "slug": "running-aaa-on-kubernetes-what-we-learned-in-production",
+      "title": "Running carrier AAA on Kubernetes: what production taught us",
+      "dek": "Stateless was easy. Sessions, licensing and traffic that never stops were not. Notes from three years of cloud-native AAA in live networks.",
+      "category": "cloud",
+      "tags": ["Kubernetes", "Cloud Native", "SRE"],
+      "author": { "name": "Daniel Okafor", "role": "Head of Core Network Engineering" },
+      "date": "2026-05-29",
+      "readTime": 10,
+      "featured": false,
+      "seed": 96,
+      "body": [
+        { "type": "p", "text": "Authentication traffic has no off-peak. Every maintenance action happens while thousands of requests per second are in flight. That single fact shaped every decision below." },
+        { "type": "h2", "text": "Readiness is not the same as correctness" },
+        { "type": "p", "text": "A pod that answers a health check is not necessarily a pod that answers RADIUS correctly. Our readiness gate sends a synthetic Access-Request through the full stack, including the policy engine and the subscriber store, and only then admits the pod to the service. It added seconds to rollouts and removed an entire class of incidents." },
+        { "type": "callout", "title": "The rule we enforce", "text": "No pod receives live traffic until it has authenticated a canary subscriber end to end." },
+        { "type": "h2", "text": "Session state wants to live somewhere" },
+        { "type": "p", "text": "Stateless workers are the goal, but accounting sessions are inherently stateful. We keep them in a replicated in-memory store with write-behind to persistent storage. Losing a worker loses nothing; losing a store replica costs a re-sync, not a session." }
+      ]
+    },
+    {
+      "slug": "diameter-is-not-dead",
+      "title": "Diameter is not dead. It is load-bearing.",
+      "dek": "4G will carry the majority of traffic for years. A pragmatic look at keeping Diameter routing, PCRF and OCS healthy while the 5G core grows beside them.",
+      "category": "5g",
+      "tags": ["Diameter", "PCRF", "4G", "Migration"],
+      "author": { "name": "Priya Raman", "role": "Principal Architect, AAA" },
+      "date": "2026-05-08",
+      "readTime": 7,
+      "featured": false,
+      "seed": 105,
+      "body": [
+        { "type": "p", "text": "It is tempting to treat the EPC as legacy and starve it of attention. The subscribers on it will notice first. Diameter interfaces such as Gx, Gy and S6a will carry policy and charging for the majority of sessions for the rest of this decade in most markets." },
+        { "type": "h2", "text": "Converge the data, not the protocol" },
+        { "type": "p", "text": "The mistake is to build a second policy store for 5G. The right move is one policy and one subscriber profile, exposed over Diameter to the EPC and over HTTP/2 to the 5G core. Then a plan change made in the BSS lands in both worlds at once, and the migration becomes a traffic shift rather than a data migration." },
+        { "type": "list", "items": [
+          "Keep the DRA, and make it observable down to the AVP.",
+          "Run PCRF and PCF from the same policy definitions.",
+          "Rate 4G and 5G usage in one charging function so bundles stay honest.",
+          "Test failover of Diameter peers as often as you test Kubernetes node loss."
+        ] }
+      ]
+    },
+    {
+      "slug": "fraud-signals-hidden-in-accounting-records",
+      "title": "The fraud signals hiding in ordinary accounting records",
+      "dek": "Interim accounting updates are the most under-used dataset in an operator. Here is what a simple model found in them.",
+      "category": "ai",
+      "tags": ["Fraud", "Accounting", "Analytics"],
+      "author": { "name": "Mariana Costa", "role": "Product Director, Digital BSS" },
+      "date": "2026-04-17",
+      "readTime": 5,
+      "featured": false,
+      "seed": 120,
+      "body": [
+        { "type": "p", "text": "Every session generates a stream of interim accounting records: bytes in, bytes out, session time, the NAS it came from. Individually they are dull. Together they describe how a subscriber behaves, and behaviour is what fraud changes first." },
+        { "type": "h2", "text": "Three patterns worth a rule" },
+        { "type": "list", "items": [
+          "A subscriber whose sessions start from two NAS devices 400 km apart within a minute.",
+          "A device that reports upstream volume far above the plan norm for weeks, then stops.",
+          "Accounts that authenticate successfully thousands of times a day and never pass traffic."
+        ] },
+        { "type": "p", "text": "None of these needs a large model. They need the accounting stream to land somewhere queryable within seconds, and a policy engine that can act on the result. Both are already part of a modern AAA platform." }
+      ]
+    }
+  ]
+}

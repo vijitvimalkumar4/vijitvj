@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alepo Signal</title>
+  <meta name="description" content="Field notes from the people building carrier-grade AAA, 5G core and digital BSS for operators on five continents.">
+  <meta name="theme-color" content="#080b1f">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>
+    // Apply a remembered theme before first paint to avoid a flash.
+    try { var t = localStorage.getItem('alepo-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#6d4dff"/>
+        <stop offset="1" stop-color="#2d1d8f"/>
+      </linearGradient>
+      <linearGradient id="traceFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#55cbe3" stop-opacity="0.35"/>
+        <stop offset="1" stop-color="#55cbe3" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="logo" href="#/" aria-label="Alepo Signal home">
+        <!-- Alepo mark: signal arcs + wordmark. Swap for the official SVG when exporting. -->
+        <svg viewBox="0 0 250 64" role="img" aria-label="Alepo">
+          <g fill="none" stroke="url(#logoGrad)" stroke-width="5" stroke-linecap="round">
+            <path d="M8 40a22 22 0 0 1 44 0"/>
+            <path d="M18 40a12 12 0 0 1 24 0"/>
+          </g>
+          <circle cx="30" cy="40" r="5.5" fill="url(#logoGrad)"/>
+          <g class="wordmark">
+            <path d="M18 62 L27 36 L33 36 L42 62 L36.5 62 L30 42.5 L23.5 62 Z"/>
+            <path d="M50 36h5.5v21H70v5H50z"/>
+            <path d="M78 36h20v5H83.5v3.4H97v4.8H83.5V57H98v5H78z"/>
+            <path d="M106 36h13c6.2 0 10 3.4 10 8.6 0 5.3-3.8 8.7-10 8.7h-7.5V62H106zm5.5 5v7.3h7c2.9 0 4.8-1.3 4.8-3.6 0-2.4-1.9-3.7-4.8-3.7z"/>
+            <path d="M147 35.4c8.4 0 14 5.6 14 13.6s-5.6 13.6-14 13.6-14-5.6-14-13.6 5.6-13.6 14-13.6zm0 5.1c-5.1 0-8.3 3.4-8.3 8.5s3.2 8.5 8.3 8.5 8.3-3.4 8.3-8.5-3.2-8.5-8.3-8.5z"/>
+          </g>
+        </svg>
+        <span class="blog-tag">SIGNAL</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary"></nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Toggle color theme">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <a class="btn btn-primary" data-magnetic href="https://www.alepo.com/contact">Talk to an engineer
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================== HOME VIEW ====================== -->
+  <main class="view is-active" id="viewHome" data-view="home">
+    <section class="hero">
+      <canvas class="mesh" id="mesh" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div>
+          <p class="mono eyebrow" data-reveal>Alepo Signal · Field notes · Vol. 2026</p>
+          <h1 id="heroTitle"><span class="word"><span>The</span></span> <span class="word"><span>future</span></span> <span class="word"><span class="grad-text">is</span></span> <span class="word"><span class="grad-text">technology.</span></span></h1>
+          <p class="lede" data-reveal id="heroLede"></p>
+          <div class="cta" data-reveal>
+            <a class="btn btn-primary" data-magnetic href="#latest">Read the latest
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+            </a>
+            <a class="btn" data-magnetic href="#subscribe">Subscribe</a>
+          </div>
+        </div>
+        <aside class="hero-aside" aria-label="Live network signals">
+          <div class="signal-card" data-reveal>
+            <span class="mono live">Auth requests · live</span>
+            <div class="big"><span id="rps">0</span><small>req/s</small></div>
+            <svg class="trace" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true">
+              <path class="area" id="traceArea" d=""/>
+              <path id="traceLine" d=""/>
+            </svg>
+          </div>
+          <div class="signal-card" data-reveal>
+            <span class="mono">Success rate · 30 d</span>
+            <div class="big"><span id="sr">99.999</span><small>%</small></div>
+            <p class="mono" style="color:var(--muted);margin-top:14px">RADIUS · Diameter · HTTP/2</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker"></div>
+    </div>
+
+    <section class="section featured" aria-labelledby="featuredTitle">
+      <div class="pin" id="featuredPin">
+        <div class="rail" id="featuredRail">
+          <div class="rail-intro">
+            <p class="mono eyebrow">Featured</p>
+            <h2 id="featuredTitle">Three stories the network is telling this quarter.</h2>
+            <p>Long reads from the architects and product leads shipping Alepo's AAA, 5G core and BSS into live operator networks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Alepo at a glance">
+      <div class="wrap grid" id="stats"></div>
+    </section>
+
+    <section class="section" id="latest" aria-labelledby="latestTitle">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="mono eyebrow" data-reveal>Latest</p>
+            <h2 id="latestTitle" data-reveal>Everything we have learned in production.</h2>
+          </div>
+          <p data-reveal>Filter by practice area, or search across every post. Content is served from a single JSON feed so it drops straight into a CMS.</p>
+        </div>
+        <div class="toolbar" data-reveal>
+          <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+          <label class="search">
+            <span class="sr-only">Search posts</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input type="search" id="search" placeholder="Search RADIUS, slicing, eSIM…" autocomplete="off">
+          </label>
+        </div>
+        <div class="posts" id="posts" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" id="subscribe" aria-labelledby="subTitle">
+      <div class="wrap">
+        <div class="subscribe" data-reveal>
+          <div class="orbit"></div>
+          <div>
+            <p class="mono eyebrow">Newsletter</p>
+            <h2 id="subTitle">One signal a month. No noise.</h2>
+            <p>Deployment notes, protocol deep dives and the occasional post-incident review, written by the engineers involved.</p>
+          </div>
+          <div>
+            <form id="subForm" novalidate>
+              <label class="sr-only" for="subEmail">Work email</label>
+              <input type="email" id="subEmail" name="email" placeholder="you@operator.com" required>
+              <button class="btn btn-primary" data-magnetic type="submit">Subscribe</button>
+            </form>
+            <p class="note" id="subNote">We store one field and send one email a month. Unsubscribe in one click.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== ARTICLE VIEW ====================== -->
+  <main class="view" id="viewArticle" data-view="article" aria-live="polite">
+    <section class="article-hero">
+      <div class="wrap">
+        <a class="back" href="#/">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+          All posts
+        </a>
+        <p class="mono eyebrow" id="aCategory" style="margin-top:32px"></p>
+        <h1 id="aTitle"></h1>
+        <p class="dek" id="aDek"></p>
+        <div class="byline">
+          <div class="avatar" id="aAvatar"></div>
+          <div><strong id="aAuthor"></strong><span id="aRole"></span></div>
+          <span class="sep"></span>
+          <div><strong id="aDate"></strong><span id="aRead"></span></div>
+        </div>
+        <div class="article-art"><canvas id="aArt" aria-hidden="true"></canvas></div>
+      </div>
+    </section>
+    <div class="wrap article-layout">
+      <aside class="toc" aria-label="On this page">
+        <h4>On this page</h4>
+        <ol id="toc"></ol>
+        <div class="share">
+          <button class="icon-btn" type="button" id="copyLink" aria-label="Copy link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/></svg>
+          </button>
+          <a class="icon-btn" id="shareX" href="#" target="_blank" rel="noopener" aria-label="Share on X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.3l-7.2 8.3L22 21h-6.6l-5.2-6.8L4.3 21H1l7.7-8.8L0.6 3h6.8l4.7 6.2L17.5 3zm-1.2 16h1.8L6.7 4.9H4.8L16.3 19z"/></svg>
+          </a>
+          <a class="icon-btn" id="shareLi" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.9 8.5H3.6V21h3.3V8.5zM5.3 3a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8zM21 13.3c0-3.6-1.9-5.2-4.5-5.2-2 0-3 1.1-3.5 1.9V8.5H9.7V21H13v-6.6c0-1.7.6-2.9 2.2-2.9 1.5 0 2.1 1.2 2.1 2.9V21H21v-7.7z"/></svg>
+          </a>
+        </div>
+      </aside>
+      <article>
+        <div class="prose" id="aBody"></div>
+        <div class="article-foot">
+          <span id="aTags"></span>
+          <a class="btn" href="#/" data-magnetic>Back to all posts</a>
+        </div>
+      </article>
+    </div>
+    <section class="section" aria-labelledby="relatedTitle" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="mono eyebrow">Keep reading</p>
+            <h2 id="relatedTitle">Related signals</h2>
+          </div>
+        </div>
+        <div class="posts" id="related"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>
+        <a class="logo" href="#/" aria-label="Alepo">
+          <svg viewBox="0 0 250 64" role="img" aria-label="Alepo" style="height:26px">
+            <g fill="none" stroke="url(#logoGrad)" stroke-width="5" stroke-linecap="round"><path d="M8 40a22 22 0 0 1 44 0"/><path d="M18 40a12 12 0 0 1 24 0"/></g>
+            <circle cx="30" cy="40" r="5.5" fill="url(#logoGrad)"/>
+            <g class="wordmark"><path d="M18 62 L27 36 L33 36 L42 62 L36.5 62 L30 42.5 L23.5 62 Z"/><path d="M50 36h5.5v21H70v5H50z"/><path d="M78 36h20v5H83.5v3.4H97v4.8H83.5V57H98v5H78z"/><path d="M106 36h13c6.2 0 10 3.4 10 8.6 0 5.3-3.8 8.7-10 8.7h-7.5V62H106zm5.5 5v7.3h7c2.9 0 4.8-1.3 4.8-3.6 0-2.4-1.9-3.7-4.8-3.7z"/><path d="M147 35.4c8.4 0 14 5.6 14 13.6s-5.6 13.6-14 13.6-14-5.6-14-13.6 5.6-13.6 14-13.6zm0 5.1c-5.1 0-8.3 3.4-8.3 8.5s3.2 8.5 8.3 8.5 8.3-3.4 8.3-8.5-3.2-8.5-8.3-8.5z"/></g>
+          </svg>
+        </a>
+        <p style="margin-top:16px;max-width:30em" id="footTagline"></p>
+      </div>
+      <div><h4>Solutions</h4><ul><li><a href="https://www.alepo.com/solutions/aaa">Converged AAA</a></li><li><a href="https://www.alepo.com/solutions/tacacs">TACACS+ Server</a></li><li><a href="https://www.alepo.com/solutions/5g">5G Core Functions</a></li><li><a href="https://www.alepo.com/solutions/bss">Digital BSS</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#/">Blog</a></li><li><a href="https://www.alepo.com/resources">Whitepapers</a></li><li><a href="https://www.alepo.com/resources">Case studies</a></li><li><a href="https://www.alepo.com/resources">Webinars</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="https://www.alepo.com/company">About</a></li><li><a href="https://www.alepo.com/careers">Careers</a></li><li><a href="https://www.alepo.com/contact">Contact</a></li></ul></div>
+      <div class="legal"><span>© <span id="year"></span> Alepo Technologies Inc. All rights reserved.</span><span class="mono">Built for 2030 · GSAP · Lenis · Motion · JSON feed</span></div>
+    </div>
+  </footer>
+
+  <!-- Data fallback for hosts that block fetch(); regenerated from data/posts.json by scripts/build-data.mjs -->
+  <script src="data/posts.js"></script>
+  <!-- Motion libraries, vendored from npm (gsap 3.12.5, lenis 1.1.18, motion 11.11.17) -->
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/vendor/motion.min.js"></script>
+  <script src="assets/js/art.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
