@@ -103,7 +103,9 @@ Prose on the pages still uses the brand names, as the blueprint asks.
 
 `dist/alepo-website.html` is the whole site (98 pages, English and Spanish) in one 5.7 MB HTML file. Its images, styles and scripts are embedded, and the pages are compressed inside it. It opens from disk with no server, so you can email it or share it for review. Pages switch through the address bar's `#!` part, for example `alepo-website.html#!/products/aaa-server/`.
 
-Forms in this file say they are an offline copy and do not send. Fonts load from Google Fonts when online. Rebuild it after `build.mjs`:
+`dist/alepo-original-design.html` is the untouched original design (`alepo-redesign/`, 43 pages in each language, 9.3 MB) built the same way, for side-by-side comparison. Build it with `python3 alepo-site/build/standalone.py --src alepo-redesign --out alepo-site/dist/alepo-original-design.html`.
+
+Forms in these files say they are an offline copy and do not send. Fonts load from Google Fonts when online. Rebuild it after `build.mjs`:
 
 ```bash
 python3 alepo-site/build/standalone.py
