@@ -221,7 +221,8 @@ window.__alepoLead = function (cfg, doc) {
     const sb = el('button', btnS + ' align-self: flex-start;', T('Email me the data sheet', 'Enviarme la ficha técnica')); sb.type = 'submit';
     f.append(field, hid, consentLine(), sb);
     dc.appendChild(f);
-    wire(f, 'datasheet', { success: T('Thanks. Our team will email you the data sheet.', 'Gracias. Nuestro equipo le enviará la ficha técnica por correo.') });
+    wire(f, 'datasheet', { success: T('Thanks. The data sheet is on its way to your inbox.', 'Gracias. La ficha técnica va camino a su bandeja de entrada.') });
+    f.setAttribute('data-msg-success-manual', T('Thanks. Our team will email you the data sheet.', 'Gracias. Nuestro equipo le enviará la ficha técnica por correo.'));
     wrap.append(pc, dc); sec.appendChild(wrap);
     const lastCta = [...main.children].pop();
     main.insertBefore(sec, lastCta);

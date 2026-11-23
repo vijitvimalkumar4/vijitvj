@@ -154,7 +154,7 @@ These come from the audit doc "Alepo.com redesign: UX and lead-generation audit"
 | `PORT` | Port to listen on (default 8080) |
 | `LEADS_DIR` | Where leads are stored (default `alepo-site/data`, which is git-ignored) |
 | `ADMIN_TOKEN` | Required to download leads; with no token set the download is switched off |
-| `LEAD_WEBHOOK_URL` | Optional notification for each new lead |
+| `LEAD_WEBHOOK_URL` | Optional notification for each new lead, and for data sheets the team must send by hand |
 | `TRUST_PROXY=1` | Read the client IP from `X-Forwarded-For` behind a load balancer |
 
 **Download leads** as a CSV (newest first; opens in Excel). The export prefixes values starting with `=`, `+`, `-` or `@` with `'`, so spreadsheets never run them as formulas.
@@ -165,9 +165,29 @@ curl -H "Authorization: Bearer $ADMIN_TOKEN" https://alepo.com/api/leads.csv -o 
 
 The server also applies the 301 redirects from `_redirects`, serves the English or Spanish 404 page, and sends basic security headers.
 
-**Still manual:**
-- Data-sheet requests are recorded, but nothing emails the PDF yet. Sales sends it, alerted by the webhook.
-- Back up `data/leads.ndjson` with the server's normal backups.
+**Data sheet emails.** When someone asks for a data sheet, the server emails them a link to the product's PDF, in their language. The email has a button to the PDF, a link to request a demo for that product, and Alepo's address. It is built in `server/datasheets.mjs` and sent by `server/mailer.mjs`, both without dependencies.
+
+To switch it on:
+
+1. Put each PDF in `build/static/datasheets/en/<slug>.pdf` (Spanish versions in `.../es/<slug>.pdf`), then rebuild. If a Spanish file is missing, the English one is sent with a one-line note. The build and the server both list products that have no PDF yet. The slugs are the product URLs: aaa-server, tacacs-server, wifi-offload-calling, subscriber-data-management, digital-bss, bss-in-a-box, online-charging, policy-control, prepaid-offers-vouchers, mediation-revenue-assurance, collections-dunning, partner-mvno-settlement, interconnect-roaming-settlement, service-provisioning, device-management, crm, self-care-portal, self-care-app, dealer-mobile-pos, ai-virtual-agent, ai-agent-assist.
+2. Give the server a mailbox to send from. Use one of these:
+
+| Option | Variables |
+| --- | --- |
+| Microsoft 365 through Graph (recommended for Alepo) | `MS_TENANT_ID`, `MS_CLIENT_ID`, `MS_CLIENT_SECRET` from an Entra app registration with the **Mail.Send** application permission (limit it to the sending mailbox with an application access policy) |
+| Any SMTP service (Microsoft 365, Google Workspace, SendGrid, Amazon SES...) | `SMTP_HOST`, `SMTP_PORT` (587 STARTTLS or 465 TLS), `SMTP_USER`, `SMTP_PASS` |
+| Both | `MAIL_FROM` (the sending mailbox, for example datasheets@alepo.com), `MAIL_FROM_NAME` (default "Alepo"), `MAIL_REPLY_TO` (for example sales@alepo.com; the email then invites a reply), `SITE_URL` (default https://alepo.com) |
+
+3. Make sure the sending domain's SPF and DKIM records cover the service you chose, so the emails reach the inbox.
+
+**How delivery behaves:**
+- **On the page:** the visitor sees "on its way to your inbox" when an email is being sent. Otherwise they see "our team will email you".
+- **Manual fallback:** if there is no PDF, no mailbox is configured, or the product is unknown, the team gets a webhook alert to send it by hand.
+- **Retries:** a failed send is retried after 1 and 5 minutes. After the last try the team is alerted with the address and the PDF link.
+- **Abuse limits:** the same address gets the same data sheet at most once a day, and at most 5 data sheets a day; past that, the team is asked to check. The form's IP limit of 8 an hour still applies.
+- **Records:** every outcome is written to `data/mail.ndjson` (sent, failed, manual or duplicate). The email links to the PDF rather than attaching it, which keeps it small and less likely to be marked as spam.
+
+**Still manual:** back up the `data/` folder with the server's normal backups.
 
 ## Decisions taken, to confirm
 

@@ -1,0 +1,86 @@
+{
+  "aaa-server": {
+    "label": "AAA Server",
+    "url": "/products/aaa-server/"
+  },
+  "service-provisioning": {
+    "label": "Service Provisioning and Activation",
+    "url": "/products/service-provisioning/"
+  },
+  "tacacs-server": {
+    "label": "TACACS+ Server",
+    "url": "/products/tacacs-server/"
+  },
+  "wifi-offload-calling": {
+    "label": "Wi-Fi Offload and Calling",
+    "url": "/products/wifi-offload-calling/"
+  },
+  "device-management": {
+    "label": "Device Management (TR-069 and TR-369)",
+    "url": "/products/device-management/"
+  },
+  "subscriber-data-management": {
+    "label": "Subscriber Data Management (HSS)",
+    "url": "/products/subscriber-data-management/"
+  },
+  "digital-bss": {
+    "label": "Digital BSS",
+    "url": "/products/digital-bss/"
+  },
+  "online-charging": {
+    "label": "Online Charging (OCS)",
+    "url": "/products/online-charging/"
+  },
+  "policy-control": {
+    "label": "Policy Control (PCRF)",
+    "url": "/products/policy-control/"
+  },
+  "prepaid-offers-vouchers": {
+    "label": "Prepaid Offers and Vouchers",
+    "url": "/products/prepaid-offers-vouchers/"
+  },
+  "collections-dunning": {
+    "label": "Collections and Dunning",
+    "url": "/products/collections-dunning/"
+  },
+  "partner-mvno-settlement": {
+    "label": "Partner and MVNO Settlement",
+    "url": "/products/partner-mvno-settlement/"
+  },
+  "dealer-mobile-pos": {
+    "label": "Dealer App and Mobile POS",
+    "url": "/products/dealer-mobile-pos/"
+  },
+  "crm": {
+    "label": "CRM and Customer Care",
+    "url": "/products/crm/"
+  },
+  "self-care-portal": {
+    "label": "Self-Care Portal",
+    "url": "/products/self-care-portal/"
+  },
+  "self-care-app": {
+    "label": "Self-Care Mobile App",
+    "url": "/products/self-care-app/"
+  },
+  "bss-in-a-box": {
+    "label": "BSS in a Box for MVNOs",
+    "url": "/products/bss-in-a-box/"
+  },
+  "interconnect-roaming-settlement": {
+    "label": "Interconnect and Roaming Settlement",
+    "url": "/products/interconnect-roaming-settlement/"
+  },
+  "mediation-revenue-assurance": {
+    "label": "Mediation and Revenue Assurance",
+    "url": "/products/mediation-revenue-assurance/"
+  },
+  "ai-virtual-agent": {
+    "label": "AI Virtual Agent",
+    "url": "/products/ai-virtual-agent/"
+  },
+  "ai-agent-assist": {
+    "label": "AI Agent Assist",
+    "url": "/products/ai-agent-assist/"
+  }
+}

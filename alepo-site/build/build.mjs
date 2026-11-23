@@ -188,6 +188,14 @@ const llms = ['# Alepo', '', '> AAA and BSS software for telecom operators and I
 for (const j of indexable) llms.push(`- [${j.cfg.h1}](${ORIGIN}${j.cfg.alt.en}): ${j.cfg.meta}`);
 fs.writeFileSync(path.join(OUT, 'llms.txt'), llms.join('\n') + '\n');
 fs.writeFileSync(path.join(HERE, 'last-build.json'), JSON.stringify(report, null, 1));
+// products the data sheet emails can name (slug -> label), for alepo-site/server
+const productsForServer = {};
+for (const [file, info] of Object.entries(urls.pages)) if (file.startsWith('p-')) productsForServer[info.url.split('/').filter(Boolean).pop()] = { label: catalog.products[file].label, url: info.url };
+fs.writeFileSync(path.join(HERE, '..', 'server', 'products.json'), JSON.stringify(productsForServer, null, 2) + '\n');
+const pdfDir = path.join(HERE, 'static', 'datasheets', 'en');
+const missingPdf = Object.keys(productsForServer).filter(s => !fs.existsSync(path.join(pdfDir, s + '.pdf')));
+if (missingPdf.length) console.log(`data sheet PDFs missing (${missingPdf.length}/${Object.keys(productsForServer).length}): put them in build/static/datasheets/en/<slug>.pdf`);
+
 // descriptive WebP images with fixed dimensions (blueprint 6.1)
 const { execFileSync } = await import('node:child_process');
 process.stdout.write(execFileSync('python3', [path.join(HERE, 'images.py')]).toString().split('\n')[0] + '\n');

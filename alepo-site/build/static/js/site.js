@@ -50,10 +50,11 @@
       if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = form.dataset.msgSending; }
       if (status) status.textContent = '';
       fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload(form)) })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); return r; })
-        .then(function () {
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
           if (form.dataset.thanks) { location.href = form.dataset.thanks; return; }
-          if (status) status.textContent = form.dataset.msgSuccess || '';
+          var msg = res && res.delivery === 'manual' && form.dataset.msgSuccessManual ? form.dataset.msgSuccessManual : form.dataset.msgSuccess;
+          if (status) status.textContent = msg || '';
           form.querySelectorAll('input, button, select, textarea').forEach(function (i) { i.disabled = true; });
         })
         .catch(function () {

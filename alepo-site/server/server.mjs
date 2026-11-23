@@ -8,11 +8,16 @@
 //   LEAD_WEBHOOK_URL  optional: each new lead is POSTed here as {"text": "..."}
 //                     (works with a Microsoft Teams or Slack incoming webhook)
 //   TRUST_PROXY=1     use X-Forwarded-For for the client IP when behind a load balancer
+//   Data sheet emails (see datasheets.mjs and mailer.mjs):
+//   MAIL_FROM, MAIL_FROM_NAME, MAIL_REPLY_TO, SITE_URL, and either SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS
+//   or MS_TENANT_ID/MS_CLIENT_ID/MS_CLIENT_SECRET (Microsoft 365 through Graph)
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { createDatasheets } from './datasheets.mjs';
+import { mailConfigured, transportName } from './mailer.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.resolve(HERE, '..', 'public');
@@ -22,6 +27,8 @@ const PORT = Number(process.env.PORT || 8080);
 const ADMIN_TOKEN = process.env.ADMIN_TOKEN || '';
 const WEBHOOK = process.env.LEAD_WEBHOOK_URL || '';
 fs.mkdirSync(LEADS_DIR, { recursive: true });
+const postWebhook = text => { if (!WEBHOOK) return; fetch(WEBHOOK, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ text }) }).catch(err => console.error('webhook failed:', err.message)); };
+const datasheets = createDatasheets({ publicDir: PUBLIC, here: HERE, logFile: path.join(LEADS_DIR, 'mail.ndjson'), alert: text => { console.warn(text.split('\n')[0]); postWebhook(text); } });
 
 // ---------- form rules ----------
 const KINDS = {
@@ -71,15 +78,15 @@ function store(kind, f, req) {
   fs.appendFileSync(LEADS_FILE, JSON.stringify(lead) + '\n', { mode: 0o600 });
   return lead;
 }
-function notify(lead) {
+function notify(lead, delivery) {
   if (!WEBHOOK) return;
   const lines = [`New ${KINDS[lead.form].label} from alepo.com`, `${lead.fullname || '(no name)'} <${lead.email}>${lead.company ? ', ' + lead.company : ''}`];
   if (lead.requestLabel) lines.push(`Request: ${lead.requestLabel}`);
   if (lead.product) lines.push(`Product: ${lead.product}`);
+  if (delivery === 'email') lines.push('Data sheet: emailed automatically');
   if (lead.message) lines.push('', lead.message.slice(0, 1000));
   lines.push('', `Page: ${lead.page}`);
-  fetch(WEBHOOK, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ text: lines.join('\n') }) })
-    .catch(err => console.error('webhook failed:', err.message));
+  postWebhook(lines.join('\n'));
 }
 function csv() {
   const cols = ['receivedAt', 'form', 'fullname', 'email', 'company', 'requestLabel', 'product', 'message', 'lang', 'page', 'consentText', 'id'];
@@ -167,9 +174,10 @@ const server = http.createServer(async (req, res) => {
       const errors = validate(kind, f);
       if (Object.keys(errors).length) return isJson ? json(res, 422, { ok: false, errors }) : back(false);
       const lead = store(kind, f, req);
-      notify(lead);
+      const delivery = kind === 'datasheet' ? datasheets.handle(lead) : undefined;
+      notify(lead, delivery);
       console.log(`lead ${lead.id} ${kind} ${lead.email}`);
-      return isJson ? json(res, 200, { ok: true, id: lead.id }) : back(true);
+      return isJson ? json(res, 200, { ok: true, id: lead.id, ...(delivery ? { delivery } : {}) }) : back(true);
     }
     if (url.pathname === '/api/leads.csv') {
       const auth = String(req.headers.authorization || '').replace(/^Bearer\s+/i, '') || url.searchParams.get('token') || '';
@@ -189,4 +197,9 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, () => console.log(`Alepo site on http://localhost:${PORT}  (leads -> ${LEADS_FILE})`));
+server.listen(PORT, () => {
+  console.log(`Alepo site on http://localhost:${PORT}  (leads -> ${LEADS_FILE})`);
+  const missing = Object.keys(datasheets.products).filter(slug => !datasheets.sheet(slug, 'en'));
+  console.log(mailConfigured() ? `Data sheet emails: on (${transportName()}, from ${process.env.MAIL_FROM})` : 'Data sheet emails: off (set MAIL_FROM plus SMTP_* or MS_* variables); the team is alerted instead');
+  if (missing.length) console.log(`Data sheet PDFs missing for ${missing.length} of ${Object.keys(datasheets.products).length} products: ${missing.join(', ')}`);
+});
