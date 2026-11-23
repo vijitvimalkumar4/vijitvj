@@ -13,6 +13,8 @@
 //                     the new build does not answer and the redirect map does not move (blog posts, news items,
 //                     library items, /credits/, /legal-agreements/, WordPress uploads and admin, ?p= links) is passed
 //                     through to it, so every old alepo.com URL keeps working. Unset = those URLs show the 404 page.
+//   NOINDEX=1         staging: every response carries X-Robots-Tag: noindex and /robots.txt disallows everything
+//                     (leave it unset in production)
 //   LEADS_RETENTION_DAYS  delete leads older than this many days (default 730); checked at start and daily
 //   LEADS_BACKUP_DAYS     keep this many daily backups in LEADS_DIR/backup (default 30)
 //   Data sheet emails (see datasheets.mjs and mailer.mjs):
@@ -72,6 +74,8 @@ function validate(kind, f) {
 
 // ---------- abuse limits: 8 submissions per IP per 10 minutes ----------
 const hits = new Map();
+// the page a form was sent from, when it is this site (no-JavaScript error fallback goes back there)
+function refPath(req) { try { const r = new URL(req.headers.referer); return r.host === req.headers.host ? r.pathname : ''; } catch { return ''; } }
 function limited(ip) {
   const now = Date.now(), win = 10 * 60 * 1000;
   const list = (hits.get(ip) || []).filter(t => now - t < win);
@@ -241,7 +245,14 @@ function serveStatic(req, res, pathname) {
 // ---------- server ----------
 const json = (res, status, body) => { res.writeHead(status, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', ...SECURITY }); res.end(JSON.stringify(body)); };
 
+const NOINDEX = process.env.NOINDEX === '1';
 const server = http.createServer(async (req, res) => {
+  // health check for the load balancer or uptime monitor
+  if (req.url === '/healthz') { res.writeHead(200, { 'content-type': 'text/plain', 'cache-control': 'no-store' }); return res.end('ok'); }
+  if (NOINDEX) {
+    res.setHeader('x-robots-tag', 'noindex, nofollow');
+    if (req.url === '/robots.txt') { res.writeHead(200, { 'content-type': 'text/plain; charset=utf-8' }); return res.end('User-agent: *\nDisallow: /\n'); }
+  }
   if (FORCE_HTTPS && String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'http') {
     res.writeHead(301, { location: `https://${req.headers.host}${req.url}` }); return res.end();
   }
@@ -259,7 +270,7 @@ const server = http.createServer(async (req, res) => {
       const f = clean(parse(req, await readBody(req)));
       const back = (ok) => { // no-JavaScript fallback: answer with a page, not JSON
         const safe = p => (/^\/[a-z0-9\-/]*$/i.test(p) ? p : '/');
-        const target = ok ? safe(f.thanks || (f.lang === 'es' ? '/es/contact-us/thank-you/' : '/contact-us/thank-you/')) : safe(new URL(f.page || '/', 'http://x').pathname) + '?form-error=1';
+        const target = ok ? safe(f.thanks || (f.lang === 'es' ? '/es/contact-us/thank-you/' : '/contact-us/thank-you/')) : safe(new URL(f.page || refPath(req) || '/', 'http://x').pathname) + '?form-error=1';
         res.writeHead(303, { location: target, ...SECURITY }); res.end();
       };
       if (f.website) return isJson ? json(res, 200, { ok: true }) : back(true); // spam trap: accept silently, store nothing
