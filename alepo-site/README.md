@@ -282,14 +282,17 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 | `x-header` | Frosted white header; a soft shadow once the page scrolls (`is-scrolled`, set in `site.js`) |
 | `x-hero` | First light section: violet and cyan glows, a faint dot grid, gradient headline, tilted photo |
 | `x-tint`, `x-dark` | Tinted bands with a gentle gradient; dark bands with glows and a dot grid |
-| `x-h2` | A short violet-to-cyan accent bar above section headings |
+| `x-h2` | A violet-to-cyan accent bar above section headings, and ink-to-indigo gradient heading text |
 | `x-card`, `x-row` | Soft shadows, rounded corners, a hover lift; product rows on the hub and category pages become light cards |
-| `x-icon`, `x-row-icon` | Gradient icon tiles |
+| `x-icon`, `x-row-icon` | Filled violet-to-cyan icon tiles with white icons |
 | `x-cardgrid` | Runs of 4 or more plain framed rows (offices, events) become a card grid |
 | `x-media` | Shadow and a light brand tint on framed photos |
 | `x-btn`, `x-btn-light` | Gradient primary buttons with a soft glow |
 | `x-stat` | Gradient figures in the results row |
 | `x-cta` | The demo band becomes a floating rounded gradient panel |
-| `x-reveal` | Sections below the first screen fade up as they scroll in (`site.js`), only when the visitor allows motion |
+| `x-plain`, `x-tint` | White bands get faint corner glows; tinted bands are lavender with glows and a dot grid |
+| `x-statcard` | Each results figure sits on its own card with a gradient top edge |
+| `x-card-top` | Cards that open with a photo get a violet-to-cyan top edge |
+| `x-herocard` | Home's dark hero panel gets a glowing ring |
 
-Reduced-motion users get no tilt, lift or fade. In Windows high-contrast mode the gradient text falls back to plain text. Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.
+Rows on dark bands use frosted glass instead of white cards. A scroll fade-in was tried and removed: it could leave sections blank in screenshot tools and some viewers. Reduced-motion users get no tilt or lift. In Windows high-contrast mode the gradient text falls back to plain text. Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.

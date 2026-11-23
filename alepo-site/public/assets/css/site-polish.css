@@ -101,11 +101,6 @@ footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; hei
 .x-media { position: relative; }
 .x-media::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(135deg, rgba(45, 29, 143, 0.16), rgba(85, 203, 227, 0.08) 60%, transparent); mix-blend-mode: multiply; }
 
-/* ---------- reveal on scroll (site.js adds x-reveal below the first screen) ---------- */
-@media (prefers-reduced-motion: no-preference) {
-  .x-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--x-ease), transform 0.8s var(--x-ease); }
-  .x-reveal.is-in { opacity: 1; transform: none; }
-}
 @media (prefers-reduced-motion: reduce) {
   .x-hero .x-media { transform: none; }
   .x-card, .x-btn, .x-card img { transition: none !important; }
@@ -118,3 +113,40 @@ footer::before { content: ""; position: absolute; left: 0; right: 0; top: 0; hei
 @media (forced-colors: active) {
   .x-hero h1, .x-stat { color: CanvasText !important; background: none; }
 }
+
+/* ================= stronger look (round 2) ================= */
+/* white bands get a faint corner glow so the page is never flat white */
+.x-plain { position: relative; background: radial-gradient(800px 420px at 100% 0%, rgba(80, 60, 235, 0.07), transparent 65%), radial-gradient(700px 380px at 0% 100%, rgba(85, 203, 227, 0.08), transparent 65%), #FFFFFF !important; }
+/* tinted bands: clearly lavender, with glows and a dot grid */
+.x-tint { background: radial-gradient(900px 480px at 92% 0%, rgba(80, 60, 235, 0.13), transparent 62%), radial-gradient(800px 420px at 0% 100%, rgba(85, 203, 227, 0.16), transparent 62%), linear-gradient(180deg, #F3F1FD 0%, #EEF1FA 100%) !important; overflow: hidden; }
+.x-tint::before { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(45, 29, 143, 0.12) 1px, transparent 1.2px); background-size: 22px 22px; -webkit-mask-image: radial-gradient(ellipse 50% 60% at 95% 5%, #000, transparent 75%); mask-image: radial-gradient(ellipse 50% 60% at 95% 5%, #000, transparent 75%); }
+.x-tint > *, .x-plain > * { position: relative; }
+/* section headings: ink-to-indigo gradient text and a bolder accent bar */
+.x-h2:not(.x-dark .x-h2) { background: linear-gradient(100deg, #20242D 30%, #3A26B8 100%); -webkit-background-clip: text; background-clip: text; color: transparent !important; }
+.x-h2::before { width: 56px; height: 5px; }
+/* cards: visible depth at rest, a gradient edge on hover */
+.x-card { border-radius: 24px !important; box-shadow: 0 1px 2px rgba(18, 13, 61, 0.06), 0 18px 40px -22px rgba(45, 29, 143, 0.35); background-clip: padding-box; }
+a.x-card:hover, .x-card:hover { transform: translateY(-6px); box-shadow: 0 2px 4px rgba(18, 13, 61, 0.05), 0 36px 64px -28px rgba(45, 29, 143, 0.5) !important; border-color: rgba(80, 60, 235, 0.45) !important; }
+.x-card-top { position: relative; }
+.x-card-top::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; z-index: 2; background: linear-gradient(90deg, var(--x-violet), var(--x-cyan)); }
+.x-card:hover img { transform: scale(1.05); }
+/* results figures sit on their own cards */
+.x-statcard { border-top: 0 !important; position: relative; padding: 28px 28px 24px !important; border-radius: 20px; background: linear-gradient(180deg, #F5F3FF 0%, #FFFFFF 70%); box-shadow: 0 1px 2px rgba(18, 13, 61, 0.05), 0 18px 40px -24px rgba(45, 29, 143, 0.35); border: 1px solid rgba(80, 60, 235, 0.12); overflow: hidden; }
+.x-statcard::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--x-violet), var(--x-cyan)); }
+.x-stat { background: linear-gradient(100deg, #2D1D8F 0%, #503CEB 60%, #2F9DB8 100%); -webkit-background-clip: text; background-clip: text; }
+/* home's dark hero panel: a glowing gradient ring */
+.x-herocard { box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.45), 0 40px 100px -30px rgba(80, 60, 235, 0.65), 0 0 120px -40px rgba(85, 203, 227, 0.6) !important; }
+.x-herocard::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; background: radial-gradient(700px 380px at 85% 0%, rgba(80, 60, 235, 0.35), transparent 60%), radial-gradient(600px 320px at 0% 100%, rgba(85, 203, 227, 0.22), transparent 60%); mix-blend-mode: screen; }
+/* product rows: a stronger card */
+.x-row { box-shadow: 0 1px 2px rgba(18, 13, 61, 0.05), 0 12px 28px -18px rgba(45, 29, 143, 0.35); }
+.x-row-icon { background: linear-gradient(135deg, #503CEB, #55CBE3) !important; color: #FFFFFF !important; box-shadow: 0 8px 18px -8px rgba(80, 60, 235, 0.7); }
+/* icon tiles: filled gradient with white icons */
+.x-icon { background: linear-gradient(135deg, #503CEB, #55CBE3) !important; color: #FFFFFF !important; box-shadow: 0 8px 18px -8px rgba(80, 60, 235, 0.7); }
+.x-icon svg { color: #FFFFFF; stroke: currentColor; }
+/* buttons: a stronger glow */
+.x-btn { background: linear-gradient(135deg, #2D1D8F 0%, #503CEB 100%) !important; box-shadow: 0 14px 30px -12px rgba(80, 60, 235, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.18); }
+@media (prefers-reduced-motion: reduce) { a.x-card:hover, .x-card:hover, .x-row:hover { transform: none; } }
+@media (forced-colors: active) { .x-h2 { color: CanvasText !important; background: none; } .x-icon, .x-row-icon { forced-color-adjust: auto; } }
+/* rows on dark bands: frosted glass instead of white cards */
+.x-dark .x-row, .on-dark .x-row { background: rgba(255, 255, 255, 0.06) !important; border-color: rgba(255, 255, 255, 0.16) !important; box-shadow: none; }
+.x-dark .x-row:hover, .on-dark .x-row:hover { background: rgba(255, 255, 255, 0.10) !important; border-color: rgba(85, 203, 227, 0.55) !important; box-shadow: 0 18px 40px -24px rgba(0, 0, 0, 0.6) !important; }

@@ -70,6 +70,14 @@ window.__alepoPolish = function (cfg, doc) {
     [...d.children].forEach(k => { if (isRow(k)) run.push(k); else flush(); });
     flush();
   });
+  // round 2: plain white bands, result cards, card top accents, home's dark hero panel
+  sections.forEach((s, i) => { if (i > 0 && bg(s) === 'rgb(255, 255, 255)' && !s.classList.length) s.classList.add('x-plain'); });
+  main.querySelectorAll('.x-stat').forEach(n => { const c = n.parentElement; if (c && /border-top: 2px solid/.test(c.getAttribute('style') || '')) c.classList.add('x-statcard'); });
+  main.querySelectorAll('.x-card').forEach(c => { const f = c.firstElementChild; if (f && (f.tagName === 'IMG' || f.querySelector(':scope > img'))) c.classList.add('x-card-top'); });
+  if (sections[0]) sections[0].querySelectorAll('div').forEach(d => {
+    const r = d.getBoundingClientRect(), cs = getComputedStyle(d);
+    if (r.height > 400 && parseFloat(cs.borderTopLeftRadius) >= 16 && cs.overflow === 'hidden' && !d.parentElement.closest('.x-herocard')) { d.classList.add('x-herocard'); if (cs.position === 'static') d.style.position = 'relative'; }
+  });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

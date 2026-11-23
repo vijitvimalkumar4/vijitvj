@@ -170,8 +170,4 @@
   // ---- Visual polish: header shadow once scrolled, sections fade in as they arrive ----
   var hdr = document.querySelector('.x-header');
   if (hdr) { var onS = function () { hdr.classList.toggle('is-scrolled', window.scrollY > 8); }; window.addEventListener('scroll', onS, { passive: true }); onS(); }
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('main > section').forEach(function (s, i) { if (i > 0 && s.getBoundingClientRect().top > window.innerHeight) { s.classList.add('x-reveal'); io.observe(s); } });
-  }
 })();
