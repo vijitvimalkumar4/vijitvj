@@ -80,6 +80,15 @@ for f in pages:
     for img in re.findall(r'<img [^>]*>', s):
         if 'alt="' not in img: fails.append(f'{p}: img without alt')
 
+    # lead capture (UX audit findings 1, 2, 5, 10, 12)
+    for f_ in re.findall(r'<form[^>]*>.*?</form>', s, re.S):
+        if 'data-form=' not in f_: fails.append(f'{p}: form not wired')
+        elif 'data-endpoint=""' in f_: warns.append(f'{p}: form "{re.search(r"data-form=.([a-z]+)", f_).group(1)}" has no HubSpot form ID yet (build/site-config.json)')
+        if 'type="submit"' not in f_: fails.append(f'{p}: form without a submit button')
+        if 'data-consent' not in f_: fails.append(f'{p}: form without consent text')
+    if re.search(r'aria-label="(Search|Buscar)"', s): fails.append(f'{p}: dead search button')
+    if re.search(r'href="(/es)?/contact-us/"[^>]*>(Request a demo|Solicitar una demo)<', s): fails.append(f'{p}: demo button not pointed at the form')
+
 # hreflang reciprocity
 for p, a in alts.items():
     for lang in ('en', 'es'):
@@ -98,5 +107,6 @@ for l in locs:
     if not exists(urlsplit(l).path): fails.append(f'sitemap: {l} missing')
 print(f'pages: {len(pages)}  sitemap URLs: {len(locs)}  FAIL: {len(fails)}  WARN: {len(warns)}')
 for x in fails: print('FAIL', x)
-for x in warns[:400]: print('WARN', x)
+from collections import Counter
+for x, c in Counter(re.sub(r'^/[^:]*: ', '', w) for w in warns).most_common(): print('WARN', f'{c}x', x)
 sys.exit(1 if fails else 0)

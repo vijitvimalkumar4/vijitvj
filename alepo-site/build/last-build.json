@@ -766,5 +766,21 @@
   "meta": "La página que buscó no está en alepo.com.",
   "h1": "Página no encontrada",
   "errs": []
+ },
+ {
+  "out": "/contact-us/thank-you/",
+  "lang": "en",
+  "title": "Thank You | Alepo",
+  "meta": "Your request reached Alepo.",
+  "h1": "Thank you",
+  "errs": []
+ },
+ {
+  "out": "/es/contact-us/thank-you/",
+  "lang": "es",
+  "title": "Gracias | Alepo",
+  "meta": "Su solicitud llegó a Alepo.",
+  "h1": "Gracias",
+  "errs": []
  }
 ]

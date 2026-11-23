@@ -97,6 +97,39 @@ Prose on the pages still uses the brand names, as the blueprint asks.
 
 **Images.** WebP files with names taken from their alt text and fixed width and height. Image weight fell from 5.8 MB to 3.8 MB.
 
+## UX and lead-generation fixes
+
+These come from the audit doc "Alepo.com redesign: UX and lead-generation audit". The code is in `build/leadfixes.js` (applied to each page at build time), `build/static/js/site.js` (runtime, no dependencies, no tracking) and `build/static/css/site-fixes.css`.
+
+**One setup step before launch.** The forms post straight to the HubSpot Forms API for portal 242907903, with no HubSpot script and no tracking before consent. Create three forms in HubSpot with the fields email, firstname, lastname, company and message: Demo request, Data sheet request and Newsletter. Paste each form's ID into `build/site-config.json` and rebuild. Until then, `qa.py` prints a WARN per form, and a visitor who submits sees "We could not send this".
+
+The data-sheet form only records the request. To email the PDF, add a HubSpot workflow on that form. Set `privacyUrl` in the same file so the consent line links to the policy.
+
+| # | Finding | Fix |
+| --- | --- | --- |
+| 1 | Form did not send | Real submit to HubSpot, inline validation, and a noindex `/contact-us/thank-you/` page with next steps. The newsletter form works the same way. |
+| 2 | Demo buttons went to a generic page | Every demo button goes to `/contact-us/?product=<slug>#demo`. The form now sits in the contact hero, prefilled with the product. |
+| 3 | No step for buyers not ready for a demo | Every product page offers "Get the data sheet" (work email only). Resource data-sheet links point to it. The contact form adds Talk to an engineer, Submit an RFP, Get a pricing estimate and Get a data sheet. |
+| 4 | Past event in the top bar | Expires after `topbar.ends`, at build time and in the browser, and switches to News and events |
+| 5 | Search did nothing | Removed |
+| 6 + 18 | Menu taller than the screen | Descriptors dropped from the menu and the panel capped at the screen height with its own scroll. Opens on click, closes after a short delay and on Esc, and sets `aria-expanded`. |
+| 9 | No pricing signal | "How pricing works" block on every product page, with "Get an estimate" |
+| 10 | Phones not tappable | Every phone number is a `tel:` link. The support numbers also moved into the contact hero. |
+| 11 | No mobile demo button | Sticky "Request a demo" bar on product pages, shown once the hero scrolls away |
+| 12 | No consent text or autofill | Consent line on every form, autocomplete on name, email and company, and the product captured from the page instead of an extra field |
+| 13 | Heavy images | Images capped at 1600 px and about 250 KB, an 800 px copy with `srcset`, and lazy loading below the fold. Home went from 2.3 MB to 0.6 MB. |
+| 14 | Repeated sections | Category pages no longer repeat the product map and Solutions grid |
+| 15 | Small text and targets on phones | Descriptors at 15 px, breadcrumbs at 28 px and page-menu tabs at 44 px |
+| 16 + 17 | Motion and accessibility defects | Static customer list with readable contrast and no duplicates, no photo zooms. Product map role fixed and scroll area focusable. axe-core finds 0 defects (24 before). |
+| 19 | No expectation set | "What happens next" line on the demo form |
+| 20 | Language switch was a script button | Plain links with `hreflang` |
+
+**Still needs content from Alepo (not changed):**
+- **Findings 7 and 8:** logos, named quotes and a real console screenshot, which need customer permission and product assets.
+- **Finding 10:** regional sales contacts.
+- **Pricing wording:** "The price depends on the products you take, your subscriber numbers and how it is deployed" needs confirming by sales.
+- **"What happens next" line:** should match how sales actually follows up.
+
 ## Decisions taken, to confirm
 
 | Item | What the build does | Why |

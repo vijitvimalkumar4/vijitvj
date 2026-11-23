@@ -140,6 +140,7 @@ window.__alepo = async function (cfg) {
   const title = doc.createElement('title'); title.textContent = cfg.title; head.insertBefore(title, charset ? charset.nextSibling : head.firstChild);
   add('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' });
   doc.documentElement.setAttribute('lang', L);
+  if (window.__alepoLead) window.__alepoLead(cfg, doc); // audit fixes (leadfixes.js)
 
   return '<!doctype html>\n' + doc.documentElement.outerHTML;
 
@@ -362,7 +363,8 @@ window.__alepo = async function (cfg) {
     const solH2 = [...home.querySelectorAll('main section h2')].find(h => /^(Solutions|Soluciones)$/.test(textOf(h)));
     const solutions = solH2 ? imp(solH2.closest('section')) : null;
     if (solutions) solutions.removeAttribute('id');
-    main.replaceChildren(...[hero, groupsSec, platform, agent, solutions, story, resources, cta].filter(Boolean));
+    // audit finding 14: the product map and Solutions grid stay on the hub and Home only
+    main.replaceChildren(...[hero, groupsSec, agent, story, resources, cta].filter(Boolean));
   }
 
   function composeUtility() {

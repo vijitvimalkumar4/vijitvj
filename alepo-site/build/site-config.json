@@ -1,0 +1,19 @@
+{
+  "_comment": "Lead capture settings. Forms post to the HubSpot Forms API (no HubSpot script needed). Paste each form's GUID from HubSpot > Marketing > Forms > (form) > Share > Embed code ('formId'). Until a GUID is set, that form validates but cannot send, and qa.py prints a WARN.",
+  "hubspot": {
+    "portalId": "242907903",
+    "endpoint": "https://api.hsforms.com/submissions/v3/integration/submit",
+    "forms": {
+      "demo": "",
+      "datasheet": "",
+      "newsletter": ""
+    }
+  },
+  "privacyUrl": null,
+  "topbar": {
+    "_comment": "The top-bar event from the design. After 'ends' it is replaced by the fallback link, at build time and again in the visitor's browser.",
+    "ends": "2026-11-19",
+    "fallback": {"en": "News and events: see where to meet Alepo next", "es": "Noticias y eventos: vea dónde reunirse con Alepo"},
+    "href": "/news/#events"
+  }
+}

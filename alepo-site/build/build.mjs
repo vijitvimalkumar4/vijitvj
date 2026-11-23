@@ -18,6 +18,8 @@ const read = f => JSON.parse(fs.readFileSync(path.join(HERE, f), 'utf8'));
 const urls = read('urls.json');
 const catalog = read('catalog.json');
 const ov = read('overrides.json');
+const siteConfig = read('site-config.json');
+const TODAY = new Date().toISOString().slice(0, 10);
 const bp = Object.fromEntries(read('source/blueprint.json').map(p => [p.id.padStart(2, '0'), p]));
 
 // ---------- page data ----------
@@ -71,7 +73,7 @@ for (const [file, info] of Object.entries(urls.pages)) {
     const products = { name: lang === 'es' ? 'Productos' : 'Products', href: 'products.html' };
     if (file.startsWith('p-')) crumbs = [home, products, { name: catLabel(catKey), href: pre + urls.categories[catKey].url }, { name: catalog.products[file].label }];
     if (file === 'ai.html') crumbs = [home, products, { name: catLabel('ai') }];
-    jobs.push({ file, lang, cfg: { kind: 'page', file, id, lang, ...d, eyebrow: catalog.eyebrow[file] || null, crumbs,
+    jobs.push({ file, lang, cfg: { kind: 'page', file, id, lang, ...d, eyebrow: catalog.eyebrow[file] || null, crumbs, productLabel: file.startsWith('p-') ? catalog.products[file].label : null,
       self: pre + info.url, alt: { en: info.url, es: '/es' + info.url }, isHome: file === 'index.html' }, out: pre + info.url });
   }
 }
@@ -122,20 +124,39 @@ for (const lang of ['en', 'es']) {
     self: pre + '/404.html', alt: null } });
 }
 
+// Thank-you page (blueprint T4; audit finding 1): noindex, offers next steps
+for (const lang of ['en', 'es']) {
+  const pre = lang === 'es' ? '/es' : '';
+  const L = (en, es) => lang === 'es' ? es : en;
+  jobs.push({ file: 'products.html', lang, out: pre + '/contact-us/thank-you/', cfg: { kind: 'utility', file: 'products.html', lang, noindex: true,
+    h1: L('Thank you', 'Gracias'), title: L('Thank You | Alepo', 'Gracias | Alepo'),
+    meta: L('Your request reached Alepo.', 'Su solicitud llegó a Alepo.'),
+    intro: L('Your request reached us. A specialist reads it and contacts you to agree a time.', 'Su solicitud nos llegó. Un especialista la lee y le contacta para acordar un horario.'),
+    crumbs: [{ name: L('Home', 'Inicio'), href: 'index.html' }, { name: L('Contact', 'Contacto'), href: 'contact.html' }, { name: L('Thank you', 'Gracias') }],
+    linkGroups: [{ title: L('While you wait', 'Mientras tanto'), links: [
+      { text: L('Data sheets and white papers', 'Fichas técnicas y documentos'), href: pre + '/library/' },
+      { text: L('Customer stories', 'Casos de clientes'), href: pre + '/customers/' },
+      { text: L('All products', 'Todos los productos'), href: pre + '/products/' },
+      { text: L('Services and support', 'Servicios y soporte'), href: pre + '/services/' }] }],
+    self: pre + '/contact-us/thank-you/', alt: { en: '/contact-us/thank-you/', es: '/es/contact-us/thank-you/' } } });
+}
+
 // ---------- render ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 fs.cpSync(path.join(SNAP, 'assets'), path.join(OUT, 'assets'), { recursive: true });
+fs.cpSync(path.join(HERE, 'static'), path.join(OUT, 'assets'), { recursive: true });
 
 const browser = await chromium.launch();
-const shared = { urls: urls.pages, categories: urls.categories, anchors: urls.anchors, catalog, origin: ORIGIN, schema };
+const shared = { urls: urls.pages, categories: urls.categories, anchors: urls.anchors, catalog, origin: ORIGIN, schema, siteConfig, today: TODAY };
 const report = [];
 for (const j of jobs) {
-  const page = await browser.newPage();
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
   const errs = [];
   page.on('pageerror', e => errs.push(e.message));
   await page.goto(`${BASE}/${j.lang === 'es' ? 'es/' : ''}${j.file}`, { waitUntil: 'domcontentloaded' });
   await page.addScriptTag({ path: path.join(HERE, 'transform.js') });
+  await page.addScriptTag({ path: path.join(HERE, 'leadfixes.js') });
   const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg });
   await page.close();
   const dest = j.out.endsWith('.html') ? path.join(OUT, j.out) : path.join(OUT, j.out, 'index.html');
@@ -148,7 +169,7 @@ await browser.close();
 server.close();
 
 // ---------- sitemap.xml, robots.txt, redirects, llms.txt ----------
-const indexable = jobs.filter(j => j.cfg.alt && j.lang === 'en');
+const indexable = jobs.filter(j => j.cfg.alt && !j.cfg.noindex && j.lang === 'en');
 const sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'];
 for (const j of indexable) for (const loc of [j.cfg.alt.en, j.cfg.alt.es]) {
   sm.push(`  <url><loc>${ORIGIN}${loc}</loc>` +

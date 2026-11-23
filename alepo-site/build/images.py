@@ -28,12 +28,25 @@ for p in pages:
         names[src] = n + ('.svg' if src.endswith('.svg') else '.webp')
 
 dims = {}
+small = {}
 for src, new in names.items():
     old = os.path.join(IMG, src)
     if src.endswith('.jpg'):
         with Image.open(old) as im:
             dims[new] = im.size
-            im.convert('RGB').save(os.path.join(IMG, new), 'WEBP', quality=82, method=6)
+            im = im.convert('RGB')
+            # audit finding 13: cap width at 1600 px and keep heavy photos under ~250 KB
+            if im.width > 1600:
+                im = im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS)
+            dims[new] = im.size
+            out = os.path.join(IMG, new)
+            for q in (80, 72, 64):
+                im.save(out, 'WEBP', quality=q, method=6)
+                if os.path.getsize(out) <= 250_000: break
+            # an 800 px copy for phones and small cards
+            if im.width > 1000:
+                im.resize((800, round(im.height * 800 / im.width)), Image.LANCZOS).save(out.replace('.webp', '-800.webp'), 'WEBP', quality=78, method=6)
+                small[new] = new.replace('.webp', '-800.webp')
     else:
         os.replace(old, os.path.join(IMG, new)) if not os.path.exists(os.path.join(IMG, new)) else None
 for f in os.listdir(IMG):
@@ -49,6 +62,12 @@ def fix(m):
         if new in dims and ' width="' not in tag:
             w, h = dims[new]
             tag = tag.replace('<img ', f'<img width="{w}" height="{h}" ', 1)
+        shown = re.search(r' data-w="(\d+)"', tag)
+        if new in small and ' srcset=' not in tag:
+            w = dims[new][0]
+            sizes = f'(max-width: 1060px) 100vw, {shown.group(1)}px' if shown else '100vw'
+            tag = tag.replace('<img ', f'<img srcset="/assets/img/{small[new]} 800w, /assets/img/{new} {w}w" sizes="{sizes}" ', 1)
+    tag = re.sub(r' data-w="\d+"', '', tag)
     return tag
 
 for p in pages:
