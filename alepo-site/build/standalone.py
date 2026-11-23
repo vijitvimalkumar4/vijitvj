@@ -134,6 +134,7 @@ html = f'''<!doctype html>
 <title>{args.title}</title>
 <style>{style}</style>
 <style>{css}</style>
+<style>:root{{color-scheme:light}}body{{background:#FFFFFF;color:#20242D}}</style>
 </head>
 <body>
 <div id="app"><p style="padding:32px;font:16px Arial,sans-serif;color:#565b6b">Loading the Alepo website…</p></div>
