@@ -1,6 +1,6 @@
 {
   "_comment": "Lead capture goes to Alepo's own form endpoint (alepo-site/server/server.mjs), not a third party. 'forms.endpoint' is the path the forms post to.",
-  "privacyUrl": null,
+  "privacyUrl": "/privacy-policy/",
   "topbar": {
     "_comment": "The top-bar event from the design. After 'ends' it is replaced by the fallback link, at build time and again in the visitor's browser.",
     "ends": "2026-11-19",
@@ -12,5 +12,14 @@
   },
   "forms": {
     "endpoint": "/api/forms"
+  },
+  "cookieUrl": "/cookie-policy/",
+  "social": {
+    "_comment": "From the alepo.com footer, 23 Nov 2026",
+    "LinkedIn": "https://www.linkedin.com/company/alepo/",
+    "X": "https://x.com/AlepoUSA",
+    "YouTube": "https://www.youtube.com/channel/UCMk0g6_oguKcjR2F0K-Wg5Q",
+    "Facebook": "https://www.facebook.com/AlepoUSA",
+    "Instagram": "https://www.instagram.com/alepousa"
   }
 }

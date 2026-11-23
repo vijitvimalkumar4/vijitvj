@@ -15,16 +15,32 @@ from,to,status,source,note
 /solutions/ai-agent-assistant/,/products/ai-agent-assist/,301,keyword map row 43,
 /company,/company/about/,301,keyword map row 8 + appendix G,
 /solutions,/solutions/,301,keyword map row 4 + appendix G,
-/bss-now/,/products/bss-in-a-box/,confirm,keyword map row 39,only if same offer
-/solutions/bss-now/,/products/bss-in-a-box/,confirm,keyword map row 39 + appendix G,only if same offer
-/wifi-monetization/,/products/wifi-offload-calling/,confirm,keyword map row 26,only if product content
-/solutions/wifi-monetization/,/solutions/wifi-venues/,confirm,keyword map row 21 + appendix G,301 by content match (venue content)
-/solutions/ai-sales-assistant/,/products/ai-for-telecom/#ai-sales-assistant,confirm,keyword map T10,decision: still sold? if not 301 to the closest page
-/solutions/ai-ccaas-assistant/,/products/ai-for-telecom/#ai-ccaas,confirm,keyword map T11,decision: still sold? if not 301 to the closest page
-/company/careers/apply-now/,/company/careers/,confirm,keyword map row 12,map says redirect to role pages; no role pages yet
+/bss-now/,/products/bss-in-a-box/,301,keyword map row 39,only if same offer (confirm with Alepo; active so the old URL does not 404)
+/solutions/bss-now/,/products/bss-in-a-box/,301,keyword map row 39 + appendix G,only if same offer (confirm with Alepo; active so the old URL does not 404)
+/wifi-monetization/,/products/wifi-offload-calling/,301,keyword map row 26,only if product content (confirm with Alepo; active so the old URL does not 404)
+/solutions/wifi-monetization/,/solutions/wifi-venues/,301,keyword map row 21 + appendix G,301 by content match (venue content) (confirm with Alepo; active so the old URL does not 404)
+/solutions/ai-sales-assistant/,/products/ai-for-telecom/#ai-sales-assistant,301,keyword map T10,decision: still sold? if not 301 to the closest page (confirm with Alepo; active so the old URL does not 404)
+/solutions/ai-ccaas-assistant/,/products/ai-for-telecom/#ai-ccaas,301,keyword map T11,decision: still sold? if not 301 to the closest page (confirm with Alepo; active so the old URL does not 404)
+/company/careers/apply-now/,/company/careers/,301,keyword map row 12,map says redirect to role pages; no role pages yet (confirm with Alepo; active so the old URL does not 404)
 [current AI hub URL],/products/ai-for-telecom/,confirm,keyword map row 6,old URL not given
 [current Mediation Studio URL],/products/mediation-revenue-assurance/,confirm,keyword map row 41,old URL not given
 [Fulfilment Manager URLs],/products/service-provisioning/,confirm,keyword map row 24,old URL not given
 [current router page],/products/device-management/,confirm,keyword map row 27,old URL not given
 [Selfcare Now URL],/products/self-care-portal/,confirm,keyword map row 37,old URL not given
 [?p= addresses],matching post,confirm,keyword map row 15 + blueprint 15.1,301 every ?p= address; needs the live crawl
+/resources/blog/,/blog/,301,live sitemap 23 Nov 2026,
+/resources/library/,/library/,301,live sitemap 23 Nov 2026,
+/resources/news/,/news/,301,live sitemap 23 Nov 2026,
+/resources/events/,/news/#events,301,live sitemap 23 Nov 2026,
+/resources/events/*,/news/#events,301,live sitemap 23 Nov 2026,individual event pages
+/thank-you/,/contact-us/thank-you/,301,live sitemap 23 Nov 2026,
+/demo-request/,/contact-us/#demo,301,live sitemap 23 Nov 2026,
+/404-page/,/,301,live sitemap 23 Nov 2026,
+/careers/,/company/careers/,301,live sitemap 23 Nov 2026,
+/careers/*,/company/careers/,301,live sitemap 23 Nov 2026,the open roles are listed on /company/careers/
+/customers/client-success/,/customers/,301,live sitemap 23 Nov 2026,
+/company/partners/become-a-partner/,/company/partners/,301,live sitemap 23 Nov 2026,
+/company/partners/partner-ecosystem/,/company/partners/,301,live sitemap 23 Nov 2026,
+/solutions/security/,/company/security/,301,live sitemap 23 Nov 2026,
+/solutions/ai-customer-assistant/,/products/ai-virtual-agent/,301,live sitemap 23 Nov 2026,
+/solutions/ai-search-assistant/,/products/ai-for-telecom/,301,live sitemap 23 Nov 2026,confirm: no dedicated page

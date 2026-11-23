@@ -124,6 +124,21 @@ for (const lang of ['en', 'es']) {
     self: pre + '/404.html', alt: null } });
 }
 
+// Privacy Policy and Cookie Policy: the text published on alepo.com (build/fetch_company.py), at the same addresses
+for (const lang of ['en', 'es']) {
+  const pre = lang === 'es' ? '/es' : '';
+  const L = (en, es) => lang === 'es' ? es : en;
+  for (const [slug, legal, en, es, metaEn, metaEs] of [
+    ['privacy-policy', 'privacy', 'Privacy Policy', 'Política de privacidad', 'How Alepo collects, uses and protects personal information on alepo.com.', 'Cómo Alepo recopila, usa y protege la información personal en alepo.com.'],
+    ['cookie-policy', 'cookie', 'Cookie Policy', 'Política de cookies', 'Which cookies alepo.com uses and how to turn them off.', 'Qué cookies usa alepo.com y cómo desactivarlas.']]) {
+    jobs.push({ file: 'products.html', lang, out: `${pre}/${slug}/`, cfg: { kind: 'utility', file: 'products.html', lang, legal,
+      h1: L(en, es), title: L(`${en} | Alepo`, `${es} | Alepo`), meta: L(metaEn, metaEs),
+      intro: L(metaEn, metaEs + ' El texto legal se publica en inglés.'),
+      crumbs: [{ name: L('Home', 'Inicio'), href: 'index.html' }, { name: L(en, es) }], linkGroups: [],
+      self: `${pre}/${slug}/`, alt: { en: `/${slug}/`, es: `/es/${slug}/` } } });
+  }
+}
+
 // Thank-you page (blueprint T4; audit finding 1): noindex, offers next steps
 for (const lang of ['en', 'es']) {
   const pre = lang === 'es' ? '/es' : '';
@@ -162,9 +177,14 @@ for (const j of jobs) {
   // collected content from alepo.com (fetch_blog.py, fetch_resources.py)
   const data = f => { const p = path.join(HERE, f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; };
   const blogPosts = j.file === 'blog.html' ? data('blog/posts.json') : null;
+  // every page: post dates and photos for "Latest posts" lists, the newest news item, leadership photos, legal text
+  const blogIndex = Object.fromEntries((data('blog/posts.json') || []).map(p => [p.url, { date: p.date, image: p.image, w: p.w, h: p.h }]));
+  const latestNews = (data('news/items.json') || [])[0] || null;
+  const leaders = j.file === 'leadership.html' ? data('legal/leaders.json') : null;
+  const legalHtml = j.cfg.legal ? fs.readFileSync(path.join(HERE, 'legal', j.cfg.legal + '.html'), 'utf8') : null;
   const libraryItems = j.file === 'library.html' ? data('library/items.json') : null;
   const newsItems = j.file === 'news.html' ? data('news/items.json') : null;
-  const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems });
+  const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml });
   await page.close();
   const dest = j.out.endsWith('.html') ? path.join(OUT, j.out) : path.join(OUT, j.out, 'index.html');
   fs.mkdirSync(path.dirname(dest), { recursive: true });
@@ -179,7 +199,7 @@ server.close();
 const indexable = jobs.filter(j => j.cfg.alt && !j.cfg.noindex && j.lang === 'en');
 const sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'];
 for (const j of indexable) for (const loc of [j.cfg.alt.en, j.cfg.alt.es]) {
-  sm.push(`  <url><loc>${ORIGIN}${loc}</loc>` +
+  sm.push(`  <url><loc>${ORIGIN}${loc}</loc><lastmod>${TODAY}</lastmod>` +
     `<xhtml:link rel="alternate" hreflang="en" href="${ORIGIN}${j.cfg.alt.en}"/>` +
     `<xhtml:link rel="alternate" hreflang="es" href="${ORIGIN}${j.cfg.alt.es}"/>` +
     `<xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${j.cfg.alt.en}"/></url>`);
@@ -191,6 +211,7 @@ fs.copyFileSync(path.join(HERE, 'redirects.csv'), path.join(OUT, 'redirects.csv'
 const red = fs.readFileSync(path.join(HERE, 'redirects.csv'), 'utf8').trim().split('\n').slice(1).map(l => l.split(','))
   .filter(([from, to, status]) => status === '301');
 fs.writeFileSync(path.join(OUT, '_redirects'), red.map(([from, to]) => `${from} ${to} 301`).join('\n') + '\n/es/* /es/404.html 404\n/* /404.html 404\n');
+// note for hosts other than server.mjs: /blog/<post>/, /news/<item>/, /library/<item>/, /credits/ and /legal-agreements/ go to the WordPress site (LEGACY_ORIGIN)
 const llms = ['# Alepo', '', '> AAA and BSS software for telecom operators and ISPs, with AI built in.', ''];
 for (const j of indexable) llms.push(`- [${j.cfg.h1}](${ORIGIN}${j.cfg.alt.en}): ${j.cfg.meta}`);
 fs.writeFileSync(path.join(OUT, 'llms.txt'), llms.join('\n') + '\n');
@@ -206,4 +227,5 @@ if (missingPdf.length) console.log(`data sheet PDFs missing (${missingPdf.length
 // descriptive WebP images with fixed dimensions (blueprint 6.1)
 const { execFileSync } = await import('node:child_process');
 process.stdout.write(execFileSync('python3', [path.join(HERE, 'images.py')]).toString().split('\n')[0] + '\n');
+process.stdout.write(execFileSync('python3', [path.join(HERE, 'finish.py')]).toString().split('\n').filter(Boolean).at(-1) + '\n');
 console.log(`built ${jobs.length} pages into ${path.relative(ROOT, OUT)}`);

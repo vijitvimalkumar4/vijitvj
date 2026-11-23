@@ -49,3 +49,5 @@
 - [Service provisioning and device management](https://alepo.com/products/provisioning-devices/): Activate, suspend and restore services across OLTs, HSS, policy and AAA, and manage home routers and ONTs remotely with TR-069 and TR-369.
 - [Customer care and channels for telecom](https://alepo.com/products/customer-care-channels/): A care workspace for agents, branded web and app self-care for subscribers, and a mobile POS for dealers, all connected to billing and AI.
 - [Sitemap](https://alepo.com/sitemap/): Every page on alepo.com: products by group, solutions, services, resources and company pages.
+- [Privacy Policy](https://alepo.com/privacy-policy/): How Alepo collects, uses and protects personal information on alepo.com.
+- [Cookie Policy](https://alepo.com/cookie-policy/): Which cookies alepo.com uses and how to turn them off.

@@ -35,17 +35,38 @@
     if (firstBad) firstBad.focus();
     return !firstBad;
   }
+  // ---- Lead attribution: where the visitor first came from (campaign tags, referring site, landing page) ----
+  // kept in this browser only (sessionStorage, first visit of the session) and sent with a form
+  var attr = (function () {
+    var KEY = 'x-attr', a = null;
+    try { a = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!a) {
+      var q = new URLSearchParams(location.search), ref = document.referrer, own = false;
+      try { own = ref && new URL(ref).host === location.host; } catch (e) {}
+      a = { s: q.get('utm_source') || '', m: q.get('utm_medium') || '', c: q.get('utm_campaign') || '', t: q.get('utm_term') || '', o: q.get('utm_content') || '', r: own ? '' : (ref || '').slice(0, 500), l: (location.pathname + location.search).slice(0, 500) };
+      try { sessionStorage.setItem(KEY, JSON.stringify(a)); } catch (e) {}
+    } else {
+      // campaign tags that arrive later in the session are still recorded (the first landing page stays)
+      var q2 = new URLSearchParams(location.search);
+      if (q2.get('utm_source') && !a.s) { a.s = q2.get('utm_source') || ''; a.m = q2.get('utm_medium') || ''; a.c = q2.get('utm_campaign') || ''; a.t = q2.get('utm_term') || ''; a.o = q2.get('utm_content') || ''; try { sessionStorage.setItem(KEY, JSON.stringify(a)); } catch (e) {} }
+    }
+    return a;
+  })();
+  window.__xAttr = attr;
+
   function payload(form) {
     var get = function (n) { var e = form.elements[n]; return e ? (e.value || '').trim() : ''; };
     var sel = form.elements.request;
     return {
       fullname: get('fullname'), email: get('email'), company: get('company'),
       request: get('request'), requestLabel: sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex].text : '',
-      product: get('product'), message: get('message'), website: get('website'),
-      lang: get('lang'), page: location.href, title: document.title, consent: form.dataset.consentText
+      product: get('product'), operatorType: get('operatorType'), message: get('message'), website: get('website'),
+      lang: get('lang'), page: location.href, title: document.title, consent: form.dataset.consentText,
+      utmSource: attr.s, utmMedium: attr.m, utmCampaign: attr.c, utmTerm: attr.t, utmContent: attr.o, referrer: attr.r, landing: attr.l
     };
   }
   document.querySelectorAll('form[data-form]').forEach(function (form) {
+    if (form.hasAttribute('data-gate-form')) return; // the Library data sheet dialog has its own handler
     var status = form.querySelector('[data-status]');
     var btn = form.querySelector('button[type=submit]');
     form.addEventListener('input', function (e) { e.target.dataset.touched = '1'; if (e.target.getAttribute('aria-invalid')) check(form, e.target); });
@@ -134,14 +155,16 @@
   if (paged) {
     var size = +paged.dataset.pageSize, limit = size, cur = 'all', more = document.querySelector('[data-more]'), status = document.querySelector('.x-blog-status');
     var es = document.documentElement.lang === 'es';
+    var search = document.querySelector('[data-search]'), query = '';
     function applyPage(focusFrom) {
       var total = 0, shown = 0, firstNew = null;
       paged.querySelectorAll('[data-kind]').forEach(function (a) {
-        var match = cur === 'all' || a.dataset.kind === cur; if (match) total++;
+        var t = a.querySelector('.x-post-title');
+        var match = (cur === 'all' || a.dataset.kind === cur) && (!query || (t && t.textContent.toLowerCase().indexOf(query) > -1)); if (match) total++;
         var on = match && total <= limit;
         if (on && a.hidden && focusFrom && !firstNew) firstNew = a;
         a.hidden = !on; if (on) shown++;
-        a.classList.toggle('x-post-featured', cur === 'all' && a === paged.firstElementChild);
+        a.classList.toggle('x-post-featured', cur === 'all' && !query && a === paged.firstElementChild);
       });
       if (more) more.hidden = total <= limit;
       if (status) status.textContent = (es ? status.dataset.tplEs : status.dataset.tplEn).replace('{shown}', shown).replace('{total}', total);
@@ -150,7 +173,38 @@
     document.querySelectorAll('[role=group] button[data-filter]').forEach(function (b) { b.addEventListener('click', function () { cur = b.dataset.filter; limit = size; applyPage(false); }); });
     if (!document.querySelector('[role=group] button[data-filter]')) cur = 'all';
     if (more) more.addEventListener('click', function () { limit += size * 2 - 2; applyPage(true); });
+    if (search) { var st; search.addEventListener('input', function () { clearTimeout(st); st = setTimeout(function () { query = search.value.trim().toLowerCase(); limit = size; applyPage(false); }, 120); }); }
     applyPage(false);
+  }
+
+  // ---- Library data sheets: a work email, then the PDF ----
+  var gate = document.getElementById('x-gate');
+  if (gate && gate.showModal) {
+    var gf = gate.querySelector('form'), gEmail = gate.querySelector('input[type=email]'), gErr = gate.querySelector('[data-gate-err]'), gDone = gate.querySelector('[data-gate-done]'), gLink = gate.querySelector('[data-gate-link]'), gGo = gate.querySelector('.x-gate-go'), current = null, opener = null;
+    var reset = function () { gErr.hidden = true; gDone.hidden = true; gGo.hidden = false; gEmail.disabled = false; gEmail.removeAttribute('aria-invalid'); };
+    document.querySelectorAll('[data-gate]').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+        e.preventDefault(); opener = card; current = { title: card.dataset.doc, url: card.href };
+        gate.querySelector('[data-gate-doc]').textContent = current.title; gf.elements.docTitle.value = current.title; gf.elements.docUrl.value = current.url; reset(); gate.showModal(); gEmail.focus();
+      });
+    });
+    gate.querySelectorAll('[data-gate-close]').forEach(function (b) { b.addEventListener('click', function () { gate.close(); }); });
+    gate.addEventListener('close', function () { if (opener) opener.focus(); });
+    gate.addEventListener('click', function (e) { if (e.target === gate) gate.close(); });
+    var show = function (url) { gLink.href = url; gDone.hidden = false; gGo.hidden = true; gEmail.disabled = true; gLink.focus(); };
+    gf.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = gEmail.value.trim();
+      if (!EMAIL.test(email)) { gErr.textContent = gate.dataset.msgInvalid; gErr.hidden = false; gEmail.setAttribute('aria-invalid', 'true'); gEmail.focus(); return; }
+      gErr.hidden = true; gGo.disabled = true;
+      var body = { email: email, website: gf.elements.website.value, request: 'datasheet', docTitle: current.title, docUrl: current.url, lang: document.documentElement.lang, page: location.href, title: document.title,
+        consent: gate.querySelector('.x-gate-consent').textContent, utmSource: attr.s, utmMedium: attr.m, utmCampaign: attr.c, utmTerm: attr.t, utmContent: attr.o, referrer: attr.r, landing: attr.l };
+      fetch('/api/forms/datasheet', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) { gGo.disabled = false; if (res && res.ok) show(res.download || current.url); else { gErr.textContent = gate.dataset.msgOffline; gErr.hidden = false; show(current.url); } })
+        .catch(function () { gGo.disabled = false; gErr.textContent = gate.dataset.msgOffline; gErr.hidden = false; show(current.url); });
+    });
   }
 
   // ---- Events: the "Upcoming" badge goes once the event has ended (UI audit 6) ----
@@ -208,7 +262,7 @@
   if (!reduce && window.Lenis && !window.__lenis) {
     var headerOffset = function () { var h = document.querySelector('header'); return -((h ? h.getBoundingClientRect().height : 0) + 16); };
     var lenis = window.__lenis = new window.Lenis({
-      duration: 1.15,
+      duration: 0.9,
       easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
       autoRaf: true,
       // menus and other inner scroll areas keep native scrolling
@@ -288,6 +342,10 @@
   }
   var odoIo = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { odoIo.unobserve(en.target); setTimeout(function () { odoRun(en.target); }, 250); } }); }, { threshold: 0.6 });
   document.querySelectorAll('main .x-stat, main .x-fact-n').forEach(function (el) { odoPrep(el); if (el.dataset.odo) odoIo.observe(el); });
+
+  // Demo band: its glows drift once (5 s) when the band comes into view
+  var ctaIo = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { ctaIo.unobserve(en.target); en.target.classList.add('is-live'); } }); }, { threshold: 0.4 });
+  document.querySelectorAll('.x-cta').forEach(function (c) { ctaIo.observe(c); });
 
   // Headline colour sweep: section headings start pale and the fill sweeps across when they scroll in (page titles run on load, in CSS)
   var swIo = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { swIo.unobserve(en.target); en.target.classList.add('is-swept'); } }); }, { threshold: 0.6 });

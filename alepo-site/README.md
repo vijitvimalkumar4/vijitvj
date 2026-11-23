@@ -273,6 +273,33 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 - **Redirects marked `confirm`:** these need the pre-launch crawl, the `?p=` addresses, or a decision on whether the offer is the same.
 - **Open Graph images** (1200 × 630) and analytics events. The latter need consent tooling first.
 
+## Council audit fixes (23 Nov 2026)
+
+The council audit ([doc](https://claude.ai/artifact/MwvSeYPq9kjdbngJKxBpBN)) found the build fast and accessible but not ready to replace alepo.com. What changed:
+
+**Migration (was: 327 of 341 live URLs would 404).** All 341 URLs in alepo.com's sitemaps now resolve (checked against the live sitemaps):
+- 26 old pages redirect (301) to their new home: `/resources/blog/` to `/blog/`, `/resources/events/*` to `/news/#events`, `/careers/*` to `/company/careers/`, `/thank-you/` to `/contact-us/thank-you/`, and so on (`build/redirects.csv`). Rows whose note says *confirm* were judgement calls (for example `/solutions/bss-now/` to BSS in a Box): they are active so nothing 404s; change the target if the offer differs.
+- Blog posts, news items, library items, `/credits/` and `/legal-agreements/` stay on WordPress for now: `server.mjs` passes those addresses through to `LEGACY_ORIGIN` (set it to the WordPress origin, for example a `legacy.alepo.com` host or the WP Engine address). Moving them onto the new site later needs no URL change.
+- The Privacy Policy and Cookie Policy are real pages at the same addresses (`/privacy-policy/`, `/cookie-policy/`, plus `/es/…`), with the text published on alepo.com (`build/fetch_company.py`); the footer and every consent line link to them.
+
+**Server.** Brotli or gzip compression (home HTML 194 KB to 16 KB); a Content-Security-Policy (everything from this site; no Google Fonts); content-hashed CSS and JS (`site-polish.<hash>.css`, cached a year, written by `build/finish.py`); leads gain campaign tags (`utm_*`), referrer, first landing page, operator type and a personal-mailbox flag; daily backups in `LEADS_DIR/backup` (`LEADS_BACKUP_DAYS`, default 30); a retention limit (`LEADS_RETENTION_DAYS`, default 730); and `DELETE /api/leads?email=…` (admin token) to erase a person's leads. Set `FORCE_HTTPS=1` in production for HSTS.
+
+**Pages.**
+- Events are dated: past events get a "Past" label, the Events block becomes "Recent events", Home and About drop ended events, and the Company menu's "Meet us" card shows the newest news item once the event is over. Rebuild weekly so dates stay current.
+- Leadership uses the 14 photos from alepo.com; the placeholder line is gone.
+- News and events sits under Resources (breadcrumb, menu highlight); Company no longer lists it.
+- "Latest posts" lists show the post's date and photo; Blog has a title search; Spanish lists say the items are published in English.
+- Library data sheets ask for a work email in a dialog, then hand over the PDF (with JavaScript off, the card still links the PDF).
+- The demo form has one optional "Operator type" question.
+- Footer: Privacy policy and Cookie policy links, and Alepo's LinkedIn, X, YouTube, Facebook and Instagram (from the alepo.com footer).
+- Share images: one 1200 x 630 image per page (`/assets/og/`), with `og:image` and `twitter:card`. FAQPage markup on pages with questions and answers, SoftwareApplication on product pages; the sitemap has `lastmod`.
+- Fonts are self-hosted (Plus Jakarta Sans, SIL OFL, `assets/fonts/`).
+- Card images have 400 px versions for phones (`srcset`).
+
+**Motion budget.** The headline sweep runs on page titles and the demo band only, starting from #8A8FA0 (3:1 for large text); the scroll reveal no longer blurs; the demo band's glows drift once, for 5 s, when it comes into view (WCAG 2.2.2); Lenis scrolling is 0.9 s. The Products menu shows a chevron on every family; the phone menu opens one section at a time.
+
+**Still needs Alepo:** the WordPress origin for `LEGACY_ORIGIN`; a sending mailbox with SPF and DKIM; customer logos and console screenshots; a public sales email; the reply time and demo length for the thank-you page; a consent-based analytics choice; a manual screen-reader pass and real-device check.
+
 ## Visual polish
 
 `build/polish.js` runs after `uifixes.js` and tags the design's building blocks with classes; `build/static/css/site-polish.css` styles them and `site.js` adds the motion. Copy and page order are unchanged.

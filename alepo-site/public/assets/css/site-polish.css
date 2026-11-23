@@ -2,6 +2,15 @@
    Palette from the design: indigo #2D1D8F, violet #503CEB, cyan #55CBE3, navy #120D3D, ink #20242D.
    Principles: depth from neutral shadows (no coloured glows behind elements), flat brand colour,
    and quiet motion: short fades over small distances, one easing curve, nothing that loops. */
+/* Plus Jakarta Sans, self-hosted (SIL Open Font License 1.1, see /assets/fonts/OFL.txt) */
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-ext-400-normal.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 400; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-ext-500-normal.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 500; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-ext-600-normal.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 600; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-ext-700-normal.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Plus Jakarta Sans'; font-style: normal; font-weight: 700; font-display: swap; src: url('/assets/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root {
   --x-indigo: #2D1D8F; --x-violet: #503CEB; --x-cyan: #55CBE3; --x-navy: #120D3D; --x-ink: #20242D;
   --x-line: rgba(18, 13, 61, 0.09);
@@ -546,3 +555,67 @@ html.lenis, .lenis.lenis-smooth { scroll-behavior: auto !important; }
   .x-motion main .x-sweep.no-sweep { animation: none !important; background-position: 0% 0 !important; }
 }
 @media (forced-colors: active) { .x-sweep { color: CanvasText !important; background: none !important; -webkit-text-fill-color: CanvasText; } }
+
+/* ================= council audit fixes ================= */
+/* legal pages */
+.x-legal { max-width: 46em; margin: 0 auto; padding: 8px 32px 24px; font-size: 17px; line-height: 1.7; color: var(--x-ink); }
+.x-legal h2 { margin: 40px 0 12px; font-family: "Plus Jakarta Sans", Arial, sans-serif; font-size: 25px; line-height: 1.25; letter-spacing: -0.015em; }
+.x-legal h3, .x-legal h4 { margin: 28px 0 8px; font-size: 19px; }
+.x-legal p, .x-legal ul, .x-legal ol { margin: 0 0 16px; }
+.x-legal ul, .x-legal ol { padding-left: 1.4em; }
+.x-legal li { margin: 4px 0; }
+.x-legal a { color: var(--x-indigo); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+@media (max-width: 760px) { .x-legal { padding: 0 20px 16px; font-size: 16px; } }
+
+/* past events */
+.x-past { }
+.x-past-chip { display: inline-flex; align-self: flex-start; align-items: center; min-height: 24px; padding: 0 10px; margin-bottom: 4px; border-radius: 999px; background: rgba(32, 36, 45, 0.07); color: rgb(70, 74, 92); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.x-ev-note { margin: 8px 0 0; font-size: 16px; color: rgb(86, 91, 107); }
+
+/* leadership photos */
+.x-avatar-photo { padding: 0 !important; overflow: hidden; background: #EEECF9 !important; }
+.x-avatar-photo img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 50%; }
+
+/* footer social links */
+.xf-social { display: flex; gap: 8px; margin-top: 4px; }
+.xf-social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.18); color: rgba(230, 227, 246, 0.9) !important; transition: background-color var(--x-fast) ease, border-color var(--x-fast) ease, color var(--x-fast) ease; }
+.xf-social a:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.4); color: #FFFFFF !important; }
+
+/* blog search and notes */
+.x-search { display: flex; flex: 1 1 220px; max-width: 320px; }
+.x-search input { width: 100%; min-height: 44px; padding: 0 16px 0 40px; border: 1.5px solid rgb(112, 108, 140); border-radius: 999px; font: inherit; font-size: 15px; color: var(--x-ink);
+  background: #FFFFFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23565B6B' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E") no-repeat 14px 50%; }
+.x-blog-note { margin: 0 0 16px; font-size: 15px; color: rgb(86, 91, 107); }
+
+/* data sheet dialog */
+.x-gate { width: min(440px, calc(100% - 32px)); padding: 0; border: 0; border-radius: 20px; box-shadow: 0 40px 80px -30px rgba(18, 13, 61, 0.5); color: var(--x-ink); }
+.x-gate::backdrop { background: rgba(18, 13, 61, 0.55); }
+.x-gate-form { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 32px 28px 28px; }
+.x-gate h2 { margin: 0; font-family: "Plus Jakarta Sans", Arial, sans-serif; font-size: 25px; letter-spacing: -0.015em; }
+.x-gate-doc { margin: 0 0 8px; color: rgb(86, 91, 107); }
+.x-gate label { font-weight: 600; }
+.x-gate input[type=email] { min-height: 48px; padding: 0 16px; border: 1.5px solid rgb(112, 108, 140); border-radius: 12px; font: inherit; }
+.x-gate-consent { margin: 4px 0; font-size: 13px; line-height: 1.5; color: rgb(86, 91, 107); }
+.x-gate-consent a { color: var(--x-indigo); text-decoration: underline; }
+.x-gate .x-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border: 0; border-radius: 12px; color: #FFFFFF !important; font: inherit; font-weight: 600; cursor: pointer; }
+.x-gate-done p { margin: 4px 0 12px; font-weight: 600; }
+.x-gate-x { position: absolute; right: 12px; top: 10px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; font-size: 26px; line-height: 1; color: rgb(86, 91, 107); cursor: pointer; }
+.x-gate-x:hover { background: rgba(45, 29, 143, 0.06); }
+.x-hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+/* Products menu: every family shows it opens a list */
+.xm-tab svg { opacity: 0.35 !important; }
+.xm-tab.is-active svg { opacity: 1 !important; }
+
+/* headline sweep starts from a grey that meets 3:1 for large text */
+.x-sweep { --sw-pale: #8A8FA0; }
+.x-sweep-dark { --sw-pale: rgba(255, 255, 255, 0.5); }
+
+/* motion budget: blur only in the first screen; the demo band's glows drift once, while in view, for 5 s */
+@media (prefers-reduced-motion: no-preference) {
+  .x-motion .rv:not(.rv-in) { filter: none; }
+  .x-motion .rv { transition: opacity 0.8s var(--x-ease), translate 0.8s var(--x-ease), scale 1s var(--x-ease); transition-delay: var(--rv-d, 0ms); }
+  .x-orbs i:nth-child(n) { animation-duration: 5s !important; animation-iteration-count: 1 !important; animation-fill-mode: forwards !important; animation-play-state: paused; }
+  .x-cta.is-live .x-orbs i { animation-play-state: running; }
+  .x-cta::before { animation: none !important; }
+}

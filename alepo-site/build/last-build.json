@@ -768,6 +768,38 @@
   "errs": []
  },
  {
+  "out": "/privacy-policy/",
+  "lang": "en",
+  "title": "Privacy Policy | Alepo",
+  "meta": "How Alepo collects, uses and protects personal information on alepo.com.",
+  "h1": "Privacy Policy",
+  "errs": []
+ },
+ {
+  "out": "/cookie-policy/",
+  "lang": "en",
+  "title": "Cookie Policy | Alepo",
+  "meta": "Which cookies alepo.com uses and how to turn them off.",
+  "h1": "Cookie Policy",
+  "errs": []
+ },
+ {
+  "out": "/es/privacy-policy/",
+  "lang": "es",
+  "title": "Política de privacidad | Alepo",
+  "meta": "Cómo Alepo recopila, usa y protege la información personal en alepo.com.",
+  "h1": "Política de privacidad",
+  "errs": []
+ },
+ {
+  "out": "/es/cookie-policy/",
+  "lang": "es",
+  "title": "Política de cookies | Alepo",
+  "meta": "Qué cookies usa alepo.com y cómo desactivarlas.",
+  "h1": "Política de cookies",
+  "errs": []
+ },
+ {
   "out": "/contact-us/thank-you/",
   "lang": "en",
   "title": "Thank You | Alepo",

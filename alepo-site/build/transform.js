@@ -397,6 +397,15 @@ window.__alepo = async function (cfg) {
     const main = doc.querySelector('main');
     const [hero, groupsSec, , cta] = [...main.children];
     hero.querySelector('p').textContent = cfg.intro;
+    if (cfg.legalHtml) {
+      // legal pages: the published text as a readable article
+      const art = doc.createElement('article'); art.className = 'x-legal'; art.lang = 'en';
+      art.innerHTML = cfg.legalHtml;
+      art.querySelectorAll('a[href^="/"]').forEach(a => { if (!/^\/(privacy-policy|cookie-policy)\/$/.test(a.getAttribute('href'))) a.setAttribute('href', 'https://alepo.com' + a.getAttribute('href')); else if (ES) a.setAttribute('href', '/es' + a.getAttribute('href')); });
+      groupsSec.replaceChildren(art);
+      main.replaceChildren(hero, groupsSec, cta);
+      return;
+    }
     const rowsWrap = groupsSec.querySelector(':scope > div');
     const rowTpl = rowsWrap.children[0];
     const linkTpl = rowTpl.querySelector('a');

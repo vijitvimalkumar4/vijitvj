@@ -28,7 +28,6 @@ for f in sorted(glob.glob(os.path.join(PUB, '**', '*.html'), recursive=True)):
     s = read(f)
     head = s[:s.find('</head>')]
     style = style or re.search(r'<style[^>]*>(.*?)</style>', head, re.S).group(1)
-    fonts = fonts or re.search(r'<link href="(https://fonts\.googleapis\.com[^"]+)"', head).group(1)
     body = re.search(r'<body([^>]*)>(.*)</body>', s, re.S)
     b = body.group(2)
     b = re.sub(r'(src=")(?:\.\./)*(assets/img/)', r'\1/\2', b)                          # images from any depth
@@ -45,7 +44,7 @@ for f in sorted(glob.glob(os.path.join(PUB, '**', '*.html'), recursive=True)):
 # embedded images (full size; the 800 px copies are not needed)
 imgs = {}
 for f in sorted(os.listdir(os.path.join(PUB, 'assets', 'img'))):
-    if f.endswith('-800.webp'): continue
+    if f.endswith('-800.webp') or f.endswith('-400.webp'): continue
     mime = {'.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png'}.get(os.path.splitext(f)[1], 'image/webp')
     data = open(os.path.join(PUB, 'assets', 'img', f), 'rb').read()
     imgs['/assets/img/' + f] = f'data:{mime};base64,' + base64.b64encode(data).decode()
@@ -53,6 +52,11 @@ for f in sorted(os.listdir(os.path.join(PUB, 'assets', 'img'))):
 opt = lambda *p: read(os.path.join(PUB, *p)) if os.path.exists(os.path.join(PUB, *p)) else ''
 css = opt('assets', 'css', 'site-fixes.css') + '\n' + opt('assets', 'css', 'site-polish.css')
 site_js = opt('assets', 'js', 'site.js')
+# self-hosted fonts are embedded so the file works offline
+def _font(m):
+    fp = os.path.join(PUB, 'assets', 'fonts', m.group(1))
+    return "url('data:font/woff2;base64," + base64.b64encode(open(fp, 'rb').read()).decode() + "')" if os.path.exists(fp) else m.group(0)
+css = re.sub(r"url\('/assets/fonts/([\w.\-]+\.woff2)'\)", _font, css)
 lenis_js = opt('assets', 'js', 'lenis.min.js')
 # the site script reads the query string; in this file the query lives in the hash
 site_js = site_js.replace('new URLSearchParams(location.search)', 'new URLSearchParams(window.__q || "")')
@@ -128,7 +132,6 @@ html = f'''<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>{args.title}</title>
-<link href="{fonts}" rel="stylesheet">
 <style>{style}</style>
 <style>{css}</style>
 </head>

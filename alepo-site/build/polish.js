@@ -377,8 +377,13 @@ window.__alepoPolish = function (cfg, doc) {
         b.appendChild(mk('span', 'x-count', String(n)));
         grp.appendChild(b);
       });
-      bar.append(grp, paging(feed, cards.length, '{shown} of {total} articles', '{shown} de {total} artículos', 'Show more articles', 'Ver más artículos'));
+      const search = mk('label', 'x-search');
+      search.appendChild(mk('span', 'x-sr', ES ? 'Buscar artículos' : 'Search articles'));
+      const q = mk('input'); q.type = 'search'; q.setAttribute('data-search', ''); q.placeholder = ES ? 'Buscar por título' : 'Search by title'; q.autocomplete = 'off';
+      search.appendChild(q);
+      bar.append(grp, search, paging(feed, cards.length, '{shown} of {total} articles', '{shown} de {total} artículos', 'Show more articles', 'Ver más artículos'));
       feed.before(bar);
+      if (ES) bar.before(mk('p', 'x-blog-note', 'Los artículos se publican en inglés.'));
     }
   }
 
@@ -396,6 +401,28 @@ window.__alepoPolish = function (cfg, doc) {
       });
       feed.replaceChildren(...cards);
       feed.classList.add('x-blog', 'x-library');
+      if (ES) feed.parentElement.insertBefore(mk('p', 'x-blog-note', 'Los documentos se publican en inglés.'), feed.parentElement.firstChild);
+      // data sheets: a work email first, then the PDF (the card still links the PDF when JavaScript is off)
+      cards.forEach(c => { if (c.dataset.kind === 'ds') { c.dataset.gate = ''; c.dataset.doc = c.querySelector('.x-post-title').textContent; c.removeAttribute('target'); } });
+      const dlg = mk('dialog', 'x-gate'); dlg.id = 'x-gate'; dlg.setAttribute('aria-labelledby', 'x-gate-h');
+      const privacy = (ES ? '/es' : '') + (cfg.siteConfig && cfg.siteConfig.privacyUrl || '/privacy-policy/');
+      const consentTxt = ES ? 'Al enviar este formulario acepta que Alepo pueda contactarle sobre su solicitud, según la política de privacidad de Alepo.' : "By sending this form you agree that Alepo may contact you about your request, as described in Alepo's privacy policy.";
+      dlg.innerHTML = `<form class="x-gate-form" data-gate-form data-form="datasheet" data-endpoint="/api/forms/datasheet" data-consent-text="${consentTxt.replace(/"/g, '&quot;')}" action="/api/forms/datasheet" method="post" novalidate>
+        <input type="hidden" name="lang" value="${ES ? 'es' : 'en'}"><input type="hidden" name="request" value="datasheet"><input type="hidden" name="docTitle" value=""><input type="hidden" name="docUrl" value="">
+        <button type="button" class="x-gate-x" data-gate-close aria-label="${ES ? 'Cerrar' : 'Close'}">×</button>
+        <h2 id="x-gate-h">${ES ? 'Obtener la ficha técnica' : 'Get the data sheet'}</h2>
+        <p class="x-gate-doc" data-gate-doc></p>
+        <label for="x-gate-email">${ES ? 'Correo de trabajo' : 'Work email'}</label>
+        <input id="x-gate-email" name="email" type="email" autocomplete="email" required aria-required="true">
+        <p class="f-err" data-gate-err hidden></p>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="x-hp">
+        <p class="x-gate-consent">${ES ? 'Al enviar este formulario acepta que Alepo pueda contactarle sobre su solicitud, según la <a href="' + privacy + '">política de privacidad</a> de Alepo.' : 'By sending this form you agree that Alepo may contact you about your request, as described in Alepo\'s <a href="' + privacy + '">privacy policy</a>.'}</p>
+        <button type="submit" class="x-btn x-gate-go">${ES ? 'Obtener el PDF' : 'Get the PDF'}</button>
+        <div class="x-gate-done" data-gate-done hidden><p>${ES ? 'Gracias. Su descarga está lista.' : 'Thank you. Your download is ready.'}</p><a class="x-btn" data-gate-link target="_blank" rel="noopener">${ES ? 'Descargar el PDF' : 'Download the PDF'}</a></div>
+      </form>`;
+      dlg.dataset.msgInvalid = ES ? 'Escriba un correo válido.' : 'Please enter a valid email address.';
+      dlg.dataset.msgOffline = ES ? 'No pudimos guardar sus datos. Puede descargar el PDF igualmente.' : 'We could not save your details. You can still download the PDF.';
+      main.appendChild(dlg);
       // filter counts
       main.querySelectorAll('button[data-filter]').forEach(b => { if (b.closest('[data-filter-empty]')) return; const k = b.dataset.filter; const n = k === 'all' ? cards.length : cards.filter(c => c.dataset.kind === k).length; b.appendChild(mk('span', 'x-count', String(n))); });
     }
@@ -410,6 +437,7 @@ window.__alepoPolish = function (cfg, doc) {
         go: ES ? 'Leer la noticia' : 'Read the news', featured: i === 0, eager: i < 2, fallback: 'chart', fallbackIcon: 'megaphone' }));
       feed.append(...cards);
       wrap.replaceWith(feed);
+      if (ES) feed.before(mk('p', 'x-blog-note', 'Las noticias se publican en inglés.'));
       const bar = mk('div', 'x-blog-bar');
       bar.appendChild(paging(feed, cards.length, '{shown} of {total} news items', '{shown} de {total} noticias', 'Show more news', 'Ver más noticias'));
       feed.before(bar);
@@ -511,12 +539,139 @@ window.__alepoPolish = function (cfg, doc) {
   })();
   // headline colour sweep: page titles (on load) and section headings (when they scroll in); dark variant on dark backgrounds
   const isLight = e => { const m = getComputedStyle(e).color.match(/\d+/g); return m && +m[0] > 200 && +m[1] > 200 && +m[2] > 200; };
-  main.querySelectorAll('h1, h2.x-h2, .x-cta h2').forEach(h => {
+  main.querySelectorAll('h1, .x-cta h2').forEach(h => {
     if (h.closest('a, .x-card, .x-post')) return;
     h.classList.add('x-sweep');
     if (h.tagName === 'H1') h.classList.add('x-sweep-load');
     if (h.closest('.on-dark, .x-dark, .x-cta') || isLight(h)) h.classList.add('x-sweep-dark');
   });
+
+  // ================= council audit fixes =================
+  const PRE = ES ? '/es' : '';
+  // --- events: dated; past events step aside (rebuild weekly so the dates stay current) ---
+  const MONTHS = { january: 1, february: 2, march: 3, april: 4, may: 5, june: 6, july: 7, august: 8, september: 9, october: 10, november: 11, december: 12,
+    enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
+  const endOf = t => {
+    const m = String(t).toLowerCase().match(/(\d{1,2})(?:\s*(?:to|al|a|-|–)\s*(\d{1,2}))?\s+(?:de\s+)?([a-záéíóú]+)\s+(?:de\s+)?(\d{4})/);
+    if (!m || !MONTHS[m[3]]) return null;
+    return `${m[4]}-${String(MONTHS[m[3]]).padStart(2, '0')}-${String(m[2] || m[1]).padStart(2, '0')}`;
+  };
+  const today = cfg.today || new Date().toISOString().slice(0, 10);
+  const isPast = card => { const e = card.getAttribute('data-event-ends') || endOf(card.textContent); return e && e < today; };
+  const evH = [...main.querySelectorAll('h2')].find(h => /^(Events|Eventos)$/.test(h.textContent.trim()));
+  if (evH) {
+    const sec = evH.closest('section');
+    const cards = [...sec.querySelectorAll('a, div.x-card')].filter(c => endOf(c.textContent) && !c.parentElement.closest('a'));
+    const past = cards.filter(isPast);
+    past.forEach(c => { c.classList.add('x-past'); c.querySelectorAll('[data-upcoming-badge]').forEach(b => b.remove()); const chip = mk('span', 'x-past-chip', ES ? 'Pasado' : 'Past'); (c.querySelector('div') || c).prepend(chip); });
+    if (cards.length && past.length === cards.length) {
+      evH.textContent = ES ? 'Eventos recientes' : 'Recent events';
+      evH.after(mk('p', 'x-ev-note', ES ? 'Los próximos eventos se anunciarán aquí.' : 'Upcoming events will be announced here.'));
+    }
+  }
+  // elsewhere (Home, About): a past event card leaves the news grid
+  main.querySelectorAll('[data-event-ends], a[href$="#events"].x-card').forEach(c => { if ((!evH || !evH.closest('section').contains(c)) && isPast(c)) c.remove(); });
+  // menu card "Meet us": once the event is over, it shows the newest news item instead
+  doc.querySelectorAll('.xm-sidecol').forEach(col => {
+    const card = col.querySelector('.xm-promo'); if (!card || !/#events$/.test(card.getAttribute('href') || '') || !isPast(card) || !cfg.latestNews) return;
+    const n = cfg.latestNews, sp = card.querySelectorAll(':scope > span');
+    col.firstElementChild.textContent = ES ? 'Sala de prensa' : 'Newsroom';
+    card.setAttribute('href', n.url); card.lang = 'en';
+    if (sp[0]) sp[0].textContent = n.title.length > 70 ? n.title.slice(0, 67).replace(/\s+\S*$/, '') + '…' : n.title;
+    if (sp[1]) { sp[1].textContent = new Date(n.date + 'T12:00:00Z').toLocaleDateString(ES ? 'es-ES' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }); sp[1].lang = ES ? 'es' : 'en'; }
+    if (sp[2] && sp[2].firstChild) { sp[2].firstChild.textContent = ES ? 'Leer la noticia' : 'Read the news'; sp[2].lang = ES ? 'es' : 'en'; }
+  });
+
+  // --- leadership: photos from alepo.com; the placeholder note goes ---
+  main.querySelectorAll('p').forEach(p => { if (/Photographs to be added|fotograf[ií]as/i.test(p.textContent)) p.remove(); });
+  if (cfg.leaders) main.querySelectorAll('.x-person').forEach(c => {
+    const av = c.querySelector('.x-avatar'); const name = av && av.nextElementSibling && av.nextElementSibling.firstElementChild;
+    if (!name) return;
+    const slugN = name.textContent.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+    const first = slugN.split('-')[0], parts = slugN.split('-');
+    const key = cfg.leaders[slugN] ? slugN : cfg.leaders[parts[0] + '-' + parts.at(-1)] ? parts[0] + '-' + parts.at(-1) : cfg.leaders[first] ? first : null;
+    if (!key) return;
+    const img = doc.createElement('img'); img.src = '/assets/img/' + cfg.leaders[key]; img.alt = ''; img.width = 320; img.height = 320; img.loading = 'lazy'; img.decoding = 'async';
+    av.textContent = ''; av.appendChild(img); av.classList.add('x-avatar-photo');
+  });
+
+  // --- News and events belongs to Resources (menu, breadcrumb, current section) ---
+  if (page === 'news.html') {
+    const crumb = main.querySelector('[data-role="breadcrumb"] a:nth-of-type(2)');
+    if (crumb) { crumb.textContent = ES ? 'Recursos' : 'Resources'; crumb.setAttribute('href', PRE + '/resources/'); }
+    doc.querySelectorAll('script[type="application/ld+json"]').forEach(sc => {
+      try { const d = JSON.parse(sc.textContent); if (d['@type'] === 'BreadcrumbList' && d.itemListElement[1]) { d.itemListElement[1].name = ES ? 'Recursos' : 'Resources'; d.itemListElement[1].item = (cfg.origin || 'https://alepo.com') + PRE + '/resources/'; sc.textContent = JSON.stringify(d); } } catch (e) {}
+    });
+    const mbs = [...doc.querySelectorAll('.dnav .mm > .mb')];
+    const cur = mbs.find(b => /Company|Empresa/.test(b.textContent)), res = mbs.find(b => /Resources|Recursos/.test(b.textContent));
+    const plain = mbs.find(b => b !== cur && b !== res);
+    if (cur && res) { ['boxShadow', 'color'].forEach(k => { res.style[k] = cur.style[k]; cur.style[k] = plain ? plain.style[k] : ''; }); if (cur.hasAttribute('aria-current')) { res.setAttribute('aria-current', cur.getAttribute('aria-current')); cur.removeAttribute('aria-current'); } }
+  }
+  {
+    const company = [...doc.querySelectorAll('.dnav .mm')].find(m => /Company|Empresa/.test((m.querySelector('.mb') || {}).textContent || ''));
+    if (company) company.querySelectorAll('a.mt[href$="/news/"]').forEach(a => a.remove());
+    doc.querySelectorAll('footer .fcol').forEach(col => { const h = col.querySelector('.fcol-h'); if (h && /Company|Empresa/.test(h.textContent)) col.querySelectorAll('.fcol-list a[href$="/news/"]').forEach(a => a.remove()); });
+    doc.querySelectorAll('.mnav details').forEach(d => { const sm = d.querySelector(':scope > summary'); if (sm && /Company|Empresa/.test(sm.textContent)) d.querySelectorAll(':scope > div > a[href$="/news/"]').forEach(a => a.remove()); });
+  }
+  // phone menu: one section open at a time
+  doc.querySelectorAll('.mnav > div > details').forEach(d => d.setAttribute('name', 'x-mnav'));
+
+  // --- "Latest posts" lists: the post's date and photo from the blog ---
+  if (cfg.blogIndex) main.querySelectorAll('a.x-post:not(.x-post-article)').forEach(a => {
+    const b = cfg.blogIndex[a.getAttribute('href')]; if (!b) return;
+    const cover = a.querySelector('.x-cover');
+    if (b.image && cover) { const im = doc.createElement('img'); im.src = '/assets/img/' + b.image; im.alt = ''; if (b.w) { im.width = b.w; im.height = b.h; } im.loading = 'lazy'; im.decoding = 'async'; cover.querySelectorAll('.x-cover-icon').forEach(x => x.remove()); cover.classList.add('x-cover-img'); cover.prepend(im); }
+    if (b.date) { const t = mk('time', 'x-post-date', fmtDate(b.date)); t.setAttribute('datetime', b.date); t.lang = LANG; const title = a.querySelector('.x-post-title'); if (title) title.before(t); }
+  });
+
+  // --- demo form: one optional qualifying question ---
+  doc.querySelectorAll('form[data-form="demo"]').forEach(f => {
+    const co = f.querySelector('[name="company"]'); if (!co || f.querySelector('[name="operatorType"]')) return;
+    const wrap = co.parentElement, row = wrap.parentElement;
+    const nw = wrap.cloneNode(false); const lab = doc.createElement('label'); lab.setAttribute('for', co.id + '-op'); lab.setAttribute('style', (wrap.querySelector('label') || {}).getAttribute ? wrap.querySelector('label').getAttribute('style') : '');
+    lab.textContent = ES ? 'Tipo de operador' : 'Operator type';
+    const opt = mk('span', null, ES ? ' (opcional)' : ' (optional)'); opt.setAttribute('style', 'font-weight: 400; color: rgb(86, 91, 107);'); lab.appendChild(opt);
+    const sel = doc.createElement('select'); sel.id = co.id + '-op'; sel.name = 'operatorType'; sel.setAttribute('style', co.getAttribute('style'));
+    const OPTS = ES ? ['', 'ISP de fibra o cable', 'Operador móvil', 'OMV u OMVE', 'Wi-Fi o recintos', 'Empresa o gobierno', 'Otro'] : ['', 'Fibre or cable ISP', 'Mobile operator', 'MVNO or MVNE', 'Wi-Fi or venue provider', 'Enterprise or government', 'Other'];
+    OPTS.forEach((o, i) => { const op = doc.createElement('option'); op.value = o; op.textContent = i ? o : (ES ? 'Elegir' : 'Choose'); sel.appendChild(op); });
+    nw.append(lab, sel);
+    const r2 = row.cloneNode(false); r2.appendChild(nw); row.after(r2);
+  });
+
+  // --- footer: real policy links and Alepo's social channels ---
+  doc.querySelectorAll('.xf-bottom span').forEach(sp => {
+    if (/^(Privacy policy|Política de privacidad)$/.test(sp.textContent.trim()) && !sp.children.length) {
+      const a = doc.createElement('a'); a.href = PRE + '/privacy-policy/'; a.textContent = sp.textContent.trim(); sp.replaceWith(a);
+      const c2 = doc.createElement('a'); c2.href = PRE + '/cookie-policy/'; c2.textContent = ES ? 'Política de cookies' : 'Cookie policy'; a.after(c2);
+    }
+  });
+  const SOC = cfg.siteConfig && cfg.siteConfig.social;
+  const contactBox = doc.querySelector('.xf-contact');
+  if (SOC && contactBox && !doc.querySelector('.xf-social')) {
+    const ICON = {
+      LinkedIn: '<path d="M4 9h3v11H4zM5.5 4a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5zM10 9h3v1.6c.5-.9 1.7-1.8 3.4-1.8 3.2 0 3.6 2.1 3.6 4.8V20h-3v-5.6c0-1.3 0-3-1.8-3s-2.2 1.4-2.2 2.9V20h-3z" fill="currentColor" stroke="none"/>',
+      X: '<path d="M4 4l16 16M20 4L4 20" />',
+      YouTube: '<rect x="3" y="6" width="18" height="12" rx="3.5"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/>',
+      Facebook: '<path d="M14 8h2V5h-2.5C11 5 10 6.7 10 9v2H8v3h2v6h3v-6h2.5l.5-3H13V9.2c0-.7.3-1.2 1-1.2z" fill="currentColor" stroke="none"/>',
+      Instagram: '<rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor"/>' };
+    const row = mk('div', 'xf-social');
+    Object.entries(SOC).forEach(([name, url]) => { if (name.startsWith('_') || !ICON[name]) return; const a = doc.createElement('a'); a.href = url; a.rel = 'me noopener'; a.target = '_blank'; a.setAttribute('aria-label', `Alepo on ${name}`); a.innerHTML = svg(ICON[name], 20); row.appendChild(a); });
+    contactBox.after(row);
+  }
+
+  // --- structured data: FAQ answers and product details (rich results) ---
+  const addLd = obj => { const sc = doc.createElement('script'); sc.type = 'application/ld+json'; sc.textContent = JSON.stringify(obj); doc.head.appendChild(sc); };
+  const faqs = [...main.querySelectorAll('details')].map(d => { const q = d.querySelector('summary'); if (!q) return null; const a = [...d.childNodes].filter(n => n !== q).map(n => n.textContent).join(' ').replace(/\s+/g, ' ').trim(); return a ? { q: q.textContent.replace(/\s+/g, ' ').trim(), a } : null; }).filter(Boolean);
+  if (faqs.length >= 2) addLd({ '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: ES ? 'es' : 'en', mainEntity: faqs.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) });
+  if (/^p-/.test(page)) {
+    const canon = doc.querySelector('link[rel="canonical"]'), desc = doc.querySelector('meta[name="description"]');
+    const crumbs = [...main.querySelectorAll('[data-role="breadcrumb"] > *')].map(x => x.textContent.trim()).filter(t => t && t !== '/');
+    addLd({ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: crumbs.at(-1) || (main.querySelector('h1') || {}).textContent, applicationCategory: 'BusinessApplication', applicationSubCategory: crumbs.at(-2) || undefined,
+      description: desc ? desc.getAttribute('content') : undefined, url: canon ? canon.getAttribute('href') : undefined, inLanguage: ES ? 'es' : 'en',
+      publisher: { '@type': 'Organization', name: 'Alepo Technologies', url: 'https://alepo.com/' } });
+  }
+  // fonts are self-hosted (site-polish.css); no Google Fonts request
+  doc.querySelectorAll('link[href*="fonts.googleapis.com"], link[href*="fonts.gstatic.com"]').forEach(l => l.remove());
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

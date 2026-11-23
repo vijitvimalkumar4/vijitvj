@@ -94,7 +94,7 @@ window.__alepoLead = function (cfg, doc) {
     if (sc.privacyUrl) {
       const [before] = consentText.split(T('privacy policy', 'política de privacidad'));
       p.appendChild(doc.createTextNode(before));
-      const a = el('a', 'text-decoration: underline;', T('privacy policy', 'política de privacidad')); a.setAttribute('href', sc.privacyUrl);
+      const a = el('a', 'text-decoration: underline;', T('privacy policy', 'política de privacidad')); a.setAttribute('href', (ES ? '/es' : '') + sc.privacyUrl);
       p.appendChild(a); p.appendChild(doc.createTextNode('.'));
     } else p.textContent = consentText;
     return p;
