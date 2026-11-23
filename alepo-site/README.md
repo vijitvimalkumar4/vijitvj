@@ -295,6 +295,19 @@ Direction: professional and quiet. Depth comes from neutral shadows (no coloured
 | `x-prodrow` | Home product families: the family with the most products (Billing & BSS) is a tall card on the left, the other four sit in two balanced rows beside it; photos absorb spare height so all cards end flush. Below 900 px it becomes a swipe row |
 | `x-solgrid` | Home solutions use the same pattern: the first solution (Fibre and cable ISPs) is the tall card, the other four sit in two rows beside it, photos absorb spare height; a swipe row below 900 px |
 
+### Header menus
+
+Before, each menu opened as a full-width sheet 450 to 754 px tall (most of a laptop screen). Now:
+
+- Menus open as a floating card aligned to the page edges, with compact rows (32 px icons, 15 px titles, 13 px descriptions); the page behind dims slightly.
+- **Products** has three parts: the five families on the left, the products of the family you point at (or tab to) in the middle, the promo and "All products" on the right. Billing & BSS keeps its four sub-groups as a 2 x 2 block. Keyboard order: family, its products, next family. Without JavaScript the first family shows and each family name links to its page.
+- **Solutions** gives "By need" two columns beside "By operator" so items stay on one or two lines.
+- Heights at 1440 x 900: Products 349 to 399 px, Solutions 433, Services 356, Resources 342, Company 356.
+
+### Customer names strip
+
+The label is a small uppercase eyebrow with a divider; the seven names are set as bold wordmarks spread evenly across the row (wrapping on phones). Real customer logos, with permission, would be the next step.
+
 ### Footer
 
 `polish.js` rebuilds the footer from the same links and form (the only new words are the "Offices" heading and the back-to-top label):

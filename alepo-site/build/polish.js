@@ -155,6 +155,63 @@ window.__alepoPolish = function (cfg, doc) {
       kids[0].classList.add('x-sol-main');
     }
   });
+  // customer names strip: a quieter label and evenly spaced names
+  main.querySelectorAll('.mqw').forEach(w => {
+    const sec = w.closest('section'); if (!sec) return;
+    sec.classList.add('x-logos');
+    const lab = w.parentElement.querySelector(':scope > span'); if (lab) lab.classList.add('x-logos-label');
+  });
+
+  // Products menu: family list on the left, the chosen family's products on the right, promo on the far right
+  doc.querySelectorAll('.dnav .mp').forEach(mp => {
+    const inner = mp.querySelector(':scope > div > div');
+    if (!inner || inner.querySelector('.xm')) return;
+    const heads = [...inner.querySelectorAll('div[style*="border-bottom: 1px"] > a')];
+    if (heads.length < 4 || !heads.every(a => /\/products\/[^/]+\/$/.test(a.getAttribute('href') || ''))) return;
+    // family order as in the footer (Network, Billing, Provisioning, Care, AI)
+    const order = [...doc.querySelectorAll('footer .fcol-h a')].map(a => a.getAttribute('href'));
+    const rank = a => { const i = order.indexOf(a.getAttribute('href')); return i < 0 ? 99 : i; };
+    heads.sort((x, y) => rank(x) - rank(y));
+    const side = [...inner.children].find(c => !c.querySelector('div[style*="border-bottom: 1px"] > a'));
+    const xm = doc.createElement('div'); xm.className = 'xm';
+    heads.forEach((a, k) => {
+      const group = a.parentElement.parentElement, list = group.children[1];
+      const tab = doc.createElement('a');
+      tab.className = 'xm-tab' + (k === 0 ? ' is-active' : '');
+      tab.href = a.getAttribute('href');
+      tab.style.gridRow = String(k + 1);
+      tab.innerHTML = '<span></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>';
+      tab.firstChild.textContent = a.textContent.trim();
+      const pane = doc.createElement('div');
+      pane.className = 'xm-pane' + (k === 0 ? ' is-active' : '');
+      pane.setAttribute('role', 'group'); pane.setAttribute('aria-label', a.textContent.trim());
+      const labels = list.querySelectorAll('div[style*="text-transform: uppercase"]');
+      if (labels.length) {
+        pane.classList.add('xm-pane-sub');
+        [...list.children].forEach(col => {
+          let block = null;
+          [...col.children].forEach(ch => {
+            if (ch.tagName !== 'A') { block = doc.createElement('div'); block.className = 'xm-sub'; ch.removeAttribute('style'); ch.className = 'xm-sublabel'; block.appendChild(ch); pane.appendChild(block); }
+            else if (block) block.appendChild(ch);
+          });
+        });
+        // reading order row by row: first block of each column, then the second
+        const blocks = [...pane.children];
+        const half = Math.ceil(blocks.length / 2);
+        const reordered = [];
+        for (let r = 0; r < half; r++) { if (blocks[r]) reordered.push(blocks[r]); if (blocks[r + half]) reordered.push(blocks[r + half]); }
+        reordered.forEach(b => pane.appendChild(b));
+      } else {
+        const l = doc.createElement('div'); l.className = 'xm-list';
+        list.querySelectorAll('a').forEach(x => l.appendChild(x));
+        pane.appendChild(l);
+      }
+      xm.append(tab, pane);
+    });
+    if (side) { side.removeAttribute('style'); side.className = 'xm-side'; xm.appendChild(side); }
+    inner.replaceChildren(xm);
+    inner.classList.add('xm-host');
+  });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

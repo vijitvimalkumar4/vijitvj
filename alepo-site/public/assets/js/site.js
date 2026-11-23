@@ -187,6 +187,17 @@
     });
   });
 
+  // Products menu: pointing at or focusing a family shows its products (a short delay so a diagonal move to the list does not switch)
+  document.querySelectorAll('.xm').forEach(function (xm) {
+    var tabs = xm.querySelectorAll('.xm-tab'), timer;
+    function show(tab) { tabs.forEach(function (x) { var on = x === tab, pane = x.nextElementSibling; x.classList.toggle('is-active', on); if (pane && pane.classList.contains('xm-pane')) pane.classList.toggle('is-active', on); }); }
+    tabs.forEach(function (tab) {
+      tab.addEventListener('mouseenter', function () { clearTimeout(timer); timer = setTimeout(function () { show(tab); }, 90); });
+      tab.addEventListener('mouseleave', function () { clearTimeout(timer); });
+      tab.addEventListener('focus', function () { show(tab); });
+    });
+  });
+
   if (!window.__xPrint) { window.__xPrint = true; window.addEventListener('beforeprint', function () { document.querySelectorAll('.rv').forEach(function (e) { e.classList.add('rv-in'); }); }); }
   if (reduce || !('IntersectionObserver' in window)) return;
   root.classList.add('x-motion');
