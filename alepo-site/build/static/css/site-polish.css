@@ -147,19 +147,23 @@ a:hover svg:has(> path[d^="M5 12h14"]) { translate: 3px 0; }
 }
 
 
-/* ---------- home product families in one row ---------- */
-.x-prodrow { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; gap: 16px !important; align-items: stretch; }
-.x-prodrow > .x-card > div:first-child { aspect-ratio: 16 / 9 !important; }
-.x-prodrow > .x-card > div:nth-child(2) { padding: 20px 20px 8px !important; gap: 8px !important; }
-.x-prodrow h3 { font-size: 20px !important; line-height: 1.2 !important; }
+/* ---------- home product families: one tall card beside a 2 x 2 grid ---------- */
+/* The photo takes up any spare height, so every card ends flush with its row and nothing is left empty. */
+.x-prodrow { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 20px !important; align-items: stretch; }
+.x-prodrow > .x-prod-main { grid-row: span 2; }
+.x-prodrow > .x-card > div:first-child { flex: 1 1 auto; aspect-ratio: auto !important; min-height: 150px; }
+.x-prodrow > .x-card > div:first-child img { position: absolute; inset: 0; }
+.x-prodrow > .x-card > div:nth-child(2) { padding: 24px 28px 8px !important; gap: 8px !important; }
+.x-prodrow h3 { font-size: 25px !important; line-height: 1.15 !important; }
 .x-prodrow > .x-card > div:nth-child(2) p { font-size: 15px !important; line-height: 1.5 !important; }
-.x-prodrow > .x-card > div:nth-child(3) { grid-template-columns: 1fr !important; padding: 4px 20px 20px !important; }
-.x-prodrow > .x-card > div:nth-child(3) > a { gap: 10px !important; padding: 9px 0 !important; }
+.x-prodrow > .x-card > div:nth-child(3) { grid-template-columns: 1fr !important; padding: 4px 28px 24px !important; }
+.x-prodrow > .x-card > div:nth-child(3) > a { gap: 12px !important; padding: 10px 0 !important; }
 .x-prodrow > .x-card > div:nth-child(3) > a span[style*="font-weight: 600"] { font-size: 15px !important; line-height: 1.35; }
-/* narrower screens: a swipe row with the next card peeking in */
-@media (max-width: 1239px) {
-  .x-prodrow { display: flex !important; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; margin: 0 -32px; padding: 4px 32px 16px; scroll-padding: 0 32px; }
+/* phones: a swipe row with the next card peeking in */
+@media (max-width: 899px) {
+  .x-prodrow { display: flex !important; align-items: flex-start !important; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; margin: 0 -32px; padding: 4px 32px 16px; scroll-padding: 0 32px; }
   .x-prodrow > .x-card { flex: 0 0 300px; scroll-snap-align: start; }
+  .x-prodrow > .x-card > div:first-child { flex: 0 0 auto; aspect-ratio: 16 / 9 !important; min-height: 0; }
 }
 @media (max-width: 760px) {
   .x-prodrow { margin: 0 -20px; padding: 4px 20px 16px; scroll-padding: 0 20px; }

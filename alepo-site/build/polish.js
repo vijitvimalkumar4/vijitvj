@@ -131,12 +131,19 @@ window.__alepoPolish = function (cfg, doc) {
     ft.classList.add('x-footer');
     ft.appendChild(mark);
   }
-  // home product families: one horizontal row (a swipe row on smaller screens) instead of a 3 + 2 grid
+  // home product families: one tall card beside a 2 x 2 grid (a swipe row on phones)
   main.querySelectorAll('.x-card').forEach(c => {
     const g = c.parentElement;
     if (!g || g.classList.contains('x-prodrow')) return;
     const kids = [...g.children];
-    if (kids.length >= 4 && kids.every(k => k.classList.contains('x-card') && k.querySelector('h3') && k.querySelectorAll('a').length >= 3)) g.classList.add('x-prodrow');
+    if (!(kids.length >= 4 && kids.every(k => k.classList.contains('x-card') && k.querySelector('h3') && k.querySelectorAll('a').length >= 3))) return;
+    g.classList.add('x-prodrow');
+    // the family with the most products becomes the tall left card; the rest fill two rows beside it,
+    // paired by size so each row is balanced. DOM order follows the visual order (keyboard and screen readers).
+    const n = k => k.querySelectorAll('a').length;
+    const sorted = kids.slice().sort((a, b) => n(b) - n(a));
+    sorted[0].classList.add('x-prod-main');
+    sorted.forEach(k => g.appendChild(k));
   });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');

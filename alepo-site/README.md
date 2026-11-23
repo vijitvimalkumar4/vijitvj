@@ -292,7 +292,7 @@ Direction: professional and quiet. Depth comes from neutral shadows (no coloured
 | `x-cardgrid` | Runs of 4 or more plain framed rows (offices, events) become a card grid |
 | `x-btn` | Flat indigo buttons that darken on hover; arrows move 3 px |
 | `x-cta` | The demo band is a flat indigo panel with rounded corners |
-| `x-prodrow` | Home product families sit in one row of five on wide screens (1240 px and up) and become a swipe row with the next card peeking in below that, instead of stacking |
+| `x-prodrow` | Home product families: the family with the most products (Billing & BSS) is a tall card on the left, the other four sit in two balanced rows beside it; photos absorb spare height so all cards end flush. Below 900 px it becomes a swipe row |
 
 ### Footer
 
