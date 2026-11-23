@@ -99,6 +99,18 @@ a:hover svg:has(> path[d^="M5 12h14"]) { translate: 3px 0; }
 .mp a.mt > span:nth-child(2) > span + span { font-size: 13px !important; line-height: 1.4; }
 .mp a.mt:hover > span:nth-child(2) > span:first-child { color: var(--x-indigo); }
 
+/* menu rows: icon level with the first line of the title, whatever the description length */
+.mp a.mt { align-items: flex-start !important; }
+.mp a.mt > span:nth-child(2) { padding-top: 6px; }
+/* Services, Resources, Company: the promo card sits under its own column heading, level with the first items */
+.xm-sidecol { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.xm-promo { padding: 20px !important; border-radius: 16px !important; gap: 6px !important; }
+.xm-promo > span:first-child { font-size: 22px !important; }
+.xm-promo > span:nth-child(2) { font-size: 15px !important; }
+.xm-cols div[style*="display: grid"] > a:not(.mt) { padding: 10px !important; font-size: 15px !important; line-height: 1.4 !important; font-weight: 500; border-bottom-color: var(--x-line) !important; border-radius: 0 !important; box-shadow: none !important; transition: background-color var(--x-fast) ease, color var(--x-fast) ease; }
+.xm-cols div[style*="display: grid"] > a:not(.mt):hover { background: rgba(45, 29, 143, 0.045) !important; color: var(--x-indigo) !important; }
+.xm-cols div[style*="display: grid"]:has(> a:not(.mt)) { gap: 0 !important; }
+
 /* Products menu: families | products of the chosen family | promo */
 .xm-host { display: block !important; }
 .xm { display: grid; grid-template-columns: 232px minmax(0, 1fr) 250px; grid-template-rows: repeat(5, auto) 1fr; column-gap: 28px; align-items: start; }

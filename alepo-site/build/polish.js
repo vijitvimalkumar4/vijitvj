@@ -235,6 +235,21 @@ window.__alepoPolish = function (cfg, doc) {
     }
   });
 
+  // Other menus (Services, Resources, Company): the promo card's label becomes its column heading, so the card lines up with the first items
+  doc.querySelectorAll('.dnav .mp').forEach(mp => {
+    const inner = mp.querySelector(':scope > div > div');
+    if (!inner || inner.classList.contains('xm-host') || inner.querySelector('.xm-sidecol')) return;
+    const card = [...inner.children].find(c => c.tagName === 'A');
+    const head = inner.querySelector('div[style*="border-bottom: 1px"][style*="font-size: 13px"]');
+    const eyebrow = card && card.firstElementChild;
+    if (!card || !head || !eyebrow || eyebrow.textContent.trim().length > 30) return;
+    const col = doc.createElement('div'); col.className = 'xm-sidecol';
+    const h = doc.createElement('div'); h.setAttribute('style', head.getAttribute('style')); h.textContent = eyebrow.textContent.trim();
+    eyebrow.remove();
+    card.replaceWith(col); col.append(h, card);
+    card.classList.add('xm-promo');
+    mp.classList.add('xm-cols');
+  });
   // ================= child pages =================
   const ES = doc.documentElement.lang === 'es';
   const page = cfg.file || '';
