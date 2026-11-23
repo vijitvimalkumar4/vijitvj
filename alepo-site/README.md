@@ -272,3 +272,24 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
   - the AI Sales Assistant and AI CCaaS sections (decision T10 and T11)
 - **Redirects marked `confirm`:** these need the pre-launch crawl, the `?p=` addresses, or a decision on whether the offer is the same.
 - **Open Graph images** (1200 × 630) and analytics events. The latter need consent tooling first.
+
+## Visual polish
+
+`build/polish.js` runs after `uifixes.js`. It only adds classes; `build/static/css/site-polish.css` styles them. Content, copy and layout order are unchanged.
+
+| Class | What it gets |
+| --- | --- |
+| `x-header` | Frosted white header; a soft shadow once the page scrolls (`is-scrolled`, set in `site.js`) |
+| `x-hero` | First light section: violet and cyan glows, a faint dot grid, gradient headline, tilted photo |
+| `x-tint`, `x-dark` | Tinted bands with a gentle gradient; dark bands with glows and a dot grid |
+| `x-h2` | A short violet-to-cyan accent bar above section headings |
+| `x-card`, `x-row` | Soft shadows, rounded corners, a hover lift; product rows on the hub and category pages become light cards |
+| `x-icon`, `x-row-icon` | Gradient icon tiles |
+| `x-cardgrid` | Runs of 4 or more plain framed rows (offices, events) become a card grid |
+| `x-media` | Shadow and a light brand tint on framed photos |
+| `x-btn`, `x-btn-light` | Gradient primary buttons with a soft glow |
+| `x-stat` | Gradient figures in the results row |
+| `x-cta` | The demo band becomes a floating rounded gradient panel |
+| `x-reveal` | Sections below the first screen fade up as they scroll in (`site.js`), only when the visitor allows motion |
+
+Reduced-motion users get no tilt, lift or fade. In Windows high-contrast mode the gradient text falls back to plain text. Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.

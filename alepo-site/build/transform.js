@@ -142,6 +142,7 @@ window.__alepo = async function (cfg) {
   doc.documentElement.setAttribute('lang', L);
   if (window.__alepoLead) window.__alepoLead(cfg, doc); // audit fixes (leadfixes.js)
   if (window.__alepoUI) await window.__alepoUI(cfg, doc); // UI audit fixes (uifixes.js)
+  if (window.__alepoPolish) window.__alepoPolish(cfg, doc); // visual polish (polish.js)
 
   return '<!doctype html>\n' + doc.documentElement.outerHTML;
 
