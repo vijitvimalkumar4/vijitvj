@@ -322,7 +322,19 @@ The demo band ("Talk to us", "Request a demo") is a gradient panel with three so
 python3 alepo-site/build/fetch_blog.py
 ```
 
-The Blog page shows every post, newest first: the latest as a wide card, then cards with photo, category, date, summary and "Read the article" (links go to the post on alepo.com). Topic filters group the WordPress categories (Network access and AAA, BSS and billing, AI, Awards and news; posts are filed under their first specific category), with counts. 13 cards show first and "Show more articles" adds 24 at a time; without JavaScript every post is listed. Note: the blog listing page itself (`/resources/blog/`) blocks automated requests at Cloudflare; the sitemap and the post pages do not.
+The Blog page shows every post, newest first: the latest as a wide card, then cards with photo, category, date, summary and "Read the article" (links go to the post on alepo.com). Topic filters group the WordPress categories (Network access and AAA, BSS and billing, AI, Awards and news; posts are filed under their first specific category), with counts. 13 cards show first and "Show more articles" adds 24 at a time (the button is centred and works the same on the News page); without JavaScript every post is listed. Note: the blog listing page itself (`/resources/blog/`) blocks automated requests at Cloudflare; the sitemap and the post pages do not.
+
+### Library and News from alepo.com
+
+`build/fetch_resources.py` collects both (run it again to refresh):
+
+```
+python3 alepo-site/build/fetch_resources.py
+```
+
+- **Library** (`build/library/items.json`, 44 items): from https://alepo.com/resources/library/; its Datasheets, Case Studies and White Papers tabs give each item's type. Case-study pages add the country and operator type, white papers their summary. Datasheets link straight to the PDF on alepo.com (opens in a new tab), as on the current site; gating them behind the data-sheet email form is a business decision. The Library filters show counts (8 datasheets, 26 case studies, 10 white papers).
+- **News** (`build/news/items.json`, 33 items): from https://alepo.com/nnews-sitemap.xml and each news page (title, date, summary, share image). Where a page has no share image, a sitemap image is used only if it was uploaded within two months of the item (others belong to other posts); 7 items have none and get a brand cover. Newest first, 13 shown, "Show more news" for the rest. The Events block above it is unchanged.
+- The Blog, Library and News pages share one card builder in `polish.js`; items without a photo get a gradient cover with an icon.
 
 ### Child pages
 

@@ -159,8 +159,12 @@ for (const j of jobs) {
   await page.addScriptTag({ path: path.join(HERE, 'leadfixes.js') });
   await page.addScriptTag({ path: path.join(HERE, 'uifixes.js') });
   await page.addScriptTag({ path: path.join(HERE, 'polish.js') });
-  const blogPosts = j.file === 'blog.html' && fs.existsSync(path.join(HERE, 'blog', 'posts.json')) ? JSON.parse(fs.readFileSync(path.join(HERE, 'blog', 'posts.json'), 'utf8')) : null;
-  const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts });
+  // collected content from alepo.com (fetch_blog.py, fetch_resources.py)
+  const data = f => { const p = path.join(HERE, f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; };
+  const blogPosts = j.file === 'blog.html' ? data('blog/posts.json') : null;
+  const libraryItems = j.file === 'library.html' ? data('library/items.json') : null;
+  const newsItems = j.file === 'news.html' ? data('news/items.json') : null;
+  const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems });
   await page.close();
   const dest = j.out.endsWith('.html') ? path.join(OUT, j.out) : path.join(OUT, j.out, 'index.html');
   fs.mkdirSync(path.dirname(dest), { recursive: true });

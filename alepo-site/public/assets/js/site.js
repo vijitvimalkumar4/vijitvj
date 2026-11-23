@@ -148,6 +148,7 @@
       if (firstNew) firstNew.focus();
     }
     document.querySelectorAll('[role=group] button[data-filter]').forEach(function (b) { b.addEventListener('click', function () { cur = b.dataset.filter; limit = size; applyPage(false); }); });
+    if (!document.querySelector('[role=group] button[data-filter]')) cur = 'all';
     if (more) more.addEventListener('click', function () { limit += size * 2 - 2; applyPage(true); });
     applyPage(false);
   }

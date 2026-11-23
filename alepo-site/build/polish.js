@@ -283,7 +283,8 @@ window.__alepoPolish = function (cfg, doc) {
     map: '<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/>',
     star: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
     lifebuoy: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6"/>',
-    arrow: '<circle cx="12" cy="12" r="9"/><path d="M9 12h6M13 9l3 3-3 3"/>'
+    arrow: '<circle cx="12" cy="12" r="9"/><path d="M9 12h6M13 9l3 3-3 3"/>',
+    megaphone: '<path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 8a5 5 0 0 1 0 8M18 5a9 9 0 0 1 0 14"/>'
   };
 
   // 1. content lists (blog posts, library documents, resources on product pages) become cards with a typed cover
@@ -315,7 +316,39 @@ window.__alepoPolish = function (cfg, doc) {
   });
 
 
-  // 1b. Blog page: every post from alepo.com (build/blog/posts.json, collected by fetch_blog.py)
+  // 1b. Blog, Library and News pages: the items collected from alepo.com (build/*/ *.json)
+  const mk = (tag, cls, text) => { const e = doc.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const LANG = ES ? 'es' : 'en';
+  const fmtDate = d => new Date(d + 'T12:00:00Z').toLocaleDateString(ES ? 'es-ES' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  const arrow = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>';
+  // o: { url, title, date, summary, tag, image, w, h, kind, go, chips, fallback, featured, eager }
+  const card = o => {
+    const a = mk('a', 'x-post x-post-article' + (o.featured ? ' x-post-featured' : '') + (o.image ? '' : ' x-post-' + (o.fallback || 'doc')));
+    a.href = o.url; a.lang = 'en'; if (o.kind) a.dataset.kind = o.kind;
+    if (/\.pdf$/i.test(o.url)) { a.target = '_blank'; a.rel = 'noopener'; }
+    const cover = mk('span', 'x-cover' + (o.image ? ' x-cover-img' : ' x-cover-plain'));
+    if (o.image) { const im = doc.createElement('img'); im.src = '/assets/img/' + o.image; im.alt = ''; if (o.w) { im.width = o.w; im.height = o.h; } im.loading = o.eager ? 'eager' : 'lazy'; im.decoding = 'async'; cover.appendChild(im); }
+    else { const ic = mk('span', 'x-cover-icon'); ic.innerHTML = svg(I[o.fallbackIcon || 'doc'], 40); cover.appendChild(ic); }
+    if (o.tag) { const t = mk('span', 'x-post-tag', o.tag); t.lang = o.tagLang || 'en'; cover.appendChild(t); }
+    const body = mk('span', 'x-post-body');
+    if (o.date) { const t = mk('time', 'x-post-date', fmtDate(o.date)); t.setAttribute('datetime', o.date); t.lang = LANG; body.appendChild(t); }
+    body.appendChild(mk('span', 'x-post-title', o.title));
+    if (o.chips && o.chips.length) { const c = mk('span', 'x-post-chips'); o.chips.forEach(x => c.appendChild(mk('span', null, x))); body.appendChild(c); }
+    if (o.summary) body.appendChild(mk('span', 'x-post-excerpt', o.summary));
+    const go = mk('span', 'x-post-go', o.go); go.lang = LANG; go.insertAdjacentHTML('beforeend', arrow); body.appendChild(go);
+    a.append(cover, body);
+    return a;
+  };
+  // "Show more" (13 first) with a live count; site.js runs it, and without JavaScript every item is listed
+  const paging = (feed, n, tplEn, tplEs, moreEn, moreEs) => {
+    feed.setAttribute('data-filter-list', ''); feed.dataset.pageSize = '13';
+    const status = mk('p', 'x-blog-status', ES ? tplEs.replace('{shown} de ', '') .replace('{total}', n) : tplEn.replace('{shown} of ', '').replace('{total}', n));
+    status.setAttribute('aria-live', 'polite'); status.dataset.tplEn = tplEn; status.dataset.tplEs = tplEs;
+    const more = mk('button', 'x-more', ES ? moreEs : moreEn); more.type = 'button'; more.setAttribute('data-more', ''); more.hidden = true;
+    feed.after(more);
+    return status;
+  };
+
   if (page === 'blog.html' && Array.isArray(cfg.blogPosts) && cfg.blogPosts.length) {
     const feed = main.querySelector('.x-feed');
     if (feed) {
@@ -327,29 +360,11 @@ window.__alepoPolish = function (cfg, doc) {
       ];
       // a post belongs to the topic of its first specific category (the order the post itself lists them)
       const topicOf = cats => { for (const c of cats) { const t = TOPICS.find(([, , list]) => list.includes(c)); if (t) return t[0]; } return 'other'; };
-      const fmt = d => new Date(d + 'T12:00:00Z').toLocaleDateString(ES ? 'es-ES' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-      const mk = (tag, cls, text) => { const e = doc.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-      const cards = cfg.blogPosts.map((p, i) => {
-        const a = mk('a', 'x-post x-post-article' + (i === 0 ? ' x-post-featured' : ''));
-        a.href = p.url; a.lang = 'en'; a.dataset.kind = topicOf(p.categories);
-        const cover = mk('span', 'x-cover x-cover-img');
-        if (p.image) { const im = doc.createElement('img'); im.src = '/assets/img/' + p.image; im.alt = ''; if (p.w) { im.width = p.w; im.height = p.h; } im.loading = i < 4 ? 'eager' : 'lazy'; im.decoding = 'async'; cover.appendChild(im); }
-        const label = p.categories.find(c => c !== 'Blog' && c !== 'Alepo') || p.categories[0] || 'Blog';
-        cover.appendChild(mk('span', 'x-post-tag', label));
-        const body = mk('span', 'x-post-body');
-        if (p.date) { const t = mk('time', 'x-post-date', fmt(p.date)); t.setAttribute('datetime', p.date); t.lang = L(); body.appendChild(t); }
-        body.appendChild(mk('span', 'x-post-title', p.title.replace(/^Alepo\s*[-–]\s*/, '')));
-        if (p.excerpt) body.appendChild(mk('span', 'x-post-excerpt', p.excerpt));
-        const go = mk('span', 'x-post-go', ES ? 'Leer el artículo' : 'Read the article'); go.lang = L();
-        go.insertAdjacentHTML('beforeend', '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>');
-        body.appendChild(go);
-        a.append(cover, body);
-        return a;
-      });
-      function L() { return ES ? 'es' : 'en'; }
+      const cards = cfg.blogPosts.map((p, i) => card({ url: p.url, title: p.title.replace(/^Alepo\s*[-–]\s*/, ''), date: p.date, summary: p.excerpt,
+        tag: p.categories.find(c => c !== 'Blog' && c !== 'Alepo') || p.categories[0] || 'Blog', image: p.image, w: p.w, h: p.h,
+        kind: topicOf(p.categories), go: ES ? 'Leer el artículo' : 'Read the article', featured: i === 0, eager: i < 4, fallback: 'book', fallbackIcon: 'book' }));
       feed.replaceChildren(...cards);
-      feed.classList.add('x-blog'); feed.setAttribute('data-filter-list', ''); feed.dataset.pageSize = '13';
-      // topic filters (same buttons as the Library) and a count
+      feed.classList.add('x-blog');
       const bar = mk('div', 'x-blog-bar');
       const grp = mk('div', 'x-blog-filters'); grp.setAttribute('role', 'group'); grp.setAttribute('aria-label', ES ? 'Filtrar por tema' : 'Filter by topic');
       [['all', ES ? 'Todos' : 'All']].concat(TOPICS.map(t => [t[0], t[1]])).forEach(([k, lab], i) => {
@@ -359,11 +374,42 @@ window.__alepoPolish = function (cfg, doc) {
         b.appendChild(mk('span', 'x-count', String(n)));
         grp.appendChild(b);
       });
-      const status = mk('p', 'x-blog-status', (ES ? `${cards.length} artículos` : `${cards.length} articles`)); status.setAttribute('aria-live', 'polite'); status.dataset.tplEn = '{shown} of {total} articles'; status.dataset.tplEs = '{shown} de {total} artículos';
-      bar.append(grp, status);
+      bar.append(grp, paging(feed, cards.length, '{shown} of {total} articles', '{shown} de {total} artículos', 'Show more articles', 'Ver más artículos'));
       feed.before(bar);
-      const more = mk('button', 'x-btn-outline x-more', ES ? 'Ver más artículos' : 'Show more articles'); more.type = 'button'; more.setAttribute('data-more', ''); more.hidden = true;
-      feed.after(more);
+    }
+  }
+
+  if (page === 'library.html' && Array.isArray(cfg.libraryItems) && cfg.libraryItems.length) {
+    const feed = main.querySelector('.x-feed');
+    if (feed) {
+      const K = { 'datasheet': 'ds', 'case-study': 'cs', 'white-paper': 'wp' };
+      const btn = k => { const b = main.querySelector(`button[data-filter="${k}"]`); return b ? b.firstChild.textContent.trim() : null; };
+      const TAG = { ds: (ES ? 'Ficha técnica' : 'Datasheet'), cs: (ES ? 'Caso de éxito' : 'Case study'), wp: (ES ? 'Documento técnico' : 'White paper') };
+      const GO = { ds: (ES ? 'Descargar el PDF' : 'Download the PDF'), cs: (ES ? 'Leer el caso' : 'Read the case study'), wp: (ES ? 'Leer el documento' : 'Read the white paper') };
+      const cards = cfg.libraryItems.map((x, i) => {
+        const k = K[x.type] || 'other';
+        return card({ url: x.url, title: x.title, summary: k === 'cs' ? null : x.summary, chips: k === 'cs' ? [x.country, x.operator].filter(Boolean) : null,
+          tag: TAG[k], tagLang: LANG, image: x.image, w: x.w, h: x.h, kind: k, go: x.pdf ? GO.ds : (GO[k] || GO.wp), eager: i < 4, fallback: k === 'cs' ? 'chart' : 'doc', fallbackIcon: k === 'cs' ? 'chart' : 'doc' });
+      });
+      feed.replaceChildren(...cards);
+      feed.classList.add('x-blog', 'x-library');
+      // filter counts
+      main.querySelectorAll('button[data-filter]').forEach(b => { if (b.closest('[data-filter-empty]')) return; const k = b.dataset.filter; const n = k === 'all' ? cards.length : cards.filter(c => c.dataset.kind === k).length; b.appendChild(mk('span', 'x-count', String(n))); });
+    }
+  }
+
+  if (page === 'news.html' && Array.isArray(cfg.newsItems) && cfg.newsItems.length) {
+    const h = [...main.querySelectorAll('h2')].find(x => /^(News|Noticias)$/.test(x.textContent.trim()));
+    const wrap = h && h.closest('section') && h.parentElement.nextElementSibling;
+    if (wrap) {
+      const feed = mk('div', 'x-feed x-blog x-news');
+      const cards = cfg.newsItems.map((x, i) => card({ url: x.url, title: x.title, date: x.date, summary: x.summary, image: x.image, w: x.w, h: x.h, kind: 'news',
+        go: ES ? 'Leer la noticia' : 'Read the news', featured: i === 0, eager: i < 2, fallback: 'chart', fallbackIcon: 'megaphone' }));
+      feed.append(...cards);
+      wrap.replaceWith(feed);
+      const bar = mk('div', 'x-blog-bar');
+      bar.appendChild(paging(feed, cards.length, '{shown} of {total} news items', '{shown} de {total} noticias', 'Show more news', 'Ver más noticias'));
+      feed.before(bar);
     }
   }
 
