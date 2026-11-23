@@ -275,33 +275,28 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 
 ## Visual polish
 
-`build/polish.js` runs after `uifixes.js`. It only adds classes; `build/static/css/site-polish.css` styles them. Content, copy and layout order are unchanged.
+`build/polish.js` runs after `uifixes.js` and tags the design's building blocks with classes; `build/static/css/site-polish.css` styles them and `site.js` adds the motion. Copy and page order are unchanged.
+
+Direction: professional and quiet. Depth comes from neutral shadows (no coloured glows behind elements), colour is flat brand indigo, and motion is short fades over small distances on one easing curve. Nothing loops or follows the pointer.
 
 | Class | What it gets |
 | --- | --- |
-| `x-header` | Frosted white header; a soft shadow once the page scrolls (`is-scrolled`, set in `site.js`) |
-| `x-hero` | First light section: violet and cyan glows, a faint dot grid, gradient headline, tilted photo |
-| `x-tint`, `x-dark` | Tinted bands with a gentle gradient; dark bands with glows and a dot grid |
-| `x-h2` | A violet-to-cyan accent bar above section headings, and ink-to-indigo gradient heading text |
-| `x-card` | Soft shadows, rounded corners, a hover lift and a light spot that follows the pointer |
-| `x-row` | Product lists on the hub and category pages stay open rows with hairlines (no boxes); on hover the row tints and the icon tile fills |
-| `x-icon`, `x-row-icon` | Violet-to-cyan icon tiles |
+| `x-header` | Frosted white header; a soft shadow once the page scrolls |
+| `x-hero` | Light first sections: faint violet and cyan wash and a dot grid; photo with a neutral shadow |
+| `x-tint`, `x-dark` | Soft lavender bands; dark bands with one faint glow |
+| `x-h2` | A short violet rule above section headings (cyan on dark) |
+| `x-card` | Neutral shadow; on hover lifts 2 px and the photo eases in 3% |
+| `x-statcard` | Results figures on quiet white cards, figures in indigo |
+| `x-row` | Product lists stay open rows with hairlines; on hover the row tints and the icon tile turns indigo |
+| `x-icon`, `x-row-icon` | Light indigo icon tiles |
 | `x-cardgrid` | Runs of 4 or more plain framed rows (offices, events) become a card grid |
-| `x-media` | Shadow and a light brand tint on framed photos |
-| `x-btn`, `x-btn-light` | Gradient primary buttons with a soft glow |
-| `x-stat` | Gradient figures in the results row |
-| `x-cta` | The demo band becomes a floating rounded gradient panel |
-| `x-plain`, `x-tint` | White bands get faint corner glows; tinted bands are lavender with glows and a dot grid |
-| `x-statcard` | Each results figure sits on its own card with a gradient top edge |
-| `x-card-top` | Cards that open with a photo get a violet-to-cyan top edge |
-| `x-herocard` | Home's dark hero panel gets a glowing ring |
-
-Rows on dark bands use frosted glass instead of white cards. A scroll fade-in was tried and removed: it could leave sections blank in screenshot tools and some viewers. Reduced-motion users get no tilt or lift. In Windows high-contrast mode the gradient text falls back to plain text. Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.
+| `x-btn` | Flat indigo buttons that darken on hover; arrows move 3 px |
+| `x-cta` | The demo band is a flat indigo panel with rounded corners |
 
 ### Footer
 
-`polish.js` rebuilds the footer from the same links and form (no new content apart from the "Offices" heading and the back-to-top label):
-brand block (logo, the one-line company description already used under "Why Alepo", a demo button, support numbers, head office) beside a frosted newsletter card;
+`polish.js` rebuilds the footer from the same links and form (the only new words are the "Offices" heading and the back-to-top label):
+brand block (logo, the one-line company description already used under "Why Alepo", a demo button, support numbers, head office) beside the newsletter card;
 then six link columns, a second row with Services, Resources, Company and office chips; a bottom bar with legal links and a back-to-top button; and a large faded wordmark.
 On phones the columns keep their open/close buttons.
 
@@ -309,11 +304,11 @@ On phones the columns keep their open/close buttons.
 
 | Where | What moves |
 | --- | --- |
-| First screen | Headline, text, buttons and photo rise in one after another (CSS, runs without JavaScript) |
-| Below the first screen | Headings, cards, rows and photos fade and rise as they scroll in, in a short stagger; photos open with a wipe; heading bars grow; result figures count up |
-| Backgrounds | Soft glows drift slowly in the hero, dark bands, the demo panel and the footer; dot grids and accent bars shimmer |
-| Hover | Cards lift with a pointer spotlight; buttons get a light sweep; arrows slide; icon tiles fill and tilt; footer links underline |
-| Menus | Mega menu slides down and its items fade in one after another; same in the phone menu |
-| Page | A gradient scroll-progress bar at the top; smooth scrolling |
+| First screen | Text settles in (12 px, 0.7 s, 70 ms apart), then the picture fades in. CSS only |
+| Below the first screen | Headings, cards, rows and photos fade up 16 px as they scroll in, at most 4 in a short sequence |
+| Hover | Colour and shadow changes, 0.2 to 0.35 s; cards lift 2 px |
+| Menus | The mega menu fades and settles 6 px; the phone menu fades |
 
-Safety: content is only hidden for the reveal when JavaScript is running, motion is allowed and the item starts below the screen. When scrolling stops, anything at or above the screen is shown at once (End key, scrollbar drags, anchor jumps), and printing shows everything. With reduced motion turned on, nothing moves.
+Content is only hidden for the reveal when JavaScript is running, motion is allowed and the item starts below the screen. When scrolling stops, anything at or above the screen is shown at once, and printing shows everything. With reduced motion turned on, nothing moves.
+
+Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.

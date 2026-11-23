@@ -70,29 +70,19 @@ window.__alepoPolish = function (cfg, doc) {
     [...d.children].forEach(k => { if (isRow(k)) run.push(k); else flush(); });
     flush();
   });
-  // round 2: plain white bands, result cards, card top accents, home's dark hero panel
+  // round 2: plain white bands, result cards
   sections.forEach((s, i) => { if (i > 0 && bg(s) === 'rgb(255, 255, 255)' && !s.classList.length) s.classList.add('x-plain'); });
   main.querySelectorAll('.x-stat').forEach(n => { const c = n.parentElement; if (c && /border-top: 2px solid/.test(c.getAttribute('style') || '')) c.classList.add('x-statcard'); });
-  main.querySelectorAll('.x-card').forEach(c => { const f = c.firstElementChild; if (f && (f.tagName === 'IMG' || f.querySelector(':scope > img'))) c.classList.add('x-card-top'); });
-  if (sections[0]) sections[0].querySelectorAll('div').forEach(d => {
-    const r = d.getBoundingClientRect(), cs = getComputedStyle(d);
-    if (r.height > 400 && parseFloat(cs.borderTopLeftRadius) >= 16 && cs.overflow === 'hidden' && !d.parentElement.closest('.x-herocard')) { d.classList.add('x-herocard'); if (cs.position === 'static') d.style.position = 'relative'; }
-  });
 
   // ---------- motion hooks ----------
-  const orbs = el => { if (el.querySelector(':scope > .x-orbs')) return; const o = doc.createElement('div'); o.className = 'x-orbs'; o.setAttribute('aria-hidden', 'true'); o.innerHTML = '<i></i><i></i><i></i>'; el.prepend(o); };
-  main.querySelectorAll('.x-hero, .x-dark, .x-cta, .x-herocard').forEach(orbs);
   // hero entrance: text column items and the media rise in turn
   const h1 = sections[0] && sections[0].querySelector('h1');
   if (h1) {
     const col = h1.parentElement, row = col.parentElement;
     let n = 0;
     [...col.children].forEach(c => { c.classList.add('x-in'); c.style.setProperty('--i', n++); });
-    if (row) [...row.children].filter(c => c !== col && !c.classList.contains('x-orbs')).forEach(c => { c.classList.add('x-in', 'x-in-side'); c.style.setProperty('--i', n++); });
+    if (row) [...row.children].filter(c => c !== col).forEach(c => { c.classList.add('x-in', 'x-in-side'); c.style.setProperty('--i', n++); });
   }
-  // mega menu and mobile menu items fade in one after another
-  doc.querySelectorAll('.mp').forEach(mp => mp.querySelectorAll('a').forEach((a, i) => a.style.setProperty('--i', Math.min(i, 14))));
-  doc.querySelectorAll('.mnav a').forEach((a, i) => a.style.setProperty('--i', Math.min(i, 14)));
 
   // ---------- footer: brand and newsletter on top, link columns, offices, bottom bar ----------
   const ft = doc.querySelector('footer');
@@ -139,7 +129,6 @@ window.__alepoPolish = function (cfg, doc) {
     grid.remove();
     wrap.append(top, colsBox, bottom);
     ft.classList.add('x-footer');
-    orbs(ft);
     ft.appendChild(mark);
   }
   // header
