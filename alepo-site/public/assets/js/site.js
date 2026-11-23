@@ -208,7 +208,7 @@
     entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target); en.target.classList.add('rv-in'); done(en.target); });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
 
-  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div, main blockquote, main details, main form, main [role="img"], main .dia-m > div';
+  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div';
   var list = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (e) {
     return !e.closest('.x-hero, .x-in, .rv') && e.getBoundingClientRect().top > window.innerHeight * 0.92;
   });

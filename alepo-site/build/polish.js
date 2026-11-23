@@ -250,6 +250,8 @@ window.__alepoPolish = function (cfg, doc) {
     card.classList.add('xm-promo');
     mp.classList.add('xm-cols');
   });
+  // demo band: drifting glows (styled in site-polish.css, motion only when allowed)
+  main.querySelectorAll('.x-cta').forEach(c => { if (c.querySelector(':scope > .x-orbs')) return; const o = doc.createElement('div'); o.className = 'x-orbs'; o.setAttribute('aria-hidden', 'true'); o.innerHTML = '<i></i><i></i><i></i>'; c.prepend(o); });
   // ================= child pages =================
   const ES = doc.documentElement.lang === 'es';
   const page = cfg.file || '';

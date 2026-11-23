@@ -308,6 +308,12 @@ Before, each menu opened as a full-width sheet 450 to 754 px tall (most of a lap
 
 The label is a small uppercase eyebrow with a divider; the seven names are set as bold wordmarks spread evenly across the row (wrapping on phones). Real customer logos, with permission, would be the next step.
 
+### Gradients and the demo band
+
+Brand gradients (indigo #2D1D8F to violet #4A34D6, accents violet to cyan) on: buttons, the top bar, light-hero headlines (ink to indigo text), heading accent bars, result and fact figures, icon tiles (soft at rest, filled on hover), menu promo cards, step numbers and avatars, content card covers, tinted and dark bands, and the footer (including its headline). Card faces stay white and shadows stay neutral.
+
+The demo band ("Talk to us", "Request a demo") is a gradient panel with three soft glows drifting slowly, a dot grid that moves gently, and a light sweep across its buttons on hover. All of this stops under reduced motion.
+
 ### Child pages
 
 Every page type was reviewed, not only the parents. Changes are pattern-based, so they apply to English and Spanish and to future pages that use the same blocks:
