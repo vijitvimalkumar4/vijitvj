@@ -234,6 +234,156 @@ window.__alepoPolish = function (cfg, doc) {
       }
     }
   });
+
+  // ================= child pages =================
+  const ES = doc.documentElement.lang === 'es';
+  const page = cfg.file || '';
+  const svg = (d, n) => `<svg width="${n || 24}" height="${n || 24}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const I = {
+    doc: '<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/>',
+    chart: '<path d="M4 20V11M10 20V5M16 20v-6M21 20H3"/>',
+    book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/>',
+    paper: '<path d="M6 3h9l4 4v14H6z"/><path d="M9 9h6M9 13h6M9 17h6"/>',
+    lock: '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',
+    key: '<circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3"/>',
+    eyeoff: '<path d="M3 3l18 18M10.6 10.6a2 2 0 0 0 2.8 2.8M9.9 5.1A9.8 9.8 0 0 1 12 5c5 0 9 5 9 7a10.6 10.6 0 0 1-2.4 3.4M6.6 6.6C4.4 8 3 10.4 3 12c0 2 4 7 9 7a9.7 9.7 0 0 0 4.4-1"/>',
+    activity: '<path d="M3 12h4l3-8 4 16 3-8h4"/>',
+    sparkle: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/>',
+    alert: '<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/>',
+    zap: '<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+    users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6.5 6.5 0 0 1 3.5 6"/>',
+    antenna: '<path d="M12 12v9M8 21h8"/><circle cx="12" cy="9" r="2"/><path d="M7.8 4.8a6 6 0 0 0 0 8.4M16.2 4.8a6 6 0 0 1 0 8.4M5 2a10 10 0 0 0 0 14M19 2a10 10 0 0 1 0 14"/>',
+    layers: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+    handshake: '<path d="M2 12l4-4 4 2 3-2 4 1 5 3"/><path d="M6 8v6l5 4 2-1 2 1 3-3"/><path d="M11 13l2 2"/>',
+    grid: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
+    chat: '<path d="M4 5h16v11H9l-5 4z"/>',
+    map: '<path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/>',
+    star: '<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',
+    lifebuoy: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M18.4 5.6l-3.6 3.6M9.2 14.8l-3.6 3.6"/>',
+    arrow: '<circle cx="12" cy="12" r="9"/><path d="M9 12h6M13 9l3 3-3 3"/>'
+  };
+
+  // 1. content lists (blog posts, library documents, resources on product pages) become cards with a typed cover
+  const kindOf = t => /data ?sheet|ficha/i.test(t) ? 'doc' : /case|caso/i.test(t) ? 'chart' : /white|blanco|informe/i.test(t) ? 'paper' : 'book';
+  const tagOf = a => {
+    const k = [...a.children];
+    if (k.length !== 3 || k[0].tagName !== 'SPAN' || k[0].querySelector('svg') || k[1].querySelector('svg')) return null;
+    const t = k[0].textContent.trim();
+    return t && t.length <= 24 ? t : null;
+  };
+  main.querySelectorAll('.x-rows').forEach(list => {
+    const rows = [...list.children];
+    if (!rows.length || !rows.every(r => r.matches('a.x-row') && tagOf(r))) return;
+    list.classList.remove('x-rows'); list.classList.add('x-feed');
+    rows.forEach((a, i) => {
+      const [tag, title, go] = [...a.children];
+      const kind = kindOf(tag.textContent);
+      a.classList.remove('x-row'); a.classList.add('x-post', 'x-post-' + kind);
+      const cover = doc.createElement('span'); cover.className = 'x-cover';
+      tag.removeAttribute('style'); tag.className = 'x-post-tag';
+      const pill = tag.querySelector('span'); if (pill) { tag.textContent = pill.textContent.trim(); }
+      const ic = doc.createElement('span'); ic.className = 'x-cover-icon'; ic.innerHTML = svg(I[kind], 40);
+      cover.append(tag, ic);
+      title.className = 'x-post-title'; title.removeAttribute('style');
+      go.className = 'x-post-go'; go.removeAttribute('style');
+      a.prepend(cover);
+      if (page === 'blog.html' && i === 0) a.classList.add('x-post-featured');
+    });
+  });
+
+  // 2. text-only cards get an icon (company pages); partner cards get a monogram
+  const CARD_ICONS = [[/encrypt|cifrado/i, 'lock'], [/access|acceso/i, 'key'], [/privacy|privacidad/i, 'eyeoff'], [/monitor/i, 'activity'], [/\bAI\b|\bIA\b/, 'sparkle'], [/incident/i, 'alert'],
+    [/impact/i, 'zap'], [/^team$|^equipo$/i, 'users'], [/learn|aprend/i, 'book'], [/telecom/i, 'antenna'], [/open|abiertos/i, 'layers'], [/partnership|largo plazo/i, 'handshake']];
+  main.querySelectorAll('.x-card').forEach(c => {
+    const h = c.querySelector('h3'); if (!h || c.querySelector('img, svg, .x-icon')) return;
+    const t = h.textContent.trim();
+    const hit = CARD_ICONS.find(([re]) => re.test(t));
+    const tile = doc.createElement('span'); tile.className = 'x-icon x-icon-lg'; tile.setAttribute('aria-hidden', 'true');
+    if (hit) tile.innerHTML = svg(I[hit[1]], 22);
+    else if (page === 'partners.html') { tile.classList.add('x-mono'); tile.textContent = t.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase(); }
+    else return;
+    h.parentElement.insertBefore(tile, h);
+  });
+
+  // 3. numbered steps become a row of step cards
+  main.querySelectorAll('ol').forEach(ol => {
+    const li = [...ol.children];
+    if (li.length >= 3 && li.every(x => x.tagName === 'LI' && /^\d+$/.test((x.firstElementChild || {}).textContent || ''))) {
+      ol.classList.add('x-steps'); li.forEach(x => x.firstElementChild.classList.add('x-step-n'));
+    }
+  });
+
+  // 4. leadership: larger avatars
+  if (page === 'leadership.html') main.querySelectorAll('.x-card').forEach(c => {
+    const av = [...c.querySelectorAll('span')].find(sp => /^[A-Z]{2,3}$/.test(sp.textContent.trim()) && !sp.children.length);
+    if (av) { c.classList.add('x-person'); av.classList.add('x-avatar'); }
+  });
+
+  // 5. careers: open roles as job cards
+  if (page === 'careers.html') main.querySelectorAll('.x-rows').forEach(l => { if ([...l.children].every(a => a.matches('a.x-row') && a.children.length === 2)) { l.classList.add('x-jobs'); [...l.children].forEach(a => a.classList.add('x-job')); } });
+
+  // 6. about: a short facts row from figures already on the site (two decades, the office list, five continents)
+  if (page === 'about.html') {
+    const who = main.querySelector(':scope > section:nth-of-type(2) p');
+    const offices = doc.querySelectorAll('.xf-olist > span').length;
+    if (who && offices) {
+      const facts = ES ? [['20+', 'años creando software de telecomunicaciones'], [String(offices), 'oficinas'], ['5', 'continentes con operadores en Alepo']]
+                       : [['20+', 'years building telecom software'], [String(offices), 'offices'], ['5', 'continents with operators on Alepo']];
+      const row = doc.createElement('div'); row.className = 'x-facts';
+      facts.forEach(([n, l]) => { const f = doc.createElement('div'); f.className = 'x-fact'; const a = doc.createElement('span'); a.className = 'x-fact-n'; a.textContent = n; const b = doc.createElement('span'); b.className = 'x-fact-l'; b.textContent = l; f.append(a, b); row.appendChild(f); });
+      who.parentElement.appendChild(row);
+    }
+  }
+
+  // 7. pull quotes (quotes that are not set over a photo)
+  main.querySelectorAll('blockquote').forEach(q => { if (!q.closest('section').querySelector('img')) q.classList.add('x-quote'); });
+
+  // 8. long two-column sections: the heading column stays in view while the text scrolls (desktop)
+  main.querySelectorAll('h2').forEach(h => {
+    const col = h.closest('div[style*="flex: 1 1 280px"]'); if (!col) return;
+    const next = col.nextElementSibling;
+    // the column stretches to its neighbour's height, so measure what is inside it
+    const top = col.getBoundingClientRect().top;
+    const used = Math.max(...[...col.children].map(x => x.getBoundingClientRect().bottom)) - top;
+    const nh = next ? next.getBoundingClientRect().height : 0;
+    if (nh > used * 1.8 && nh > 360) col.classList.add('x-sticky');
+  });
+  // long checklists read in two columns on wide screens
+  main.querySelectorAll('ul').forEach(u => { const li = [...u.children]; if (li.length >= 5 && !u.closest('.x-card') && li.every(x => x.textContent.trim().length < 90)) u.classList.add('x-checks2'); });
+
+  // 9. resources hub cards: the whole card is the link
+  if (page === 'resources.html') main.querySelectorAll('.x-card').forEach(c => { const links = c.querySelectorAll('a'); if (links.length === 1 && c.querySelector('h3')) c.classList.add('x-hubcard'); });
+
+  // 10. 404 and thank-you: the next steps as large tiles
+  if (cfg.kind === 'utility' && cfg.noindex) main.querySelectorAll('.x-rows').forEach(l => {
+    const rows = [...l.children]; if (!rows.length || rows.length > 6) return;
+    l.classList.remove('x-rows'); l.classList.add('x-tiles');
+    rows.forEach(a => {
+      a.classList.remove('x-row'); a.classList.add('x-tile');
+      if (!a.firstElementChild.querySelector('svg') || a.firstElementChild.nextElementSibling === null) return;
+      const first = a.firstElementChild;
+      if (first.children.length === 1 && first.querySelector('svg') && !first.textContent.trim()) { first.className = 'x-icon x-icon-lg'; first.removeAttribute('style'); }
+    });
+    rows.forEach(a => {
+      if (a.querySelector('.x-icon')) return;
+      const h = a.getAttribute('href') || '';
+      const k = /product/.test(h) ? 'grid' : /solution/.test(h) ? 'layers' : /contact/.test(h) ? 'chat' : /sitemap/.test(h) ? 'map' : /library/.test(h) ? 'doc' : /customer/.test(h) ? 'star' : /service/.test(h) ? 'lifebuoy' : 'arrow';
+      const t = doc.createElement('span'); t.className = 'x-icon x-icon-lg'; t.setAttribute('aria-hidden', 'true'); t.innerHTML = svg(I[k], 22); a.prepend(t);
+    });
+  });
+  // heading order: card titles that follow the page title directly become level 2 (same look)
+  (() => {
+    let last = 1;
+    [...main.querySelectorAll('h1, h2, h3, h4')].forEach(h => {
+      const lvl = +h.tagName[1];
+      if (lvl === 3 && last === 1) {
+        const sec = h.closest('section') || main;
+        sec.querySelectorAll('h3').forEach(x => { const n = doc.createElement('h2'); [...x.attributes].forEach(a => n.setAttribute(a.name, a.value)); n.append(...x.childNodes); x.replaceWith(n); });
+        last = 2; return;
+      }
+      last = lvl;
+    });
+  })();
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

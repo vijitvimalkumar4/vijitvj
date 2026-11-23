@@ -52,6 +52,7 @@ window.__alepo = async function (cfg) {
   }
   if (cfg.file === 'index.html') await homeCards();
   if (cfg.file === 'services.html') servicesSections();
+  if (cfg.file === 'resources.html') await composeResources();
   if (cfg.file === 's-ent.html') {
     const h = [...doc.querySelectorAll('main *')].find(e => e.children.length === 0 && /^(Cisco ACS replacement|Reemplazo de Cisco ACS)$/.test(textOf(e)));
     const box = h && h.parentElement;
@@ -336,6 +337,28 @@ window.__alepo = async function (cfg) {
   function regroupHub() {
     const sec = doc.querySelectorAll('main > section')[1];
     hubGroups(sec.querySelector(':scope > div'), cat.groups.map(g => ({ title: catLabel(g.cat), href: catHref(g.cat), items: g.sub.flatMap(s => s.items) })));
+  }
+
+  // Resources hub: after "Latest posts", the first library documents (same block layout) and the Home page's News and events.
+  async function composeResources() {
+    const main = doc.querySelector('main');
+    const secs = [...main.querySelectorAll(':scope > section')];
+    const posts = secs.find(sec => sec.querySelector('h2') && sec.querySelector('a[href="blog.html"]') && sec.querySelector('a[href*="alepo.com/blog/"]'));
+    if (!posts) return;
+    const lib = await snapshot('library.html');
+    const libRows = [...lib.querySelectorAll('main a[href*="alepo.com/library"]')];
+    if (libRows.length) {
+      const sec = posts.cloneNode(true);
+      sec.querySelector('h2').textContent = textOf(lib.querySelector('main h1'));
+      const more = sec.querySelector('a[href="blog.html"]');
+      if (more) { more.setAttribute('href', 'library.html'); more.firstChild.textContent = T('All documents', 'Todos los documentos'); }
+      const list = sec.querySelector('a[href*="alepo.com/blog/"]').parentElement;
+      list.replaceChildren(...libRows.slice(0, 4).map(imp));
+      posts.after(sec);
+      const home = await snapshot('index.html');
+      const news = [...home.querySelectorAll('main > section')].find(x => x.querySelector('h2') && x.querySelector('a[href^="news.html"]'));
+      if (news) sec.after(imp(news));
+    }
   }
 
   async function composeCategory() {

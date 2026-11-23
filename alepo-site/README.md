@@ -308,6 +308,28 @@ Before, each menu opened as a full-width sheet 450 to 754 px tall (most of a lap
 
 The label is a small uppercase eyebrow with a divider; the seven names are set as bold wordmarks spread evenly across the row (wrapping on phones). Real customer logos, with permission, would be the next step.
 
+### Child pages
+
+Every page type was reviewed, not only the parents. Changes are pattern-based, so they apply to English and Spanish and to future pages that use the same blocks:
+
+| Pattern | Pages | What changed |
+| --- | --- | --- |
+| Content cards (`x-feed`, `x-post`) | Blog, Library, Resources, Resources sections on product and category pages | Rows of "tag + title" become cards with a cover coloured by type (datasheet indigo, case study navy, blog lavender, white paper light cyan) and a type icon. The newest blog post leads as a wide card. Library filters still work (same links, now pill buttons) |
+| Resources page composition | Resources | After "Latest posts", the first library documents and the Home page's News and events block (from the design snapshots, so links are correct) |
+| Hub cards (`x-hubcard`) | Resources | The whole card is the link |
+| Card icons (`x-icon-lg`) | Security, Careers, About, Partners | Text-only cards get a matching icon (lock, key, sparkle and so on); partner cards get a monogram |
+| Steps (`x-steps`) | Partners | The four steps sit in one row of numbered cards |
+| People (`x-avatar`) | Leadership | Larger gradient initials until photographs arrive |
+| Jobs (`x-jobs`) | Careers | Open roles as cards with a location chip |
+| Facts (`x-facts`) | About | 20+ years, office count (from the office list), 5 continents: figures already on the site |
+| Pull quote (`x-quote`) | Customers | Larger quote with a violet rule |
+| FAQ cards | Product, category and solution pages | Each question on its own card |
+| Sticky headings (`x-sticky`), two-column checklists (`x-checks2`) | Services, Customers, Careers, Products | The section heading stays in view beside long text; long checklists read in two columns on wide screens |
+| Tiles (`x-tiles`) | 404, thank-you | Next steps as large tiles with icons |
+| Heading order | Resources, Careers, Security | Card titles directly under the page title are level 2 (same look) |
+
+Checked with axe (WCAG 2.2 AA and best practice) on 23 pages at 1440 px and 390 px: no violations, no sideways scrolling.
+
 ### Footer
 
 `polish.js` rebuilds the footer from the same links and form (the only new words are the "Offices" heading and the back-to-top label):
