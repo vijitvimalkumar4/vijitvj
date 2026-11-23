@@ -203,18 +203,28 @@
   if (reduce || !('IntersectionObserver' in window)) return;
   root.classList.add('x-motion');
 
-  function done(el) { setTimeout(function () { el.classList.remove('rv', 'rv-in'); el.style.removeProperty('--rv-d'); }, 900 + (parseInt(el.style.getPropertyValue('--rv-d'), 10) || 0)); }
+  function done(el) { setTimeout(function () { el.classList.remove('rv', 'rv-in'); el.style.removeProperty('--rv-d'); }, 1400 + (parseInt(el.style.getPropertyValue('--rv-d'), 10) || 0)); }
+  // result figures count up once when they come into view ("3x", "109", "1.3M")
+  function countUp(el) {
+    if (el.dataset.counted) return; el.dataset.counted = '1';
+    var m = /^([\d.,]+)(.*)$/.exec(el.textContent.trim()); if (!m) return;
+    var raw = m[1].replace(/,/g, ''), target = parseFloat(raw), dec = (raw.split('.')[1] || '').length, suffix = m[2], final = el.textContent;
+    if (!isFinite(target)) return;
+    var t0 = null; el.style.fontVariantNumeric = 'tabular-nums';
+    function step(t) { if (t0 === null) t0 = t; var k = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - k, 3); el.textContent = (target * e).toFixed(dec) + suffix; if (k < 1) requestAnimationFrame(step); else el.textContent = final; }
+    requestAnimationFrame(step);
+  }
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target); en.target.classList.add('rv-in'); done(en.target); });
+    entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target); en.target.classList.add('rv-in'); en.target.querySelectorAll('.x-stat, .x-fact-n').forEach(countUp); done(en.target); });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
 
-  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div';
+  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-post, main .x-fact, main .x-job, main .x-steps > li, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div';
   var list = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (e) {
     return !e.closest('.x-hero, .x-in, .rv') && e.getBoundingClientRect().top > window.innerHeight * 0.92;
   });
   list.forEach(function (e) {
     var sibs = e.parentElement ? Array.prototype.filter.call(e.parentElement.children, function (c) { return list.indexOf(c) > -1; }) : [];
-    e.style.setProperty('--rv-d', Math.min(sibs.indexOf(e), 3) * 60 + 'ms');
+    e.style.setProperty('--rv-d', Math.min(sibs.indexOf(e), 5) * 110 + 'ms');
     e.classList.add('rv');
     io.observe(e);
   });

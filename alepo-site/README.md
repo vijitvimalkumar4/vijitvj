@@ -341,15 +341,15 @@ Checked with axe (WCAG 2.2 AA and best practice) on 23 pages at 1440 px and 390 
 `polish.js` rebuilds the footer from the same links and form (the only new words are the "Offices" heading and the back-to-top label):
 brand block (logo, the one-line company description already used under "Why Alepo", a demo button, support numbers, head office) beside the newsletter card;
 then six link columns, a second row with Services, Resources, Company and office chips; a bottom bar with legal links and a back-to-top button; and a large faded wordmark.
-On phones the columns keep their open/close buttons.
+Link columns are balanced in five stacks so the long Billing & BSS list leaves no gap: Network + Provisioning, Billing & BSS, Customer Care + AI, Solutions + Services, Resources + Company; offices run as one row of chips below. On phones the columns keep their open/close buttons.
 
 ### Motion
 
 | Where | What moves |
 | --- | --- |
-| First screen | Text settles in (12 px, 0.7 s, 70 ms apart), then the picture fades in. CSS only |
-| Below the first screen | Headings, cards, rows and photos fade up 16 px as they scroll in, at most 4 in a short sequence |
-| Hover | Colour and shadow changes, 0.2 to 0.35 s; cards lift 2 px |
+| First screen | Text rises in from 32 px with a soft blur that clears (1 s, 110 ms apart), then the picture rises and scales in. CSS only |
+| Below the first screen | Headings, cards, rows and photos rise 44 px with a soft blur as they scroll in, up to 6 in sequence (110 ms apart); photos and cards scale up from 95% while their images settle from 112%; heading bars draw in; result and fact figures count up |
+| Hover | Cards lift 6 px and their photos zoom 6%; buttons lift 2 px with a light sweep; list rows slide 6 px; arrows move 5 px |
 | Menus | The mega menu fades and settles 6 px; the phone menu fades |
 
 Content is only hidden for the reveal when JavaScript is running, motion is allowed and the item starts below the screen. When scrolling stops, anything at or above the screen is shown at once, and printing shows everything. With reduced motion turned on, nothing moves.

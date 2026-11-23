@@ -114,6 +114,12 @@ window.__alepoPolish = function (cfg, doc) {
     top.append(brand, news);
     const colsBox = el('div', 'xf-cols');
     cols.forEach(c => { c.removeAttribute('style'); colsBox.appendChild(c); });
+    // balance the columns against Billing & BSS (the longest): short groups share a column
+    // order: Network, Billing, Provisioning, Care, AI, Solutions, Services, Resources, Company
+    if (cols.length === 9) {
+      [[0, 2], [1], [3, 4], [5, 6], [7, 8]].forEach(ix => { const st = el('div', 'xf-stack'); ix.forEach(i => st.appendChild(cols[i])); colsBox.appendChild(st); });
+      colsBox.classList.add('xf-balanced');
+    }
     const off = el('div', 'xf-offices');
     const oh = el('div', 'xf-oh'); oh.textContent = T.offices;
     offices.removeAttribute('style'); offices.className = 'xf-olist';
