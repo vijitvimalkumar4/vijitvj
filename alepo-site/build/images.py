@@ -68,6 +68,9 @@ def fix(m):
             sizes = f'(max-width: 1060px) 100vw, {shown.group(1)}px' if shown else '100vw'
             tag = tag.replace('<img ', f'<img srcset="/assets/img/{small[new]} 800w, /assets/img/{new} {w}w" sizes="{sizes}" ', 1)
     tag = re.sub(r' data-w="\d+"', '', tag)
+    # checklist 61: photos are decorative here, so screen readers skip them (logos keep their alt text)
+    if re.search(r'src="/assets/img/[^"]+\.webp"', tag):
+        tag = re.sub(r' alt="[^"]*"', ' alt=""', tag)
     return tag
 
 for p in pages:

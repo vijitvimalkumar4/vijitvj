@@ -141,6 +141,7 @@ window.__alepo = async function (cfg) {
   add('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' });
   doc.documentElement.setAttribute('lang', L);
   if (window.__alepoLead) window.__alepoLead(cfg, doc); // audit fixes (leadfixes.js)
+  if (window.__alepoUI) await window.__alepoUI(cfg, doc); // UI audit fixes (uifixes.js)
 
   return '<!doctype html>\n' + doc.documentElement.outerHTML;
 

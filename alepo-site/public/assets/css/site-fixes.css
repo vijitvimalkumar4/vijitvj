@@ -8,7 +8,7 @@
 
 /* 16 + 17. Customer names: a static, readable row instead of a moving marquee */
 .mqw { overflow: visible !important; -webkit-mask-image: none !important; mask-image: none !important; }
-.mq { animation: none !important; width: auto !important; flex-wrap: wrap; row-gap: 8px; color: rgb(86, 91, 107) !important; white-space: normal !important; }
+.mq { font-size: 20px !important; animation: none !important; width: auto !important; flex-wrap: wrap; row-gap: 8px; color: rgb(86, 91, 107) !important; white-space: normal !important; }
 .mq > span { flex-wrap: wrap; row-gap: 8px; }
 .mq > span:nth-child(n+2) { display: none !important; }
 .mq > span > span { padding: 0 28px 0 0 !important; }
@@ -24,7 +24,7 @@ button[type=submit][disabled] { opacity: .7; cursor: progress; }
 /* 11. Sticky demo bar on phones and tablets (product pages) */
 .mcta { display: none; }
 .mcta, .mcta a { font-family: "Plus Jakarta Sans", Arial, sans-serif; }
-@media (max-width: 1060px) {
+@media (max-width: 1000px) {
   .mcta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid rgb(220, 222, 232); box-shadow: 0 -8px 24px -12px rgba(8, 4, 40, .25); transition: transform .2s ease; }
   .mcta.is-hidden { transform: translateY(110%); }
   .mcta a { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 12px; background: rgb(45, 29, 143); color: #fff !important; font-weight: 600; font-size: 16px; }
@@ -32,7 +32,7 @@ button[type=submit][disabled] { opacity: .7; cursor: progress; }
 }
 
 /* 15. Readable text and bigger tap targets on phones */
-@media (max-width: 1060px) {
+@media (max-width: 1000px) {
   main [style*="font-size: 13.5px"] { font-size: 15px !important; }
   main [style*="font-size: 13px"] { font-size: 14.5px !important; }
   [data-role="breadcrumb"] a, [data-role="breadcrumb"] span { display: inline-flex; align-items: center; min-height: 28px; }
@@ -40,3 +40,75 @@ button[type=submit][disabled] { opacity: .7; cursor: progress; }
 }
 
 @media (prefers-reduced-motion: reduce) { .mcta { transition: none; } }
+
+/* ===== UI audit fixes (see build/uifixes.js) ===== */
+
+/* UI 1: focus ring with 3:1 contrast everywhere: indigo on light, cyan on dark */
+:focus-visible { outline: 3px solid rgb(45, 29, 143) !important; outline-offset: 2px !important; }
+.on-dark :focus-visible, .on-dark:focus-visible { outline-color: rgb(85, 203, 227) !important; }
+
+/* UI 4: hover and pressed feedback (inline styles used to block these) */
+.mp a.mt:hover { border-color: rgb(45, 29, 143) !important; background: rgb(247, 246, 253) !important; }
+.mp a:not(.mt):hover { background: rgba(80, 60, 235, 0.07) !important; }
+a:active, button:active, summary:active { filter: brightness(0.9) !important; transform: none !important; }
+[style*="rgba(255, 255, 255, 0.22) 0px 0px 0px 1.5px inset"] { box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 0px 1.5px inset !important; }
+footer input[type="email"] { border-color: rgba(255, 255, 255, 0.5) !important; }
+
+/* UI 3: Library filters */
+button[data-filter][aria-pressed="true"] { background: rgb(45, 29, 143) !important; color: rgb(255, 255, 255) !important; }
+[data-filter-list] > [hidden] { display: none !important; }
+
+/* checklist 26: visited items in content lists */
+main.track-visited a:visited span[style*="font-weight: 600"] { color: rgb(91, 74, 158) !important; }
+
+/* checklist 2: a compact desktop header from 1001 to 1180 px, so the menu shows on small laptops */
+@media (min-width: 1001px) and (max-width: 1180px) {
+  .dnav .mb-c { padding: 0 8px !important; font-size: 15px !important; }
+  header .hide-m span[role="group"] > svg { display: none !important; }
+  header.hdr a[href*="#demo"][style*="white-space: nowrap"] { padding: 0 16px !important; }
+  .mp a.mt > span:first-child { display: none !important; }
+  .mp a.mt { padding: 10px 12px !important; }
+  .mp > div > div { gap: 24px !important; padding-left: 24px !important; padding-right: 24px !important; }
+}
+
+/* UI 7: footer columns collapse on phones, with 44 px rows */
+.fcol-t { display: none; }
+footer .fcol-h a { display: inline-flex; align-items: center; min-height: 24px; }
+@media (max-width: 1000px) {
+  footer .fcol-h { display: flex; align-items: center; justify-content: space-between; min-height: 48px; border-bottom: 1px solid rgba(255, 255, 255, 0.14); }
+  footer .fcol-h a { min-height: 48px; }
+  .fcol-t { display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; margin-right: -12px; border: 0; background: none; color: inherit; font: inherit; font-size: 24px; cursor: pointer; }
+  .fcol-t::after { content: "+"; }
+  .fcol-t[aria-expanded="true"]::after { content: "\2013"; }
+  footer .fcol.is-closed .fcol-list { display: none !important; }
+  footer .fcol-list { padding: 4px 0 12px; }
+  footer > div > div:first-child { row-gap: 0 !important; }
+  footer a[href^="tel:"], main a[href^="tel:"] { display: inline-flex; align-items: center; min-height: 44px; }
+  [data-role="breadcrumb"] a { min-height: 44px; }
+  footer a { display: inline-flex; align-items: center; min-height: 44px; }
+  header a[aria-label="Alepo home"] { display: inline-flex; align-items: center; min-height: 44px; }
+  a[hreflang] { min-width: 44px !important; }
+}
+
+/* UI 10: mobile menu dims the page behind it */
+@media (max-width: 1000px) {
+  .mnav[open] > div { box-shadow: 0 0 0 100vmax rgba(18, 13, 61, 0.45) !important; }
+  .mnav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+}
+
+/* UI 9 + 11: page sub-menu shows there is more, marks the current section, and hides while scrolling down on phones */
+.subnav a[aria-current="true"] { color: rgb(45, 29, 143) !important; box-shadow: inset 0 -2px 0 currentColor !important; }
+@media (max-width: 1000px) {
+  .subnav > div { -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent); }
+  .subnav > div.at-end { -webkit-mask-image: none; mask-image: none; }
+  .subnav { transition: transform 0.2s ease; }
+  .subnav.is-hidden { transform: translateY(-130%); }
+}
+
+/* UI 8: desktop-wide diagrams become stacked cards on phones */
+.dia-m { display: none; }
+@media (max-width: 760px) {
+  .dia-d { display: none !important; }
+  .dia-m { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .subnav { transition: none; } }

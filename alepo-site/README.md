@@ -199,6 +199,51 @@ To switch it on:
 
 **Still manual:** back up the `data/` folder with the server's normal backups.
 
+## UI fixes
+
+These come from the doc "Alepo.com redesign: UI audit" and its "Website checklist (67 rules)" tab. The code is in `build/uifixes.js`, which runs after `leadfixes.js`. Runtime behaviour is in `build/static/js/site.js` and styles in `build/static/css/site-fixes.css`.
+
+- **Focus ring:** indigo on light backgrounds and cyan on dark ones, each at least 3:1 contrast. Dark areas are detected at build time and marked `.on-dark`.
+- **Forms:**
+  - single column
+  - 5.0:1 field borders
+  - "(optional)" on optional fields
+  - each field checked when the visitor leaves it
+- **Contact page:** the customer names sit beside the demo form.
+- **Colour:** indigo is kept for links and buttons, and static text uses ink.
+- **Library:** the chips filter the list for real (`aria-pressed`) and show an empty state.
+- **Interaction states:**
+  - hover on menu cards
+  - a pressed state on every link and button
+  - 60%-white borders on outline buttons over dark backgrounds
+  - "Get an estimate" is a secondary button
+- **Events:** the "Upcoming" badge comes from the event date, at build time and again in the browser.
+- **Design tokens at build time:**
+  - type on a 1.25 scale (13, 16, 20, 25, 31, 39, 49, 61)
+  - spacing snapped to the 4- and 8-point grid
+  - corner radii of 8, 12, 20 or round
+  - fixed-size diagrams are left as designed
+- **Header:** the desktop menu shows from 1001 px, compact up to 1180 px. The design's 1060 px breakpoint is rewritten in the page style.
+- **Phones:**
+  - the footer collapses, with a toggle button and 44 px rows
+  - tap targets are 44 px
+  - the mobile menu marks the current page, dims the page and closes on an outside tap or Esc
+  - the page sub-menu fades its edge, tracks the current section and hides while scrolling down
+  - the product map and the Services deployment diagram turn into stacked cards
+- **Product pages:** a reassurance line under the hero CTA (the page's own demo-band text).
+- **Footer:** the head-office address.
+- **Content lists:** visited links are styled in Blog, Library and News.
+- **Images:** decorative photos get empty alt text.
+- **HTTPS:** `FORCE_HTTPS=1` on the server redirects plain HTTP and sends HSTS.
+
+**Still needs content from Alepo:**
+- a sales email and social links
+- leadership photos
+- customer logos and a real console screenshot for the hero
+- blog post dates
+- the privacy policy address
+- the demo length
+
 ## Decisions taken, to confirm
 
 | Item | What the build does | Why |

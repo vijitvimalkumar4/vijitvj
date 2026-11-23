@@ -157,6 +157,7 @@ for (const j of jobs) {
   await page.goto(`${BASE}/${j.lang === 'es' ? 'es/' : ''}${j.file}`, { waitUntil: 'domcontentloaded' });
   await page.addScriptTag({ path: path.join(HERE, 'transform.js') });
   await page.addScriptTag({ path: path.join(HERE, 'leadfixes.js') });
+  await page.addScriptTag({ path: path.join(HERE, 'uifixes.js') });
   const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg });
   await page.close();
   const dest = j.out.endsWith('.html') ? path.join(OUT, j.out) : path.join(OUT, j.out, 'index.html');

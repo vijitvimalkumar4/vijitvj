@@ -16,6 +16,13 @@
     input.setAttribute('aria-invalid', 'true');
     input.parentElement.appendChild(p);
   }
+  function check(form, i) {
+    var v = (i.value || '').trim(), msg = '';
+    if (i.required && !v) msg = form.dataset.msgRequired;
+    else if (i.type === 'email' && v && !EMAIL.test(v)) msg = form.dataset.msgEmail;
+    fieldError(i, msg);
+    return !msg;
+  }
   function validate(form) {
     var firstBad = null;
     form.querySelectorAll('input:not([type=hidden]), textarea, select').forEach(function (i) {
@@ -41,7 +48,9 @@
   document.querySelectorAll('form[data-form]').forEach(function (form) {
     var status = form.querySelector('[data-status]');
     var btn = form.querySelector('button[type=submit]');
-    form.addEventListener('input', function (e) { if (e.target.getAttribute('aria-invalid')) fieldError(e.target, ''); });
+    form.addEventListener('input', function (e) { e.target.dataset.touched = '1'; if (e.target.getAttribute('aria-invalid')) check(form, e.target); });
+    // validate a field when the visitor leaves it (only once they have typed in it)
+    form.addEventListener('focusout', function (e) { var i = e.target; if (i.matches && i.matches('input:not([type=hidden]):not([name=website]), textarea') && i.dataset.touched) check(form, i); });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!validate(form)) return;
@@ -104,5 +113,57 @@
   if (bar && hero && 'IntersectionObserver' in window) {
     bar.classList.add('is-hidden');
     new IntersectionObserver(function (es) { bar.classList.toggle('is-hidden', es[0].isIntersecting); }).observe(hero);
+  }
+
+  // ---- Library filters (UI audit 3) ----
+  var list = document.querySelector('[data-filter-list]');
+  if (list) {
+    var empty = document.querySelector('[data-filter-empty]');
+    document.querySelectorAll('button[data-filter]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.dataset.filter, shown = 0;
+        document.querySelectorAll('[role=group] button[data-filter]').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.filter === v ? 'true' : 'false'); });
+        list.querySelectorAll('[data-kind]').forEach(function (a) { var on = v === 'all' || a.dataset.kind === v; a.hidden = !on; if (on) shown++; });
+        if (empty) empty.hidden = shown > 0;
+      });
+    });
+  }
+
+  // ---- Events: the "Upcoming" badge goes once the event has ended (UI audit 6) ----
+  var today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('[data-event-ends]').forEach(function (c) { if (today > c.dataset.eventEnds) { var b = c.querySelector('[data-upcoming-badge]'); if (b) b.remove(); } });
+
+  // ---- Footer columns collapse on phones (UI audit 7); always open on wider screens ----
+  var small = window.matchMedia('(max-width: 1000px)');
+  function footerMode() { document.querySelectorAll('footer .fcol').forEach(function (c) { var t = c.querySelector('.fcol-t'); c.classList.toggle('is-closed', small.matches); if (t) t.setAttribute('aria-expanded', small.matches ? 'false' : 'true'); }); }
+  document.querySelectorAll('footer .fcol-t').forEach(function (t) { t.addEventListener('click', function () { var c = t.closest('.fcol'); var open = c.classList.toggle('is-closed') === false; t.setAttribute('aria-expanded', open ? 'true' : 'false'); }); });
+  footerMode(); if (small.addEventListener) small.addEventListener('change', footerMode);
+
+  // ---- Mobile menu: tap outside or press Esc to close (UI audit 10) ----
+  var mnav = document.querySelector('.mnav');
+  if (mnav) {
+    document.addEventListener('click', function (e) { if (mnav.open && !mnav.contains(e.target)) mnav.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && mnav.open) { mnav.open = false; mnav.querySelector('summary').focus(); } });
+  }
+
+  // ---- Page sub-menu: mark the current section, keep it in view, hide while scrolling down on phones (UI audit 9, 11) ----
+  var sub = document.querySelector('.subnav');
+  if (sub) {
+    var strip = sub.querySelector(':scope > div'), tabs = [].slice.call(sub.querySelectorAll('a[href^="#"]'));
+    var secs = tabs.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    function mark() {
+      var y = 160, cur = null;
+      secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top <= y) cur = i; });
+      tabs.forEach(function (a, i) { if (i === cur) { a.setAttribute('aria-current', 'true'); if (strip) strip.scrollLeft = Math.max(0, a.offsetLeft - 24); } else a.removeAttribute('aria-current'); });
+      if (strip) strip.classList.toggle('at-end', strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4);
+    }
+    var lastY = window.scrollY;
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (small.matches) { if (y > lastY + 8 && y > 400) sub.classList.add('is-hidden'); else if (y < lastY - 8) sub.classList.remove('is-hidden'); }
+      lastY = y; mark();
+    }, { passive: true });
+    if (strip) strip.addEventListener('scroll', function () { strip.classList.toggle('at-end', strip.scrollLeft + strip.clientWidth >= strip.scrollWidth - 4); }, { passive: true });
+    mark();
   }
 })();

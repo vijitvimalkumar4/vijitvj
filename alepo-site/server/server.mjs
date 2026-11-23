@@ -8,6 +8,7 @@
 //   LEAD_WEBHOOK_URL  optional: each new lead is POSTed here as {"text": "..."}
 //                     (works with a Microsoft Teams or Slack incoming webhook)
 //   TRUST_PROXY=1     use X-Forwarded-For for the client IP when behind a load balancer
+//   FORCE_HTTPS=1     redirect http:// (per X-Forwarded-Proto) to https:// and send HSTS
 //   Data sheet emails (see datasheets.mjs and mailer.mjs):
 //   MAIL_FROM, MAIL_FROM_NAME, MAIL_REPLY_TO, SITE_URL, and either SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASS
 //   or MS_TENANT_ID/MS_CLIENT_ID/MS_CLIENT_SECRET (Microsoft 365 through Graph)
@@ -126,6 +127,9 @@ try {
   }
 } catch {}
 const SECURITY = { 'x-content-type-options': 'nosniff', 'referrer-policy': 'strict-origin-when-cross-origin', 'x-frame-options': 'SAMEORIGIN', 'permissions-policy': 'camera=(), microphone=(), geolocation=()' };
+// checklist 58: FORCE_HTTPS=1 behind a TLS-terminating proxy sends http:// visitors to https:// and turns on HSTS
+const FORCE_HTTPS = process.env.FORCE_HTTPS === '1';
+if (FORCE_HTTPS) SECURITY['strict-transport-security'] = 'max-age=31536000; includeSubDomains';
 
 function sendFile(res, file, status = 200) {
   const ext = path.extname(file);
@@ -152,6 +156,9 @@ function serveStatic(req, res, pathname) {
 const json = (res, status, body) => { res.writeHead(status, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store', ...SECURITY }); res.end(JSON.stringify(body)); };
 
 const server = http.createServer(async (req, res) => {
+  if (FORCE_HTTPS && String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim() === 'http') {
+    res.writeHead(301, { location: `https://${req.headers.host}${req.url}` }); return res.end();
+  }
   const url = new URL(req.url, 'http://localhost');
   const m = url.pathname.match(/^\/api\/forms\/([a-z]+)\/?$/);
   try {

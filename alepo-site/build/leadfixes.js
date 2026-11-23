@@ -232,7 +232,7 @@ window.__alepoLead = function (cfg, doc) {
     const sub = doc.querySelector('.subnav > div');
     if (sub && sub.querySelector('a')) { const a = sub.querySelector('a').cloneNode(false); a.setAttribute('href', '#pricing'); a.textContent = T('Pricing', 'Precio'); sub.appendChild(a); }
     // 11. sticky demo bar on mobile
-    const bar = el('div'); bar.className = 'mcta';
+    const bar = el('div'); bar.className = 'mcta'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', T('Request a demo', 'Solicitar una demo'));
     const ba = el('a', null, T('Request a demo', 'Solicitar una demo')); ba.setAttribute('href', `${contact}?product=${slug}#demo`);
     bar.appendChild(ba); doc.body.appendChild(bar); doc.body.classList.add('has-mcta');
   }
