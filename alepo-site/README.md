@@ -358,6 +358,12 @@ Every page type was reviewed, not only the parents. Changes are pattern-based, s
 
 Checked with axe (WCAG 2.2 AA and best practice) on 23 pages at 1440 px and 390 px: no violations, no sideways scrolling.
 
+### Odometer figures and headline sweep
+
+- **Odometer:** result and fact figures (`.x-stat`, `.x-fact-n`: 3x, 13, 109, 1.3M, 100%, 20+ …) roll digit by digit when 60% of the figure is in view. Each digit is a reel that turns one full lap and lands on its value (1.8 s, 90 ms apart); symbols (x, %, M, +, the decimal point) stay still. Screen readers get the plain value, and the original text is restored when the roll ends.
+- **Headline colour sweep:** page titles (`h1`, on load) and section headings (`h2.x-h2` and the demo band title, when 60% in view) start pale grey; an ink fill sweeps left to right with an indigo-to-cyan band on its leading edge (1.9 s, power2.out = `cubic-bezier(0.33, 1, 0.68, 1)`). On dark backgrounds the fill is white. Headings already on screen when the page opens, or jumped past, show their final colour.
+- Both are skipped with reduced motion and without JavaScript (the figures and headings simply show their final state); in Windows high-contrast mode headings use the system text colour.
+
 ### Lenis smooth scrolling
 
 Mouse-wheel and trackpad scrolling glide with Lenis 1.1.20 (MIT; local copy in `build/static/js/lenis.min.js`, loaded before `site.js`; no third-party CDN). Settings: duration 1.15 s with an exponential ease-out. Touch scrolling on phones and tablets stays native. In-page links (sub-menu, "Back to top") glide to their section below the sticky header. The mega menus and phone menu keep native scrolling (`prevent`), as does anything marked `data-lenis-prevent`. Off with reduced motion. The single-file copy includes Lenis too and resets it on every page change.
@@ -374,7 +380,7 @@ Link columns are balanced in five stacks so the long Billing & BSS list leaves n
 | Where | What moves |
 | --- | --- |
 | First screen | Text rises in from 32 px with a soft blur that clears (1 s, 110 ms apart), then the picture rises and scales in. CSS only |
-| Below the first screen | Headings, cards, rows and photos rise 44 px with a soft blur as they scroll in, up to 6 in sequence (110 ms apart); photos and cards scale up from 95% while their images settle from 112%; heading bars draw in; result and fact figures count up |
+| Below the first screen | Headings, cards, rows and photos rise 44 px with a soft blur as they scroll in, up to 6 in sequence (110 ms apart); photos and cards scale up from 95% while their images settle from 112%; heading bars draw in; result and fact figures roll like an odometer; headings get a colour sweep |
 | Hover | Cards lift 6 px and their photos zoom 6%; buttons lift 2 px with a light sweep; list rows slide 6 px; arrows move 5 px |
 | Menus | The mega menu fades and settles 6 px; the phone menu fades |
 

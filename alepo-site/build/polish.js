@@ -509,6 +509,14 @@ window.__alepoPolish = function (cfg, doc) {
       last = lvl;
     });
   })();
+  // headline colour sweep: page titles (on load) and section headings (when they scroll in); dark variant on dark backgrounds
+  const isLight = e => { const m = getComputedStyle(e).color.match(/\d+/g); return m && +m[0] > 200 && +m[1] > 200 && +m[2] > 200; };
+  main.querySelectorAll('h1, h2.x-h2, .x-cta h2').forEach(h => {
+    if (h.closest('a, .x-card, .x-post')) return;
+    h.classList.add('x-sweep');
+    if (h.tagName === 'H1') h.classList.add('x-sweep-load');
+    if (h.closest('.on-dark, .x-dark, .x-cta') || isLight(h)) h.classList.add('x-sweep-dark');
+  });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

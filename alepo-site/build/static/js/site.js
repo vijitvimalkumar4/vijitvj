@@ -251,18 +251,8 @@
   root.classList.add('x-motion');
 
   function done(el) { setTimeout(function () { el.classList.remove('rv', 'rv-in'); el.style.removeProperty('--rv-d'); }, 1400 + (parseInt(el.style.getPropertyValue('--rv-d'), 10) || 0)); }
-  // result figures count up once when they come into view ("3x", "109", "1.3M")
-  function countUp(el) {
-    if (el.dataset.counted) return; el.dataset.counted = '1';
-    var m = /^([\d.,]+)(.*)$/.exec(el.textContent.trim()); if (!m) return;
-    var raw = m[1].replace(/,/g, ''), target = parseFloat(raw), dec = (raw.split('.')[1] || '').length, suffix = m[2], final = el.textContent;
-    if (!isFinite(target)) return;
-    var t0 = null; el.style.fontVariantNumeric = 'tabular-nums';
-    function step(t) { if (t0 === null) t0 = t; var k = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - k, 3); el.textContent = (target * e).toFixed(dec) + suffix; if (k < 1) requestAnimationFrame(step); else el.textContent = final; }
-    requestAnimationFrame(step);
-  }
   var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target); en.target.classList.add('rv-in'); en.target.querySelectorAll('.x-stat, .x-fact-n').forEach(countUp); done(en.target); });
+    entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target); en.target.classList.add('rv-in'); done(en.target); });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
 
   var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-post, main .x-fact, main .x-job, main .x-steps > li, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div';
@@ -275,11 +265,46 @@
     e.classList.add('rv');
     io.observe(e);
   });
+  // Odometer: each digit of a result figure rolls up to its value when the figure comes into view
+  // (screen readers get the plain value; the original text is put back when the roll ends)
+  function odoPrep(el) {
+    var txt = el.textContent.trim(); if (el.dataset.odo || !/\d/.test(txt)) return;
+    el.dataset.odo = txt; el.classList.add('odo');
+    var html = '<span class="x-sr">' + txt.replace(/</g, '&lt;') + '</span>', k = 0;
+    for (var i = 0; i < txt.length; i++) {
+      var ch = txt.charAt(i);
+      if (/\d/.test(ch)) {
+        var strip = ''; for (var n = 0; n < 20; n++) strip += '<span>' + (n % 10) + '</span>';
+        html += '<span class="odo-d" aria-hidden="true" data-d="' + ch + '" style="--k:' + (k++) + '"><span class="odo-w">' + ch + '</span><span class="odo-s">' + strip + '</span></span>';
+      } else html += '<span class="odo-c" aria-hidden="true">' + ch + '</span>';
+    }
+    el.innerHTML = html; el.dataset.odoN = k;
+  }
+  function odoRun(el) {
+    if (!el.dataset.odo || el.classList.contains('odo-run')) return;
+    el.classList.add('odo-run');
+    el.querySelectorAll('.odo-d').forEach(function (d) { d.querySelector('.odo-s').style.transform = 'translateY(' + (-(10 + +d.dataset.d) * 1.1) + 'em)'; });
+    setTimeout(function () { el.textContent = el.dataset.odo; el.classList.remove('odo', 'odo-run'); }, 2000 + 90 * (+el.dataset.odoN || 1));
+  }
+  var odoIo = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { odoIo.unobserve(en.target); setTimeout(function () { odoRun(en.target); }, 250); } }); }, { threshold: 0.6 });
+  document.querySelectorAll('main .x-stat, main .x-fact-n').forEach(function (el) { odoPrep(el); if (el.dataset.odo) odoIo.observe(el); });
+
+  // Headline colour sweep: section headings start pale and the fill sweeps across when they scroll in (page titles run on load, in CSS)
+  var swIo = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { swIo.unobserve(en.target); en.target.classList.add('is-swept'); } }); }, { threshold: 0.6 });
+  document.querySelectorAll('main .x-sweep:not(.x-sweep-load)').forEach(function (h) {
+    if (h.getBoundingClientRect().top < window.innerHeight * 0.85 && h.getBoundingClientRect().bottom > 0) h.classList.add('is-swept', 'no-sweep'); else { h.classList.add('sweep-wait'); swIo.observe(h); }
+  });
+
   // after a jump (End key, scrollbar drag, anchor) show anything at or above the screen at once
   function sweep() {
     document.querySelectorAll('.rv:not(.rv-in)').forEach(function (e) {
       if (e.getBoundingClientRect().top < window.innerHeight) { e.style.setProperty('--rv-d', '0ms'); io.unobserve(e); e.classList.add('rv-in'); done(e); }
     });
+    document.querySelectorAll('.sweep-wait:not(.is-swept)').forEach(function (h) {
+      if (h.getBoundingClientRect().bottom < 0) { swIo.unobserve(h); h.classList.add('is-swept', 'no-sweep'); }
+      else if (h.getBoundingClientRect().top < window.innerHeight) { swIo.unobserve(h); h.classList.add('is-swept'); }
+    });
+    document.querySelectorAll('.odo:not(.odo-run)').forEach(function (el) { if (el.getBoundingClientRect().top < window.innerHeight) { odoIo.unobserve(el); odoRun(el); } });
   }
   window.__xSweepFn = sweep;
   if (!window.__xSweep) { window.__xSweep = true; var settle; window.addEventListener('scroll', function () { clearTimeout(settle); settle = setTimeout(function () { if (window.__xSweepFn) window.__xSweepFn(); }, 160); }, { passive: true }); }
