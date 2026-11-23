@@ -129,6 +129,29 @@
     });
   }
 
+  // ---- Blog: topic filters with a "Show more" button (without JavaScript every post is listed) ----
+  var paged = document.querySelector('[data-page-size]');
+  if (paged) {
+    var size = +paged.dataset.pageSize, limit = size, cur = 'all', more = document.querySelector('[data-more]'), status = document.querySelector('.x-blog-status');
+    var es = document.documentElement.lang === 'es';
+    function applyPage(focusFrom) {
+      var total = 0, shown = 0, firstNew = null;
+      paged.querySelectorAll('[data-kind]').forEach(function (a) {
+        var match = cur === 'all' || a.dataset.kind === cur; if (match) total++;
+        var on = match && total <= limit;
+        if (on && a.hidden && focusFrom && !firstNew) firstNew = a;
+        a.hidden = !on; if (on) shown++;
+        a.classList.toggle('x-post-featured', cur === 'all' && a === paged.firstElementChild);
+      });
+      if (more) more.hidden = total <= limit;
+      if (status) status.textContent = (es ? status.dataset.tplEs : status.dataset.tplEn).replace('{shown}', shown).replace('{total}', total);
+      if (firstNew) firstNew.focus();
+    }
+    document.querySelectorAll('[role=group] button[data-filter]').forEach(function (b) { b.addEventListener('click', function () { cur = b.dataset.filter; limit = size; applyPage(false); }); });
+    if (more) more.addEventListener('click', function () { limit += size * 2 - 2; applyPage(true); });
+    applyPage(false);
+  }
+
   // ---- Events: the "Upcoming" badge goes once the event has ended (UI audit 6) ----
   var today = new Date().toISOString().slice(0, 10);
   document.querySelectorAll('[data-event-ends]').forEach(function (c) { if (today > c.dataset.eventEnds) { var b = c.querySelector('[data-upcoming-badge]'); if (b) b.remove(); } });

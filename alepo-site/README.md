@@ -314,6 +314,16 @@ Brand gradients (indigo #2D1D8F to violet #4A34D6, accents violet to cyan) on: b
 
 The demo band ("Talk to us", "Request a demo") is a gradient panel with three soft glows drifting slowly, a dot grid that moves gently, and a light sweep across its buttons on hover. The same sweep runs on every primary button (indigo buttons, white buttons on dark backgrounds, the footer demo button and the phone demo bar). All of this stops under reduced motion.
 
+### Blog posts from alepo.com
+
+`build/fetch_blog.py` reads https://alepo.com/post-sitemap.xml and then each post page, one at a time, and keeps only what the page states: title, publish date, summary (`og:description`), categories and featured image (saved as 640 px WebP in `build/static/img/blog-<slug>.webp`). The result is `build/blog/posts.json` (194 posts on 23 November 2026). Run it again to pick up new posts; posts already collected are kept:
+
+```
+python3 alepo-site/build/fetch_blog.py
+```
+
+The Blog page shows every post, newest first: the latest as a wide card, then cards with photo, category, date, summary and "Read the article" (links go to the post on alepo.com). Topic filters group the WordPress categories (Network access and AAA, BSS and billing, AI, Awards and news; posts are filed under their first specific category), with counts. 13 cards show first and "Show more articles" adds 24 at a time; without JavaScript every post is listed. Note: the blog listing page itself (`/resources/blog/`) blocks automated requests at Cloudflare; the sitemap and the post pages do not.
+
 ### Child pages
 
 Every page type was reviewed, not only the parents. Changes are pattern-based, so they apply to English and Spanish and to future pages that use the same blocks:

@@ -314,6 +314,59 @@ window.__alepoPolish = function (cfg, doc) {
     });
   });
 
+
+  // 1b. Blog page: every post from alepo.com (build/blog/posts.json, collected by fetch_blog.py)
+  if (page === 'blog.html' && Array.isArray(cfg.blogPosts) && cfg.blogPosts.length) {
+    const feed = main.querySelector('.x-feed');
+    if (feed) {
+      const TOPICS = [
+        ['aaa', ES ? 'Acceso a la red y AAA' : 'Network access and AAA', ['AAA server', 'Network Access Control', 'TACACS+', 'RADIUS AAA Basics', 'Subscriber Data Management']],
+        ['bss', ES ? 'BSS y facturación' : 'BSS and billing', ['Business Support Systems', 'Digital BSS', 'Converged Policy Control', 'WiFi Monetization']],
+        ['ai', ES ? 'IA' : 'AI', ['AI Agent Assistant', 'AI Customer Assistant', 'AI Powered CX']],
+        ['news', ES ? 'Premios y noticias' : 'Awards and news', ['Awards']]
+      ];
+      // a post belongs to the topic of its first specific category (the order the post itself lists them)
+      const topicOf = cats => { for (const c of cats) { const t = TOPICS.find(([, , list]) => list.includes(c)); if (t) return t[0]; } return 'other'; };
+      const fmt = d => new Date(d + 'T12:00:00Z').toLocaleDateString(ES ? 'es-ES' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+      const mk = (tag, cls, text) => { const e = doc.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+      const cards = cfg.blogPosts.map((p, i) => {
+        const a = mk('a', 'x-post x-post-article' + (i === 0 ? ' x-post-featured' : ''));
+        a.href = p.url; a.lang = 'en'; a.dataset.kind = topicOf(p.categories);
+        const cover = mk('span', 'x-cover x-cover-img');
+        if (p.image) { const im = doc.createElement('img'); im.src = '/assets/img/' + p.image; im.alt = ''; if (p.w) { im.width = p.w; im.height = p.h; } im.loading = i < 4 ? 'eager' : 'lazy'; im.decoding = 'async'; cover.appendChild(im); }
+        const label = p.categories.find(c => c !== 'Blog' && c !== 'Alepo') || p.categories[0] || 'Blog';
+        cover.appendChild(mk('span', 'x-post-tag', label));
+        const body = mk('span', 'x-post-body');
+        if (p.date) { const t = mk('time', 'x-post-date', fmt(p.date)); t.setAttribute('datetime', p.date); t.lang = L(); body.appendChild(t); }
+        body.appendChild(mk('span', 'x-post-title', p.title.replace(/^Alepo\s*[-–]\s*/, '')));
+        if (p.excerpt) body.appendChild(mk('span', 'x-post-excerpt', p.excerpt));
+        const go = mk('span', 'x-post-go', ES ? 'Leer el artículo' : 'Read the article'); go.lang = L();
+        go.insertAdjacentHTML('beforeend', '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>');
+        body.appendChild(go);
+        a.append(cover, body);
+        return a;
+      });
+      function L() { return ES ? 'es' : 'en'; }
+      feed.replaceChildren(...cards);
+      feed.classList.add('x-blog'); feed.setAttribute('data-filter-list', ''); feed.dataset.pageSize = '13';
+      // topic filters (same buttons as the Library) and a count
+      const bar = mk('div', 'x-blog-bar');
+      const grp = mk('div', 'x-blog-filters'); grp.setAttribute('role', 'group'); grp.setAttribute('aria-label', ES ? 'Filtrar por tema' : 'Filter by topic');
+      [['all', ES ? 'Todos' : 'All']].concat(TOPICS.map(t => [t[0], t[1]])).forEach(([k, lab], i) => {
+        const n = k === 'all' ? cards.length : cards.filter(c => c.dataset.kind === k).length;
+        if (!n) return;
+        const b = mk('button', null, lab); b.type = 'button'; b.dataset.filter = k; b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+        b.appendChild(mk('span', 'x-count', String(n)));
+        grp.appendChild(b);
+      });
+      const status = mk('p', 'x-blog-status', (ES ? `${cards.length} artículos` : `${cards.length} articles`)); status.setAttribute('aria-live', 'polite'); status.dataset.tplEn = '{shown} of {total} articles'; status.dataset.tplEs = '{shown} de {total} artículos';
+      bar.append(grp, status);
+      feed.before(bar);
+      const more = mk('button', 'x-btn-outline x-more', ES ? 'Ver más artículos' : 'Show more articles'); more.type = 'button'; more.setAttribute('data-more', ''); more.hidden = true;
+      feed.after(more);
+    }
+  }
+
   // 2. text-only cards get an icon (company pages); partner cards get a monogram
   const CARD_ICONS = [[/encrypt|cifrado/i, 'lock'], [/access|acceso/i, 'key'], [/privacy|privacidad/i, 'eyeoff'], [/monitor/i, 'activity'], [/\bAI\b|\bIA\b/, 'sparkle'], [/incident/i, 'alert'],
     [/impact/i, 'zap'], [/^team$|^equipo$/i, 'users'], [/learn|aprend/i, 'book'], [/telecom/i, 'antenna'], [/open|abiertos/i, 'layers'], [/partnership|largo plazo/i, 'handshake']];

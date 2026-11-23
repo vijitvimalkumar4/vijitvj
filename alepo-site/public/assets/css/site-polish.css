@@ -285,6 +285,38 @@ button[data-filter] { min-height: 40px !important; padding: 0 18px !important; b
 button[data-filter]:hover { border-color: rgba(45, 29, 143, 0.35) !important; transform: none !important; filter: none !important; }
 button[data-filter][aria-pressed="true"] { border-color: var(--x-indigo) !important; }
 
+/* ---------- Blog: article cards with photos ---------- */
+.x-blog-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-bottom: 24px; }
+.x-blog-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.x-blog-filters button { display: inline-flex; align-items: center; gap: 8px; font-family: inherit; font-size: 15px; color: var(--x-ink); cursor: pointer; }
+.x-count { display: inline-flex; align-items: center; justify-content: center; min-width: 24px; height: 22px; padding: 0 7px; border-radius: 999px; background: rgba(45, 29, 143, 0.08); font-size: 12px; font-weight: 600; }
+button[aria-pressed="true"] .x-count { background: rgba(255, 255, 255, 0.2); }
+.x-blog-status { margin: 0; font-size: 14px; color: rgb(86, 91, 107); }
+.x-blog { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; gap: 24px !important; }
+.x-cover-img { height: auto !important; aspect-ratio: 16 / 9; padding: 0 !important; background: linear-gradient(135deg, #EFEBFD, #E3F3FA) !important; }
+.x-cover-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--x-ease); }
+.x-post:hover .x-cover-img img { transform: scale(1.05); }
+.x-cover-img .x-post-tag { position: absolute; left: 14px; top: 14px; z-index: 1; background: rgba(255, 255, 255, 0.94); color: var(--x-indigo); box-shadow: 0 2px 8px rgba(18, 13, 61, 0.15); text-transform: none; letter-spacing: 0; font-size: 12.5px; }
+.x-post-body { display: flex; flex-direction: column; flex: 1 1 auto; gap: 8px; padding: 18px 20px 20px; }
+.x-post-article .x-post-title { padding: 0; font-size: 18px; line-height: 1.35; font-family: "Plus Jakarta Sans", Arial, sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+.x-post-date { font-size: 13px; color: rgb(86, 91, 107); }
+.x-post-excerpt { font-size: 15px; line-height: 1.55; color: rgb(86, 91, 107); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.x-post-article .x-post-go { display: inline-flex; align-items: center; gap: 8px; margin-top: auto; padding: 8px 0 0; font-size: 15px; font-weight: 600; }
+.x-post-featured.x-post-article { min-height: 0; }
+.x-post-featured.x-post-article .x-cover-img { flex: 0 0 56%; aspect-ratio: auto; min-height: 340px; }
+.x-post-featured.x-post-article .x-post-body { justify-content: center; gap: 12px; padding: 40px; }
+.x-post-featured.x-post-article .x-post-title { align-self: auto; padding: 0; font-size: 31px; line-height: 1.2; letter-spacing: -0.02em; }
+.x-post-featured.x-post-article .x-post-excerpt { -webkit-line-clamp: 4; font-size: 17px; }
+.x-post-featured.x-post-article .x-post-go { align-self: flex-start; padding: 8px 0 0; margin-top: 8px; }
+@media (max-width: 760px) {
+  .x-post-featured.x-post-article .x-cover-img { flex-basis: auto; min-height: 0; aspect-ratio: 16 / 9; }
+  .x-post-featured.x-post-article .x-post-body { padding: 20px; }
+  .x-post-featured.x-post-article .x-post-title { font-size: 22px; }
+}
+.x-more { display: flex; margin: 40px auto 0; min-height: 48px; padding: 0 28px; border-radius: 12px; border: 1px solid rgba(45, 29, 143, 0.35); background: #FFFFFF; color: var(--x-indigo); font: inherit; font-weight: 600; cursor: pointer; transition: background-color var(--x-fast) ease, border-color var(--x-fast) ease; }
+.x-more:hover { background: rgba(45, 29, 143, 0.05); border-color: var(--x-indigo); }
+.x-more[hidden] { display: none; }
+
 /* ---------- icons on text-only cards ---------- */
 .x-icon-lg { display: inline-flex !important; align-items: center; justify-content: center; flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; margin-bottom: 8px; }
 .x-mono { font-family: "Plus Jakarta Sans", Arial, sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.02em; }

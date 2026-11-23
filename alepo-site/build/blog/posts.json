@@ -1,0 +1,2598 @@
+[
+ {
+  "url": "https://alepo.com/blog/radius-mfa-two-factor-authentication/",
+  "title": "RADIUS MFA: How to Add Two-Factor Authentication",
+  "date": "2026-11-18",
+  "excerpt": "Learn how RADIUS MFA works, compare OTP, challenge-response and push authentication, and configure NAS timeouts without disrupting network access.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-mfa-two-factor-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/RADIUS-Two-Factor-Authentication-for-Operator-Staff-and-Enterprise-Services.png",
+  "w": 640,
+  "h": 337
+ },
+ {
+  "url": "https://alepo.com/blog/radius-proxy-explained/",
+  "title": "RADIUS Proxy Explained: Realm Routing, Proxy-State & Use Cases",
+  "date": "2026-11-13",
+  "excerpt": "Learn how a RADIUS proxy handles realm routing, Proxy-State and accounting across MVNO, wholesale broadband and roaming Wi-Fi networks.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-proxy-explained.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/eb716889-7175-4b1b-a9c5-2c47b161d57c.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-mac-authentication/",
+  "title": "RADIUS MAC Authentication for CPE and ONTs: Is It Enough?",
+  "date": "2026-11-11",
+  "excerpt": "How ISPs use RADIUS MAC authentication for gateways, ONTs and set-top boxes, why a MAC alone can be spoofed, and how Option 82 or 802.1X adds the missing proof.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-mac-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_Date_Wed_11_Nov_2026_04_11_39_0000_UTC.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-ports-explained/",
+  "title": "RADIUS Ports: 1812, 1813, 1645/1646, 3799 and UDP vs TCP",
+  "date": "2026-11-11",
+  "excerpt": "RADIUS uses UDP 1812 for authentication and 1813 for accounting; CoA runs the other way, to 3799. Get firewall rules for each and the IETF push toward RadSec.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-ports-explained.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_Date_Wed_11_Nov_2026_04_23_50_0000_UTC.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-firewall-nat-rules/",
+  "title": "RADIUS Firewall Rules: Ports, Direction and NAT Fixes",
+  "date": "2026-11-09",
+  "excerpt": "Your firewall must allow UDP 1812 and 1813 from NAS to AAA server, UDP 3799 back for CoA, and TCP 2083 for RadSec. See why NAT breaks RADIUS and how to fix it.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-firewall-nat-rules.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_Date_Mon_9_Nov_2026_13_04_38_0000_UTC.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-carrier-wifi-authentication/",
+  "title": "Carrier Wi-Fi RADIUS Authentication: SSIDs, SIM and Scale",
+  "date": "2026-11-09",
+  "excerpt": "See how a RADIUS server authenticates carrier Wi-Fi users: methods per SSID, EAP-AKA’ SIM offload via HSS/UDM, roaming realms and TPS sizing for login surges.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-carrier-wifi-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_Date_Mon_9_Nov_2026_13_23_44_0000_UTC.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-configuration-bng-bras/",
+  "title": "RADIUS Server Configuration for BNG and BRAS: A Checklist",
+  "date": "2026-11-06",
+  "excerpt": "Configure RADIUS on a BNG or BRAS with starting values and RFC references: shared secrets (RADIUS keys), rotation, realm routing, interim accounting, failover.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-radius-configuration-bng-bras.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_RADIUS_Conf_i_gurat_i_on_for_BNG_and_BRAS_Realms_Cl_i_ents_and_Shared_concept-1_edited.png",
+  "w": 640,
+  "h": 337
+ },
+ {
+  "url": "https://alepo.com/blog/radius-captive-portal-handoff/",
+  "title": "RADIUS Captive Portal: How NAS and AAA Hand Off a Session",
+  "date": "2026-11-04",
+  "excerpt": "Learn when to use NAS-initiated login or CoA in a RADIUS captive portal, which attributes carry the session, how accounting works, and why CoA logins stall.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-captive-portal-handoff.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1269a051bca7.png",
+  "w": 640,
+  "h": 337
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-peak-operation-plan/",
+  "title": "Ready Your AAA Infrastructure for Peak Traffic",
+  "date": "2026-11-03",
+  "excerpt": "See how Alepo AAA Server helps operators handle peak authentication loads, failover events, and reconnect storms with carrier-grade scalability and resilience.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-peak-operation-plan.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_Before_the_New_Year_s_Eve_Surge_A_Q4_Operat_i_ons_Calendar_for_Your_AAA_Server-1.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-authentication-methods/",
+  "title": "RADIUS Authentication Methods: PAP vs CHAP vs EAP vs MS-CHAPv2",
+  "date": "2026-11-03",
+  "excerpt": "Compare PAP, CHAP, EAP and MS-CHAPv2 in RADIUS. Learn which method is most secure, what passwords the AAA server stores, and what to use for Wi-Fi and PPPoE.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-authentication-methods.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/11/1200x628px_RADIUS_Authent_i_cat_i_on_Methods_Compared_PAP_CHAP_MS-CHAPv2_and_EAP-1.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-emergency-mode/",
+  "title": "AAA Emergency Mode: Surviving a Subscriber Database Outage",
+  "date": "2026-10-30",
+  "excerpt": "AAA emergency mode keeps subscribers online when the database is down. Compare fail-closed, cached and fail-open policies, accounting buffering, and testing.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-emergency-mode.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/AAA-Emergency-Mode-Surviving-a-Subscriber-Database-Outage.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/guest-wifi-best-practices/",
+  "title": "Guest Wi-Fi Best Practices: Captive Portal, AAA & Security",
+  "date": "2026-10-30",
+  "excerpt": "Learn guest Wi-Fi best practices for captive portals, AAA, vouchers, quotas, consent and returning users while reducing access issues and revenue leakage.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-guest-wifi-best-practices.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Guest-Wi-Fi-Captive-Portal-Best-Practices.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/captive-portal-software-checklist/",
+  "title": "Captive Portal Software: A 14-Point Checklist for Operators",
+  "date": "2026-10-27",
+  "excerpt": "What to look for in captive portal software: 14 checks on payments, RADIUS and CoA, multi-venue tenancy, consent and carrier scale, each with a demo question.",
+  "categories": [
+   "AAA server",
+   "WiFi Monetization"
+  ],
+  "image": "blog-captive-portal-software-checklist.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Choosing-Captive-Portal-Software-for-a-Monetized-Wi-Fi-Network.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/bss-in-telecom/",
+  "title": "BSS in Telecom: 7 Components, From Signup to First Bill",
+  "date": "2026-10-26",
+  "excerpt": "How a telecom BSS works: CRM, catalog, ordering, charging, billing, mediation, and self-care, plus the TM Forum Open APIs and how AAA usage data is billed.",
+  "categories": [
+   "Digital BSS"
+  ],
+  "image": "blog-bss-in-telecom.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/BSS-in-Telecom-The-Systems-Behind-Every-Bill-Plan-and-Signup.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-protocol-security/",
+  "title": "RADIUS Security: Shared Secrets, Risks & Best Practices",
+  "date": "2026-10-22",
+  "excerpt": "Is RADIUS secure? Learn what shared secrets protect, what remains exposed, how BlastRADIUS works, and 7 practical steps to harden RADIUS security.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-protocol-security.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/1200x628px_RADIUS_Secur_i_ty_Shared_Secrets_Message-Authent_i_cator_and_the_BlastRADIUS_F_i_x.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-attributes-explained/",
+  "title": "RADIUS Attributes Explained: NAS-Port, VSAs & More",
+  "date": "2026-10-22",
+  "excerpt": "A practical RADIUS attribute reference: NAS-Port-Type, Framed-IP-Address, Class, vendor-specific attributes, and how to map VSAs during a migration.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-attributes-explained.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/RADIUS-Attributes-Explained-NAS-Port-VSAs-More.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-coa-change-of-authorization/",
+  "title": "RADIUS CoA: Ports, RFC 5176 & How Change of Authorization Works",
+  "date": "2026-10-19",
+  "excerpt": "Learn how RADIUS CoA works, including UDP 3799 vs. 1700, RFC 5176, CoA-Request/ACK/NAK, session identification, use cases, and troubleshooting.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-coa-change-of-authorization.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_ADIUS-CoA-Ports-RFC-5176-How-Change-of-Authorization-WorksR.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/eap-tls-and-radius-securing-modern-network-authentication/",
+  "title": "EAP-TLS Authentication: Certificates, RADIUS & How It Works",
+  "date": "2026-10-15",
+  "excerpt": "Learn how EAP-TLS authentication works with RADIUS and 802.1X. Explore certificate-based mutual authentication, EAP-TLS vs. PEAP, and certificate lifecycle management.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-eap-tls-and-radius-securing-modern-network-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/1200x628_EAP-TLS-and-RADIUS-Securing-Modern-Network-Authentication.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/what-is-tacacs-the-complete-guide-for-network-teams/",
+  "title": "What Is TACACS+? Complete Guide to TACACS+ & RADIUS",
+  "date": "2026-10-14",
+  "excerpt": "Learn what TACACS+ is, how it works, TACACS+ vs RADIUS, command authorization, security, and TACACS+ over TLS with RFC 9887.",
+  "categories": [
+   "TACACS+"
+  ],
+  "image": "blog-what-is-tacacs-the-complete-guide-for-network-teams.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_What-Is-TACACS-The-Complete-Guide-for-Network-Teams.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/signaling-storm-protection-filtering-authentication-noise-before-it-costs-you/",
+  "title": "Authentication Signaling Storms: Protection Guide",
+  "date": "2026-10-13",
+  "excerpt": "Learn how to detect, filter, and prevent RADIUS and Diameter authentication signaling storms with layered AAA protection, real-time detection, and storm-response strategies.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-signaling-storm-protection-filtering-authentication-noise-before-it-costs-you.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_Signaling-Storm-Protection-Filtering-Authentication-Noise-Before-It-Costs-You.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/guest-and-contractor-network-access-for-regulated-industries/",
+  "title": "Guest & Contractor Network Access: Security & Compliance",
+  "date": "2026-10-12",
+  "excerpt": "Learn how to secure guest and contractor network access with AAA, identity-based authentication, segmentation, time-bound access, and audit-ready logs.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-guest-and-contractor-network-access-for-regulated-industries.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_Guest-and-Contractor-Network-Access-for-Regulated-Industries.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-server-stress-testing-how-to-validate-carrier-grade-performance/",
+  "title": "AAA Server Stress Testing: 9 Tests, Tools & Criteria",
+  "date": "2026-10-09",
+  "excerpt": "Learn how to stress test an AAA server with 9 carrier-grade scenarios, acceptance criteria, RADIUS and Diameter load testing tools, and failure testing methods.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-server-stress-testing-how-to-validate-carrier-grade-performance.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/AAA-Server-Stress-Testing-How-to-Validate-Carrier-Grade-Performance.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/the-real-cost-of-one-hour-of-authentication-downtime/",
+  "title": "AAA Server Downtime Cost: How Much Does 1 Hour Cost?",
+  "date": "2026-10-07",
+  "excerpt": "Learn how to calculate the cost of AAA server downtime for telecom operators, including SLA credits, revenue leakage, churn, accounting loss, and recovery costs.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-the-real-cost-of-one-hour-of-authentication-downtime.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_The-Real-Cost-of-One-Hour-of-Authentication-Downtime.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/scalable-aaa-platform-how-to-future-proof-telecom-authentication/",
+  "title": "How to Future-Proof Telecom AAA: 7 Scalability Dimensions",
+  "date": "2026-10-06",
+  "excerpt": "AAA scalability is more than TPS. Learn the seven dimensions that decide whether your platform lasts, a four-step sizing method, and a scorecard for RFPs.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-scalable-aaa-platform-how-to-future-proof-telecom-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_Scalable-AAA-Platform-How-to-Future-Proof-Telecom-Authentication-1.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/why-scalability-matters-when-choosing-an-aaa-server/",
+  "title": "AAA Server Scalability: How to Plan for Network Growth",
+  "date": "2026-10-02",
+  "excerpt": "Learn how AAA server scalability supports subscriber growth, 5G, IoT, and traffic bursts. Explore TPS, session capacity, scaling architecture, and capacity planning.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-why-scalability-matters-when-choosing-an-aaa-server.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_Why-Scalability-Matters-When-Choosing-an-AAA-Server.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-port-numbers-and-protocol-basics/",
+  "title": "TACACS+ Port 49: TCP vs. UDP & Firewall Rules",
+  "date": "2026-10-01",
+  "excerpt": "Learn which port TACACS+ uses, why it runs over TCP/49, how it differs from RADIUS, and what firewall rules to configure for TACACS+ and TLS.",
+  "categories": [
+   "TACACS+"
+  ],
+  "image": "blog-tacacs-port-numbers-and-protocol-basics.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/10/Blog-template_1200x628_TACACS-Port-49-TCP-vs.-UDP-Firewall-Rules.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/5g-standalone-readiness-an-authentication-and-policy-gap-analysis/",
+  "title": "5G Standalone Readiness: Authentication & Policy Gap Analysis",
+  "date": "2026-09-30",
+  "excerpt": "Assess 5G Standalone readiness across authentication, policy control, network slicing, and subscriber data architecture with a practical gap analysis framework.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-5g-standalone-readiness-an-authentication-and-policy-gap-analysis.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_5G-Standalone-Readiness-An-Authentication-and-Policy-Gap-Analysis.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/bandwidth-on-demand-aaa-radius-coa-charging/",
+  "title": "Bandwidth-on-Demand: AAA, RADIUS CoA & Charging Guide",
+  "date": "2026-09-29",
+  "excerpt": "Learn how bandwidth-on-demand works with AAA policy control, RADIUS CoA, and convergent charging to deliver and bill real-time broadband speed boosts.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-bandwidth-on-demand-aaa-radius-coa-charging.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_Bandwidth-on-Demand-Services-What-Your-Access-Layer-Needs-to-Support-Them.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-security-checklist-mfa-privilege-levels-and-zero-trust-in-one-place/",
+  "title": "TACACS+ Security Checklist: MFA, Privilege Levels & Zero Trust",
+  "date": "2026-09-25",
+  "excerpt": "Use this TACACS+ security checklist to assess MFA, privilege levels, command authorization, zero-trust access, and accounting across network devices.",
+  "categories": [
+   "TACACS+"
+  ],
+  "image": "blog-tacacs-security-checklist-mfa-privilege-levels-and-zero-trust-in-one-place.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_TACACS-Security-Checklist.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/connecting-aaa-to-ldap-hss-and-external-identity-stores/",
+  "title": "AAA Server LDAP & HSS Integration: Configuration Guide",
+  "date": "2026-09-24",
+  "excerpt": "Learn how to integrate an AAA server with LDAP and HSS using bind authentication and Diameter SWx, including synchronization, security, failover, and implementation considerations.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-connecting-aaa-to-ldap-hss-and-external-identity-stores.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/AAA-Server-LDAP-HSS-Integration.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/consolidating-multiple-aaa-systems-onto-one-platform-a-business-case/",
+  "title": "Consolidating Multiple AAA Systems: Business Case & ROI",
+  "date": "2026-09-21",
+  "excerpt": "Learn how consolidating multiple AAA systems can reduce operational overhead, simplify compliance, improve subscriber experience, and support a stronger ROI case.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-consolidating-multiple-aaa-systems-onto-one-platform-a-business-case.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_Consolidating-Multiple-AAA-Systems-Business-Case-ROI.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/zero-trust-for-telecom-networks-where-aaa-fits/",
+  "title": "Zero Trust for Telecom Networks: Where AAA Fits",
+  "date": "2026-09-21",
+  "excerpt": "Learn how AAA enables Zero Trust in telecom networks through dynamic policy, continuous verification, session reauthorization, and CoA.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-zero-trust-for-telecom-networks-where-aaa-fits.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_Zero-Trust-for-Telecom-Networks-Where-AAA-Fits.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/build-vs-buy-should-your-team-maintain-its-own-aaa-stack/",
+  "title": "Build vs Buy AAA Infrastructure: A Practical Guide",
+  "date": "2026-09-16",
+  "excerpt": "Should you build or buy your AAA stack? Compare costs, protocols, availability, compliance, risks, and engineering effort to make the right decision.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-build-vs-buy-should-your-team-maintain-its-own-aaa-stack.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Build-vs-Buy-AAA-Infrastructure.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/open-apis-in-aaa-platforms-the-questions-procurement-forgets-to-ask/",
+  "title": "Open APIs in AAA Platforms: 4 Questions Procurement Should Ask",
+  "date": "2026-09-16",
+  "excerpt": "Evaluating an AAA platform API? Learn four questions procurement teams should ask about API coverage, documentation, rate limits, and testing.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-open-apis-in-aaa-platforms-the-questions-procurement-forgets-to-ask.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Open-APIs-in-AAA-Platforms.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/802-1x-troubleshooting-fixing-common-authentication-failures/",
+  "title": "802.1X Troubleshooting: Common Authentication Failures",
+  "date": "2026-09-15",
+  "excerpt": "Learn how to troubleshoot common 802.1X authentication failures, including supplicant, certificate, RADIUS, MTU, VLAN, and network issues.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-802-1x-troubleshooting-fixing-common-authentication-failures.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/802.1X-Troubleshooting.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/building-a-security-case-for-aaa-modernization-your-ciso-will-sign-off-on/",
+  "title": "AAA Modernization Security Case: A CISO Guide",
+  "date": "2026-09-15",
+  "excerpt": "Learn how to build a CISO-focused security case for AAA modernization, covering attack surface, compliance, audit risk, and incident response.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-building-a-security-case-for-aaa-modernization-your-ciso-will-sign-off-on.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/AAA-Modernization-Security-Case.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/ai-anomaly-detection-for-authentication-traffic-what-to-look-for-in-a-platform/",
+  "title": "AI Anomaly Detection for Authentication Traffic: What to Look For",
+  "date": "2026-09-15",
+  "excerpt": "How to separate real AI detection capability from marketing language when evaluating AAA vendors.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-ai-anomaly-detection-for-authentication-traffic-what-to-look-for-in-a-platform.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/AI-Anomaly-Detection-for-Authentication-Traffic.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-compliance-mapping-command-accounting-to-iso-27001-soc-2-and-pci-dss/",
+  "title": "TACACS+ and SOC 2: Mapping Accounting to Trust Criteria",
+  "date": "2026-09-15",
+  "excerpt": "Learn how TACACS+ supports SOC 2 access control evidence, including command accounting, role-based access, monitoring, change management, and audit artifacts.",
+  "categories": [
+   "TACACS+"
+  ],
+  "image": "blog-tacacs-compliance-mapping-command-accounting-to-iso-27001-soc-2-and-pci-dss.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/TACACS-SOC-2-Compliance.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/rfc-8907-explained-what-changed-in-the-official-tacacs-standard/",
+  "title": "RFC 8907 vs RFC 9887: What Changed for TACACS+?",
+  "date": "2026-09-09",
+  "excerpt": "Learn the key differences between RFC 8907 and RFC 9887, including TACACS+ security, TLS 1.3, TCP port 300, mutual authentication, and MD5 obfuscation.",
+  "categories": [
+   "TACACS+"
+  ],
+  "image": "blog-rfc-8907-explained-what-changed-in-the-official-tacacs-standard.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_RFC-8907-vs-RFC-9887-What-Changed-for-TACACS.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/why-bolting-security-onto-your-aaa-server-is-slower-than-building-it-in/",
+  "title": "Native AAA Security vs. Bolted-On Security: Which Is Faster?",
+  "date": "2026-09-08",
+  "excerpt": "Discover why native AAA security delivers faster threat detection than bolted-on tools, with real-time context, faster response, and better RADIUS and Diameter visibility.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-why-bolting-security-onto-your-aaa-server-is-slower-than-building-it-in.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_Why-Bolting-Security-Onto-Your-AAA-Server-Is-Slower-Than-Building-It-In.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-operators-prove-aaa-reliability-to-regulators-and-enterprise-customers/",
+  "title": "How Operators Prove AAA Reliability to Regulators & Customers",
+  "date": "2026-09-08",
+  "excerpt": "Learn how operators prove AAA reliability with availability data, incident records, audit trails, and documented methodologies for regulators and enterprise customers.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-operators-prove-aaa-reliability-to-regulators-and-enterprise-customers.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_How-Operators-Prove-AAA-Reliability-to-Regulators-and-Enterprise-Customers.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/what-to-demand-in-an-aaa-support-sla-beyond-24-7/",
+  "title": "AAA Vendor Support SLA: What to Demand Beyond 24/7",
+  "date": "2026-09-07",
+  "excerpt": "\"24/7 support\" only means someone answers the phone. Here's what response-time tiers, escalation paths, and specialist access to demand in an AAA vendor SLA.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-what-to-demand-in-an-aaa-support-sla-beyond-24-7.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/What-to-Demand-in-an-AAA-Support-SLA-Beyond.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/credential-stuffing-attacks-on-broadband-networks-and-how-aaa-stops-them/",
+  "title": "Credential Stuffing Attacks on Broadband Networks",
+  "date": "2026-09-07",
+  "excerpt": "Learn how credential stuffing targets broadband networks and how AAA servers stop attacks with rate limiting, anomaly detection, and tuned account lockout.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-credential-stuffing-attacks-on-broadband-networks-and-how-aaa-stops-them.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Credential-Stuffing-Attacks-on-Broadband-Networks-and-How-AAA-Stops-Them.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/sim-swap-and-subscriber-identity-fraud-the-aaa-operators-playbook/",
+  "title": "SIM Swap Fraud Prevention Playbook for Telecom Operators",
+  "date": "2026-09-07",
+  "excerpt": "Learn how telecom operators can prevent SIM swap fraud with identity verification, AAA monitoring, post-swap detection, and automated risk controls.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-sim-swap-and-subscriber-identity-fraud-the-aaa-operators-playbook.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/SIM-Swap-and-Subscriber-Identity-Fraud-The-AAA-Operators-Playbook-1.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/multi-site-aaa-server-deployment-best-practices/",
+  "title": "Multi-Site AAA Server Deployment: Best Practices",
+  "date": "2026-09-07",
+  "excerpt": "Learn five best practices for multi-site AAA server deployment, including data synchronization, latency-aware routing, site failover, data residency, and WAN requirements.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-multi-site-aaa-server-deployment-best-practices.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Multi-Site-AAA-Server-Deployment-Best-Practices-2.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-server-deployment-timeline-what-to-expect/",
+  "title": "AAA Server Deployment Timeline: 9–16 Weeks",
+  "date": "2026-09-07",
+  "excerpt": "Learn how long AAA server deployment takes. Explore the 5 phases, typical 9–16 week timeline, key factors, pilot, cutover, and stabilization.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-server-deployment-timeline-what-to-expect.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_AAA-Server-Deployment-Timeline-9%E2%80%9316-Weeks-Alepo-2.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-to-reduce-aaa-server-deployment-risk/",
+  "title": "How to Reduce AAA Server Deployment Risks | 6 Key Mitigations",
+  "date": "2026-09-02",
+  "excerpt": "Learn how to reduce AAA server deployment risks with six proven mitigations for session loss, capacity, protocol errors, rollback, NAS onboarding, and accounting.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-to-reduce-aaa-server-deployment-risk.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/How-to-Reduce-AAA-Server-Deployment-Risks-6-Key-Mitigations.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-security-best-practices-for-telecom-and-service-provider-networks/",
+  "title": "TACACS+ Security Best Practices: 10 Ways to Secure Networks",
+  "date": "2026-09-02",
+  "excerpt": "Learn 10 TACACS+ security best practices for telecom networks, including MFA, least privilege, command accounting, TLS 1.3, SIEM alerts, and high availability.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-tacacs-security-best-practices-for-telecom-and-service-provider-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/TACACS-Security-Best-Practices-10-Ways-to-Secure-Networks.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-to-run-an-aaa-failover-drill-without-dropping-live-subscribers/",
+  "title": "How to Run an AAA Failover Drill Without Dropping Live Subscribers",
+  "date": "2026-09-02",
+  "excerpt": "Learn how to safely run an AAA failover drill using traffic shadowing, limited-blast-radius testing, rollback triggers, and real-time monitoring.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-to-run-an-aaa-failover-drill-without-dropping-live-subscribers.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/How-to-Run-an-AAA-Failover-Drill-Without-Dropping-Live-Subscribers.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-privilege-levels-role-based-access/",
+  "title": "TACACS+ Privilege Levels: Role-Based Access & Command Control",
+  "date": "2026-09-02",
+  "excerpt": "Learn how TACACS+ privilege levels and per-command authorization enable role-based network access, least privilege, and secure device administration.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-tacacs-privilege-levels-role-based-access.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/Blog-template_1200x628_TACACS-Privilege-Levels-Role-Based-Access-Command-Control.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-server-evaluation-checklist-12-features-network-operators-should-compare/",
+  "title": "TACACS+ Server Evaluation: 12 Criteria to Compare",
+  "date": "2026-09-02",
+  "excerpt": "Compare TACACS+ servers using 12 evaluation criteria, including command authorization, device compatibility, MFA, HA, migration, accounting, and TCO.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-tacacs-server-evaluation-checklist-12-features-network-operators-should-compare.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/09/TACACS-Server-Evaluation-12-Criteria-to-Compare.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-server-capacity-planning/",
+  "title": "AAA Server Capacity Planning: TPS, Growth & Headroom",
+  "date": "2026-08-31",
+  "excerpt": "Learn how to plan AAA server capacity using sustained TPS, traffic growth, peak load and 30–50% headroom with a practical sizing example.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-server-capacity-planning.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/AAA-Server-Capacity-Planning-TPS-Growth-Headroom.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/community-broadband-operators-a-lean-systems-stack-that-still-scales/",
+  "title": "Community Broadband Lean Systems Stack: AAA & Billing Guide",
+  "date": "2026-08-31",
+  "excerpt": "Discover a lean, scalable systems stack for community broadband operators, covering AAA, RADIUS, billing, funding, and growth without costly system replacement.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-community-broadband-operators-a-lean-systems-stack-that-still-scales.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/Community-Broadband-Lean-Systems-Stack-AAA-Billing-Guide.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-server-installation-checklist/",
+  "title": "AAA Server Installation Checklist | Pre-Deployment Guide",
+  "date": "2026-08-28",
+  "excerpt": "A categorized pre-installation checklist, network, security, data and monitoring prerequisites, before you stage an AAA server.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-server-installation-checklist.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/aaa-server-installation-checklist-hero.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/business-case-aaa-server-modernization/",
+  "title": "AAA Server Modernization Business Case: Buyer's Framework",
+  "date": "2026-08-27",
+  "excerpt": "Learn how to build a business case for AAA server modernization, calculate the cost of inaction, evaluate ROI, and plan a low-risk migration.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-business-case-aaa-server-modernization.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_business_case.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-to-compare-aaa-server-architectures/",
+  "title": "How to Compare AAA Server Architectures | Buyer's Framework",
+  "date": "2026-08-26",
+  "excerpt": "Comparing AAA server architectures? Use this 6-point buyer's framework to evaluate redundancy, scaling, protocols, deployment, data, and operations.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-to-compare-aaa-server-architectures.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_compare_arch.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-plus-active-directory-integration/",
+  "title": "TACACS+ and Active Directory: Centralize Admin Authentication",
+  "date": "2026-08-25",
+  "excerpt": "Learn how to connect TACACS+ to Active Directory so network admins log in with AD credentials, integration patterns, AD group mapping, and security best practices.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-tacacs-plus-active-directory-integration.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_tacacs_ad.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/6-signs-your-aaa-server-needs-an-upgrade/",
+  "title": "6 Signs Your AAA Server Needs an Upgrade",
+  "date": "2026-08-25",
+  "excerpt": "Discover 6 signs your AAA or RADIUS server needs an upgrade, from rising authentication latency and peak-hour failures to EOL and protocol limitations.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-6-signs-your-aaa-server-needs-an-upgrade.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_6signs.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-to-choose-aaa-server-vendor-for-network-growth/",
+  "title": "How to Choose an AAA Server Vendor for Network Growth",
+  "date": "2026-08-25",
+  "excerpt": "Learn how to evaluate AAA server vendors for network growth, including protocols, scalability, high availability, integrations, deployment, and migration.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-to-choose-aaa-server-vendor-for-network-growth.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_selecting_aaa.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/tacacs-plus-accounting-audit-logs/",
+  "title": "TACACS+ Accounting and Audit Logs: Track Admin Actions",
+  "date": "2026-08-25",
+  "excerpt": "Learn how TACACS+ accounting records administrator commands, audit logs, and sessions, and how to send them to a SIEM for accountability.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-tacacs-plus-accounting-audit-logs.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_tacacs_audit.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-tacacs-compares-to-radius-for-network-authentication/",
+  "title": "TACACS+ vs RADIUS: Key Differences for Network Authentication",
+  "date": "2026-08-21",
+  "excerpt": "Compare TACACS+ vs RADIUS for network authentication. Learn their key differences, security features, AAA functions, and ideal use cases.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-tacacs-compares-to-radius-for-network-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_tacacs_radius.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/sub-millisecond-aaa-latency-why-it-matters-for-5g-networks/",
+  "title": "Sub-Millisecond AAA Latency: Why It Matters for 5G Networks",
+  "date": "2026-08-19",
+  "excerpt": "Learn why sub-millisecond AAA latency matters for 5G networks and how low-latency authentication supports ultra-low-latency services and performance.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-sub-millisecond-aaa-latency-why-it-matters-for-5g-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/Blog-template_1200x628_Sub-Millisecond-AAA-Latency-Why-It-Matters-for-5G-Networks-1.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-aaa-reduces-revenue-leakage-in-telecom-networks/",
+  "title": "How AAA Reduces Revenue Leakage in Telecom Networks",
+  "date": "2026-08-19",
+  "excerpt": "Learn how AAA helps telecom operators reduce revenue leakage through accurate authentication, authorization, usage tracking, and real-time subscriber controls.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-aaa-reduces-revenue-leakage-in-telecom-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_revenue_leakage.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/subscriber-data-management-and-aaa-how-they-work-together/",
+  "title": "Subscriber Data Management and AAA: How They Work Together",
+  "date": "2026-08-19",
+  "excerpt": "Learn how subscriber data management and AAA work together to authenticate users, manage subscriber profiles, and improve network scalability and control.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-subscriber-data-management-and-aaa-how-they-work-together.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/img_subscriber_data.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-as-a-service-is-managed-aaa-right-for-your-network/",
+  "title": "AAA as a Service: Is Managed AAA Right for Your Network?",
+  "date": "2026-08-18",
+  "excerpt": "Learn how AAA as a Service works for telecom operators and ISPs. Compare managed vs. self-hosted AAA, architecture, benefits, security, scalability, and best practices.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-aaa-as-a-service-is-managed-aaa-right-for-your-network.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/featured_image_21855.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/high-availability-aaa-server-designing-for-carrier-grade-resilience/",
+  "title": "High Availability AAA Server: Carrier-Grade Resilience",
+  "date": "2026-08-18",
+  "excerpt": "Learn how to design a high availability AAA server for carrier-grade resilience, including redundancy, failover, load balancing, and disaster recovery.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-high-availability-aaa-server-designing-for-carrier-grade-resilience.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/Blog-template_1200x628_High-Availability-AAA-Server.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-accounting-explained-what-telecom-operators-need-to-know/",
+  "title": "RADIUS Accounting Explained: A Guide for Telecom Operators",
+  "date": "2026-08-12",
+  "excerpt": "Learn how RADIUS accounting works, including Start, Interim, and Stop records, key attributes, workflows, and best practices for telecom networks.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-radius-accounting-explained-what-telecom-operators-need-to-know.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/Blog-template_1200x628_RADIUS-Accounting-Explained-What-Telecom-Operators.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-real-time-charging-works-with-aaa-and-diameter-in-5g/",
+  "title": "Real-Time Charging with AAA & Diameter in 5G",
+  "date": "2026-08-10",
+  "excerpt": "Learn how real-time charging works with AAA and Diameter in 5G, including architecture, authentication, accounting, and best practices for operators.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-real-time-charging-works-with-aaa-and-diameter-in-5g.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/Blog-template_1200x628_How-Real-Time-Charging-Works-with-AAA-and-Diameter-in-5G-1.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/how-radius-authentication-works-in-telecom-networks/",
+  "title": "How RADIUS Authentication Works in Telecom Networks",
+  "date": "2026-08-05",
+  "excerpt": "Learn how RADIUS authentication works in telecom networks. Explore its architecture, authentication flow, best practices, and deployment for ISPs and CSPs.",
+  "categories": [
+   "AAA server",
+   "RADIUS AAA Basics"
+  ],
+  "image": "blog-how-radius-authentication-works-in-telecom-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/ChatGPT-Image-Aug-4-2026-07_04_23-PM.png",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/radius-protocol-explained-how-it-secures-telecom-networks/",
+  "title": "RADIUS Protocol Explained: How It Secures Telecom Networks",
+  "date": "2026-08-05",
+  "excerpt": "Learn how the RADIUS protocol secures telecom networks. Explore authentication, authorization, accounting (AAA), architecture, and deployment best practices.",
+  "categories": [
+   "AAA server",
+   "RADIUS AAA Basics"
+  ],
+  "image": "blog-radius-protocol-explained-how-it-secures-telecom-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/1200x628_RADIUS-Protocol-Explained-How-It-Secures-Telecom-Networks.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/what-is-an-aaa-server-and-why-does-every-csp-need-one/",
+  "title": "What Is an AAA Server? Why Every CSP Needs One",
+  "date": "2026-08-04",
+  "excerpt": "Learn what an AAA server is, how it authenticates, authorizes, and accounts for subscriber access, and why every CSP and ISP relies on it for secure network access.",
+  "categories": [
+   "AAA server",
+   "RADIUS AAA Basics"
+  ],
+  "image": "blog-what-is-an-aaa-server-and-why-does-every-csp-need-one.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/What-Is-an-AAA-Server-and-Why-Does-Every-CSP-Need-One_1200x628px.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/what-is-a-radius-server-a-beginners-guide-for-telecom-engineers/",
+  "title": "What Is a RADIUS Server? A Beginner's Guide for Telecom Engineers",
+  "date": "2026-08-03",
+  "excerpt": "A RADIUS server centrally authenticates, authorizes, and accounts for network access. Learn how the RADIUS protocol works, AAA basics, and RADIUS vs Diameter.",
+  "categories": [
+   "AAA server",
+   "RADIUS AAA Basics"
+  ],
+  "image": "blog-what-is-a-radius-server-a-beginners-guide-for-telecom-engineers.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/08/Blog-template_1200x628-copy-3.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/cloud-radius-server-managed-aaa-for-modern-telecom-operators/",
+  "title": "Cloud RADIUS Server: Managed AAA for Telecom Operators",
+  "date": "2026-07-28",
+  "excerpt": "How cloud RADIUS delivers carrier-grade AAA: deployment models, architecture, latency and data-residency trade-offs, and hybrid migration paths.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-cloud-radius-server-managed-aaa-for-modern-telecom-operators.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/07/b610d778-182e-4595-a50e-7194e4a11543.avif",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/network-slicing-authentication-aaas-role-in-5g-monetization/",
+  "title": "Network Slicing Authentication: AAAs Role in 5G",
+  "date": "2026-07-27",
+  "excerpt": "Learn about network slicing authentication for telecom operators. Covers what is network slicing monetization. AAA role in per-slice billing and access.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-network-slicing-authentication-aaas-role-in-5g-monetization.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/07/Blog-template_1200x628-20260724-124039-1.jpg",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/diameter-aaa-server-4g-5g-guide/",
+  "title": "Diameter AAA Server for 4G & 5G Networks",
+  "date": "2026-07-22",
+  "excerpt": "Learn how a Diameter AAA Server enables authentication, authorization, and accounting in 4G and 5G networks. Explore Diameter interfaces, RADIUS vs. Diameter, and deployment best practices.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-diameter-aaa-server-4g-5g-guide.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/07/image-20260721-064419.png",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/cisco-ise-tacacs-migration-guide/",
+  "title": "Cisco ISE TACACS+ Migration Guide: EOL Options",
+  "date": "2026-07-17",
+  "excerpt": "Cisco ISE 3.1 and 3.2 have reached end-of-sale. Learn when TACACS+ device administration should move to a dedicated TACACS+ server and how to migrate safely.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-cisco-ise-tacacs-migration-guide.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/07/Canvas-1200×628px-Setup.jpg",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-server-5g-ausf-authentication/",
+  "title": "AAA Server vs AUSF: 5G Core Authentication Explained",
+  "date": "2026-07-02",
+  "excerpt": "AUSF handles 5G SA mobile auth — but not Wi-Fi, broadband, or TACACS+. Learn when AAA server 5G coexistence is still required and how to migrate safely.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-aaa-server-5g-ausf-authentication.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/07/Alepo_AAA_Server_vs_AUSF-1.png",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/8021x-authentication-explained-for-telecom-and-enterprise-networks/",
+  "title": "802.1X Authentication Explained for Telecom and Enterprise Networks",
+  "date": "2026-06-29",
+  "excerpt": "Guide for telecom operators: 802.1x. Open with 802.1X definition. Emphasise carrier/telecom context throughout.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-8021x-authentication-explained-for-telecom-and-enterprise-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/06/Alepo-802.1x-diagram-for-telecom-operators-2.png",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/cloud-native-aaa-for-telecom-architecture-guide-for-2026/",
+  "title": "Cloud-Native AAA on Kubernetes: A Telecom Architect's Guide",
+  "date": "2026-06-24",
+  "excerpt": "Can carrier-grade AAA run on Kubernetes without compromising 99.999% uptime? Yes — here's the architecture, deployment options, and 5G integration points.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-cloud-native-aaa-for-telecom-architecture-guide-for-2026.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/06/image-4.png",
+  "w": 640,
+  "h": 335
+ },
+ {
+  "url": "https://alepo.com/blog/isp-radius-server-replacement-self-assessment-2026/",
+  "title": "Replace Your RADIUS Server? ISP Self-Assessment for 2026",
+  "date": "2026-06-19",
+  "excerpt": "Is your ISP's RADIUS server ready for 2026? 8 questions to find out — before it becomes a revenue problem.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-isp-radius-server-replacement-self-assessment-2026.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/06/image-3.png",
+  "w": 640,
+  "h": 349
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-platform-evaluation-isp/",
+  "title": "AAA Platform Evaluation for ISPs: 8 Criteria That Actually Matter",
+  "date": "2026-06-18",
+  "excerpt": "Evaluating a telecom AAA platform? Here are 8 criteria ISPs and broadband operators must check — from protocol support and uptime to migration path and vendor lock-in.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-aaa-platform-evaluation-isp.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/06/Preview-3.png",
+  "w": 640,
+  "h": 357
+ },
+ {
+  "url": "https://alepo.com/blog/still-running-cisco-cpar-in-2026-heres-your-real-security-exposure/",
+  "title": "Still Running Cisco CPAR in 2026? Here’s Your Real Security Exposure",
+  "date": "2026-06-12",
+  "excerpt": "Running Cisco CPAR after end of life means operating an authentication layer that will never receive another security patch. Cisco officially ended support in October 2025. Every CVE disclosed since that date against CPAR’s code path is permanently unresolved. The exposure is not a future risk, it is a present one that compounds every month […]",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-still-running-cisco-cpar-in-2026-heres-your-real-security-exposure.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/06/Alepo-feature-image.png",
+  "w": 640,
+  "h": 272
+ },
+ {
+  "url": "https://alepo.com/blog/how-to-launch-mvno-in-30-days/",
+  "title": "How to Launch an MVNO in Under 30 Days (Without the Usual 6-Month Drama)",
+  "date": "2026-06-08",
+  "excerpt": "The 30-day MVNO launch is real — but only if your MNO agreement, SIM vendor, and product catalog are locked before Day 1. Here's the week-by-week breakdown of what actually happens, what causes delays, and how to avoid them.",
+  "categories": [
+   "Blog",
+   "Business Support Systems",
+   "Digital BSS"
+  ],
+  "image": "blog-how-to-launch-mvno-in-30-days.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/06/image.png",
+  "w": 640,
+  "h": 349
+ },
+ {
+  "url": "https://alepo.com/blog/what-is-online-charging-system-ocs/",
+  "title": "What Is an Online Charging System (OCS)? A Guide for modern CSP's",
+  "date": "2026-05-29",
+  "excerpt": "An Online Charging System (OCS) is the real-time billing engine behind every prepaid, postpaid, and 5G service. Here's how it works, and what operators need from one in 2026.",
+  "categories": [
+   "Business Support Systems",
+   "Digital BSS"
+  ],
+  "image": "blog-what-is-online-charging-system-ocs.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/May-29-2026-05_56_57-PM.png",
+  "w": 640,
+  "h": 427
+ },
+ {
+  "url": "https://alepo.com/blog/telecom-billing-system/",
+  "title": "Telecom Billing System: How It Actually Works",
+  "date": "2026-05-26",
+  "excerpt": "A telecom billing system collects usage data, rates it, and generates invoices for subscribers. Learn how modern billing works — and what makes a good one.",
+  "categories": [
+   "Blog",
+   "Business Support Systems",
+   "Digital BSS"
+  ],
+  "image": "blog-telecom-billing-system.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/may-4-alepo.webp",
+  "w": 640,
+  "h": 349
+ },
+ {
+  "url": "https://alepo.com/blog/generative-ais-impact-on-telecom-operations-beyond-the-hype/",
+  "title": "Generative AI in Telecom Operations: 2026 Guide",
+  "date": "2026-05-24",
+  "excerpt": "Telecom operators using generative AI report reductions in handle time, support costs, and churn. Every major GenAI use case in telecom ops, explained.",
+  "categories": [
+   "AI Agent Assistant",
+   "AI Customer Assistant",
+   "AI Powered CX"
+  ],
+  "image": "blog-generative-ais-impact-on-telecom-operations-beyond-the-hype.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/01/Generative-AIs-Impact-on-Telecom-Operations-1.png",
+  "w": 640,
+  "h": 464
+ },
+ {
+  "url": "https://alepo.com/blog/the-end-of-siloed-systems-how-ai-unifies-bss-customer-care-and-revenue-management-into-one-intelligent-platform/",
+  "title": "AI-Unified BSS for Telecom | Cut Revenue Leakage",
+  "date": "2026-05-24",
+  "excerpt": "Telecom operators lose millions to siloed BSS, CRM, and billing systems. See how Alepo's AI-powered unified platform eliminates fragmentation and revenue leakage.",
+  "categories": [
+   "AI Powered CX",
+   "Business Support Systems"
+  ],
+  "image": "blog-the-end-of-siloed-systems-how-ai-unifies-bss-customer-care-and-revenue-managemen.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2025/12/The-End-of-Siloed-Systems.png",
+  "w": 640,
+  "h": 640
+ },
+ {
+  "url": "https://alepo.com/blog/ai-integrated-crm-telecom-industry/",
+  "title": "AI-Integrated CRM for Telecom | Churn & ARPU",
+  "date": "2026-05-24",
+  "excerpt": "Fragmented CRM costs telecom operators in churn and missed upsell. See how Alepo's AI-integrated CRM helps CSPs reduce churn and grow ARPU with real-time customer intelligence.",
+  "categories": [
+   "AI Powered CX"
+  ],
+  "image": "blog-ai-integrated-crm-telecom-industry.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2025/05/Gemini_Generated_Image_u64dplu64dplu64d.png",
+  "w": 640,
+  "h": 640
+ },
+ {
+  "url": "https://alepo.com/blog/ai-call-center-performance-management/",
+  "title": "Call Center Performance Management with AI",
+  "date": "2026-05-22",
+  "excerpt": "AI is transforming call center performance management — from AHT to FCR to ACW. Discover the KPIs that matter and how AI contact center tools improve every one of them.",
+  "categories": [
+   "AI Customer Assistant",
+   "AI Powered CX"
+  ],
+  "image": "blog-ai-call-center-performance-management.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/May-alepo.jpg",
+  "w": 640,
+  "h": 357
+ },
+ {
+  "url": "https://alepo.com/blog/ai-sales-automation-telecom/",
+  "title": "AI Sales Automation for Telecom: How CSPs Qualify and Convert Leads 24/7",
+  "date": "2026-05-18",
+  "excerpt": "AI sales automation for telecom qualifies CSP buyers, handles BSS/AAA questions, and books AE meetings 24/7. See Lum Mobile results and Aly deployment",
+  "categories": [
+   "AI Customer Assistant",
+   "AI Powered CX",
+   "Blog"
+  ],
+  "image": "blog-ai-sales-automation-telecom.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/Sales-Automation-scaled.jpeg",
+  "w": 640,
+  "h": 359
+ },
+ {
+  "url": "https://alepo.com/blog/top-telecom-trends/",
+  "title": "Top Telecom Industry Trends in 2026: What Operators Are Prioritising Now",
+  "date": "2026-05-17",
+  "excerpt": "From CPAR migrations to AI-native BSS and 5G SA scale-up — here are the 8 telecom trends operators are acting on in 2026, with real deployment data",
+  "categories": [
+   "Blog",
+   "Network Access Control"
+  ],
+  "image": "blog-top-telecom-trends.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/Image-6.png",
+  "w": 640,
+  "h": 360
+ },
+ {
+  "url": "https://alepo.com/blog/digital-bss-transformation-what-mid-market-operators-actually-need-to-know/",
+  "title": "Digital BSS Transformation for Telecom Operators: Complete Guide 2026",
+  "date": "2026-05-14",
+  "excerpt": "Digital BSS transformation doesn't have to mean a 3-year program. Here's how ISPs, MVNOs, and emerging operators modernise faster with real examples.",
+  "categories": [
+   "Blog",
+   "Business Support Systems",
+   "Digital BSS"
+  ],
+  "image": "blog-digital-bss-transformation-what-mid-market-operators-actually-need-to-know.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/compressedImage-1.jpeg",
+  "w": 640,
+  "h": 363
+ },
+ {
+  "url": "https://alepo.com/blog/bss-modernization-cost-isp-mvno/",
+  "title": "BSS Modernization Cost for ISPs and MVNOs",
+  "date": "2026-05-11",
+  "excerpt": "What does BSS modernization actually cost for an ISP or MVNO? Break down the real cost drivers subscriber scale, deployment model, migration complexity with real operator examples.",
+  "categories": [
+   "Blog",
+   "Business Support Systems"
+  ],
+  "image": "blog-bss-modernization-cost-isp-mvno.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/alepo-may.jpg",
+  "w": 640,
+  "h": 349
+ },
+ {
+  "url": "https://alepo.com/blog/order-management-in-modern-telecom-bss-what-every-csp-needs-to-know/",
+  "title": "Order Management in Telecom BSS: What CSPs Must Know",
+  "date": "2026-05-04",
+  "excerpt": "Discover how modern BSS transforms telecom order management with automation, real-time tracking, and API-driven orchestration for faster service delivery.",
+  "categories": [
+   "Blog",
+   "Business Support Systems",
+   "Digital BSS"
+  ],
+  "image": "blog-order-management-in-modern-telecom-bss-what-every-csp-needs-to-know.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/05/image-3.png",
+  "w": 640,
+  "h": 360
+ },
+ {
+  "url": "https://alepo.com/blog/how-real-time-quota-management-transforms-prepaid-broadband-and-wifi-services/",
+  "title": "Real-Time Quota Management for Prepaid Broadband & WiFi",
+  "date": "2026-04-27",
+  "excerpt": "Discover how real-time quota management boosts revenue, ensures accurate billing, and improves user experience in prepaid broadband and WiFi services.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-how-real-time-quota-management-transforms-prepaid-broadband-and-wifi-services.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/04/Alepo-blog.png",
+  "w": 640,
+  "h": 349
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-aaa-for-ftth-networks-boosting-security-authentication-session-efficiency/",
+  "title": "Alepo AAA for FTTH Networks: Boosting Security, Authentication & Session Efficiency",
+  "date": "2026-04-14",
+  "excerpt": "Learn how modern AAA platforms enhance FTTH security, real-time policy enforcement, and accounting to prevent revenue leakage and scale efficiently.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-alepo-aaa-for-ftth-networks-boosting-security-authentication-session-efficiency.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/04/AAA-Blog-2.png",
+  "w": 640,
+  "h": 427
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-aaa-migration-checklist-ensure-zero-downtime-and-seamless-performance/",
+  "title": "Zero-Downtime AAA Migration Checklist for Seamless Performance",
+  "date": "2026-04-07",
+  "excerpt": "Use this AAA migration checklist to ensure zero downtime, seamless performance, and accurate billing during telecom infrastructure upgrades.",
+  "categories": [
+   "AAA server"
+  ],
+  "image": "blog-alepo-aaa-migration-checklist-ensure-zero-downtime-and-seamless-performance.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/04/AdobeStock_1931178203-1-1024x572.jpeg",
+  "w": 640,
+  "h": 358
+ },
+ {
+  "url": "https://alepo.com/blog/aaa-server-in-telecom-authentication-authorization-and-accounting/",
+  "title": "AAA server in telecom",
+  "date": "2026-04-01",
+  "excerpt": "AAA servers in telecom—authentication, authorization, and accounting explained, with real-world challenges, protocols, and deployment insights",
+  "categories": [
+   "AAA server",
+   "Blog"
+  ],
+  "image": "blog-aaa-server-in-telecom-authentication-authorization-and-accounting.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/04/image.webp",
+  "w": 640,
+  "h": 405
+ },
+ {
+  "url": "https://alepo.com/blog/what-an-ai-native-bss-looks-like-in-a-modern-telecom-era/",
+  "title": "AI-Native BSS in Telecom: Architecture, Benefits & 5G Impact",
+  "date": "2026-03-25",
+  "excerpt": "Discover what an AI-native BSS is, how it differs from legacy systems, and why real-time intelligence is critical for telecom operators in the 5G era",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-what-an-ai-native-bss-looks-like-in-a-modern-telecom-era.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/03/image-20260323-131629.png",
+  "w": 640,
+  "h": 360
+ },
+ {
+  "url": "https://alepo.com/blog/how-ai-native-telcos-will-outpace-traditional-operators-in-2026-and-beyond/",
+  "title": "How AI-Native Telcos Will Beat Traditional Operators",
+  "date": "2026-03-18",
+  "excerpt": "Discover how AI-native telcos outperform traditional operators with smarter networks, real-time data, and faster service innovation in 2026 and beyond.",
+  "categories": [
+   "AI Agent Assistant",
+   "AI Customer Assistant",
+   "AI Powered CX"
+  ],
+  "image": "blog-how-ai-native-telcos-will-outpace-traditional-operators-in-2026-and-beyond.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/03/shutterstock_2707295083.jpg",
+  "w": 640,
+  "h": 360
+ },
+ {
+  "url": "https://alepo.com/blog/how-csps-can-use-native-ai-to-reduce-costs-and-increase-agility/",
+  "title": "How Native AI Helps CSPs Reduce Costs and Improve Agility",
+  "date": "2026-03-10",
+  "excerpt": "Discover how telecom CSPs can use native AI to eliminate operational friction, automate workflows, reduce costs, and deliver services faster.",
+  "categories": [
+   "AI Agent Assistant",
+   "AI Customer Assistant",
+   "AI Powered CX"
+  ],
+  "image": "blog-how-csps-can-use-native-ai-to-reduce-costs-and-increase-agility.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/03/AdobeStock_778183558-scaled.jpeg",
+  "w": 640,
+  "h": 354
+ },
+ {
+  "url": "https://alepo.com/blog/the-ai-native-operating-model-how-csps-scale-intelligence-across-the-stack/",
+  "title": "AI-Native Operating Model for Telecom: How CSPs Scale Intelligence",
+  "date": "2026-03-04",
+  "excerpt": "Discover how AI-native telecom platforms help CSPs scale intelligence across networks, BSS, CX, and monetization for faster innovation and improved customer experience.",
+  "categories": [
+   "AAA server",
+   "AI Agent Assistant",
+   "AI Customer Assistant",
+   "AI Powered CX"
+  ],
+  "image": "blog-the-ai-native-operating-model-how-csps-scale-intelligence-across-the-stack.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/03/ai-native.jpg",
+  "w": 640,
+  "h": 357
+ },
+ {
+  "url": "https://alepo.com/blog/self-scaling-aaa-peak-traffic/",
+  "title": "Built for Spikes: A Self-Scaling AAA That Never Sleeps",
+  "date": "2026-02-24",
+  "excerpt": "Self-scaling AAA built to handle peak traffic and sudden spikes, ensuring always-on authentication, authorization, and accounting for uninterrupted network performance.",
+  "categories": [
+   "AAA server",
+   "Network Access Control"
+  ],
+  "image": "blog-self-scaling-aaa-peak-traffic.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/02/alepo-AAA.jpg",
+  "w": 640,
+  "h": 360
+ },
+ {
+  "url": "https://alepo.com/blog/digital-bss-speeds-up-telecom-service-launch/",
+  "title": "How Digital BSS Speeds Up Telecom Service Launch",
+  "date": "2026-02-16",
+  "excerpt": "Digital BSS helps telecom operators reduce service launch time, automate workflows, and accelerate time to market from months to weeks.",
+  "categories": [
+   "Digital BSS"
+  ],
+  "image": "blog-digital-bss-speeds-up-telecom-service-launch.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/02/digital-BSS-Alepo.webp",
+  "w": 640,
+  "h": 438
+ },
+ {
+  "url": "https://alepo.com/blog/wi-fi-offload-reduce-cellular-congestion/",
+  "title": "Wi-Fi Offload: A Smarter Way to Reduce Cellular Congestion",
+  "date": "2026-02-09",
+  "excerpt": "Learn how Wi-Fi offload reduces cellular congestion, improves network capacity, and delivers a better mobile user experience.",
+  "categories": [
+   "Network Access Control",
+   "WiFi Monetization"
+  ],
+  "image": "blog-wi-fi-offload-reduce-cellular-congestion.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/02/Wi-Fi-Offload-Alepo.jpg",
+  "w": 640,
+  "h": 360
+ },
+ {
+  "url": "https://alepo.com/blog/wifi-calling-alepo-transforming-voice-services/",
+  "title": "WiFi Calling Alepo: Transforming Voice Services",
+  "date": "2026-02-02",
+  "excerpt": "Find out how WiFi Calling Alepo transforms mobile communications, enhancing voice quality and extending coverage effortlessly.",
+  "categories": [
+   "AAA server",
+   "WiFi Monetization"
+  ],
+  "image": "blog-wifi-calling-alepo-transforming-voice-services.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/02/2148264111.jpg",
+  "w": 640,
+  "h": 427
+ },
+ {
+  "url": "https://alepo.com/blog/ai-agents-aaa-systems-network-operations/",
+  "title": "AI Agents in AAA Systems: Revolutionizing Network Operations",
+  "date": "2026-01-27",
+  "excerpt": "AI agents cut AAA troubleshooting from minutes to seconds. Automated RADIUS diagnostics, intelligent root cause analysis, and pattern detection for network operations teams.",
+  "categories": [
+   "AAA server",
+   "AI Agent Assistant",
+   "AI Customer Assistant",
+   "AI Powered CX"
+  ],
+  "image": "blog-ai-agents-aaa-systems-network-operations.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/01/Alepo-old-blog.jpg",
+  "w": 640,
+  "h": 349
+ },
+ {
+  "url": "https://alepo.com/blog/carrier-wifi-best-practices-authentication-security-and-user-experience/",
+  "title": "Carrier WiFi Best Practices: Authentication, Security, and User Experience",
+  "date": "2026-01-20",
+  "excerpt": "Discover carrier WiFi's best practices covering authentication methods, network security, and user experience for reliable and secure connectivity.",
+  "categories": [
+   "AAA server",
+   "Subscriber Data Management",
+   "WiFi Monetization"
+  ],
+  "image": "blog-carrier-wifi-best-practices-authentication-security-and-user-experience.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/01/Enhancing-Carrier-WiFi-using-AI.png",
+  "w": 640,
+  "h": 320
+ },
+ {
+  "url": "https://alepo.com/blog/how-bss-now-reduces-time-to-revenue-for-digital-service-providers/",
+  "title": "BSS Now: Launch MVNOs in One Week | Alepo SaaS BSS",
+  "date": "2026-01-12",
+  "excerpt": "Cut BSS deployment from months to one week with pre-configured SaaS. Eliminate CAPEX, reduce OPEX 40%, and start generating revenue in 5 business days.",
+  "categories": [
+   "Digital BSS"
+  ],
+  "image": "blog-how-bss-now-reduces-time-to-revenue-for-digital-service-providers.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2026/01/blog-jan-2.png",
+  "w": 640,
+  "h": 469
+ },
+ {
+  "url": "https://alepo.com/blog/revolutionizing-network-operations-how-ai-agents-are-transforming-aaa-systems/",
+  "title": "Revolutionizing Network Operations: How AI Agents Are Transforming AAA Systems",
+  "date": "2025-12-24",
+  "excerpt": "Stop reactive troubleshooting. Discover how AI agents embedded in Alepo’s carrier-grade AAA fabric automate session discovery, detect phantom sessions, and reduce resolution time by up to 80%. Learn more about production-ready AI for telecom.",
+  "categories": [
+   "AI Powered CX"
+  ],
+  "image": "blog-revolutionizing-network-operations-how-ai-agents-are-transforming-aaa-systems.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2025/12/blog-2-1-1.png",
+  "w": 640,
+  "h": 640
+ },
+ {
+  "url": "https://alepo.com/blog/revolutionizing-broadband-cx-with-ai-powered-solutions/",
+  "title": "Revolutionizing Broadband CX With AI-Powered Solutions",
+  "date": "2025-06-03",
+  "excerpt": "Discover how AI-powered broadband solutions revolutionize FTTH customer onboarding and support, boosting experiences and efficiency for CSPs in the evolving telecom world.",
+  "categories": [
+   "AI Powered CX"
+  ],
+  "image": "blog-revolutionizing-broadband-cx-with-ai-powered-solutions.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2024/09/Enhanced-Customer-Experience.png",
+  "w": 461,
+  "h": 321
+ },
+ {
+  "url": "https://alepo.com/blog/conversational-ai-virtual-agents-assistance-for-telecom/",
+  "title": "Generative AI Customer Assistant for Telecom | Gen AI Virtual Assistants",
+  "date": "2023-11-27",
+  "excerpt": "Discover the power of Generative AI Customer Assistants for telecom. Learn how generative AI customer assistants transform customer service in telecom.",
+  "categories": [
+   "AI Powered CX"
+  ],
+  "image": "blog-conversational-ai-virtual-agents-assistance-for-telecom.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2024/01/How-Conversational-AI-Virtual-Agents-Revolutionize-Customer-Engagement-for-Telecoms-1.png",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/zain-jordan-improves-customer-experience-with-a-major-upgrade-of-alepos-aaa/",
+  "title": "Zain Jordan improves customer experience with a major upgrade of Alepo’s AAA",
+  "date": "2019-10-01",
+  "excerpt": "The AAA will be more robust, with additional failover, monitoring, and proactive alert features.",
+  "categories": [
+   "AI Customer Assistant",
+   "Network Access Control"
+  ],
+  "image": "blog-zain-jordan-improves-customer-experience-with-a-major-upgrade-of-alepos-aaa.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2019/10/Zain-Jordan-improves-customer-experience-with-a-major-upgrade-of-Alepos-AAA.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/mtel-launches-new-public-wifi-plans-in-bosnia-and-herzegovina-with-alepos-wifi-smp/",
+  "title": "m:tel launches new public WiFi plans in Bosnia and Herzegovina with Alepo’s WiFi SMP",
+  "date": "2019-07-02",
+  "excerpt": "m:tel introduced a range of free and paid WiFi plans by deploying digital enablement and revenue management software provider Alepo’s WiFi Service Management Platform (SMP).",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-mtel-launches-new-public-wifi-plans-in-bosnia-and-herzegovina-with-alepos-wifi-s.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2018/10/Partnering-with-Alepo-mtel-to-launch-cellular-offload-and-public-WiFi-plans-in-Bosnia-and-Herzegovina.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/marshall-islands-national-telecommunications-authority-selects-alepo/",
+  "title": "Alepo Provides Fully Converged Solution for Marshall Islands National Telecommunications Authority",
+  "date": "2018-06-07",
+  "excerpt": "With the new fully convergent billing system, the National Telecommunications Authority (NTA) will have the ability to respond to shifting needs in the island nation with the flexibility to support new services.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-marshall-islands-national-telecommunications-authority-selects-alepo.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2025/08/digital-bss-hero.png",
+  "w": 640,
+  "h": 680
+ },
+ {
+  "url": "https://alepo.com/blog/wifi-solution-nominated-5g-lte-latin-america-awards/",
+  "title": "5G & LTE Latin America Awards: Alepo’s Carrier WiFi Nominated",
+  "date": "2018-04-23",
+  "excerpt": "Core network and IT software solutions provider Alepo has been nominated for the 2018 5G & LTE Latin America Awards, slated for later this month.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-wifi-solution-nominated-5g-lte-latin-america-awards.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/05/7-carrier-wifi-alepo.jpg",
+  "w": 315,
+  "h": 210
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-vp-to-address-telcos-on-mobile-money-wifi-offload-at-pita-conference-in-guam/",
+  "title": "Alepo VP to address telcos on mobile money, WiFi offload at PITA 2018",
+  "date": "2018-04-20",
+  "excerpt": "Core network and IT software solutions provider, Alepo will be presenting at PITA 2018 Guam, the annual general meeting and trade show organized by the Pacific Islands Telecommunications Association",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-vp-to-address-telcos-on-mobile-money-wifi-offload-at-pita-conference-in-gu.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2018/10/Partnering-with-Alepo-mtel-to-launch-cellular-offload-and-public-WiFi-plans-in-Bosnia-and-Herzegovina.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/smart-link-communications-selects-alepo-wifi-monetization-solution/",
+  "title": "Smart Link Communications Selects Alepo WiFi Monetization",
+  "date": "2018-02-15",
+  "excerpt": "Alepo’s next-generation WiFi monetization solutions platform will enable Smart Link Communications (SLC) - Read more about it in details.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-smart-link-communications-selects-alepo-wifi-monetization-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/10/WiFi-platform.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-shortlisted-africacom-awards-2017/",
+  "title": "Alepo Shortlisted for AfricaCom Awards 2017",
+  "date": "2017-10-31",
+  "excerpt": "Alepo has reached the finalist stage in the “Most Innovative LTE Service/Application Deployment” Awards category, for its BSS Transformation Solution.",
+  "categories": [
+   "Alepo"
+  ],
+  "image": "blog-alepo-shortlisted-africacom-awards-2017.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2023/06/Role-of-a-dedicated-PCRF-in-VoLTE.png",
+  "w": 640,
+  "h": 427
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-selects-parallel-wireless-technology-public-safety/",
+  "title": "Alepo Selects Parallel Wireless Technology for Public Safety LTE Network",
+  "date": "2017-10-23",
+  "excerpt": "Alepo, the leading LTE solutions provider selected Parallel Wireless, the leading LTE Network technology provider. Parallel Wireless Technology",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-selects-parallel-wireless-technology-public-safety.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/11/Webinar-Zero-Touch-Network.jpg",
+  "w": 511,
+  "h": 389
+ },
+ {
+  "url": "https://alepo.com/blog/native-wifi-calling-voip-wifi-calling/",
+  "title": "Native WiFi Calling Gaining Ground on VoIP WiFi calling",
+  "date": "2017-10-05",
+  "excerpt": "OTT (over-the-top) VoIP WiFi calling is a cloud-based service that requires a separate client and typically does not allow for mobility.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-native-wifi-calling-voip-wifi-calling.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2017/10/native-wifi-calling.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/horizon-telecom-selects-alepo-to-launch-fttx-voip/",
+  "title": "Horizon Telecom Launches FTTx and VoIP in Myanmar",
+  "date": "2017-09-11",
+  "excerpt": "Horizon Telecom Selects Alepo to Launch Advanced FTTx and VoIP Services in Myanmar. The Alepo Solution gives HTI a powerful and scalable platform",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-horizon-telecom-selects-alepo-to-launch-fttx-voip.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2021/06/ruralfttx.jpg",
+  "w": 511,
+  "h": 389
+ },
+ {
+  "url": "https://alepo.com/blog/nu-telecom-selects-alepo-advanced-wifi-services/",
+  "title": "NU-Telecom Selects Alepo for Advanced WiFi Services in Minnesota",
+  "date": "2017-08-23",
+  "excerpt": "NU-Telecom Selects Alepo for Advanced WiFi Services in Minnesota. With the Alepo solution, NU-Telecom will be able to readily deliver, manage and monetize.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-nu-telecom-selects-alepo-advanced-wifi-services.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2017/08/NU-Telecom-Selects-Alepo-for-Advanced-WiFi-Services-in-Minnesota.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/yatanarpon-teleport-selects-alepo-fixed-broadband/",
+  "title": "Yatanarpon Teleport Selects Alepo for Fixed Broadband Transformation",
+  "date": "2017-05-11",
+  "excerpt": "Yatanarpon Teleport Selects Alepo for Fixed Broadband Transformation and Next-Generation Network Services. Alepo Fixed Broadband",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-yatanarpon-teleport-selects-alepo-fixed-broadband.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2024/03/landing_Product-Brief-FTTH-Broadband-AAA.png",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-technologies-awarded-iso-9001-2015/",
+  "title": "Alepo Awarded ISO 9001:2015 Quality Management System Certification",
+  "date": "2017-04-28",
+  "excerpt": "The quality management system certification attests that Alepo conforms to standards and requirements to provide high quality, reliability, and consistency in its deliverables.",
+  "categories": [
+   "Alepo"
+  ],
+  "image": "blog-alepo-technologies-awarded-iso-9001-2015.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2017/04/Alepo-Technologies-Awarded-an-ISO-9001-2015-Quality-Management-System-Certification.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/horizon-telecom-international-selects-alepo/",
+  "title": "Wi-Fi Offload and Monetization for Greenfield Project in Myanmar",
+  "date": "2017-04-18",
+  "excerpt": "With Alepo's WiFi Offload and Monetization solution, Myanmar’s greenfield operator, Horizon Telecom International (HTI).",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-horizon-telecom-international-selects-alepo.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/04/With-LTE-on-the-Horizon-Tishknet-Iraq-Expands-its-Alepo-Partnership-to-Support-Existing-WiMAX-Services.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/amara-communications-selects-alepos-bss-solution/",
+  "title": "Alepo to Launch Advanced LTE and FTTx Services in Myanmar",
+  "date": "2017-04-11",
+  "excerpt": "Amara Communications Selects Alepo’s BSS Solution and Managed Services to Launch Advanced LTE and FTTx Services in Myanmar.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-amara-communications-selects-alepos-bss-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2017/04/Amara-Communications-Selects-Alepos-BSS-Solution-and-Managed-Services-to-Launch-Advanced-LTE-and-FTTx-Services-in-Myanmar.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/tuvalu-telecommunications-corporation-selects-alepo-blue-arcus-launch-lte-wifi-services-tuvalu/",
+  "title": "LTE and WiFi Services in Tuvalu with Alepo and Blue Arcus",
+  "date": "2017-02-13",
+  "excerpt": "With Alepo’s LTE and WiFi solutions, Tuvalu Telecommunications Corporation (TTC) aims for a swift rollout of new broadband.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-tuvalu-telecommunications-corporation-selects-alepo-blue-arcus-launch-lte-wifi-s.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2019/11/Alepos-Digital-BSS-facilitates-Tuvalu-Telecommunications-Corporations-next-phase-of-modernization-and-convergence.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/partnership-alepo-green-com-completes-major-bss-transformation-equatorial-guinea/",
+  "title": "Green Com S.A. completes a Major BSS Transformation with Alepo",
+  "date": "2016-11-29",
+  "excerpt": "In partnership with Alepo, Green Com S.A. completes a Major BSS Transformation in Equatorial Guinea.",
+  "categories": [
+   "Business Support Systems"
+  ],
+  "image": "blog-partnership-alepo-green-com-completes-major-bss-transformation-equatorial-guinea.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/02/GreenCom-BSS-Transformation.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/spectranet-announces-an-upgrade-to-latest-version-of-alepo-bss/",
+  "title": "Spectranet Announces an Upgrade to Latest version of Alepo BSS to Support its LTE Growth Strategy in Nigeria",
+  "date": "2016-11-07",
+  "excerpt": "The BSS upgrade will enable Spectranet, a longstanding Alepo client, to support its data monetization strategy, streamline business processes, boost CX, and more.",
+  "categories": [
+   "Business Support Systems"
+  ],
+  "image": "blog-spectranet-announces-an-upgrade-to-latest-version-of-alepo-bss.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/04/4G-LTE-solution-Spectranet.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-shortlisted-for-delivering-excellence-in-customer-experience-at-the-africacom-awards-2016/",
+  "title": "Delivering Excellence in Customer Experience: Alepo Shortlisted in Africacom Awards 2016 2016",
+  "date": "2016-11-07",
+  "excerpt": "Alepo’s Data Network Monetization Solution was shortlisted for the AfricaCom awards 2016, having enabled customer experience excellence at leading CSPs in Africa and around the world.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-shortlisted-for-delivering-excellence-in-customer-experience-at-the-africa.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2019/11/Alepo-secures-place-on-AfricaCom-Awards-shortlist-for-‘putting-customers-first.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/saudi-telecom-strengthens-ties-with-alepo-in-its-latest-bss-upgrade/",
+  "title": "Saudi Telecom Strengthens Ties with Alepo in Its Latest BSS Upgrade",
+  "date": "2016-10-17",
+  "excerpt": "The upgrade to Alepo’s latest BSS framework and AAA will enable STC to support its growing digital-savvy subscriber base with differentiated services, streamlined operations, and more.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-saudi-telecom-strengthens-ties-with-alepo-in-its-latest-bss-upgrade.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/10/Saudi-Telecom-Strengthens-Ties-with-Alepo-in-Its-Latest-BSS-Upgrade.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-to-showcase-prepaid-data-monetization-solution/",
+  "title": "Alepo Showcased Prepaid Data Monetization Solution at GITEX Dubai",
+  "date": "2016-10-10",
+  "excerpt": "Alepo to Showcase Prepaid Data Monetization Solution at GITEX Technology Week 2016 in Dubai.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-to-showcase-prepaid-data-monetization-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/02/Alepo-Introduces-Number-Monetization-System.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/marshall-islands-national-telecommunications-4g-lte-and-wifi-services/",
+  "title": "National Telecommunications Authority Launches 4G LTE and WiFi in Marshall Islands",
+  "date": "2016-09-08",
+  "excerpt": "Marshall Islands National Telecommunications Authority Selects Alepo & Blue Arcus to Launch New 4G LTE and WiFi Services.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-marshall-islands-national-telecommunications-4g-lte-and-wifi-services.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/02/Alepo-Provides-4G-WiMAX-Solution-to-Digicel-Jamaica.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-bitflux-launches-the-first-wholesale-lte-services-in-nigeria/",
+  "title": "In Partnership with Alepo, Bitflux Launches the first Wholesale LTE Services in Nigeria",
+  "date": "2016-08-25",
+  "excerpt": "Bitflux launched Nigeria’s first wholesale LTE services using Alepo’s complete BSS, promising to improve internet user experience in the country.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-bitflux-launches-the-first-wholesale-lte-services-in-nigeria.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/03/Bitflux-Selects-Alepos-Policy-Charging-and-CRM-Platform-to-Launch-Wholesale-LTE-Network-in-Nigeria.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/tishknet-deploys-alepos-home-subscriber/",
+  "title": "Tishknet Deploys Alepo’s Home Subscriber Server, Reduces Total Cost of Ownership by 25%",
+  "date": "2016-08-04",
+  "excerpt": "Alepo’s Home Subscriber Server helped leading Middle East CSP Tishknet optimize its LTE services, ensuring five-nines availability, supporting its growing subscriber base, and more.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-tishknet-deploys-alepos-home-subscriber.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/08/Tishknet-Deploys-Alepos-Home-Subscriber-Server-Reduces-Total-Cost-of-Ownership-by-25�.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-research-report/",
+  "title": "Research Report: Asian MNOs to Partner with OTT– to grow revenue",
+  "date": "2016-06-23",
+  "excerpt": "Alepo’s surveys of Asia-Pacific mobile network operators finds that many either already have or are considering revenue-sharing partnerships to improve their business.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-research-report.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/04/Over-the-Top-OTT-Services-Survey.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/new-lte-network-at-caricel-jamaica-alepo/",
+  "title": "New LTE Network at Caricel Jamaica through Alepo Comtech Partnership",
+  "date": "2016-05-31",
+  "excerpt": "Alepo’s advanced solution, including policy and charging, billing, CRM, and HSS, enabled Caricel to deploy and monetize the LTE network across the island nation.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-new-lte-network-at-caricel-jamaica-alepo.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/07/Banglalion-Selects-Alepos-LTE-Charging-and-Billing-Solution-to-Advance-Growth-in-Bangladesh.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/fixed-broadband-charging/",
+  "title": "Ooredoo Selects Alepo for Charging and Customer Care for Maldives Broadband",
+  "date": "2016-05-17",
+  "excerpt": "Ooredoo Maldives Selects Alepo’s Fixed Broadband Charging and Customer Care Solution for the Introduction of Next-Generation Fixed Broadband Services.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-fixed-broadband-charging.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/05/Ooredoo-Maldives-Selects-Alepos-Fixed-Broadband-Charging-and-Customer-Care-Solution-for-the-Introduction-of-Next-Generation-Fixed-Broadband-Services.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/bitflux-selects-alepos-policy-charging/",
+  "title": "Bitflux Selects Alepo’s Policy, Charging and CRM Platform in Nigeria",
+  "date": "2016-03-29",
+  "excerpt": "Bitflux Selects Alepo’s Policy, Charging and CRM Platform to Launch Wholesale LTE Network in Nigeria.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-bitflux-selects-alepos-policy-charging.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/03/Bitflux-Selects-Alepos-Policy-Charging-and-CRM-Platform-to-Launch-Wholesale-LTE-Network-in-Nigeria.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/africell-taps-alepo-for-3g-and-lte-data-charging-and-policy-control-in-a-multinational-agreement/",
+  "title": "Africell Taps Alepo for 3G and LTE Multinational Agreement",
+  "date": "2016-02-11",
+  "excerpt": "Africell Taps Alepo for 3G and LTE Data Charging and Policy Control in a Multinational Agreement.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-africell-taps-alepo-for-3g-and-lte-data-charging-and-policy-control-in-a-multina.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2014/07/Alepo-Announces-Major-LTE-Win-to-Provide-Policy-and-Charging-for-BLU-Telecommunications-in-Ghana.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/somcable-in-collaboration-with-alepo-and-airspan-announces-the-commercial-launch-of-lte-network-in-somaliland/",
+  "title": "Commercial Launch of LTE Network in Somaliland | Somcable, Alepo, and Airspan",
+  "date": "2016-01-05",
+  "excerpt": "Alepo’s advanced LTE network solution, including convergent online charging and billing, enabled Somcable to launch sophisticated data plans for LTE and fiber services.",
+  "categories": [
+   "Blog"
+  ],
+  "image": "blog-somcable-in-collaboration-with-alepo-and-airspan-announces-the-commercial-launch.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/04/4G-LTE-WiFi-Solution.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/bhutans-largest-telecom-operator-bhutan-telecom-taps-alepo-for-wi-fi-monetization-and-offload/",
+  "title": "Bhutan’s Largest Telecom Operator Taps Alepo for Wi-Fi Monetization and Offload",
+  "date": "2015-12-15",
+  "excerpt": "Alepo’s carrier-grade Wi-Fi solution will help Bhutan Telecom to maximize service monetization and offload mobile traffic to the Wi-Fi network.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-bhutans-largest-telecom-operator-bhutan-telecom-taps-alepo-for-wi-fi-monetizatio.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/10/Alepo-and-Altai-Partner-on-a-Carrier-WiFi-Solution.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/orange-niger-upgrades-its-convergent-billing-and-customer-care-platform-to-alepo-service-enabler-8-2/",
+  "title": "Orange Niger Upgrades its Convergent Billing and Customer Care Platform to Alepo Service Enabler 8.2",
+  "date": "2015-11-18",
+  "excerpt": "Upgrading to the latest version of Alepo’s revenue-centric convergent billing platform enabled advanced offerings, carrier-class performance, and endless scalability.",
+  "categories": [
+   "Business Support Systems"
+  ],
+  "image": "blog-orange-niger-upgrades-its-convergent-billing-and-customer-care-platform-to-alepo.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/11/Orange-Niger-Upgrades-its-Convergent-Billing-and-Customer-Care-Platform-to-Alepo-Service-Enabler.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/bbh-selects-alepos-convergent-billing-and-crm-to-drive-customer-experience-and-new-iptv-services-across-multiple-access-networks/",
+  "title": "BBH selects Alepo's Convergent Billing and CRM to Drive Customer Experience and New IPTV Services Across Multiple Access Networks",
+  "date": "2015-10-27",
+  "excerpt": "Alepo’s BSS/OSS, with convergent billing and CRM, enables BBH to swiftly launch innovative services across its 4G LTE, WiMAX and Wi-Fi networks, including IPTV.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-bbh-selects-alepos-convergent-billing-and-crm-to-drive-customer-experience-and-n.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/10/BBH-selects-Alepos-Convergent-Billing-and-CRM-to-Drive-Customer-Experience-and-New-IPTV-Services-Across-Multiple-Access-Networks.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/filasia-system-technologies-selects-alepo-for-iptv-and-wi-fi-delivery-in-philippines/",
+  "title": "FilAsia System Technologies Selects Alepo for IPTV and Wi-Fi Delivery in Philippines",
+  "date": "2015-10-06",
+  "excerpt": "Alepo’s complete Wi-Fi management solution will enable the operator to launch and monetize internet and IPTV services over a robust Wi-Fi network.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-filasia-system-technologies-selects-alepo-for-iptv-and-wi-fi-delivery-in-philipp.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/10/FilAsia-System-Technologies-Selects-Alepo-for-IPTV-and-Wi-Fi-Delivery-in-Philippines.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-makes-wi-fi-offload-a-reality-for-etb-in-colombia/",
+  "title": "Alepo Makes Wi-Fi Offload a Reality for ETB in Colombia",
+  "date": "2015-09-01",
+  "excerpt": "The Wi-Fi Offload solution enables ETB to broaden its data footprint and fill coverage gaps with a combination of high-speed LTE and Wi-Fi Hotspot services.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-makes-wi-fi-offload-a-reality-for-etb-in-colombia.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/09/Alepo-Makes-Wi-Fi-Offload-a-Reality-for-ETB-in-Colombia.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/banglalion-selects-alepos-lte-charging-and-billing-solution-to-advance-growth-in-bangladesh/",
+  "title": "Alepo’s LTE Charging and Billing Solution to Advance Growth in Bangladesh | Banglalion and Alepo",
+  "date": "2015-07-28",
+  "excerpt": "Alepo’s LTE Convergent Charging and Billing solution will enable Banglalion to launch innovative data offers for residential and commercial customers in Bangladesh.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-banglalion-selects-alepos-lte-charging-and-billing-solution-to-advance-growth-in.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/07/Banglalion-Selects-Alepos-LTE-Charging-and-Billing-Solution-to-Advance-Growth-in-Bangladesh.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/sri-lanka-telecom-deploys-wi-fi-nationwide-with-ruckus-and-alepo/",
+  "title": "Nationwide Wi-Fi Deployed | Sri Lanka Telecom, Ruckus and Alepo",
+  "date": "2015-06-24",
+  "excerpt": "The project combines Ruckus’s hardware and Alepo’s BSS/OSS software infrastructure to deploy a carrier-class WiFi network, enabling SLT to launch and monetize services.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-sri-lanka-telecom-deploys-wi-fi-nationwide-with-ruckus-and-alepo.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/06/Sri-Lanka-Telecom-Deploys-Wi-Fi-Nationwide-with-Ruckus-and-Alepo.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/ovum-recommends-telcos-to-put-alepo-pcrf-on-the-radar/",
+  "title": "Ovum Recommends That Telcos Put Alepo PCRF “On the Radar”",
+  "date": "2015-06-23",
+  "excerpt": "Leading analyst firm Ovum says Alepo’s comprehensive PCRF platform helps telcos create new revenue streams, optimize network traffic, manage OTT partnerships, and more.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-ovum-recommends-telcos-to-put-alepo-pcrf-on-the-radar.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/06/Ovum-Recommends-Telcos-to-Put-Alepo-PCRF-On-the-Radar.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/to-build-a-better-broadband-business-in-tanzania-uhuruone-selects-alepos-wi-fi-solution/",
+  "title": "Broadband Business in Tanzania",
+  "date": "2015-05-21",
+  "excerpt": "Alepo’s Wi-Fi solution will enable UhuruOne to rapidly deliver, manage, and monetize innovative and advanced prepaid services, supporting the ISP’s growth in Tanzania.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-to-build-a-better-broadband-business-in-tanzania-uhuruone-selects-alepos-wi-fi-s.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/03/Wifi-Offload.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/djibouti-telecom-modernizes-fixed-broadband-network-with-alepo-bssoss-upgrade/",
+  "title": "Telecom Modernizes Fixed Broadband Network with Alepo BSS/OSS, Djibouti",
+  "date": "2015-04-28",
+  "excerpt": "The BSS/OSS upgrade helped Djibouti Telecom rapidly create and launch innovative new services, improve operational efficiency, boost CX, and reduce OPEX.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-djibouti-telecom-modernizes-fixed-broadband-network-with-alepo-bssoss-upgrade.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2024/03/BSS-Transformation-Home.webp",
+  "w": 640,
+  "h": 505
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-lands-lte-charging-and-billing-deal-with-ivory-coasts-vipnet/",
+  "title": "LTE Charging and Billing Deal with Ivory Coast’s VIPNET",
+  "date": "2015-04-01",
+  "excerpt": "VIPNET will launch its LTE network with Alepo’s complete BSS/OSS framework, including charging and billing, CRM, and customer experience management.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-alepo-lands-lte-charging-and-billing-deal-with-ivory-coasts-vipnet.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/04/Alepo-Lands-LTE-Charging-and-Billing-Deal-with-Ivory-Coasts-VIPNET.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/zipnet-to-boost-the-ict-sector-in-ghana-with-alepo-policy-and-charging-control/",
+  "title": "Zipnet to Boost the ICT Sector in Ghana with Policy and Charging Control",
+  "date": "2015-03-20",
+  "excerpt": "Alepo’s advanced policy and charging control and BSS solutions across multi-access networks will enable the leading ISP to enhance its ICT services.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-zipnet-to-boost-the-ict-sector-in-ghana-with-alepo-policy-and-charging-control.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/03/Ghana.jpg",
+  "w": 640,
+  "h": 640
+ },
+ {
+  "url": "https://alepo.com/blog/mauritius-telecom-upgrades-alepo-billing-and-customer-care-platform-to-support-rapid-subscriber-growth/",
+  "title": "Alepo - Mauritius Telecom Upgrades Alepo Billing and Customer Care Platform to Support Rapid Subscriber Growth",
+  "date": "2015-01-27",
+  "excerpt": "Alepo’s convergent telecom billing platform enabled rapid service innovation, lower OPEX, real-time capabilities, and more on the operator’s fixed broadband network.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-mauritius-telecom-upgrades-alepo-billing-and-customer-care-platform-to-support-r.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/11/Mauritius-Telecom-WiFi-SMP.jpg",
+  "w": 400,
+  "h": 200
+ },
+ {
+  "url": "https://alepo.com/blog/emcali-selects-alepos-high-performance-aaa-and-policy-control-to-modernize-its-fixed-and-mobile-broadband-networks/",
+  "title": "Emcali Selects AAA and Policy Control from Alepo",
+  "date": "2015-01-13",
+  "excerpt": "Alepo’s AAA and policy control infrastructure will enable a streamlined and high-performing network for the triple-play operator, boosting CX, reducing OPEX, and more.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-emcali-selects-alepos-high-performance-aaa-and-policy-control-to-modernize-its-f.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2016/05/5-aaa-transformation.jpg",
+  "w": 315,
+  "h": 210
+ },
+ {
+  "url": "https://alepo.com/blog/digicel-modernizes-its-mobile-data-networks-with-alepo-aaa-solution/",
+  "title": "Alepo - Digicel Modernizes Its Mobile Data Networks With Alepo AAA Solution",
+  "date": "2015-01-07",
+  "excerpt": "Alepo’s AAA solution helped upgrade Digicel’s network infrastructure to support its growing subscriber base, boosting performance, reliability, and scalability.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-digicel-modernizes-its-mobile-data-networks-with-alepo-aaa-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2015/01/Digicel-Modernizes-Its-Mobile-Data-Networks-With-Alepo-AAA-Solution.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/with-a-new-qubee-partnership-alepo-expands-its-business-presence-in-bangladeshs-telecommunications-industry/",
+  "title": "QUBEE Partnership Helps Alepo Expand Its Business in Bangladesh",
+  "date": "2014-10-22",
+  "excerpt": "As part of the partnership, Alepo’s BSS infrastructure will enable the telecommunications service provider to deliver modern and advanced 4G broadband services.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-with-a-new-qubee-partnership-alepo-expands-its-business-presence-in-bangladeshs-.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2014/10/With-A-New-QUBEE-Partnership-Alepo-Expands-Its-Business-Presence-in-Bangladeshs-Telecommunications-Industry.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/blu-launches-new-4g-lte-services-in-ghana-with-alepo-policy-and-charging-control-core/",
+  "title": "BLU Launches 4G LTE Services with Alepo PCRF",
+  "date": "2014-10-14",
+  "excerpt": "Alepo met BLU’s stringent deadlines to deploy its policy and charging control solutions, enabling the operator to readily deliver, manage, and monetize 4G LTE services.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-blu-launches-new-4g-lte-services-in-ghana-with-alepo-policy-and-charging-control.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2014/10/BLU-Launches-New-4G-LTE-Services-in-Ghana-with-Alepo-Policy-and-Charging-Control-Core.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-announces-major-lte-win-to-provide-policy-and-charging-for-blu-telecommunications-in-ghana/",
+  "title": "Alepo - Alepo Announces Major LTE Win to Provide Policy and Charging for BLU Telecommunications in Ghana",
+  "date": "2014-07-15",
+  "excerpt": "BLU Telecommunications decided to deploy its LTE network using Alepo’s policy, charging, and BSS solutions to launch and monetize data, voice, IPTV, WiFi, and other services.",
+  "categories": [],
+  "image": "blog-alepo-announces-major-lte-win-to-provide-policy-and-charging-for-blu-telecommuni.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2014/07/Alepo-Announces-Major-LTE-Win-to-Provide-Policy-and-Charging-for-BLU-Telecommunications-in-Ghana.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-to-deploy-lte-crm-ocs-pcrf-solution-with-4g-tishknet-in-kurdistan/",
+  "title": "LTE CRM, OCS & PCRF for 4G Launched by Tishknet",
+  "date": "2014-02-25",
+  "excerpt": "The 4G LTE solution by Alepo will enable Tishknet to upgrade its WiMAX network to LTE, providing faster and more advanced services to its rapidly growing subscriber base.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-to-deploy-lte-crm-ocs-pcrf-solution-with-4g-tishknet-in-kurdistan.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2014/02/Alepo-to-Deploy-LTE-CRM-OCS-PCRF-Solution-with-4G-Tishknet-in-Kurdistan.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-announces-successful-deployment-of-mvno-customization-to-help-cielux-telecom-rapidly-expand-their-market-share-in-drc/",
+  "title": "MVNO Customization to Help Cielux Telecom Rapidly Expand their Market Share in DRC",
+  "date": "2013-09-19",
+  "excerpt": "The MVNO customization includes a partner and affiliate module, enabling Cielux to leverage its existing infrastructure to forge new partnerships.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-alepo-announces-successful-deployment-of-mvno-customization-to-help-cielux-telec.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2024/03/landing_Solution-Brief-Digital-MVNO-in-a-Box.png",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/digicel-samoa-deploys-wireless-isp-with-alepo-wifi-isp-billing-solution/",
+  "title": "Alepo - Digicel Samoa deploys wireless ISP with Alepo WiFi ISP Billing Solution",
+  "date": "2013-09-08",
+  "excerpt": "The billing solution enables the ISP to provide competitive and innovative WiFi plans to customers. Supports advanced use cases such as bandwidth caps.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-digicel-samoa-deploys-wireless-isp-with-alepo-wifi-isp-billing-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/09/Digicel-Samoa-deploys-wireless-ISP-with-Alepo-WiFi-ISP-Billing-Solution.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-achieves-arubaedge-certification-for-end-to-end-wi-fi-offload-and-monetization-solutions/",
+  "title": "ArubaEdge Certification for Alepo’s end-to-end Wi-Fi Offload and Monetization",
+  "date": "2013-08-28",
+  "excerpt": "The WiFi monetization and offload offering is a pre-tested, comprehensive, and interoperable solution with rapid TTM and lower integration costs.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-achieves-arubaedge-certification-for-end-to-end-wi-fi-offload-and-monetiza.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/08/Alepo-Achieves-ArubaEdge-Certification-for-end-to-end-Wi-Fi-Offload-and-Monetization-Solutions.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/autelan-and-alepo-announce-technology-partnership-for-end-to-end-wi-fi-monetization-and-offload/",
+  "title": "Technology Partnership for End-to-End Wi-Fi Offload and Monetization | Autelan and Alepo",
+  "date": "2013-08-02",
+  "excerpt": "The out-of-the-box joint solution for WiFi offload and monetization caters to service providers of all sizes. Includes a self-care platform for carrier customers.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-autelan-and-alepo-announce-technology-partnership-for-end-to-end-wi-fi-monetizat.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/08/Autelan-and-Alepo-Announce-Technology-Partnership-for-End-to-End-Wi-Fi-Monetization-and-Offload.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-client-banglalion-communications-ltd-bcl-chooses-service-enabler-8-2-upgrade-and-alepos-16e-aaa-to-modernize-core-network/",
+  "title": "BCL Modernize Core Network with BSS and AAA Upgrade",
+  "date": "2013-06-17",
+  "excerpt": "The network upgrade to Alepo’s AAA and BSS will enable support for BCL’s growing subscriber base, boosting CX with several customer-centric innovations.",
+  "categories": [],
+  "image": "blog-alepo-client-banglalion-communications-ltd-bcl-chooses-service-enabler-8-2-upgra.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/06/Alepo-Client-Banglalion-Communications-Ltd.-BCL-Chooses-Service-Enabler-8.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-aaa-server-chosen-to-modernize-leading-caribbean-mobile-network/",
+  "title": "Alepo AAA to Modernize Leading Mobile Network in the Caribbean",
+  "date": "2013-05-30",
+  "excerpt": "The CSP decided to support a growing subscriber base by upgrade its mobile network infrastructure to Alepo’s AAA Server for more scalability, flexibility, and monitoring.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-aaa-server-chosen-to-modernize-leading-caribbean-mobile-network.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/05/Alepo-AAA-Server-Chosen-to-Modernize-Leading-Caribbean-Mobile-Network.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-clients-upgrade-to-service-enabler-v8-1-to-support-growing-business/",
+  "title": "Alepo - Clients Upgrade to Service Enabler v8.1 to Support Growing Business",
+  "date": "2013-05-22",
+  "excerpt": "Leading operators Digicel and Orange Conakry recently decided to upgrade to the latest version of Service Enabler to support their growing WiMAX subscriber bases.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-alepo-clients-upgrade-to-service-enabler-v8-1-to-support-growing-business.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/05/Alepo-Clients-Upgrade-to-Service-Enabler-v8.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-announces-first-lte-win-in-africa-providing-pcrf-ocs-and-it-system-for-both-data-and-voice/",
+  "title": "First in Africa: PCRF, OCS, and IT Systems for LTE",
+  "date": "2013-04-24",
+  "excerpt": "Spectranet partnered with Alepo for its nationwide LTE rollout, deploying BSS/OSS, Online Charging System (OCS), and PCRF to manage existing and future LTE services.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-announces-first-lte-win-in-africa-providing-pcrf-ocs-and-it-system-for-bot.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/04/Alepo-Announces-First-LTE-Win-in-Africa-Providing-PCRF-OCS-and-IT-System-for-both-Data-and-Voice.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/saudi-telecom-partners-with-alepo-to-modernize-stcs-core-dsl-network/",
+  "title": "Alepo - Saudi Telecom Partners with Alepo to Modernize STC's Core DSL Network",
+  "date": "2013-03-22",
+  "excerpt": "Alepo’s high-performance AAA, BSS/OSS, and policy framework helped modernize STC’s legacy DSL core network, significantly improving performance and response time.",
+  "categories": [
+   "AI Customer Assistant",
+   "Network Access Control"
+  ],
+  "image": "blog-saudi-telecom-partners-with-alepo-to-modernize-stcs-core-dsl-network.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2013/03/Saudi-Telecom-Partners-with-Alepo-to-Modernize-STCs-Core-DSL-Network.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/cielux-partners-with-alepo-to-roll-out-a-4g-customer-experience-in-africa/",
+  "title": "Alepo - Cielux Partners with Alepo to Roll Out a 4G Customer Experience in Africa",
+  "date": "2012-10-10",
+  "excerpt": "Cielux Telecom has successfully upgraded to Alepo’s BSS/OSS framework as part of its roll out of advanced and convergent 4G services across the DRC in Africa.",
+  "categories": [],
+  "image": "blog-cielux-partners-with-alepo-to-roll-out-a-4g-customer-experience-in-africa.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2012/10/Cielux-Partners-with-Alepo-to-Roll-Out-a-4G-Customer-Experience-in-Africa.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-announces-diameter-signaling-controller-dsc-interoperability-success/",
+  "title": "Success: Diameter Signaling Controller (DSC) Interoperability",
+  "date": "2011-12-14",
+  "excerpt": "The Diameter Signaling Controller is an intelligent framework that secure communication within and across EPC networks and facilitates 3G/4G roaming and interconnect.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-announces-diameter-signaling-controller-dsc-interoperability-success.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/12/Alepo-Announces-Diameter-Signaling-Controller-DSC-Interoperability-Success.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-aaa-server-selected-to-launch-4g-wireless-broadband-in-angola/",
+  "title": "Alepo - Alepo AAA Server Selected to Launch 4G Wireless Broadband in Angola",
+  "date": "2011-12-07",
+  "excerpt": "Angola Communications Systems (ACS) chose Alepo’s AAA to launch its 4G wireless broadband network, enabling comprehensive session, policy, and subscriber management.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-aaa-server-selected-to-launch-4g-wireless-broadband-in-angola.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/12/Alepo-AAA-Server-Selected-to-Launch-4G-Wireless-Broadband-in-Angola.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/first-digicel-device-firmware-update-with-alepo-mobile-device-management-a-success/",
+  "title": "Alepo - First Digicel Device Firmware Update with Alepo Mobile Device Management a Success",
+  "date": "2011-12-01",
+  "excerpt": "Upgrading to Alepo’s OMA DM Server enabled comprehensive mobile device management on Digicel’s 4G broadband networks in Jamaica and the Cayman Islands.",
+  "categories": [
+   "AI Customer Assistant",
+   "Network Access Control"
+  ],
+  "image": "blog-first-digicel-device-firmware-update-with-alepo-mobile-device-management-a-succe.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/02/Alepo-Introduces-Mobile-Device-Management-Solution.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-partners-with-dimension-data-to-launch-4g-services-in-zimbabwe/",
+  "title": "Alepo - Partners with Dimension Data to Launch 4G Services in Zimbabwe",
+  "date": "2011-11-03",
+  "excerpt": "The partnership will enable service provider Utande to roll out 4G data services across Zimbabwe over WiMAX, Wi-Fi and high-speed Metro Ethernet.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-partners-with-dimension-data-to-launch-4g-services-in-zimbabwe.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/11/Alepo-Partners-with-Dimension-Data-to-Launch-4G-Services-in-Zimbabwe.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-and-ibw-announce-launch-of-4g-networks/",
+  "title": "Alepo - IBW Announce Launch of 4G Networks",
+  "date": "2011-10-27",
+  "excerpt": "IBW launched multiple 4G networks in Central America using Alepo’s convergent LTE-ready 4G Online Charging System, supporting new prepaid data and voice services.",
+  "categories": [
+   "Converged Policy Control",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-and-ibw-announce-launch-of-4g-networks.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/10/Alepo-and-IBW-Announce-Launch-of-4G-Networks.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-names-randy-cook-to-head-worldwide-sales-and-business-development/",
+  "title": "Alepo - Names Randy Cook to Head Worldwide Sales and Business Development",
+  "date": "2011-10-11",
+  "excerpt": "As VP of Worldwide Sales and Business Development, Cook will help enable Alepo clients, which include leading global CSPs, to seize 4G market opportunities.",
+  "categories": [],
+  "image": "blog-alepo-names-randy-cook-to-head-worldwide-sales-and-business-development.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/10/Alepo-Names-Randy-Cook-to-Head-Worldwide-Sales-and-Business-Development.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/orange-getesa-planet-online-laos-upgrade-to-alepo-service-enabler-7-2/",
+  "title": "Alepo - Orange-GETESA, Planet Online Laos Upgrade to Alepo Service Enabler 7.2",
+  "date": "2011-04-26",
+  "excerpt": "An upgrade to the latest version of Alepo’s Service Enabler will help the leading operators support their expanding data services (WiMAX, Wi-Fi, ADSL, dial-up).",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-orange-getesa-planet-online-laos-upgrade-to-alepo-service-enabler-7-2.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/04/Orange-GETESA-Planet-Online-Laos-Upgrade-to-Alepo-Service-Enabler-7.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-announces-multiservice-forum-membership-support-of-volte-test-event/",
+  "title": "Alepo - Alepo Announces MultiService Forum Membership, Sponsorship of VoLTE Test Event",
+  "date": "2011-03-08",
+  "excerpt": "As the first BSS/OSS pure player to join the global association, Alepo became a supporting member of the first-ever MSF/GSMA VoLTE Interoperability Event.",
+  "categories": [
+   "Alepo"
+  ],
+  "image": "blog-alepo-announces-multiservice-forum-membership-support-of-volte-test-event.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/03/Alepo-Announces-MultiService-Forum-Membership-Sponsorship-of-VoLTE-Test-Event.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-mobile-app-for-bandwidth-on-demand/",
+  "title": "Alepo - Introduces Mobile App for Bandwidth-on-Demand",
+  "date": "2011-02-14",
+  "excerpt": "The first of its kind, Alepo’s bandwidth-on-demand mobile app works in real-time to empower end users to dynamically choose their bandwidth speed, helping operators boost CX.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-mobile-app-for-bandwidth-on-demand.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/02/Alepo-Introduces-Mobile-App-for-Bandwidth-on-Demand.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/safaricom-partners-with-alepo-to-bring-4g-services-to-kenya/",
+  "title": "Alepo - Safaricom Partners with Alepo to Bring 4G Services to Kenya",
+  "date": "2011-02-12",
+  "excerpt": "Alepo’s integrated BSS/OSS solution, including AAA and DHCP Server, will help SafariCom enable enhanced policy control, QoS granularity, and IP address management.",
+  "categories": [
+   "AI Customer Assistant",
+   "Network Access Control"
+  ],
+  "image": "blog-safaricom-partners-with-alepo-to-bring-4g-services-to-kenya.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2011/02/Safaricom-Partners-with-Alepo-to-Bring-4G-Services-to-Kenya.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-mobile-data-offload-solution/",
+  "title": "Alepo - Introduces Mobile Data Offload Solution",
+  "date": "2010-09-10",
+  "excerpt": "As mobile data usage continues to soar, Alepo’s solution helps alleviate network burden by enabling operators to offload mobile data from 2G/3G to Wi-Fi networks.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-mobile-data-offload-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/03/Wifi-Offload.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-partners-with-banglalion-to-bring-multiplay-wimax-services-to-bangladesh/",
+  "title": "t Multiplay WiMAX Services in Bangladesh thanks to Banglalion and Alepo",
+  "date": "2010-07-28",
+  "excerpt": "Alepo’s convergent solution for multiplay WiMAX services, spanning data, voice, and video, will enable Banglalion to provide seamless coverage across the country.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-partners-with-banglalion-to-bring-multiplay-wimax-services-to-bangladesh.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/07/Alepo-Partners-with-Banglalion-to-Bring-Multiplay-WiMAX-Services-to-Bangladesh.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-policy-manager-for-on-demand-policy-management/",
+  "title": "Alepo - Introduces Policy Manager for On-Demand Policy Management",
+  "date": "2010-07-21",
+  "excerpt": "Alepo comprehensive, real-time, on-demand policy management helps CSPs enable interactive CX while optimizing network resources and enforcing fair access policies.",
+  "categories": [
+   "Converged Policy Control",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-policy-manager-for-on-demand-policy-management.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/07/Alepo-Introduces-Policy-Manager-for-On-Demand-Policy-Management.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-extends-policy-management-with-dhcp-based-ip-address-management-solution/",
+  "title": "Alepo - Extends Policy Management with DHCP-Based IP Address Management Solution",
+  "date": "2010-07-08",
+  "excerpt": "The DHCP-based solution enables CSPs to administer IP address policies from one centralized policy management system. Available to all network elements via web services APIs.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-extends-policy-management-with-dhcp-based-ip-address-management-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/07/Alepo-Extends-Policy-Management-with-DHCP-Based-IP-Address-Management-Solution.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-record-performing-16e-aaa-server/",
+  "title": "Alepo - Introduces Record-Performing 16e AAA Server",
+  "date": "2010-03-01",
+  "excerpt": "Alepo’s high-performance 16e AAA Server ensures efficient and reliable networks, enabling authentication, authorization, accounting, real-time policy management, and more.",
+  "categories": [
+   "AI Customer Assistant",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-record-performing-16e-aaa-server.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/03/Alepo-Introduces-Record-Performing-16e-AAA-Server.jpg",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-a-3gpp-home-subscriber-server/",
+  "title": "Alepo - Introduces a 3GPP Home Subscriber Server",
+  "date": "2010-02-18",
+  "excerpt": "The 3GPP Home Subscriber Server (HSS) is integral to any IMS or LTE network. It enables provides OSS services to migrate to 4G, enables policy decisions, and more.",
+  "categories": [
+   "Digital BSS",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-a-3gpp-home-subscriber-server.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/02/Alepo-Introduces-a-3GPP-Home-Subscriber-Server.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-number-monetization-system/",
+  "title": "Alepo - Introduces Number Monetization System",
+  "date": "2010-02-18",
+  "excerpt": "Alepo’s comprehensive end-to-end monetization system opens a new revenue stream for service providers by enabling customers to personalize their phone numbers.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-number-monetization-system.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/02/Alepo-Introduces-Number-Monetization-System.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-3gpp-policy-charging-and-rules-function/",
+  "title": "Alepo - Introduces 3GPP Policy Charging and Rules Function",
+  "date": "2010-02-18",
+  "excerpt": "Integral to 4G LTE and IMS networks, Alepo’s 3GPP Policy and Charging Rules Function (PCRF) supports dynamic policy management and network optimization.",
+  "categories": [
+   "Converged Policy Control",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-3gpp-policy-charging-and-rules-function.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2010/02/Alepo-Introduces-3GPP-Policy-Charging-and-Rules-Function.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-introduces-fixed-mobile-convergence-solution/",
+  "title": "Alepo - Introduces Fixed Mobile Convergence Solution",
+  "date": "2010-02-16",
+  "excerpt": "The unified solution enables convergence of customer and employee interfaces, billing, and customer service across fixed and mobile voice and data services.",
+  "categories": [
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-introduces-fixed-mobile-convergence-solution.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2009/12/Alepo-Provides-Fixed-Mobile-Convergence-and-Wi-Fi-Management-to-MTN-Cameroon.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-provides-fixed-mobile-convergence-and-wi-fi-management-to-mtn-cameroon/",
+  "title": "Alepo - Provides Fixed Mobile Convergence and Wi-Fi Management to MTN Cameroon",
+  "date": "2009-12-14",
+  "excerpt": "Alepo’s fixed mobile solution, including its industry-leading BSS and AAA, will enable convergence to provide a single account for GSM and broadband customers.",
+  "categories": [
+   "Awards",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-provides-fixed-mobile-convergence-and-wi-fi-management-to-mtn-cameroon.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2009/12/Alepo-Provides-Fixed-Mobile-Convergence-and-Wi-Fi-Management-to-MTN-Cameroon.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-provides-fixed-mobile-convergent-solution-to-telkom-kenya/",
+  "title": "Alepo - Provides Fixed Mobile Convergent Solution to Telkom Kenya",
+  "date": "2009-11-11",
+  "excerpt": "The convergent solution will enable a consistent user experience for fixed and mobile services, lowering OPEX, automating service activation and support, and more.",
+  "categories": [
+   "Converged Policy Control",
+   "Network Access Control"
+  ],
+  "image": "blog-alepo-provides-fixed-mobile-convergent-solution-to-telkom-kenya.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2022/01/Optimize-performance-of-fixed-and-mobile-networks-with-Alepo-AAA.jpg",
+  "w": 640,
+  "h": 334
+ },
+ {
+  "url": "https://alepo.com/blog/alepo-announces-membership-to-wimax-forum/",
+  "title": "Alepo - Alepo Announces Membership to WiMAX Forum",
+  "date": "2008-02-23",
+  "excerpt": "Alepo’s membership to the WiMAX Forum and its involvement in the Network Working Group (NWG) reaffirms Alepo’s commitment to telecommunications technology development.",
+  "categories": [
+   "Alepo"
+  ],
+  "image": "blog-alepo-announces-membership-to-wimax-forum.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2008/02/Alepo-Announces-Membership-to-WiMAX-Forum.png",
+  "w": 400,
+  "h": 250
+ },
+ {
+  "url": "https://alepo.com/blog/tmc-names-alepo-service-enabler-7-0-product-of-the-year/",
+  "title": "Alepo - TMC Names Alepo Service Enabler 7.0 \"Product of the Year\"",
+  "date": "2008-01-25",
+  "excerpt": "Alepo’s Service Enabler, a convergent revenue management system for next-gen services, received the award by Internet Telephony and Customer Interaction Solutions magazine.",
+  "categories": [
+   "AI Agent Assistant",
+   "Business Support Systems"
+  ],
+  "image": "blog-tmc-names-alepo-service-enabler-7-0-product-of-the-year.webp",
+  "source_image": "https://alepo.com/wp-content/uploads/2008/01/3fb14226-7263-4957-9751-4f1b9c1596a8.webp",
+  "w": 640,
+  "h": 481
+ }
+]
