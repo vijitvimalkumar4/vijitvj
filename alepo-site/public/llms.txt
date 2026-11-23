@@ -1,6 +1,6 @@
 # Alepo
 
-> AAA and BSS software for telecom operators and ISPs, with AI built in.
+> Alepo makes network access, billing, provisioning and customer care software for communication service providers, with AI built in. Operators of every size run it, from MVNOs preparing a launch to tier-1 groups with millions of subscribers on several continents.
 
 - [AAA and BSS software for telecom operators](https://alepo.com/): Alepo makes AAA, policy, charging, billing and customer care software for telecom operators and ISPs, with AI built in. Request a demo.
 - [Telecom software products](https://alepo.com/products/): 21 products for telecom operators and ISPs: AAA and TACACS+, billing and charging, provisioning, customer care and AI. Each runs alone or together.
@@ -51,3 +51,4 @@
 - [Sitemap](https://alepo.com/sitemap/): Every page on alepo.com: products by group, solutions, services, resources and company pages.
 - [Privacy Policy](https://alepo.com/privacy-policy/): How Alepo collects, uses and protects personal information on alepo.com.
 - [Cookie Policy](https://alepo.com/cookie-policy/): Which cookies alepo.com uses and how to turn them off.
+- [Accessibility statement](https://alepo.com/accessibility/): How Alepo works to make this website usable for everyone, the standard it aims to meet and how to tell us about a barrier.

@@ -643,6 +643,7 @@ window.__alepoPolish = function (cfg, doc) {
     if (/^(Privacy policy|Política de privacidad)$/.test(sp.textContent.trim()) && !sp.children.length) {
       const a = doc.createElement('a'); a.href = PRE + '/privacy-policy/'; a.textContent = sp.textContent.trim(); sp.replaceWith(a);
       const c2 = doc.createElement('a'); c2.href = PRE + '/cookie-policy/'; c2.textContent = ES ? 'Política de cookies' : 'Cookie policy'; a.after(c2);
+      const c3 = doc.createElement('a'); c3.href = PRE + '/accessibility/'; c3.textContent = ES ? 'Accesibilidad' : 'Accessibility'; c2.after(c3);
     }
   });
   const SOC = cfg.siteConfig && cfg.siteConfig.social;

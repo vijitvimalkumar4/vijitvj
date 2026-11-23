@@ -139,6 +139,18 @@ for (const lang of ['en', 'es']) {
   }
 }
 
+// Accessibility statement: from the team package (its wording still needs sign-off)
+for (const lang of ['en', 'es']) {
+  const pre = lang === 'es' ? '/es' : '';
+  const L = (en, es) => lang === 'es' ? es : en;
+  jobs.push({ file: 'products.html', lang, out: `${pre}/accessibility/`, cfg: { kind: 'utility', file: 'products.html', lang, legal: 'accessibility.' + lang,
+    h1: L('Accessibility statement', 'Declaración de accesibilidad'), title: L('Accessibility Statement | Alepo', 'Declaración de accesibilidad | Alepo'),
+    meta: L('How Alepo works to make this website usable for everyone, the standard it aims to meet and how to tell us about a barrier.', 'Cómo trabaja Alepo para que este sitio web sirva a todas las personas, el estándar que busca cumplir y cómo avisarnos de una barrera.'),
+    intro: L('How Alepo works to make this website usable for everyone.', 'Cómo trabaja Alepo para que este sitio web sirva a todas las personas.'),
+    crumbs: [{ name: L('Home', 'Inicio'), href: 'index.html' }, { name: L('Accessibility statement', 'Declaración de accesibilidad') }], linkGroups: [],
+    self: `${pre}/accessibility/`, alt: { en: '/accessibility/', es: '/es/accessibility/' } } });
+}
+
 // Thank-you page (blueprint T4; audit finding 1): noindex, offers next steps
 for (const lang of ['en', 'es']) {
   const pre = lang === 'es' ? '/es' : '';
@@ -165,6 +177,7 @@ fs.cpSync(path.join(HERE, 'static'), path.join(OUT, 'assets'), { recursive: true
 const browser = await chromium.launch();
 const shared = { urls: urls.pages, categories: urls.categories, anchors: urls.anchors, catalog, origin: ORIGIN, schema, siteConfig, today: TODAY };
 const report = [];
+const mergeTotals = {};
 for (const j of jobs) {
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
   const errs = [];
@@ -173,18 +186,31 @@ for (const j of jobs) {
   await page.addScriptTag({ path: path.join(HERE, 'transform.js') });
   await page.addScriptTag({ path: path.join(HERE, 'leadfixes.js') });
   await page.addScriptTag({ path: path.join(HERE, 'uifixes.js') });
+  await page.addScriptTag({ path: path.join(HERE, 'merge.js') });
   await page.addScriptTag({ path: path.join(HERE, 'polish.js') });
   // collected content from alepo.com (fetch_blog.py, fetch_resources.py)
   const data = f => { const p = path.join(HERE, f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; };
   const blogPosts = j.file === 'blog.html' ? data('blog/posts.json') : null;
   // every page: post dates and photos for "Latest posts" lists, the newest news item, leadership photos, legal text
   const blogIndex = Object.fromEntries((data('blog/posts.json') || []).map(p => [p.url, { date: p.date, image: p.image, w: p.w, h: p.h }]));
-  const latestNews = (data('news/items.json') || [])[0] || null;
+  const latestNews = (data('news/items.json') || []).filter(x => !/\bSE 14\b/.test(x.title))[0] || null;
   const leaders = j.file === 'leadership.html' ? data('legal/leaders.json') : null;
   const legalHtml = j.cfg.legal ? fs.readFileSync(path.join(HERE, 'legal', j.cfg.legal + '.html'), 'utf8') : null;
-  const libraryItems = j.file === 'library.html' ? data('library/items.json') : null;
-  const newsItems = j.file === 'news.html' ? data('news/items.json') : null;
-  const html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml });
+  // the team package's content and SEO for this page (build/merge.js)
+  const pkgKey = j.cfg.kind === 'category' ? { aaa: 'h-c-access', bss: 'h-c-billing', prov: 'h-c-provisioning', care: 'h-c-care' }[j.cfg.cat]
+    : /thank-you/.test(j.out || '') ? 'h-thanks' : j.cfg.kind === 'utility' ? null : j.file === 'index.html' ? 'Main' : 'h-' + j.file.replace(/\.html$/, '');
+  const PKG = data('merge/package-v1.json');
+  // pages with no counterpart in the package (legal, sitemap, 404, accessibility) still get its menu, footer, names and Spanish fixes
+  const merge = PKG ? { key: pkgKey && PKG.pages[pkgKey] ? pkgKey : '_chrome', page: pkgKey && PKG.pages[pkgKey] ? PKG.pages[pkgKey][j.lang === 'es' ? 'es' : 'en'] : {}, chromePairs: PKG.chromePairs,
+    edits: PKG.edits.filter(e => !e.files || (pkgKey && e.files.includes(pkgKey)) || e.files.includes('_header') || e.files.includes('_footer')),
+    drops: PKG.drops.filter(d => d.g === 'datasheets' || (pkgKey && (!d.files || d.files.includes(pkgKey)))), prod: PKG.prod, groups: PKG.groups, spanish: PKG.spanish, qaHead: PKG.qaHead, guides: PKG.guides, guideHead: PKG.guideHead } : null;
+  // team package: data sheets withdrawn until Sandeep Patel approves new versions; SE 14 held (multitenant claim)
+  const WITHDRAWN = ['AAA Server Datasheet', 'Subscriber Data Management Datasheet', 'Converged Policy Control Datasheet', 'WiFi Monetization Datasheet'];
+  const libraryItems = j.file === 'library.html' ? (data('library/items.json') || []).filter(x => !WITHDRAWN.includes(x.title)) : null;
+  const newsItems = j.file === 'news.html' ? (data('news/items.json') || []).filter(x => !/\bSE 14\b/.test(x.title)) : null;
+  let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge });
+  const mr = html.match(/ data-merge="([^"]*)"/);
+  if (mr) { const r = JSON.parse(mr[1].replace(/&quot;/g, '"')); for (const k in r) mergeTotals[k] = (mergeTotals[k] || 0) + r[k]; html = html.replace(mr[0], ''); }
   await page.close();
   const dest = j.out.endsWith('.html') ? path.join(OUT, j.out) : path.join(OUT, j.out, 'index.html');
   fs.mkdirSync(path.dirname(dest), { recursive: true });
@@ -194,6 +220,7 @@ for (const j of jobs) {
 }
 await browser.close();
 server.close();
+console.log('team package merged:', JSON.stringify(mergeTotals));
 
 // ---------- sitemap.xml, robots.txt, redirects, llms.txt ----------
 const indexable = jobs.filter(j => j.cfg.alt && !j.cfg.noindex && j.lang === 'en');
@@ -212,7 +239,7 @@ const red = fs.readFileSync(path.join(HERE, 'redirects.csv'), 'utf8').trim().spl
   .filter(([from, to, status]) => status === '301');
 fs.writeFileSync(path.join(OUT, '_redirects'), red.map(([from, to]) => `${from} ${to} 301`).join('\n') + '\n/es/* /es/404.html 404\n/* /404.html 404\n');
 // note for hosts other than server.mjs: /blog/<post>/, /news/<item>/, /library/<item>/, /credits/ and /legal-agreements/ go to the WordPress site (LEGACY_ORIGIN)
-const llms = ['# Alepo', '', '> AAA and BSS software for telecom operators and ISPs, with AI built in.', ''];
+const llms = ['# Alepo', '', '> Alepo makes network access, billing, provisioning and customer care software for communication service providers, with AI built in. Operators of every size run it, from MVNOs preparing a launch to tier-1 groups with millions of subscribers on several continents.', ''];
 for (const j of indexable) llms.push(`- [${j.cfg.h1}](${ORIGIN}${j.cfg.alt.en}): ${j.cfg.meta}`);
 fs.writeFileSync(path.join(OUT, 'llms.txt'), llms.join('\n') + '\n');
 fs.writeFileSync(path.join(HERE, 'last-build.json'), JSON.stringify(report, null, 1));

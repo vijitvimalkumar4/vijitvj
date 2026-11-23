@@ -260,7 +260,7 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 
 ## Not done (needs content or a decision from Alepo)
 
-- **Questions and answers.** The blueprint lists questions for 22 pages with no answers. Writing them would mean inventing product claims.
+- **Questions and answers.** Done by the team package merge (see "Merge with the team package"): 202 answered questions across the English and Spanish pages.
 - **Product template blocks the design lacks:**
   - How it works, Features (draft H2s to H3s), Specifications table, Use cases, Integrations, Deployment, Pricing, Related products
   - inline demo form, sticky mobile CTA, data sheet download, and the AI cards with a Live, Pilot or Roadmap status
@@ -268,10 +268,10 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 - **Pages not built:**
   - blog explainers E1 to E15
   - case study, news item, job posting and thank-you templates
-  - privacy policy, cookie settings and accessibility statement
+  - ~~privacy policy, cookie settings and accessibility statement~~ (built since: privacy and cookie text from alepo.com, the accessibility statement from the team package)
   - the AI Sales Assistant and AI CCaaS sections (decision T10 and T11)
 - **Redirects marked `confirm`:** these need the pre-launch crawl, the `?p=` addresses, or a decision on whether the offer is the same.
-- **Open Graph images** (1200 × 630) and analytics events. The latter need consent tooling first.
+- **Analytics events** (Open Graph images are built since, by `finish.py`). The latter need consent tooling first.
 
 ## Council audit fixes (23 Nov 2026)
 
@@ -414,3 +414,23 @@ Link columns are balanced in five stacks so the long Billing & BSS list leaves n
 Content is only hidden for the reveal when JavaScript is running, motion is allowed and the item starts below the screen. When scrolling stops, anything at or above the screen is shown at once, and printing shows everything. With reduced motion turned on, nothing moves.
 
 Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.
+
+## Merge with the team package (23 Nov 2026)
+
+The team package `alepo-website-v1-2026-11-23-final` (Jonathan's copy checked against Sandeep Patel's portfolio, Nava's names and SEO, Vaishnavee's questions and the Spanish review) is merged into this build. Its words and SEO win; our design, motion, forms, server and live content stay.
+
+**How it works**
+
+- `build/merge/extract.mjs` runs the package's own pipeline (`applyEdits`, `applyArch`, `tidy`, Spanish `polish`, `seoFor`) on the design data and writes `build/merge/package-v1.json`. Run it from the package's source folder: `(cd <package>/source && ALEPO_MODE=production node <repo>/alepo-site/build/merge/extract.mjs "$PWD" out.json)`, then copy `out.json` over `package-v1.json`.
+- `build/merge.js` applies that file in the browser after the lead and UI fixes and before the visual polish: line changes, Nava's product and group names, Spanish wording, withdrawn blocks, `#saas` → `#subscription`, questions and answers, guides, titles and descriptions, category H1s and the latest news line.
+- `build/merge/verify.py` checks the result after every build: no corrected line left, every question and answer present, every title and description equal to the package, no withdrawn data sheet and no SE 14 item. Last run: 96 pages, 809 line checks, 202 questions, 96 titles, 0 problems.
+
+**From the package:** page copy and line fixes (71 edits, about 480 sentence rewordings), product and group names, 202 questions and answers, 10 guides, every title and meta description, the Spanish review, the accessibility statement, the thank-you page, its redirect map (20 rows added, 4 targets changed), and its removals: the four withdrawn data sheets (AAA Server, Subscriber Data Management, Converged Policy Control, WiFi Monetization), the SaaS and Kubernetes lines on Services and Security, and the SE 14 news item.
+
+**Kept from ours:** the design and motion, the two-pane menus, our own form server and data-sheet gate, the Blog, Library and News items collected from alepo.com, leadership photos, privacy and cookie pages, the server (compression, CSP, retention, backups, pass-through of every old URL to `LEGACY_ORIGIN`).
+
+**Open decisions**
+
+- Events: the package hides past events; this build keeps them, labelled Past. Remove the `if (d.id) return;` line in `merge.js` to hide them.
+- Data sheets: this build asks for name and work email before a download; the package links straight to the PDF. The PDFs are not in the repo yet (`build/static/datasheets/en/<slug>.pdf`).
+- The accessibility statement wording needs sign-off.

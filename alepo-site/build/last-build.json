@@ -800,6 +800,22 @@
   "errs": []
  },
  {
+  "out": "/accessibility/",
+  "lang": "en",
+  "title": "Accessibility Statement | Alepo",
+  "meta": "How Alepo works to make this website usable for everyone, the standard it aims to meet and how to tell us about a barrier.",
+  "h1": "Accessibility statement",
+  "errs": []
+ },
+ {
+  "out": "/es/accessibility/",
+  "lang": "es",
+  "title": "Declaración de accesibilidad | Alepo",
+  "meta": "Cómo trabaja Alepo para que este sitio web sirva a todas las personas, el estándar que busca cumplir y cómo avisarnos de una barrera.",
+  "h1": "Declaración de accesibilidad",
+  "errs": []
+ },
+ {
   "out": "/contact-us/thank-you/",
   "lang": "en",
   "title": "Thank You | Alepo",

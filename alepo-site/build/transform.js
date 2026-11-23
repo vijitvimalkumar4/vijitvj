@@ -143,6 +143,7 @@ window.__alepo = async function (cfg) {
   doc.documentElement.setAttribute('lang', L);
   if (window.__alepoLead) window.__alepoLead(cfg, doc); // audit fixes (leadfixes.js)
   if (window.__alepoUI) await window.__alepoUI(cfg, doc); // UI audit fixes (uifixes.js)
+  if (window.__alepoMerge) window.__alepoMerge(cfg, doc); // team package content and SEO (merge.js)
   if (window.__alepoPolish) window.__alepoPolish(cfg, doc); // visual polish (polish.js)
 
   return '<!doctype html>\n' + doc.documentElement.outerHTML;
@@ -346,7 +347,9 @@ window.__alepo = async function (cfg) {
     const posts = secs.find(sec => sec.querySelector('h2') && sec.querySelector('a[href="blog.html"]') && sec.querySelector('a[href*="alepo.com/blog/"]'));
     if (!posts) return;
     const lib = await snapshot('library.html');
-    const libRows = [...lib.querySelectorAll('main a[href*="alepo.com/library"]')];
+    // data sheets the team package withdrew (merge.js drops) are left out of this list
+    const gone = ((cfg.merge && cfg.merge.drops) || []).filter(d => d.g === 'datasheets' && d.en).map(d => d.en.replace(/^Datasheet\s+/, ''));
+    const libRows = [...lib.querySelectorAll('main a[href*="alepo.com/library"]')].filter(r => !gone.some(t => textOf(r).includes(t)));
     if (libRows.length) {
       const sec = posts.cloneNode(true);
       sec.querySelector('h2').textContent = textOf(lib.querySelector('main h1'));

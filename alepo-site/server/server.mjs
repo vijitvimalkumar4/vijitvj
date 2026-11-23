@@ -9,9 +9,10 @@
 //                     (works with a Microsoft Teams or Slack incoming webhook)
 //   TRUST_PROXY=1     use X-Forwarded-For for the client IP when behind a load balancer
 //   FORCE_HTTPS=1     redirect http:// (per X-Forwarded-Proto) to https:// and send HSTS (set it in production)
-//   LEGACY_ORIGIN     address of the existing WordPress site (for example https://legacy.alepo.com). Blog posts,
-//                     news items, library items, /credits/ and /legal-agreements/ are passed through to it, so
-//                     every old alepo.com URL keeps working. Unset = those URLs show the 404 page.
+//   LEGACY_ORIGIN     address of the existing WordPress site (for example https://legacy.alepo.com). Every address
+//                     the new build does not answer and the redirect map does not move (blog posts, news items,
+//                     library items, /credits/, /legal-agreements/, WordPress uploads and admin, ?p= links) is passed
+//                     through to it, so every old alepo.com URL keeps working. Unset = those URLs show the 404 page.
 //   LEADS_RETENTION_DAYS  delete leads older than this many days (default 730); checked at start and daily
 //   LEADS_BACKUP_DAYS     keep this many daily backups in LEADS_DIR/backup (default 30)
 //   Data sheet emails (see datasheets.mjs and mailer.mjs):
@@ -207,7 +208,6 @@ function sendFile(req, res, file, status = 200) {
 
 // ---------- the existing WordPress site behind this one (see LEGACY_ORIGIN) ----------
 const LEGACY_ORIGIN = (process.env.LEGACY_ORIGIN || '').replace(/\/$/, '');
-const LEGACY = /^\/(?:blog|news|library)\/[^/]+\/?$|^\/(?:credits|legal-agreements|wp-content|wp-includes)(?:\/|$)/;
 async function proxyLegacy(req, res, url) {
   const up = await fetch(LEGACY_ORIGIN + url.pathname + url.search, { method: req.method, redirect: 'manual', headers: { accept: String(req.headers.accept || '*/*'), 'user-agent': String(req.headers['user-agent'] || 'alepo-site'), 'accept-language': String(req.headers['accept-language'] || '') } });
   const headers = { ...SECURITY, 'content-type': up.headers.get('content-type') || 'application/octet-stream', 'cache-control': up.headers.get('cache-control') || 'public, max-age=600' };
@@ -232,7 +232,8 @@ function serveStatic(req, res, pathname) {
     file = path.join(file, 'index.html');
   }
   if (fs.existsSync(file) && fs.statSync(file).isFile()) return sendFile(req, res, file);
-  if (LEGACY_ORIGIN && LEGACY.test(pathname)) return proxyLegacy(req, res, new URL(req.url, 'http://x'));
+  // the team package's host rule: anything the new build does not answer goes to WordPress as today
+  if (LEGACY_ORIGIN && !/^\/(assets|api)\//.test(pathname)) return proxyLegacy(req, res, new URL(req.url, 'http://x'));
   const nf = path.join(PUBLIC, rel.startsWith('/es/') ? 'es/404.html' : '404.html');
   return fs.existsSync(nf) ? sendFile(req, res, nf, 404) : (res.writeHead(404), res.end('Not found'));
 }
@@ -288,6 +289,8 @@ const server = http.createServer(async (req, res) => {
     }
     if (url.pathname.startsWith('/api/')) return json(res, 404, { ok: false });
     if (req.method !== 'GET' && req.method !== 'HEAD') { res.writeHead(405, { allow: 'GET, HEAD' }); return res.end(); }
+    // WordPress links on the home address (?p=123, ?page_id=, ?s=search, previews) stay on WordPress
+    if (LEGACY_ORIGIN && url.pathname === '/' && /(^|&)(p|page_id|s|preview|cat|tag|author|feed)=/.test(url.search.slice(1))) return proxyLegacy(req, res, url);
     return serveStatic(req, res, url.pathname);
   } catch (err) {
     const status = err.status || (err instanceof SyntaxError ? 400 : 500);
