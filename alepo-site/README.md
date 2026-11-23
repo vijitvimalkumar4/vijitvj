@@ -301,8 +301,8 @@ Before, each menu opened as a full-width sheet 450 to 754 px tall (most of a lap
 
 - Menus open as a floating card aligned to the page edges, with compact rows (32 px icons, 15 px titles, 13 px descriptions); the page behind dims slightly.
 - **Products** has three parts: the five families on the left, the products of the family you point at (or tab to) in the middle, the promo and "All products" on the right. Billing & BSS keeps its four sub-groups as a 2 x 2 block. Keyboard order: family, its products, next family. Without JavaScript the first family shows and each family name links to its page.
-- **Solutions** gives "By need" two columns beside "By operator" so items stay on one or two lines.
-- Heights at 1440 x 900: Products 349 to 399 px, Solutions 433, Services 356, Resources 342, Company 356.
+- **Solutions** works the same way: "By operator" and "By need" on the left (buttons, as these headings have no page of their own), the chosen group's items in two columns in the middle, the customer story on the right.
+- Heights at 1440 x 900: Products 349 to 399 px, Solutions 298 to 320, Services 356, Resources 342, Company 356.
 
 ### Customer names strip
 

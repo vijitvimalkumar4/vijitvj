@@ -162,31 +162,24 @@ window.__alepoPolish = function (cfg, doc) {
     const lab = w.parentElement.querySelector(':scope > span'); if (lab) lab.classList.add('x-logos-label');
   });
 
-  // Products menu: family list on the left, the chosen family's products on the right, promo on the far right
-  doc.querySelectorAll('.dnav .mp').forEach(mp => {
-    const inner = mp.querySelector(':scope > div > div');
-    if (!inner || inner.querySelector('.xm')) return;
-    const heads = [...inner.querySelectorAll('div[style*="border-bottom: 1px"] > a')];
-    if (heads.length < 4 || !heads.every(a => /\/products\/[^/]+\/$/.test(a.getAttribute('href') || ''))) return;
-    // family order as in the footer (Network, Billing, Provisioning, Care, AI)
-    const order = [...doc.querySelectorAll('footer .fcol-h a')].map(a => a.getAttribute('href'));
-    const rank = a => { const i = order.indexOf(a.getAttribute('href')); return i < 0 ? 99 : i; };
-    heads.sort((x, y) => rank(x) - rank(y));
-    const side = [...inner.children].find(c => !c.querySelector('div[style*="border-bottom: 1px"] > a'));
+  // Two-pane menus (Products, Solutions): groups on the left, the chosen group's items in the middle, promo on the right.
+  // groups: [{ label, href (optional), list }]
+  const chevron = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>';
+  const makeXm = (inner, groups, side) => {
     const xm = doc.createElement('div'); xm.className = 'xm';
-    heads.forEach((a, k) => {
-      const group = a.parentElement.parentElement, list = group.children[1];
-      const tab = doc.createElement('a');
+    groups.forEach((g, k) => {
+      // a group with its own page is a link; a plain heading becomes a button that shows its items
+      const tab = doc.createElement(g.href ? 'a' : 'button');
+      if (g.href) tab.href = g.href; else tab.type = 'button';
       tab.className = 'xm-tab' + (k === 0 ? ' is-active' : '');
-      tab.href = a.getAttribute('href');
       tab.style.gridRow = String(k + 1);
-      tab.innerHTML = '<span></span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>';
-      tab.firstChild.textContent = a.textContent.trim();
+      tab.innerHTML = '<span></span>' + chevron;
+      tab.firstChild.textContent = g.label;
       const pane = doc.createElement('div');
       pane.className = 'xm-pane' + (k === 0 ? ' is-active' : '');
-      pane.setAttribute('role', 'group'); pane.setAttribute('aria-label', a.textContent.trim());
-      const labels = list.querySelectorAll('div[style*="text-transform: uppercase"]');
-      if (labels.length) {
+      pane.setAttribute('role', 'group'); pane.setAttribute('aria-label', g.label);
+      const list = g.list;
+      if (list.querySelector('div[style*="text-transform: uppercase"]')) {
         pane.classList.add('xm-pane-sub');
         [...list.children].forEach(col => {
           let block = null;
@@ -196,11 +189,9 @@ window.__alepoPolish = function (cfg, doc) {
           });
         });
         // reading order row by row: first block of each column, then the second
-        const blocks = [...pane.children];
-        const half = Math.ceil(blocks.length / 2);
-        const reordered = [];
+        const blocks = [...pane.children], half = Math.ceil(blocks.length / 2), reordered = [];
         for (let r = 0; r < half; r++) { if (blocks[r]) reordered.push(blocks[r]); if (blocks[r + half]) reordered.push(blocks[r + half]); }
-        reordered.forEach(b => pane.appendChild(b));
+        reordered.forEach(x => pane.appendChild(x));
       } else {
         const l = doc.createElement('div'); l.className = 'xm-list';
         list.querySelectorAll('a').forEach(x => l.appendChild(x));
@@ -208,9 +199,40 @@ window.__alepoPolish = function (cfg, doc) {
       }
       xm.append(tab, pane);
     });
-    if (side) { side.removeAttribute('style'); side.className = 'xm-side'; xm.appendChild(side); }
+    if (side) {
+      // a promo that is itself the card keeps its look inside a new side column
+      if (side.tagName === 'A') { const w = doc.createElement('div'); w.className = 'xm-side'; w.appendChild(side); xm.appendChild(w); }
+      else { side.removeAttribute('style'); side.className = 'xm-side'; xm.appendChild(side); }
+    }
     inner.replaceChildren(xm);
     inner.classList.add('xm-host');
+  };
+  const headDivs = inner => [...inner.querySelectorAll('div[style*="border-bottom: 1px"][style*="font-size: 13px"]')];
+  doc.querySelectorAll('.dnav .mp').forEach(mp => {
+    const inner = mp.querySelector(':scope > div > div');
+    if (!inner || inner.querySelector('.xm')) return;
+    const heads = headDivs(inner);
+    const side = [...inner.children].find(c => !headDivs(c).length && !c.matches('div[style*="border-bottom: 1px"]'));
+    // Products: every heading links to a product family page
+    const famLinks = heads.map(h => h.querySelector(':scope > a'));
+    if (heads.length >= 4 && famLinks.every(a => a && /\/products\/[^/]+\/$/.test(a.getAttribute('href') || ''))) {
+      // family order as in the footer (Network, Billing, Provisioning, Care, AI)
+      const order = [...doc.querySelectorAll('footer .fcol-h a')].map(a => a.getAttribute('href'));
+      const rank = a => { const i = order.indexOf(a.getAttribute('href')); return i < 0 ? 99 : i; };
+      famLinks.sort((x, y) => rank(x) - rank(y));
+      makeXm(inner, famLinks.map(a => ({ label: a.textContent.trim(), href: a.getAttribute('href'), list: a.parentElement.parentElement.children[1] })), side);
+      mp.classList.add('xm-products');
+      return;
+    }
+    // Solutions: two plain headings ("By operator", "By need"); the first group's items are solution pages
+    if (heads.length === 2 && !famLinks.some(Boolean)) {
+      const firstList = heads[0].nextElementSibling;
+      const hrefs = firstList ? [...firstList.querySelectorAll('a')].map(a => a.getAttribute('href') || '') : [];
+      if (hrefs.length && hrefs.every(h => /\/solutions\//.test(h))) {
+        makeXm(inner, heads.map(h => ({ label: h.textContent.trim(), list: h.nextElementSibling })), side);
+        mp.classList.add('xm-solutions');
+      }
+    }
   });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');

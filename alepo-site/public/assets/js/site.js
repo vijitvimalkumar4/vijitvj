@@ -195,6 +195,7 @@
       tab.addEventListener('mouseenter', function () { clearTimeout(timer); timer = setTimeout(function () { show(tab); }, 90); });
       tab.addEventListener('mouseleave', function () { clearTimeout(timer); });
       tab.addEventListener('focus', function () { show(tab); });
+      tab.addEventListener('click', function (e) { if (tab.tagName === 'BUTTON') { e.preventDefault(); show(tab); } });
     });
   });
 

@@ -101,10 +101,10 @@ a:hover svg:has(> path[d^="M5 12h14"]) { translate: 3px 0; }
 
 /* Products menu: families | products of the chosen family | promo */
 .xm-host { display: block !important; }
-/* Solutions menu: give "By need" more room so its items stay on one or two lines */
-.dnav .mp > div > div[style*="minmax(0px, 1.1fr) minmax(0px, 2fr) minmax(0px, 1.1fr)"] { grid-template-columns: minmax(0, 1.35fr) minmax(0, 2fr) 240px !important; }
 .xm { display: grid; grid-template-columns: 232px minmax(0, 1fr) 250px; grid-template-rows: repeat(5, auto) 1fr; column-gap: 28px; align-items: start; }
 .xm-tab { grid-column: 1; display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; padding: 8px 12px; border-radius: 10px; font-weight: 600; font-size: 15px; color: var(--x-ink); transition: background-color var(--x-fast) ease, color var(--x-fast) ease; }
+button.xm-tab { width: 100%; border: 0; background: transparent; font-family: inherit; text-align: left; cursor: pointer; }
+button.xm-tab:hover, button.xm-tab:active { transform: none !important; filter: none !important; }
 .xm-tab svg { opacity: 0; transition: opacity var(--x-fast) ease; }
 .xm-tab:hover { background: rgba(45, 29, 143, 0.045) !important; box-shadow: none !important; }
 .xm-tab.is-active { background: rgba(45, 29, 143, 0.07) !important; color: var(--x-indigo); }
