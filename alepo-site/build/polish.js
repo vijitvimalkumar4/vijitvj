@@ -558,15 +558,15 @@ window.__alepoPolish = function (cfg, doc) {
   };
   const today = cfg.today || new Date().toISOString().slice(0, 10);
   const isPast = card => { const e = card.getAttribute('data-event-ends') || endOf(card.textContent); return e && e < today; };
+  // as in the team package: past events are hidden, and with none left the Events block goes, with the links to it
   const evH = [...main.querySelectorAll('h2')].find(h => /^(Events|Eventos)$/.test(h.textContent.trim()));
   if (evH) {
     const sec = evH.closest('section');
     const cards = [...sec.querySelectorAll('a, div.x-card')].filter(c => endOf(c.textContent) && !c.parentElement.closest('a'));
-    const past = cards.filter(isPast);
-    past.forEach(c => { c.classList.add('x-past'); c.querySelectorAll('[data-upcoming-badge]').forEach(b => b.remove()); const chip = mk('span', 'x-past-chip', ES ? 'Pasado' : 'Past'); (c.querySelector('div') || c).prepend(chip); });
-    if (cards.length && past.length === cards.length) {
-      evH.textContent = ES ? 'Eventos recientes' : 'Recent events';
-      evH.after(mk('p', 'x-ev-note', ES ? 'Los próximos eventos se anunciarán aquí.' : 'Upcoming events will be announced here.'));
+    cards.filter(isPast).forEach(c => c.remove());
+    if (cards.length && cards.every(isPast)) {
+      if (sec.id) main.querySelectorAll(`a[href="#${sec.id}"]`).forEach(a => (a.closest('li') || a).remove());
+      sec.remove();
     }
   }
   // elsewhere (Home, About): a past event card leaves the news grid

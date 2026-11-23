@@ -251,6 +251,18 @@ const pdfDir = path.join(HERE, 'static', 'datasheets', 'en');
 const missingPdf = Object.keys(productsForServer).filter(s => !fs.existsSync(path.join(pdfDir, s + '.pdf')));
 if (missingPdf.length) console.log(`data sheet PDFs missing (${missingPdf.length}/${Object.keys(productsForServer).length}): put them in build/static/datasheets/en/<slug>.pdf`);
 
+// past events are hidden (polish.js); while the newsroom lists none, links to /news/#events open the newsroom itself
+for (const pre of ['', '/es']) {
+  const newsPage = path.join(OUT, pre, 'news', 'index.html');
+  if (fs.existsSync(newsPage) && !fs.readFileSync(newsPage, 'utf8').includes('id="events"')) {
+    const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : e.name.endsWith('.html') ? [path.join(d, e.name)] : []);
+    for (const f of walk(OUT)) {
+      const s = fs.readFileSync(f, 'utf8'), t = s.split(`"${pre}/news/#events"`).join(`"${pre}/news/"`);
+      if (t !== s) fs.writeFileSync(f, t);
+    }
+  }
+}
+
 // descriptive WebP images with fixed dimensions (blueprint 6.1)
 const { execFileSync } = await import('node:child_process');
 process.stdout.write(execFileSync('python3', [path.join(HERE, 'images.py')]).toString().split('\n')[0] + '\n');

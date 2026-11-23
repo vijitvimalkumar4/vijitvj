@@ -79,7 +79,7 @@ window.__alepoMerge = function (cfg, doc) {
   // 3. Lines and blocks left out (package DROPS): withdrawn data sheets, SaaS lines, the Kubernetes picture
   const prune = el => { let p = el.parentElement; el.remove(); for (let i = 0; i < 3 && p && p !== main; i++) { const up = p.parentElement; if (!norm(p.textContent) && !p.querySelector('img, input, select, textarea, button')) { p.remove(); p = up; } else break; } };
   (M.drops || []).forEach(d => {
-    if (d.id) return; // the Events block stays in our build, labelled Past (see README)
+    if (d.id) return; // the Events block: polish.js hides past events by date, so it comes back when a new event is added
     if (d.label) {
       const el = doc.querySelector(`[aria-label="${String(d.label[L]).replace(/"/g, '\\"')}"]`);
       if (el) { const box = el.closest('.dia-d') ? el.closest('.dia-d').parentElement : el; box.querySelectorAll('.dia-d, .dia-m').forEach(x => x.remove()); if (box.isConnected && el.isConnected) prune(el); report.drops++; }
@@ -162,7 +162,7 @@ window.__alepoMerge = function (cfg, doc) {
   const N = cfg.latestNews;
   if (N) {
     const bar = doc.querySelector('.util a[href*="/news/"]');
-    if (bar) { const node = textNodes(bar).find(n => norm(n.nodeValue)); if (node) setText(node, N.title); bar.setAttribute('href', N.url); bar.lang = 'en'; }
+    if (bar) { const node = textNodes(bar).find(n => norm(n.nodeValue)); if (node) setText(node, N.title); bar.setAttribute('href', N.url); bar.lang = 'en'; ['data-ends', 'data-fallback', 'data-fallback-href'].forEach(a => bar.removeAttribute(a)); }
     const news = main && main.querySelector('section#news');
     if (news && (M.key === 'Main' || M.key === 'h-about')) {
       const cards = [...news.querySelectorAll('a.hv, a.x-card')].filter(a => !a.hasAttribute('data-event-ends') && a.querySelectorAll('span').length >= 2);

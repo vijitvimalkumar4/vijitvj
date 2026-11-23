@@ -122,7 +122,7 @@ These come from the audit doc "Alepo.com redesign: UX and lead-generation audit"
 | 1 | Form did not send | Real submit to `/api/forms/<form>` on Alepo's own server, with inline validation and a noindex `/contact-us/thank-you/` page with next steps. Works without JavaScript too. The newsletter form works the same way. |
 | 2 | Demo buttons went to a generic page | Every demo button goes to `/contact-us/?product=<slug>#demo`. The form now sits in the contact hero, prefilled with the product. |
 | 3 | No step for buyers not ready for a demo | Every product page offers "Get the data sheet" (work email only). Resource data-sheet links point to it. The contact form adds Talk to an engineer, Submit an RFP, Get a pricing estimate and Get a data sheet. |
-| 4 | Past event in the top bar | Expires after `topbar.ends`, at build time and in the browser, and switches to News and events |
+| 4 | Past event in the top bar | Replaced by the newest news item at build time (merge.js), so it no longer expires in the browser |
 | 5 | Search did nothing | Removed |
 | 6 + 18 | Menu taller than the screen | Descriptors dropped from the menu and the panel capped at the screen height with its own scroll. Opens on click, closes after a short delay and on Esc, and sets `aria-expanded`. |
 | 9 | No pricing signal | "How pricing works" block on every product page, with "Get an estimate" |
@@ -285,7 +285,7 @@ The council audit ([doc](https://claude.ai/artifact/MwvSeYPq9kjdbngJKxBpBN)) fou
 **Server.** Brotli or gzip compression (home HTML 194 KB to 16 KB); a Content-Security-Policy (everything from this site; no Google Fonts); content-hashed CSS and JS (`site-polish.<hash>.css`, cached a year, written by `build/finish.py`); leads gain campaign tags (`utm_*`), referrer, first landing page, operator type and a personal-mailbox flag; daily backups in `LEADS_DIR/backup` (`LEADS_BACKUP_DAYS`, default 30); a retention limit (`LEADS_RETENTION_DAYS`, default 730); and `DELETE /api/leads?email=…` (admin token) to erase a person's leads. Set `FORCE_HTTPS=1` in production for HSTS.
 
 **Pages.**
-- Events are dated: past events get a "Past" label, the Events block becomes "Recent events", Home and About drop ended events, and the Company menu's "Meet us" card shows the newest news item once the event is over. Rebuild weekly so dates stay current.
+- Events are dated: past events are hidden (with none left, the Events block goes; see the merge section), Home and About drop ended events, and the Company menu's "Meet us" card shows the newest news item once the event is over. Rebuild weekly so dates stay current.
 - Leadership uses the 14 photos from alepo.com; the placeholder line is gone.
 - News and events sits under Resources (breadcrumb, menu highlight); Company no longer lists it.
 - "Latest posts" lists show the post's date and photo; Blog has a title search; Spanish lists say the items are published in English.
@@ -427,10 +427,11 @@ The team package `alepo-website-v1-2026-11-23-final` (Jonathan's copy checked ag
 
 **From the package:** page copy and line fixes (71 edits, about 480 sentence rewordings), product and group names, 202 questions and answers, 10 guides, every title and meta description, the Spanish review, the accessibility statement, the thank-you page, its redirect map (20 rows added, 4 targets changed), and its removals: the four withdrawn data sheets (AAA Server, Subscriber Data Management, Converged Policy Control, WiFi Monetization), the SaaS and Kubernetes lines on Services and Security, and the SE 14 news item.
 
+**Events:** as in the package, past events are hidden. `polish.js` removes each event card whose date has passed (rebuild to keep this current). When none are left, the Events block and its links go, and every `/news/#events` link opens the newsroom. Adding a future event to the design brings the block back.
+
 **Kept from ours:** the design and motion, the two-pane menus, our own form server and data-sheet gate, the Blog, Library and News items collected from alepo.com, leadership photos, privacy and cookie pages, the server (compression, CSP, retention, backups, pass-through of every old URL to `LEGACY_ORIGIN`).
 
 **Open decisions**
 
-- Events: the package hides past events; this build keeps them, labelled Past. Remove the `if (d.id) return;` line in `merge.js` to hide them.
 - Data sheets: this build asks for name and work email before a download; the package links straight to the PDF. The PDFs are not in the repo yet (`build/static/datasheets/en/<slug>.pdf`).
 - The accessibility statement wording needs sign-off.
