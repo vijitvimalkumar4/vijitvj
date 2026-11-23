@@ -145,6 +145,16 @@ window.__alepoPolish = function (cfg, doc) {
     sorted[0].classList.add('x-prod-main');
     sorted.forEach(k => g.appendChild(k));
   });
+  // home solutions: the first solution is a tall card beside a 2 x 2 grid of the rest (a swipe row on phones)
+  main.querySelectorAll('a.x-card').forEach(c => {
+    const g = c.parentElement;
+    if (!g || g.classList.contains('x-solgrid') || g.classList.contains('x-prodrow')) return;
+    const kids = [...g.children];
+    if (kids.length === 5 && kids.every(k => k.matches('a.x-card') && k.querySelector('h3') && k.querySelector('img'))) {
+      g.classList.add('x-solgrid');
+      kids[0].classList.add('x-sol-main');
+    }
+  });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

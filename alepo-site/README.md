@@ -293,6 +293,7 @@ Direction: professional and quiet. Depth comes from neutral shadows (no coloured
 | `x-btn` | Flat indigo buttons that darken on hover; arrows move 3 px |
 | `x-cta` | The demo band is a flat indigo panel with rounded corners |
 | `x-prodrow` | Home product families: the family with the most products (Billing & BSS) is a tall card on the left, the other four sit in two balanced rows beside it; photos absorb spare height so all cards end flush. Below 900 px it becomes a swipe row |
+| `x-solgrid` | Home solutions use the same pattern: the first solution (Fibre and cable ISPs) is the tall card, the other four sit in two rows beside it, photos absorb spare height; a swipe row below 900 px |
 
 ### Footer
 

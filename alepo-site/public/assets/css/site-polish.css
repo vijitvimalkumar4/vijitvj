@@ -170,6 +170,25 @@ a:hover svg:has(> path[d^="M5 12h14"]) { translate: 3px 0; }
   .x-prodrow > .x-card { flex-basis: 82%; }
 }
 
+/* ---------- home solutions: one tall card beside a 2 x 2 grid ---------- */
+.x-solgrid { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 20px !important; align-items: stretch; }
+.x-solgrid > .x-sol-main { grid-row: span 2; }
+.x-solgrid > a.x-card { display: flex !important; flex-direction: column; }
+.x-solgrid > a.x-card > div:first-child { position: relative; flex: 1 1 auto; height: auto !important; min-height: 170px; }
+.x-solgrid > a.x-card > div:first-child img { position: absolute; inset: 0; }
+.x-solgrid > a.x-card > div:last-child { flex: 0 0 auto; padding: 24px 28px 28px !important; }
+.x-solgrid > .x-sol-main h3 { font-size: 31px !important; }
+@media (max-width: 899px) {
+  .x-solgrid { display: flex !important; align-items: flex-start !important; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; margin: 0 -32px; padding: 4px 32px 16px; scroll-padding: 0 32px; }
+  .x-solgrid > a.x-card { flex: 0 0 300px; scroll-snap-align: start; }
+  .x-solgrid > a.x-card > div:first-child { flex: 0 0 auto; height: 180px !important; min-height: 0; }
+  .x-solgrid > .x-sol-main h3 { font-size: 25px !important; }
+}
+@media (max-width: 760px) {
+  .x-solgrid { margin: 0 -20px; padding: 4px 20px 16px; scroll-padding: 0 20px; }
+  .x-solgrid > a.x-card { flex-basis: 82%; }
+}
+
 /* ---------- motion: quiet fades, played once ---------- */
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
