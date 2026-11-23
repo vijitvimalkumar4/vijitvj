@@ -370,7 +370,11 @@ main details > summary { min-height: 60px; }
 .x-tint { background: linear-gradient(180deg, #F4F2FD 0%, #EEF3FA 100%) !important; }
 .x-dark { background: radial-gradient(900px 460px at 95% -15%, rgba(80, 60, 235, 0.42), transparent 60%), radial-gradient(700px 380px at 0% 110%, rgba(85, 203, 227, 0.14), transparent 60%), linear-gradient(160deg, #120D3D 0%, #1C1360 100%) !important; }
 /* promo cards in the menus */
-.xm-side > a, .xm-promo { background: radial-gradient(360px 200px at 100% 0%, rgba(85, 203, 227, 0.35), transparent 60%), var(--x-grad) !important; }
+.dnav .mp .xm-side > a:first-child, .dnav .mp .xm-promo { background: radial-gradient(360px 200px at 100% 0%, rgba(85, 203, 227, 0.35), transparent 60%), var(--x-grad) !important; color: #FFFFFF !important; box-shadow: none !important; transition: transform var(--x-mid) var(--x-ease), box-shadow var(--x-mid) ease !important; }
+.dnav .mp .xm-side > a:first-child:hover, .dnav .mp .xm-promo:hover { background: radial-gradient(360px 200px at 100% 0%, rgba(85, 203, 227, 0.5), transparent 60%), var(--x-grad-hover) !important; color: #FFFFFF !important; box-shadow: 0 18px 36px -18px rgba(45, 29, 143, 0.6) !important; transform: translateY(-2px); }
+/* the plain "All products" link under the card stays a text link */
+.dnav .mp .xm-side > a:not(:first-child) { background: transparent !important; box-shadow: none !important; color: var(--x-indigo) !important; padding-left: 0 !important; padding-right: 0 !important; }
+.dnav .mp .xm-side > a:not(:first-child):hover { text-decoration: underline; text-underline-offset: 4px; }
 /* content card covers */
 .x-post-doc .x-cover { background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1.2px), linear-gradient(135deg, #2D1D8F 0%, #4A34D6 100%); background-size: 16px 16px, 100% 100%; }
 .x-post-chart .x-cover { background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1.2px), linear-gradient(135deg, #120D3D 0%, #2D1D8F 100%); background-size: 16px 16px, 100% 100%; }
