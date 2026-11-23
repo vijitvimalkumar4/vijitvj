@@ -78,6 +78,70 @@ window.__alepoPolish = function (cfg, doc) {
     const r = d.getBoundingClientRect(), cs = getComputedStyle(d);
     if (r.height > 400 && parseFloat(cs.borderTopLeftRadius) >= 16 && cs.overflow === 'hidden' && !d.parentElement.closest('.x-herocard')) { d.classList.add('x-herocard'); if (cs.position === 'static') d.style.position = 'relative'; }
   });
+
+  // ---------- motion hooks ----------
+  const orbs = el => { if (el.querySelector(':scope > .x-orbs')) return; const o = doc.createElement('div'); o.className = 'x-orbs'; o.setAttribute('aria-hidden', 'true'); o.innerHTML = '<i></i><i></i><i></i>'; el.prepend(o); };
+  main.querySelectorAll('.x-hero, .x-dark, .x-cta, .x-herocard').forEach(orbs);
+  // hero entrance: text column items and the media rise in turn
+  const h1 = sections[0] && sections[0].querySelector('h1');
+  if (h1) {
+    const col = h1.parentElement, row = col.parentElement;
+    let n = 0;
+    [...col.children].forEach(c => { c.classList.add('x-in'); c.style.setProperty('--i', n++); });
+    if (row) [...row.children].filter(c => c !== col && !c.classList.contains('x-orbs')).forEach(c => { c.classList.add('x-in', 'x-in-side'); c.style.setProperty('--i', n++); });
+  }
+  // mega menu and mobile menu items fade in one after another
+  doc.querySelectorAll('.mp').forEach(mp => mp.querySelectorAll('a').forEach((a, i) => a.style.setProperty('--i', Math.min(i, 14))));
+  doc.querySelectorAll('.mnav a').forEach((a, i) => a.style.setProperty('--i', Math.min(i, 14)));
+
+  // ---------- footer: brand and newsletter on top, link columns, offices, bottom bar ----------
+  const ft = doc.querySelector('footer');
+  const wrap = ft && ft.firstElementChild;
+  if (wrap && !wrap.querySelector('.xf-top')) {
+    const es = doc.documentElement.lang === 'es';
+    const T = es ? { tag: 'Alepo hace software para proveedores de servicios de comunicación.', offices: 'Oficinas', top: 'Volver arriba' }
+                 : { tag: 'Alepo makes software for communication service providers.', offices: 'Offices', top: 'Back to top' };
+    const [grid, offices, bottom] = [...wrap.children];
+    const form = grid.querySelector(':scope > form');
+    const cols = [...grid.querySelectorAll(':scope > .fcol')];
+    const logo = bottom.querySelector('img');
+    const support = form && [...form.querySelectorAll(':scope > div')].find(d => d.querySelector('a[href^="tel:"]'));
+    const office = form && [...form.querySelectorAll(':scope > div')].find(d => !d.children.length && d.textContent.trim());
+    const el = (t, c) => { const e = doc.createElement(t); if (c) e.className = c; return e; };
+    const top = el('div', 'xf-top'), brand = el('div', 'xf-brand'), news = el('div', 'xf-news');
+    const home = doc.querySelector('header a[aria-label]');
+    const logoLink = el('a', 'xf-logo'); logoLink.href = home ? home.getAttribute('href') : '/';
+    logoLink.setAttribute('aria-label', home ? home.getAttribute('aria-label') : 'Alepo');
+    if (logo) { logo.alt = ''; logoLink.appendChild(logo); }
+    const tag = el('p', 'xf-tag'); tag.textContent = T.tag;
+    brand.append(logoLink, tag);
+    const demo = doc.querySelector('header a[href*="#demo"]');
+    if (demo) { const b = el('a', 'xf-btn'); b.href = demo.getAttribute('href'); b.innerHTML = demo.textContent.trim() + '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>'; brand.appendChild(b); }
+    const contact = el('div', 'xf-contact');
+    [support, office].forEach(d => { if (d) { d.removeAttribute('style'); contact.appendChild(d); } });
+    brand.appendChild(contact);
+    if (form) news.appendChild(form);
+    top.append(brand, news);
+    const colsBox = el('div', 'xf-cols');
+    cols.forEach(c => { c.removeAttribute('style'); colsBox.appendChild(c); });
+    const off = el('div', 'xf-offices');
+    const oh = el('div', 'xf-oh'); oh.textContent = T.offices;
+    offices.removeAttribute('style'); offices.className = 'xf-olist';
+    off.append(oh, offices);
+    colsBox.appendChild(off);
+    bottom.removeAttribute('style'); bottom.className = 'xf-bottom';
+    const up = el('button', 'xf-up'); up.type = 'button'; up.setAttribute('data-top', ''); up.setAttribute('aria-label', T.top);
+    up.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg>';
+    bottom.appendChild(up);
+    const mark = el('div', 'xf-mark'); mark.setAttribute('aria-hidden', 'true');
+    if (logo) { const m = logo.cloneNode(); m.alt = ''; m.removeAttribute('style'); m.removeAttribute('loading'); mark.appendChild(m); }
+    wrap.removeAttribute('style'); wrap.className = 'xf-wrap';
+    grid.remove();
+    wrap.append(top, colsBox, bottom);
+    ft.classList.add('x-footer');
+    orbs(ft);
+    ft.appendChild(mark);
+  }
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');

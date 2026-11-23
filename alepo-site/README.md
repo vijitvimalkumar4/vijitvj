@@ -283,8 +283,9 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 | `x-hero` | First light section: violet and cyan glows, a faint dot grid, gradient headline, tilted photo |
 | `x-tint`, `x-dark` | Tinted bands with a gentle gradient; dark bands with glows and a dot grid |
 | `x-h2` | A violet-to-cyan accent bar above section headings, and ink-to-indigo gradient heading text |
-| `x-card`, `x-row` | Soft shadows, rounded corners, a hover lift; product rows on the hub and category pages become light cards |
-| `x-icon`, `x-row-icon` | Filled violet-to-cyan icon tiles with white icons |
+| `x-card` | Soft shadows, rounded corners, a hover lift and a light spot that follows the pointer |
+| `x-row` | Product lists on the hub and category pages stay open rows with hairlines (no boxes); on hover the row tints and the icon tile fills |
+| `x-icon`, `x-row-icon` | Violet-to-cyan icon tiles |
 | `x-cardgrid` | Runs of 4 or more plain framed rows (offices, events) become a card grid |
 | `x-media` | Shadow and a light brand tint on framed photos |
 | `x-btn`, `x-btn-light` | Gradient primary buttons with a soft glow |
@@ -296,3 +297,23 @@ These come from the doc "Alepo.com redesign: UI audit" and its "Website checklis
 | `x-herocard` | Home's dark hero panel gets a glowing ring |
 
 Rows on dark bands use frosted glass instead of white cards. A scroll fade-in was tried and removed: it could leave sections blank in screenshot tools and some viewers. Reduced-motion users get no tilt or lift. In Windows high-contrast mode the gradient text falls back to plain text. Checked with axe (WCAG 2.2 AA and best practice) on 8 page types at 1440 px and 390 px: no violations.
+
+### Footer
+
+`polish.js` rebuilds the footer from the same links and form (no new content apart from the "Offices" heading and the back-to-top label):
+brand block (logo, the one-line company description already used under "Why Alepo", a demo button, support numbers, head office) beside a frosted newsletter card;
+then six link columns, a second row with Services, Resources, Company and office chips; a bottom bar with legal links and a back-to-top button; and a large faded wordmark.
+On phones the columns keep their open/close buttons.
+
+### Motion
+
+| Where | What moves |
+| --- | --- |
+| First screen | Headline, text, buttons and photo rise in one after another (CSS, runs without JavaScript) |
+| Below the first screen | Headings, cards, rows and photos fade and rise as they scroll in, in a short stagger; photos open with a wipe; heading bars grow; result figures count up |
+| Backgrounds | Soft glows drift slowly in the hero, dark bands, the demo panel and the footer; dot grids and accent bars shimmer |
+| Hover | Cards lift with a pointer spotlight; buttons get a light sweep; arrows slide; icon tiles fill and tilt; footer links underline |
+| Menus | Mega menu slides down and its items fade in one after another; same in the phone menu |
+| Page | A gradient scroll-progress bar at the top; smooth scrolling |
+
+Safety: content is only hidden for the reveal when JavaScript is running, motion is allowed and the item starts below the screen. When scrolling stops, anything at or above the screen is shown at once (End key, scrollbar drags, anchor jumps), and printing shows everything. With reduced motion turned on, nothing moves.

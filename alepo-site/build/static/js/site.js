@@ -171,3 +171,93 @@
   var hdr = document.querySelector('.x-header');
   if (hdr) { var onS = function () { hdr.classList.toggle('is-scrolled', window.scrollY > 8); }; window.addEventListener('scroll', onS, { passive: true }); onS(); }
 })();
+
+/* Motion: scroll progress, back to top, reveal on scroll, count-up figures, card spotlight.
+   Everything is visible without JavaScript; with reduced motion only the progress bar and back-to-top run. */
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.classList.add('js-on');
+
+  // scroll progress bar (one per document)
+  if (!window.__xMotion) {
+    window.__xMotion = true;
+    var bar = document.createElement('div'); bar.className = 'x-progress'; bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+    var ticking = false;
+    var prog = function () { ticking = false; var h = root.scrollHeight - window.innerHeight; bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, window.scrollY / h) : 0) + ')'; };
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(prog); } }, { passive: true });
+    window.addEventListener('resize', prog);
+    window.__xProg = prog;
+    // printing shows everything
+    window.addEventListener('beforeprint', function () { document.querySelectorAll('.rv').forEach(function (e) { e.classList.add('rv-in'); }); });
+  }
+  if (window.__xProg) window.__xProg();
+
+  // back to top
+  document.querySelectorAll('[data-top]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      var first = document.querySelector('header a'); if (first) first.focus({ preventScroll: true });
+    });
+  });
+
+  // pointer spotlight on cards
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.x-card, .x-statcard').forEach(function (c) {
+      c.addEventListener('pointermove', function (e) { var r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+    });
+  }
+
+  if (reduce || !('IntersectionObserver' in window)) return;
+  root.classList.add('x-motion');
+
+  // count-up for result figures ("3x", "109", "1.3M", "235K")
+  function countUp(el) {
+    var m = /^([\d.,]+)(.*)$/.exec(el.textContent.trim()); if (!m) return;
+    var raw = m[1].replace(/,/g, ''), target = parseFloat(raw), dec = (raw.split('.')[1] || '').length, suffix = m[2], final = el.textContent;
+    if (!isFinite(target)) return;
+    var t0 = null, dur = 1400;
+    el.style.fontVariantNumeric = 'tabular-nums';
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = (target * e).toFixed(dec) + suffix;
+      if (k < 1) requestAnimationFrame(step); else el.textContent = final;
+    }
+    requestAnimationFrame(step);
+  }
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      var el = en.target; io.unobserve(el);
+      el.classList.add('rv-in');
+      el.querySelectorAll('.x-stat').forEach(countUp);
+      if (el.classList.contains('x-stat')) countUp(el);
+      var d = parseInt(el.style.getPropertyValue('--rv-d'), 10) || 0;
+      setTimeout(function () { el.classList.remove('rv', 'rv-in'); el.style.removeProperty('--rv-d'); }, 1300 + d);
+    });
+  }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+
+  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div';
+  var list = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (e) {
+    return !e.closest('.x-hero, .x-in, .rv') && e.getBoundingClientRect().top > window.innerHeight * 0.92;
+  });
+  list.forEach(function (e) {
+    var sibs = e.parentElement ? Array.prototype.filter.call(e.parentElement.children, function (c) { return list.indexOf(c) > -1; }) : [];
+    e.style.setProperty('--rv-d', Math.min(sibs.indexOf(e), 6) * 90 + 'ms');
+    e.classList.add('rv');
+    io.observe(e);
+  });
+  // safety net: after a jump (End key, scrollbar drag, anchor), show anything at or above the screen at once
+  var settle;
+  function sweep() {
+    document.querySelectorAll('.rv:not(.rv-in)').forEach(function (e) {
+      if (e.getBoundingClientRect().top < window.innerHeight) { e.style.setProperty('--rv-d', '0ms'); io.unobserve(e); e.classList.add('rv-in'); e.querySelectorAll('.x-stat').forEach(countUp); setTimeout(function () { e.classList.remove('rv', 'rv-in'); }, 1300); }
+    });
+  }
+  if (!window.__xSweep) { window.__xSweep = true; window.addEventListener('scroll', function () { clearTimeout(settle); settle = setTimeout(function () { if (window.__xSweepFn) window.__xSweepFn(); }, 160); }, { passive: true }); }
+  window.__xSweepFn = sweep;
+})();
