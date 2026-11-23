@@ -99,6 +99,16 @@ Prose on the pages still uses the brand names, as the blueprint asks.
 
 **Images.** WebP files with names taken from their alt text and fixed width and height. Image weight fell from 5.8 MB to 3.8 MB.
 
+## Standalone file
+
+`dist/alepo-website.html` is the whole site (98 pages, English and Spanish) in one 5.7 MB HTML file. Its images, styles and scripts are embedded, and the pages are compressed inside it. It opens from disk with no server, so you can email it or share it for review. Pages switch through the address bar's `#!` part, for example `alepo-website.html#!/products/aaa-server/`.
+
+Forms in this file say they are an offline copy and do not send. Fonts load from Google Fonts when online. Rebuild it after `build.mjs`:
+
+```bash
+python3 alepo-site/build/standalone.py
+```
+
 ## UX and lead-generation fixes
 
 These come from the audit doc "Alepo.com redesign: UX and lead-generation audit". The code is in `build/leadfixes.js` (applied to each page at build time), `build/static/js/site.js` (runtime, no dependencies, no tracking) and `build/static/css/site-fixes.css`.
