@@ -4,3 +4,6 @@ node_modules/
 
 # form submissions (personal data): never commit
 alepo-site/data/
+
+# staging packages (built from alepo-site; shared as files, not committed)
+alepo-staging-*.zip
