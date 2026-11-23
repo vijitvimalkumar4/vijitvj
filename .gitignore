@@ -1,3 +1,6 @@
 node_modules/
 .DS_Store
 *.log
+
+# form submissions (personal data): never commit
+alepo-site/data/

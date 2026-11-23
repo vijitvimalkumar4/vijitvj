@@ -83,7 +83,8 @@ for f in pages:
     # lead capture (UX audit findings 1, 2, 5, 10, 12)
     for f_ in re.findall(r'<form[^>]*>.*?</form>', s, re.S):
         if 'data-form=' not in f_: fails.append(f'{p}: form not wired')
-        elif 'data-endpoint=""' in f_: warns.append(f'{p}: form "{re.search(r"data-form=.([a-z]+)", f_).group(1)}" has no HubSpot form ID yet (build/site-config.json)')
+        elif not re.search(r'data-endpoint="/api/forms/(demo|datasheet|newsletter)"', f_): fails.append(f'{p}: form endpoint missing')
+        if 'name="website"' not in f_: fails.append(f'{p}: form without spam trap')
         if 'type="submit"' not in f_: fails.append(f'{p}: form without a submit button')
         if 'data-consent' not in f_: fails.append(f'{p}: form without consent text')
     if re.search(r'aria-label="(Search|Buscar)"', s): fails.append(f'{p}: dead search button')

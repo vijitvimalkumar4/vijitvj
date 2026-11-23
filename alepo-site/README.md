@@ -12,11 +12,13 @@ Sources (SharePoint › Marketing2 › SEO › Alepo.com › New SEO Website app
 
 ## Run and rebuild
 
-Serve the site locally, then open http://localhost:8080:
+Run the site with its form server, then open http://localhost:8080:
 
 ```bash
-npx http-server alepo-site/public -p 8080 -c-1
+ADMIN_TOKEN=change-me node alepo-site/server/server.mjs
 ```
+
+A plain static host also serves the pages, but the forms need `server/server.mjs` (see "Forms and leads" below).
 
 Rebuild the site after changing anything in `build/` (needs Playwright with Chromium and Python with Pillow):
 
@@ -101,13 +103,11 @@ Prose on the pages still uses the brand names, as the blueprint asks.
 
 These come from the audit doc "Alepo.com redesign: UX and lead-generation audit". The code is in `build/leadfixes.js` (applied to each page at build time), `build/static/js/site.js` (runtime, no dependencies, no tracking) and `build/static/css/site-fixes.css`.
 
-**One setup step before launch.** The forms post straight to the HubSpot Forms API for portal 242907903, with no HubSpot script and no tracking before consent. Create three forms in HubSpot with the fields email, firstname, lastname, company and message: Demo request, Data sheet request and Newsletter. Paste each form's ID into `build/site-config.json` and rebuild. Until then, `qa.py` prints a WARN per form, and a visitor who submits sees "We could not send this".
-
-The data-sheet form only records the request. To email the PDF, add a HubSpot workflow on that form. Set `privacyUrl` in the same file so the consent line links to the policy.
+**Forms post to Alepo's own server, with no third-party service.** See "Forms and leads" below. Set `privacyUrl` in `build/site-config.json` so the consent line links to the policy.
 
 | # | Finding | Fix |
 | --- | --- | --- |
-| 1 | Form did not send | Real submit to HubSpot, inline validation, and a noindex `/contact-us/thank-you/` page with next steps. The newsletter form works the same way. |
+| 1 | Form did not send | Real submit to `/api/forms/<form>` on Alepo's own server, with inline validation and a noindex `/contact-us/thank-you/` page with next steps. Works without JavaScript too. The newsletter form works the same way. |
 | 2 | Demo buttons went to a generic page | Every demo button goes to `/contact-us/?product=<slug>#demo`. The form now sits in the contact hero, prefilled with the product. |
 | 3 | No step for buyers not ready for a demo | Every product page offers "Get the data sheet" (work email only). Resource data-sheet links point to it. The contact form adds Talk to an engineer, Submit an RFP, Get a pricing estimate and Get a data sheet. |
 | 4 | Past event in the top bar | Expires after `topbar.ends`, at build time and in the browser, and switches to News and events |
@@ -129,6 +129,45 @@ The data-sheet form only records the request. To email the PDF, add a HubSpot wo
 - **Finding 10:** regional sales contacts.
 - **Pricing wording:** "The price depends on the products you take, your subscriber numbers and how it is deployed" needs confirming by sales.
 - **"What happens next" line:** should match how sales actually follows up.
+
+## Forms and leads
+
+`server/server.mjs` serves `public/` and receives the three forms. It is one file with no dependencies, and needs Node 18 or later. Run it on any server or container behind HTTPS.
+
+| Form | Where it is | Required fields |
+| --- | --- | --- |
+| `demo` | Contact page hero; every "Request a demo", "Get an estimate" and "Contact sales" button lands on it, with the product prefilled | Name, work email, company |
+| `datasheet` | "Get the data sheet" on every product page | Work email |
+| `newsletter` | Footer of every page | Email |
+
+**What happens on submit:**
+1. The server checks required fields and email format, rejects posts from other sites, caps each IP at 8 submissions per 10 minutes, and limits the body to 32 KB.
+2. A hidden spam-trap field catches bots; their posts are accepted silently and not stored.
+3. Each lead is appended to `data/leads.ndjson`, readable only by the server's own user (mode 600). It holds the form, name, email, company, request type, product, message, language, page, consent text and timestamp. IP addresses are not stored.
+4. If `LEAD_WEBHOOK_URL` is set, the server posts a short summary to it. A Microsoft Teams or Slack incoming webhook works.
+5. The visitor lands on the thank-you page (demo) or sees a confirmation in place (data sheet, newsletter).
+
+**Environment variables:**
+
+| Variable | Purpose |
+| --- | --- |
+| `PORT` | Port to listen on (default 8080) |
+| `LEADS_DIR` | Where leads are stored (default `alepo-site/data`, which is git-ignored) |
+| `ADMIN_TOKEN` | Required to download leads; with no token set the download is switched off |
+| `LEAD_WEBHOOK_URL` | Optional notification for each new lead |
+| `TRUST_PROXY=1` | Read the client IP from `X-Forwarded-For` behind a load balancer |
+
+**Download leads** as a CSV (newest first; opens in Excel). The export prefixes values starting with `=`, `+`, `-` or `@` with `'`, so spreadsheets never run them as formulas.
+
+```bash
+curl -H "Authorization: Bearer $ADMIN_TOKEN" https://alepo.com/api/leads.csv -o leads.csv
+```
+
+The server also applies the 301 redirects from `_redirects`, serves the English or Spanish 404 page, and sends basic security headers.
+
+**Still manual:**
+- Data-sheet requests are recorded, but nothing emails the PDF yet. Sales sends it, alerted by the webhook.
+- Back up `data/leads.ndjson` with the server's normal backups.
 
 ## Decisions taken, to confirm
 

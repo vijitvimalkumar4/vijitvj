@@ -1,11 +1,10 @@
-/* Alepo.com runtime: forms, menu, top bar, sticky demo bar. No dependencies, no tracking. */
+/* Alepo.com runtime: forms (posted to Alepo's own /api/forms), menu, top bar, sticky demo bar. No dependencies, no tracking. */
 (function () {
   'use strict';
 
-  // ---- Forms: validate, post to HubSpot Forms API, confirm ----
+  // ---- Forms: validate, post to /api/forms/<kind>, confirm ----
   var EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-  function cookie(name) { var m = document.cookie.match('(?:^|; )' + name + '=([^;]*)'); return m ? decodeURIComponent(m[1]) : null; }
-  function fieldError(input, msg) {
+    function fieldError(input, msg) {
     var id = input.id ? input.id + '-err' : null;
     var old = input.parentElement.querySelector('.f-err');
     if (old) old.remove();
@@ -31,21 +30,13 @@
   }
   function payload(form) {
     var get = function (n) { var e = form.elements[n]; return e ? (e.value || '').trim() : ''; };
-    var fields = [];
-    var full = get('fullname');
-    if (full) { var parts = full.split(/\s+/); fields.push({ name: 'firstname', value: parts.shift() }); if (parts.length) fields.push({ name: 'lastname', value: parts.join(' ') }); }
-    if (get('email')) fields.push({ name: 'email', value: get('email') });
-    if (get('company')) fields.push({ name: 'company', value: get('company') });
     var sel = form.elements.request;
-    var reqText = sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex].text : '';
-    var lines = ['Form: ' + form.dataset.form];
-    if (reqText) lines.push('Request: ' + reqText);
-    if (get('product')) lines.push('Product: ' + get('product'));
-    if (get('message')) lines.push('', get('message'));
-    fields.push({ name: 'message', value: lines.join('\n') });
-    var ctx = { pageUri: location.href, pageName: document.title };
-    var hutk = cookie('hubspotutk'); if (hutk) ctx.hutk = hutk;
-    return { fields: fields, context: ctx, legalConsentOptions: { consent: { consentToProcess: true, text: form.dataset.consentText } } };
+    return {
+      fullname: get('fullname'), email: get('email'), company: get('company'),
+      request: get('request'), requestLabel: sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex].text : '',
+      product: get('product'), message: get('message'), website: get('website'),
+      lang: get('lang'), page: location.href, title: document.title, consent: form.dataset.consentText
+    };
   }
   document.querySelectorAll('form[data-form]').forEach(function (form) {
     var status = form.querySelector('[data-status]');
@@ -55,7 +46,7 @@
       e.preventDefault();
       if (!validate(form)) return;
       var endpoint = form.dataset.endpoint;
-      if (!endpoint) { if (status) status.textContent = form.dataset.msgError; console.warn('Alepo form "' + form.dataset.form + '" has no HubSpot form ID (build/site-config.json).'); return; }
+      if (!endpoint) { if (status) status.textContent = form.dataset.msgError; return; }
       if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = form.dataset.msgSending; }
       if (status) status.textContent = '';
       fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload(form)) })
@@ -75,6 +66,7 @@
   // ---- Contact page: prefill from ?product= and ?request= ----
   var q = new URLSearchParams(location.search);
   var demo = document.querySelector('form[data-form=demo]');
+  if (q.get('form-error')) { var st = document.querySelector('form[data-form] [data-status]'); var fm = st && st.closest('form'); if (st) st.textContent = fm.dataset.msgError; }
   if (demo) {
     if (q.get('product') && demo.elements.product) demo.elements.product.value = q.get('product');
     if (q.get('request') && demo.elements.request) demo.elements.request.value = q.get('request');

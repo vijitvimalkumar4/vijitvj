@@ -100,11 +100,18 @@ window.__alepoLead = function (cfg, doc) {
     return p;
   }
   function wire(form, kind, opts) {
-    const guid = sc.hubspot.forms[kind];
+    const endpoint = `${sc.forms.endpoint}/${kind}`;
     form.setAttribute('data-form', kind);
     form.setAttribute('method', 'post');
+    form.setAttribute('action', endpoint); // works without JavaScript too (server answers with a redirect)
     form.setAttribute('novalidate', '');
-    form.setAttribute('data-endpoint', guid ? `${sc.hubspot.endpoint}/${sc.hubspot.portalId}/${guid}` : '');
+    form.setAttribute('data-endpoint', endpoint);
+    // spam trap: people never see or fill it; bots usually do
+    const trap = el('input', 'position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;');
+    trap.type = 'text'; trap.name = 'website'; trap.tabIndex = -1; trap.setAttribute('autocomplete', 'off'); trap.setAttribute('aria-hidden', 'true');
+    form.appendChild(trap);
+    const lang = el('input'); lang.type = 'hidden'; lang.name = 'lang'; lang.value = cfg.lang; form.appendChild(lang);
+    if (opts.thanks) { const t = el('input'); t.type = 'hidden'; t.name = 'thanks'; t.value = opts.thanks; form.appendChild(t); }
     if (opts.thanks) form.setAttribute('data-thanks', opts.thanks);
     form.setAttribute('data-msg-required', T('Please fill in this field.', 'Complete este campo.'));
     form.setAttribute('data-msg-email', T('Enter a work email, for example name@operator.com.', 'Escriba un correo de trabajo, por ejemplo nombre@operador.com.'));
@@ -214,7 +221,7 @@ window.__alepoLead = function (cfg, doc) {
     const sb = el('button', btnS + ' align-self: flex-start;', T('Email me the data sheet', 'Enviarme la ficha técnica')); sb.type = 'submit';
     f.append(field, hid, consentLine(), sb);
     dc.appendChild(f);
-    wire(f, 'datasheet', { success: T('Thanks. We will email you the data sheet.', 'Gracias. Le enviaremos la ficha técnica por correo.') });
+    wire(f, 'datasheet', { success: T('Thanks. Our team will email you the data sheet.', 'Gracias. Nuestro equipo le enviará la ficha técnica por correo.') });
     wrap.append(pc, dc); sec.appendChild(wrap);
     const lastCta = [...main.children].pop();
     main.insertBefore(sec, lastCta);
