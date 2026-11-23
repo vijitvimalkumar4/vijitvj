@@ -131,6 +131,13 @@ window.__alepoPolish = function (cfg, doc) {
     ft.classList.add('x-footer');
     ft.appendChild(mark);
   }
+  // home product families: one horizontal row (a swipe row on smaller screens) instead of a 3 + 2 grid
+  main.querySelectorAll('.x-card').forEach(c => {
+    const g = c.parentElement;
+    if (!g || g.classList.contains('x-prodrow')) return;
+    const kids = [...g.children];
+    if (kids.length >= 4 && kids.every(k => k.classList.contains('x-card') && k.querySelector('h3') && k.querySelectorAll('a').length >= 3)) g.classList.add('x-prodrow');
+  });
   // header
   const hdr = doc.querySelector('header.hdr, .hdr');
   if (hdr) hdr.classList.add('x-header');
