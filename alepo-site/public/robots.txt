@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alepo.com/sitemap.xml

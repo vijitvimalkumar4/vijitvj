@@ -1,0 +1,1759 @@
+[
+  {
+    "id": "01",
+    "page_name": "Home",
+    "url_en": "/",
+    "url_es": "/es/",
+    "h1_en": "AAA and BSS software for telecom operators",
+    "h1_es": "Software AAA y BSS para operadores de telecomunicaciones",
+    "title_en": "AAA and BSS Software for Telecom Operators",
+    "title_es": null,
+    "meta_en": "Alepo makes AAA, policy, charging, billing and customer care software for telecom operators and ISPs, with AI built in. Request a demo.",
+    "meta_es": null,
+    "meta_en_chars": 135,
+    "breadcrumb": null,
+    "schema": [
+      "Organization",
+      "WebSite"
+    ],
+    "category_label": null,
+    "word_count": "600 to 900",
+    "faq": null,
+    "other_seo": "[Sub-line] One platform from network access to invoice. | 3. H2 Results at operators: 4 register metrics. 4. H2 Products: five group cards with 2 to 4 product links each. 5. H2 AI in Alepo products: carousel linking the hub. 6. H2 Solutions: 5 cards. | 8. H2 Why Alepo: Integration, Deployment, Delivery, Support. 9. H2 News and events: 3 dated items and the next event. 10. H2 Talk to us. | Category words in the H1, with the crafted line moved to the sub-line.",
+    "h1_note": "Option A (if every product's agent is Live): \"AI-native AAA and BSS software for telecom operators\". Option B: \"AAA and BSS software for telecom operators\". Was: \"AI-native software for networks and revenue\".",
+    "keywords": "Brand: alepo technologies (#2). Supports \"telecom software\".",
+    "keywords_es": "Supports \"software para telecomunicaciones\" (MX 60).",
+    "title_en_chars": 50
+  },
+  {
+    "id": "02",
+    "page_name": "Navigation",
+    "url_en": "every page",
+    "url_es": null,
+    "h1_en": null,
+    "h1_es": null,
+    "title_en": null,
+    "title_es": null,
+    "meta_en": null,
+    "meta_es": null,
+    "meta_en_chars": null,
+    "breadcrumb": null,
+    "schema": null,
+    "category_label": null,
+    "word_count": null,
+    "faq": null,
+    "other_seo": "[Spec] Section 5 | clickable headings; Billing sub-groups; \"By need\" links to exact sections (Replace Cisco ACS → Enterprise solution); footer uses menu labels and gains an accessibility statement and cookie settings | Build rules: plain HTML links (Google generally crawls only <a href> links), clickable group headings, open on click and hover, close with Esc, visible focus, full keyboard access."
+  },
+  {
+    "id": "03",
+    "page_name": "Products",
+    "url_en": "/products/",
+    "url_es": "/es/products/",
+    "h1_en": "Telecom software products",
+    "h1_es": null,
+    "title_en": "Telecom Software Products for Operators and ISPs",
+    "title_es": null,
+    "meta_en": "21 products for telecom operators and ISPs: AAA and TACACS+, billing and charging, provisioning, customer care and AI. Each runs alone or together.",
+    "meta_es": null,
+    "meta_en_chars": 147,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "five H2 group sections, each linking its category page with product cards (label, brand line, descriptor) → H2 Product map (draft map relabelled, every box a link, text alternative) → form",
+    "keywords": "telecom software (300 US, 1,200 global; IN 70)",
+    "redirect_from": "/products-services/",
+    "title_en_chars": 56
+  },
+  {
+    "id": "04",
+    "page_name": "Solutions",
+    "url_en": "/solutions/",
+    "url_es": "/es/solutions/",
+    "h1_en": "Solutions for telecom operators",
+    "h1_es": null,
+    "title_en": "Solutions for Telecom Operators and ISPs",
+    "title_es": null,
+    "meta_en": "Start from the network you run: fibre and cable ISPs, mobile operators, MVNOs and MVNEs, Wi-Fi and venues, or enterprise and government networks.",
+    "meta_es": null,
+    "meta_en_chars": 145,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "By operator (5 cards) · By need (8 links, Section 5.3) · Customers (STC, Digicel, Eswatini) · form | Breadcrumb adds Home; \"By need\" labels use the new product names and link to sections; form moves inline.",
+    "redirect_from": "/solutions (no slash)",
+    "title_en_chars": 48
+  },
+  {
+    "id": "05",
+    "page_name": "Services and support",
+    "url_en": "/services/",
+    "url_es": "/es/services/",
+    "h1_en": "Services and support",
+    "h1_es": null,
+    "title_en": "Telecom Software Deployment and Support Services",
+    "title_es": null,
+    "meta_en": "On premises or SaaS, by subscription. Alepo engineers handle migration, testing and training, and GTAC gives 24x7 technical support.",
+    "meta_es": null,
+    "meta_en_chars": 132,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "800 to 1,200",
+    "faq": null,
+    "other_seo": "[Anchors] #deployment #saas #professional-services #forward-deployed-engineers #support #integration #customer-success | Keep all draft sections and the deployment diagram (add a text alternative). Add H2 \"Customer success\" (named manager, regular reviews, escalation path) and a link from Deployment to Security › Data location.",
+    "title_en_chars": 56
+  },
+  {
+    "id": "06",
+    "page_name": "AI for Telecom",
+    "url_en": "/products/ai-for-telecom/",
+    "url_es": "/es/products/ai-for-telecom/",
+    "h1_en": "AI for telecom operators",
+    "h1_es": null,
+    "title_en": "AI in Telecom: AI Agents for Operators",
+    "title_es": "IA en Telecomunicaciones para Operadores",
+    "meta_en": "AI in telecom operations: agents that watch each Alepo product, assistants for care and NOC staff, and a person approves every change.",
+    "meta_es": null,
+    "meta_en_chars": 134,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "AI for Telecom"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "Can an agent change anything on its own?",
+        "a": null
+      },
+      {
+        "q": "Is our data used to train AI?",
+        "a": null
+      },
+      {
+        "q": "Our own language model?",
+        "a": null
+      },
+      {
+        "q": "Which products have an agent today?",
+        "a": null
+      },
+      {
+        "q": "How is access controlled?",
+        "a": null
+      }
+    ],
+    "other_seo": "How an agent works (Watches · Finds · Proposes) · Operations and field · AI Virtual Agent · AI Agent Assist · Limits (keep; strong trust content) · AI by product (status table for all 21, each row linking the product's #ai) | AI Sales Assistant and AI CCaaS sections if still sold · Resources · form | If they are still sold, each gets an H2 section with an anchor on the AI for Telecom page. | Breadcrumb fixed.",
+    "keywords": "ai in telecom (700 US, 2,600 global; IN 150, BR 100, ID 100, ZA 70) · ai for telecom (900 US) · agentic ai telecom (100 US)",
+    "keywords_es": "\"IA en telecomunicaciones\" (MX 150). Title \"IA en Telecomunicaciones para Operadores\".",
+    "redirect_from": "current AI hub URL",
+    "title_en_chars": 46
+  },
+  {
+    "id": "07",
+    "page_name": "Customers",
+    "url_en": "/customers/",
+    "url_es": "/es/customers/",
+    "h1_en": "Customer stories",
+    "h1_es": null,
+    "title_en": "Customer Stories from Telecom Operators",
+    "title_es": null,
+    "meta_en": "How operators such as STC, Digicel, SaskTel and Wind Telecom upgraded AAA, migrated BSS and launched new brands on Alepo.",
+    "meta_es": null,
+    "meta_en_chars": 121,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "[URL] /customers/ (keep) · stories at /customers/[slug]/ (for example /customers/stc-aaa-upgrade/) | Logo strip · filter links (product group, operator type, region) · 6 story cards each linking its own page · More stories · quote · After go-live · form | Each story gets a URL; Resources \"Case studies\" points here (one listing, not two).",
+    "title_en_chars": 47
+  },
+  {
+    "id": "08",
+    "page_name": "About Alepo",
+    "url_en": "/company/about/",
+    "url_es": "/es/company/about/",
+    "h1_en": "About Alepo",
+    "h1_es": null,
+    "title_en": "About Alepo Technologies",
+    "title_es": null,
+    "meta_en": "Alepo Technologies has built telecom software for over two decades, from Austin, Texas, with teams across the Americas, India and Africa.",
+    "meta_es": null,
+    "meta_en_chars": 137,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList",
+      "Organization"
+    ],
+    "category_label": null,
+    "word_count": "300 to 700",
+    "faq": null,
+    "other_seo": "/company/about/ (keep; #2 for \"alepo technologies\") | Keep Who we are · How we work · Offices (full addresses) · Leadership link · dated news. CTA \"Talk to us\". · Organization with address.",
+    "redirect_from": "/company",
+    "title_en_chars": 24,
+    "title_note": "(24; brand pages skip the suffix)"
+  },
+  {
+    "id": "09",
+    "page_name": "Leadership",
+    "url_en": "/company/leadership/",
+    "url_es": "/es/company/leadership/",
+    "h1_en": "Leadership",
+    "h1_es": null,
+    "title_en": "Leadership Team",
+    "title_es": null,
+    "meta_en": "The team that runs Alepo across product, delivery, sales and support, led by founder and CEO Jonathan Garini.",
+    "meta_es": null,
+    "meta_en_chars": 109,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 700",
+    "faq": null,
+    "other_seo": "14 cards: photo, name, role, two-line bio, LinkedIn. Photos replace initials; the hero drops \"Request a demo\".",
+    "title_en_chars": 23
+  },
+  {
+    "id": "10",
+    "page_name": "Partners",
+    "url_en": "/company/partners/",
+    "url_es": "/es/company/partners/",
+    "h1_en": "Partner program",
+    "h1_es": null,
+    "title_en": "Partner Program for Resellers and Integrators",
+    "title_es": null,
+    "meta_en": "Resellers and system integrators deliver Alepo products in their own markets, including Nomios, Italtel and Blue Arcus. Apply to become a partner.",
+    "meta_es": null,
+    "meta_en_chars": 146,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 700",
+    "faq": null,
+    "other_seo": "Partners today (logos, news links, and a link from each partner's site; Section 16) · Become a partner (4 steps) · application form (company, country, market, partner type). CTA \"Apply\" replaces the demo link.",
+    "title_en_chars": 53
+  },
+  {
+    "id": "11",
+    "page_name": "Security",
+    "url_en": "/company/security/",
+    "url_es": "/es/company/security/",
+    "h1_en": "Security",
+    "h1_es": null,
+    "title_en": "Security and Data Protection",
+    "title_es": null,
+    "meta_en": "How Alepo protects operator data: encryption, access control, privacy, 24x7 monitoring, AI safeguards and incident response, on premises or as SaaS.",
+    "meta_es": null,
+    "meta_en_chars": 148,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 700",
+    "faq": null,
+    "other_seo": "Keep the six areas and Data location. Add Certifications (only those held and current; ISO 9001:2015 per Alepo's blog, others to confirm), Vulnerability disclosure with security.txt, and a security review form. | CTA \"Request security documents\". Linked from every product's Specifications security row.",
+    "title_en_chars": 36
+  },
+  {
+    "id": "12",
+    "page_name": "Careers",
+    "url_en": "/company/careers/",
+    "url_es": "/es/company/careers/",
+    "h1_en": "Careers at Alepo",
+    "h1_es": null,
+    "title_en": "Telecom Software Jobs at Alepo Technologies",
+    "title_es": null,
+    "meta_en": "Build telecom software that runs on live operator networks. Open roles in Navi Mumbai, Pune, the United States and Latin America.",
+    "meta_es": null,
+    "meta_en_chars": 129,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList",
+      "JobPosting (every role page)"
+    ],
+    "category_label": null,
+    "word_count": "300 to 700",
+    "faq": null,
+    "other_seo": "/company/careers/ (keep) · roles at /company/careers/[role]/ | Impact · Team · Learning · Open roles with location filters · resume form. CTA \"See open roles\". · JobPosting on every role page (Section 15.2).",
+    "redirect_from": "/company/careers/apply-now/ → role pages",
+    "title_en_chars": 43,
+    "title_note": "(43; no suffix)"
+  },
+  {
+    "id": "13",
+    "page_name": "News and events",
+    "url_en": "/news/",
+    "url_es": "/es/news/",
+    "h1_en": "News and events",
+    "h1_es": null,
+    "title_en": "News and Events",
+    "title_es": null,
+    "meta_en": "Customer wins, product launches, partnerships and the events where you can meet Alepo.",
+    "meta_es": null,
+    "meta_en_chars": 86,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList",
+      "NewsArticle (item pages)"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "/news/ · /news/[slug]/ · /news/2025/ | Upcoming events (date, place, \"book a meeting\"; auto-expire) · Latest news (dated, typed: Customer · Product · Partner · Company) · year archive · press contact and subscribe | [Item template] H1 · date · type · 150 to 400 words · product tags (feed product Resources) · customer and partner links · NewsArticle markup · Spanish version for LATAM items",
+    "redirect_from": "current news URLs",
+    "title_en_chars": 23
+  },
+  {
+    "id": "14",
+    "page_name": "Resources",
+    "url_en": "/resources/",
+    "url_es": "/es/resources/",
+    "h1_en": "Resources",
+    "h1_es": null,
+    "title_en": "Telecom Software Resources",
+    "title_es": null,
+    "meta_en": "Guides for people who run operator networks, product datasheets, case studies and news from Alepo.",
+    "meta_es": null,
+    "meta_en_chars": 98,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "Blog · Library · Case studies (→ /customers/) · News · latest posts (4) · featured guide \"How to launch an MVNO\" (new) · topic links (RADIUS and AAA, TACACS+, charging and policy, BSS, TR-069, Wi-Fi, AI) · form",
+    "title_en_chars": 34
+  },
+  {
+    "id": "15",
+    "page_name": "Blog",
+    "url_en": "/blog/",
+    "url_es": "/es/blog/",
+    "h1_en": "Blog",
+    "h1_es": null,
+    "title_en": "Telecom Guides for Network and BSS Teams",
+    "title_es": null,
+    "meta_en": "Practical guides on RADIUS, TACACS+, Diameter, charging, policy, BSS and AI for the people who run operator networks.",
+    "meta_es": null,
+    "meta_en_chars": 117,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "/blog/ · /blog/page/2/ · optional /blog/topic/[topic]/ | Topic filter links · post cards (topic, title, date, read time) · numbered pagination with plain links · newsletter. Show the topic mix, not only RADIUS. | [Crawl fixes] 301 every ?p= address and remove the shortlink tag; self-canonical on each paginated page; dates visible.",
+    "redirect_from": "?p= addresses",
+    "title_en_chars": 48
+  },
+  {
+    "id": "16",
+    "page_name": "Library",
+    "url_en": "/library/",
+    "url_es": "/es/library/",
+    "h1_en": "Library",
+    "h1_es": null,
+    "title_en": "Telecom Product Datasheets and White Papers",
+    "title_es": null,
+    "meta_en": "Download Alepo datasheets, case studies and white papers in English and Spanish. Datasheets need no form.",
+    "meta_es": null,
+    "meta_en_chars": 105,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "300 to 600, plus cards",
+    "faq": null,
+    "other_seo": "Link filters (All · Datasheets · Case studies · White papers · EN or ES) · cards with type, product, language, date, file size · datasheets ungated, white papers behind a short form · 21 dated datasheets · PDF title metadata | Rename \"Converged Policy Control Datasheet\" → \"Policy Control (PCRF and PCF) Datasheet\"; \"WiFi Monetization Datasheet\" → \"Wi-Fi Offload and Calling Datasheet\"; \"AAA-Server\" → \"AAA Server\".",
+    "title_en_chars": 51
+  },
+  {
+    "id": "17",
+    "page_name": "Contact",
+    "url_en": "/contact-us/",
+    "url_es": "/es/contact-us/",
+    "h1_en": "Contact Alepo",
+    "h1_es": null,
+    "title_en": "Contact Sales and Support",
+    "title_es": null,
+    "meta_en": "Request a demo, talk to sales, submit an RFP or reach 24x7 support. Offices in the United States, Latin America, India and Africa.",
+    "meta_es": null,
+    "meta_en_chars": 130,
+    "breadcrumb": null,
+    "schema": [
+      "BreadcrumbList",
+      "Organization contactPoint"
+    ],
+    "category_label": null,
+    "word_count": "300 to 700",
+    "faq": null,
+    "other_seo": "/contact-us/ (keep; 6 referring domains) · /contact-us/thank-you/ | Form · Customer support (GTAC numbers) · Offices (full addresses) · Organization contactPoint | consent and privacy link · hidden UTM and product fields",
+    "title_en_chars": 33
+  },
+  {
+    "id": "18",
+    "page_name": "Fibre and cable ISPs",
+    "url_en": "/solutions/fibre-cable-isps/",
+    "url_es": "/es/solutions/fibre-cable-isps/",
+    "h1_en": "Software for fibre and cable ISPs",
+    "h1_es": "Software para ISP de fibra y cable",
+    "title_en": "ISP Software for Fibre and Cable Providers",
+    "title_es": null,
+    "meta_en": "ISP software for FTTH, cable and fixed-wireless providers: AAA, activation, home router management, billing and collections. Start with one product.",
+    "meta_es": null,
+    "meta_en_chars": 148,
+    "breadcrumb": [
+      "Home",
+      "Solutions",
+      "Fibre and cable ISPs"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "Can we keep push-based provisioning?",
+        "a": null
+      },
+      {
+        "q": "Do we need a BNG?",
+        "a": null
+      },
+      {
+        "q": "Can we start with AAA only?",
+        "a": null
+      },
+      {
+        "q": "Do you support fixed wireless?",
+        "a": null
+      }
+    ],
+    "other_seo": "Overview and facts · Live session changes → AAA · Billing day on the OLTs → Service Provisioning · Home router support → Device Management · Collections · AI for fibre and cable ISPs (Operations and field cards) · Where to start (AAA, Service Provisioning, Digital BSS) · Often added (Device Management, Collections, Self-Care Portal, CRM, AI Agent Assist) · story · Questions · form | All five use template 9.3, breadcrumb Home › Solutions › [Page], an inline form, and Spanish versions that lead with LATAM proof.",
+    "h1_was": "Fibre and cable ISPs",
+    "keywords": "isp billing software (100 US, 800 global; IN 200, commercial results from low-authority vendors, KD 46) · isp software (IN 200) · isp management software (150 US)",
+    "keywords_es": "\"software para ISP\" (CO 20; low). H1 \"Software para ISP de fibra y cable\".",
+    "title_en_chars": 50
+  },
+  {
+    "id": "19",
+    "page_name": "Mobile operators",
+    "url_en": "/solutions/mobile-operators/",
+    "url_es": "/es/solutions/mobile-operators/",
+    "h1_en": "Software for mobile operators",
+    "h1_es": null,
+    "title_en": "BSS and Charging Software for Mobile Operators",
+    "title_es": null,
+    "meta_en": "Real-time charging and policy, Wi-Fi offload and calling, and one BSS for prepaid and postpaid, beside the core and systems you already run.",
+    "meta_es": null,
+    "meta_en_chars": 140,
+    "breadcrumb": [
+      "Home",
+      "Solutions",
+      "Mobile operators"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "Can policy run beside our core vendor?",
+        "a": null
+      },
+      {
+        "q": "Prepaid and postpaid on one BSS?",
+        "a": null
+      },
+      {
+        "q": "How fast can marketing launch a bundle?",
+        "a": null
+      },
+      {
+        "q": "Can we add Wi-Fi calling?",
+        "a": null
+      }
+    ],
+    "other_seo": "Overview (new text) · Plans and bundles · Coverage · Usage records · AI for mobile operators (Online Charging card) · Where to start (OCS, Policy Control, Digital BSS) · Often added (HSS, Wi-Fi Offload, Mediation, Prepaid, AI Virtual Agent) · story · Questions · form | All five use template 9.3, breadcrumb Home › Solutions › [Page], an inline form, and Spanish versions that lead with LATAM proof.",
+    "keywords": "BSS for mobile operators, prepaid and postpaid long-tail queries",
+    "title_en_chars": 54
+  },
+  {
+    "id": "20",
+    "page_name": "MVNOs and MVNEs",
+    "url_en": "/solutions/mvnos-mvnes/",
+    "url_es": "/es/solutions/mvnos-mvnes/",
+    "h1_en": "Software for MVNOs and MVNEs",
+    "h1_es": "Software para OMV y MVNE",
+    "title_en": "MVNO and MVNE Platform Software",
+    "title_es": "Plataforma para OMV y MVNO",
+    "meta_en": "A defined launch package for new MVNO brands, and real-time charging and partner settlement for MVNEs that host several brands.",
+    "meta_es": null,
+    "meta_en_chars": 127,
+    "breadcrumb": [
+      "Home",
+      "Solutions",
+      "MVNOs and MVNEs"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "What is in the launch package?",
+        "a": null
+      },
+      {
+        "q": "Does each brand run on its own deployment?",
+        "a": null
+      },
+      {
+        "q": "Do you work with our host operator or MVNE?",
+        "a": null
+      },
+      {
+        "q": "How is pricing structured?",
+        "a": null
+      }
+    ],
+    "other_seo": "Overview (new text) · Launch package · Brand isolation · Settlement · AI for MVNOs · Where to start (BSS in a Box, OCS, Partner Settlement) · Often added (App, AI Virtual Agent, Dealer App, Policy) · \"How to launch an MVNO\" guide · Questions · form | All five use template 9.3, breadcrumb Home › Solutions › [Page], an inline form, and Spanish versions that lead with LATAM proof.",
+    "keywords": "mvne (500 US, 3,000 global; BR 350, IN 100, ZA 90) · mvno platform (200 US; ZA 40) · mvno software. Not mvno billing platform (owned by BSS in a Box).",
+    "keywords_es": "\"OMV\" (MX 1,000; results are telecom) · \"MVNO\" (MX 300, CO 50) · \"operador móvil virtual\" (MX 80). H1 \"Software para OMV y MVNE\"; title \"Plataforma para OMV y MVNO\".",
+    "title_en_chars": 39
+  },
+  {
+    "id": "21",
+    "page_name": "Wi-Fi and venues",
+    "url_en": "/solutions/wifi-venues/",
+    "url_es": "/es/solutions/wifi-venues/",
+    "h1_en": "Captive portal and carrier Wi-Fi for venues and operators",
+    "h1_es": "Portal cautivo y Wi-Fi para operadores y recintos",
+    "title_en": "Captive Portal Software for Operators and Venues",
+    "title_es": null,
+    "meta_en": "Captive portal software for venues and carrier Wi-Fi for mobile operators: branded logins, paid passes and automatic SIM login on existing access points.",
+    "meta_es": null,
+    "meta_en_chars": 153,
+    "breadcrumb": [
+      "Home",
+      "Solutions",
+      "Wi-Fi and venues"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": null,
+    "other_seo": "Overview (new text) · SIM login · Paid passes · Existing access points · AI for Wi-Fi · Where to start (Wi-Fi Offload and Calling, AAA) · Questions · form · Central American ISP, with links to MaxxSouth, ETB and Mauritius Telecom | All five use template 9.3, breadcrumb Home › Solutions › [Page], an inline form, and Spanish versions that lead with LATAM proof.",
+    "keywords": "captive portal software (200 US, 300 global, KD 0) · carrier wifi (90 US). Avoid \"hotspot software\" (laptop hotspots). Managed wifi only if Alepo offers it.",
+    "keywords_es": "\"portal cautivo\" (MX 350, CO 100) · \"hotspot wifi\" (MX 300, CO 60). H1 \"Portal cautivo y Wi-Fi para operadores y recintos\".",
+    "redirect_from": "/solutions/wifi-monetization/ (venue content)",
+    "title_en_chars": 56
+  },
+  {
+    "id": "22",
+    "page_name": "Enterprise and government networks",
+    "url_en": "/solutions/enterprise-government-networks/",
+    "url_es": "/es/solutions/enterprise-government-networks/",
+    "h1_en": "Device administration for enterprise and government networks",
+    "h1_es": null,
+    "title_en": "Cisco ACS Replacement for Enterprise Networks",
+    "title_es": null,
+    "meta_en": "Replace Cisco ACS and local device passwords with one TACACS+ server: a login per engineer, per-command authorization and a tamper-evident audit trail.",
+    "meta_es": null,
+    "meta_en_chars": 151,
+    "breadcrumb": [
+      "Home",
+      "Solutions",
+      "Enterprise and government networks"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "How do we migrate from Cisco ACS?",
+        "a": null
+      },
+      {
+        "q": "Does the audit trail reach our SIEM?",
+        "a": null
+      },
+      {
+        "q": "How do we remove a contractor's access?",
+        "a": null
+      },
+      {
+        "q": "Do you support MFA?",
+        "a": null
+      }
+    ],
+    "other_seo": "section #cisco-acs-replacement (target of the \"Replace Cisco ACS\" menu link) | Overview (new text) · H2 \"Cisco ACS replacement\" with the full migration steps · Audit · Contractor access · AI for device administration · Where to start (TACACS+, AI Agent Assist) · proof · Questions · form | All five use template 9.3, breadcrumb Home › Solutions › [Page], an inline form, and Spanish versions that lead with LATAM proof.",
+    "keywords": "cisco acs replacement (60 US; US-only demand) · enterprise device administration. Not tacacs+.",
+    "title_en_chars": 53
+  },
+  {
+    "id": "23",
+    "page_name": "AAA Server",
+    "url_en": "/products/aaa-server/",
+    "url_es": "/es/products/aaa-server/",
+    "h1_en": "AAA Server for telecom operators",
+    "h1_es": "Servidor AAA y RADIUS para operadores",
+    "title_en": "AAA Server for Operators: RADIUS and Diameter",
+    "title_es": null,
+    "meta_en": "RADIUS and Diameter AAA server for fibre, cable, Wi-Fi and mobile operators. Apply plan changes to live sessions and see every session in one console.",
+    "meta_es": null,
+    "meta_en_chars": 150,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Network Access & AAA",
+      "AAA Server"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What does an AAA server do?",
+        "a": null
+      },
+      {
+        "q": "RADIUS or Diameter?",
+        "a": null
+      },
+      {
+        "q": "Can it replace an AAA that is end of life or built in-house?",
+        "a": null
+      },
+      {
+        "q": "Plan change without reconnecting?",
+        "a": null
+      },
+      {
+        "q": "Which equipment?",
+        "a": null
+      },
+      {
+        "q": "How is it deployed?",
+        "a": null
+      },
+      {
+        "q": "How does AAA work with policy?",
+        "a": null
+      }
+    ],
+    "other_seo": "H3 \"Replace a legacy AAA\" (#replace-legacy-aaa) | Carry over the live page's answers first. | TACACS+ · Policy Control (two-way) · Wi-Fi Offload · HSS · RADIUS server guide · Diameter AAA guide · RADIUS CoA post · \"AAA server 5G AUSF\" post · 802.1X post · EAP-TLS post · RADIUS ports post · RADIUS firewall post · \"What is an AAA server\" post · AAA white paper | Keep the core copy and FAQ (the page holds #1 for a $13 term and an AI Overview citation).",
+    "brand_line": "Alepo AAA",
+    "definition": "Alepo AAA is a RADIUS and Diameter server that authenticates every subscriber session, applies the plan and records usage across fibre, cable, Wi-Fi and mobile networks.",
+    "h1_was": "AAA Server and Operations Console",
+    "keywords": "aaa server (300 / 1,400; IN 200) · aaa radius server (90 / 150, $13; the current page ranks #1) · radius server (2,500 / 9,900; IN 700, ID 250) · radius authentication · diameter protocol",
+    "keywords_es": "\"servidor RADIUS\" (MX 70, CO 20). H1 \"Servidor AAA y RADIUS para operadores\".",
+    "redirect_from": "/aaa-server/ · /solutions/aaa-server/ · /products-services/aaa-server",
+    "tier": "A",
+    "title_en_chars": 53
+  },
+  {
+    "id": "24",
+    "page_name": "Service Provisioning and Activation",
+    "url_en": "/products/service-provisioning/",
+    "url_es": "/es/products/service-provisioning/",
+    "h1_en": "Service Provisioning and Activation",
+    "h1_es": null,
+    "title_en": "Telecom Provisioning and Service Activation",
+    "title_es": null,
+    "meta_en": "Telecom provisioning with Fulfilment Manager: each activation, suspension and plan change reaches the right network element, confirmed per customer.",
+    "meta_es": null,
+    "meta_en_chars": 148,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Provisioning & Devices",
+      "Service Provisioning and Activation"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": null,
+    "other_seo": "Keep the 5 draft questions · Device Management · AAA · Digital BSS · Collections · Solutions: Fibre, Mobile, MVNOs | Copy says \"fulfilment\"; keyword fields use \"provisioning\".",
+    "brand_line": "Fulfilment Manager",
+    "definition": "Fulfilment Manager is Alepo's telecom provisioning and service activation gateway.",
+    "h1_was": "Fulfilment Manager",
+    "keywords": "telecom provisioning (90 / 150, KD 2) · provisioning in telecom (50 / 80) · service provisioning · service activation. Not \"service fulfillment\" (ecommerce results).",
+    "redirect_from": "Fulfilment Manager URLs (confirm)",
+    "tier": "B",
+    "title_en_chars": 51
+  },
+  {
+    "id": "25",
+    "page_name": "TACACS+ Server",
+    "url_en": "/products/tacacs-server/",
+    "url_es": "/es/products/tacacs-server/",
+    "h1_en": "TACACS+ Server for network device administration",
+    "h1_es": "Servidor TACACS+ para administración de dispositivos de red",
+    "title_en": "TACACS+ Server for Network Device Administration",
+    "title_es": null,
+    "meta_en": "TACACS+ server for every router, switch and firewall login: a login per engineer, per-command authorization and an audit trail sent to your SIEM.",
+    "meta_es": null,
+    "meta_en_chars": 145,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Network Access & AAA",
+      "TACACS+ Server"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "TACACS+ vs RADIUS",
+        "a": null
+      }
+    ],
+    "other_seo": "Keep the 6 draft questions (including TACACS+ vs RADIUS, a \"People also ask\" question) | H3 \"Replace Cisco ACS\": short summary linking /solutions/enterprise-government-networks/#cisco-acs-replacement | AAA · AI Agent Assist · Enterprise solution · \"What is TACACS+\" guide (#5) · TACACS port numbers post (#7) · TACACS+ security best practices post | Merge fallback: H2 \"TACACS+ Server\" with anchor #tacacs-server and its own menu link.",
+    "brand_line": "Alepo TACACS+",
+    "h1_was": "TACACS+ Server",
+    "keywords": "tacacs+ (1,100 / 2,900; IN 100, BR 60). Results are informational (Wikipedia, tacacs.com DR 6 at #3, Reddit), so add a short \"What is TACACS+\" block near the top. Secondary: tacacs server (100 / 500).",
+    "keywords_es": "\"TACACS\" (MX 90, CO 30). H1 \"Servidor TACACS+ para administración de dispositivos de red\".",
+    "redirect_from": "/solutions/tacacs/",
+    "tier": "A",
+    "title_en_chars": 56
+  },
+  {
+    "id": "26",
+    "page_name": "Wi-Fi Offload and Calling",
+    "url_en": "/products/wifi-offload-calling/",
+    "url_es": "/es/products/wifi-offload-calling/",
+    "h1_en": "Wi-Fi Offload and Calling for mobile operators",
+    "h1_es": null,
+    "title_en": "Wi-Fi Offload and Wi-Fi Calling for Operators",
+    "title_es": null,
+    "meta_en": "Mobile subscribers join Wi-Fi with their SIM and keep calling over it. Venues get branded logins and paid passes on the access points already installed.",
+    "meta_es": null,
+    "meta_en_chars": 152,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Network Access & AAA",
+      "Wi-Fi Offload and Calling"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": [
+      {
+        "q": "What is Wi-Fi offload?",
+        "a": null
+      },
+      {
+        "q": "Do we need new access points?",
+        "a": null
+      },
+      {
+        "q": "How do subscribers log in without a password?",
+        "a": null
+      },
+      {
+        "q": "Can venues sell passes?",
+        "a": null
+      },
+      {
+        "q": "Does it work with our HSS?",
+        "a": null
+      }
+    ],
+    "other_seo": "AAA · Policy · HSS · Wi-Fi and venues · Mobile operators · carrier Wi-Fi best practices post · AI copy made product-specific; related links fixed",
+    "keywords": "wifi offload (250 / 500; ID 20) · wifi offloading (600 global) · epdg (700 global) · carrier wifi. Never target \"wifi calling\" (consumer).",
+    "redirect_from": "/wifi-monetization/ (if product content)",
+    "tier": "B",
+    "title_en_chars": 53
+  },
+  {
+    "id": "27",
+    "page_name": "Device Management (TR-069 and TR-369)",
+    "url_en": "/products/device-management/",
+    "url_es": "/es/products/device-management/",
+    "h1_en": "TR-069 and TR-369 device management",
+    "h1_es": null,
+    "title_en": "TR-069 Device Management: ACS and TR-369 USP",
+    "title_es": null,
+    "meta_en": "TR-069 device management for home routers and ONTs: a TR-069 ACS and TR-369 USP Controller on your own servers, with no per-device cloud fee.",
+    "meta_es": null,
+    "meta_en_chars": 141,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Provisioning & Devices",
+      "Device Management (TR-069 and TR-369)"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": [
+      {
+        "q": "What is TR-069?",
+        "a": null
+      },
+      {
+        "q": "How is TR-069 different from TR-369?",
+        "a": null
+      },
+      {
+        "q": "Which routers and ONTs?",
+        "a": null
+      },
+      {
+        "q": "Per-device fee?",
+        "a": null
+      },
+      {
+        "q": "Safe firmware updates?",
+        "a": null
+      }
+    ],
+    "other_seo": "Service Provisioning · AAA · CRM · Fibre ISPs · TR-069 explainer | TR-069 (CWMP) ACS · TR-369 (USP) Controller · data models (confirm) · supported vendors and devices · firmware management · deployment",
+    "h1_was": "Home Router (CPE) and ONT Management",
+    "keywords": "tr-069 device management (50 / 70, KD 8) · tr-069 server (60 / 90) · tr-069 acs (30 / 50) · tr-369 usp (30 / 50) · cpe management. The blog explainer owns \"tr-069\", \"tr069\" and \"cwmp\" (their results are explainers). Avoid bare \"acs server\" (a racing-game site ranks #2).",
+    "redirect_from": "current router page (confirm)",
+    "tier": "B",
+    "title_en_chars": 52
+  },
+  {
+    "id": "28",
+    "page_name": "Subscriber Data Management (HSS)",
+    "url_en": "/products/subscriber-data-management/",
+    "url_es": "/es/products/subscriber-data-management/",
+    "h1_en": "Subscriber Data Management (HSS)",
+    "h1_es": null,
+    "title_en": "Subscriber Data Management (HSS) for 4G and IMS",
+    "title_es": null,
+    "meta_en": "A home subscriber server for 4G and IMS voice that works with another vendor's 5G core, so 5G is added without replacing the 4G subscriber server.",
+    "meta_es": null,
+    "meta_en_chars": 146,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Network Access & AAA",
+      "Subscriber Data Management (HSS)"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": [
+      {
+        "q": "What is an HSS?",
+        "a": null
+      },
+      {
+        "q": "Can we add 5G without replacing it?",
+        "a": null
+      },
+      {
+        "q": "IMS voice?",
+        "a": null
+      },
+      {
+        "q": "Which 5G core vendors?",
+        "a": null
+      },
+      {
+        "q": "Is it a UDM?",
+        "a": null
+      }
+    ],
+    "other_seo": "AAA · Policy · OCS · Mobile operators · MVNOs | S6a, Cx, Sh, SWx; precise 5G interworking statement; no UDM claim unless implemented",
+    "keywords": "subscriber data management (200 / 300; BR 20). Commercial results (Nokia, Ericsson, HPE; Titanium DR 27 at #6), so winnable. Secondary: home subscriber server. Avoid bare \"HSS\" and \"UDM\".",
+    "redirect_from": "/subscriber-data-management/ · /solutions/subscriber-data-management/",
+    "tier": "B",
+    "title_en_chars": 55
+  },
+  {
+    "id": "29",
+    "page_name": "Digital BSS",
+    "url_en": "/products/digital-bss/",
+    "url_es": "/es/products/digital-bss/",
+    "h1_en": "Digital BSS for telecom operators",
+    "h1_es": null,
+    "title_en": "Digital BSS for Telecom Operators",
+    "title_es": null,
+    "meta_en": "One configurable BSS to sell, charge, bill, collect and serve customers across mobile, fibre and broadband. Take the modules you need, keep what works.",
+    "meta_es": null,
+    "meta_en_chars": 150,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Digital BSS"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What is a digital BSS?",
+        "a": null
+      },
+      {
+        "q": "Keep our CRM or billing?",
+        "a": null
+      },
+      {
+        "q": "Prepaid and postpaid together?",
+        "a": null
+      },
+      {
+        "q": "Is it SaaS?",
+        "a": null
+      },
+      {
+        "q": "How are upgrades handled?",
+        "a": null
+      }
+    ],
+    "other_seo": "301 /solutions/digital-bss/ (#5, 20 referring domains; keep core copy) and /enterprise-bss/ | module map linking every BSS page (Lifecycle pattern) | BSS in a Box · OCS · CRM · Collections · Billing & BSS · \"Digital transformation for telecom\" article",
+    "keywords": "digital bss (90 / 600; IN 90). Telecom results with low-authority vendors (iWhaleCloud DR 48, 6D DR 32), so winnable. Secondary: telecom bss, bss telecom, bss software.",
+    "redirect_from": "/solutions/digital-bss/ · /enterprise-bss/",
+    "tier": "A",
+    "title_en_chars": 41
+  },
+  {
+    "id": "30",
+    "page_name": "Online Charging (OCS)",
+    "url_en": "/products/online-charging/",
+    "url_es": "/es/products/online-charging/",
+    "h1_en": "Online Charging System (OCS)",
+    "h1_es": null,
+    "title_en": "Online Charging System (OCS) for 4G and 5G",
+    "title_es": null,
+    "meta_en": "Online charging system (OCS) that charges every call, message and megabyte in real time. Change bundles and brands by configuration, not code.",
+    "meta_es": null,
+    "meta_en_chars": 142,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Online Charging (OCS)"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What is an OCS?",
+        "a": null
+      },
+      {
+        "q": "OCS vs converged charging (CHF)",
+        "a": null
+      },
+      {
+        "q": "Charging vs billing",
+        "a": null
+      },
+      {
+        "q": "Keep our prepaid system?",
+        "a": null
+      },
+      {
+        "q": "How fast is a new bundle?",
+        "a": null
+      }
+    ],
+    "other_seo": "Policy · Prepaid · Mediation · Digital BSS · \"What is OCS\" post (#5 for \"5g ocs\")",
+    "keywords": "online charging system (80 / 200) · ocs telecom. Telecom results with low-authority vendors (DR 8 at #5), so winnable. Secondary: convergent charging.",
+    "redirect_from": "confirm",
+    "tier": "A",
+    "title_en_chars": 50,
+    "title_note": "(50; \"5G\" only if CHF or Nchf is supported)"
+  },
+  {
+    "id": "31",
+    "page_name": "Policy Control (PCRF and PCF)",
+    "url_en": "/products/policy-control/",
+    "url_es": "/es/products/policy-control/",
+    "h1_en": "Policy Control (PCRF and PCF)",
+    "h1_es": null,
+    "title_en": "PCRF and 5G PCF Policy Control for Operators",
+    "title_es": null,
+    "meta_en": "PCRF and 5G PCF policy control: sell data plans by speed, app, time or cap and enforce them in real time, beside other vendors' cores.",
+    "meta_es": null,
+    "meta_en_chars": 134,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Policy Control (PCRF and PCF)"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What is a PCRF?",
+        "a": null
+      },
+      {
+        "q": "PCRF vs PCF",
+        "a": null
+      },
+      {
+        "q": "Works with our core vendor?",
+        "a": null
+      },
+      {
+        "q": "Plans without code?",
+        "a": null
+      },
+      {
+        "q": "How do boosts work?",
+        "a": null
+      }
+    ],
+    "other_seo": "AAA (two-way) · OCS · Digital BSS · Wi-Fi Offload · \"policy control and charging in 5G\" article | Gx to the packet gateway, Rx to IMS, Sy to OCS, N7 if PCF (confirm)",
+    "h1_note": "with \"PCF\" only if supported",
+    "keywords": "Bare \"pcrf\" results are a charity in the US and India; never use it as a primary or paid keyword. Primary: 5g pcf (150 / 200, KD 0) and pcf 5g (100 / 200). Secondary: policy and charging rules function (40 / 50) · pcrf telecom (100 global) · pcrf in 5g (Alepo's article ranks #5).",
+    "redirect_from": "/converged-policy-control/ · /solutions/converged-policy-control/",
+    "tier": "A",
+    "title_en_chars": 52,
+    "title_note": "If PCF is not supported: \"PCRF Policy Control for Telecom Operators\" (49)."
+  },
+  {
+    "id": "32",
+    "page_name": "Prepaid Offers and Vouchers",
+    "url_en": "/products/prepaid-offers-vouchers/",
+    "url_es": "/es/products/prepaid-offers-vouchers/",
+    "h1_en": "Prepaid Offers and Voucher Management",
+    "h1_es": null,
+    "title_en": "Mobile Recharge and Voucher Management Software",
+    "title_es": null,
+    "meta_en": "Mobile recharge and voucher software: prepaid plans, scratch-card and digital top-ups and bonuses, pushed to charging, policy and every channel.",
+    "meta_es": null,
+    "meta_en_chars": 144,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Prepaid Offers and Vouchers"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "700 to 1,000",
+    "faq": [
+      {
+        "q": "What is a voucher management system?",
+        "a": null
+      },
+      {
+        "q": "How are stolen cards blocked?",
+        "a": null
+      },
+      {
+        "q": "Which top-up channels?",
+        "a": null
+      }
+    ],
+    "other_seo": "OCS · Dealer App · Self-Care Mobile App · #vouchers on the OCS page",
+    "keywords": "mobile recharge software (40 / 150, KD 6) · evd system (30 / 100) · recharge voucher (300 global). \"voucher management system\" only for Indonesia (40) and India (30); US results are housing vouchers.",
+    "keywords_es": "\"sistema de recargas\" (MX 50) · \"recargas electrónicas\" (MX 30)",
+    "redirect_from": "confirm",
+    "tier": "C",
+    "title_en_chars": 55
+  },
+  {
+    "id": "33",
+    "page_name": "Collections and Dunning",
+    "url_en": "/products/collections-dunning/",
+    "url_es": "/es/products/collections-dunning/",
+    "h1_en": "Collections and Dunning for telecom",
+    "h1_es": "Cobranza automatizada para operadores de telecomunicaciones",
+    "title_en": "Telecom Collections and Dunning Software",
+    "title_es": null,
+    "meta_en": "Telecom collections and dunning: automate reminders, late fees, barring and restoration for unpaid bills, with a different policy per customer segment.",
+    "meta_es": null,
+    "meta_en_chars": 151,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Collections and Dunning"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": [
+      {
+        "q": "What is dunning?",
+        "a": null
+      },
+      {
+        "q": "Policies by segment?",
+        "a": null
+      },
+      {
+        "q": "Restoration after payment?",
+        "a": null
+      },
+      {
+        "q": "Works with our billing?",
+        "a": null
+      }
+    ],
+    "other_seo": "Digital BSS · Service Provisioning · Policy · Self-Care Portal · AI Virtual Agent",
+    "keywords": "Primary long-tail: telecom collections (40) · dunning telecom (20). \"dunning management\" (600 US, $15) stays secondary: its results are SaaS billing guides (Stripe DR 95, Zuora, Chargebee).",
+    "keywords_es": "\"cobranza automatizada\" (MX 100) · \"software de cobranza\" (MX 80, CO 60) · \"gestión de cobranza\" (40 and 40). H1 \"Cobranza automatizada para operadores de telecomunicaciones\".",
+    "redirect_from": "confirm",
+    "tier": "B",
+    "title_en_chars": 48
+  },
+  {
+    "id": "34",
+    "page_name": "Partner and MVNO Settlement",
+    "url_en": "/products/partner-mvno-settlement/",
+    "url_es": "/es/products/partner-mvno-settlement/",
+    "h1_en": "Partner and MVNO Settlement",
+    "h1_es": null,
+    "title_en": "Telecom Wholesale Billing and Partner Settlement",
+    "title_es": null,
+    "meta_en": "Telecom wholesale billing and partner settlement: onboard partners, rate their traffic and invoice carriers, MVNOs and resellers without spreadsheets.",
+    "meta_es": null,
+    "meta_en_chars": 150,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Partner and MVNO Settlement"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": null,
+    "other_seo": "BSS in a Box · Interconnect · Mediation · OCS · MVNOs and MVNEs",
+    "keywords": "telecom wholesale billing (80 / 250, KD 0) · telecom partner management (150 / 300) · mvno billing (150, $7) · partner settlement (40 / 150). Not bare \"wholesale billing\" (wholesale payments results).",
+    "redirect_from": "confirm",
+    "tier": "B",
+    "title_en_chars": 56
+  },
+  {
+    "id": "35",
+    "page_name": "Dealer App and Mobile POS",
+    "url_en": "/products/dealer-mobile-pos/",
+    "url_es": "/es/products/dealer-mobile-pos/",
+    "h1_en": "Telecom Dealer App and Mobile POS",
+    "h1_es": null,
+    "title_en": "Telecom Dealer App and Mobile POS",
+    "title_es": null,
+    "meta_en": "Sign-up, SIM activation, top-ups and bill payments on a dealer's or field agent's phone, with every sale recorded in CRM, billing and inventory.",
+    "meta_es": null,
+    "meta_en_chars": 144,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Customer Care & Channels",
+      "Dealer App and Mobile POS"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "700 to 1,000",
+    "faq": null,
+    "other_seo": "[Links] Prepaid · BSS in a Box · CRM",
+    "h1_was": "Mobile POS for Dealers and Agents",
+    "keywords": "Long-tail only: telecom pos (20 / 40). Not \"sim activation\" (consumer results), \"dealer management system\" (car dealers) or bare \"mobile pos\" (retail payments).",
+    "redirect_from": "confirm",
+    "tier": "C",
+    "title_en_chars": 41
+  },
+  {
+    "id": "36",
+    "page_name": "CRM and Customer Care",
+    "url_en": "/products/crm/",
+    "url_es": "/es/products/crm/",
+    "h1_en": "Telecom CRM for customer care",
+    "h1_es": null,
+    "title_en": "Telecom CRM and Customer Care Software",
+    "title_es": null,
+    "meta_en": "Telecom CRM for care agents: one page per customer with plans, billing, tickets and inventory, configurable processes and a built-in AI assistant.",
+    "meta_es": null,
+    "meta_en_chars": 146,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Customer Care & Channels",
+      "CRM and Customer Care"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What is a telecom CRM?",
+        "a": null
+      },
+      {
+        "q": "Works with our billing?",
+        "a": null
+      },
+      {
+        "q": "Assistant languages?",
+        "a": null
+      },
+      {
+        "q": "Processes without code?",
+        "a": null
+      }
+    ],
+    "other_seo": "AI Agent Assist · Self-Care Portal · Digital BSS · Dealer App · \"AI Integrated CRM\" post | keep both cards; real workspace screenshots",
+    "brand_line": "Alepo CRM",
+    "h1_was": "Alepo CRM",
+    "keywords": "telecom crm (200 / 700, $25; IN 50). Commercial results (Salesforce #2, TimelyBill DR 25, Variance DR 30, Cerillion DR 47 at #7), so winnable. Secondary: telecom crm software, customer care software.",
+    "redirect_from": "confirm",
+    "tier": "A",
+    "title_en_chars": 46
+  },
+  {
+    "id": "37",
+    "page_name": "Self-Care Portal",
+    "url_en": "/products/self-care-portal/",
+    "url_es": "/es/products/self-care-portal/",
+    "h1_en": "Telecom Self-Care Portal",
+    "h1_es": "Portal de autoservicio para operadores de telecomunicaciones",
+    "title_en": "Self-Service Portal Software for Telecom",
+    "title_es": null,
+    "meta_en": "Self-service portal software for telecom: a branded site where subscribers sign up, pay and get help, connected to Alepo CRM and the AI Virtual Agent.",
+    "meta_es": null,
+    "meta_en_chars": 150,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Customer Care & Channels",
+      "Self-Care Portal"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": null,
+    "other_seo": "Web portal only; link the app (38). | Self-Care Mobile App · AI Virtual Agent · CRM · state accessibility conformance only if verified",
+    "brand_line": "Selfcare Now",
+    "h1_was": "Selfcare Now",
+    "keywords": "self service portal software (150 / 450, KD 4) · customer portal software (900 / 2,300; horizontal, qualify with telecom). Not \"customer self service portal\" (government login results).",
+    "keywords_es": "\"portal de autoservicio\" (MX 150, $7) · \"portal de autogestión\" (CO 200). H1 \"Portal de autoservicio para operadores de telecomunicaciones\".",
+    "redirect_from": "Selfcare Now URL (confirm)",
+    "tier": "B",
+    "title_en_chars": 48
+  },
+  {
+    "id": "38",
+    "page_name": "Self-Care Mobile App",
+    "url_en": "/products/self-care-app/",
+    "url_es": "/es/products/self-care-app/",
+    "h1_en": "White-label telecom self-care app",
+    "h1_es": null,
+    "title_en": "White-Label Telecom Self-Care App",
+    "title_es": null,
+    "meta_en": "An iOS and Android app under your brand. Subscribers check usage, recharge, pay bills and change plans from their phone, with low-balance alerts.",
+    "meta_es": null,
+    "meta_en_chars": 145,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Customer Care & Channels",
+      "Self-Care Mobile App"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "700 to 1,000",
+    "faq": null,
+    "other_seo": "Keep both cards (voucher codes that start with zero) · #mobile-app on the Self-Care Portal page",
+    "keywords": "Long-tail only; avoid \"self care app\" (wellness)",
+    "redirect_from": "confirm",
+    "tier": "C",
+    "title_en_chars": 41
+  },
+  {
+    "id": "39",
+    "page_name": "BSS in a Box for MVNOs",
+    "url_en": "/products/bss-in-a-box/",
+    "url_es": "/es/products/bss-in-a-box/",
+    "h1_en": "BSS in a Box for MVNOs",
+    "h1_es": null,
+    "title_en": "BSS in a Box: MVNO Billing Platform",
+    "title_es": null,
+    "meta_en": "MVNO billing platform packaged for launch: self-care, CRM, billing, charging and mobile POS in one defined offer, each brand on its own deployment.",
+    "meta_es": null,
+    "meta_en_chars": 147,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "BSS in a Box for MVNOs"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What is included?",
+        "a": null
+      },
+      {
+        "q": "How long does a launch take?",
+        "a": null
+      },
+      {
+        "q": "Host operator or MVNE?",
+        "a": null
+      },
+      {
+        "q": "How is pricing structured?",
+        "a": null
+      },
+      {
+        "q": "What if we outgrow the box?",
+        "a": null
+      }
+    ],
+    "other_seo": "\"What's in the box\" checklist | the pricing block matters most here | Lüm Mobile · \"How to launch an MVNO\" guide | Digital BSS · Partner Settlement · Dealer App · OCS · MVNOs and MVNEs",
+    "keywords": "mvno billing platform (200 / 250; ZA 30; Aradial ranks #8, so winnable) · mvno billing ($7) · mvno platform · mvno bss. \"bss in a box\" has no demand.",
+    "redirect_from": "/bss-now/ · /solutions/bss-now/ (only if same offer)",
+    "tier": "A",
+    "title_en_chars": 43
+  },
+  {
+    "id": "40",
+    "page_name": "Interconnect and Roaming Settlement",
+    "url_en": "/products/interconnect-roaming-settlement/",
+    "url_es": "/es/products/interconnect-roaming-settlement/",
+    "h1_en": "Interconnect and Roaming Settlement",
+    "h1_es": null,
+    "title_en": "Interconnect Billing System and Roaming Settlement",
+    "title_es": null,
+    "meta_en": "Interconnect billing system for carrier interconnect and roaming traffic: rate, reconcile and settle with partner operators inside the Alepo stack.",
+    "meta_es": null,
+    "meta_en_chars": 147,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Interconnect and Roaming Settlement"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "700 to 1,000",
+    "faq": null,
+    "other_seo": "Name the supported roaming and interconnect standards and formats (confirm). Keep both AI cards (rate sheet not applied). Merge fallback: #interconnect on Partner Settlement.",
+    "keywords": "interconnect billing system (100 / 400, KD 0) · interconnect billing (IN 50, ZA 40) · interconnect settlement (300 global). A conversion page, not a traffic page.",
+    "redirect_from": "confirm",
+    "tier": "C",
+    "title_en_chars": 58
+  },
+  {
+    "id": "41",
+    "page_name": "Mediation and Revenue Assurance",
+    "url_en": "/products/mediation-revenue-assurance/",
+    "url_es": "/es/products/mediation-revenue-assurance/",
+    "h1_en": "Telecom mediation and revenue assurance",
+    "h1_es": null,
+    "title_en": "Telecom Mediation and Revenue Assurance",
+    "title_es": null,
+    "meta_en": "Telecom mediation and revenue assurance: Mediation Studio cleans every usage record before billing, and a ledger per file shows nothing was lost.",
+    "meta_es": null,
+    "meta_en_chars": 145,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS",
+      "Mediation and Revenue Assurance"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,100 to 1,600",
+    "faq": [
+      {
+        "q": "What is revenue assurance?",
+        "a": null
+      }
+    ],
+    "other_seo": "keep the 5 draft questions and add \"What is revenue assurance?\" | OCS · Digital BSS · Interconnect · Partner Settlement · its data sheet is Jonathan's reference format",
+    "brand_line": "Mediation Studio",
+    "h1_was": "Mediation Studio",
+    "keywords": "Co-primary: telecom mediation (200 US) and telecom revenue assurance (200 / 350, KD 1, $4.50). Secondary: revenue assurance (1,400 global; IN 150, BR 70, ZA 50, ID 40) · mediation in telecom (100) · revenue leakage (700 US).",
+    "redirect_from": "current Mediation Studio URL (confirm)",
+    "tier": "B",
+    "title_en_chars": 47
+  },
+  {
+    "id": "42",
+    "page_name": "AI Virtual Agent",
+    "url_en": "/products/ai-virtual-agent/",
+    "url_es": "/es/products/ai-virtual-agent/",
+    "h1_en": "AI Virtual Agent for telecom",
+    "h1_es": "Agente virtual con IA para telecomunicaciones",
+    "title_en": "AI Virtual Agent for Telecom Customer Service",
+    "title_es": null,
+    "meta_en": "AI customer service for telecom: a virtual agent on your website and app that answers around the clock, completes account tasks and hands off to people.",
+    "meta_es": null,
+    "meta_en_chars": 152,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "AI for Telecom",
+      "AI Virtual Agent"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "What can it do inside a customer's account?",
+        "a": null
+      },
+      {
+        "q": "When does it hand over?",
+        "a": null
+      },
+      {
+        "q": "Which languages?",
+        "a": null
+      },
+      {
+        "q": "Is our data used to train other models?",
+        "a": null
+      },
+      {
+        "q": "Can it use our own model?",
+        "a": null
+      }
+    ],
+    "other_seo": "H2 \"How the AI works\" replaces the standard AI section: actions in the BSS and CRM, guardrails, hand-off, languages, data privacy, your own language model. Drop the self-referential \"Always-on agent\" section. | AI Agent Assist · Self-Care Portal · CRM · AI for Telecom",
+    "brand_line": "AI Customer Assistant",
+    "h1_was": "AI Customer Assistant",
+    "keywords": "Primary: ai customer service telecom (60 / 150, KD 3). \"ai virtual agent\" (1,600 US) stays secondary: its results are contact-centre vendors (Zoom DR 92, RingCentral DR 87). Also ai customer service agent ($30; MX 150, BR 150, ID 200).",
+    "keywords_es": "\"agente virtual IA\" (CO 100, MX 30) · \"agente virtual\" (CO 80, MX 40). H1 \"Agente virtual con IA para telecomunicaciones\".",
+    "redirect_from": "/ai-customer-assistant/",
+    "tier": "A",
+    "title_en_chars": 53
+  },
+  {
+    "id": "43",
+    "page_name": "AI Agent Assist",
+    "url_en": "/products/ai-agent-assist/",
+    "url_es": "/es/products/ai-agent-assist/",
+    "h1_en": "AI Agent Assist for care and NOC teams",
+    "h1_es": null,
+    "title_en": "AI Agent Assist for Telecom Care and NOC Teams",
+    "title_es": null,
+    "meta_en": "AI agent assist for telecom care and NOC teams: answers from live console data, explains bills and failures and suggests the next step. Read-only.",
+    "meta_es": null,
+    "meta_en_chars": 146,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "AI for Telecom",
+      "AI Agent Assist"
+    ],
+    "schema": [
+      "BreadcrumbList",
+      "VideoObject (where a video plays)"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,200",
+    "faq": [
+      {
+        "q": "Can it change anything?",
+        "a": null
+      },
+      {
+        "q": "Which consoles?",
+        "a": null
+      },
+      {
+        "q": "Does it respect permissions?",
+        "a": null
+      },
+      {
+        "q": "Our own model?",
+        "a": null
+      },
+      {
+        "q": "How does it help new staff?",
+        "a": null
+      }
+    ],
+    "other_seo": "Tabs in the HTML: Care agent and NOC engineer | CRM · AI Virtual Agent · AAA · TACACS+ · AI for Telecom",
+    "brand_line": "AI Assist for Staff",
+    "h1_was": "AI Assist for Staff",
+    "keywords": "ai agent assist (800 / 1,200; IN 100). Contact-centre vendor results (Genesys DR 83), so lead with the telecom angle. Long-tail: ai noc (100 US, $9). Also agent assist (3,500 global).",
+    "redirect_from": "/ai-agent-assistant/ · /solutions/ai-agent-assistant/",
+    "tier": "A",
+    "title_en_chars": 54
+  },
+  {
+    "id": "44",
+    "page_name": "Network Access & AAA",
+    "url_en": "/products/network-access-aaa/",
+    "url_es": "/es/products/network-access-aaa/",
+    "h1_en": "Network access and AAA for operators",
+    "h1_es": null,
+    "title_en": "Network Access and AAA Software for Operators",
+    "title_es": null,
+    "meta_en": "AAA, TACACS+, Wi-Fi offload and subscriber data management for fibre, cable, Wi-Fi and mobile operators, with RADIUS and Diameter on one platform.",
+    "meta_es": null,
+    "meta_en_chars": 146,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Network Access & AAA"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "How is AAA different from TACACS+?",
+        "a": null
+      },
+      {
+        "q": "RADIUS or Diameter?",
+        "a": null
+      },
+      {
+        "q": "Do we need an HSS?",
+        "a": null
+      },
+      {
+        "q": "Can AAA and policy come from one vendor?",
+        "a": null
+      }
+    ],
+    "other_seo": "Products: AAA Server · TACACS+ Server · Wi-Fi Offload and Calling · Subscriber Data Management. | cross-link Policy Control. | Resources: RADIUS CoA post (#1 for \"radius coa\"), Diameter AAA guide, RADIUS ports post, \"What is TACACS+\" guide. | Template 9.2; breadcrumb Home › Products › [Category].",
+    "keywords": "AAA and RADIUS overview (no single head term)",
+    "keywords_not": "aaa server, aaa radius server, radius server, tacacs+",
+    "title_en_chars": 53
+  },
+  {
+    "id": "45",
+    "page_name": "Billing & BSS",
+    "url_en": "/products/billing-bss/",
+    "url_es": "/es/products/billing-bss/",
+    "h1_en": "Telecom billing software",
+    "h1_es": null,
+    "title_en": "Telecom Billing Software for Operators and ISPs",
+    "title_es": null,
+    "meta_en": "Billing, real-time charging, policy, mediation, collections and settlement for operators, MVNOs and ISPs. Take one module or the full suite.",
+    "meta_es": null,
+    "meta_en_chars": 140,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Billing & BSS"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": [
+      {
+        "q": "What is telecom billing software?",
+        "a": null
+      },
+      {
+        "q": "How is charging different from billing?",
+        "a": null
+      },
+      {
+        "q": "Can we keep our CRM?",
+        "a": null
+      },
+      {
+        "q": "Is it available as SaaS?",
+        "a": null
+      },
+      {
+        "q": "Prepaid and postpaid on one system?",
+        "a": null
+      }
+    ],
+    "other_seo": "H2 per sub-group (Billing · Charging and policy · Revenue assurance · Wholesale). Diagram: usage → mediation → charging and policy → billing → collections → settlement. | Resources: telecom billing system post, OCS post, new \"BSS vs OSS\" explainer. | Main landing page for the \"Billing and revenue\" campaign. | Template 9.2; breadcrumb Home › Products › [Category].",
+    "keywords": "telecom billing software (450 US, 900 global, $20; IN 50, ZA 50) · billing and revenue management (IN 100, ZA 50) · telecom bss · oss bss (IN 200)",
+    "keywords_not": "digital bss",
+    "title_en_chars": 55
+  },
+  {
+    "id": "46",
+    "page_name": "Provisioning & Devices",
+    "url_en": "/products/provisioning-devices/",
+    "url_es": "/es/products/provisioning-devices/",
+    "h1_en": "Service provisioning and device management",
+    "h1_es": null,
+    "title_en": "Service Provisioning and Device Management",
+    "title_es": null,
+    "meta_en": "Activate, suspend and restore services across OLTs, HSS, policy and AAA, and manage home routers and ONTs remotely with TR-069 and TR-369.",
+    "meta_es": null,
+    "meta_en_chars": 138,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Provisioning & Devices"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": null,
+    "other_seo": "Products: Service Provisioning and Activation · Device Management. | Resources: RADIUS MAC authentication for CPE post, new TR-069 explainer. | Template 9.2; breadcrumb Home › Products › [Category]. | Breadcrumb → hero (H1, definition, Request a demo) → product grid by sub-group (label, brand line, descriptor, \"for\" line) → How the products work together (diagram carrying the tagline) → AI in [category] → Solutions by operator type → featured case study → Resources (2 to 4 explainers) → Questions (4 to 5) → form.",
+    "keywords": "service delivery overview",
+    "keywords_not": "telecom provisioning, tr-069 device management",
+    "title_en_chars": 50
+  },
+  {
+    "id": "47",
+    "page_name": "Customer Care & Channels",
+    "url_en": "/products/customer-care-channels/",
+    "url_es": "/es/products/customer-care-channels/",
+    "h1_en": "Customer care and channels for telecom",
+    "h1_es": null,
+    "title_en": "Telecom Customer Care and Self-Care Software",
+    "title_es": null,
+    "meta_en": "A care workspace for agents, branded web and app self-care for subscribers, and a mobile POS for dealers, all connected to billing and AI.",
+    "meta_es": null,
+    "meta_en_chars": 138,
+    "breadcrumb": [
+      "Home",
+      "Products",
+      "Customer Care & Channels"
+    ],
+    "schema": [
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "900 to 1,300",
+    "faq": null,
+    "other_seo": "Products by user: care agents → CRM; subscribers → Self-Care Portal, App; dealers → Dealer App. | Resources: \"AI Integrated CRM\" post. | Template 9.2; breadcrumb Home › Products › [Category]. | Breadcrumb → hero (H1, definition, Request a demo) → product grid by sub-group (label, brand line, descriptor, \"for\" line) → How the products work together (diagram carrying the tagline) → AI in [category] → Solutions by operator type → featured case study → Resources (2 to 4 explainers) → Questions (4 to 5) → form.",
+    "keywords": "customer experience management telecom",
+    "keywords_not": "telecom crm, self service portal software",
+    "title_en_chars": 52
+  },
+  {
+    "id": "48",
+    "page_name": "Blog article",
+    "url_en": "/blog/[slug]/",
+    "url_es": "/es/blog/[slug]/",
+    "h1_en": null,
+    "h1_es": null,
+    "title_en": null,
+    "title_es": null,
+    "meta_en": null,
+    "meta_es": null,
+    "meta_en_chars": null,
+    "breadcrumb": [
+      "Home",
+      "Blog",
+      "[Topic]"
+    ],
+    "schema": [
+      "BlogPosting",
+      "BreadcrumbList"
+    ],
+    "category_label": null,
+    "word_count": "1,500 to 2,500",
+    "faq": null,
+    "other_seo": "Existing posts and root-level articles keep their URLs; ?p= shortlinks redirect with a 301. | published and updated dates · author with role · reading time · key takeaway box (2 to 3 lines that answer directly) · contents list for long posts · question-style H2s · diagrams with alt text · mandatory \"Where Alepo fits\" box linking the product that owns the commercial term · 3 related posts | One informational keyword per post; never a product's commercial term; update the date when revised",
+    "h1_note": "The post title, phrased as a question or explainer (for example \"What is an AAA server?\"). The no-comma rule applies: rewrite titles such as \"RADIUS Ports Explained: 1812, 1813, 1645, 1646 and 3799\" as \"RADIUS ports explained: which UDP and TCP ports to open\".",
+    "redirect_from": "?p= shortlinks"
+  }
+]

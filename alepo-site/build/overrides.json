@@ -1,0 +1,262 @@
+{
+  "_comment": "Per-page values that are NOT verbatim from the blueprint. EN entries are overrides with the reason; every ES entry is a draft written for this build and needs human review (blueprint rule 6.6). Where the blueprint gives a Spanish H1 or title it is used verbatim and marked 'bp'.",
+  "en": {
+    "01": {
+      "h1": "AAA and BSS software for telecom operators",
+      "why": "Blueprint Option B. Option A ('AI-native ...') only if every product's agent is Live: not confirmed."
+    },
+    "30": {
+      "title": "Online Charging System (OCS) for Operators | Alepo",
+      "why": "Blueprint: '5G' in the title only if CHF or Nchf is supported. The design copy names neither."
+    },
+    "31": {
+      "h1": "Policy Control (PCRF)",
+      "title": "PCRF Policy Control for Telecom Operators | Alepo",
+      "meta": "PCRF policy control: sell data plans by speed, app, time or cap and enforce them in real time, beside other vendors' cores.",
+      "why": "Blueprint: 'PCF' only if supported. The design copy never mentions PCF, so the blueprint's own fallback title is used and PCF is removed from the H1 and meta."
+    }
+  },
+  "es": {
+    "01": {
+      "h1": "Software AAA y BSS para operadores de telecomunicaciones",
+      "h1_src": "bp",
+      "title": "Software AAA y BSS para operadores de telecom | Alepo",
+      "meta": "Alepo desarrolla software AAA, de políticas, tarificación, facturación y atención al cliente para operadores e ISP, con IA integrada. Solicite una demo."
+    },
+    "03": {
+      "h1": "Software para telecomunicaciones",
+      "title": "Software para telecomunicaciones: productos | Alepo",
+      "meta": "21 productos para operadores e ISP: AAA y TACACS+, facturación y tarificación, aprovisionamiento, atención e IA. Cada uno funciona solo o en conjunto."
+    },
+    "04": {
+      "h1": "Soluciones para operadores de telecomunicaciones",
+      "title": "Soluciones para operadores de telecomunicaciones | Alepo",
+      "meta": "Empiece por la red que opera: ISP de fibra y cable, operadores móviles, OMV y MVNE, Wi-Fi y recintos, o redes empresariales y de gobierno."
+    },
+    "05": {
+      "h1": "Servicios y soporte",
+      "title": "Servicios de implementación y soporte | Alepo",
+      "meta": "En sus instalaciones o como SaaS, por suscripción. Ingenieros de Alepo se encargan de migración, pruebas y capacitación, y GTAC da soporte 24x7."
+    },
+    "06": {
+      "h1": "IA en telecomunicaciones para operadores",
+      "title": "IA en Telecomunicaciones para Operadores | Alepo",
+      "title_src": "bp",
+      "meta": "IA en telecomunicaciones: agentes que vigilan cada producto de Alepo, asistentes para atención y NOC, y una persona aprueba cada cambio."
+    },
+    "07": {
+      "h1": "Casos de clientes",
+      "title": "Casos de clientes de operadores | Alepo",
+      "meta": "Cómo operadores como STC, Digicel, SaskTel y Wind Telecom actualizaron su AAA, migraron su BSS y lanzaron nuevas marcas con Alepo."
+    },
+    "08": {
+      "h1": "Acerca de Alepo",
+      "title": "Acerca de Alepo Technologies",
+      "meta": "Alepo Technologies desarrolla software para telecomunicaciones desde hace más de dos décadas, desde Austin, Texas, con equipos en América, India y África."
+    },
+    "09": {
+      "h1": "Liderazgo",
+      "title": "Equipo directivo | Alepo",
+      "meta": "El equipo que dirige Alepo en producto, entrega, ventas y soporte, encabezado por su fundador y CEO Jonathan Garini."
+    },
+    "10": {
+      "h1": "Programa de socios",
+      "title": "Programa de socios para revendedores e integradores | Alepo",
+      "meta": "Revendedores e integradores de sistemas entregan productos de Alepo en sus mercados, entre ellos Nomios, Italtel y Blue Arcus. Solicite ser socio."
+    },
+    "11": {
+      "h1": "Seguridad",
+      "title": "Seguridad y protección de datos | Alepo",
+      "meta": "Cómo protege Alepo los datos del operador: cifrado, control de acceso, privacidad, monitoreo 24x7, salvaguardas de IA y respuesta a incidentes."
+    },
+    "12": {
+      "h1": "Empleo en Alepo",
+      "title": "Empleo en software para telecomunicaciones en Alepo",
+      "meta": "Cree software que funciona en redes reales de operadores. Vacantes en Navi Mumbai, Pune, Estados Unidos y América Latina."
+    },
+    "13": {
+      "h1": "Noticias y eventos",
+      "title": "Noticias y eventos | Alepo",
+      "meta": "Nuevos clientes, lanzamientos de productos, alianzas y los eventos donde puede reunirse con Alepo."
+    },
+    "14": {
+      "h1": "Recursos",
+      "title": "Recursos sobre software para telecomunicaciones | Alepo",
+      "meta": "Guías para quienes operan redes, fichas técnicas de producto, casos de clientes y noticias de Alepo."
+    },
+    "15": {
+      "h1": "Blog",
+      "title": "Guías de telecom para equipos de red y BSS | Alepo",
+      "meta": "Guías prácticas sobre RADIUS, TACACS+, Diameter, tarificación, políticas, BSS e IA para quienes operan redes de telecomunicaciones."
+    },
+    "16": {
+      "h1": "Biblioteca",
+      "title": "Fichas técnicas y documentos técnicos | Alepo",
+      "meta": "Descargue fichas técnicas, casos de clientes y documentos técnicos de Alepo en inglés y español. Las fichas técnicas no requieren formulario."
+    },
+    "17": {
+      "h1": "Contacto con Alepo",
+      "title": "Contacto con ventas y soporte | Alepo",
+      "meta": "Solicite una demo, hable con ventas, envíe una RFP o contacte al soporte 24x7. Oficinas en Estados Unidos, América Latina, India y África."
+    },
+    "18": {
+      "h1": "Software para ISP de fibra y cable",
+      "h1_src": "bp",
+      "title": "Software para ISP de fibra y cable | Alepo",
+      "meta": "Software para ISP de FTTH, cable e inalámbrico fijo: AAA, activación, gestión de routers del hogar, facturación y cobranza. Empiece con un producto."
+    },
+    "19": {
+      "h1": "Software para operadores móviles",
+      "title": "BSS y tarificación para operadores móviles | Alepo",
+      "meta": "Tarificación y políticas en tiempo real, Wi-Fi offload y llamadas por Wi-Fi, y un solo BSS para prepago y pospago, junto al núcleo que ya opera."
+    },
+    "20": {
+      "h1": "Software para OMV y MVNE",
+      "h1_src": "bp",
+      "title": "Plataforma para OMV y MVNO | Alepo",
+      "title_src": "bp",
+      "meta": "Un paquete de lanzamiento definido para nuevas marcas OMV, y tarificación en tiempo real y liquidación de socios para MVNE que alojan varias marcas."
+    },
+    "21": {
+      "h1": "Portal cautivo y Wi-Fi para operadores y recintos",
+      "h1_src": "bp",
+      "title": "Portal cautivo y hotspot wifi para operadores | Alepo",
+      "meta": "Portal cautivo para recintos y Wi-Fi de operador para redes móviles: inicios de sesión con su marca, pases pagados y acceso automático con la SIM."
+    },
+    "22": {
+      "h1": "Administración de dispositivos para redes empresariales y de gobierno",
+      "title": "Reemplazo de Cisco ACS para redes empresariales | Alepo",
+      "meta": "Reemplace Cisco ACS y las contraseñas locales con un servidor TACACS+: un usuario por ingeniero, autorización por comando y auditoría inalterable."
+    },
+    "23": {
+      "h1": "Servidor AAA y RADIUS para operadores",
+      "h1_src": "bp",
+      "title": "Servidor AAA y RADIUS para operadores | Alepo",
+      "meta": "Servidor AAA RADIUS y Diameter para operadores de fibra, cable, Wi-Fi y móviles. Aplique cambios de plan en sesiones activas y véalas todas en una consola."
+    },
+    "24": {
+      "h1": "Service Provisioning and Activation",
+      "title": "Aprovisionamiento y activación de servicios | Alepo",
+      "meta": "Aprovisionamiento con Fulfilment Manager: cada activación, suspensión y cambio de plan llega al elemento de red correcto, confirmado por cliente."
+    },
+    "25": {
+      "h1": "Servidor TACACS+ para administración de dispositivos de red",
+      "h1_src": "bp",
+      "title": "Servidor TACACS+ para administración de red | Alepo",
+      "meta": "Servidor TACACS+ para cada acceso a routers, switches y firewalls: un usuario por ingeniero, autorización por comando y auditoría enviada a su SIEM."
+    },
+    "26": {
+      "h1": "Wi-Fi Offload and Calling para operadores móviles",
+      "title": "Wi-Fi Offload y llamadas por Wi-Fi para operadores | Alepo",
+      "meta": "Los suscriptores móviles se conectan al Wi-Fi con su SIM y siguen llamando por él. Los recintos obtienen accesos con su marca y pases pagados."
+    },
+    "27": {
+      "h1": "Gestión de dispositivos TR-069 y TR-369",
+      "title": "Gestión de dispositivos TR-069: ACS y TR-369 USP | Alepo",
+      "meta": "Gestión de routers del hogar y ONT con TR-069: un ACS TR-069 y un controlador TR-369 USP en sus propios servidores, sin tarifa en la nube por dispositivo."
+    },
+    "28": {
+      "h1": "Subscriber Data Management (HSS)",
+      "title": "Subscriber Data Management (HSS) para 4G e IMS | Alepo",
+      "meta": "Un HSS para 4G y voz IMS que funciona con el núcleo 5G de otro proveedor, para sumar 5G sin reemplazar el servidor de suscriptores 4G."
+    },
+    "29": {
+      "h1": "Digital BSS para operadores de telecomunicaciones",
+      "title": "Digital BSS para operadores de telecomunicaciones | Alepo",
+      "meta": "Un BSS configurable para vender, tarificar, facturar, cobrar y atender en móvil, fibra y banda ancha. Tome los módulos que necesita y conserve el resto."
+    },
+    "30": {
+      "h1": "Online Charging System (OCS)",
+      "title": "Online Charging System (OCS) para operadores | Alepo",
+      "meta": "Online charging system (OCS) que tarifica cada llamada, mensaje y megabyte en tiempo real. Cambie paquetes y marcas por configuración, sin código."
+    },
+    "31": {
+      "h1": "Policy Control (PCRF)",
+      "title": "Control de políticas PCRF para operadores | Alepo",
+      "meta": "Control de políticas PCRF: venda planes de datos por velocidad, app, horario o tope y aplíquelos en tiempo real, junto a núcleos de otros proveedores."
+    },
+    "32": {
+      "h1": "Sistema de recargas y vouchers prepago",
+      "title": "Sistema de recargas y gestión de vouchers | Alepo",
+      "meta": "Sistema de recargas y vouchers: planes prepago, tarjetas raspables, recargas electrónicas y bonos, enviados a tarificación, políticas y cada canal."
+    },
+    "33": {
+      "h1": "Cobranza automatizada para operadores de telecomunicaciones",
+      "h1_src": "bp",
+      "title": "Software de cobranza para telecomunicaciones | Alepo",
+      "meta": "Cobranza automatizada para telecomunicaciones: recordatorios, recargos, bloqueo y restablecimiento por falta de pago, con una política por segmento."
+    },
+    "34": {
+      "h1": "Partner and MVNO Settlement",
+      "title": "Facturación mayorista y liquidación de socios | Alepo",
+      "meta": "Facturación mayorista y liquidación de socios: incorpore socios, tarifique su tráfico y facture a operadores, OMV y revendedores sin hojas de cálculo."
+    },
+    "35": {
+      "h1": "Dealer App y Mobile POS para telecomunicaciones",
+      "title": "App para distribuidores y punto de venta móvil | Alepo",
+      "meta": "Altas, activación de SIM, recargas y pagos en el teléfono del distribuidor o agente, con cada venta registrada en CRM, facturación e inventario."
+    },
+    "36": {
+      "h1": "CRM para atención al cliente en telecomunicaciones",
+      "title": "CRM y atención al cliente para telecomunicaciones | Alepo",
+      "meta": "CRM para agentes de atención: una página por cliente con planes, facturación, tickets e inventario, procesos configurables y un asistente de IA integrado."
+    },
+    "37": {
+      "h1": "Portal de autoservicio para operadores de telecomunicaciones",
+      "h1_src": "bp",
+      "title": "Portal de autoservicio para telecomunicaciones | Alepo",
+      "meta": "Portal de autoservicio para telecomunicaciones: un sitio con su marca donde los suscriptores se registran, pagan y reciben ayuda, conectado a Alepo CRM."
+    },
+    "38": {
+      "h1": "App de autogestión white-label para telecomunicaciones",
+      "title": "App de autogestión white-label para operadores | Alepo",
+      "meta": "Una app para iOS y Android con su marca. Los suscriptores consultan su consumo, recargan, pagan facturas y cambian de plan, con alertas de saldo bajo."
+    },
+    "39": {
+      "h1": "BSS in a Box para OMV",
+      "title": "BSS in a Box: plataforma de facturación para OMV | Alepo",
+      "meta": "Plataforma de facturación para OMV lista para lanzar: autogestión, CRM, facturación, tarificación y POS móvil en una oferta definida, cada marca aparte."
+    },
+    "40": {
+      "h1": "Interconnect and Roaming Settlement",
+      "title": "Facturación de interconexión y roaming | Alepo",
+      "meta": "Sistema de facturación de interconexión y roaming: tarifique, concilie y liquide con operadores socios dentro de la plataforma de Alepo."
+    },
+    "41": {
+      "h1": "Mediation and Revenue Assurance para telecomunicaciones",
+      "title": "Mediación y aseguramiento de ingresos | Alepo",
+      "meta": "Mediación y aseguramiento de ingresos: Mediation Studio limpia cada registro de uso antes de facturar, y un libro por archivo demuestra que nada se perdió."
+    },
+    "42": {
+      "h1": "Agente virtual con IA para telecomunicaciones",
+      "h1_src": "bp",
+      "title": "Agente virtual IA para atención al cliente | Alepo",
+      "meta": "Atención al cliente con IA para telecomunicaciones: un agente virtual en su sitio y su app que responde a toda hora, hace gestiones y deriva a personas."
+    },
+    "43": {
+      "h1": "AI Agent Assist para equipos de atención y NOC",
+      "title": "AI Agent Assist para equipos de atención y NOC | Alepo",
+      "meta": "AI Agent Assist para equipos de atención y NOC: respuestas con datos en vivo de la consola, explica facturas y fallas y sugiere el siguiente paso."
+    },
+    "44": {
+      "h1": "Acceso a la red y AAA para operadores",
+      "title": "Software de acceso a la red y AAA para operadores | Alepo",
+      "meta": "AAA, TACACS+, Wi-Fi offload y gestión de datos de suscriptores para operadores de fibra, cable, Wi-Fi y móviles, con RADIUS y Diameter en una plataforma."
+    },
+    "45": {
+      "h1": "Software de facturación para telecomunicaciones",
+      "title": "Software de facturación para operadores e ISP | Alepo",
+      "meta": "Facturación, tarificación en tiempo real, políticas, mediación, cobranza y liquidación para operadores, OMV e ISP. Tome un módulo o la suite completa."
+    },
+    "46": {
+      "h1": "Aprovisionamiento de servicios y gestión de dispositivos",
+      "title": "Aprovisionamiento y gestión de dispositivos | Alepo",
+      "meta": "Active, suspenda y restablezca servicios en OLT, HSS, políticas y AAA, y gestione routers del hogar y ONT de forma remota con TR-069 y TR-369."
+    },
+    "47": {
+      "h1": "Atención al cliente y canales para telecomunicaciones",
+      "title": "Software de atención y autoservicio para telecom | Alepo",
+      "meta": "Un espacio de trabajo para agentes, autoservicio web y app con su marca para suscriptores, y POS móvil para distribuidores, conectados a facturación e IA."
+    }
+  }
+}

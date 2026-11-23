@@ -1,0 +1,318 @@
+{
+  "_comment": "Product labels, brand lines and grouping from 'Alepo.com recommended Products menu.png' and the keyword map (Page name / Notes 'Brand line'). Product names stay in English on Spanish pages, as in the design. 'old' = names the design uses in link text; they are replaced by 'label' inside links to that product.",
+  "products": {
+    "p-aaa.html": {
+      "label": "AAA Server",
+      "brand": null,
+      "old": [
+        "AAA Server"
+      ]
+    },
+    "p-tacacs.html": {
+      "label": "TACACS+ Server",
+      "brand": null,
+      "old": [
+        "TACACS+ Server"
+      ]
+    },
+    "p-wifi.html": {
+      "label": "Wi-Fi Offload and Calling",
+      "brand": null,
+      "old": [
+        "Wi-Fi Offload and Calling"
+      ]
+    },
+    "p-hss.html": {
+      "label": "Subscriber Data Management (HSS)",
+      "brand": null,
+      "old": [
+        "Subscriber Data Management"
+      ]
+    },
+    "p-bss.html": {
+      "label": "Digital BSS",
+      "brand": null,
+      "old": [
+        "Digital BSS"
+      ]
+    },
+    "p-box.html": {
+      "label": "BSS in a Box for MVNOs",
+      "brand": null,
+      "old": [
+        "BSS in a Box"
+      ]
+    },
+    "p-ocs.html": {
+      "label": "Online Charging (OCS)",
+      "brand": null,
+      "old": [
+        "Online Charging"
+      ]
+    },
+    "p-pcrf.html": {
+      "label": "Policy Control (PCRF)",
+      "brand": null,
+      "old": [
+        "Policy Control"
+      ]
+    },
+    "p-vouchers.html": {
+      "label": "Prepaid Offers and Vouchers",
+      "brand": null,
+      "old": [
+        "Prepaid Offers and Vouchers"
+      ]
+    },
+    "p-mediation.html": {
+      "label": "Mediation and Revenue Assurance",
+      "brand": "Mediation Studio",
+      "old": [
+        "Mediation Studio"
+      ]
+    },
+    "p-dunning.html": {
+      "label": "Collections and Dunning",
+      "brand": null,
+      "old": [
+        "Collections and Dunning"
+      ]
+    },
+    "p-settlement.html": {
+      "label": "Partner and MVNO Settlement",
+      "brand": null,
+      "old": [
+        "Partner and MVNO Settlement"
+      ]
+    },
+    "p-interconnect.html": {
+      "label": "Interconnect and Roaming Settlement",
+      "brand": null,
+      "old": [
+        "Interconnect and Roaming Settlement"
+      ]
+    },
+    "p-ffm.html": {
+      "label": "Service Provisioning and Activation",
+      "brand": "Fulfilment Manager",
+      "old": [
+        "Fulfilment Manager"
+      ]
+    },
+    "p-cpe.html": {
+      "label": "Device Management (TR-069 and TR-369)",
+      "brand": null,
+      "old": [
+        "Home Router and ONT Management"
+      ]
+    },
+    "p-crm.html": {
+      "label": "CRM and Customer Care",
+      "brand": "Alepo CRM",
+      "old": [
+        "Alepo CRM"
+      ]
+    },
+    "p-selfcare.html": {
+      "label": "Self-Care Portal",
+      "brand": "Selfcare Now",
+      "old": [
+        "Selfcare Now"
+      ]
+    },
+    "p-app.html": {
+      "label": "Self-Care Mobile App",
+      "brand": null,
+      "old": [
+        "Self-Care Mobile App"
+      ]
+    },
+    "p-mpos.html": {
+      "label": "Dealer App and Mobile POS",
+      "brand": "Mobile POS",
+      "old": [
+        "Mobile POS"
+      ]
+    },
+    "p-aica.html": {
+      "label": "AI Virtual Agent",
+      "brand": "AI Customer Assistant",
+      "old": [
+        "AI Customer Assistant"
+      ]
+    },
+    "p-aiassist.html": {
+      "label": "AI Agent Assist",
+      "brand": "AI Assist for Staff",
+      "old": [
+        "AI Assist for Staff"
+      ]
+    }
+  },
+  "eyebrow": {
+    "_comment": "Brand line shown as styled text above the H1 on product pages (blueprint 6.1 'category label above it as styled text, not a heading' and 6.3 'Brand name in the first line'). Values from blueprint brand_line / keyword map 'Brand line'.",
+    "p-aaa.html": "Alepo AAA",
+    "p-tacacs.html": "Alepo TACACS+",
+    "p-ffm.html": "Fulfilment Manager",
+    "p-mediation.html": "Mediation Studio",
+    "p-crm.html": "Alepo CRM",
+    "p-selfcare.html": "Selfcare Now",
+    "p-mpos.html": "Mobile POS",
+    "p-aica.html": "AI Customer Assistant",
+    "p-aiassist.html": "AI Assist for Staff"
+  },
+  "groups": [
+    {
+      "cat": "aaa",
+      "sub": [
+        {
+          "label": null,
+          "items": [
+            "p-aaa.html",
+            "p-tacacs.html",
+            "p-wifi.html",
+            "p-hss.html"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "bss",
+      "sub": [
+        {
+          "label": "Billing",
+          "label_es": "Facturación",
+          "items": [
+            "p-bss.html",
+            "p-box.html"
+          ]
+        },
+        {
+          "label": "Charging and policy",
+          "label_es": "Tarificación y políticas",
+          "items": [
+            "p-ocs.html",
+            "p-pcrf.html",
+            "p-vouchers.html"
+          ]
+        },
+        {
+          "label": "Revenue assurance",
+          "label_es": "Aseguramiento de ingresos",
+          "items": [
+            "p-mediation.html",
+            "p-dunning.html"
+          ]
+        },
+        {
+          "label": "Wholesale",
+          "label_es": "Mayorista",
+          "items": [
+            "p-settlement.html",
+            "p-interconnect.html"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "prov",
+      "sub": [
+        {
+          "label": null,
+          "items": [
+            "p-ffm.html",
+            "p-cpe.html"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "care",
+      "sub": [
+        {
+          "label": null,
+          "items": [
+            "p-crm.html",
+            "p-selfcare.html",
+            "p-app.html",
+            "p-mpos.html"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "ai",
+      "sub": [
+        {
+          "label": null,
+          "items": [
+            "p-aica.html",
+            "p-aiassist.html"
+          ]
+        }
+      ]
+    }
+  ],
+  "home_cards": {
+    "_comment": "Home 'Products' section: five group cards (blueprint page 01 item 4). aaa and bss keep the design's own text and image; the other three take their image from a product page in the group and their text from the blueprint category meta (EN) or a translation of it (ES, needs review).",
+    "aaa": {
+      "desc": null,
+      "img_from": null
+    },
+    "bss": {
+      "desc": null,
+      "img_from": null
+    },
+    "prov": {
+      "desc": "Activate, suspend and restore services, and manage home routers and ONTs remotely.",
+      "desc_es": "Active, suspenda y restablezca servicios, y gestione routers del hogar y ONT de forma remota.",
+      "img_from": "p-ffm.html"
+    },
+    "care": {
+      "desc": "A care workspace for agents, self-care for subscribers and a mobile POS for dealers.",
+      "desc_es": "Un espacio de trabajo para agentes, autoservicio para suscriptores y POS móvil para distribuidores.",
+      "img_from": "p-crm.html"
+    },
+    "ai": {
+      "desc": "Agents that watch each Alepo product, and assistants for care and NOC staff and for subscribers.",
+      "desc_es": "Agentes que vigilan cada producto de Alepo, y asistentes para el personal de atención y NOC y para los suscriptores.",
+      "img_from": "p-aica.html"
+    }
+  },
+  "category_pages": {
+    "_comment": "Category landing pages (blueprint 9.2) are composed from design sections. 'rep' = product page whose hero image, AI section, customer story and resources are reused.",
+    "aaa": {
+      "rep": "p-aaa.html"
+    },
+    "bss": {
+      "rep": "p-bss.html"
+    },
+    "prov": {
+      "rep": "p-ffm.html"
+    },
+    "care": {
+      "rep": "p-crm.html"
+    }
+  },
+  "customer_success": {
+    "_comment": "New Services section #customer-success (keyword map row 05g). Every sentence is taken from the design's own copy (About, Customers and Services pages).",
+    "en": {
+      "h2": "Customer success",
+      "p": "Every customer has a customer success manager, and 24x7 support staffed by engineers.",
+      "li": [
+        "A named manager who runs regular reviews and is your escalation path.",
+        "Customer success comes with both managed and self-managed SaaS.",
+        "Role-based training at implementation, and an on-demand library afterwards."
+      ]
+    },
+    "es": {
+      "h2": "Éxito del cliente",
+      "p": "Cada cliente tiene un gerente de éxito del cliente y soporte 24x7 atendido por ingenieros.",
+      "li": [
+        "Un gerente asignado que dirige revisiones periódicas y es su vía de escalamiento.",
+        "El SaaS administrado y el autoadministrado incluyen éxito del cliente.",
+        "Capacitación por rol en la implementación y una biblioteca bajo demanda después."
+      ]
+    }
+  }
+}

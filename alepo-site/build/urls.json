@@ -1,0 +1,60 @@
+{
+  "_comment": "Design snapshot file -> public URL (EN; ES = /es + URL). From Alepo_website_structure_and_keyword_map.xlsx, column 'Proposed URL (EN)'. 'id' is the keyword-map row ID.",
+  "pages": {
+    "index.html":         {"id": "1",  "url": "/"},
+    "products.html":      {"id": "3",  "url": "/products/"},
+    "solutions.html":     {"id": "4",  "url": "/solutions/"},
+    "services.html":      {"id": "5",  "url": "/services/"},
+    "ai.html":            {"id": "6",  "url": "/products/ai-for-telecom/"},
+    "customers.html":     {"id": "7",  "url": "/customers/"},
+    "about.html":         {"id": "8",  "url": "/company/about/"},
+    "leadership.html":    {"id": "9",  "url": "/company/leadership/"},
+    "partners.html":      {"id": "10", "url": "/company/partners/"},
+    "security.html":      {"id": "11", "url": "/company/security/"},
+    "careers.html":       {"id": "12", "url": "/company/careers/"},
+    "news.html":          {"id": "13", "url": "/news/"},
+    "resources.html":     {"id": "14", "url": "/resources/"},
+    "blog.html":          {"id": "15", "url": "/blog/"},
+    "library.html":       {"id": "16", "url": "/library/"},
+    "contact.html":       {"id": "17", "url": "/contact-us/"},
+    "s-ftth.html":        {"id": "18", "url": "/solutions/fibre-cable-isps/"},
+    "s-mno.html":         {"id": "19", "url": "/solutions/mobile-operators/"},
+    "s-mvno.html":        {"id": "20", "url": "/solutions/mvnos-mvnes/"},
+    "s-wifi.html":        {"id": "21", "url": "/solutions/wifi-venues/"},
+    "s-ent.html":         {"id": "22", "url": "/solutions/enterprise-government-networks/"},
+    "p-aaa.html":         {"id": "23", "url": "/products/aaa-server/",                      "cat": "aaa"},
+    "p-ffm.html":         {"id": "24", "url": "/products/service-provisioning/",            "cat": "prov"},
+    "p-tacacs.html":      {"id": "25", "url": "/products/tacacs-server/",                   "cat": "aaa"},
+    "p-wifi.html":        {"id": "26", "url": "/products/wifi-offload-calling/",            "cat": "aaa"},
+    "p-cpe.html":         {"id": "27", "url": "/products/device-management/",               "cat": "prov"},
+    "p-hss.html":         {"id": "28", "url": "/products/subscriber-data-management/",      "cat": "aaa"},
+    "p-bss.html":         {"id": "29", "url": "/products/digital-bss/",                     "cat": "bss"},
+    "p-ocs.html":         {"id": "30", "url": "/products/online-charging/",                 "cat": "bss"},
+    "p-pcrf.html":        {"id": "31", "url": "/products/policy-control/",                  "cat": "bss"},
+    "p-vouchers.html":    {"id": "32", "url": "/products/prepaid-offers-vouchers/",         "cat": "bss"},
+    "p-dunning.html":     {"id": "33", "url": "/products/collections-dunning/",             "cat": "bss"},
+    "p-settlement.html":  {"id": "34", "url": "/products/partner-mvno-settlement/",         "cat": "bss"},
+    "p-mpos.html":        {"id": "35", "url": "/products/dealer-mobile-pos/",               "cat": "care"},
+    "p-crm.html":         {"id": "36", "url": "/products/crm/",                             "cat": "care"},
+    "p-selfcare.html":    {"id": "37", "url": "/products/self-care-portal/",                "cat": "care"},
+    "p-app.html":         {"id": "38", "url": "/products/self-care-app/",                   "cat": "care"},
+    "p-box.html":         {"id": "39", "url": "/products/bss-in-a-box/",                    "cat": "bss"},
+    "p-interconnect.html":{"id": "40", "url": "/products/interconnect-roaming-settlement/", "cat": "bss"},
+    "p-mediation.html":   {"id": "41", "url": "/products/mediation-revenue-assurance/",     "cat": "bss"},
+    "p-aica.html":        {"id": "42", "url": "/products/ai-virtual-agent/",                "cat": "ai"},
+    "p-aiassist.html":    {"id": "43", "url": "/products/ai-agent-assist/",                 "cat": "ai"}
+  },
+  "categories": {
+    "aaa":  {"id": "44", "url": "/products/network-access-aaa/",      "label": "Network Access & AAA",     "label_es": "Acceso a la red y AAA"},
+    "bss":  {"id": "45", "url": "/products/billing-bss/",             "label": "Billing & BSS",            "label_es": "Facturación y BSS"},
+    "prov": {"id": "46", "url": "/products/provisioning-devices/",     "label": "Provisioning & Devices",   "label_es": "Aprovisionamiento y dispositivos"},
+    "care": {"id": "47", "url": "/products/customer-care-channels/",   "label": "Customer Care & Channels", "label_es": "Atención al cliente y canales"},
+    "ai":   {"id": "6",  "url": "/products/ai-for-telecom/",           "label": "AI for Telecom",           "label_es": "IA para telecomunicaciones"}
+  },
+  "anchors": {
+    "services.html": {"professional": "professional-services", "engineers": "forward-deployed-engineers"}
+  },
+  "excluded": {
+    "menu.html": "Design board that documents the navigation; not a public page. Its header, mega menus and footer are on every page."
+  }
+}

@@ -1,0 +1,30 @@
+from,to,status,source,note
+/products-services/,/products/,301,keyword map row 3,
+/aaa-server/,/products/aaa-server/,301,keyword map row 23,
+/solutions/aaa-server/,/products/aaa-server/,301,keyword map row 23 + appendix G,22 referring domains; ranks #1 for aaa radius server
+/products-services/aaa-server,/products/aaa-server/,301,keyword map row 23,
+/solutions/tacacs/,/products/tacacs-server/,301,keyword map row 25,
+/subscriber-data-management/,/products/subscriber-data-management/,301,keyword map row 28,
+/solutions/subscriber-data-management/,/products/subscriber-data-management/,301,keyword map row 28,
+/solutions/digital-bss/,/products/digital-bss/,301,keyword map row 29 + appendix G,20 referring domains; ranks #5 for digital bss
+/enterprise-bss/,/products/digital-bss/,301,keyword map row 29,
+/converged-policy-control/,/products/policy-control/,301,keyword map row 31,
+/solutions/converged-policy-control/,/products/policy-control/,301,keyword map row 31,
+/ai-customer-assistant/,/products/ai-virtual-agent/,301,keyword map row 42,
+/ai-agent-assistant/,/products/ai-agent-assist/,301,keyword map row 43,
+/solutions/ai-agent-assistant/,/products/ai-agent-assist/,301,keyword map row 43,
+/company,/company/about/,301,keyword map row 8 + appendix G,
+/solutions,/solutions/,301,keyword map row 4 + appendix G,
+/bss-now/,/products/bss-in-a-box/,confirm,keyword map row 39,only if same offer
+/solutions/bss-now/,/products/bss-in-a-box/,confirm,keyword map row 39 + appendix G,only if same offer
+/wifi-monetization/,/products/wifi-offload-calling/,confirm,keyword map row 26,only if product content
+/solutions/wifi-monetization/,/solutions/wifi-venues/,confirm,keyword map row 21 + appendix G,301 by content match (venue content)
+/solutions/ai-sales-assistant/,/products/ai-for-telecom/#ai-sales-assistant,confirm,keyword map T10,decision: still sold? if not 301 to the closest page
+/solutions/ai-ccaas-assistant/,/products/ai-for-telecom/#ai-ccaas,confirm,keyword map T11,decision: still sold? if not 301 to the closest page
+/company/careers/apply-now/,/company/careers/,confirm,keyword map row 12,map says redirect to role pages; no role pages yet
+[current AI hub URL],/products/ai-for-telecom/,confirm,keyword map row 6,old URL not given
+[current Mediation Studio URL],/products/mediation-revenue-assurance/,confirm,keyword map row 41,old URL not given
+[Fulfilment Manager URLs],/products/service-provisioning/,confirm,keyword map row 24,old URL not given
+[current router page],/products/device-management/,confirm,keyword map row 27,old URL not given
+[Selfcare Now URL],/products/self-care-portal/,confirm,keyword map row 37,old URL not given
+[?p= addresses],matching post,confirm,keyword map row 15 + blueprint 15.1,301 every ?p= address; needs the live crawl
