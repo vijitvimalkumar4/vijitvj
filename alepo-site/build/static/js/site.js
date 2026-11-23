@@ -204,9 +204,32 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   root.classList.add('js-on');
 
+  // Lenis smooth scrolling: wheel and trackpad only (touch stays native), not with reduced motion
+  if (!reduce && window.Lenis && !window.__lenis) {
+    var headerOffset = function () { var h = document.querySelector('header'); return -((h ? h.getBoundingClientRect().height : 0) + 16); };
+    var lenis = window.__lenis = new window.Lenis({
+      duration: 1.15,
+      easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+      autoRaf: true,
+      // menus and other inner scroll areas keep native scrolling
+      prevent: function (node) { return !!(node.closest && node.closest('.mp, .mnav, [data-lenis-prevent]')); }
+    });
+    // in-page anchors glide to their section (links like #!/page in the single-file copy are routes, not anchors)
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest && e.target.closest('a[href^="#"]'); if (!a) return;
+      var h = a.getAttribute('href'); if (h.length < 2 || h.charAt(1) === '!') return;
+      var t = document.getElementById(decodeURIComponent(h.slice(1))); if (!t) return;
+      e.preventDefault();
+      lenis.scrollTo(t, { offset: headerOffset() });
+      if (history.pushState) history.pushState(null, '', h);
+    });
+    document.documentElement.classList.add('x-lenis');
+  }
+
   document.querySelectorAll('[data-top]').forEach(function (b) {
     b.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      if (window.__lenis) window.__lenis.scrollTo(0); else window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
       var first = document.querySelector('header a'); if (first) first.focus({ preventScroll: true });
     });
   });

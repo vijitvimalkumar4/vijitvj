@@ -53,6 +53,7 @@ for f in sorted(os.listdir(os.path.join(PUB, 'assets', 'img'))):
 opt = lambda *p: read(os.path.join(PUB, *p)) if os.path.exists(os.path.join(PUB, *p)) else ''
 css = opt('assets', 'css', 'site-fixes.css') + '\n' + opt('assets', 'css', 'site-polish.css')
 site_js = opt('assets', 'js', 'site.js')
+lenis_js = opt('assets', 'js', 'lenis.min.js')
 # the site script reads the query string; in this file the query lives in the hash
 site_js = site_js.replace('new URLSearchParams(location.search)', 'new URLSearchParams(window.__q || "")')
 site_js = 'window.__initSite = function () {\n' + site_js + '\n};'
@@ -102,16 +103,16 @@ router = r'''
       root.querySelectorAll('form[data-form]').forEach(function (f) { f.dataset.endpoint = ''; f.dataset.msgError = OFFLINE[page.l] || OFFLINE.en; f.removeAttribute('action'); });
       window.__q = r.query;
       window.__initSite();
-      if (!r.anchor) window.scrollTo(0, 0);
+      if (!r.anchor) { if (window.__lenis) window.__lenis.scrollTo(0, { immediate: true, force: true }); else window.scrollTo(0, 0); }
     }
-    if (r.anchor) { var el = document.getElementById(r.anchor); if (el) el.scrollIntoView(); }
+    if (r.anchor) { var el = document.getElementById(r.anchor); if (el) { if (window.__lenis) window.__lenis.scrollTo(el, { immediate: true, force: true, offset: -120 }); else el.scrollIntoView(); } }
   }
   // in-page anchors (#overview) scroll without leaving the page
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#"]');
     if (!a || a.getAttribute('href').indexOf('#!') === 0 || a.getAttribute('href') === '#') return;
     var el = document.getElementById(a.getAttribute('href').slice(1));
-    if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
+    if (el) { e.preventDefault(); if (window.__lenis) window.__lenis.scrollTo(el, { offset: -120 }); else el.scrollIntoView({ behavior: 'smooth' }); }
   });
   window.addEventListener('hashchange', function () { if (location.hash.indexOf('#!') === 0 || location.hash === '') render(); });
   unpack().then(function (p) { PAGES = p; render(); }).catch(function (err) {
@@ -135,6 +136,7 @@ html = f'''<!doctype html>
 <div id="app"><p style="padding:32px;font:16px Arial,sans-serif;color:#565b6b">Loading the Alepo website…</p></div>
 <script id="pages" type="application/octet-stream">{packed}</script>
 <script>window.__IMGS = {json.dumps(imgs)};</script>
+<script>{lenis_js.replace('</script', '<\\/script')}</script>
 <script>{site_js}</script>
 <script>{router}</script>
 </body>

@@ -513,3 +513,10 @@ main details > summary { min-height: 60px; }
   /* menus drop in further */
   .dnav .mp > div { transition: translate 0.45s var(--x-ease), opacity 0.3s ease; translate: 0 -16px; }
 }
+
+/* ================= Lenis smooth scrolling ================= */
+html.lenis, html.lenis body { height: auto; }
+html.lenis, .lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent], .lenis.lenis-smooth .mp > div, .lenis.lenis-smooth .mnav > div { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth iframe { pointer-events: none; }

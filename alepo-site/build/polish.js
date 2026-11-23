@@ -3,6 +3,9 @@
 window.__alepoPolish = function (cfg, doc) {
   const css = doc.createElement('link'); css.rel = 'stylesheet'; css.href = '/assets/css/site-polish.css';
   doc.head.appendChild(css);
+  // Lenis smooth scrolling (local copy, MIT), loaded before site.js
+  const siteJs = doc.head.querySelector('script[src="/assets/js/site.js"]');
+  if (siteJs && !doc.head.querySelector('script[src="/assets/js/lenis.min.js"]')) { const l = doc.createElement('script'); l.src = '/assets/js/lenis.min.js'; l.defer = true; siteJs.before(l); }
   const main = doc.querySelector('main');
   if (!main) return;
   const bg = e => getComputedStyle(e).backgroundColor;

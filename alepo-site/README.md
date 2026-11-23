@@ -358,6 +358,10 @@ Every page type was reviewed, not only the parents. Changes are pattern-based, s
 
 Checked with axe (WCAG 2.2 AA and best practice) on 23 pages at 1440 px and 390 px: no violations, no sideways scrolling.
 
+### Lenis smooth scrolling
+
+Mouse-wheel and trackpad scrolling glide with Lenis 1.1.20 (MIT; local copy in `build/static/js/lenis.min.js`, loaded before `site.js`; no third-party CDN). Settings: duration 1.15 s with an exponential ease-out. Touch scrolling on phones and tablets stays native. In-page links (sub-menu, "Back to top") glide to their section below the sticky header. The mega menus and phone menu keep native scrolling (`prevent`), as does anything marked `data-lenis-prevent`. Off with reduced motion. The single-file copy includes Lenis too and resets it on every page change.
+
 ### Footer
 
 `polish.js` rebuilds the footer from the same links and form (the only new words are the "Offices" heading and the back-to-top label):
