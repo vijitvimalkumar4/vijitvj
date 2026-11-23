@@ -312,7 +312,7 @@ The label is a small uppercase eyebrow with a divider; the seven names are set a
 
 Brand gradients (indigo #2D1D8F to violet #4A34D6, accents violet to cyan) on: buttons, the top bar, light-hero headlines (ink to indigo text), heading accent bars, result and fact figures, icon tiles (soft at rest, filled on hover), menu promo cards, step numbers and avatars, content card covers, tinted and dark bands, and the footer (including its headline). Card faces stay white and shadows stay neutral.
 
-The demo band ("Talk to us", "Request a demo") is a gradient panel with three soft glows drifting slowly, a dot grid that moves gently, and a light sweep across its buttons on hover. All of this stops under reduced motion.
+The demo band ("Talk to us", "Request a demo") is a gradient panel with three soft glows drifting slowly, a dot grid that moves gently, and a light sweep across its buttons on hover. The same sweep runs on every primary button (indigo buttons, white buttons on dark backgrounds, the footer demo button and the phone demo bar). All of this stops under reduced motion.
 
 ### Child pages
 

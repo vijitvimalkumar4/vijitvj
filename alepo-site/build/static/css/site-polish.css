@@ -385,7 +385,10 @@ main details > summary { min-height: 60px; }
 .x-orbs i:nth-child(1) { width: 420px; height: 420px; right: -80px; top: -140px; background: radial-gradient(circle, rgba(124, 108, 255, 0.6), transparent 70%); }
 .x-orbs i:nth-child(2) { width: 360px; height: 360px; left: -100px; bottom: -160px; background: radial-gradient(circle, rgba(85, 203, 227, 0.5), transparent 70%); }
 .x-orbs i:nth-child(3) { width: 260px; height: 260px; left: 45%; top: 30%; background: radial-gradient(circle, rgba(155, 120, 255, 0.4), transparent 70%); }
-.x-cta a { position: relative; overflow: hidden; }
+/* light sweep on hover: the demo band's buttons and every primary button */
+.x-cta a, .x-btn, .x-btn-light, .xf-btn, .mcta a { position: relative; overflow: hidden; }
+.x-btn::after, .mcta a::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%); transform: translateX(-120%); }
+.x-btn-light::after, .xf-btn::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 30%, rgba(80, 60, 235, 0.18) 50%, transparent 70%); transform: translateX(-120%); }
 .x-cta a::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 30%, rgba(80, 60, 235, 0.18) 50%, transparent 70%); transform: translateX(-120%); }
 .x-cta a:not(.x-btn-light)::after { background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%); }
 @media (prefers-reduced-motion: no-preference) {
@@ -397,7 +400,7 @@ main details > summary { min-height: 60px; }
   .x-orbs i:nth-child(2) { animation: x-drift2 22s ease-in-out infinite alternate; }
   .x-orbs i:nth-child(3) { animation: x-drift3 26s ease-in-out infinite alternate; }
   .x-cta::before { animation: x-dots 6s linear infinite; }
-  .x-cta a:hover::after { transform: translateX(120%); transition: transform 0.75s var(--x-ease); }
+  .x-cta a:hover::after, .x-btn:hover::after, .x-btn-light:hover::after, .xf-btn:hover::after, .mcta a:hover::after { transform: translateX(120%); transition: transform 0.75s var(--x-ease); }
 }
 
 /* ---------- motion: quiet fades, played once ---------- */
