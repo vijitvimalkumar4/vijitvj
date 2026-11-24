@@ -166,7 +166,7 @@ function parse(req, raw) {
 }
 
 // ---------- static files ----------
-const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.csv': 'text/csv; charset=utf-8' };
+const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json', '.svg': 'image/svg+xml', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.csv': 'text/csv; charset=utf-8', '.mp4': 'video/mp4', '.webm': 'video/webm' };
 const redirects = new Map(), prefixes = [];
 try {
   for (const line of fs.readFileSync(path.join(PUBLIC, '_redirects'), 'utf8').split('\n')) {
@@ -206,7 +206,19 @@ function sendFile(req, res, file, status = 200) {
     const enc = /\bbr\b/.test(accept) ? 'br' : /\bgzip\b/.test(accept) ? 'gzip' : '';
     if (enc) { const buf = compressed(file, enc); res.writeHead(status, { ...headers, 'content-encoding': enc, 'content-length': buf.length }); return res.end(req.method === 'HEAD' ? undefined : buf); }
   }
-  res.writeHead(status, headers);
+  // video: byte ranges, so Safari and seeking work (206 Partial Content)
+  const size = fs.statSync(file).size;
+  headers['accept-ranges'] = 'bytes';
+  const range = /^bytes=(\d*)-(\d*)$/.exec(String(req.headers.range || ''));
+  if (range && status === 200) {
+    let start = range[1] === '' ? Math.max(0, size - Number(range[2])) : Number(range[1]);
+    let end = range[1] !== '' && range[2] !== '' ? Math.min(Number(range[2]), size - 1) : size - 1;
+    if (start > end || start >= size) { res.writeHead(416, { 'content-range': `bytes */${size}`, ...SECURITY }); return res.end(); }
+    res.writeHead(206, { ...headers, 'content-range': `bytes ${start}-${end}/${size}`, 'content-length': end - start + 1 });
+    if (req.method === 'HEAD') return res.end();
+    return fs.createReadStream(file, { start, end }).pipe(res);
+  }
+  res.writeHead(status, { ...headers, 'content-length': size });
   if (req.method === 'HEAD') return res.end();
   fs.createReadStream(file).pipe(res);
 }

@@ -401,7 +401,8 @@
   var bg = hero.querySelector('.c-hx-bg'), v = hero.querySelector('.c-hx-video'), cards = [].slice.call(hero.querySelectorAll('.c-glass'));
   var saver = navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType || ''));
   if (v && !reduce && !saver) {
-    v.src = v.dataset.src;
+    // H.264 where the browser has it, otherwise the WebM copy
+    v.src = v.canPlayType('video/mp4; codecs="avc1.640028"') ? v.dataset.src : (v.dataset.webm || v.dataset.src);
     v.addEventListener('playing', function () { v.classList.add('is-on'); });
     new IntersectionObserver(function (es) { if (es[0].isIntersecting && !document.hidden) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); }, { threshold: 0.05 }).observe(hero);
     document.addEventListener('visibilitychange', function () { if (document.hidden) v.pause(); });

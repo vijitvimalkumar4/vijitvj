@@ -60,8 +60,20 @@ css = re.sub(r"url\('/assets/fonts/([\w.\-]+\.woff2)'\)", _font, css)
 lenis_js = opt('assets', 'js', 'lenis.min.js')
 # the site script reads the query string; in this file the query lives in the hash
 site_js = site_js.replace('new URLSearchParams(location.search)', 'new URLSearchParams(window.__q || "")')
+site_js = site_js.replace("    v.src = v.canPlayType(", "    if (v.dataset.src === '#hero-video') { var hv = document.getElementById('hero-video'); v.dataset.src = v.dataset.webm = hv ? hv.textContent.trim() : ''; }\n    v.src = v.canPlayType(")
 site_js = 'window.__initSite = function () {\n' + site_js + '\n};'
 
+# the Home hero loop is embedded too, so the offline file plays it
+_vid = os.path.join(PUB, 'assets', 'video', 'hero-loop.mp4')
+if os.path.exists(_vid):
+    _uri = 'data:video/mp4;base64,' + base64.b64encode(open(_vid, 'rb').read()).decode()
+    _wv = _vid[:-4] + '.webm'
+    _wuri = ('data:video/webm;base64,' + base64.b64encode(open(_wv, 'rb').read()).decode()) if os.path.exists(_wv) else _uri
+    # one copy only (the smaller WebM), held once in the file for the English and Spanish Home pages
+    for _r in pages: pages[_r]['b'] = pages[_r]['b'].replace('data-src="/assets/video/hero-loop.mp4"', 'data-src="#hero-video"').replace('data-webm="/assets/video/hero-loop.webm"', 'data-webm="#hero-video"')
+    HERO_VIDEO = _wuri
+else:
+    HERO_VIDEO = ''
 packed = base64.b64encode(gzip.compress(json.dumps(pages, separators=(',', ':')).encode(), 9)).decode()
 
 router = r'''
@@ -139,6 +151,7 @@ html = f'''<!doctype html>
 <body>
 <div id="app"><p style="padding:32px;font:16px Arial,sans-serif;color:#565b6b">Loading the Alepo website…</p></div>
 <script id="pages" type="application/octet-stream">{packed}</script>
+<script id="hero-video" type="text/plain">{HERO_VIDEO}</script>
 <script>window.__IMGS = {json.dumps(imgs)};</script>
 <script>{lenis_js.replace('</script', '<\\/script')}</script>
 <script>{site_js}</script>

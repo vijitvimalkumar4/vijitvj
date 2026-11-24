@@ -81,6 +81,7 @@ for name in sorted(os.listdir(SRC)):
         n = norm(s)
         if not n or n in LAYOUT_HEADS: continue
         if n.startswith(('Operators running on', 'Operadores que')): continue
+        if name.startswith('01-') and n.startswith(('Illustration. Names and figures', 'Ilustración.')): skipped['Home hero caption (removed on request)'] = 1; continue
         if n in ('Event', 'Evento', 'Topic filters', 'Filters', 'Form', 'Filtros por tema', 'Filtros de tema', 'Filtros', 'Formulario') or n.startswith(('Thank-you page', 'Página de agradecimiento')):
             continue  # an instruction heading, or the tag of a past event
         n = re.sub(r'\s*\((was|antes) [^)]*\)$', '', n)

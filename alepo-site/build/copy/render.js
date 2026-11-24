@@ -251,7 +251,7 @@ window.__alepoCopy = function (cfg, doc) {
     const bg = main.querySelector(':scope > section:first-of-type img');
     const bgSrc = bg ? bg.getAttribute('src') : '';
     heroOut = `<section class="c-hx" aria-labelledby="hx-h1"><div class="c-hx-panel on-dark">
-      ${bgSrc ? `<div class="c-hx-bg" aria-hidden="true"><img src="${esc(bgSrc)}" alt="" width="1600" height="1067" fetchpriority="high">${C.heroVideo ? `<video class="c-hx-video" muted loop playsinline preload="metadata" poster="${esc(bgSrc)}" data-src="${esc(C.heroVideo)}" tabindex="-1"></video>` : ''}</div>` : ''}
+      ${bgSrc ? `<div class="c-hx-bg" aria-hidden="true"><img src="${esc(bgSrc)}" alt="" width="1600" height="1067" fetchpriority="high">${C.heroVideo ? `<video class="c-hx-video" muted loop playsinline preload="metadata" poster="${esc(bgSrc)}" data-src="${esc(C.heroVideo)}" data-webm="${esc(C.heroVideo.replace(/\.mp4$/, '.webm'))}" tabindex="-1"></video>` : ''}</div>` : ''}
       <div class="c-hx-shade" aria-hidden="true"></div><div class="c-hx-glow" aria-hidden="true"></div>
       <div class="c-hx-in"><div class="c-hx-t">
         ${H.eyebrow ? `<p class="c-hx-eb x-in" style="--i:0">${T(H.eyebrow)}</p>` : ''}
@@ -259,7 +259,7 @@ window.__alepoCopy = function (cfg, doc) {
         ${(H.lede || []).map(t => `<p class="c-hx-lede x-in" style="--i:2">${T(t)}</p>`).join('')}
         ${H.buttons && H.buttons.length ? `<div class="x-in" style="--i:3">${buttons(H.buttons, true)}</div>` : ''}</div>
         ${assist ? `<div class="c-hx-cards x-in x-in-side" style="--i:2">${assist.rows.map((r, i) => `<div class="c-glass" data-depth="${i ? 18 : 30}"><div class="c-glass-top"><span class="c-glass-who">${T(r[0])}</span><span class="c-glass-st"><i></i>${T(r[3])}</span></div><p class="c-glass-q">${T(r[1])}</p><p class="c-glass-a">${T(r[2])}</p></div>`).join('')}
-          ${assist.caption ? `<p class="c-hx-cap">${T(assist.caption)}</p>` : ''}</div>` : ''}
+          </div>` : ''}
       </div></div>
       ${H.customers ? `<div class="c-wrap"><div class="c-logos c-hx-logos x-in" style="--i:4"><p>${T(H.customersLabel || '')}</p><ul>${H.customers.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div></div>` : ''}</section>`;
   }
