@@ -251,8 +251,8 @@ window.__alepoCopy = function (cfg, doc) {
     const bg = main.querySelector(':scope > section:first-of-type img');
     const bgSrc = bg ? bg.getAttribute('src') : '';
     heroOut = `<section class="c-hx" aria-labelledby="hx-h1"><div class="c-hx-panel on-dark">
-      ${bgSrc ? `<div class="c-hx-bg" aria-hidden="true"><img src="${esc(bgSrc)}" alt="" width="1600" height="1067" fetchpriority="high"></div>` : ''}
-      <div class="c-hx-shade" aria-hidden="true"></div><canvas class="c-hx-net" aria-hidden="true"></canvas><div class="c-hx-glow" aria-hidden="true"></div>
+      ${bgSrc ? `<div class="c-hx-bg" aria-hidden="true"><img src="${esc(bgSrc)}" alt="" width="1600" height="1067" fetchpriority="high">${C.heroVideo ? `<video class="c-hx-video" muted loop playsinline preload="metadata" poster="${esc(bgSrc)}" data-src="${esc(C.heroVideo)}" tabindex="-1"></video>` : ''}</div>` : ''}
+      <div class="c-hx-shade" aria-hidden="true"></div><div class="c-hx-glow" aria-hidden="true"></div>
       <div class="c-hx-in"><div class="c-hx-t">
         ${H.eyebrow ? `<p class="c-hx-eb x-in" style="--i:0">${T(H.eyebrow)}</p>` : ''}
         <h1 id="hx-h1" class="x-in x-sweep x-sweep-load x-sweep-dark" style="--i:1">${T(H.h1)}</h1>

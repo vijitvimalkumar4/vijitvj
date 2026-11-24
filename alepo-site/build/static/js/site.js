@@ -393,61 +393,32 @@
   if (q && btns.some(function (b) { return b.dataset.topicBtn === q; })) pick(q);
 })();
 
-// ---- Home hero: a live network (nodes drift, link up, and reach toward the cursor), scroll parallax, card tilt ----
-// Runs only while the hero is on screen, never when the visitor asks for reduced motion.
+// ---- Home hero: the city photo plays as a silent loop (Higgsfield), with scroll parallax and card tilt ----
+// The video loads only on capable connections, plays only while the hero is on screen, and never when reduced motion is asked for.
 (function () {
   var hero = document.querySelector('.c-hx-panel'); if (!hero) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var cv = hero.querySelector('.c-hx-net'), bg = hero.querySelector('.c-hx-bg'), cards = [].slice.call(hero.querySelectorAll('.c-glass'));
-  var ctx = cv && cv.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 1.5), W = 0, H = 0, nodes = [], mouse = { x: -1e4, y: -1e4, on: false }, live = false, raf = 0;
-  function size() {
-    var r = hero.getBoundingClientRect(); W = r.width; H = r.height;
-    if (!cv) return; cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var n = Math.round(Math.min(90, Math.max(34, W * H / 15000)));
-    nodes = []; for (var i = 0; i < n; i++) nodes.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.28, vy: (Math.random() - 0.5) * 0.28, r: Math.random() * 1.4 + 0.8, p: Math.random() * 6.28 });
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var bg = hero.querySelector('.c-hx-bg'), v = hero.querySelector('.c-hx-video'), cards = [].slice.call(hero.querySelectorAll('.c-glass'));
+  var saver = navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType || ''));
+  if (v && !reduce && !saver) {
+    v.src = v.dataset.src;
+    v.addEventListener('playing', function () { v.classList.add('is-on'); });
+    new IntersectionObserver(function (es) { if (es[0].isIntersecting && !document.hidden) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); }, { threshold: 0.05 }).observe(hero);
+    document.addEventListener('visibilitychange', function () { if (document.hidden) v.pause(); });
   }
-  function frame() {
-    raf = 0; if (!live || !ctx) return;
-    ctx.clearRect(0, 0, W, H);
-    var L = 132, L2 = L * L;
-    for (var i = 0; i < nodes.length; i++) {
-      var a = nodes[i]; a.x += a.vx; a.y += a.vy; a.p += 0.02;
-      if (a.x < -20) a.x = W + 20; if (a.x > W + 20) a.x = -20; if (a.y < -20) a.y = H + 20; if (a.y > H + 20) a.y = -20;
-      // the cursor pulls nearby nodes a little
-      if (mouse.on) { var mx = mouse.x - a.x, my = mouse.y - a.y, md = mx * mx + my * my; if (md < 40000) { a.x += mx * 0.004; a.y += my * 0.004; } }
-      for (var j = i + 1; j < nodes.length; j++) {
-        var b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy;
-        if (d2 < L2) { var o = (1 - d2 / L2) * 0.32; ctx.strokeStyle = 'rgba(155,227,242,' + o.toFixed(3) + ')'; ctx.lineWidth = 0.8; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
-      }
-      if (mouse.on) { var cx = mouse.x - a.x, cy = mouse.y - a.y, c2 = cx * cx + cy * cy; if (c2 < 32000) { var co = (1 - c2 / 32000) * 0.55; ctx.strokeStyle = 'rgba(85,203,227,' + co.toFixed(3) + ')'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke(); } }
-      var glow = 0.55 + Math.sin(a.p) * 0.3;
-      ctx.fillStyle = 'rgba(203,240,248,' + glow.toFixed(3) + ')'; ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, 6.283); ctx.fill();
-    }
-    raf = requestAnimationFrame(frame);
-  }
-  function start() { if (!live) { live = true; if (!raf) raf = requestAnimationFrame(frame); } }
-  function stop() { live = false; if (raf) cancelAnimationFrame(raf); raf = 0; }
-  size();
-  new IntersectionObserver(function (es) { es[0].isIntersecting && !document.hidden ? start() : stop(); }, { threshold: 0.05 }).observe(hero);
-  document.addEventListener('visibilitychange', function () { document.hidden ? stop() : (hero.getBoundingClientRect().bottom > 0 && start()); });
-  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(size, 150); });
-  // pointer: the network reaches for the cursor, the glass cards tilt toward it
+  if (reduce) return;
   var fine = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
-  hero.addEventListener('pointermove', function (e) {
-    var r = hero.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; mouse.on = true;
-    if (!fine) return;
-    var nx = (mouse.x / r.width - 0.5), ny = (mouse.y / r.height - 0.5);
-    cards.forEach(function (c) { var d = +c.dataset.depth || 20; c.style.transform = 'rotateY(' + (nx * 8).toFixed(2) + 'deg) rotateX(' + (-ny * 8).toFixed(2) + 'deg) translate3d(' + (nx * d * 0.4).toFixed(1) + 'px,' + (ny * d * 0.4).toFixed(1) + 'px,0)'; });
-  });
-  hero.addEventListener('pointerleave', function () { mouse.on = false; cards.forEach(function (c) { c.style.transform = ''; }); });
-  cards.forEach(function (c) { c.style.transition = 'transform 0.5s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, background 0.3s ease'; });
-  // scroll: the photo moves slower than the page, so the panel has depth
-  var ticking = false;
+  if (fine) {
+    hero.addEventListener('pointermove', function (e) {
+      var r = hero.getBoundingClientRect(), nx = (e.clientX - r.left) / r.width - 0.5, ny = (e.clientY - r.top) / r.height - 0.5;
+      cards.forEach(function (c) { var d = +c.dataset.depth || 20; c.style.transform = 'rotateY(' + (nx * 8).toFixed(2) + 'deg) rotateX(' + (-ny * 8).toFixed(2) + 'deg) translate3d(' + (nx * d * 0.4).toFixed(1) + 'px,' + (ny * d * 0.4).toFixed(1) + 'px,0)'; });
+    });
+    hero.addEventListener('pointerleave', function () { cards.forEach(function (c) { c.style.transform = ''; }); });
+    cards.forEach(function (c) { c.style.transition = 'transform 0.5s cubic-bezier(0.16,1,0.3,1), border-color 0.3s ease, background 0.3s ease'; });
+  }
+  var ticking = false, H = hero.offsetHeight;
   window.addEventListener('scroll', function () {
     if (ticking) return; ticking = true;
-    requestAnimationFrame(function () {
-      ticking = false; var y = window.scrollY; if (y > H + 200) return;
-      if (bg) bg.style.transform = 'translate3d(0,' + (y * 0.22).toFixed(1) + 'px,0)';
-    });
+    requestAnimationFrame(function () { ticking = false; var y = window.scrollY; if (y > H + 200) return; if (bg) bg.style.transform = 'translate3d(0,' + (y * 0.22).toFixed(1) + 'px,0)'; });
   }, { passive: true });
 })();

@@ -286,7 +286,9 @@ for (const j of jobs) {
   // newsletter consent: the consent line of 17 · Contact (added to the footer form on request, 24 Nov 2026)
   const contactM = COPY[j.lang]['/contact-us/'] || COPY.en['/contact-us/'];
   const consentLine = contactM ? (contactM.sections.find(x => x.role === 'form').blocks.flatMap(b => b.t === 'sub' ? b.blocks : [b]).find(b => b.t === 'p') || {}).text : null;
-  const copy = (model || nav) ? { page: model, nav, topNews, blog, sitemapPages, consentLine, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
+  // Home hero loop (static/video/hero-loop.mp4, made with Higgsfield from the hero photo), when it is there
+  const heroVideo = enPath === '/' && fs.existsSync(path.join(HERE, 'static', 'video', 'hero-loop.mp4')) ? '/assets/video/hero-loop.mp4' : null;
+  const copy = (model || nav) ? { page: model, nav, topNews, blog, sitemapPages, consentLine, heroVideo, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
   let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge: copy ? null : merge, copy });
   const mr = html.match(/ data-merge="([^"]*)"/);
   if (mr) { const r = JSON.parse(mr[1].replace(/&quot;/g, '"')); for (const k in r) mergeTotals[k] = (mergeTotals[k] || 0) + r[k]; html = html.replace(mr[0], ''); }
