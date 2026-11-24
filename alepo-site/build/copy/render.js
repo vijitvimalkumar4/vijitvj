@@ -199,7 +199,12 @@ window.__alepoCopy = function (cfg, doc) {
       const story = subs.every(x => x.kind === 'story');
       const n = subs.length, cols = story ? Math.min(n, 3) : n === 4 ? 4 : n >= 3 ? 3 : n;
       const intro = rest.map(b => block(b, PAGE, dark)).join('');
-      body = `<div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2>${intro ? `<div class="c-head-x">${intro}</div>` : ''}</div><div class="c-grid c-grid-${cols}${story ? ' c-grid-story' : ''}">${subs.map(x => card(x, PAGE, dark)).join('')}</div>`;
+      const cards = subs.map(x => card(x, PAGE, dark));
+      // five photo cards (Solutions on Home and on the Solutions page) take the Products layout: one tall card, two by two beside it
+      const asProducts = !story && cards.length === 5 && cards.every(c => c.includes('c-has-img'));
+      body = `<div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2>${intro ? `<div class="c-head-x">${intro}</div>` : ''}</div>` + (asProducts
+        ? `<div class="c-pgrid c-sgrid">${cards.map((c, k) => k === 0 ? c.replace('class="x-card c-card', 'class="x-card c-card c-pg-tall') : c).join('')}</div>`
+        : `<div class="c-grid c-grid-${cols}${story ? ' c-grid-story' : ''}">${cards.join('')}</div>`);
     } else {
       const html = rest.map(b => block(b, PAGE === '08-about' && b.kind === 'offices' ? 'about' : PAGE, dark)).filter(Boolean);
       if (!html.length) return '';

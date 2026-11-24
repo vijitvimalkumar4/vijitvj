@@ -1,5 +1,5 @@
 {
- "style": "Candid documentary photograph taken on a full-frame camera with a 35mm lens at f/2.8, available light only, unretouched. Set in the United States or Western Europe, with the everyday diversity of American and European cities. Real skin texture with pores and small imperfections, natural asymmetry, ordinary clothes, a real lived-in environment with everyday clutter, slight grain, true-to-life neutral colours, no colour grading, no glow, no lens flare, nothing staged, people absorbed in what they are doing and not looking at the camera. No text, logos or brand names; screens are out of focus.",
+ "style": "High-end corporate advertising photograph in the style of a global telecom equipment brand campaign, shot by a commercial photographer on a medium-format camera. Professionally lit with a soft key light and subtle rim light, cinematic depth of field, rich contrast, a clean polished colour grade of deep blues and cool neutrals with a warm accent, crisp detail, elegant composition with generous negative space. Modern premium settings in the United States or Western Europe: glass-and-steel offices, immaculate data centres, contemporary homes and city skylines. Confident, well-dressed people of diverse backgrounds with natural expressions, not looking at the camera. Photorealistic and believable, no CGI look, no plastic skin. No text, logos or brand names anywhere: laptops, monitors, phones and clothing are plain and unbranded; screens show soft out-of-focus light.",
  "pages": {
   "/products/": {
    "hero": {
@@ -75,7 +75,7 @@
   },
   "/news/": {
    "hero": {
-    "prompt": "A speaker on stage at a telecom industry conference, seen from the audience, stage lights and rows of attendees in soft focus.",
+    "prompt": "A conference hall during a telecom industry talk: a presenter at a lectern on a low stage, the audience seated in rows, seen from the back of the room.",
     "alt": "A speaker on stage at a telecom industry conference",
     "alt_es": "Un ponente en el escenario de una conferencia del sector de las telecomunicaciones",
     "file": "a-speaker-on-stage-at-a-telecom-industry.webp"
@@ -123,7 +123,7 @@
   },
   "/accessibility/": {
    "hero": {
-    "prompt": "A blind man reading a website with a refreshable braille display under his fingers and headphones on, laptop on the desk.",
+    "prompt": "A blind man at a desk reading a website with his fingertips on a refreshable braille display placed in front of a laptop, wearing headphones, a white cane leaning against the desk.",
     "alt": "A person reading a website with a braille display and a screen reader",
     "alt_es": "Una persona leyendo un sitio web con una línea braille y un lector de pantalla",
     "file": "a-person-reading-a-website-with-a-braille.webp"
@@ -155,7 +155,7 @@
   },
   "/products/customer-care-channels/": {
    "hero": {
-    "prompt": "Inside an operator's store, a staff member with a tablet helping a customer at the counter, phones on display behind.",
+    "prompt": "Inside a mobile operator's store, a staff member with a tablet helping an older customer at the counter, generic unbranded phones on the wall behind.",
     "alt": "Store staff helping a customer with a tablet",
     "alt_es": "Personal de tienda atendiendo a un cliente con una tableta",
     "file": "store-staff-helping-a-customer-with-a-tablet.webp"
@@ -181,7 +181,7 @@
     "file": "a-family-streaming-at-home-after-a-speed.webp"
    },
    "Billing day without flooding your OLTs": {
-    "prompt": "Racks of optical line terminals in a small ISP head-end at night, fibre patch cords, steady green status lights.",
+    "prompt": "Rows of fibre network equipment in a small ISP equipment room in the evening, yellow fibre patch cords and green status lights.",
     "alt": "Optical line terminals in an ISP head-end at night",
     "alt_es": "Terminales de línea óptica en la cabecera de un ISP por la noche",
     "file": "optical-line-terminals-in-an-isp-head-end.webp"
@@ -227,7 +227,7 @@
     "file": "the-team-behind-a-new-mobile-brand.webp"
    },
    "Launch a brand, or host several": {
-    "prompt": "Several SIM starter packs in different brand colours lined up on a table, plain packaging with no names.",
+    "prompt": "Several credit-card-sized SIM starter cards in plain sleeves of different colours fanned out on a desk next to a laptop.",
     "alt": "SIM packs for several brands run by one enabler",
     "alt_es": "Paquetes SIM de varias marcas gestionadas por un mismo habilitador",
     "file": "sim-packs-for-several-brands-run-by-one.webp"
@@ -369,13 +369,13 @@
     "file": "server-racks-in-a-mobile-operator-s-core.webp"
    },
    "One subscriber database for both cores": {
-    "prompt": "A 4G antenna panel and a newer 5G antenna mounted on the same mast against a clear sky.",
+    "prompt": "Looking up at a telecom mast against a clear sky, with older flat antenna panels and newer compact antennas mounted on the same mast.",
     "alt": "4G and 5G antennas on the same mast",
     "alt_es": "Antenas 4G y 5G en el mismo mástil",
     "file": "4g-and-5g-antennas-on-the-same-mast.webp"
    },
    "Add 5G without replacing 4G": {
-    "prompt": "Two riggers in safety harnesses fitting a new 5G antenna beside existing 4G panels high on a tower.",
+    "prompt": "Two telecom engineers in hard hats and hi-vis vests on a rooftop beside a mast, fitting a new antenna next to the older antenna panels.",
     "alt": "Technicians adding a 5G antenna beside existing 4G equipment",
     "alt_es": "Técnicos instalando una antena 5G junto al equipo 4G existente",
     "file": "technicians-adding-a-5g-antenna-beside-existing-4g.webp"
@@ -389,7 +389,7 @@
     "file": "travellers-on-their-phones-under-a-wi-fi.webp"
    },
    "Coverage where radio ends": {
-    "prompt": "A woman making a phone call on an underground metro platform, where mobile signal is weak.",
+    "prompt": "A woman making a phone call on an underground metro platform with plain tiled walls, where mobile signal is weak.",
     "alt": "A subscriber calling over Wi-Fi in an underground station",
     "alt_es": "Una abonada llamando por wifi en una estación subterránea",
     "file": "a-subscriber-calling-over-wi-fi-in-an.webp"
@@ -499,7 +499,7 @@
     "file": "a-prepaid-subscriber-using-data-in-a-busy.webp"
    },
    "What an online charging system does": {
-    "prompt": "A commuter on a city bus watching a video on her phone, window light, the city passing.",
+    "prompt": "A commuter sitting on a city bus looking at the phone in her hands, window light, the city passing outside.",
     "alt": "A commuter using mobile data on the bus",
     "alt_es": "Una viajera usando datos móviles en el autobús",
     "file": "a-commuter-using-mobile-data-on-the-bus.webp"
@@ -531,7 +531,7 @@
     "file": "a-mobile-mast-serving-fixed-wireless-homes.webp"
    },
    "Marketing launches plans itself": {
-    "prompt": "A marketing manager at her laptop publishing a new data plan while a colleague gives a thumbs up.",
+    "prompt": "A marketing manager at her desk publishing a new mobile data plan on her laptop while a colleague leans in to look.",
     "alt": "A marketing manager launching a data plan herself",
     "alt_es": "Una responsable de marketing lanzando un plan de datos ella misma",
     "file": "a-marketing-manager-launching-a-data-plan-herself.webp"
@@ -577,7 +577,7 @@
     "file": "a-postpaid-customer-reading-a-payment-reminder.webp"
    },
    "What telecom collections software does": {
-    "prompt": "A collections team lead reviewing unpaid accounts on a monitor of account charts, out of focus, relaxed.",
+    "prompt": "A collections team lead at her desk reviewing unpaid accounts on her monitor, charts out of focus, calm office.",
     "alt": "A collections team reviewing unpaid accounts",
     "alt_es": "Un equipo de cobros revisando cuentas impagadas",
     "file": "a-collections-team-reviewing-unpaid-accounts.webp"
@@ -669,7 +669,7 @@
   },
   "/products/bss-in-a-box/": {
    "hero": {
-    "prompt": "A new MVNO founding team in a small office preparing for launch, boxes of plain SIM starter packs on the table.",
+    "prompt": "A new MVNO founding team in a small office preparing for launch, unlabelled boxes of SIM starter packs on the table.",
     "alt": "A new MVNO team preparing for launch",
     "alt_es": "El equipo de un nuevo OMV preparando el lanzamiento",
     "file": "a-new-mvno-team-preparing-for-launch.webp"
@@ -681,13 +681,13 @@
     "file": "sim-starter-packs-ready-for-a-new-brand.webp"
    },
    "Package contents": {
-    "prompt": "A launch-day kiosk where a new brand sells its first SIMs to a queue of customers.",
+    "prompt": "A launch-day pop-up counter in a shopping centre where staff of a new mobile brand hand SIM packs to a queue of customers, plain unbranded signage.",
     "alt": "A new mobile brand selling its first SIMs",
     "alt_es": "Una nueva marca móvil vendiendo sus primeras SIM",
     "file": "a-new-mobile-brand-selling-its-first-sims.webp"
    },
    "No custom project before launch": {
-    "prompt": "A small brand team celebrating launch day in their office, raised coffee cups.",
+    "prompt": "A small team in their office on the launch day of a new mobile brand, smiling and clapping around a laptop.",
     "alt": "A brand team celebrating launch day",
     "alt_es": "El equipo de una marca celebrando el día del lanzamiento",
     "file": "a-brand-team-celebrating-launch-day.webp"

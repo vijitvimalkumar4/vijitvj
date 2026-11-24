@@ -8,11 +8,12 @@ from the prompt plus STYLE, and saved as build/static/img/photos/<file>.
 """
 import json, os, re
 
-STYLE = ('Candid documentary photograph taken on a full-frame camera with a 35mm lens at f/2.8, available light only, unretouched. '
-         'Set in the United States or Western Europe, with the everyday diversity of American and European cities. '
-         'Real skin texture with pores and small imperfections, natural asymmetry, ordinary clothes, a real lived-in environment with everyday clutter, '
-         'slight grain, true-to-life neutral colours, no colour grading, no glow, no lens flare, nothing staged, people absorbed in what they are doing and not looking at the camera. '
-         'No text, logos or brand names; screens are out of focus.')
+STYLE = ('High-end corporate advertising photograph in the style of a global telecom equipment brand campaign, shot by a commercial photographer '
+         'on a medium-format camera. Professionally lit with a soft key light and subtle rim light, cinematic depth of field, rich contrast, '
+         'a clean polished colour grade of deep blues and cool neutrals with a warm accent, crisp detail, elegant composition with generous negative space. '
+         'Modern premium settings in the United States or Western Europe: glass-and-steel offices, immaculate data centres, contemporary homes and city skylines. '
+         'Confident, well-dressed people of diverse backgrounds with natural expressions, not looking at the camera. Photorealistic and believable, no CGI look, no plastic skin. '
+         'No text, logos or brand names anywhere: laptops, monitors, phones and clothing are plain and unbranded; screens show soft out-of-focus light.')
 
 P = {}
 def add(url, slot, prompt, alt, alt_es): P.setdefault(url, {})[slot] = {'prompt': prompt, 'alt': alt, 'alt_es': alt_es}
@@ -36,7 +37,7 @@ add('/company/security/', 'hero', 'A secure data-centre aisle of locked server c
     'Locked server cabinets behind a card-controlled door in a data centre', 'Armarios de servidores cerrados tras una puerta con control de acceso en un centro de datos')
 add('/company/careers/', 'hero', 'A young and an experienced software engineer pair-programming at one desk in a bright office, laughing, two monitors softly out of focus.',
     'Engineers pairing on code in a bright office', 'Ingenieros programando en pareja en una oficina luminosa')
-add('/news/', 'hero', 'A speaker on stage at a telecom industry conference, seen from the audience, stage lights and rows of attendees in soft focus.',
+add('/news/', 'hero', 'A conference hall during a telecom industry talk: a presenter at a lectern on a low stage, the audience seated in rows, seen from the back of the room.',
     'A speaker on stage at a telecom industry conference', 'Un ponente en el escenario de una conferencia del sector de las telecomunicaciones')
 add('/resources/', 'hero', 'A network engineer reading a technical guide on a tablet by a window with a coffee, a notebook of hand-drawn network diagrams beside her.',
     'A network engineer reading a technical guide on a tablet', 'Una ingeniera de redes leyendo una guía técnica en una tableta')
@@ -48,7 +49,7 @@ add('/privacy-policy/', 'hero', 'A privacy officer reviewing a printed data-prot
     'A privacy officer reviewing a data policy', 'Una responsable de privacidad revisando una política de datos')
 add('/cookie-policy/', 'hero', 'Close-up of hands on a laptop trackpad adjusting browser settings, toggles on screen softly out of focus, home desk.',
     'A person adjusting browser settings on a laptop', 'Una persona ajustando la configuración del navegador en un portátil')
-add('/accessibility/', 'hero', 'A blind man reading a website with a refreshable braille display under his fingers and headphones on, laptop on the desk.',
+add('/accessibility/', 'hero', 'A blind man at a desk reading a website with his fingertips on a refreshable braille display placed in front of a laptop, wearing headphones, a white cane leaning against the desk.',
     'A person reading a website with a braille display and a screen reader', 'Una persona leyendo un sitio web con una línea braille y un lector de pantalla')
 
 # ---------------- product group pages (their heroes also illustrate the Home cards) ----------------
@@ -58,7 +59,7 @@ add('/products/billing-bss/', 'hero', 'A billing operations team of three review
     'A billing team reviewing the monthly invoice run', 'Un equipo de facturación revisando la facturación del mes')
 add('/products/provisioning-devices/', 'hero', 'A subscriber at home plugging in a new fibre router whose lights come on, no technician present, living room.',
     'A subscriber plugging in a new router that sets itself up', 'Un abonado conectando un router nuevo que se configura solo')
-add('/products/customer-care-channels/', 'hero', 'Inside an operator\'s store, a staff member with a tablet helping a customer at the counter, phones on display behind.',
+add('/products/customer-care-channels/', 'hero', 'Inside a mobile operator\'s store, a staff member with a tablet helping an older customer at the counter, generic unbranded phones on the wall behind.',
     'Store staff helping a customer with a tablet', 'Personal de tienda atendiendo a un cliente con una tableta')
 
 # ---------------- solutions ----------------
@@ -69,7 +70,7 @@ add(u, 'What ISP software covers', 'An ISP\'s small operations room overlooking 
     'An ISP\'s team running the network and the business side by side', 'El equipo de un ISP gestionando la red y el negocio lado a lado')
 add(u, 'Plan changes without a reconnect', 'A family on a sofa watching a film on a large TV while a teenager games online, a home router with small lights on the shelf.',
     'A family streaming at home after a speed upgrade', 'Una familia viendo contenido en casa tras ampliar su velocidad')
-add(u, 'Billing day without flooding your OLTs', 'Racks of optical line terminals in a small ISP head-end at night, fibre patch cords, steady green status lights.',
+add(u, 'Billing day without flooding your OLTs', 'Rows of fibre network equipment in a small ISP equipment room in the evening, yellow fibre patch cords and green status lights.',
     'Optical line terminals in an ISP head-end at night', 'Terminales de línea óptica en la cabecera de un ISP por la noche')
 add(u, 'Router complaints fixed without a truck roll', 'A helpdesk agent with a headset fixing a subscriber\'s Wi-Fi remotely from her desk, talking the customer through it.',
     'A helpdesk agent fixing a subscriber\'s Wi-Fi remotely', 'Una agente de soporte solucionando el wifi de un abonado a distancia')
@@ -87,7 +88,7 @@ add(u, 'Subscribers stay connected where radio ends', 'A shopper on the lower le
 u = '/solutions/mvnos-mvnes/'
 add(u, 'hero', 'The small team behind a new mobile brand in a creative office, colour swatches and blank SIM packaging mock-ups on the table.',
     'The team behind a new mobile brand', 'El equipo detrás de una nueva marca móvil')
-add(u, 'Launch a brand, or host several', 'Several SIM starter packs in different brand colours lined up on a table, plain packaging with no names.',
+add(u, 'Launch a brand, or host several', 'Several credit-card-sized SIM starter cards in plain sleeves of different colours fanned out on a desk next to a laptop.',
     'SIM packs for several brands run by one enabler', 'Paquetes SIM de varias marcas gestionadas por un mismo habilitador')
 add(u, 'What is an MVNE?', 'An enabler\'s operations room: engineers at workstations with server racks behind a glass wall.',
     'An enabler\'s team running the systems behind several brands', 'El equipo de un habilitador gestionando los sistemas de varias marcas')
@@ -142,15 +143,15 @@ add(u, 'Audit evidence where your security team works', 'A security analyst in a
 u = '/products/subscriber-data-management/'
 add(u, 'hero', 'A row of server racks in a mobile operator\'s core data centre, blue light, long perspective.',
     'Server racks in a mobile operator\'s core data centre', 'Racks de servidores en el centro de datos del núcleo de un operador móvil')
-add(u, 'One subscriber database for both cores', 'A 4G antenna panel and a newer 5G antenna mounted on the same mast against a clear sky.',
+add(u, 'One subscriber database for both cores', 'Looking up at a telecom mast against a clear sky, with older flat antenna panels and newer compact antennas mounted on the same mast.',
     '4G and 5G antennas on the same mast', 'Antenas 4G y 5G en el mismo mástil')
-add(u, 'Add 5G without replacing 4G', 'Two riggers in safety harnesses fitting a new 5G antenna beside existing 4G panels high on a tower.',
+add(u, 'Add 5G without replacing 4G', 'Two telecom engineers in hard hats and hi-vis vests on a rooftop beside a mast, fitting a new antenna next to the older antenna panels.',
     'Technicians adding a 5G antenna beside existing 4G equipment', 'Técnicos instalando una antena 5G junto al equipo 4G existente')
 
 u = '/products/wifi-offload-calling/'
 add(u, 'hero', 'Travellers in a bright airport terminal using their phones, a Wi-Fi access point on the ceiling.',
     'Travellers on their phones under a Wi-Fi access point', 'Viajeros con el móvil bajo un punto de acceso wifi')
-add(u, 'Coverage where radio ends', 'A woman making a phone call on an underground metro platform, where mobile signal is weak.',
+add(u, 'Coverage where radio ends', 'A woman making a phone call on an underground metro platform with plain tiled walls, where mobile signal is weak.',
     'A subscriber calling over Wi-Fi in an underground station', 'Una abonada llamando por wifi en una estación subterránea')
 add(u, 'One policy on Wi-Fi and mobile', 'A man walking from a sunny street into a café, still on a video call on his phone.',
     'A subscriber walking indoors without dropping his call', 'Un abonado entrando en un local sin que se corte su llamada')
@@ -194,7 +195,7 @@ add(u, 'Unpaid bills chased without manual work', 'A woman at her kitchen table 
 u = '/products/online-charging/'
 add(u, 'hero', 'A young man on a busy European high street using mobile data on his phone, shoppers passing.',
     'A prepaid subscriber using data in a busy market', 'Un abonado prepago usando datos en un mercado concurrido')
-add(u, 'What an online charging system does', 'A commuter on a city bus watching a video on her phone, window light, the city passing.',
+add(u, 'What an online charging system does', 'A commuter sitting on a city bus looking at the phone in her hands, window light, the city passing outside.',
     'A commuter using mobile data on the bus', 'Una viajera usando datos móviles en el autobús')
 add(u, 'New offers without a release', 'A marketing team around a table with blank cards and sketches, designing a new weekend data bundle.',
     'A marketing team designing a new data bundle', 'Un equipo de marketing diseñando un nuevo paquete de datos')
@@ -206,7 +207,7 @@ add(u, 'hero', 'A young woman streaming video on her phone on a rooftop at golde
     'A subscriber streaming video on a mobile data plan', 'Una abonada viendo vídeo con su plan de datos móviles')
 add(u, 'PCRF policy control in telecom networks', 'A mobile mast on a hill serving houses with fixed-wireless antennas on their roofs.',
     'A mobile mast serving fixed-wireless homes', 'Una antena móvil que da servicio a hogares con inalámbrica fija')
-add(u, 'Marketing launches plans itself', 'A marketing manager at her laptop publishing a new data plan while a colleague gives a thumbs up.',
+add(u, 'Marketing launches plans itself', 'A marketing manager at her desk publishing a new mobile data plan on her laptop while a colleague leans in to look.',
     'A marketing manager launching a data plan herself', 'Una responsable de marketing lanzando un plan de datos ella misma')
 add(u, 'Speed boosts and data passes on every plan', 'A gamer at home buying a speed boost on his phone, a game paused on the screen behind.',
     'A subscriber buying a speed boost from his phone', 'Un abonado comprando más velocidad desde su móvil')
@@ -224,7 +225,7 @@ add(u, 'Vouchers tracked until they are used', 'A distributor in a small warehou
 u = '/products/collections-dunning/'
 add(u, 'hero', 'A postpaid customer at home reading a payment reminder notification on his phone, calm evening light.',
     'A postpaid customer reading a payment reminder', 'Un cliente pospago leyendo un recordatorio de pago')
-add(u, 'What telecom collections software does', 'A collections team lead reviewing unpaid accounts on a monitor of account charts, out of focus, relaxed.',
+add(u, 'What telecom collections software does', 'A collections team lead at her desk reviewing unpaid accounts on her monitor, charts out of focus, calm office.',
     'A collections team reviewing unpaid accounts', 'Un equipo de cobros revisando cuentas impagadas')
 add(u, 'Barring and late fees without manual steps', 'A broadband customer at home noticing a service notice on her phone, laptop open on the table.',
     'A customer seeing a service notice on her phone', 'Una clienta viendo un aviso de servicio en su móvil')
@@ -260,13 +261,13 @@ add(u, 'Evidence for every disputed bill', 'A billing specialist on a call with 
     'A billing specialist answering a disputed bill with evidence', 'Una especialista en facturación respondiendo una factura reclamada con pruebas')
 
 u = '/products/bss-in-a-box/'
-add(u, 'hero', 'A new MVNO founding team in a small office preparing for launch, boxes of plain SIM starter packs on the table.',
+add(u, 'hero', 'A new MVNO founding team in a small office preparing for launch, unlabelled boxes of SIM starter packs on the table.',
     'A new MVNO team preparing for launch', 'El equipo de un nuevo OMV preparando el lanzamiento')
 add(u, 'What the MVNO billing platform includes', 'Neatly arranged plain SIM starter packs, a phone and a laptop on a clean table, top-down.',
     'SIM starter packs ready for a new brand', 'Paquetes SIM listos para una nueva marca')
-add(u, 'Package contents', 'A launch-day kiosk where a new brand sells its first SIMs to a queue of customers.',
+add(u, 'Package contents', 'A launch-day pop-up counter in a shopping centre where staff of a new mobile brand hand SIM packs to a queue of customers, plain unbranded signage.',
     'A new mobile brand selling its first SIMs', 'Una nueva marca móvil vendiendo sus primeras SIM')
-add(u, 'No custom project before launch', 'A small brand team celebrating launch day in their office, raised coffee cups.',
+add(u, 'No custom project before launch', 'A small team in their office on the launch day of a new mobile brand, smiling and clapping around a laptop.',
     'A brand team celebrating launch day', 'El equipo de una marca celebrando el día del lanzamiento')
 
 # ---------------- products: care and channels ----------------
