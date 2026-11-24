@@ -1,0 +1,853 @@
+{
+ "style": "Candid documentary photograph taken on a full-frame camera with a 35mm lens at f/2.8, available light only, unretouched. Set in the United States or Western Europe, with the everyday diversity of American and European cities. Real skin texture with pores and small imperfections, natural asymmetry, ordinary clothes, a real lived-in environment with everyday clutter, slight grain, true-to-life neutral colours, no colour grading, no glow, no lens flare, nothing staged, people absorbed in what they are doing and not looking at the camera. No text, logos or brand names; screens are out of focus.",
+ "pages": {
+  "/products/": {
+   "hero": {
+    "prompt": "Wide view of a telecom operator's network operations centre at dusk: engineers at desks in front of a large video wall of network maps and graphs, out of focus.",
+    "alt": "Engineers in a telecom operator's network operations centre",
+    "alt_es": "Ingenieros en el centro de operaciones de red de un operador",
+    "file": "engineers-in-a-telecom-operator-s-network-operations.webp"
+   }
+  },
+  "/solutions/": {
+   "hero": {
+    "prompt": "Aerial view of a European city at dusk: residential neighbourhoods, rooftop mobile masts and a stadium with its lights on.",
+    "alt": "A city at dusk with homes, rooftop mobile masts and a stadium",
+    "alt_es": "Una ciudad al anochecer con viviendas, antenas móviles en las azoteas y un estadio",
+    "file": "a-city-at-dusk-with-homes-rooftop-mobile.webp"
+   }
+  },
+  "/services/": {
+   "hero": {
+    "prompt": "Two delivery engineers and a project manager standing by open server racks with a laptop, planning a production cutover together.",
+    "alt": "Delivery engineers planning a cutover beside server racks",
+    "alt_es": "Ingenieros de implantación planificando una migración junto a los racks",
+    "file": "delivery-engineers-planning-a-cutover-beside-server-racks.webp"
+   }
+  },
+  "/products/ai-for-telecom/": {
+   "hero": {
+    "prompt": "A contact-centre agent wearing a headset reads a suggested answer in a side panel on her monitor during an evening shift.",
+    "alt": "A care agent using an AI assistant inside her console",
+    "alt_es": "Una agente de atención usando un asistente de IA en su consola",
+    "file": "a-care-agent-using-an-ai-assistant-inside.webp"
+   }
+  },
+  "/customers/": {
+   "hero": {
+    "prompt": "An operator's management team in a glass meeting room with mobile masts visible on the skyline outside, smiling while reviewing results on a tablet.",
+    "alt": "An operator's team reviewing results after go-live",
+    "alt_es": "El equipo de un operador revisando resultados tras la puesta en marcha",
+    "file": "an-operator-s-team-reviewing-results-after-go.webp"
+   }
+  },
+  "/company/about/": {
+   "hero": {
+    "prompt": "Telecom software engineers at a whiteboard covered in hand-drawn network architecture boxes and arrows, discussing the design, bright modern office.",
+    "alt": "Telecom software engineers working through an architecture on a whiteboard",
+    "alt_es": "Ingenieros de software de telecomunicaciones trabajando una arquitectura en una pizarra",
+    "file": "telecom-software-engineers-working-through-an-architecture-on.webp"
+   }
+  },
+  "/company/partners/": {
+   "hero": {
+    "prompt": "A system integrator's solution engineer presenting on a laptop to an operator's team around a meeting table, everyone engaged.",
+    "alt": "A partner's engineer presenting a solution to an operator's team",
+    "alt_es": "El ingeniero de un socio presentando una solución al equipo de un operador",
+    "file": "a-partner-s-engineer-presenting-a-solution-to.webp"
+   }
+  },
+  "/company/security/": {
+   "hero": {
+    "prompt": "A secure data-centre aisle of locked server cabinets, a card reader beside a glass door in the foreground, cool blue light.",
+    "alt": "Locked server cabinets behind a card-controlled door in a data centre",
+    "alt_es": "Armarios de servidores cerrados tras una puerta con control de acceso en un centro de datos",
+    "file": "locked-server-cabinets-behind-a-card-controlled-door.webp"
+   }
+  },
+  "/company/careers/": {
+   "hero": {
+    "prompt": "A young and an experienced software engineer pair-programming at one desk in a bright office, laughing, two monitors softly out of focus.",
+    "alt": "Engineers pairing on code in a bright office",
+    "alt_es": "Ingenieros programando en pareja en una oficina luminosa",
+    "file": "engineers-pairing-on-code-in-a-bright-office.webp"
+   }
+  },
+  "/news/": {
+   "hero": {
+    "prompt": "A speaker on stage at a telecom industry conference, seen from the audience, stage lights and rows of attendees in soft focus.",
+    "alt": "A speaker on stage at a telecom industry conference",
+    "alt_es": "Un ponente en el escenario de una conferencia del sector de las telecomunicaciones",
+    "file": "a-speaker-on-stage-at-a-telecom-industry.webp"
+   }
+  },
+  "/resources/": {
+   "hero": {
+    "prompt": "A network engineer reading a technical guide on a tablet by a window with a coffee, a notebook of hand-drawn network diagrams beside her.",
+    "alt": "A network engineer reading a technical guide on a tablet",
+    "alt_es": "Una ingeniera de redes leyendo una guía técnica en una tableta",
+    "file": "a-network-engineer-reading-a-technical-guide-on.webp"
+   }
+  },
+  "/blog/": {
+   "hero": {
+    "prompt": "A network engineer taking notes in a notebook beside an open rack of routers with blinking status lights, laptop on a cart.",
+    "alt": "A network engineer taking notes beside a rack of routers",
+    "alt_es": "Un ingeniero de redes tomando notas junto a un rack de routers",
+    "file": "a-network-engineer-taking-notes-beside-a-rack.webp"
+   }
+  },
+  "/contact-us/thank-you/": {
+   "hero": {
+    "prompt": "A friendly solutions consultant with a headset at a tidy desk, reading a new enquiry on screen and getting ready to reply, warm daylight.",
+    "alt": "A solutions consultant reading a new enquiry",
+    "alt_es": "Un consultor de soluciones leyendo una nueva consulta",
+    "file": "a-solutions-consultant-reading-a-new-enquiry.webp"
+   }
+  },
+  "/privacy-policy/": {
+   "hero": {
+    "prompt": "A privacy officer reviewing a printed data-protection policy at a quiet desk, laptop beside her, calm office.",
+    "alt": "A privacy officer reviewing a data policy",
+    "alt_es": "Una responsable de privacidad revisando una política de datos",
+    "file": "a-privacy-officer-reviewing-a-data-policy.webp"
+   }
+  },
+  "/cookie-policy/": {
+   "hero": {
+    "prompt": "Close-up of hands on a laptop trackpad adjusting browser settings, toggles on screen softly out of focus, home desk.",
+    "alt": "A person adjusting browser settings on a laptop",
+    "alt_es": "Una persona ajustando la configuración del navegador en un portátil",
+    "file": "a-person-adjusting-browser-settings-on-a-laptop.webp"
+   }
+  },
+  "/accessibility/": {
+   "hero": {
+    "prompt": "A blind man reading a website with a refreshable braille display under his fingers and headphones on, laptop on the desk.",
+    "alt": "A person reading a website with a braille display and a screen reader",
+    "alt_es": "Una persona leyendo un sitio web con una línea braille y un lector de pantalla",
+    "file": "a-person-reading-a-website-with-a-braille.webp"
+   }
+  },
+  "/products/network-access-aaa/": {
+   "hero": {
+    "prompt": "At dusk on a residential street in an American suburb: a grey fibre street cabinet in the foreground and a mobile mast above the rooftops behind.",
+    "alt": "A mobile mast and a fibre cabinet where subscribers connect",
+    "alt_es": "Una antena móvil y un armario de fibra donde se conectan los abonados",
+    "file": "a-mobile-mast-and-a-fibre-cabinet-where.webp"
+   }
+  },
+  "/products/billing-bss/": {
+   "hero": {
+    "prompt": "A billing operations team of three reviewing the monthly invoice run together at a large monitor of charts, out of focus, open-plan office.",
+    "alt": "A billing team reviewing the monthly invoice run",
+    "alt_es": "Un equipo de facturación revisando la facturación del mes",
+    "file": "a-billing-team-reviewing-the-monthly-invoice-run.webp"
+   }
+  },
+  "/products/provisioning-devices/": {
+   "hero": {
+    "prompt": "A subscriber at home plugging in a new fibre router whose lights come on, no technician present, living room.",
+    "alt": "A subscriber plugging in a new router that sets itself up",
+    "alt_es": "Un abonado conectando un router nuevo que se configura solo",
+    "file": "a-subscriber-plugging-in-a-new-router-that.webp"
+   }
+  },
+  "/products/customer-care-channels/": {
+   "hero": {
+    "prompt": "Inside an operator's store, a staff member with a tablet helping a customer at the counter, phones on display behind.",
+    "alt": "Store staff helping a customer with a tablet",
+    "alt_es": "Personal de tienda atendiendo a un cliente con una tableta",
+    "file": "store-staff-helping-a-customer-with-a-tablet.webp"
+   }
+  },
+  "/solutions/fibre-cable-isps/": {
+   "hero": {
+    "prompt": "A fibre technician working on an open street cabinet full of fibre splices in a residential neighbourhood, morning light.",
+    "alt": "A technician working on a fibre cabinet in a residential street",
+    "alt_es": "Un técnico trabajando en un armario de fibra en una calle residencial",
+    "file": "a-technician-working-on-a-fibre-cabinet-in.webp"
+   },
+   "What ISP software covers": {
+    "prompt": "An ISP's small operations room overlooking a town: one person watching the network, another handling billing, side by side.",
+    "alt": "An ISP's team running the network and the business side by side",
+    "alt_es": "El equipo de un ISP gestionando la red y el negocio lado a lado",
+    "file": "an-isp-s-team-running-the-network-and.webp"
+   },
+   "Plan changes without a reconnect": {
+    "prompt": "A family on a sofa watching a film on a large TV while a teenager games online, a home router with small lights on the shelf.",
+    "alt": "A family streaming at home after a speed upgrade",
+    "alt_es": "Una familia viendo contenido en casa tras ampliar su velocidad",
+    "file": "a-family-streaming-at-home-after-a-speed.webp"
+   },
+   "Billing day without flooding your OLTs": {
+    "prompt": "Racks of optical line terminals in a small ISP head-end at night, fibre patch cords, steady green status lights.",
+    "alt": "Optical line terminals in an ISP head-end at night",
+    "alt_es": "Terminales de línea óptica en la cabecera de un ISP por la noche",
+    "file": "optical-line-terminals-in-an-isp-head-end.webp"
+   },
+   "Router complaints fixed without a truck roll": {
+    "prompt": "A helpdesk agent with a headset fixing a subscriber's Wi-Fi remotely from her desk, talking the customer through it.",
+    "alt": "A helpdesk agent fixing a subscriber's Wi-Fi remotely",
+    "alt_es": "Una agente de soporte solucionando el wifi de un abonado a distancia",
+    "file": "a-helpdesk-agent-fixing-a-subscriber-s-wi.webp"
+   }
+  },
+  "/solutions/mobile-operators/": {
+   "hero": {
+    "prompt": "A mobile mast silhouetted over a city skyline at sunset, antennas sharp against an indigo and amber sky.",
+    "alt": "A mobile mast over a city at sunset",
+    "alt_es": "Una antena móvil sobre la ciudad al atardecer",
+    "file": "a-mobile-mast-over-a-city-at-sunset.webp"
+   },
+   "One BSS for prepaid and postpaid": {
+    "prompt": "A busy city street with people using their phones, a commuter, a student and a businesswoman, mobile subscribers of every kind.",
+    "alt": "Mobile subscribers on a busy city street",
+    "alt_es": "Abonados móviles en una calle concurrida",
+    "file": "mobile-subscribers-on-a-busy-city-street.webp"
+   },
+   "New bundles without a release": {
+    "prompt": "A product marketing team at a laptop launching a new data bundle, one colleague giving a quiet fist pump.",
+    "alt": "A product team launching a new bundle",
+    "alt_es": "Un equipo de producto lanzando un nuevo paquete",
+    "file": "a-product-team-launching-a-new-bundle.webp"
+   },
+   "Subscribers stay connected where radio ends": {
+    "prompt": "A shopper on the lower level of a large indoor mall making a phone call, deep inside the building far from windows.",
+    "alt": "A shopper making a call deep inside a mall",
+    "alt_es": "Una compradora haciendo una llamada en el interior de un centro comercial",
+    "file": "a-shopper-making-a-call-deep-inside-a.webp"
+   }
+  },
+  "/solutions/mvnos-mvnes/": {
+   "hero": {
+    "prompt": "The small team behind a new mobile brand in a creative office, colour swatches and blank SIM packaging mock-ups on the table.",
+    "alt": "The team behind a new mobile brand",
+    "alt_es": "El equipo detrás de una nueva marca móvil",
+    "file": "the-team-behind-a-new-mobile-brand.webp"
+   },
+   "Launch a brand, or host several": {
+    "prompt": "Several SIM starter packs in different brand colours lined up on a table, plain packaging with no names.",
+    "alt": "SIM packs for several brands run by one enabler",
+    "alt_es": "Paquetes SIM de varias marcas gestionadas por un mismo habilitador",
+    "file": "sim-packs-for-several-brands-run-by-one.webp"
+   },
+   "What is an MVNE?": {
+    "prompt": "An enabler's operations room: engineers at workstations with server racks behind a glass wall.",
+    "alt": "An enabler's team running the systems behind several brands",
+    "alt_es": "El equipo de un habilitador gestionando los sistemas de varias marcas",
+    "file": "an-enabler-s-team-running-the-systems-behind.webp"
+   },
+   "Ready to sell from day one": {
+    "prompt": "A pop-up stand on launch day, a staff member handing a new SIM pack to the first customer, both smiling.",
+    "alt": "A new brand's first customer receiving a SIM",
+    "alt_es": "El primer cliente de una nueva marca recibiendo su SIM",
+    "file": "a-new-brand-s-first-customer-receiving-a.webp"
+   }
+  },
+  "/solutions/wifi-venues/": {
+   "hero": {
+    "prompt": "Fans on their phones in a modern stadium stand, Wi-Fi access points mounted under the roof canopy.",
+    "alt": "Fans on their phones in a stadium with Wi-Fi access points",
+    "alt_es": "Aficionados con el móvil en un estadio con puntos de acceso wifi",
+    "file": "fans-on-their-phones-in-a-stadium-with.webp"
+   },
+   "What captive portal software does": {
+    "prompt": "A café guest opening a laptop to sign in to the venue Wi-Fi, a small access point on the wall behind.",
+    "alt": "A café guest signing in to the venue Wi-Fi",
+    "alt_es": "Un cliente de una cafetería conectándose al wifi del local",
+    "file": "a-caf-guest-signing-in-to-the-venue.webp"
+   },
+   "Connected beyond radio coverage, by SIM": {
+    "prompt": "A traveller on a train-station concourse walking with his phone to his ear, ceiling access points above.",
+    "alt": "A traveller staying connected on station Wi-Fi with his SIM",
+    "alt_es": "Un viajero conectado al wifi de la estación con su SIM",
+    "file": "a-traveller-staying-connected-on-station-wi-fi.webp"
+   },
+   "Revenue from venue Wi-Fi": {
+    "prompt": "A hotel lobby where a guest buys a Wi-Fi pass on her phone at the sofa, an access point on the ceiling.",
+    "alt": "A hotel guest buying a Wi-Fi pass",
+    "alt_es": "Una huésped de hotel comprando un pase wifi",
+    "file": "a-hotel-guest-buying-a-wi-fi-pass.webp"
+   }
+  },
+  "/solutions/enterprise-government-networks/": {
+   "hero": {
+    "prompt": "A government data centre network room: rows of racks with core switches and firewalls, an engineer with a badge walking the aisle.",
+    "alt": "Network racks in a government data centre",
+    "alt_es": "Racks de red en un centro de datos gubernamental",
+    "file": "network-racks-in-a-government-data-centre.webp"
+   },
+   "Know who changed any device": {
+    "prompt": "An engineer at a rack of firewalls and core switches, laptop connected by console cable, focused.",
+    "alt": "An engineer at a rack of firewalls and core switches",
+    "alt_es": "Un ingeniero ante un rack de cortafuegos y conmutadores troncales",
+    "file": "an-engineer-at-a-rack-of-firewalls-and.webp"
+   },
+   "Cisco ACS replacement": {
+    "prompt": "Two engineers sliding an old access-control appliance out of a rack, a new server already installed above it.",
+    "alt": "Engineers removing an end-of-life access appliance",
+    "alt_es": "Ingenieros retirando un equipo de control de acceso al final de su vida útil",
+    "file": "engineers-removing-an-end-of-life-access-appliance.webp"
+   },
+   "Evidence for every audit": {
+    "prompt": "An auditor and an IT manager reviewing an access report together in a meeting room, laptop and printed pages.",
+    "alt": "An auditor reviewing access evidence with an IT manager",
+    "alt_es": "Una auditora revisando evidencias de acceso con un responsable de TI",
+    "file": "an-auditor-reviewing-access-evidence-with-an-it.webp"
+   }
+  },
+  "/products/aaa-server/": {
+   "hero": {
+    "prompt": "A home fibre router with steady green lights on a living-room shelf, a family streaming in soft focus behind it.",
+    "alt": "A home fibre router online in a family living room",
+    "alt_es": "Un router de fibra conectado en el salón de una familia",
+    "file": "a-home-fibre-router-online-in-a-family.webp"
+   },
+   "What an old AAA server costs you": {
+    "prompt": "A lone senior network engineer working late in an empty office, rubbing his eyes beside an old beige server, a pile of tickets.",
+    "alt": "A lone network engineer working late on connection tickets",
+    "alt_es": "Un ingeniero de redes trabajando hasta tarde en incidencias de conexión",
+    "file": "a-lone-network-engineer-working-late-on-connection.webp"
+   },
+   "Upgrades work the moment they're sold": {
+    "prompt": "A young woman on a sofa smiling at her phone as a film plays smoothly on the TV, router on the shelf.",
+    "alt": "A subscriber enjoying a speed upgrade without reconnecting",
+    "alt_es": "Una abonada disfrutando de más velocidad sin reconectarse",
+    "file": "a-subscriber-enjoying-a-speed-upgrade-without-reconnecting.webp"
+   },
+   "Care answers connection calls without escalating": {
+    "prompt": "A care agent with a headset resolving a connection call, looking at session details on her screen, relaxed.",
+    "alt": "A care agent resolving a connection call from her own screen",
+    "alt_es": "Una agente resolviendo una llamada de conexión desde su pantalla",
+    "file": "a-care-agent-resolving-a-connection-call-from.webp"
+   },
+   "RADIUS and Diameter on one server": {
+    "prompt": "A street corner with a fibre cabinet in front, a fixed-wireless antenna on a house and a mobile mast on a rooftop behind.",
+    "alt": "Fibre, fixed wireless and mobile networks on one street",
+    "alt_es": "Redes de fibra, inalámbrica fija y móvil en una misma calle",
+    "file": "fibre-fixed-wireless-and-mobile-networks-on-one.webp"
+   }
+  },
+  "/products/tacacs-server/": {
+   "hero": {
+    "prompt": "A network engineer logging in to a core router from a laptop on a rack shelf, ID badge on a lanyard, data-centre aisle.",
+    "alt": "A network engineer logging in to a core router",
+    "alt_es": "Un ingeniero de redes accediendo a un router troncal",
+    "file": "a-network-engineer-logging-in-to-a-core.webp"
+   },
+   "Know who changed a production router": {
+    "prompt": "A dim data centre at 2 a.m., a single production router rack lit, an empty chair in the aisle.",
+    "alt": "A production router rack at night",
+    "alt_es": "Un rack de routers de producción por la noche",
+    "file": "a-production-router-rack-at-night.webp"
+   },
+   "TACACS+ in brief": {
+    "prompt": "Close-up of a laptop connected by a blue console cable to a router port, status lights on.",
+    "alt": "A laptop connected to a router's console port",
+    "alt_es": "Un portátil conectado al puerto de consola de un router",
+    "file": "a-laptop-connected-to-a-router-s-console.webp"
+   },
+   "Least-privilege access for every engineer": {
+    "prompt": "Several engineers in a network operations room, each at their own workstation wearing their own ID badge.",
+    "alt": "Engineers each signing in with their own credentials",
+    "alt_es": "Ingenieros que acceden cada uno con sus propias credenciales",
+    "file": "engineers-each-signing-in-with-their-own-credentials.webp"
+   },
+   "Audit evidence where your security team works": {
+    "prompt": "A security analyst in a security operations centre reviewing an audit trail on large monitors of log timelines, out of focus.",
+    "alt": "A security analyst reviewing an audit trail",
+    "alt_es": "Un analista de seguridad revisando un registro de auditoría",
+    "file": "a-security-analyst-reviewing-an-audit-trail.webp"
+   }
+  },
+  "/products/subscriber-data-management/": {
+   "hero": {
+    "prompt": "A row of server racks in a mobile operator's core data centre, blue light, long perspective.",
+    "alt": "Server racks in a mobile operator's core data centre",
+    "alt_es": "Racks de servidores en el centro de datos del núcleo de un operador móvil",
+    "file": "server-racks-in-a-mobile-operator-s-core.webp"
+   },
+   "One subscriber database for both cores": {
+    "prompt": "A 4G antenna panel and a newer 5G antenna mounted on the same mast against a clear sky.",
+    "alt": "4G and 5G antennas on the same mast",
+    "alt_es": "Antenas 4G y 5G en el mismo mástil",
+    "file": "4g-and-5g-antennas-on-the-same-mast.webp"
+   },
+   "Add 5G without replacing 4G": {
+    "prompt": "Two riggers in safety harnesses fitting a new 5G antenna beside existing 4G panels high on a tower.",
+    "alt": "Technicians adding a 5G antenna beside existing 4G equipment",
+    "alt_es": "Técnicos instalando una antena 5G junto al equipo 4G existente",
+    "file": "technicians-adding-a-5g-antenna-beside-existing-4g.webp"
+   }
+  },
+  "/products/wifi-offload-calling/": {
+   "hero": {
+    "prompt": "Travellers in a bright airport terminal using their phones, a Wi-Fi access point on the ceiling.",
+    "alt": "Travellers on their phones under a Wi-Fi access point",
+    "alt_es": "Viajeros con el móvil bajo un punto de acceso wifi",
+    "file": "travellers-on-their-phones-under-a-wi-fi.webp"
+   },
+   "Coverage where radio ends": {
+    "prompt": "A woman making a phone call on an underground metro platform, where mobile signal is weak.",
+    "alt": "A subscriber calling over Wi-Fi in an underground station",
+    "alt_es": "Una abonada llamando por wifi en una estación subterránea",
+    "file": "a-subscriber-calling-over-wi-fi-in-an.webp"
+   },
+   "One policy on Wi-Fi and mobile": {
+    "prompt": "A man walking from a sunny street into a café, still on a video call on his phone.",
+    "alt": "A subscriber walking indoors without dropping his call",
+    "alt_es": "Un abonado entrando en un local sin que se corte su llamada",
+    "file": "a-subscriber-walking-indoors-without-dropping-his-call.webp"
+   },
+   "Paid Wi-Fi on the access points venues own": {
+    "prompt": "A shopping-mall food court with an access point on a pillar, a shopper buying a Wi-Fi pass on her phone.",
+    "alt": "A shopper buying a Wi-Fi pass at a mall",
+    "alt_es": "Una compradora adquiriendo un pase wifi en un centro comercial",
+    "file": "a-shopper-buying-a-wi-fi-pass-at.webp"
+   }
+  },
+  "/products/service-provisioning/": {
+   "hero": {
+    "prompt": "An optical line terminal chassis in a telecom exchange, rows of fibre patch cords and lit status LEDs, close perspective.",
+    "alt": "An optical line terminal in a telecom exchange",
+    "alt_es": "Un terminal de línea óptica en una central de telecomunicaciones",
+    "file": "an-optical-line-terminal-in-a-telecom-exchange.webp"
+   },
+   "Telecom provisioning, done in one place": {
+    "prompt": "An operations engineer following service orders on a large monitor of order queues, out of focus, calm control room.",
+    "alt": "An operations engineer following service orders to the network",
+    "alt_es": "Un ingeniero de operaciones siguiendo órdenes de servicio hasta la red",
+    "file": "an-operations-engineer-following-service-orders-to-the.webp"
+   },
+   "Proof that every order landed": {
+    "prompt": "In a customer's home, a technician watches a new fibre ONT light turn green while holding a phone.",
+    "alt": "A technician confirming a new fibre service is live",
+    "alt_es": "Un técnico confirmando que el nuevo servicio de fibra funciona",
+    "file": "a-technician-confirming-a-new-fibre-service-is.webp"
+   },
+   "Billing day without flooding the network": {
+    "prompt": "A telecom exchange at night, long rows of network equipment with steady status lights, nobody rushing.",
+    "alt": "Network equipment handling a night of bulk orders",
+    "alt_es": "Equipos de red procesando una noche de órdenes masivas",
+    "file": "network-equipment-handling-a-night-of-bulk-orders.webp"
+   },
+   "Keep pushing configuration to your OLTs": {
+    "prompt": "Close-up of an engineer's laptop connected to an OLT shelf, hands on the keyboard.",
+    "alt": "An engineer pushing configuration to an OLT",
+    "alt_es": "Un ingeniero enviando configuración a una OLT",
+    "file": "an-engineer-pushing-configuration-to-an-olt.webp"
+   }
+  },
+  "/products/device-management/": {
+   "hero": {
+    "prompt": "A home Wi-Fi router and fibre ONT on a living-room shelf, a child on a tablet on the rug in soft focus.",
+    "alt": "A home router and fibre ONT in a subscriber's living room",
+    "alt_es": "Un router y una ONT de fibra en el salón de un abonado",
+    "file": "a-home-router-and-fibre-ont-in-a.webp"
+   },
+   "What TR-069 device management does": {
+    "prompt": "A helpdesk agent with a headset looking at a stylised router diagram on screen while on a call.",
+    "alt": "A helpdesk agent checking a subscriber's router remotely",
+    "alt_es": "Un agente de soporte revisando el router de un abonado a distancia",
+    "file": "a-helpdesk-agent-checking-a-subscriber-s-router.webp"
+   },
+   "Router faults found in one click": {
+    "prompt": "An older man at home on the phone with support, standing beside his router, looking relieved.",
+    "alt": "A subscriber on the phone with support beside his router",
+    "alt_es": "Un abonado al teléfono con soporte junto a su router",
+    "file": "a-subscriber-on-the-phone-with-support-beside.webp"
+   },
+   "Firmware updates without mass outages": {
+    "prompt": "Aerial view of a suburban street at dusk, a handful of homes lit among many.",
+    "alt": "A neighbourhood of connected homes at dusk",
+    "alt_es": "Un barrio de hogares conectados al anochecer",
+    "file": "a-neighbourhood-of-connected-homes-at-dusk.webp"
+   }
+  },
+  "/products/digital-bss/": {
+   "hero": {
+    "prompt": "A billing analyst and a care manager at a mid-size operator reviewing a plan together on a laptop in a modern office.",
+    "alt": "Billing and care staff reviewing a plan together",
+    "alt_es": "Personal de facturación y atención revisando juntos un plan",
+    "file": "billing-and-care-staff-reviewing-a-plan-together.webp"
+   },
+   "A BSS you can take in parts": {
+    "prompt": "A team arranging sticky notes into phases on a glass-wall roadmap, planning a replacement step by step.",
+    "alt": "A team planning a BSS replacement one module at a time",
+    "alt_es": "Un equipo planificando la sustitución del BSS módulo a módulo",
+    "file": "a-team-planning-a-bss-replacement-one-module.webp"
+   },
+   "Start with the module you need": {
+    "prompt": "A CIO and an IT architect at a table pointing at a printed architecture diagram of plain boxes and lines.",
+    "alt": "IT leaders choosing which module to replace first",
+    "alt_es": "Responsables de TI eligiendo qué módulo sustituir primero",
+    "file": "it-leaders-choosing-which-module-to-replace-first.webp"
+   },
+   "Unpaid bills chased without manual work": {
+    "prompt": "A woman at her kitchen table paying an overdue bill on her phone, a paper invoice beside her coffee.",
+    "alt": "A customer paying an overdue bill from her phone",
+    "alt_es": "Una clienta pagando una factura vencida desde su móvil",
+    "file": "a-customer-paying-an-overdue-bill-from-her.webp"
+   }
+  },
+  "/products/online-charging/": {
+   "hero": {
+    "prompt": "A young man on a busy European high street using mobile data on his phone, shoppers passing.",
+    "alt": "A prepaid subscriber using data in a busy market",
+    "alt_es": "Un abonado prepago usando datos en un mercado concurrido",
+    "file": "a-prepaid-subscriber-using-data-in-a-busy.webp"
+   },
+   "What an online charging system does": {
+    "prompt": "A commuter on a city bus watching a video on her phone, window light, the city passing.",
+    "alt": "A commuter using mobile data on the bus",
+    "alt_es": "Una viajera usando datos móviles en el autobús",
+    "file": "a-commuter-using-mobile-data-on-the-bus.webp"
+   },
+   "New offers without a release": {
+    "prompt": "A marketing team around a table with blank cards and sketches, designing a new weekend data bundle.",
+    "alt": "A marketing team designing a new data bundle",
+    "alt_es": "Un equipo de marketing diseñando un nuevo paquete de datos",
+    "file": "a-marketing-team-designing-a-new-data-bundle.webp"
+   },
+   "Keep your existing prepaid system": {
+    "prompt": "Packet-core equipment racks in a mobile operator's equipment room, neat cabling.",
+    "alt": "Packet core equipment in a mobile operator's equipment room",
+    "alt_es": "Equipos del núcleo de paquetes en la sala de equipos de un operador móvil",
+    "file": "packet-core-equipment-in-a-mobile-operator-s.webp"
+   }
+  },
+  "/products/policy-control/": {
+   "hero": {
+    "prompt": "A young woman streaming video on her phone on a rooftop at golden hour, a mobile mast in the distance.",
+    "alt": "A subscriber streaming video on a mobile data plan",
+    "alt_es": "Una abonada viendo vídeo con su plan de datos móviles",
+    "file": "a-subscriber-streaming-video-on-a-mobile-data.webp"
+   },
+   "PCRF policy control in telecom networks": {
+    "prompt": "A mobile mast on a hill serving houses with fixed-wireless antennas on their roofs.",
+    "alt": "A mobile mast serving fixed-wireless homes",
+    "alt_es": "Una antena móvil que da servicio a hogares con inalámbrica fija",
+    "file": "a-mobile-mast-serving-fixed-wireless-homes.webp"
+   },
+   "Marketing launches plans itself": {
+    "prompt": "A marketing manager at her laptop publishing a new data plan while a colleague gives a thumbs up.",
+    "alt": "A marketing manager launching a data plan herself",
+    "alt_es": "Una responsable de marketing lanzando un plan de datos ella misma",
+    "file": "a-marketing-manager-launching-a-data-plan-herself.webp"
+   },
+   "Speed boosts and data passes on every plan": {
+    "prompt": "A gamer at home buying a speed boost on his phone, a game paused on the screen behind.",
+    "alt": "A subscriber buying a speed boost from his phone",
+    "alt_es": "Un abonado comprando más velocidad desde su móvil",
+    "file": "a-subscriber-buying-a-speed-boost-from-his.webp"
+   }
+  },
+  "/products/prepaid-offers-vouchers/": {
+   "hero": {
+    "prompt": "A customer buying a mobile top-up at a London corner shop counter, the shopkeeper handing over a recharge card.",
+    "alt": "A customer buying a mobile top-up at a corner shop",
+    "alt_es": "Un cliente comprando una recarga móvil en una tienda de barrio",
+    "file": "a-customer-buying-a-mobile-top-up-at.webp"
+   },
+   "What mobile recharge software does": {
+    "prompt": "Close-up of a thumbnail scratching the panel of a plain prepaid recharge card next to a phone.",
+    "alt": "A customer scratching a prepaid recharge card",
+    "alt_es": "Un cliente rascando una tarjeta de recarga prepago",
+    "file": "a-customer-scratching-a-prepaid-recharge-card.webp"
+   },
+   "Promotions without IT": {
+    "prompt": "A marketing team pinning sketches of a recharge bonus campaign on a board, energetic.",
+    "alt": "A marketing team planning a recharge bonus",
+    "alt_es": "Un equipo de marketing preparando una bonificación por recarga",
+    "file": "a-marketing-team-planning-a-recharge-bonus.webp"
+   },
+   "Vouchers tracked until they are used": {
+    "prompt": "A distributor in a small warehouse scanning the barcode on a box of recharge vouchers.",
+    "alt": "A distributor scanning boxes of recharge vouchers",
+    "alt_es": "Un distribuidor escaneando cajas de tarjetas de recarga",
+    "file": "a-distributor-scanning-boxes-of-recharge-vouchers.webp"
+   }
+  },
+  "/products/collections-dunning/": {
+   "hero": {
+    "prompt": "A postpaid customer at home reading a payment reminder notification on his phone, calm evening light.",
+    "alt": "A postpaid customer reading a payment reminder",
+    "alt_es": "Un cliente pospago leyendo un recordatorio de pago",
+    "file": "a-postpaid-customer-reading-a-payment-reminder.webp"
+   },
+   "What telecom collections software does": {
+    "prompt": "A collections team lead reviewing unpaid accounts on a monitor of account charts, out of focus, relaxed.",
+    "alt": "A collections team reviewing unpaid accounts",
+    "alt_es": "Un equipo de cobros revisando cuentas impagadas",
+    "file": "a-collections-team-reviewing-unpaid-accounts.webp"
+   },
+   "Barring and late fees without manual steps": {
+    "prompt": "A broadband customer at home noticing a service notice on her phone, laptop open on the table.",
+    "alt": "A customer seeing a service notice on her phone",
+    "alt_es": "Una clienta viendo un aviso de servicio en su móvil",
+    "file": "a-customer-seeing-a-service-notice-on-her.webp"
+   },
+   "Service back on payment": {
+    "prompt": "A man at his kitchen table paying an overdue phone bill on his phone, his home router lit on the counter behind him.",
+    "alt": "A customer paying an overdue bill to restore service",
+    "alt_es": "Un cliente pagando una factura vencida para recuperar el servicio",
+    "file": "a-customer-paying-an-overdue-bill-to-restore.webp"
+   }
+  },
+  "/products/partner-mvno-settlement/": {
+   "hero": {
+    "prompt": "Wholesale managers from two operators reviewing a settlement report together across a table, printed pages and a laptop.",
+    "alt": "Wholesale managers from two operators reviewing a settlement",
+    "alt_es": "Responsables mayoristas de dos operadores revisando una liquidación",
+    "file": "wholesale-managers-from-two-operators-reviewing-a-settlement.webp"
+   },
+   "What telecom wholesale billing covers": {
+    "prompt": "A finance analyst at month end surrounded by stacks of printed spreadsheets, late afternoon.",
+    "alt": "A finance analyst closing partner settlements at month end",
+    "alt_es": "Un analista financiero cerrando liquidaciones con socios a fin de mes",
+    "file": "a-finance-analyst-closing-partner-settlements-at-month.webp"
+   },
+   "Late usage records still billed": {
+    "prompt": "A billing analyst reviewing rates by destination on a large monitor showing a world map, out of focus.",
+    "alt": "A billing analyst reviewing partner rates by destination",
+    "alt_es": "Una analista de facturación revisando tarifas por destino",
+    "file": "a-billing-analyst-reviewing-partner-rates-by-destination.webp"
+   },
+   "Shortfalls billed automatically": {
+    "prompt": "A wholesale account manager meeting a partner brand's manager in a modern office, shaking hands over a signed agreement.",
+    "alt": "A wholesale manager meeting a partner brand",
+    "alt_es": "Un responsable mayorista reunido con una marca socia",
+    "file": "a-wholesale-manager-meeting-a-partner-brand.webp"
+   }
+  },
+  "/products/interconnect-roaming-settlement/": {
+   "hero": {
+    "prompt": "An international gateway exchange: racks of switching equipment and fibre cabling in a long equipment hall.",
+    "alt": "An international gateway exchange that carries interconnect traffic",
+    "alt_es": "Una central de pasarela internacional que cursa tráfico de interconexión",
+    "file": "an-international-gateway-exchange-that-carries-interconnect-traffic.webp"
+   },
+   "What an interconnect billing system does": {
+    "prompt": "A traveller at an airport arrivals hall switching on her phone after landing, suitcase beside her.",
+    "alt": "A traveller switching on roaming after landing",
+    "alt_es": "Una viajera activando la itinerancia al aterrizar",
+    "file": "a-traveller-switching-on-roaming-after-landing.webp"
+   },
+   "One vendor for BSS and settlement": {
+    "prompt": "An ageing beige settlement server beside a sleek modern rack in an equipment room.",
+    "alt": "An ageing settlement server beside a modern rack",
+    "alt_es": "Un servidor de liquidación antiguo junto a un rack moderno",
+    "file": "an-ageing-settlement-server-beside-a-modern-rack.webp"
+   }
+  },
+  "/products/mediation-revenue-assurance/": {
+   "hero": {
+    "prompt": "Close-up of network equipment in a data centre with fibre links lit, the source of the usage records that feed billing.",
+    "alt": "Network equipment whose usage records feed billing",
+    "alt_es": "Equipos de red cuyos registros de uso alimentan la facturación",
+    "file": "network-equipment-whose-usage-records-feed-billing.webp"
+   },
+   "What telecom mediation covers": {
+    "prompt": "A billing engineer checking usage files on two monitors of data rows, out of focus in a dim room.",
+    "alt": "A billing engineer checking usage files before billing",
+    "alt_es": "Un ingeniero de facturación revisando ficheros de uso antes de facturar",
+    "file": "a-billing-engineer-checking-usage-files-before-billing.webp"
+   },
+   "Duplicates caught before billing": {
+    "prompt": "An analyst comparing two record streams side by side on dual monitors, pointing at a match.",
+    "alt": "An analyst catching duplicate usage records",
+    "alt_es": "Una analista detectando registros de uso duplicados",
+    "file": "an-analyst-catching-duplicate-usage-records.webp"
+   },
+   "Evidence for every disputed bill": {
+    "prompt": "A billing specialist on a call with an enterprise customer, a printed bill with one line highlighted on the desk.",
+    "alt": "A billing specialist answering a disputed bill with evidence",
+    "alt_es": "Una especialista en facturación respondiendo una factura reclamada con pruebas",
+    "file": "a-billing-specialist-answering-a-disputed-bill-with.webp"
+   }
+  },
+  "/products/bss-in-a-box/": {
+   "hero": {
+    "prompt": "A new MVNO founding team in a small office preparing for launch, boxes of plain SIM starter packs on the table.",
+    "alt": "A new MVNO team preparing for launch",
+    "alt_es": "El equipo de un nuevo OMV preparando el lanzamiento",
+    "file": "a-new-mvno-team-preparing-for-launch.webp"
+   },
+   "What the MVNO billing platform includes": {
+    "prompt": "Neatly arranged plain SIM starter packs, a phone and a laptop on a clean table, top-down.",
+    "alt": "SIM starter packs ready for a new brand",
+    "alt_es": "Paquetes SIM listos para una nueva marca",
+    "file": "sim-starter-packs-ready-for-a-new-brand.webp"
+   },
+   "Package contents": {
+    "prompt": "A launch-day kiosk where a new brand sells its first SIMs to a queue of customers.",
+    "alt": "A new mobile brand selling its first SIMs",
+    "alt_es": "Una nueva marca móvil vendiendo sus primeras SIM",
+    "file": "a-new-mobile-brand-selling-its-first-sims.webp"
+   },
+   "No custom project before launch": {
+    "prompt": "A small brand team celebrating launch day in their office, raised coffee cups.",
+    "alt": "A brand team celebrating launch day",
+    "alt_es": "El equipo de una marca celebrando el día del lanzamiento",
+    "file": "a-brand-team-celebrating-launch-day.webp"
+   }
+  },
+  "/products/crm/": {
+   "hero": {
+    "prompt": "Care agents with headsets in a modern operator contact centre, daylight, focused but relaxed.",
+    "alt": "Care agents answering calls in an operator's contact centre",
+    "alt_es": "Agentes atendiendo llamadas en el centro de contacto de un operador",
+    "file": "care-agents-answering-calls-in-an-operator-s.webp"
+   },
+   "What a telecom CRM does": {
+    "prompt": "Over-the-shoulder view of a care agent working from a single customer page on her monitor, out of focus.",
+    "alt": "A care agent working from a single customer page",
+    "alt_es": "Una agente trabajando desde una única página de cliente",
+    "file": "a-care-agent-working-from-a-single-customer.webp"
+   },
+   "Everything about a customer on one page": {
+    "prompt": "A care agent smiling on a call, answering quickly without switching tools.",
+    "alt": "A care agent answering without switching tools",
+    "alt_es": "Un agente respondiendo sin cambiar de herramienta",
+    "file": "a-care-agent-answering-without-switching-tools.webp"
+   },
+   "Fewer process changes waiting on developers": {
+    "prompt": "A care operations manager adjusting a workflow on her laptop, a simple flowchart of boxes on screen.",
+    "alt": "A care manager changing a process in settings",
+    "alt_es": "Una responsable de atención cambiando un proceso desde la configuración",
+    "file": "a-care-manager-changing-a-process-in-settings.webp"
+   }
+  },
+  "/products/dealer-mobile-pos/": {
+   "hero": {
+    "prompt": "A field sales agent in a plain polo shirt signing up a customer on her smartphone at a pop-up stand in a European shopping centre.",
+    "alt": "A field agent signing up a customer on her phone",
+    "alt_es": "Una agente de campo dando de alta a un cliente desde su móvil",
+    "file": "a-field-agent-signing-up-a-customer-on.webp"
+   },
+   "What a telecom POS does": {
+    "prompt": "A dealer in a small phone shop helping a customer activate a new SIM, phones on the wall.",
+    "alt": "A dealer activating a SIM in a phone shop",
+    "alt_es": "Un distribuidor activando una SIM en una tienda de móviles",
+    "file": "a-dealer-activating-a-sim-in-a-phone.webp"
+   },
+   "One record for every dealer sale": {
+    "prompt": "A regional sales manager checking dealer sales on a tablet in the front seat of a parked car.",
+    "alt": "A sales manager checking dealer sales on a tablet",
+    "alt_es": "Un responsable de ventas revisando las ventas de distribuidores en una tableta",
+    "file": "a-sales-manager-checking-dealer-sales-on-a.webp"
+   },
+   "Offers sold at the point of sale": {
+    "prompt": "A door-to-door agent showing a customer a current offer on her phone at the doorstep.",
+    "alt": "An agent showing a customer an offer at the doorstep",
+    "alt_es": "Una agente mostrando una oferta a un cliente en su puerta",
+    "file": "an-agent-showing-a-customer-an-offer-at.webp"
+   }
+  },
+  "/products/self-care-portal/": {
+   "hero": {
+    "prompt": "A woman at a laptop at home signing up for broadband online, mug of tea, bright window.",
+    "alt": "A customer signing up for service online at home",
+    "alt_es": "Una clienta contratando un servicio en línea desde casa",
+    "file": "a-customer-signing-up-for-service-online-at.webp"
+   },
+   "What self-service portal software does": {
+    "prompt": "A man at his kitchen table checking his account on a laptop, relaxed morning.",
+    "alt": "A customer managing his account online",
+    "alt_es": "Un cliente gestionando su cuenta en línea",
+    "file": "a-customer-managing-his-account-online.webp"
+   },
+   "Your brand in more than 30 languages": {
+    "prompt": "An Arabic-speaking woman in a Berlin apartment using a tablet on her sofa, the interface laid out right to left and out of focus.",
+    "alt": "A customer using the self-care site in her own language",
+    "alt_es": "Una clienta usando el portal de autoservicio en su idioma",
+    "file": "a-customer-using-the-self-care-site-in.webp"
+   },
+   "Bills paid without a call": {
+    "prompt": "A young man paying a bill online with a bank card in one hand and a laptop in front of him.",
+    "alt": "A customer paying a bill online by card",
+    "alt_es": "Un cliente pagando una factura en línea con tarjeta",
+    "file": "a-customer-paying-a-bill-online-by-card.webp"
+   }
+  },
+  "/products/self-care-app/": {
+   "hero": {
+    "prompt": "A commuter on a train platform checking her balance in an app on her phone, the screen out of focus.",
+    "alt": "A subscriber checking her balance in the operator's app",
+    "alt_es": "Una abonada consultando su saldo en la app del operador",
+    "file": "a-subscriber-checking-her-balance-in-the-operator.webp"
+   },
+   "Fewer calls and shop visits": {
+    "prompt": "A student on a park bench changing her plan on her phone instead of visiting a shop.",
+    "alt": "A student changing her plan from her phone",
+    "alt_es": "Una estudiante cambiando su plan desde el móvil",
+    "file": "a-student-changing-her-plan-from-her-phone.webp"
+   },
+   "Low-balance alerts in real time": {
+    "prompt": "A phone on a café table lighting up with a notification banner, a hand reaching for it.",
+    "alt": "A low-balance alert lighting up a phone",
+    "alt_es": "Una alerta de saldo bajo iluminando un móvil",
+    "file": "a-low-balance-alert-lighting-up-a-phone.webp"
+   },
+   "Recharge and pay from the app": {
+    "prompt": "A man in the back of a taxi tapping to recharge his line with a mobile wallet.",
+    "alt": "A subscriber recharging from the app with a mobile wallet",
+    "alt_es": "Un abonado recargando desde la app con un monedero móvil",
+    "file": "a-subscriber-recharging-from-the-app-with-a.webp"
+   }
+  },
+  "/products/ai-virtual-agent/": {
+   "hero": {
+    "prompt": "A woman at home late at night chatting with an assistant on her phone, lamp light, the chat on her screen out of focus.",
+    "alt": "A subscriber getting help from the AI assistant late at night",
+    "alt_es": "Una abonada recibiendo ayuda del asistente de IA por la noche",
+    "file": "a-subscriber-getting-help-from-the-ai-assistant.webp"
+   },
+   "What AI customer service should do": {
+    "prompt": "A calmer contact centre where agents work on a few complex cases, empty queue board in soft focus.",
+    "alt": "Contact-centre agents free for complex cases",
+    "alt_es": "Agentes del centro de contacto libres para los casos complejos",
+    "file": "contact-centre-agents-free-for-complex-cases.webp"
+   },
+   "Account tasks done without an agent": {
+    "prompt": "A man on a commuter train changing his plan through a chat on his phone.",
+    "alt": "A subscriber changing his plan through the assistant",
+    "alt_es": "Un abonado cambiando su plan a través del asistente",
+    "file": "a-subscriber-changing-his-plan-through-the-assistant.webp"
+   },
+   "Help in the customer's language, at any hour": {
+    "prompt": "An older Spanish-speaking woman in her American apartment chatting on her phone in the evening.",
+    "alt": "A subscriber getting help in her own language",
+    "alt_es": "Una abonada recibiendo ayuda en su propio idioma",
+    "file": "a-subscriber-getting-help-in-her-own-language.webp"
+   }
+  },
+  "/products/ai-agent-assist/": {
+   "hero": {
+    "prompt": "A NOC engineer reading a suggested next step in a side panel of her console, network wall in soft focus behind.",
+    "alt": "A NOC engineer reading a suggested next step in her console",
+    "alt_es": "Una ingeniera del NOC leyendo el siguiente paso sugerido en su consola",
+    "file": "a-noc-engineer-reading-a-suggested-next-step.webp"
+   },
+   "What AI agent assist does": {
+    "prompt": "A care agent typing a question into an assistant panel beside a customer record on his monitor.",
+    "alt": "A care agent asking the assistant about a bill",
+    "alt_es": "Un agente preguntando al asistente por una factura",
+    "file": "a-care-agent-asking-the-assistant-about-a.webp"
+   },
+   "New staff answer like an expert": {
+    "prompt": "A new young care agent handling a call with confidence while a senior colleague nearby relaxes with a coffee.",
+    "alt": "A new agent answering with confidence",
+    "alt_es": "Un agente nuevo respondiendo con seguridad",
+    "file": "a-new-agent-answering-with-confidence.webp"
+   },
+   "Read-only access": {
+    "prompt": "Close-up of an engineer's hand on the keyboard making a change himself, the suggestion panel beside it.",
+    "alt": "An engineer making the final change by hand",
+    "alt_es": "Un ingeniero aplicando él mismo el cambio final",
+    "file": "an-engineer-making-the-final-change-by-hand.webp"
+   }
+  }
+ }
+}

@@ -41,13 +41,26 @@ for f in sorted(glob.glob(os.path.join(PUB, '**', '*.html'), recursive=True)):
         'b': re.sub(r'\s(?:srcset|sizes|loading|decoding|fetchpriority)="[^"]*"', '', b),
     }
 
-# embedded images (full size; the 800 px copies are not needed)
+# embedded images: only those the pages use (old photos the copy replaced stay out); full size, except the generated
+# photos (assets/img/photos/), which go in as their 800 px copy re-encoded, so the file stays under 16 MB
+used = set()
+for pg in pages.values(): used |= set(re.findall(r'/assets/img/[\w.\-/]+', pg['b']))
 imgs = {}
-for f in sorted(os.listdir(os.path.join(PUB, 'assets', 'img'))):
-    if f.endswith('-800.webp') or f.endswith('-400.webp'): continue
-    mime = {'.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png'}.get(os.path.splitext(f)[1], 'image/webp')
-    data = open(os.path.join(PUB, 'assets', 'img', f), 'rb').read()
-    imgs['/assets/img/' + f] = f'data:{mime};base64,' + base64.b64encode(data).decode()
+for u in sorted(used):
+    fp = os.path.join(PUB, u.lstrip('/'))
+    if not os.path.isfile(fp): continue
+    mime = {'.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png'}.get(os.path.splitext(fp)[1], 'image/webp')
+    if '/assets/img/photos/' in u:
+        from PIL import Image
+        import io
+        small = fp.replace('.webp', '-800.webp')
+        with Image.open(small if os.path.exists(small) else fp) as im:
+            im = im.convert('RGB')
+            if im.width > 800: im = im.resize((800, round(im.height * 800 / im.width)), Image.LANCZOS)
+            buf = io.BytesIO(); im.save(buf, 'WEBP', quality=58, method=6); data = buf.getvalue()
+    else:
+        data = open(fp, 'rb').read()
+    imgs[u] = f'data:{mime};base64,' + base64.b64encode(data).decode()
 
 opt = lambda *p: read(os.path.join(PUB, *p)) if os.path.exists(os.path.join(PUB, *p)) else ''
 css = opt('assets', 'css', 'site-fixes.css') + '\n' + opt('assets', 'css', 'site-polish.css') + '\n' + opt('assets', 'css', 'site-copy.css')
@@ -104,7 +117,7 @@ router = r'''
     var page = PAGES[r.path] || PAGES[r.path + '/'] || PAGES[r.path.replace(/\/?$/, '/') + 'index.html'] || PAGES[r.path.indexOf('/es/') === 0 ? '/es/404.html' : '/404.html'] || PAGES['/index.html'] || PAGES['/'];
     if (current !== r.path + r.query) {
       current = r.path + r.query;
-      root.innerHTML = page.b.replace(/\/assets\/img\/[\w.\-]+/g, function (u) { return IMGS[u] || u; });
+      root.innerHTML = page.b.replace(/\/assets\/img\/[\w.\-\/]+/g, function (u) { return IMGS[u] || u; });
       document.title = page.t.replace(/&amp;/g, '&');
       document.documentElement.lang = page.l;
       document.body.className = page.c;

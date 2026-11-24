@@ -32,7 +32,11 @@ window.__alepoCopy = function (cfg, doc) {
   const productSlug = ((P && P.url) || '').match(/^\/products\/([^/]+)\/$/);
   const demoHref = productSlug && !/(network-access-aaa|billing-bss|provisioning-devices|customer-care-channels|ai-for-telecom)/.test(productSlug[1]) ? `/contact-us/?product=${productSlug[1]}#demo` : '/contact-us/#demo';
   const btnHref = b => b.href === '/contact-us/#demo' ? href(demoHref) : href(b.href || '#');
-  const D = C.data || {}; // dates and images of linked posts and news (from alepo.com), leadership photos
+  const D = C.data || {};
+  // pages without a copy model (legal, thank-you): their hero photo becomes the one made for the page
+  function swapHero() { const hp = C.photos && C.photos.hero; if (!hp) return;
+    const im = [...main.querySelectorAll('img')].find(x => !/logo|\.svg/i.test(x.getAttribute('src') || '')); if (!im) return;
+    im.setAttribute('src', hp.src); im.setAttribute('srcset', hp.srcset); im.setAttribute('alt', hp.alt); im.setAttribute('width', hp.w); im.setAttribute('height', hp.h); } // dates and images of linked posts and news (from alepo.com), leadership photos
   // ---------- blocks ----------
   const para = (b, cls) => `<p${cls ? ` class="${cls}"` : ''}>${T(b.text).replace(/\n/g, '<br>')}</p>`;
   const more = b => b.href ? `<a class="c-more" href="${esc(href(b.href))}"${ext(b.href)}>${esc(noArrow(b.text))}${ARROW}</a>` : `<p class="c-more">${esc(noArrow(b.text))}</p>`;
@@ -124,12 +128,12 @@ window.__alepoCopy = function (cfg, doc) {
     const moreB = s.blocks.filter(b => b.t === 'more');
     const link = moreB.length === 1 && moreB[0].href && !s.blocks.some(b => b.t === 'list' && (b.hrefs || []).some(Boolean)) ? moreB[0].href : null;
     const inner = `${s.blocks.filter(b => b.t === 'status').map(b => status(b.text)).join('')}<h3>${T(s.h3)}</h3>${s.blocks.filter(b => b.t !== 'status' && !(link && b.t === 'more')).map(b => block(b, sec, dark)).join('')}${link ? `<span class="c-more">${esc(noArrow(moreB[0].text))}${ARROW}</span>` : ''}`;
-    const photo = link && forHref(link);
+    const photo = link && heroFor(link);
     if (photo) return `<a class="x-card c-card c-card-link c-has-img" href="${esc(href(link))}"${ext(link)}><span class="c-card-img">${imgTag(photo)}</span><span class="c-card-b">${inner}</span></a>`;
     return link ? `<a class="x-card c-card c-card-link" href="${esc(href(link))}"${ext(link)}>${inner}</a>` : `<div class="x-card c-card">${inner}</div>`;
   }
   if (!P && C.sitemapPages && NAV) sitemapPage();
-  if (!P) { if (NAV) navigation(); return; } // legal pages, sitemap, 404: only the menus and footer come from the copy
+  if (!P) { swapHero(); if (NAV) navigation(); return; } // legal pages, sitemap, 404: only the menus and footer come from the copy
   // Sitemap: the footer's "Sitemap" as heading, the menu names as groups, each page under the H1 of its Word file
   function sitemapPage() {
     const navSec = id => NAV.sections.find(x => x.id === id) || { blocks: [] };
@@ -166,6 +170,8 @@ window.__alepoCopy = function (cfg, doc) {
   const imgTag = (o, cls) => `<img src="${esc(o.src)}"${o.srcset ? ` srcset="${esc(o.srcset)}" sizes="(max-width: 760px) 100vw, 640px"` : ''} alt="${esc(o.alt)}"${o.w ? ` width="${o.w}" height="${o.h}"` : ''} loading="lazy" decoding="async" class="g-zm${cls ? ' ' + cls : ''}">`;
   const takeLoose = () => { const o = POOL.loose.find(x => !usedImg.has(x.src)); if (o) usedImg.add(o.src); return o || null; };
   const forHref = h => { const o = POOL.byHref[(h || '').replace(/^\/es(?=\/)/, '').replace(/[?#].*/, '')]; if (o && !usedImg.has(o.src)) { usedImg.add(o.src); return o; } return null; };
+  // a card linking to a page shows that page's hero photo (copy/photos.json)
+  const heroFor = h => { const k = (h || '').replace(/^\/es(?=\/)/, '').replace(/[?#].*/, ''); return (C.photos && C.photos.heroes && C.photos.heroes[k]) || null; };
   // ---------- sections ----------
   const PAGE = (P.source || '').replace(/\.docx$/, '');
   function section(s, i, all) {
@@ -204,7 +210,7 @@ window.__alepoCopy = function (cfg, doc) {
         const other = rest.filter(b => !lead.includes(b));
         body = `<div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2>${lead.length ? `<div class="c-head-x">${lead.map(b => block(b, PAGE, dark)).join('')}</div>` : ''}</div>${other.map(b => block(b, PAGE === '08-about' && b.kind === 'offices' ? 'about' : b.t === 'list' ? 'wide' : PAGE, dark)).join('')}`;
       } else {
-        const ph = takeLoose();
+        const ph = (C.photos && C.photos.sections && C.photos.sections[i]) || null; // the photo made for this section, or none
         body = `<div class="c-split${ph ? ' c-split-img' : ''}"><div><h2 class="x-h2">${T(s.h2)}</h2>${ph ? `<figure class="c-fig x-media">${imgTag(ph)}</figure>` : ''}</div><div class="c-prose">${html.join('')}</div></div>`;
       }
     }
@@ -219,7 +225,7 @@ window.__alepoCopy = function (cfg, doc) {
     const body = g => g.blocks.map(b => b.t === 'list' ? `<ul class="c-links c-links-c">${b.items.map((it, i) => line(it, (b.hrefs || [])[i])).join('')}</ul>`
       : b.t === 'h4' ? `<h4 class="c-h4">${T(b.text)}</h4>` : b.t === 'more' ? more(b) : b.t === 'p' ? para(b) : block(b, PAGE)).join('');
     const isTall = g => g.blocks.filter(b => b.t === 'h4').length > 1;
-    const gcard = (g, i) => { const ph = forHref(g.href);
+    const gcard = (g, i) => { const ph = heroFor(g.href);
       return `<div class="x-card c-card c-pgroup c-pg-${i}${isTall(g) ? ' c-pg-tall' : ''}">${ph ? `<a class="c-card-img" href="${esc(href(g.href))}" tabindex="-1" aria-hidden="true">${imgTag(ph)}</a>` : ''}<div class="c-card-b"><h3>${g.href ? `<a href="${esc(href(g.href))}">${T(g.h3)}</a>` : T(g.h3)}</h3>${body(g)}</div></div>`; };
     return `<section class="c-sec c-tint" id="products"><div class="c-wrap"><div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2><div class="c-head-x">${lead.map(b => block(b, PAGE)).join('')}</div></div>
       <div class="c-pgrid">${subs.map(gcard).join('')}</div></div></section>`;
@@ -238,7 +244,8 @@ window.__alepoCopy = function (cfg, doc) {
   const media = oldHero && [...oldHero.querySelectorAll('img')].find(im => !/logo/i.test(im.getAttribute('src') || ''));
   const crumbs = H.crumbs ? H.crumbs.map((c, i) => ({ name: plain(c), href: (H.crumbHrefs || [])[i] })) : null;
   const assist = (H.extra || []).find(b => b.kind === 'assistants');
-  const heroMedia = assist ? table(assist) : media ? `<div class="c-hero-media x-media"><img src="${esc(media.getAttribute('src'))}" alt="${esc(media.getAttribute('alt') || '')}" ${media.getAttribute('srcset') ? `srcset="${esc(media.getAttribute('srcset'))}" sizes="(max-width: 900px) 100vw, 560px"` : ''} width="${media.getAttribute('width') || 1200}" height="${media.getAttribute('height') || 800}" fetchpriority="high"></div>` : '';
+  const HP = C.photos && C.photos.hero;
+  const heroMedia = assist ? table(assist) : HP ? `<div class="c-hero-media x-media"><img src="${esc(HP.src)}" srcset="${esc(HP.srcset)}" sizes="(max-width: 900px) 100vw, 560px" alt="${esc(HP.alt)}" width="${HP.w}" height="${HP.h}" fetchpriority="high"></div>` : media ? `<div class="c-hero-media x-media"><img src="${esc(media.getAttribute('src'))}" alt="${esc(media.getAttribute('alt') || '')}" ${media.getAttribute('srcset') ? `srcset="${esc(media.getAttribute('srcset'))}" sizes="(max-width: 900px) 100vw, 560px"` : ''} width="${media.getAttribute('width') || 1200}" height="${media.getAttribute('height') || 800}" fetchpriority="high"></div>` : '';
   const heroHtml = `<section class="x-hero c-hero${heroMedia ? '' : ' c-hero-solo'}"><div class="c-wrap"><div class="c-hero-in"><div class="c-hero-t">
     ${crumbs ? `<nav class="c-crumbs" aria-label="${ES ? 'Ruta de navegación' : 'Breadcrumb'}"><ol>${crumbs.map((c, i) => `<li>${i < crumbs.length - 1 && c.href ? `<a href="${esc(href(c.href))}">${esc(c.name)}</a>` : `<span${i === crumbs.length - 1 ? ' aria-current="page"' : ''}>${esc(c.name)}</span>`}</li>`).join('')}</ol></nav>` : ''}
     ${H.badge ? `<p class="c-badge">${T(H.badge)}</p>` : ''}${H.eyebrow ? `<p class="c-eyebrow c-hero-eb">${T(H.eyebrow)}</p>` : ''}

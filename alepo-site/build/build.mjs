@@ -170,6 +170,10 @@ for (const lang of ['en', 'es']) {
 
 // ---------- the website copy deck (24 Nov 2026): page models made by copy/parse.py ----------
 const COPY = { en: {}, es: {} };
+// generated photos (copy/photos.json): only the ones already saved in static/img/photos are used
+const PHOTOS = (() => { const f = path.join(HERE, 'copy', 'photos.json'); if (!fs.existsSync(f)) return {};
+  const out = {}; for (const [u, slots] of Object.entries(JSON.parse(fs.readFileSync(f, 'utf8')).pages)) for (const [k, v] of Object.entries(slots)) if (fs.existsSync(path.join(HERE, 'static', 'img', 'photos', v.file))) (out[u] = out[u] || {})[k] = v;
+  return out; })();
 for (const lang of ['en', 'es']) {
   const dir = path.join(HERE, 'copy', lang);
   if (!fs.existsSync(dir)) continue;
@@ -287,8 +291,14 @@ for (const j of jobs) {
   const contactM = COPY[j.lang]['/contact-us/'] || COPY.en['/contact-us/'];
   const consentLine = contactM ? (contactM.sections.find(x => x.role === 'form').blocks.flatMap(b => b.t === 'sub' ? b.blocks : [b]).find(b => b.t === 'p') || {}).text : null;
   // Home hero loop (static/video/hero-loop.mp4, made with Higgsfield from the hero photo), when it is there
+  // generated photos (copy/photos.json, made in Higgsfield from each slot's copy): this page's hero and text sections, and every page's hero for cards
+  const photoOf = (v, es) => v && { src: '/assets/img/photos/' + v.file, srcset: `/assets/img/photos/${v.file.replace(/\.webp$/, '-800.webp')} 800w, /assets/img/photos/${v.file} 1536w`, alt: es && v.alt_es ? v.alt_es : v.alt, w: 1536, h: 1024 };
+  const myPhotos = PHOTOS[enPath] || {};
+  const enModel = COPY.en[enPath];
+  const photos = { hero: photoOf(myPhotos.hero, j.lang === 'es'), sections: {}, heroes: Object.fromEntries(Object.entries(PHOTOS).filter(([, v]) => v.hero).map(([u, v]) => [u, photoOf(v.hero, j.lang === 'es')])) };
+  if (enModel) enModel.sections.forEach((s, i) => { const v = myPhotos[plainCopy(s.h2)]; if (v) photos.sections[i] = photoOf(v, j.lang === 'es'); });
   const heroVideo = enPath === '/' && fs.existsSync(path.join(HERE, 'static', 'video', 'hero-loop.mp4')) ? '/assets/video/hero-loop.mp4' : null;
-  const copy = (model || nav) ? { page: model, nav, topNews, blog, sitemapPages, consentLine, heroVideo, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
+  const copy = (model || nav) ? { page: model, nav, topNews, blog, sitemapPages, consentLine, heroVideo, photos, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
   let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge: copy ? null : merge, copy });
   const mr = html.match(/ data-merge="([^"]*)"/);
   if (mr) { const r = JSON.parse(mr[1].replace(/&quot;/g, '"')); for (const k in r) mergeTotals[k] = (mergeTotals[k] || 0) + r[k]; html = html.replace(mr[0], ''); }
