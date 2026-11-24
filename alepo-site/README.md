@@ -480,3 +480,20 @@ To update the copy: replace the Word files, run `parse.py`, `i18n.py extract`, t
 - Data sheet names: "BSS Now" becomes "BSS in a Box Datasheet" and "AI Powered CX" becomes "AI Customer Assistant Datasheet" (decided 24 Nov 2026).
 
 Kept on request although no Word file covers them: the footer's social icons, interface words (Menu, Previous, Next, On this page), the privacy, cookie, accessibility, sitemap and 404 pages, and the full Blog and Library lists (194 posts, 44 items) under their own titles.
+
+## Photos, 24 Nov 2026 (generated for each slot)
+
+The stock photos the old pages reused across many pages are replaced by one generated photo per slot, written from that slot's copy.
+
+- **List:** `build/copy/photos.py` writes `build/copy/photos.json`. Each page URL has a `hero` slot, plus one slot for each text section, keyed by the section's English H2. Every slot has the prompt, English and Spanish alt text, and the file name.
+- **Look:** premium telecom campaign photography, with blue-hour light and a clean deep-blue grade. Settings are US and Western European offices, data centres, homes and skylines. No text, logos or brand names. Generated in Higgsfield with Nano Banana Pro at 2K, 3:2.
+- **Files:** `build/static/img/photos/<file>.webp` (1536×1024) and `<file>-800.webp`. The build uses a slot's photo only when its file exists.
+- **Where they show:**
+  - Page heroes. Legal and thank-you pages get their hero swapped too.
+  - Text sections.
+  - Cards: a card linking to a page shows that page's hero.
+  - A slot without a photo shows no photo. There is no fallback to unrelated images.
+- **Not generated:** blog and library covers and the leadership portraits are real and stay as they are.
+- **Standalone file:** embeds only the images the pages use, with generated photos at 800 px, to stay under 16 MB.
+
+To change a photo, edit its prompt in `photos.py`, regenerate that slot, save it as both WebP sizes, then rebuild.
