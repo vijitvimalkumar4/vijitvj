@@ -389,6 +389,13 @@ window.__alepoCopy = function (cfg, doc) {
       }
       const news = foot.querySelector('.xf-news');
       if (news && nl) { const lab = news.querySelector('label'); if (lab) lab.textContent = plain(nl.h3); const inp = news.querySelector('input[type=email]'); const wl = plain(nl.blocks[0].text).replace(/\s*\[[^\]]+\]\s*/, '').trim(); if (inp && wl) inp.setAttribute('placeholder', wl); const sb = news.querySelector('button[type=submit]'); const bl = (nl.blocks[0].text.match(/\[([^\]]+)\]/) || [])[1]; if (sb && bl) sb.textContent = bl; }
+      // compact layout: newsletter band on top (lighter), brand and the link columns in one row, legal bar on a darker band
+      const wrap = foot.querySelector('.xf-wrap'), topEl = foot.querySelector('.xf-top'), brandEl = foot.querySelector('.xf-brand'), newsEl = foot.querySelector('.xf-news'), colsEl2 = foot.querySelector('.xf-cols');
+      if (wrap && topEl && brandEl && newsEl && colsEl2) {
+        const band = doc.createElement('div'); band.className = 'xf-band'; const bi = doc.createElement('div'); bi.className = 'xf-band-in'; bi.appendChild(newsEl); band.appendChild(bi);
+        foot.insertBefore(band, wrap);
+        colsEl2.classList.add('xf-cols-c'); colsEl2.prepend(brandEl); topEl.remove();
+      }
       const bottom = foot.querySelector('.xf-bottom');
       if (bottom && legal) {
         const parts = plain(legal.blocks[0].text).split(' · ').filter(p => !/^alepo$/i.test(p));
@@ -397,6 +404,7 @@ window.__alepoCopy = function (cfg, doc) {
         const keepLinks = [...bottom.querySelectorAll('a')].filter(a => /cookie|accessib|accesib/.test(a.getAttribute('href') || '')).map(a => a.outerHTML);
         const lp = legal.blocks[0], all = plain(lp.text).split(' · ');
         bottom.innerHTML = `<p>${esc(copy || '')}</p><nav aria-label="Legal">${links.map(l => `<a href="${esc(href((lp.hrefs || [])[all.indexOf(l)] || '#'))}">${esc(l)}</a>`).join('')}${keepLinks.join('')}</nav>`;
+        const strip = doc.createElement('div'); strip.className = 'xf-legal'; const si = doc.createElement('div'); si.className = 'xf-legal-in'; si.appendChild(bottom); strip.appendChild(si); foot.appendChild(strip);
       }
     }
   }
