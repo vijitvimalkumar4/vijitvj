@@ -346,10 +346,10 @@ a.c-card:hover .c-card-img img, .c-pgroup:hover .c-card-img img { transform: sca
 .c-pgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
 .c-pgrid .c-pg-tall { grid-column: 1; grid-row: 1 / span 2; }
 .c-pgrid .c-pgroup { display: flex; flex-direction: column; }
-.c-pgrid .c-card-img { flex: 1 1 150px; min-height: 150px; aspect-ratio: auto; }
-.c-pgrid .c-card-b { flex: 0 0 auto; gap: 10px; }
+.c-pgrid .c-card-img { flex: none; aspect-ratio: 16 / 8.5; min-height: 0; } /* every card photo the same frame */
+.c-pgrid .c-card-b { flex: 1 1 auto; gap: 10px; }
 .c-pgrid .c-card-b > p { font-size: 15px; line-height: 1.55; color: var(--c-muted); }
-.c-pgrid .c-card-b > .c-more { margin-top: 6px; }
+.c-pgrid .c-card-b > .c-more { margin-top: auto; padding-top: 6px; } /* links line up along each row */
 .c-h4 { margin: 10px 0 0; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-violet); }
 .c-links-c a, .c-links-c li > div { padding: 9px 0; }
 .c-links-c .c-links-n { font-size: 15px; }
@@ -459,3 +459,13 @@ a.c-card:hover .c-card-img img, .c-pgroup:hover .c-card-img img { transform: sca
 /* hero loop: the photo shows first; the video fades in once it plays */
 .c-hx-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); opacity: 0; transition: opacity 1.2s ease; }
 .c-hx-video.is-on { opacity: 1; }
+
+/* five solution cards in the Products layout: the first card runs the full height, its photo fills the space */
+.c-sgrid > .c-card { display: flex; flex-direction: column; }
+.c-sgrid > .c-card .c-card-img { flex: none; aspect-ratio: 16 / 8.5; min-height: 0; }
+.c-sgrid > .c-card .c-card-b { flex: 1 1 auto; }
+.c-sgrid > .c-card .c-card-b > .c-more { margin-top: auto; }
+/* the tall feature card's photo fills its column */
+.c-sgrid > .c-pg-tall .c-card-img { flex: 1 1 auto; aspect-ratio: auto; min-height: 220px; }
+.c-sgrid > .c-pg-tall .c-card-b { flex: 0 0 auto; }
+@media (max-width: 700px) { .c-sgrid > .c-card .c-card-img, .c-sgrid > .c-pg-tall .c-card-img { flex: none; aspect-ratio: 16 / 8.5; min-height: 0; } }

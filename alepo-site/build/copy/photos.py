@@ -12,7 +12,7 @@ STYLE = ('High-end corporate advertising photograph in the style of a global tel
          'on a medium-format camera. Professionally lit with a soft key light and subtle rim light, cinematic depth of field, rich contrast, '
          'a clean polished colour grade of deep blues and cool neutrals with a warm accent, crisp detail, elegant composition with generous negative space. '
          'Modern premium settings in the United States or Western Europe: glass-and-steel offices, immaculate data centres, contemporary homes and city skylines. '
-         'Confident, well-dressed people of diverse backgrounds with natural expressions, not looking at the camera. Photorealistic and believable, no CGI look, no plastic skin. '
+         'Confident, well-dressed people of diverse backgrounds with natural expressions, not looking at the camera. Photorealistic and believable, never CGI-looking. One single photograph, never a collage or grid. '
          'No text, logos or brand names anywhere: laptops, monitors, phones and clothing are plain and unbranded; screens show soft out-of-focus light.')
 
 P = {}
@@ -47,7 +47,7 @@ add('/contact-us/thank-you/', 'hero', 'A friendly solutions consultant with a he
     'A solutions consultant reading a new enquiry', 'Un consultor de soluciones leyendo una nueva consulta')
 add('/privacy-policy/', 'hero', 'A privacy officer reviewing a printed data-protection policy at a quiet desk, laptop beside her, calm office.',
     'A privacy officer reviewing a data policy', 'Una responsable de privacidad revisando una política de datos')
-add('/cookie-policy/', 'hero', 'Close-up of hands on a laptop trackpad adjusting browser settings, toggles on screen softly out of focus, home desk.',
+add('/cookie-policy/', 'hero', 'Close-up of hands on the trackpad of a plain unbranded laptop adjusting settings, the screen softly out of focus with no recognisable operating system, home desk.',
     'A person adjusting browser settings on a laptop', 'Una persona ajustando la configuración del navegador en un portátil')
 add('/accessibility/', 'hero', 'A blind man at a desk reading a website with his fingertips on a refreshable braille display placed in front of a laptop, wearing headphones, a white cane leaning against the desk.',
     'A person reading a website with a braille display and a screen reader', 'Una persona leyendo un sitio web con una línea braille y un lector de pantalla')
@@ -76,7 +76,7 @@ add(u, 'Router complaints fixed without a truck roll', 'A helpdesk agent with a 
     'A helpdesk agent fixing a subscriber\'s Wi-Fi remotely', 'Una agente de soporte solucionando el wifi de un abonado a distancia')
 
 u = '/solutions/mobile-operators/'
-add(u, 'hero', 'A mobile mast silhouetted over a city skyline at sunset, antennas sharp against an indigo and amber sky.',
+add(u, 'hero', 'One single photograph: a mobile mast silhouetted over a city skyline at sunset, antennas sharp against an indigo and amber sky.',
     'A mobile mast over a city at sunset', 'Una antena móvil sobre la ciudad al atardecer')
 add(u, 'One BSS for prepaid and postpaid', 'A busy city street with people using their phones, a commuter, a student and a businesswoman, mobile subscribers of every kind.',
     'Mobile subscribers on a busy city street', 'Abonados móviles en una calle concurrida')
@@ -108,7 +108,7 @@ add(u, 'Revenue from venue Wi-Fi', 'A hotel lobby where a guest buys a Wi-Fi pas
 u = '/solutions/enterprise-government-networks/'
 add(u, 'hero', 'A government data centre network room: rows of racks with core switches and firewalls, an engineer with a badge walking the aisle.',
     'Network racks in a government data centre', 'Racks de red en un centro de datos gubernamental')
-add(u, 'Know who changed any device', 'An engineer at a rack of firewalls and core switches, laptop connected by console cable, focused.',
+add(u, 'Know who changed any device', 'An engineer at a rack of plain unbranded firewalls and core switches, laptop connected by console cable, focused.',
     'An engineer at a rack of firewalls and core switches', 'Un ingeniero ante un rack de cortafuegos y conmutadores troncales')
 add(u, 'Cisco ACS replacement', 'Two engineers sliding an old access-control appliance out of a rack, a new server already installed above it.',
     'Engineers removing an end-of-life access appliance', 'Ingenieros retirando un equipo de control de acceso al final de su vida útil')
@@ -178,14 +178,14 @@ add(u, 'What TR-069 device management does', 'A helpdesk agent with a headset lo
     'A helpdesk agent checking a subscriber\'s router remotely', 'Un agente de soporte revisando el router de un abonado a distancia')
 add(u, 'Router faults found in one click', 'An older man at home on the phone with support, standing beside his router, looking relieved.',
     'A subscriber on the phone with support beside his router', 'Un abonado al teléfono con soporte junto a su router')
-add(u, 'Firmware updates without mass outages', 'Aerial view of a suburban street at dusk, a handful of homes lit among many.',
+add(u, 'Firmware updates without mass outages', 'Aerial view of a suburban street at dusk with no people, a handful of homes lit among many.',
     'A neighbourhood of connected homes at dusk', 'Un barrio de hogares conectados al anochecer')
 
 # ---------------- products: billing and BSS ----------------
 u = '/products/digital-bss/'
 add(u, 'hero', 'A billing analyst and a care manager at a mid-size operator reviewing a plan together on a laptop in a modern office.',
     'Billing and care staff reviewing a plan together', 'Personal de facturación y atención revisando juntos un plan')
-add(u, 'A BSS you can take in parts', 'A team arranging sticky notes into phases on a glass-wall roadmap, planning a replacement step by step.',
+add(u, 'A BSS you can take in parts', 'A team arranging blank sticky notes into columns on a glass-wall roadmap, planning a replacement step by step; the notes and glass carry no writing.',
     'A team planning a BSS replacement one module at a time', 'Un equipo planificando la sustitución del BSS módulo a módulo')
 add(u, 'Start with the module you need', 'A CIO and an IT architect at a table pointing at a printed architecture diagram of plain boxes and lines.',
     'IT leaders choosing which module to replace first', 'Responsables de TI eligiendo qué módulo sustituir primero')
@@ -235,7 +235,7 @@ add(u, 'Service back on payment', 'A man at his kitchen table paying an overdue 
 u = '/products/partner-mvno-settlement/'
 add(u, 'hero', 'Wholesale managers from two operators reviewing a settlement report together across a table, printed pages and a laptop.',
     'Wholesale managers from two operators reviewing a settlement', 'Responsables mayoristas de dos operadores revisando una liquidación')
-add(u, 'What telecom wholesale billing covers', 'A finance analyst at month end surrounded by stacks of printed spreadsheets, late afternoon.',
+add(u, 'What telecom wholesale billing covers', 'A finance analyst at month end surrounded by stacks of printed spreadsheets at a desk with a plain unbranded monitor, late afternoon.',
     'A finance analyst closing partner settlements at month end', 'Un analista financiero cerrando liquidaciones con socios a fin de mes')
 add(u, 'Late usage records still billed', 'A billing analyst reviewing rates by destination on a large monitor showing a world map, out of focus.',
     'A billing analyst reviewing partner rates by destination', 'Una analista de facturación revisando tarifas por destino')
@@ -296,9 +296,9 @@ add(u, 'hero', 'A woman at a laptop at home signing up for broadband online, mug
     'A customer signing up for service online at home', 'Una clienta contratando un servicio en línea desde casa')
 add(u, 'What self-service portal software does', 'A man at his kitchen table checking his account on a laptop, relaxed morning.',
     'A customer managing his account online', 'Un cliente gestionando su cuenta en línea')
-add(u, 'Your brand in more than 30 languages', 'An Arabic-speaking woman in a Berlin apartment using a tablet on her sofa, the interface laid out right to left and out of focus.',
+add(u, 'Your brand in more than 30 languages', 'An Arabic-speaking woman in a Berlin apartment using a plain unbranded tablet on her sofa, the screen blurred with no recognisable operating system.',
     'A customer using the self-care site in her own language', 'Una clienta usando el portal de autoservicio en su idioma')
-add(u, 'Bills paid without a call', 'A young man paying a bill online with a bank card in one hand and a laptop in front of him.',
+add(u, 'Bills paid without a call', 'A young man paying a bill online with a bank card in one hand and a plain unbranded laptop with no logo on the lid in front of him.',
     'A customer paying a bill online by card', 'Un cliente pagando una factura en línea con tarjeta')
 
 u = '/products/self-care-app/'
