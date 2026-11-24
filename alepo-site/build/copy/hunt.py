@@ -52,9 +52,15 @@ class Texts(HTMLParser):
 
 nav = json.load(open(os.path.join(SRC, '02-navigation.json'), encoding='utf-8'))
 nav_txt = copy_text(nav)
+# the footer newsletter carries the consent line of 17 · Contact
+_c = json.load(open(os.path.join(SRC, '17-contact.json'), encoding='utf-8'))
+for _s in _c['sections']:
+    for _b in _s['blocks']:
+        for _x in (_b['blocks'] if _b['t'] == 'sub' else [_b]):
+            if _x['t'] == 'p' and re.match(r'^(Consent|Consentimiento):', norm(_x['text'])): nav_txt.append(re.sub(r'^(Consent|Consentimiento):\s*', '', norm(_x['text'])))
 UI = {  # interface words the site needs that the copy deck does not write (listed so a reviewer can see them)
-    'en': ['Menu', 'EN', 'ES', 'On this page', 'Previous', 'Next', 'Skip to content', 'Breadcrumb', '*', '/', '·', '→', '+', '–', '×'],
-    'es': ['Menú', 'EN', 'ES', 'En esta página', 'Anterior', 'Siguiente', 'Saltar al contenido', 'Ir al contenido', '*', '/', '·', '→', '+', '–', '×']}[LANG]
+    'en': ['Cookie policy', 'Accessibility', 'Menu', 'EN', 'ES', 'On this page', 'Previous', 'Next', 'Skip to content', 'Breadcrumb', '*', '/', '·', '→', '+', '–', '×'],
+    'es': ['Política de cookies', 'Accesibilidad', 'Menú', 'EN', 'ES', 'En esta página', 'Anterior', 'Siguiente', 'Saltar al contenido', 'Ir al contenido', '*', '/', '·', '→', '+', '–', '×']}[LANG]
 report = {}
 for name in sorted(os.listdir(SRC)):
     if not name.endswith('.json') or name in ('strings.json',) or name.startswith(('02-', '48-')): continue

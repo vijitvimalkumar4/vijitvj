@@ -460,7 +460,15 @@ window.__alepoCopy = function (cfg, doc) {
         if (contact) contact.innerHTML = `${sup ? `<div>${esc(plain(sup.text)).replace(/(\+[\d ]{8,}\d)/g, m => `<a href="${tel(m)}">${m}</a>`)}</div>` : ''}${offices ? `<div class="xf-offices-l"><span>${T(offices.h3)}:</span> ${T(offices.blocks[0].text)}</div>` : ''}`;
       }
       const news = foot.querySelector('.xf-news');
-      if (news) news.querySelectorAll('[data-consent]').forEach(e => e.remove()); // 02 · Navigation: "Work email [Subscribe]" only
+      // consent under the newsletter field: the same line as the contact form (17 · Contact)
+      if (news && C.consentLine) {
+        const cText = plain(C.consentLine).replace(/^(Consent|Consentimiento):\s*/, '');
+        const cHtml = esc(cText).replace(/(Privacy policy|[Pp]olítica de privacidad)/, m => `<a href="${href('/privacy-policy/')}">${m}</a>`);
+        let cp = news.querySelector('[data-consent]');
+        if (!cp) { cp = doc.createElement('p'); cp.setAttribute('data-consent', ''); const st = news.querySelector('[data-status]'); (st ? st.parentNode : news.querySelector('form') || news).insertBefore(cp, st || null); }
+        cp.innerHTML = cHtml;
+        const f = news.querySelector('form'); if (f) f.setAttribute('data-consent-text', cText);
+      }
       if (news && nl) { const lab = news.querySelector('label'); if (lab) lab.textContent = plain(nl.h3); const inp = news.querySelector('input[type=email]'); const wl = plain(nl.blocks[0].text).replace(/\s*\[[^\]]+\]\s*/, '').trim(); if (inp && wl) inp.setAttribute('placeholder', wl); const sb = news.querySelector('button[type=submit]'); const bl = (nl.blocks[0].text.match(/\[([^\]]+)\]/) || [])[1]; if (sb && bl) sb.textContent = bl; }
       // compact layout: newsletter band on top (lighter), brand and the link columns in one row, legal bar on a darker band
       const wrap = foot.querySelector('.xf-wrap'), topEl = foot.querySelector('.xf-top'), brandEl = foot.querySelector('.xf-brand'), newsEl = foot.querySelector('.xf-news'), colsEl2 = foot.querySelector('.xf-cols');
@@ -475,7 +483,7 @@ window.__alepoCopy = function (cfg, doc) {
         const parts = plain(legal.blocks[0].text).split(' · ').filter(p => !/^alepo$/i.test(p));
         const copy = parts.find(p => /©/.test(p)); const links = parts.filter(p => p !== copy);
         const nav = bottom.querySelector('nav, div:last-child') || bottom;
-        const keepLinks = []; // the legal bar lists only what 02 · Navigation lists
+        const keepLinks = [...bottom.querySelectorAll('a')].filter(a => /cookie|accessib|accesib/.test(a.getAttribute('href') || '')).map(a => a.outerHTML); // Cookie policy and Accessibility: added on request (24 Nov 2026)
         const lp = legal.blocks[0], all = plain(lp.text).split(' · ');
         bottom.innerHTML = `<p>${esc(copy || '')}</p><nav aria-label="Legal">${links.map(l => `<a href="${esc(href((lp.hrefs || [])[all.indexOf(l)] || '#'))}">${esc(l)}</a>`).join('')}${keepLinks.join('')}</nav>`;
         const strip = doc.createElement('div'); strip.className = 'xf-legal'; const si = doc.createElement('div'); si.className = 'xf-legal-in'; si.appendChild(bottom); strip.appendChild(si); foot.appendChild(strip);
