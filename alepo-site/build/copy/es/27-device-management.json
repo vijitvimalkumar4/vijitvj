@@ -204,6 +204,7 @@
   ],
   "eyebrow": null,
   "badge": "Beta",
+  "customersLabel": null,
   "h1": "Gestión de dispositivos TR-069 y TR-369",
   "lede": [
    "Reduzca las visitas técnicas y las tarifas de nube por dispositivo corrigiendo los routers domésticos desde la mesa de ayuda. Un solo producto con dos funciones: un **ACS TR-069** y un controlador **TR-369 USP**."

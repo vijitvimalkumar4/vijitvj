@@ -213,6 +213,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "About **Alepo**",
   "lede": [
    "**Alepo Technologies** makes software that helps communication service providers earn more from their networks with less manual work. We sell access control software and BSS, with AI built into both."

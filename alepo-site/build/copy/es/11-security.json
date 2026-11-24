@@ -146,6 +146,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "Seguridad",
   "lede": [
    "Los operadores manejan algunos de los datos más sensibles que existen. Así es como **Alepo** los protege."

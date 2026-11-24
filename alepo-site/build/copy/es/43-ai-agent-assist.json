@@ -174,6 +174,7 @@
   ],
   "eyebrow": null,
   "badge": "Beta",
+  "customersLabel": null,
   "h1": "**AI Agent Assist** para equipos de atención y **NOC**",
   "lede": [
    "Haga que el personal nuevo sea productivo antes y deje de enviar cada pregunta difícil a los mismos pocos expertos. AI Agent Assist responde con datos en tiempo real dentro de sus consolas de atención y de red, y sugiere el siguiente paso."

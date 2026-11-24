@@ -197,6 +197,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "Services and support",
   "lede": [
    "Go live with one team accountable from design to cutover, and stay live with engineers on call around the clock. Alepo delivers each project end to end, on Kubernetes in your environment, operated by your team or by Alepo."

@@ -224,6 +224,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "AI for telecom operators",
   "lede": [
    "**AI in telecom** that saves your teams time and keeps your subscribers served at any hour. AI Agent Assist answers your staff's questions inside the consoles they use, and the AI Customer Assistant serves your subscribers around the clock, both from your live network and billing data."

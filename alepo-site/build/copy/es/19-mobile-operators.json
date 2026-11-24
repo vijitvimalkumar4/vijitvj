@@ -311,6 +311,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "**Software para operadores móviles**",
   "lede": [
    "Lleve nuevos paquetes al mercado más rápido y siga generando ingresos donde termina la cobertura de radio. Lance un paquete sin una nueva versión de código, traslade a los suscriptores a Wi-Fi con su SIM y opere prepago y pospago en un solo BSS."

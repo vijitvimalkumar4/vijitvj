@@ -258,7 +258,8 @@ for (const j of jobs) {
     edits: PKG.edits.filter(e => !e.files || (pkgKey && e.files.includes(pkgKey)) || e.files.includes('_header') || e.files.includes('_footer')),
     drops: PKG.drops.filter(d => d.g === 'datasheets' || (pkgKey && (!d.files || d.files.includes(pkgKey)))), prod: PKG.prod, groups: PKG.groups, spanish: PKG.spanish, qaHead: PKG.qaHead, guides: PKG.guides, guideHead: PKG.guideHead } : null;
   // team package: data sheets withdrawn until Sandeep Patel approves new versions; SE 14 held (multitenant claim)
-  const LIB_NEW_NAME = { 'Converged Policy Control Datasheet': 'Policy Control Datasheet', 'WiFi Monetization Datasheet': 'Wi-Fi Offload and Calling Datasheet' };
+  const LIB_NEW_NAME = { 'Converged Policy Control Datasheet': 'Policy Control Datasheet', 'WiFi Monetization Datasheet': 'Wi-Fi Offload and Calling Datasheet',
+    'BSS Now Datasheet': 'BSS in a Box Datasheet', 'AI Powered CX Datasheet': 'AI Customer Assistant Datasheet' }; // the last two decided 24 Nov 2026
   const libOrder = (COPY.en['/library/'] || { sections: [] }).sections.flatMap(s => s.blocks).filter(b => b.kind === 'library').flatMap(b => b.hrefs || []);
   const libTitle = Object.fromEntries((COPY.en['/library/'] || { sections: [] }).sections.flatMap(s => s.blocks).filter(b => b.kind === 'library').flatMap(b => b.rows.map((r, i) => [b.hrefs[i], plainCopy(r[1]).replace(/\s*\(was .*\)$/, '')])));
   const libraryItems = j.file === 'library.html' ? (data('library/items.json') || []).map(x => ({ ...x, title: libTitle[x.url] || LIB_NEW_NAME[x.title] || x.title }))
@@ -279,8 +280,10 @@ for (const j of jobs) {
   const newsTable = home && home.sections.flatMap(s => s.blocks).find(b => b.t === 'table' && b.kind === 'newsrows');
   const topNews = newsTable ? { title: plainCopy(newsTable.rows[0][1]).replace(/\s*·\s*(Read|Leer)\s*→$/, ''), href: newsTable.hrefs[0] } : null;
   const leadersData = model && model.sections ? Object.fromEntries(model.sections.flatMap(s => s.blocks).filter(b => b.kind === 'people').flatMap(b => b.rows.map(r => [plainCopy(r[0]), leaderPhoto(plainCopy(r[0]))]))) : {};
+  // the sitemap page lists every copy page under its H1, in the menu's groups
+  const sitemapPages = /\/sitemap\/$/.test(j.cfg.self || '') ? Object.values(COPY[j.lang]).filter(m => m.url && m.hero && m.hero.h1 && !/thank-you/.test(m.url)).map(m => ({ url: m.url, h1: plainCopy(m.hero.h1), n: m.source })) : null;
   const blog = j.file === 'blog.html' ? { page: j.cfg.blogPage, pages: BLOG_PAGES, per: BLOG_PER, topics: Object.fromEntries(POSTS.map(p => [p.url, p.topic])) } : null;
-  const copy = (model || nav) ? { page: model, nav, topNews, blog, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
+  const copy = (model || nav) ? { page: model, nav, topNews, blog, sitemapPages, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
   let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge: copy ? null : merge, copy });
   const mr = html.match(/ data-merge="([^"]*)"/);
   if (mr) { const r = JSON.parse(mr[1].replace(/&quot;/g, '"')); for (const k in r) mergeTotals[k] = (mergeTotals[k] || 0) + r[k]; html = html.replace(mr[0], ''); }

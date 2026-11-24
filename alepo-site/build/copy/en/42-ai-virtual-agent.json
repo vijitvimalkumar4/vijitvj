@@ -226,6 +226,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "AI Virtual Agent for telecom",
   "lede": [
    "Serve subscribers at any hour, and save your agents for the cases that need a person. The AI Customer Assistant answers routine questions on web and app and completes account tasks through the BSS."

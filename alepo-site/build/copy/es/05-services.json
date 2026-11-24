@@ -197,6 +197,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "Servicios y soporte",
   "lede": [
    "Póngase en marcha con un solo equipo responsable desde el diseño hasta el pase a producción, y siga en producción con ingenieros de guardia las 24 horas. Alepo entrega cada proyecto de principio a fin, sobre Kubernetes en su entorno, operado por su equipo o por Alepo."

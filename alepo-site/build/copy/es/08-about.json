@@ -213,6 +213,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "Acerca de **Alepo**",
   "lede": [
    "**Alepo Technologies** desarrolla software que ayuda a los proveedores de servicios de comunicaciones a obtener más ingresos de sus redes con menos trabajo manual. Vendemos software de control de acceso y BSS, con IA integrada en ambos."

@@ -224,6 +224,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "IA para operadores de telecomunicaciones",
   "lede": [
    "**IA en telecomunicaciones** que ahorra tiempo a sus equipos y mantiene atendidos a sus suscriptores a cualquier hora. AI Agent Assist responde las preguntas de su personal dentro de las consolas que utiliza, y el AI Customer Assistant atiende a sus suscriptores las 24 horas, ambos a partir de sus datos de red y facturación en tiempo real."

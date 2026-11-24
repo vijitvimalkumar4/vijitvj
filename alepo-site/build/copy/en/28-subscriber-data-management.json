@@ -186,6 +186,7 @@
   ],
   "eyebrow": null,
   "badge": "Proof of concept",
+  "customersLabel": null,
   "h1": "**Subscriber Data Management (HSS)**",
   "lede": [
    "Move to 5G without writing off your 4G investment. Alepo SDM is a subscriber database for 4G and IMS voice, and its link to another vendor's 5G core is in a proof of concept."

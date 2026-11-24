@@ -470,4 +470,13 @@ To update the copy: replace the Word files, run `parse.py`, `i18n.py extract`, t
 - Thank-you page: the copy in 17 · Contact ("reply within one business day").
 - The blog article template (48) applies to posts, which are still served by WordPress; it is not used yet.
 
-**Kept although the copy does not mention it**: the social icons in the footer, and the Cookie policy and Accessibility links in the legal bar.
+**Strict pass (24 Nov 2026).** `python3 alepo-site/build/copy/hunt.py en|es [--all]` lists every piece of visible text that is not in the page's Word file (for `<main>`) or in 02 · Navigation (for menus and footer). After the strict pass, the only text it finds is the News page dates, which 13 · News and events asks for. Removed in that pass:
+- Home Products shows only the two groups in 01 · Home (no "Channels and care" or "AI" groups taken from 03 · Products). The long BSS and monetization list runs in two columns, so both cards end level.
+- The "Newsroom" card that replaced the expired event in the Company menu is gone.
+- Footer: the newsletter consent line, and the Cookie policy and Accessibility links, are gone (02 · Navigation lists "Work email [Subscribe]" and "Security · Privacy policy · Sitemap"). The privacy, cookie and accessibility pages still exist; only Privacy policy is linked.
+- Dates show only on the News page.
+- Blog and Library cards show a type and a title, as the copy's tables do. Excerpts, WordPress categories, "Read the article" and "Download the PDF" are gone. Data sheets link straight to their PDF, because the copy has no sign-up step before a data sheet.
+- The sitemap page lists every page under the H1 of its Word file, grouped by the menu names.
+- Data sheet names: "BSS Now" becomes "BSS in a Box Datasheet" and "AI Powered CX" becomes "AI Customer Assistant Datasheet" (decided 24 Nov 2026).
+
+Kept although the copy does not mention it: the footer's social icons, interface words (Menu, Previous, Next, On this page), and the privacy, cookie, accessibility, sitemap and 404 pages, which no Word file covers.

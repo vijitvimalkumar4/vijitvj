@@ -204,6 +204,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "BSS in a Box para MVNO",
   "lede": [
    "Empiece a generar ingresos con un nuevo MVNO antes, sin pagar primero por un proyecto a medida. BSS in a Box es una **plataforma de facturación para MVNO** con autogestión, CRM, tarificación y POS móvil en una oferta definida, operativa desde el primer día."

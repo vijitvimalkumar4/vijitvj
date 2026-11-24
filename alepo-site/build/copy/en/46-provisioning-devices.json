@@ -154,6 +154,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "**Service provisioning and device management**",
   "lede": [
    "Start earning the moment the service works in the subscriber's home. You activate the service across your network and configure the router that delivers it, without a truck roll."

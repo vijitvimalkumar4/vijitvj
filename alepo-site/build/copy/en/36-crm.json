@@ -212,6 +212,7 @@
   ],
   "eyebrow": null,
   "badge": "Beta",
+  "customersLabel": null,
   "h1": "**Telecom CRM** for customer care",
   "lede": [
    "Resolve calls faster, because care agents answer from one page per customer instead of hunting across tools, with an AI assistant beside them."

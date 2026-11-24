@@ -325,3 +325,20 @@ a.c-card:hover .c-card-img img, .c-pgroup:hover .c-card-img img { transform: sca
 }
 .c-person { overflow: hidden; }
 .c-person img { display: block; }
+/* Home "Products": the two groups of 01 · Home; the BSS card is wider and lists in two columns */
+.c-pcols-2 { grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); align-items: stretch; }
+.c-pcols-2 .c-pgroup .c-card-img { aspect-ratio: 16 / 7; }
+.c-pcols-2 .c-pgroup-w .c-card-img { aspect-ratio: 16 / 4.6; }
+.c-pgroup-w .c-links-2 { column-gap: 32px; }
+@media (max-width: 960px) { .c-pcols-2 { grid-template-columns: 1fr; } .c-pcols-2 .c-pgroup-w .c-card-img { aspect-ratio: 16 / 7; } }
+/* the shorter card's photo takes up the spare height, so both cards end with their last row */
+@media (min-width: 961px) {
+  .c-pcols-2 .c-pgroup { display: flex; flex-direction: column; }
+  .c-pcols-2 .c-pgroup:not(.c-pgroup-w) .c-card-img { flex: 1 1 190px; aspect-ratio: auto; min-height: 190px; }
+  .c-pcols-2 .c-pgroup .c-card-b { flex: 0 0 auto; }
+}
+.c-sitemap .c-card { gap: 14px; }
+.c-sm-h { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-violet); }
+.c-sm { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.c-sm a { display: inline-flex; min-height: 36px; align-items: center; font-weight: 600; color: var(--c-ink); }
+.c-sm a:hover { color: var(--c-indigo); }

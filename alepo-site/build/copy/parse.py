@@ -149,7 +149,7 @@ def parse(path):
     # hero: breadcrumb, H1, opening lines, buttons, in-page links, anything else shown with it
     if m['sections'] and re.sub(r'\*\*', '', m['sections'][0]['h2']) == 'Hero':
         hs = m['sections'].pop(0)['blocks']
-        hero = {'crumbs': None, 'eyebrow': None, 'badge': None, 'h1': None, 'lede': [], 'buttons': [], 'subnav': [], 'customers': None, 'extra': []}
+        hero = {'crumbs': None, 'eyebrow': None, 'badge': None, 'customersLabel': None, 'h1': None, 'lede': [], 'buttons': [], 'subnav': [], 'customers': None, 'extra': []}
         for b in hs:
             txt = re.sub(r'\*\*', '', b.get('text', ''))
             if b['t'] == 'h1': hero['h1'] = b['text']
@@ -157,7 +157,8 @@ def parse(path):
             elif b['t'] == 'p' and txt.startswith('Status badge'): hero['badge'] = txt.split(':', 1)[1].strip()
             elif b['t'] == 'p' and hero['h1'] is None: hero['eyebrow'] = b['text']
             elif b['t'] == 'p' and re.match(r'^(Overview|Capabilities|AI|Deployment)( · [A-Z][\w ]+)+$', txt): hero['subnav'] = txt.split(' · ')
-            elif b['t'] == 'p' and txt.startswith('Operators running on Alepo:'): hero['customers'] = txt.split(':', 1)[1].strip().split(' · ')
+            elif b['t'] == 'p' and txt.startswith('Operators running on Alepo:'):
+                hero['customersLabel'] = b['text'].split(':', 1)[0].strip(); hero['customers'] = txt.split(':', 1)[1].strip().split(' · ')
             elif b['t'] == 'p' and not hero['buttons'] and not hero['extra']: hero['lede'].append(b['text'])
             elif b['t'] == 'buttons': hero['buttons'] += b['items']
             elif b['t'] == 'list' and not hero['subnav'] and all(len(x) < 30 for x in b['items']): hero['subnav'] = b['items']

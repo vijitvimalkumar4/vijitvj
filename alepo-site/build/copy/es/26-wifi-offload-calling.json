@@ -252,6 +252,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "Wi-Fi Offload and Calling para operadores móviles",
   "lede": [
    "Conserve los ingresos de los suscriptores fuera de la cobertura de radio y genere ingresos con los hotspots de los establecimientos. Los suscriptores se conectan al Wi-Fi con su SIM y siguen llamando, y los establecimientos venden pases de pago."

@@ -265,6 +265,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "Portal cautivo y Wi-Fi de operador para recintos y operadores",
   "lede": [
    "Convierta el Wi-Fi que ya está instalado en cobertura e ingresos. Los operadores móviles mantienen a los suscriptores conectados más allá de la cobertura de radio, y los recintos generan ingresos con pases de pago en los puntos de acceso que ya operan."

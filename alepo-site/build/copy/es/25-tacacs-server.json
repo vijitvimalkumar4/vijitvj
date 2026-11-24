@@ -307,6 +307,7 @@
   ],
   "eyebrow": null,
   "badge": null,
+  "customersLabel": null,
   "h1": "**TACACS+ Server para la administración de dispositivos de red**",
   "lede": [
    "Reduzca el riesgo de las contraseñas compartidas en sus dispositivos de red y entregue a los auditores su evidencia sin necesidad de un proyecto. Un solo lugar controla y registra cada inicio de sesión y cada comando, desde routers de núcleo hasta firewalls."

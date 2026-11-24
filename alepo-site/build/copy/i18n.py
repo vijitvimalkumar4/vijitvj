@@ -36,7 +36,7 @@ def walk(m, f):
         if m.get(k): m[k] = f(m[k])
     h = m.get('hero')
     if h:
-        for k in ('eyebrow', 'badge', 'h1'):
+        for k in ('eyebrow', 'badge', 'h1', 'customersLabel'):
             if h.get(k): h[k] = f(h[k])
         if h.get('crumbs'): h['crumbs'] = [f(x) for x in h['crumbs']]
         h['lede'] = [f(x) for x in h.get('lede', [])]

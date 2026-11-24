@@ -78,12 +78,12 @@ window.__alepoCopy = function (cfg, doc) {
         const rows = b.rows.map((r, i) => ({ r, h: H[i] })).filter(({ r }) => !past(r.join(' ')));
         if (!rows.length) return '';
         return `<div class="c-rows">${rows.map(({ r, h }) => { const one = r.length === 1; const title = plain(one ? r[0] : r[1]).replace(/\s*·\s*(Read|Leer)\s*→$/, ''); const d = h && D.news && D.news[h];
-          return rowLink(h, `${one ? '' : `<span class="c-tag">${T(r[0])}</span>`}<span class="c-row-t">${esc(title)}</span>${d ? `<time datetime="${d}">${fmtDate(d)}</time>` : ''}`); }).join('')}</div>`;
+          const showDate = PAGE === '13-news-events'; // 13 · News and events: "Each item shows its publication date beside the tag"
+          return rowLink(h, `${one ? '' : `<span class="c-tag">${T(r[0])}</span>`}<span class="c-row-t">${esc(title)}</span>${d && showDate ? `<time datetime="${d}">${fmtDate(d)}</time>` : ''}`); }).join('')}</div>`;
       }
       case 'events': { const rows = b.rows.filter(r => !past(r[0])); return rows.length ? `<div class="c-rows">${rows.map(r => rowLink(null, `<span class="c-tag">${T(r[0])}</span><span class="c-row-t">${T(r[1])}</span>`)).join('')}</div>` : ''; }
       case 'posts': case 'resources': case 'rows': case 'needs':
-        return `<div class="c-rows">${b.rows.map((r, i) => { const d = H[i] && D.posts && D.posts[H[i]];
-          return rowLink(H[i], `<span class="c-tag">${T(r[0])}</span><span class="c-row-t">${T(r[1])}</span>${d ? `<time datetime="${d}">${fmtDate(d)}</time>` : ''}`, b.kind === 'needs' ? 'c-row-need' : ''); }).join('')}</div>`;
+        return `<div class="c-rows">${b.rows.map((r, i) => rowLink(H[i], `<span class="c-tag">${T(r[0])}</span><span class="c-row-t">${T(r[1])}</span>`, b.kind === 'needs' ? 'c-row-need' : '')).join('')}</div>`;
       case 'roles': return `<div class="c-rows" id="open-roles">${b.rows.map((r, i) => rowLink(H[i], `<span class="c-row-t">${T(r[0])}</span><span class="c-tag c-tag-plain">${T(r[1])}</span>`)).join('')}</div>`;
       case 'phones': return `<div class="c-grid c-grid-2">${b.rows.map(r => `<div class="x-card c-card"><p class="c-eyebrow">${T(r[0])}</p><p class="c-big"><a href="${tel(r[1])}">${T(r[1])}</a></p></div>`).join('')}</div>`;
       case 'offices': return `<div class="c-grid c-grid-4 c-offices">${b.rows.map(r => { const both = plain(r[1]).split(' · '); const city = sec === 'about' ? both[0] : plain(r[0]); const sub = sec === 'about' ? [plain(r[0])].concat(both.slice(1)) : [plain(r[1])];
@@ -127,7 +127,24 @@ window.__alepoCopy = function (cfg, doc) {
     if (photo) return `<a class="x-card c-card c-card-link c-has-img" href="${esc(href(link))}"${ext(link)}><span class="c-card-img">${imgTag(photo)}</span><span class="c-card-b">${inner}</span></a>`;
     return link ? `<a class="x-card c-card c-card-link" href="${esc(href(link))}"${ext(link)}>${inner}</a>` : `<div class="x-card c-card">${inner}</div>`;
   }
+  if (!P && C.sitemapPages && NAV) sitemapPage();
   if (!P) { if (NAV) navigation(); return; } // legal pages, sitemap, 404: only the menus and footer come from the copy
+  // Sitemap: the footer's "Sitemap" as heading, the menu names as groups, each page under the H1 of its Word file
+  function sitemapPage() {
+    const navSec = id => NAV.sections.find(x => x.id === id) || { blocks: [] };
+    const labels = plain((navSec('header').blocks.find(b => b.t === 'p' && / · /.test(b.text) && !/Search|EN/.test(b.text)) || {}).text || '').split(' · ');
+    const foot = navSec('footer').blocks.filter(b => b.t === 'sub'), legalP = foot[7] && foot[7].blocks[0];
+    const legalNames = legalP ? plain(legalP.text).split(' · ') : [];
+    const title = legalNames[(legalP.hrefs || []).indexOf('/sitemap/')] || 'Sitemap';
+    const homeName = plain((C.sitemapPages.find(x => x.url === '/') || {}).h1 || '');
+    const G = [[labels[0], u => /^\/products\//.test(u)], [labels[1], u => /^\/solutions\//.test(u)], [labels[2], u => /^\/services\//.test(u)],
+      [labels[3], u => /^\/(resources|blog|library|customers|news)\//.test(u)], [labels[4], u => /^\/(company|contact-us)\//.test(u)]];
+    const pages = C.sitemapPages.slice().sort((a, b) => a.n.localeCompare(b.n));
+    const groups = G.map(([name, test]) => `<div class="x-card c-card"><h2 class="c-sm-h">${esc(name || '')}</h2><ul class="c-sm">${pages.filter(x => test(x.url)).map(x => `<li><a href="${esc(href(x.url))}">${esc(x.h1)}</a></li>`).join('')}</ul></div>`).join('');
+    main.innerHTML = `<section class="x-hero c-hero c-hero-solo"><div class="c-wrap"><div class="c-hero-in"><div class="c-hero-t"><h1 class="x-sweep x-sweep-load">${esc(title)}</h1><p class="c-lede"><a href="${href('/')}">${esc(homeName)}</a></p></div></div></div></section>
+      <section class="c-sec"><div class="c-wrap"><div class="c-grid c-grid-3 c-sitemap">${groups}</div></div></section>`;
+    doc.title = title + ' | Alepo';
+  }
   // photos of the page before the copy went in: a card's photo by the page it links to, the rest for the text sections
   const POOL = { byHref: {}, loose: [] }, usedImg = new Set();
   (() => {
@@ -168,7 +185,7 @@ window.__alepoCopy = function (cfg, doc) {
     // emptied by past events: no section
     let body = '';
     const tone = dark ? ' on-dark x-dark c-dark' : (s.tint ? ' x-tint c-tint' : '');
-    if (PAGE === '01-home' && s.id === 'products' && C.products) return homeProducts(s);
+    if (PAGE === '01-home' && s.id === 'products') return homeProducts(s);
     if (role === 'faq') {
       body = `<div class="c-split"><div><h2 class="x-h2">${T(s.h2)}</h2>${rest.filter(b => b.t === 'p').map(b => para(b, 'c-lead')).join('')}</div><div>${rest.filter(b => b.t !== 'p').map(b => block(b, PAGE, dark)).join('')}</div></div>`;
     } else if (subs.length) {
@@ -193,28 +210,13 @@ window.__alepoCopy = function (cfg, doc) {
     if (!body.replace(/<[^>]+>/g, '').trim()) return '';
     return `<section class="c-sec${tone}"${id}><div class="c-wrap">${body}</div></section>`;
   }
-  // Home "Products": the four groups of the Products page (03), each with the Home copy's own product lines
+  // Home "Products": exactly the two groups in 01 · Home; the long BSS list runs in two columns so both cards end level
   function homeProducts(s) {
-    const CH = ['/products/crm/', '/products/self-care-portal/', '/products/self-care-app/', '/products/dealer-mobile-pos/'];
     const subs = s.blocks.filter(b => b.t === 'sub'), lead = s.blocks.filter(b => b.t !== 'sub');
-    const listOf = g => g.blocks.find(b => b.t === 'list') || { items: [], hrefs: [] };
-    const pick = (l, keep) => { const items = [], hrefs = []; l.items.forEach((it, i) => { if (keep((l.hrefs || [])[i])) { items.push(it); hrefs.push(l.hrefs[i]); } }); return { t: 'list', items, hrefs }; };
-    const ps = C.products.sections, byId = id => ps.find(x => x.id === id);
-    const aiSec = P.sections.find(x => x.id === 'ai-network-operations');
-    const aiList = aiSec ? aiSec.blocks.find(b => b.t === 'list') : null;
-    const grp = (h3, intro, list, h) => ({ h3, intro, list, href: h });
-    const firstP = x => (x && x.blocks.find(b => b.t === 'p') || {}).text || '';
-    const bss = subs[1], acc = subs[0];
-    const G = [
-      grp(acc.h3, firstP(acc), listOf(acc), acc.href || '/products/network-access-aaa/'),
-      grp(bss.h3, firstP(bss), pick(listOf(bss), h => !CH.includes(h)), bss.href || '/products/billing-bss/'),
-      grp(byId('channels-and-care') ? byId('channels-and-care').h2 : '', firstP(byId('channels-and-care')), pick(listOf(bss), h => CH.includes(h)), '/products/customer-care-channels/'),
-      grp(byId('ai') ? byId('ai').h2 : '', firstP(byId('ai')), aiList || { items: [], hrefs: [] }, '/products/ai-for-telecom/'),
-    ];
-    const gcard = g => { const ph = forHref(g.href);
-      return `<div class="x-card c-card c-pgroup">${ph ? `<a class="c-card-img" href="${esc(href(g.href))}" tabindex="-1" aria-hidden="true">${imgTag(ph)}</a>` : ''}<div class="c-card-b"><h3><a href="${esc(href(g.href))}">${T(g.h3)}</a></h3>${g.intro ? `<p>${T(g.intro)}</p>` : ''}${list(g.list)}</div></div>`; };
+    const gcard = (g, wide) => { const ph = forHref(g.href); const l = g.blocks.find(b => b.t === 'list');
+      return `<div class="x-card c-card c-pgroup${wide ? ' c-pgroup-w' : ''}">${ph ? `<a class="c-card-img" href="${esc(href(g.href))}" tabindex="-1" aria-hidden="true">${imgTag(ph)}</a>` : ''}<div class="c-card-b"><h3>${g.href ? `<a href="${esc(href(g.href))}">${T(g.h3)}</a>` : T(g.h3)}</h3>${g.blocks.filter(b => b.t === 'p').map(b => para(b)).join('')}${l ? list(l, wide ? 'wide' : undefined) : ''}</div></div>`; };
     return `<section class="c-sec c-tint" id="products"><div class="c-wrap"><div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2><div class="c-head-x">${lead.map(b => block(b, PAGE)).join('')}</div></div>
-      <div class="c-pcols"><div class="c-pcol">${gcard(G[0])}${gcard(G[2])}</div><div class="c-pcol">${gcard(G[1])}${gcard(G[3])}</div></div></div></section>`;
+      <div class="c-pcols c-pcols-2">${subs.map((g, i) => gcard(g, i === 1)).join('')}</div></div></section>`;
   }
   // tint every other non-text section, so the page has a rhythm
   let prevTint = false;
@@ -236,7 +238,7 @@ window.__alepoCopy = function (cfg, doc) {
     ${H.badge ? `<p class="c-badge">${T(H.badge)}</p>` : ''}${H.eyebrow ? `<p class="c-eyebrow c-hero-eb">${T(H.eyebrow)}</p>` : ''}
     <h1 class="x-sweep x-sweep-load">${T(H.h1)}</h1>${(H.lede || []).map(t => `<p class="c-lede">${T(t)}</p>`).join('')}
     ${(H.extra || []).filter(b => b.t === 'more').map(more).join('')}${H.buttons && H.buttons.length ? buttons(H.buttons) : ''}</div>${heroMedia}</div>
-    ${H.customers ? `<div class="c-logos"><p>${ES ? 'Operadores que usan Alepo' : 'Operators running on Alepo'}</p><ul>${H.customers.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}</div></section>`;
+    ${H.customers ? `<div class="c-logos"><p>${T(H.customersLabel || '')}</p><ul>${H.customers.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}</div></section>`;
   const subnav = H.subnav && H.subnav.length ? `<nav class="subnav c-subnav" aria-label="${U.on}"><div>${H.subnav.map((l, i) => (H.subnavTargets || [])[i] ? `<a href="#${H.subnavTargets[i]}" data-subnav>${T(l)}</a>` : '').join('')}</div></nav>` : '';
   // keep what the polished page built from alepo.com data
   const keep = { feed: [...main.querySelectorAll('.x-blog-bar, .x-blog-note, .x-feed')], gate: main.querySelector('dialog.x-gate'), form: main.querySelector('form[data-form="demo"]') };
@@ -251,7 +253,7 @@ window.__alepoCopy = function (cfg, doc) {
     const lg = heroEl.querySelector('.c-logos'); if (lg) { lg.classList.add('x-in'); lg.style.setProperty('--i', k); }
   }
   const feedSlot = main.querySelector('[data-feed-slot]');
-  if (feedSlot) { const f = keep.feed.filter(e => !e.classList.contains('x-blog-bar')); if (f.length) feedSlot.replaceWith(...f); else feedSlot.remove(); }
+  if (feedSlot) { const f = keep.feed.filter(e => !e.classList.contains('x-blog-bar') && !e.classList.contains('x-blog-note')); if (f.length) feedSlot.replaceWith(...f); else feedSlot.remove(); }
   // topic filters (the copy's labels, in its order) and, on the blog, crawlable pages
   const filt = P.sections.find(s => s.role === 'filters'), feed = main.querySelector('.x-feed');
   if (filt && feed) {
@@ -265,6 +267,19 @@ window.__alepoCopy = function (cfg, doc) {
     const chips = labels.map((l, i) => { const k = KEYS[i] || 'all'; const n = count(k); if (!n && k !== 'all') return '';
       return paged ? `<a class="c-topic" href="${href('/blog/')}${k === 'all' ? '' : '?topic=' + k}">${esc(l)}<span class="x-count">${n}</span></a>`
                    : `<button type="button" class="c-topic" data-topic-btn="${k}" aria-pressed="${i === 0}">${esc(l)}<span class="x-count">${n}</span></button>`; }).join('');
+    // cards show what the copy's Posts / Items tables show: a type and a title
+    const tagOf = {};
+    P.sections.flatMap(x => x.blocks).filter(b => b.t === 'table' && (b.kind === 'posts' || b.kind === 'library')).forEach(b => b.rows.forEach((r, i) => { if ((b.hrefs || [])[i]) tagOf[b.hrefs[i]] = plain(r[0]); }));
+    const kindOfHref = Object.fromEntries(cards.map(c => [c.getAttribute('href'), c.dataset.kind]));
+    const kindTag = {}; P.sections.flatMap(x => x.blocks).filter(b => b.kind === 'library').forEach(b => b.rows.forEach((r, i) => { const k = kindOfHref[(b.hrefs || [])[i]]; if (k && !kindTag[k]) kindTag[k] = plain(r[0]); }));
+    cards.forEach(c => {
+      c.querySelectorAll('.x-post-excerpt, .x-post-go, .x-post-chips, .x-post-date').forEach(e => e.remove());
+      const tag = c.querySelector('.x-post-tag'), u = c.getAttribute('href');
+      const t = tagOf[u] || (isBlog ? (c.dataset.topic ? labels[KEYS.indexOf(c.dataset.topic)] : null) : (kindTag[c.dataset.kind] || labels[KEYS.indexOf(c.dataset.kind)]));
+      if (tag) { if (t) { tag.textContent = t; tag.lang = cfg.lang; } else tag.remove(); }
+      c.removeAttribute('data-gate'); c.removeAttribute('data-doc');
+      if (isPdf(u)) { c.target = '_blank'; c.rel = 'noopener'; }
+    });
     const bar = doc.createElement('div'); bar.className = 'c-topics';
     bar.innerHTML = `<div role="group" aria-label="${T(filt.h2)}" data-topics>${chips}</div><p class="x-sr" role="status" aria-live="polite" data-topic-status></p>`;
     feed.before(bar);
@@ -282,7 +297,7 @@ window.__alepoCopy = function (cfg, doc) {
       if (cur < B.pages) { const l = doc.createElement('link'); l.rel = 'next'; l.href = cfg.origin + pg(cur + 1); doc.head.appendChild(l); }
     }
   }
-  if (keep.gate) main.appendChild(keep.gate);
+  // the copy deck has no sign-up step before a data sheet: the Library links straight to each PDF
   // the contact form, with the fields the copy lists
   const formSlot = main.querySelector('[data-form-slot]');
   if (formSlot) formSlot.outerHTML = contactForm(P.sections.find(s => s.role === 'form'), keep.form);
@@ -375,7 +390,7 @@ window.__alepoCopy = function (cfg, doc) {
     const PROMO_HREF = { 'services-menu': '/services/#support', 'resources-menu': '/customers/', 'company-menu': '/news/', 'solutions-menu': '/customers/' };
     const cols = s => s.blocks.filter(b => b.t === 'sub').map(g => {
       const lst = g.blocks.find(x => x.t === 'list'), tb = g.blocks.find(x => x.t === 'table'), pr = tb && tb.kind === 'promo';
-      if (pr) { const card = promo(tb, PROMO_HREF[s.id]); return card ? `<div class="xm-sidecol"><div${A(S.sct)}>${T(tb.rows[0][1])}</div>${card}</div>` : (C.topNews ? `<div class="xm-sidecol"><div${A(S.sct)}>${U.newsroom}</div>${promoA(C.topNews.href, C.topNews.title, '', U.read)}</div>` : ''); }
+      if (pr) { const card = promo(tb, PROMO_HREF[s.id]); return card ? `<div class="xm-sidecol"><div${A(S.sct)}>${T(tb.rows[0][1])}</div>${card}</div>` : ''; }
       if (!lst && !tb) { // a promo written as lines (eyebrow, title, text, link)
         const ps = g.blocks.filter(x => x.t === 'p'), mo = g.blocks.find(x => x.t === 'more');
         return `<div class="xm-sidecol"><div${A(S.sct)}>${T(ps[0] && ps[0].text)}</div>${promoA(mo && mo.href || '/customers/', plain(ps[1] && ps[1].text), plain(ps[2] && ps[2].text), noArrow(mo ? mo.text : ''))}</div>`;
@@ -396,8 +411,8 @@ window.__alepoCopy = function (cfg, doc) {
       const btn = mm.querySelector('.mb'); if (btn && labels[i]) btn.firstChild.textContent = labels[i];
       const mp = mm.querySelector('.mp'), host = mp && mp.firstElementChild && mp.firstElementChild.firstElementChild;
       if (!host || !panes[key]) return;
-      if (key !== 'Products') { mp.className = 'mp xm-cols'; host.className = ''; host.style.gridTemplateColumns = 'minmax(0px, 1.7fr) minmax(0px, 1.4fr) minmax(0px, 1.1fr)'; }
       host.innerHTML = panes[key];
+      if (key !== 'Products') { mp.className = 'mp xm-cols'; host.className = ''; host.style.gridTemplateColumns = host.children.length === 2 ? 'minmax(0px, 1.7fr) minmax(0px, 1.6fr)' : 'minmax(0px, 1.7fr) minmax(0px, 1.4fr) minmax(0px, 1.1fr)'; }
     });
     // mobile menu: the same groups, as lists
     const mnav = doc.querySelector('.mnav > div');
@@ -445,6 +460,7 @@ window.__alepoCopy = function (cfg, doc) {
         if (contact) contact.innerHTML = `${sup ? `<div>${esc(plain(sup.text)).replace(/(\+[\d ]{8,}\d)/g, m => `<a href="${tel(m)}">${m}</a>`)}</div>` : ''}${offices ? `<div class="xf-offices-l"><span>${T(offices.h3)}:</span> ${T(offices.blocks[0].text)}</div>` : ''}`;
       }
       const news = foot.querySelector('.xf-news');
+      if (news) news.querySelectorAll('[data-consent]').forEach(e => e.remove()); // 02 · Navigation: "Work email [Subscribe]" only
       if (news && nl) { const lab = news.querySelector('label'); if (lab) lab.textContent = plain(nl.h3); const inp = news.querySelector('input[type=email]'); const wl = plain(nl.blocks[0].text).replace(/\s*\[[^\]]+\]\s*/, '').trim(); if (inp && wl) inp.setAttribute('placeholder', wl); const sb = news.querySelector('button[type=submit]'); const bl = (nl.blocks[0].text.match(/\[([^\]]+)\]/) || [])[1]; if (sb && bl) sb.textContent = bl; }
       // compact layout: newsletter band on top (lighter), brand and the link columns in one row, legal bar on a darker band
       const wrap = foot.querySelector('.xf-wrap'), topEl = foot.querySelector('.xf-top'), brandEl = foot.querySelector('.xf-brand'), newsEl = foot.querySelector('.xf-news'), colsEl2 = foot.querySelector('.xf-cols');
@@ -459,7 +475,7 @@ window.__alepoCopy = function (cfg, doc) {
         const parts = plain(legal.blocks[0].text).split(' · ').filter(p => !/^alepo$/i.test(p));
         const copy = parts.find(p => /©/.test(p)); const links = parts.filter(p => p !== copy);
         const nav = bottom.querySelector('nav, div:last-child') || bottom;
-        const keepLinks = [...bottom.querySelectorAll('a')].filter(a => /cookie|accessib|accesib/.test(a.getAttribute('href') || '')).map(a => a.outerHTML);
+        const keepLinks = []; // the legal bar lists only what 02 · Navigation lists
         const lp = legal.blocks[0], all = plain(lp.text).split(' · ');
         bottom.innerHTML = `<p>${esc(copy || '')}</p><nav aria-label="Legal">${links.map(l => `<a href="${esc(href((lp.hrefs || [])[all.indexOf(l)] || '#'))}">${esc(l)}</a>`).join('')}${keepLinks.join('')}</nav>`;
         const strip = doc.createElement('div'); strip.className = 'xf-legal'; const si = doc.createElement('div'); si.className = 'xf-legal-in'; si.appendChild(bottom); strip.appendChild(si); foot.appendChild(strip);

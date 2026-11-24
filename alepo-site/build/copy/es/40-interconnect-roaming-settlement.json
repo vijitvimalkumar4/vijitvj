@@ -186,6 +186,7 @@
   ],
   "eyebrow": null,
   "badge": "En desarrollo",
+  "customersLabel": null,
   "h1": "Interconnect and Roaming Settlement",
   "lede": [
    "Planifique su salida de una plataforma de interconexión y roaming antes de que termine su soporte. La emisión de facturas de interconexión funciona hoy en Partner and MVNO Settlement, y el **sistema de facturación de interconexión** de Alepo para la liquidación de interconexión y roaming está en desarrollo."
