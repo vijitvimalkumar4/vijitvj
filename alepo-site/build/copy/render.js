@@ -109,6 +109,7 @@ window.__alepoCopy = function (cfg, doc) {
       case 'table': return table(b, sec);
       case 'faq': return faq(b);
       case 'diagram': return diagram(b);
+      case 'h4': return `<h4 class="c-h4">${T(b.text)}</h4>`;
       case 'sub': return card(b, sec, dark);
       default: return '';
     }
@@ -210,13 +211,18 @@ window.__alepoCopy = function (cfg, doc) {
     if (!body.replace(/<[^>]+>/g, '').trim()) return '';
     return `<section class="c-sec${tone}"${id}><div class="c-wrap">${body}</div></section>`;
   }
-  // Home "Products": exactly the two groups in 01 · Home; the long BSS list runs in two columns so both cards end level
+  // Home "Products": the five groups of 01 · Home. Billing & BSS (the longest) is one tall card; the other four sit in two rows beside it
   function homeProducts(s) {
     const subs = s.blocks.filter(b => b.t === 'sub'), lead = s.blocks.filter(b => b.t !== 'sub');
-    const gcard = (g, wide) => { const ph = forHref(g.href); const l = g.blocks.find(b => b.t === 'list');
-      return `<div class="x-card c-card c-pgroup${wide ? ' c-pgroup-w' : ''}">${ph ? `<a class="c-card-img" href="${esc(href(g.href))}" tabindex="-1" aria-hidden="true">${imgTag(ph)}</a>` : ''}<div class="c-card-b"><h3>${g.href ? `<a href="${esc(href(g.href))}">${T(g.h3)}</a>` : T(g.h3)}</h3>${g.blocks.filter(b => b.t === 'p').map(b => para(b)).join('')}${l ? list(l, wide ? 'wide' : undefined) : ''}</div></div>`; };
+    const line = (it, h) => { const parts = plain(it).split(' · '); const inner = `<span class="c-links-n">${esc(parts[0])}</span>${parts[1] ? `<span class="c-links-d">${esc(parts.slice(1).join(' · '))}</span>` : ''}`;
+      return `<li>${h ? `<a href="${esc(href(h))}">${inner}${CHEV}</a>` : `<div>${inner}</div>`}</li>`; };
+    const body = g => g.blocks.map(b => b.t === 'list' ? `<ul class="c-links c-links-c">${b.items.map((it, i) => line(it, (b.hrefs || [])[i])).join('')}</ul>`
+      : b.t === 'h4' ? `<h4 class="c-h4">${T(b.text)}</h4>` : b.t === 'more' ? more(b) : b.t === 'p' ? para(b) : block(b, PAGE)).join('');
+    const isTall = g => g.blocks.filter(b => b.t === 'h4').length > 1;
+    const gcard = (g, i) => { const ph = forHref(g.href);
+      return `<div class="x-card c-card c-pgroup c-pg-${i}${isTall(g) ? ' c-pg-tall' : ''}">${ph ? `<a class="c-card-img" href="${esc(href(g.href))}" tabindex="-1" aria-hidden="true">${imgTag(ph)}</a>` : ''}<div class="c-card-b"><h3>${g.href ? `<a href="${esc(href(g.href))}">${T(g.h3)}</a>` : T(g.h3)}</h3>${body(g)}</div></div>`; };
     return `<section class="c-sec c-tint" id="products"><div class="c-wrap"><div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2><div class="c-head-x">${lead.map(b => block(b, PAGE)).join('')}</div></div>
-      <div class="c-pcols c-pcols-2">${subs.map((g, i) => gcard(g, i === 1)).join('')}</div></div></section>`;
+      <div class="c-pgrid">${subs.map(gcard).join('')}</div></div></section>`;
   }
   // tint every other non-text section, so the page has a rhythm
   let prevTint = false;

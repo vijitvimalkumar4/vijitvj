@@ -24,7 +24,7 @@
         null,
         null,
         "/company/about/",
-        null,
+        "/products/digital-bss/",
         null
        ]
       },
@@ -170,7 +170,7 @@
   "eyebrow": null,
   "badge": null,
   "customersLabel": null,
-  "h1": "**Contact Alepo**",
+  "h1": "Contact Alepo",
   "lede": [
    "Ask for a demo, talk to sales, send an RFP or reach support."
   ],

@@ -15,7 +15,7 @@ STRINGS = os.path.join(ES, 'strings.json')
 def walk_blocks(blocks, f):
     for b in blocks:
         t = b['t']
-        if t in ('p', 'more', 'status', 'product', 'h1'): b['text'] = f(b['text'])
+        if t in ('p', 'more', 'status', 'product', 'h1', 'h4'): b['text'] = f(b['text'])
         elif t in ('list', 'ul'): b['items'] = [f(x) for x in b['items']]
         elif t == 'buttons':
             for it in b['items']: it['label'] = f(it['label'])

@@ -55,7 +55,7 @@
    "blocks": [
     {
      "t": "p",
-     "text": "Software de control de acceso y BSS para operadores. Utilice la plataforma completa o comience con el único producto que necesita."
+     "text": "Cinco grupos de productos que funcionan solos o en conjunto. Use la plataforma completa o comience con el único producto que necesita."
     },
     {
      "t": "more",
@@ -64,111 +64,202 @@
     },
     {
      "t": "sub",
-     "h3": "Control de acceso",
+     "h3": "Acceso a la red y AAA",
      "blocks": [
       {
        "t": "p",
-       "text": "Decida quién entra a su red y qué puede hacer una vez dentro."
+       "text": "Solo los suscriptores, dispositivos e ingenieros correctos acceden a su red, y cada sesión queda registrada para la facturación."
       },
       {
        "t": "list",
        "items": [
-        "AAA Server: autenticación **RADIUS y Diameter** a escala de operador",
-        "TACACS+ Server: control por comando de cada inicio de sesión en dispositivos de red",
-        "Home Router and ONT Management: gestión de dispositivos con **ACS TR-069 y USP TR-369** (beta)",
-        "Fulfilment Manager: **aprovisionamiento de servicios** y activación",
-        "Wi-Fi Offload and Calling: traslade los datos móviles y la voz a Wi-Fi",
-        "Subscriber Data Management: **HSS para 4G e IMS**"
+        "AAA Server",
+        "TACACS+ Server",
+        "Wi-Fi Offload and Calling",
+        "Subscriber Data Management (HSS)"
        ],
        "hrefs": [
         "/products/aaa-server/",
         "/products/tacacs-server/",
-        "/products/device-management/",
-        "/products/service-provisioning/",
         "/products/wifi-offload-calling/",
         "/products/subscriber-data-management/"
        ]
+      },
+      {
+       "t": "more",
+       "text": "Acceso a la red y AAA →",
+       "href": "/products/network-access-aaa/"
       }
      ],
      "href": "/products/network-access-aaa/"
     },
     {
      "t": "sub",
-     "h3": "BSS y monetización",
+     "h3": "Facturación y BSS",
      "blocks": [
       {
        "t": "p",
-       "text": "Venda, tarifique, facture, cobre y atienda a cada suscriptor, en tiempo real."
+       "text": "Tarifique, facture y cobre cada forma en que genera ingresos, y liquide con cada socio a partir de los mismos registros."
+      },
+      {
+       "t": "h4",
+       "text": "Facturación"
       },
       {
        "t": "list",
        "items": [
-        "Digital BSS: el BSS completo para operaciones grandes y complejas",
-        "BSS in a Box: un BSS listo para usar para lanzamientos de **MVNO**",
-        "Online Charging: tarificación en tiempo real para prepago y pospago",
-        "Policy Control: políticas **PCRF y PCF** para cada sesión",
-        "Prepaid Offers and Vouchers: vouchers de recarga y paquetes prepago",
-        "Mediation Studio: **mediación de telecomunicaciones y aseguramiento de ingresos** (en desarrollo)",
-        "Collections and Dunning: recordatorios automatizados, con suspensiones y restablecimientos vinculados al pago",
-        "Partner and MVNO Settlement: **facturación mayorista** y reparto de ingresos con socios",
-        "Interconnect and Roaming Settlement: facturación de interconexión, con liquidación de roaming en desarrollo",
-        "Alepo CRM: **CRM de telecomunicaciones** para atención al cliente (beta)",
-        "Selfcare Now: **portal de autoservicio** para suscriptores (beta)",
-        "Self-Care Mobile App: una app de autogestión con su marca (beta)",
-        "Mobile POS: una app para distribuidores para ventas y activación de SIM"
+        "Digital BSS",
+        "BSS in a Box para MVNO"
        ],
        "hrefs": [
         "/products/digital-bss/",
-        "/products/bss-in-a-box/",
+        "/products/bss-in-a-box/"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Tarificación y políticas"
+      },
+      {
+       "t": "list",
+       "items": [
+        "Online Charging (OCS)",
+        "Policy Control (PCRF)",
+        "Prepaid Offers and Vouchers",
+        "Alepo SCP (CAMEL Service Control Point) (primera implementación en curso)"
+       ],
+       "hrefs": [
         "/products/online-charging/",
         "/products/policy-control/",
         "/products/prepaid-offers-vouchers/",
+        null
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Aseguramiento de ingresos"
+      },
+      {
+       "t": "list",
+       "items": [
+        "Mediación y aseguramiento de ingresos · Mediation Studio (en desarrollo)",
+        "Collections and Dunning"
+       ],
+       "hrefs": [
         "/products/mediation-revenue-assurance/",
-        "/products/collections-dunning/",
+        "/products/collections-dunning/"
+       ]
+      },
+      {
+       "t": "h4",
+       "text": "Mayorista"
+      },
+      {
+       "t": "list",
+       "items": [
+        "Partner and MVNO Settlement",
+        "Interconnect and Roaming Settlement (en desarrollo)"
+       ],
+       "hrefs": [
         "/products/partner-mvno-settlement/",
-        "/products/interconnect-roaming-settlement/",
+        "/products/interconnect-roaming-settlement/"
+       ]
+      },
+      {
+       "t": "more",
+       "text": "Facturación y BSS →",
+       "href": "/products/billing-bss/"
+      }
+     ],
+     "href": "/products/billing-bss/"
+    },
+    {
+     "t": "sub",
+     "h3": "Aprovisionamiento y dispositivos",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Una venta se convierte en un servicio activo sin pasos manuales, y los routers domésticos se reparan sin visita técnica."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Aprovisionamiento y activación de servicios · Fulfilment Manager",
+        "Gestión de dispositivos (TR-069 y TR-369) (beta)"
+       ],
+       "hrefs": [
+        "/products/service-provisioning/",
+        "/products/device-management/"
+       ]
+      },
+      {
+       "t": "more",
+       "text": "Aprovisionamiento y dispositivos →",
+       "href": "/products/provisioning-devices/"
+      }
+     ],
+     "href": "/products/provisioning-devices/"
+    },
+    {
+     "t": "sub",
+     "h3": "Atención al cliente y canales",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Agentes de atención, distribuidores y suscriptores ven la misma cuenta en tiempo real, en cada canal que usan sus clientes."
+      },
+      {
+       "t": "list",
+       "items": [
+        "CRM y atención al cliente · Alepo CRM (beta)",
+        "Portal de autogestión · Selfcare Now (beta)",
+        "Self-Care Mobile App (beta)",
+        "App para distribuidores y Mobile POS"
+       ],
+       "hrefs": [
         "/products/crm/",
         "/products/self-care-portal/",
         "/products/self-care-app/",
         "/products/dealer-mobile-pos/"
        ]
+      },
+      {
+       "t": "more",
+       "text": "Atención al cliente y canales →",
+       "href": "/products/customer-care-channels/"
       }
      ],
-     "href": "/products/billing-bss/"
-    }
-   ],
-   "id": "products"
-  },
-  {
-   "h2": "Operaciones de red con IA",
-   "blocks": [
-    {
-     "t": "p",
-     "text": "La IA está dentro de las consolas y los canales de Alepo que usan sus equipos y sus suscriptores, y responde a partir de datos en tiempo real."
+     "href": "/products/customer-care-channels/"
     },
     {
-     "t": "p",
-     "text": "Su personal consulta a AI Agent Assist (beta) en las consolas de AAA, TACACS+ y CRM. Sus suscriptores consultan al AI Customer Assistant en la web y la app."
-    },
-    {
-     "t": "list",
-     "items": [
-      "AI Agent Assist: un asistente para agentes de atención y el NOC (beta)",
-      "AI Customer Assistant: un agente virtual para sus canales web y app"
+     "t": "sub",
+     "h3": "IA para telecomunicaciones",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "La IA está dentro de las consolas y los canales de Alepo que usan sus equipos y suscriptores, y responde a partir de datos en tiempo real. Su personal consulta a AI Agent Assist en las consolas de AAA, TACACS+ y CRM, y sus suscriptores consultan al AI Customer Assistant en la web y la app."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Agente virtual con IA · AI Customer Assistant",
+        "AI Agent Assist (beta)"
+       ],
+       "hrefs": [
+        "/products/ai-virtual-agent/",
+        "/products/ai-agent-assist/"
+       ]
+      },
+      {
+       "t": "more",
+       "text": "IA para telecomunicaciones →",
+       "href": "/products/ai-for-telecom/"
+      }
      ],
-     "hrefs": [
-      "/products/ai-agent-assist/",
-      "/products/ai-virtual-agent/"
-     ]
-    },
-    {
-     "t": "more",
-     "text": "**IA en los productos de Alepo** →",
      "href": "/products/ai-for-telecom/"
     }
    ],
-   "id": "ai-network-operations",
-   "tone": "dark"
+   "id": "products"
   },
   {
    "h2": "Soluciones",
@@ -281,7 +372,7 @@
    "role": "quote"
   },
   {
-   "h2": "Por qué los operadores eligen **Alepo Technologies**",
+   "h2": "Por qué los operadores eligen Alepo Technologies",
    "blocks": [
     {
      "t": "p",
@@ -365,17 +456,12 @@
       [
        "Cliente",
        "Alepo y Nomios implementan una solución AAA avanzada para VodafoneZiggo · Leer →"
-      ],
-      [
-       "Evento",
-       "Africa Tech Festival · 17 al 19 de noviembre de 2026 · Ciudad del Cabo, Sudáfrica"
       ]
      ],
      "hrefs": [
       "https://alepo.com/news/tier-1-indonesia-operator-selects-alepo-aaa-broadband-transformation/",
       "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
-      "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/",
-      null
+      "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/"
      ],
      "kind": "newsrows"
     }
@@ -419,7 +505,7 @@
   "eyebrow": "Alepo Technologies",
   "badge": null,
   "customersLabel": "Operadores que usan **Alepo**",
-  "h1": "**Software AAA y BSS para operadores de telecomunicaciones** con IA nativa",
+  "h1": "Software AAA y BSS para operadores de telecomunicaciones con IA nativa",
   "lede": [
    "Obtenga más ingresos de cada suscriptor y gestione su red y su negocio con menos trabajo manual. Alepo conecta su red con sus ingresos en una sola plataforma, desde el primer inicio de sesión hasta la factura pagada, con IA integrada donde trabajan sus equipos y sus suscriptores."
   ],

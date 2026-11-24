@@ -30,7 +30,8 @@ NAMES = [
 ]
 def names(s):
     for rx, to in NAMES: s = rx.sub(to, s)
-    return s
+    # "AI Agent Assist · AI Assist for Staff (beta)" (descriptive name · brand) would read the same name twice
+    return re.sub(r'\bAI Agent Assist · AI Agent Assist\b', 'AI Agent Assist', s)
 
 # lines that instruct the web team rather than speak to visitors
 NOTE = re.compile(r'^(\(No demo button.*\)|Photo alt text pattern:.*|Each item shows its publication date.*|Datasheet names use the new product names.*|'
@@ -55,7 +56,11 @@ def raw_blocks(path):
         if tag == 'p':
             p = Paragraph(ch, d)
             text = inline(p)
-            if text: yield {'style': p.style.name if p.style is not None else '', 'text': text}
+            style = p.style.name if p.style is not None else ''
+            # a heading set in bold all the way through is a heading, not a keyword
+            m = re.fullmatch(r'\*\*([^*]+)\*\*', text)
+            if m and style.startswith('Heading'): text = m.group(1)
+            if text: yield {'style': style, 'text': text}
         elif tag == 'tbl':
             tb = Table(ch, d)
             rows = [[names(c.text.replace(' ', ' ').strip()) for c in r.cells] for r in tb.rows]
@@ -79,8 +84,9 @@ def classify(b):
         return [{'t': 'table', 'head': rows[0], 'rows': rows[1:]}]
     t, st = b['text'], b['style']
     if NOTE.match(re.sub(r'\*\*', '', t)): return [{'t': 'note', 'text': t}]
-    if st == 'Compact' and re.sub(r'\*\*', '', t).rstrip().endswith('→'): return [{'t': 'more', 'text': t}]
-    if st == 'Compact': return [{'t': 'li', 'text': t}]
+    if st in ('Compact', 'List Paragraph') and re.sub(r'\*\*', '', t).rstrip().endswith('→'): return [{'t': 'more', 'text': t}]
+    if st in ('Compact', 'List Paragraph'): return [{'t': 'li', 'text': t}]
+    if st == 'Heading 4': return [{'t': 'h4', 'text': t}]
     if st == 'Heading 3': return [{'t': 'h3', 'text': t}]
     m = re.match(r'^\*\*(.+?\?)\*\*\n(.+)$', t, re.S)
     if m: return [{'t': 'qa', 'q': m.group(1).strip(), 'a': m.group(2).strip()}]
@@ -116,7 +122,7 @@ def group(blocks):
 def parse(path):
     bl = list(raw_blocks(path))
     m = {'source': os.path.basename(path), 'notes': [], 'sections': []}
-    m['doc'] = re.sub(r'\s+—.*$', '', bl[0]['text'])
+    m['doc'] = re.sub(r'\s+—.*$', '', re.sub(r'\*\*', '', bl[0]['text']))
     i = 1
     while i < len(bl) and bl[i]['style'] != 'Heading 2':
         t = bl[i].get('text', '')
@@ -186,6 +192,12 @@ NAME_URL = {
     'Library': '/library/', 'Case studies': '/customers/', 'Privacy policy': '/privacy-policy/', 'Sitemap': '/sitemap/',
     'Access control': '/products/network-access-aaa/', 'BSS and monetization': '/products/billing-bss/', 'Channels and care': '/products/customer-care-channels/',
     'Care and AI': '/products/customer-care-channels/', 'Network Access & AAA': '/products/network-access-aaa/', 'Billing & BSS': '/products/billing-bss/',
+    'Subscriber Data Management (HSS)': '/products/subscriber-data-management/', 'Online Charging (OCS)': '/products/online-charging/',
+    'Policy Control (PCRF)': '/products/policy-control/', 'Mediation and Revenue Assurance': '/products/mediation-revenue-assurance/',
+    'Service Provisioning and Activation': '/products/service-provisioning/', 'Device Management (TR-069 and TR-369)': '/products/device-management/',
+    'CRM and Customer Care': '/products/crm/', 'Self-Care Portal': '/products/self-care-portal/', 'Dealer App and Mobile POS': '/products/dealer-mobile-pos/',
+    'AI Virtual Agent': '/products/ai-virtual-agent/', 'Provisioning & Devices': '/products/provisioning-devices/',
+    'Customer Care & Channels': '/products/customer-care-channels/', 'AI for Telecom': '/products/ai-for-telecom/',
     'Deployment': '/services/#deployment', 'Run by Alepo': '/services/#run-by-alepo', 'Professional services': '/services/#professional-services',
     'Forward-deployed engineers': '/services/#forward-deployed-engineers', 'Support': '/services/#support',
     'Integration and single sign-on': '/services/#integration-and-single-sign-on', 'Customer success': '/services/#customer-success',
@@ -234,6 +246,10 @@ def name_url(t):
     if t in NAME_URL: return NAME_URL[t]
     m = re.match(r'^(.+?):\s', t)
     if m and m.group(1) in NAME_URL: return NAME_URL[m.group(1)]
+    # "Service Provisioning and Activation · Fulfilment Manager", "Self-Care Mobile App (beta)"
+    for part in t.split(' · '):
+        for cand in (part, re.sub(r'\s*\((beta|in development|first deployment under way)\)$', '', part)):
+            if cand in NAME_URL: return NAME_URL[cand]
     return None
 def more_url(text, ctx):
     t = plain(text)
@@ -246,7 +262,7 @@ def more_url(text, ctx):
                 hit = best(to[5:], POSTS)
                 return hit['url'] if hit else None
             return to
-    return None
+    return name_url(t)  # "Network Access & AAA →": the page of that name
 def resource_url(kind, title):
     title = re.sub(r'\s*\(was .*\)$', '', title)
     title = re.sub(r'\s*·\s*Read →$', '', title)
