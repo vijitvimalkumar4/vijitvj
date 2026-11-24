@@ -50,7 +50,7 @@ for f in sorted(os.listdir(os.path.join(PUB, 'assets', 'img'))):
     imgs['/assets/img/' + f] = f'data:{mime};base64,' + base64.b64encode(data).decode()
 
 opt = lambda *p: read(os.path.join(PUB, *p)) if os.path.exists(os.path.join(PUB, *p)) else ''
-css = opt('assets', 'css', 'site-fixes.css') + '\n' + opt('assets', 'css', 'site-polish.css')
+css = opt('assets', 'css', 'site-fixes.css') + '\n' + opt('assets', 'css', 'site-polish.css') + '\n' + opt('assets', 'css', 'site-copy.css')
 site_js = opt('assets', 'js', 'site.js')
 # self-hosted fonts are embedded so the file works offline
 def _font(m):
