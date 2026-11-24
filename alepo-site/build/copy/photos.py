@@ -59,7 +59,7 @@ add('/products/billing-bss/', 'hero', 'A billing operations team of three review
     'A billing team reviewing the monthly invoice run', 'Un equipo de facturación revisando la facturación del mes')
 add('/products/provisioning-devices/', 'hero', 'A subscriber at home plugging in a new fibre router whose lights come on, no technician present, living room.',
     'A subscriber plugging in a new router that sets itself up', 'Un abonado conectando un router nuevo que se configura solo')
-add('/products/customer-care-channels/', 'hero', 'Inside a mobile operator\'s store, a staff member with a tablet helping an older customer at the counter, generic unbranded phones on the wall behind.',
+add('/products/customer-care-channels/', 'hero', 'A bright mobile phone store: a sales advisor holding a tablet assists a customer at a light wood counter, a display wall of plain smartphones behind them.',
     'Store staff helping a customer with a tablet', 'Personal de tienda atendiendo a un cliente con una tableta')
 
 # ---------------- solutions ----------------
@@ -235,7 +235,7 @@ add(u, 'Service back on payment', 'A man at his kitchen table paying an overdue 
 u = '/products/partner-mvno-settlement/'
 add(u, 'hero', 'Wholesale managers from two operators reviewing a settlement report together across a table, printed pages and a laptop.',
     'Wholesale managers from two operators reviewing a settlement', 'Responsables mayoristas de dos operadores revisando una liquidación')
-add(u, 'What telecom wholesale billing covers', 'A finance analyst at month end surrounded by stacks of printed spreadsheets at a desk with a plain unbranded monitor, late afternoon.',
+add(u, 'What telecom wholesale billing covers', 'A finance analyst reviewing month-end partner settlement reports at her desk, neat piles of printed reports beside a monitor, late afternoon light.',
     'A finance analyst closing partner settlements at month end', 'Un analista financiero cerrando liquidaciones con socios a fin de mes')
 add(u, 'Late usage records still billed', 'A billing analyst reviewing rates by destination on a large monitor showing a world map, out of focus.',
     'A billing analyst reviewing partner rates by destination', 'Una analista de facturación revisando tarifas por destino')

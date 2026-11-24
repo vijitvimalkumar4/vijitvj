@@ -155,7 +155,7 @@
   },
   "/products/customer-care-channels/": {
    "hero": {
-    "prompt": "Inside a mobile operator's store, a staff member with a tablet helping an older customer at the counter, generic unbranded phones on the wall behind.",
+    "prompt": "A bright mobile phone store: a sales advisor holding a tablet assists a customer at a light wood counter, a display wall of plain smartphones behind them.",
     "alt": "Store staff helping a customer with a tablet",
     "alt_es": "Personal de tienda atendiendo a un cliente con una tableta",
     "file": "store-staff-helping-a-customer-with-a-tablet.webp"
@@ -603,7 +603,7 @@
     "file": "wholesale-managers-from-two-operators-reviewing-a-settlement.webp"
    },
    "What telecom wholesale billing covers": {
-    "prompt": "A finance analyst at month end surrounded by stacks of printed spreadsheets at a desk with a plain unbranded monitor, late afternoon.",
+    "prompt": "A finance analyst reviewing month-end partner settlement reports at her desk, neat piles of printed reports beside a monitor, late afternoon light.",
     "alt": "A finance analyst closing partner settlements at month end",
     "alt_es": "Un analista financiero cerrando liquidaciones con socios a fin de mes",
     "file": "a-finance-analyst-closing-partner-settlements-at-month.webp"
