@@ -290,3 +290,38 @@ a.c-chip:hover { border-color: var(--c-indigo); color: var(--c-indigo); }
   .x-footer .xf-mark { width: 80%; bottom: 60px; }
 }
 @media (min-width: 1001px) { .x-footer .xf-cols-c .fcol-list { gap: 8px !important; font-size: 14.5px; } .x-footer .xf-cols-c .fcol { gap: 14px; } }
+/* ---------- photos and motion restored on the copy-deck pages ---------- */
+.c-card.c-has-img, .c-pgroup { padding: 0; overflow: hidden; gap: 0; }
+.c-card-img { display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: #EEF0F6; }
+.c-card-img img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--x-ease, ease); }
+.c-card-b { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding: 24px 28px 28px; width: 100%; box-sizing: border-box; }
+.c-has-img .c-card-b { flex: 1 1 auto; }
+a.c-card:hover .c-card-img img, .c-pgroup:hover .c-card-img img { transform: scale(1.06); }
+.c-pgroup h3 a { color: inherit; }
+.c-pgroup h3 a:hover { color: var(--c-indigo); }
+.c-pcols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.c-pcol { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.c-pcol > .c-pgroup:last-child { flex: 1 1 auto; }
+.c-pcol:first-child > .c-pgroup:first-child .c-card-img, .c-pcol:last-child > .c-pgroup:last-child .c-card-img { aspect-ratio: 16 / 7; }
+.c-pcol:last-child > .c-pgroup:first-child .c-card-img, .c-pcol:first-child > .c-pgroup:last-child .c-card-img { aspect-ratio: 16 / 6; }
+@media (max-width: 860px) { .c-pcols { grid-template-columns: 1fr; } }
+.c-fig { margin: 28px 0 0; border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; box-shadow: 0 24px 48px -30px rgba(18, 13, 61, 0.5); }
+.c-fig img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--x-ease, ease); }
+.c-fig:hover img { transform: scale(1.05); }
+@media (max-width: 900px) { .c-fig { aspect-ratio: 16 / 9; margin-top: 20px; } }
+@media (prefers-reduced-motion: no-preference) {
+  .c-card:not(a), .c-person, .c-story, .c-dia-box, .c-feats > div, .c-layer { transition: transform var(--x-mid, 0.35s) var(--x-ease, ease), box-shadow var(--x-mid, 0.35s) var(--x-ease, ease), border-color 0.35s ease; }
+  .c-card:not(a):hover, .c-person:hover, .c-story:hover, .c-dia-box:hover, .c-feats > div:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(18, 13, 61, 0.05), 0 24px 48px -26px rgba(18, 13, 61, 0.35); border-color: rgba(80, 60, 235, 0.3); }
+  .c-person img { transition: transform 0.8s var(--x-ease, ease); }
+  .c-person:hover img { transform: scale(1.04); }
+  .c-row .c-row-t { transition: translate var(--x-mid, 0.35s) var(--x-ease, ease); }
+  .c-row:hover .c-row-t { translate: 6px 0; }
+  .c-links a .c-links-n { transition: translate 0.3s var(--x-ease, ease), color 0.2s ease; }
+  .c-links a:hover .c-links-n { translate: 4px 0; }
+  .c-chip { transition: border-color 0.2s ease, color 0.2s ease, transform 0.25s var(--x-ease, ease); }
+  a.c-chip:hover { transform: translateY(-2px); }
+  .c-qa summary i::before, .c-qa summary i::after { transition: transform 0.35s var(--x-ease, ease); }
+  .c-qa[open] > div { animation: x-fade-up 0.5s var(--x-ease, ease) both; }
+}
+.c-person { overflow: hidden; }
+.c-person img { display: block; }

@@ -317,7 +317,7 @@
     entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target); en.target.classList.add('rv-in'); done(en.target); });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
 
-  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-post, main .x-fact, main .x-job, main .x-steps > li, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div';
+  var sel = 'main .x-h2, main .x-h2 + p, main .x-card, main .x-statcard, main .x-post, main .x-fact, main .x-job, main .x-steps > li, main .x-row, main .x-cardgrid > div, main .x-media, main .x-cta > div:not(.x-orbs), main blockquote, main details, main form, main [role="img"], main .dia-m > div, main .c-row, main .c-prose > *, main .c-head-x, main .c-links > li, main .c-checks > li, main .c-feats > div, main .c-chips > *, main .c-layer, main .c-facts > div, main .c-dia-box, main .c-fig, main .c-console, main .c-topics, main .c-pager, main .c-quote, main .c-faq > details, main .c-pgroup';
   var list = Array.prototype.slice.call(document.querySelectorAll(sel)).filter(function (e) {
     return !e.closest('.x-hero, .x-in, .rv') && e.getBoundingClientRect().top > window.innerHeight * 0.92;
   });

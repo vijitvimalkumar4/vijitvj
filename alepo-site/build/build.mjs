@@ -280,7 +280,7 @@ for (const j of jobs) {
   const topNews = newsTable ? { title: plainCopy(newsTable.rows[0][1]).replace(/\s*·\s*(Read|Leer)\s*→$/, ''), href: newsTable.hrefs[0] } : null;
   const leadersData = model && model.sections ? Object.fromEntries(model.sections.flatMap(s => s.blocks).filter(b => b.kind === 'people').flatMap(b => b.rows.map(r => [plainCopy(r[0]), leaderPhoto(plainCopy(r[0]))]))) : {};
   const blog = j.file === 'blog.html' ? { page: j.cfg.blogPage, pages: BLOG_PAGES, per: BLOG_PER, topics: Object.fromEntries(POSTS.map(p => [p.url, p.topic])) } : null;
-  const copy = (model || nav) ? { page: model, nav, topNews, blog, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
+  const copy = (model || nav) ? { page: model, nav, topNews, blog, products: enPath === '/' ? (COPY[j.lang]['/products/'] || COPY.en['/products/']) : null, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
   let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge: copy ? null : merge, copy });
   const mr = html.match(/ data-merge="([^"]*)"/);
   if (mr) { const r = JSON.parse(mr[1].replace(/&quot;/g, '"')); for (const k in r) mergeTotals[k] = (mergeTotals[k] || 0) + r[k]; html = html.replace(mr[0], ''); }

@@ -123,9 +123,31 @@ window.__alepoCopy = function (cfg, doc) {
     const moreB = s.blocks.filter(b => b.t === 'more');
     const link = moreB.length === 1 && moreB[0].href && !s.blocks.some(b => b.t === 'list' && (b.hrefs || []).some(Boolean)) ? moreB[0].href : null;
     const inner = `${s.blocks.filter(b => b.t === 'status').map(b => status(b.text)).join('')}<h3>${T(s.h3)}</h3>${s.blocks.filter(b => b.t !== 'status' && !(link && b.t === 'more')).map(b => block(b, sec, dark)).join('')}${link ? `<span class="c-more">${esc(noArrow(moreB[0].text))}${ARROW}</span>` : ''}`;
+    const photo = link && forHref(link);
+    if (photo) return `<a class="x-card c-card c-card-link c-has-img" href="${esc(href(link))}"${ext(link)}><span class="c-card-img">${imgTag(photo)}</span><span class="c-card-b">${inner}</span></a>`;
     return link ? `<a class="x-card c-card c-card-link" href="${esc(href(link))}"${ext(link)}>${inner}</a>` : `<div class="x-card c-card">${inner}</div>`;
   }
   if (!P) { if (NAV) navigation(); return; } // legal pages, sitemap, 404: only the menus and footer come from the copy
+  // photos of the page before the copy went in: a card's photo by the page it links to, the rest for the text sections
+  const POOL = { byHref: {}, loose: [] }, usedImg = new Set();
+  (() => {
+    const seen = new Set();
+    main.querySelectorAll('img').forEach(im => {
+      const src = im.getAttribute('src') || '';
+      if (!src || /logo|\.svg$/i.test(src) || seen.has(src) || im.closest('.x-hero, .x-feed, .x-post, .x-person, .x-avatar, .x-logos, dialog, .xm, footer') || im.closest('main > section:first-of-type')) return;
+      if ((+im.getAttribute('width') || 999) < 160) return;
+      seen.add(src);
+      const o = { src, alt: im.getAttribute('alt') || '', srcset: im.getAttribute('srcset') || '', w: im.getAttribute('width') || '', h: im.getAttribute('height') || '' };
+      let a = im.closest('a[href]');
+      // a photo outside any link belongs to the card whose heading links to a page
+      for (let c = im.parentElement, n = 0; !a && c && n < 4; c = c.parentElement, n++) a = c.querySelector('h3 a[href]');
+      const h = a && (a.getAttribute('href') || '').replace(/^\/es(?=\/)/, '').replace(/[?#].*/, '');
+      if (h && h.startsWith('/') && !POOL.byHref[h]) POOL.byHref[h] = o; else POOL.loose.push(o);
+    });
+  })();
+  const imgTag = (o, cls) => `<img src="${esc(o.src)}"${o.srcset ? ` srcset="${esc(o.srcset)}" sizes="(max-width: 760px) 100vw, 640px"` : ''} alt="${esc(o.alt)}"${o.w ? ` width="${o.w}" height="${o.h}"` : ''} loading="lazy" decoding="async" class="g-zm${cls ? ' ' + cls : ''}">`;
+  const takeLoose = () => { const o = POOL.loose.find(x => !usedImg.has(x.src)); if (o) usedImg.add(o.src); return o || null; };
+  const forHref = h => { const o = POOL.byHref[(h || '').replace(/^\/es(?=\/)/, '').replace(/[?#].*/, '')]; if (o && !usedImg.has(o.src)) { usedImg.add(o.src); return o; } return null; };
   // ---------- sections ----------
   const PAGE = (P.source || '').replace(/\.docx$/, '');
   function section(s, i, all) {
@@ -146,6 +168,7 @@ window.__alepoCopy = function (cfg, doc) {
     // emptied by past events: no section
     let body = '';
     const tone = dark ? ' on-dark x-dark c-dark' : (s.tint ? ' x-tint c-tint' : '');
+    if (PAGE === '01-home' && s.id === 'products' && C.products) return homeProducts(s);
     if (role === 'faq') {
       body = `<div class="c-split"><div><h2 class="x-h2">${T(s.h2)}</h2>${rest.filter(b => b.t === 'p').map(b => para(b, 'c-lead')).join('')}</div><div>${rest.filter(b => b.t !== 'p').map(b => block(b, PAGE, dark)).join('')}</div></div>`;
     } else if (subs.length) {
@@ -163,17 +186,42 @@ window.__alepoCopy = function (cfg, doc) {
         const other = rest.filter(b => !lead.includes(b));
         body = `<div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2>${lead.length ? `<div class="c-head-x">${lead.map(b => block(b, PAGE, dark)).join('')}</div>` : ''}</div>${other.map(b => block(b, PAGE === '08-about' && b.kind === 'offices' ? 'about' : b.t === 'list' ? 'wide' : PAGE, dark)).join('')}`;
       } else {
-        body = `<div class="c-split"><div><h2 class="x-h2">${T(s.h2)}</h2></div><div class="c-prose">${html.join('')}</div></div>`;
+        const ph = takeLoose();
+        body = `<div class="c-split${ph ? ' c-split-img' : ''}"><div><h2 class="x-h2">${T(s.h2)}</h2>${ph ? `<figure class="c-fig x-media">${imgTag(ph)}</figure>` : ''}</div><div class="c-prose">${html.join('')}</div></div>`;
       }
     }
     if (!body.replace(/<[^>]+>/g, '').trim()) return '';
     return `<section class="c-sec${tone}"${id}><div class="c-wrap">${body}</div></section>`;
   }
+  // Home "Products": the four groups of the Products page (03), each with the Home copy's own product lines
+  function homeProducts(s) {
+    const CH = ['/products/crm/', '/products/self-care-portal/', '/products/self-care-app/', '/products/dealer-mobile-pos/'];
+    const subs = s.blocks.filter(b => b.t === 'sub'), lead = s.blocks.filter(b => b.t !== 'sub');
+    const listOf = g => g.blocks.find(b => b.t === 'list') || { items: [], hrefs: [] };
+    const pick = (l, keep) => { const items = [], hrefs = []; l.items.forEach((it, i) => { if (keep((l.hrefs || [])[i])) { items.push(it); hrefs.push(l.hrefs[i]); } }); return { t: 'list', items, hrefs }; };
+    const ps = C.products.sections, byId = id => ps.find(x => x.id === id);
+    const aiSec = P.sections.find(x => x.id === 'ai-network-operations');
+    const aiList = aiSec ? aiSec.blocks.find(b => b.t === 'list') : null;
+    const grp = (h3, intro, list, h) => ({ h3, intro, list, href: h });
+    const firstP = x => (x && x.blocks.find(b => b.t === 'p') || {}).text || '';
+    const bss = subs[1], acc = subs[0];
+    const G = [
+      grp(acc.h3, firstP(acc), listOf(acc), acc.href || '/products/network-access-aaa/'),
+      grp(bss.h3, firstP(bss), pick(listOf(bss), h => !CH.includes(h)), bss.href || '/products/billing-bss/'),
+      grp(byId('channels-and-care') ? byId('channels-and-care').h2 : '', firstP(byId('channels-and-care')), pick(listOf(bss), h => CH.includes(h)), '/products/customer-care-channels/'),
+      grp(byId('ai') ? byId('ai').h2 : '', firstP(byId('ai')), aiList || { items: [], hrefs: [] }, '/products/ai-for-telecom/'),
+    ];
+    const gcard = g => { const ph = forHref(g.href);
+      return `<div class="x-card c-card c-pgroup">${ph ? `<a class="c-card-img" href="${esc(href(g.href))}" tabindex="-1" aria-hidden="true">${imgTag(ph)}</a>` : ''}<div class="c-card-b"><h3><a href="${esc(href(g.href))}">${T(g.h3)}</a></h3>${g.intro ? `<p>${T(g.intro)}</p>` : ''}${list(g.list)}</div></div>`; };
+    return `<section class="c-sec c-tint" id="products"><div class="c-wrap"><div class="c-head"><h2 class="x-h2">${T(s.h2)}</h2><div class="c-head-x">${lead.map(b => block(b, PAGE)).join('')}</div></div>
+      <div class="c-pcols"><div class="c-pcol">${gcard(G[0])}${gcard(G[2])}</div><div class="c-pcol">${gcard(G[1])}${gcard(G[3])}</div></div></div></section>`;
+  }
   // tint every other non-text section, so the page has a rhythm
   let prevTint = false;
   P.sections.forEach(s => {
     const visual = s.blocks.some(b => b.t === 'sub' || b.t === 'table' && b.kind !== 'facts' || b.t === 'list' && (b.hrefs || []).some(Boolean)) || s.role === 'chips';
-    s.tint = !s.tone && !['cta', 'quote', 'faq', 'feed', 'form'].includes(s.role) && visual && !prevTint;
+    s.tint = !s.tone && !['cta', 'quote', 'faq', 'feed', 'form'].includes(s.role) && visual && !prevTint && !(PAGE === '01-home' && s.id === 'products');
+    if (PAGE === '01-home' && s.id === 'products') { prevTint = true; return; }
     prevTint = !!s.tint || s.tone === 'dark';
   });
   // ---------- hero ----------
@@ -193,6 +241,15 @@ window.__alepoCopy = function (cfg, doc) {
   // keep what the polished page built from alepo.com data
   const keep = { feed: [...main.querySelectorAll('.x-blog-bar, .x-blog-note, .x-feed')], gate: main.querySelector('dialog.x-gate'), form: main.querySelector('form[data-form="demo"]') };
   main.innerHTML = heroHtml + subnav + P.sections.map(section).join('');
+  // first screen: text settles in, then the picture (site-polish.css .x-in, .x-in-side)
+  const heroEl = main.querySelector('.c-hero');
+  if (heroEl) {
+    let k = 0;
+    heroEl.querySelectorAll('.c-hero-t > *').forEach(e => { e.classList.add('x-in'); e.style.setProperty('--i', k++); });
+    const md = heroEl.querySelector('.c-hero-media, .c-assist'); if (md) { md.classList.add('x-in', 'x-in-side'); md.style.setProperty('--i', 1); }
+    const hi = heroEl.querySelector('.c-hero-media img'); if (hi) hi.classList.add('g-kb');
+    const lg = heroEl.querySelector('.c-logos'); if (lg) { lg.classList.add('x-in'); lg.style.setProperty('--i', k); }
+  }
   const feedSlot = main.querySelector('[data-feed-slot]');
   if (feedSlot) { const f = keep.feed.filter(e => !e.classList.contains('x-blog-bar')); if (f.length) feedSlot.replaceWith(...f); else feedSlot.remove(); }
   // topic filters (the copy's labels, in its order) and, on the blog, crawlable pages
@@ -396,6 +453,7 @@ window.__alepoCopy = function (cfg, doc) {
         foot.insertBefore(band, wrap);
         colsEl2.classList.add('xf-cols-c'); colsEl2.prepend(brandEl); topEl.remove();
       }
+      const mark = foot.querySelector('.xf-mark'); if (mark) mark.remove();
       const bottom = foot.querySelector('.xf-bottom');
       if (bottom && legal) {
         const parts = plain(legal.blocks[0].text).split(' · ').filter(p => !/^alepo$/i.test(p));
