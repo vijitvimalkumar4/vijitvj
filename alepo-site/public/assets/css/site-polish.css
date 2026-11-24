@@ -611,10 +611,11 @@ html.lenis, .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .x-sweep { --sw-pale: #8A8FA0; }
 .x-sweep-dark { --sw-pale: rgba(255, 255, 255, 0.5); }
 
-/* motion budget: blur only in the first screen; the demo band's glows drift once, while in view, for 5 s */
+/* motion budget: blocks come into focus from a soft blur as they scroll in (site.js drops the class once settled,
+   so the filter only lives for the second of the reveal); the demo band's glows drift once, while in view, for 5 s */
 @media (prefers-reduced-motion: no-preference) {
-  .x-motion .rv:not(.rv-in) { filter: none; }
-  .x-motion .rv { transition: opacity 0.8s var(--x-ease), translate 0.8s var(--x-ease), scale 1s var(--x-ease); transition-delay: var(--rv-d, 0ms); }
+  .x-motion .rv:not(.rv-in) { filter: blur(10px); }
+  .x-motion .rv { transition: opacity 0.9s var(--x-ease), translate 0.9s var(--x-ease), scale 1.1s var(--x-ease), filter 1s var(--x-ease); transition-delay: var(--rv-d, 0ms); }
   .x-orbs i:nth-child(n) { animation-duration: 5s !important; animation-iteration-count: 1 !important; animation-fill-mode: forwards !important; animation-play-state: paused; }
   .x-cta.is-live .x-orbs i { animation-play-state: running; }
   .x-cta::before { animation: none !important; }
