@@ -179,7 +179,7 @@ window.__alepoCopy = function (cfg, doc) {
     }
     if (role === 'quote') {
       const ps = s.blocks.filter(b => b.t === 'p');
-      return `<section class="c-sec c-quote-sec"${id}><div class="c-wrap"><h2 class="x-sr">${T(s.h2)}</h2><blockquote class="c-quote"><p>${T(ps[0].text)}</p>${ps[1] ? `<footer>${T(ps[1].text)}</footer>` : ''}</blockquote></div></section>`;
+      return `<section class="c-sec c-quote-sec"${id}><div class="c-wrap"><h2 class="x-sr">${T(s.h2)}</h2><blockquote class="c-quote"><p class="x-sweep c-quote-sw">${T(ps[0].text)}</p>${ps[1] ? `<footer>${T(ps[1].text)}</footer>` : ''}</blockquote></div></section>`;
     }
     if (role === 'feed') return `<section class="c-sec c-feed-sec"${id}><div class="c-wrap"><h2 class="x-h2">${T(s.h2)}</h2><div data-feed-slot></div></div></section>`;
     if (role === 'form') return `<section class="c-sec c-form-sec"${id}><div class="c-wrap" data-form-slot></div></section>`;
@@ -245,12 +245,30 @@ window.__alepoCopy = function (cfg, doc) {
     <h1 class="x-sweep x-sweep-load">${T(H.h1)}</h1>${(H.lede || []).map(t => `<p class="c-lede">${T(t)}</p>`).join('')}
     ${(H.extra || []).filter(b => b.t === 'more').map(more).join('')}${H.buttons && H.buttons.length ? buttons(H.buttons) : ''}</div>${heroMedia}</div>
     ${H.customers ? `<div class="c-logos"><p>${T(H.customersLabel || '')}</p><ul>${H.customers.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div>` : ''}</div></section>`;
+  // Home: the immersive hero of the original design (dark panel over the city photo, glass consoles) with a live network canvas
+  let heroOut = heroHtml;
+  if (PAGE === '01-home') {
+    const bg = main.querySelector(':scope > section:first-of-type img');
+    const bgSrc = bg ? bg.getAttribute('src') : '';
+    heroOut = `<section class="c-hx" aria-labelledby="hx-h1"><div class="c-hx-panel on-dark">
+      ${bgSrc ? `<div class="c-hx-bg" aria-hidden="true"><img src="${esc(bgSrc)}" alt="" width="1600" height="1067" fetchpriority="high"></div>` : ''}
+      <div class="c-hx-shade" aria-hidden="true"></div><canvas class="c-hx-net" aria-hidden="true"></canvas><div class="c-hx-glow" aria-hidden="true"></div>
+      <div class="c-hx-in"><div class="c-hx-t">
+        ${H.eyebrow ? `<p class="c-hx-eb x-in" style="--i:0">${T(H.eyebrow)}</p>` : ''}
+        <h1 id="hx-h1" class="x-in x-sweep x-sweep-load x-sweep-dark" style="--i:1">${T(H.h1)}</h1>
+        ${(H.lede || []).map(t => `<p class="c-hx-lede x-in" style="--i:2">${T(t)}</p>`).join('')}
+        ${H.buttons && H.buttons.length ? `<div class="x-in" style="--i:3">${buttons(H.buttons, true)}</div>` : ''}</div>
+        ${assist ? `<div class="c-hx-cards x-in x-in-side" style="--i:2">${assist.rows.map((r, i) => `<div class="c-glass" data-depth="${i ? 18 : 30}"><div class="c-glass-top"><span class="c-glass-who">${T(r[0])}</span><span class="c-glass-st"><i></i>${T(r[3])}</span></div><p class="c-glass-q">${T(r[1])}</p><p class="c-glass-a">${T(r[2])}</p></div>`).join('')}
+          ${assist.caption ? `<p class="c-hx-cap">${T(assist.caption)}</p>` : ''}</div>` : ''}
+      </div></div>
+      ${H.customers ? `<div class="c-wrap"><div class="c-logos c-hx-logos x-in" style="--i:4"><p>${T(H.customersLabel || '')}</p><ul>${H.customers.map(c => `<li>${esc(c)}</li>`).join('')}</ul></div></div>` : ''}</section>`;
+  }
   const subnav = H.subnav && H.subnav.length ? `<nav class="subnav c-subnav" aria-label="${U.on}"><div>${H.subnav.map((l, i) => (H.subnavTargets || [])[i] ? `<a href="#${H.subnavTargets[i]}" data-subnav>${T(l)}</a>` : '').join('')}</div></nav>` : '';
   // keep what the polished page built from alepo.com data
   const keep = { feed: [...main.querySelectorAll('.x-blog-bar, .x-blog-note, .x-feed')], gate: main.querySelector('dialog.x-gate'), form: main.querySelector('form[data-form="demo"]') };
-  main.innerHTML = heroHtml + subnav + P.sections.map(section).join('');
+  main.innerHTML = heroOut + subnav + P.sections.map(section).join('');
   // first screen: text settles in, then the picture (site-polish.css .x-in, .x-in-side)
-  const heroEl = main.querySelector('.c-hero');
+  const heroEl = main.querySelector('.c-hero:not(.c-hx)');
   if (heroEl) {
     let k = 0;
     heroEl.querySelectorAll('.c-hero-t > *').forEach(e => { e.classList.add('x-in'); e.style.setProperty('--i', k++); });
@@ -484,6 +502,7 @@ window.__alepoCopy = function (cfg, doc) {
         colsEl2.classList.add('xf-cols-c'); colsEl2.prepend(brandEl); topEl.remove();
       }
       const mark = foot.querySelector('.xf-mark'); if (mark) mark.remove();
+      if (!foot.querySelector('.xf-aurora')) { const au = doc.createElement('div'); au.className = 'xf-aurora'; au.setAttribute('aria-hidden', 'true'); au.innerHTML = '<i></i><i></i><i></i>'; foot.prepend(au); }
       const bottom = foot.querySelector('.xf-bottom');
       if (bottom && legal) {
         const parts = plain(legal.blocks[0].text).split(' · ').filter(p => !/^alepo$/i.test(p));
