@@ -1,0 +1,138 @@
+{
+ "source": "12-careers.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Each role links to its own page at /company/careers/[role]/."
+ ],
+ "sections": [
+  {
+   "h2": "Por qué Alepo",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Impacto",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "El software que usted desarrolla conecta y factura a suscriptores en redes en producción."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Equipo",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Muchos integrantes del equipo han dedicado su carrera a las redes y la facturación de operadores, y al soporte al cliente."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Aprendizaje",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Conferencias y certificaciones, además de trabajo entre equipos."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "why-alepo"
+  },
+  {
+   "h2": "Vacantes",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "¿No encuentra un puesto adecuado? Envíe su currículum de todos modos."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Arquitecto Sénior de Soluciones de Ingeniería de Ventas",
+       "Remoto, Estados Unidos"
+      ],
+      [
+       "Líder de Equipo, Entrega y Soporte",
+       "Remoto, LATAM"
+      ],
+      [
+       "Ingeniero Sénior, Soporte Técnico",
+       "Navi Mumbai"
+      ],
+      [
+       "Desarrollador Java Líder, Investigación y Desarrollo",
+       "Navi Mumbai o Pune"
+      ],
+      [
+       "Director de Ventas",
+       "Remoto, Norteamérica"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/careers/senior-sales-engineering-solutions-architect/",
+      "https://alepo.com/careers/team-lead-delivery-support/",
+      "https://alepo.com/careers/senior-engineer-technical-support/",
+      "https://alepo.com/careers/lead-java-developer-research-development/",
+      "https://alepo.com/careers/sales-director/"
+     ],
+     "kind": "roles"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Envíe su currículum",
+       "href": "https://alepo.com/company/careers/apply-now/"
+      }
+     ]
+    }
+   ],
+   "id": "open-roles"
+  }
+ ],
+ "doc": "12 · Careers",
+ "pagination": false,
+ "url": "/company/careers/",
+ "title": "Empleos en software de telecom en Alepo Technologies",
+ "titleMarked": "**Telecom Software Jobs** at **Alepo Technologies**",
+ "desc": "Carreras en Alepo Technologies: cree software telecom que conecta y factura a suscriptores en redes en vivo, con un equipo de 20 años de experiencia.",
+ "descMarked": "Careers at **Alepo Technologies**. Build telecom software that connects and bills subscribers on live networks, with a team that has done it for two decades.",
+ "primary": "alepo technologies careers (brand)",
+ "hero": {
+  "crumbs": [
+   "Empresa",
+   "Carreras"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Carreras en Alepo**",
+  "lede": [
+   "Desarrolle **software de telecomunicaciones** que opera redes de operadores en producción, con un equipo que lo ha hecho durante más de dos décadas."
+  ],
+  "buttons": [
+   {
+    "label": "Ver vacantes",
+    "href": "#open-roles"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/careers/"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,206 @@
+{
+ "source": "47-customer-care-channels.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Products",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Alepo CRM",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "A CRM workspace for care agents, with each subscriber's plans, usage, bills and tickets on one screen, and AI Agent Assist beside them."
+      },
+      {
+       "t": "more",
+       "text": "Explore Alepo CRM →",
+       "href": "/products/crm/"
+      }
+     ],
+     "href": "/products/crm/"
+    },
+    {
+     "t": "sub",
+     "h3": "Selfcare Now",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "A branded **self-service portal** where subscribers sign up, pay, change plans and solve problems on their own."
+      },
+      {
+       "t": "more",
+       "text": "Explore Selfcare Now →",
+       "href": "/products/self-care-portal/"
+      }
+     ],
+     "href": "/products/self-care-portal/"
+    },
+    {
+     "t": "sub",
+     "h3": "Self-Care Mobile App",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "A **white-label** iOS and Android app under your brand, connected to the same account data."
+      },
+      {
+       "t": "more",
+       "text": "Explore Self-Care Mobile App →",
+       "href": "/products/self-care-app/"
+      }
+     ],
+     "href": "/products/self-care-app/"
+    },
+    {
+     "t": "sub",
+     "h3": "Mobile POS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "A dealer app for sign-up, SIM activation, top-ups and payments in the field."
+      },
+      {
+       "t": "more",
+       "text": "Explore Mobile POS →",
+       "href": "/products/dealer-mobile-pos/"
+      }
+     ],
+     "href": "/products/dealer-mobile-pos/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "Customer experience management, from first contact to renewal",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Discover and buy:** subscribers choose and pay for plans online, in the app or with a dealer",
+      "**Use and manage:** balances, usage and bills are visible in every channel, in real time",
+      "**Get help:** the AI Customer Assistant answers first. A care agent takes over with the full history",
+      "**Stay:** offers and renewals reach the right subscriber at the right moment"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "customer-experience-management-from-first-contact-to-renewal"
+  },
+  {
+   "h2": "Built on your live BSS data",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every channel reads from the same billing and charging data, and the same network data. A plan changed in the app shows in the CRM at once. A payment made with a dealer clears the balance everywhere."
+    }
+   ],
+   "id": "built-on-your-live-bss-data"
+  },
+  {
+   "h2": "Frequently asked questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is customer experience management in telecom?",
+       "a": "It is how an operator manages every interaction with a subscriber, across care, self-service, retail and digital channels, so service is consistent and problems are solved quickly."
+      },
+      {
+       "q": "Can subscribers use our brand in the portal and app?",
+       "a": "Yes. Selfcare Now and its app (both in beta) carry your brand, colors and domain."
+      },
+      {
+       "q": "Do these products need Alepo's BSS?",
+       "a": "They work best with it, and they also connect to other billing systems through open APIs."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us how your subscribers reach you today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "47 · Customer Care & Channels",
+ "pagination": false,
+ "url": "/products/customer-care-channels/",
+ "title": "Telecom Customer Care and Self-Care Software | Alepo",
+ "titleMarked": "Telecom Customer Care and Self-Care Software | Alepo",
+ "desc": "Customer experience management for telecom: a CRM for care teams, a branded self-service portal and app, and mobile POS for dealers, with AI built in.",
+ "descMarked": "**Customer experience management** for telecom: a CRM for care teams, a branded self-service portal and app, and mobile POS for dealers, with AI built in.",
+ "primary": "customer experience management telecom",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Products",
+   "Customer Care & Channels"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Customer care and channels for telecom",
+  "lede": [
+   "Win and keep subscribers with care that is quick and consistent in every channel. Alepo's **customer experience management** gives your care teams and dealers the same live view of each account that subscribers see, so every channel tells the same story."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   null
+  ]
+ }
+}

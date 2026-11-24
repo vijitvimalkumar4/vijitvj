@@ -1,0 +1,228 @@
+{
+ "source": "48-blog-article-template.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this template. Bracketed text is filled per post; fixed copy is written out.",
+  "[Auto-generated list of H2 links]",
+  "Mandatory box. Fixed structure, product-specific copy:",
+  "Example for E1 (What is TR-069?): Alepo Home Router and ONT Management works as a TR-069 ACS and a TR-369 USP controller, so your helpdesk can set up and fix home routers remotely. See Home Router and ONT Management →"
+ ],
+ "sections": [
+  {
+   "h2": "Article header",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Resources / Blog / [Topic]"
+    },
+    {
+     "t": "h1",
+     "text": "[Post title as a question or explainer]"
+    },
+    {
+     "t": "p",
+     "text": "[Author name], [role] · [Publication date] · [Updated date, if changed] · [X]-minute read"
+    }
+   ],
+   "id": "article-header"
+  },
+  {
+   "h2": "Short answer",
+   "blocks": [
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Two or three sentences that answer the title question directly, using the **post keyword** once. This block is written to be quoted by search results and AI answers.",
+       "href": null
+      }
+     ]
+    }
+   ],
+   "id": "short-answer"
+  },
+  {
+   "h2": "In this article",
+   "blocks": [],
+   "id": "in-this-article"
+  },
+  {
+   "h2": "Body",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "[H2: What is / How does it work]",
+     "blocks": [
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Explain the concept in plain terms. One idea per paragraph. Short sentences.",
+         "href": null
+        }
+       ]
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "[H2: Why it matters for operators]",
+     "blocks": [
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Tie the concept to an operator's network or revenue, or to its customers.",
+         "href": null
+        }
+       ]
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "[H2: Comparison or steps]",
+     "blocks": [
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "A table or numbered steps where the topic has a shape.",
+         "href": null
+        }
+       ]
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "[H2: Common mistakes or questions]",
+     "blocks": [
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Practical guidance from deployments.",
+         "href": null
+        }
+       ]
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "body"
+  },
+  {
+   "h2": "Where Alepo fits",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**Where Alepo fits**"
+    },
+    {
+     "t": "p",
+     "text": "[Product name] [one sentence on how the product handles the topic of this post]."
+    },
+    {
+     "t": "p",
+     "text": "[See [product name] →] (links to the product page that owns the commercial keyword)"
+    }
+   ],
+   "id": "where-alepo-fits"
+  },
+  {
+   "h2": "Frequently asked questions",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**[Question 1 using a secondary phrasing of the keyword?]**\n[Answer in two or three sentences.]"
+    },
+    {
+     "t": "p",
+     "text": "**[Question 2?]**\n[Answer.]"
+    },
+    {
+     "t": "p",
+     "text": "**[Question 3?]**\n[Answer.]"
+    }
+   ],
+   "id": "frequently-asked-questions"
+  },
+  {
+   "h2": "Related reading",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "[Related explainer 1]",
+      "[Related explainer 2]"
+     ],
+     "hrefs": [
+      null,
+      null
+     ]
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Related product page link",
+       "href": null
+      }
+     ]
+    }
+   ],
+   "id": "related-reading"
+  },
+  {
+   "h2": "Subscribe",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Guides like this one, once a month, for people who run operator networks."
+    },
+    {
+     "t": "p",
+     "text": "Work email {{link:subscribe|Subscribe}}"
+    }
+   ],
+   "id": "subscribe"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "48 · Blog Article Template",
+ "pagination": false,
+ "url": "/blog/[slug]/",
+ "title": "[Post title] | Alepo",
+ "titleMarked": "[Post title] | Alepo",
+ "desc": "[One sentence of 140 to 160 characters that answers the question in the title, with the post keyword in the first 80 characters, written plainly.]",
+ "descMarked": "[One sentence of 140 to 160 characters that answers the question in the title, with the post keyword in the first 80 characters, written plainly.]",
+ "primary": "one informational keyword per post (rows E1 to E15). Never a product's commercial term."
+}

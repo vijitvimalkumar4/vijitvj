@@ -1,0 +1,237 @@
+{
+ "source": "27-device-management.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace la gestión de dispositivos TR-069",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Con la **gestión de dispositivos TR-069**, la mesa de ayuda ve y corrige de forma remota el router doméstico o la ONT de un suscriptor. Se ejecuta en sus propios servidores, por lo que no hay tarifa de nube por dispositivo."
+    },
+    {
+     "t": "p",
+     "text": "Los ISP de banda ancha fija pagan por dispositivo la gestión de routers en la nube, o usan herramientas limitadas que no le permiten a la mesa de ayuda ver la interferencia Wi-Fi ni la señal de fibra. Las actualizaciones masivas de firmware son riesgosas. La activación del router está desvinculada del plan del cliente."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Primer contacto",
+       "Configuración base aplicada automáticamente cuando un router se conecta por primera vez"
+      ],
+      [
+       "Funciona con",
+       "Routers domésticos y ONT compatibles con TR-069 o USP. Alepo AAA y CRM para la activación."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: ACS, servidor de autoconfiguración, **servidor TR-069**, controlador TR-369 (USP), **gestión de CPE**, gestión de dispositivos, gestión remota"
+    }
+   ],
+   "id": "what-tr-069-device-management-does"
+  },
+  {
+   "h2": "Fallas del router detectadas con un clic",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su mesa de ayuda ejecuta con un clic una verificación del estado del router del suscriptor. Indica la causa probable y el siguiente paso."
+    },
+    {
+     "t": "p",
+     "text": "La interferencia Wi-Fi y la señal de fibra se ven desde la misma pantalla."
+    }
+   ],
+   "id": "router-faults-found-in-one-click"
+  },
+  {
+   "h2": "Actualizaciones de firmware sin interrupciones masivas",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Una versión de firmware defectuosa se detiene antes de llegar a todos los hogares. El firmware se distribuye en oleadas escalonadas. Cada oleada tiene un umbral de éxito, y el despliegue se detiene si no se alcanza."
+    },
+    {
+     "t": "p",
+     "text": "Una versión defectuosa llega primero a un grupo pequeño de hogares."
+    }
+   ],
+   "id": "firmware-updates-without-mass-outages"
+  },
+  {
+   "h2": "Los routers se activan con el plan vendido",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La activación del router está vinculada a Alepo AAA y CRM, por lo que el dispositivo se activa con el plan que compró el cliente."
+    },
+    {
+     "t": "p",
+     "text": "Se ejecuta en sus propios servidores. No hay tarifa de nube por dispositivo."
+    }
+   ],
+   "id": "routers-come-up-on-the-plan-sold"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la gestión de dispositivos TR-069?",
+       "a": "La **gestión de dispositivos TR-069** utiliza un servidor de autoconfiguración (ACS) para configurar, actualizar y diagnosticar de forma remota routers domésticos y ONT. Lea: ¿Qué es TR-069? →"
+      },
+      {
+       "q": "¿Son compatibles con TR-369 (USP)?",
+       "a": "Sí. El mismo producto funciona como **ACS TR-069** y como controlador **TR-369 USP**, de modo que los dispositivos más antiguos y los más nuevos se gestionan en un solo lugar."
+      },
+      {
+       "q": "¿Hay una tarifa por dispositivo?",
+       "a": "No. Se ejecuta en sus propios servidores, sin cargos de nube por dispositivo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Home Router and ONT Management",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Home Router and ONT Management en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve y no haya que actualizar nada más al mismo tiempo. Home Router and ONT Management se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-home-router-and-ont-management"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "AAA RADIUS y Diameter para banda ancha y móvil"
+      ],
+      [
+       "Fulfilment Manager",
+       "activación y aprovisionamiento de servicios"
+      ],
+      [
+       "TACACS+ Server",
+       "administración de dispositivos y control de comandos"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "27 · Device Management (TR-069 and TR-369)",
+ "pagination": false,
+ "url": "/products/device-management/",
+ "title": "Gestión de dispositivos TR-069: ACS y TR-369 USP | Alepo",
+ "titleMarked": "**TR-069 Device Management**: ACS and **TR-369 USP** | Alepo",
+ "desc": "Gestión de dispositivos TR-069 de Alepo: soporte ve y corrige routers y ONT a distancia, desde sus servidores. ACS TR-069 y controlador TR-369 USP.",
+ "descMarked": "Alepo **TR-069 device management** lets the helpdesk see and fix home routers and ONTs remotely, from your own servers. A **TR-069 ACS** and a **TR-369 USP** controller.",
+ "primary": "tr-069 device management",
+ "secondary": "tr-069 server, tr-069 acs, tr-369 usp, cpe management",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Control de acceso",
+   "Home Router and ONT Management"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "Gestión de dispositivos TR-069 y TR-369",
+  "lede": [
+   "Reduzca las visitas técnicas y las tarifas de nube por dispositivo corrigiendo los routers domésticos desde la mesa de ayuda. Un solo producto con dos funciones: un **ACS TR-069** y un controlador **TR-369 USP**."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/device-management/"
+  ],
+  "subnavTargets": [
+   "what-tr-069-device-management-does",
+   "router-faults-found-in-one-click",
+   "installing-home-router-and-ont-management"
+  ]
+ },
+ "lang": "es"
+}

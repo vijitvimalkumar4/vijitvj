@@ -1,0 +1,241 @@
+{
+ "source": "37-self-care-portal.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **customer portal software**"
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace el software de portal de autoservicio",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Selfcare Now es un sitio web de marca blanca donde los clientes se dan de alta y pagan, y obtienen ayuda cuando la necesitan. Se conecta a Alepo CRM y al AI Customer Assistant. Hay una app móvil en beta."
+    },
+    {
+     "t": "p",
+     "text": "En muchos operadores, la autogestión está desactualizada, y los procesos lentos de alta y pago empujan a los clientes al centro de llamadas y hacen que el operador parezca rezagado frente a sus competidores. Selfcare Now convierte esas visitas en tareas completadas."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Alepo CRM y facturación, además de tarificación en línea. Pasarelas de pago. El AI Customer Assistant."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: portal de autogestión, autogestión web, **software de portal de clientes**, Mi cuenta, eCare, incorporación digital"
+    }
+   ],
+   "id": "what-self-service-portal-software-does"
+  },
+  {
+   "h2": "Su marca en más de 30 idiomas",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un sitio web de marca blanca en más de 30 idiomas, incluidos los de derecha a izquierda."
+    },
+    {
+     "t": "p",
+     "text": "Lleva su marca."
+    }
+   ],
+   "id": "your-brand-in-more-than-30-languages"
+  },
+  {
+   "h2": "Facturas pagadas sin llamar",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los clientes pagan con tarjeta, configuran el pago automático y reciben recordatorios de pago."
+    },
+    {
+     "t": "p",
+     "text": "El alta y el pago son breves, por lo que menos clientes terminan en el centro de llamadas."
+    }
+   ],
+   "id": "bills-paid-without-a-call"
+  },
+  {
+   "h2": "Flujos adaptados a su operación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus flujos se adaptan a su forma de trabajar y se conectan a Alepo CRM."
+    },
+    {
+     "t": "p",
+     "text": "El AI Customer Assistant responde dentro de las mismas páginas."
+    }
+   ],
+   "id": "flows-tailored-to-your-operation"
+  },
+  {
+   "h2": "IA en Selfcare Now",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El AI Customer Assistant está integrado. Responde preguntas rutinarias a toda hora y completa tareas dentro de la propia cuenta del cliente que inició sesión. Los casos complejos pasan a un agente de atención, y ofertas como un pase de datos para viajes pueden aparecer dentro de la conversación."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-selfcare-now",
+   "tone": "dark"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es el software de portal de autoservicio?",
+       "a": "El **software de portal de autoservicio** permite a los clientes gestionar sus propias cuentas en línea: darse de alta, pagar facturas, cambiar de plan y resolver problemas comunes sin llamar."
+      },
+      {
+       "q": "¿También hay una app móvil?",
+       "a": "Sí, en beta. La app de Selfcare Now ofrece las mismas tareas y aún no está publicada en las tiendas de aplicaciones."
+      },
+      {
+       "q": "¿Qué idiomas se admiten?",
+       "a": "Más de 30, incluidos idiomas de derecha a izquierda."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Selfcare Now en contenedores, de una única forma estándar, como todos los productos de Alepo. Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista. Se ejecuta en su entorno, con soporte 24x7 de GTAC."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Alepo CRM",
+       "espacio de trabajo de atención al cliente con IA"
+      ],
+      [
+       "Self-Care Mobile App",
+       "app de autogestión con su marca (beta)"
+      ],
+      [
+       "Mobile POS",
+       "alta de clientes y recargas, además de pago de facturas, para distribuidores"
+      ]
+     ],
+     "hrefs": [
+      "/products/crm/",
+      "/products/self-care-app/",
+      "/products/dealer-mobile-pos/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "37 · Self-Care Portal (Selfcare Now)",
+ "pagination": false,
+ "url": "/products/self-care-portal/",
+ "title": "Software de portal de autoservicio para telecom | Alepo",
+ "titleMarked": "**Self-Service Portal Software** for Telecom | Alepo",
+ "desc": "Selfcare Now es el software de portal de autoservicio telecom de Alepo: un sitio con su marca para alta, pago y ayuda, en más de 30 idiomas.",
+ "descMarked": "Selfcare Now is Alepo's **self-service portal software** for telecom: a branded website where customers sign up, pay and get help, in more than 30 languages.",
+ "primary": "self service portal software",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Canales y atención",
+   "Selfcare Now"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "Portal de autogestión para telecomunicaciones",
+  "lede": [
+   "Saque las llamadas rutinarias de su centro de llamadas, ya que los clientes se dan de alta y pagan en línea, y obtienen ayuda cuando la necesitan. Selfcare Now es **software de portal de autoservicio** con su marca."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/self-care-portal/"
+  ],
+  "subnavTargets": [
+   "what-self-service-portal-software-does",
+   "your-brand-in-more-than-30-languages",
+   "ai-in-selfcare-now"
+  ]
+ },
+ "lang": "es"
+}

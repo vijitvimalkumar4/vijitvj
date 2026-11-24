@@ -1,0 +1,230 @@
+{
+ "source": "38-self-care-app.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Menos llamadas y visitas a tiendas",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Una app de marca blanca para iOS y Android. Forma parte de Selfcare Now (beta). Desde su teléfono, los suscriptores consultan su consumo, recargan, pagan facturas y cambian de plan."
+    },
+    {
+     "t": "p",
+     "text": "Los suscriptores llaman o van a una tienda para consultar el saldo, recargar o cambiar de plan, y muchos de ellos nunca abren un portal web. Una **app de autogestión para telecomunicaciones** los encuentra donde ya están."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Alepo CRM y facturación, además de tarificación en línea. Pasarelas de pago. Vouchers. El AI Customer Assistant."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: autogestión móvil, app para suscriptores, app para clientes, app Mi cuenta, app para iOS y Android"
+    }
+   ],
+   "id": "fewer-calls-and-shop-visits"
+  },
+  {
+   "h2": "Alertas de saldo bajo en tiempo real",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El consumo, los saldos y las facturas se muestran en tiempo real. Las notificaciones push avisan al cliente de un saldo bajo o de una nueva factura."
+    },
+    {
+     "t": "p",
+     "text": "Consultar el saldo ya no requiere una llamada ni una visita a la tienda."
+    }
+   ],
+   "id": "low-balance-alerts-in-real-time"
+  },
+  {
+   "h2": "Recargue y pague desde la app",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los clientes recargan con tarjeta, billetera o voucher, pagan facturas y configuran el pago automático."
+    },
+    {
+     "t": "p",
+     "text": "Los cambios de plan, los complementos y los tickets de soporte se realizan desde la app."
+    }
+   ],
+   "id": "recharge-and-pay-from-the-app"
+  },
+  {
+   "h2": "Marca",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus suscriptores ven su propio nombre y logotipo, en sus colores."
+    },
+    {
+     "t": "p",
+     "text": "Funciona en iOS y Android."
+    }
+   ],
+   "id": "branding"
+  },
+  {
+   "h2": "IA en la app",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El AI Customer Assistant está integrado. Responde preguntas rutinarias a toda hora y completa tareas dentro de la propia cuenta del cliente que inició sesión. Los casos complejos pasan a un agente de atención, y ofertas como un pase de datos para viajes pueden aparecer dentro de la conversación."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-the-app",
+   "tone": "dark"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿La app se publica con nuestra marca?",
+       "a": "Sí. La app de cada operador lleva su propio nombre y logotipo, en sus propios colores. La app de Selfcare Now está en beta y aún no está publicada en las tiendas de aplicaciones."
+      },
+      {
+       "q": "¿Qué pueden hacer los suscriptores en la app?",
+       "a": "Consultar el consumo y el saldo, recargar con tarjeta, billetera o voucher, pagar facturas, configurar el pago automático, cambiar de plan y abrir tickets de soporte."
+      },
+      {
+       "q": "¿Comparte datos con el portal web?",
+       "a": "Sí. La app y Selfcare Now leen los mismos datos de la cuenta, por lo que todos los canales muestran el mismo saldo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Alepo CRM",
+       "espacio de trabajo de atención al cliente con IA"
+      ],
+      [
+       "Selfcare Now",
+       "autogestión web e incorporación con su marca"
+      ],
+      [
+       "Mobile POS",
+       "alta de clientes y recargas, además de pago de facturas, para distribuidores"
+      ]
+     ],
+     "hrefs": [
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/dealer-mobile-pos/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "38 · Self-Care Mobile App",
+ "pagination": false,
+ "url": "/products/self-care-app/",
+ "title": "App de autogestión de marca blanca para telecom | Alepo",
+ "titleMarked": "**White-Label Telecom Self-Care App** | Alepo",
+ "desc": "App de autogestión telecom de marca blanca para iOS y Android: los suscriptores ven su consumo, recargan, pagan y cambian de plan desde el teléfono.",
+ "descMarked": "A **white-label telecom self-care app** for iOS and Android under your brand. Subscribers check usage, recharge, pay bills and change plans from their phone.",
+ "primary": "long-tail operator queries (white-label telecom app, telecom self-care app)",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Canales y atención",
+   "Self-Care Mobile App"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "**App de autogestión de marca blanca para telecomunicaciones**",
+  "lede": [
+   "Saque las consultas de saldo y las recargas de su centro de llamadas y de sus tiendas. Los suscriptores las resuelven en una app con su marca, en el teléfono que ya llevan, junto con el pago de facturas y los cambios de plan."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/self-care-app/"
+  ],
+  "subnavTargets": [
+   "fewer-calls-and-shop-visits",
+   "low-balance-alerts-in-real-time",
+   "ai-in-the-app"
+  ]
+ },
+ "lang": "es"
+}

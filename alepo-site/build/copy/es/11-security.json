@@ -1,0 +1,168 @@
+{
+ "source": "11-security.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Cómo protegemos los datos",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Cifrado",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Los datos se cifran en reposo y en tránsito. Solo las personas autorizadas pueden acceder a ellos, con las claves correctas."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Control de acceso",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Cada acceso a los sistemas se verifica y se registra, para que las personas adecuadas vean la información adecuada."
+      }
+     ],
+     "href": "/products/network-access-aaa/"
+    },
+    {
+     "t": "sub",
+     "h3": "Privacidad",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "La información sensible, como números de teléfono y datos de pago, se detecta y se protege. Los sistemas están diseñados para cumplir leyes de privacidad como el GDPR."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Monitoreo",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Un equipo de seguridad vigila los sistemas las 24 horas y responde ante actividad sospechosa."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Salvaguardas de IA",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "La información personal en las conversaciones con clientes está protegida. Los datos de sus clientes nunca se usan para entrenar IA para otras empresas, y una persona puede revisar las decisiones importantes."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Respuesta a incidentes",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Si ocurre un incidente, Alepo lo investiga, lo contiene y le informa qué sucedió y qué cambia."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "how-we-protect-data"
+  },
+  {
+   "h2": "Ubicación de los datos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada producto de Alepo se instala en su propio entorno, de modo que sus datos permanecen en su centro de datos o en su propia nube, bajo sus propios controles. Cuando Alepo opera la plataforma por usted, lo hace dentro de ese entorno."
+    }
+   ],
+   "id": "data-location"
+  },
+  {
+   "h2": "Certificaciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo cuenta con la certificación TMForum Open APIs. Los certificados vigentes y los informes de auditoría están disponibles a solicitud bajo NDA."
+    }
+   ],
+   "id": "certifications"
+  },
+  {
+   "h2": "Divulgación de vulnerabilidades",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "¿Encontró un problema de seguridad en un producto o sitio web de Alepo? Repórtelo a security@alepo.com. Confirmamos la recepción de cada reporte, lo investigamos y lo mantenemos informado hasta que se resuelva. Nuestro archivo security.txt está publicado en /.well-known/security.txt."
+    }
+   ],
+   "id": "vulnerability-disclosure"
+  },
+  {
+   "h2": "Contacto de seguridad",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Solicite los detalles que su evaluación necesita."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "security-contact",
+   "role": "cta"
+  }
+ ],
+ "doc": "11 · Security",
+ "pagination": false,
+ "url": "/company/security/",
+ "title": "Seguridad y protección de datos | Alepo",
+ "titleMarked": "**Security and Data Protection** | Alepo",
+ "desc": "Alepo protege datos de operadores y suscriptores: cifrado, control de acceso, monitoreo, IA segura, respuesta a incidentes y datos donde usted elija.",
+ "descMarked": "How **Alepo** protects operator and subscriber data: encryption, access control, monitoring, AI safeguards, incident response and your choice of data location.",
+ "primary": "brand and trust queries (alepo security)",
+ "hero": {
+  "crumbs": [
+   "Empresa",
+   "Seguridad"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Seguridad",
+  "lede": [
+   "Los operadores manejan algunos de los datos más sensibles que existen. Así es como **Alepo** los protege."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/security/"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,220 @@
+{
+ "source": "05-services.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Implementación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada producto de Alepo se entrega en contenedores y se instala de una única forma estándar, sobre Kubernetes en su entorno."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Las instalaciones son un proceso automatizado y repetible.",
+      "Una corrección se aplica solo al componente que la necesita, con reversión lista."
+     ],
+     "hrefs": [
+      null,
+      null
+     ]
+    },
+    {
+     "t": "diagram",
+     "text": "Diagram labels: In your environment: Alepo product · Kubernetes · Run by your team | In your environment: Alepo product · Kubernetes · Run by Alepo",
+     "boxes": [
+      [
+       "En su entorno",
+       "Producto de Alepo",
+       "Kubernetes",
+       "Operado por su equipo"
+      ],
+      [
+       "En su entorno",
+       "Producto de Alepo",
+       "Kubernetes",
+       "Operado por Alepo"
+      ]
+     ]
+    }
+   ],
+   "id": "deployment"
+  },
+  {
+   "h2": "Operado por Alepo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Si no tiene un equipo de Kubernetes, Alepo instala y opera la plataforma por usted con un ciclo de actualizaciones planificado, sin saltos de versión mayor. Su equipo no necesita tomar decisiones de plataforma ni tener conocimientos de Kubernetes."
+    }
+   ],
+   "id": "run-by-alepo"
+  },
+  {
+   "h2": "Servicios profesionales",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo entrega cada proyecto de principio a fin, junto con su equipo."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Gestión y gobierno de proyectos",
+      "Personalización según sus necesidades",
+      "Migración de datos",
+      "Pruebas de aceptación",
+      "Capacitación",
+      "Instalación en sitio"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "professional-services"
+  },
+  {
+   "h2": "Ingenieros integrados",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Para los operadores que buscan un compromiso más profundo, los ingenieros de Alepo trabajan junto con su equipo, dentro de sus propios proyectos y ventanas de cambio."
+    }
+   ],
+   "id": "forward-deployed-engineers"
+  },
+  {
+   "h2": "Soporte",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada oferta está respaldada por soporte técnico 24x7 de GTAC, el equipo de soporte técnico de Alepo."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Ingenieros de soporte técnico con experiencia en telecomunicaciones",
+      "Escalamiento directo al equipo de ingeniería",
+      "Un gerente de éxito del cliente para cada cliente",
+      "Para clientes con un contrato de soporte"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Estados Unidos: +1 737 313 3952\nIndia: +91 22 6108 5013"
+    }
+   ],
+   "id": "support"
+  },
+  {
+   "h2": "Integración e inicio de sesión único",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Una capa compartida conecta sus sistemas con Alepo y ofrece al personal un único inicio de sesión seguro."
+    },
+    {
+     "t": "p",
+     "text": "La puerta de enlace acepta su SOAP o XML existente, por lo que la plataforma de aprovisionamiento no requiere cambios. El inicio de sesión único funciona con Okta o Keycloak, y los mensajes a los clientes salen por el canal adecuado."
+    }
+   ],
+   "id": "integration-and-single-sign-on"
+  },
+  {
+   "h2": "Éxito del cliente",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada cliente tiene un gerente de éxito del cliente asignado que conoce su red y sus contratos, y se reúne con su equipo con regularidad para revisar la hoja de ruta."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Revisiones periódicas del estado del servicio y los casos abiertos, además de los próximos cambios",
+      "Una línea directa con los equipos de producto e ingeniería de Alepo"
+     ],
+     "hrefs": [
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "customer-success"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "05 · Services and Support",
+ "pagination": false,
+ "url": "/services/",
+ "title": "Implementación y soporte de software telecom | Alepo",
+ "titleMarked": "**Telecom Software Deployment and Support Services** | Alepo",
+ "desc": "Implementación y soporte de software telecom de Alepo: instalación en Kubernetes a cargo suyo o de Alepo, servicios profesionales y soporte GTAC 24x7.",
+ "descMarked": "Alepo **telecom software deployment and support services**: Kubernetes installs run by you or by Alepo, professional services and 24x7 GTAC support.",
+ "primary": "none (brand and service queries)",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Servicios"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Servicios y soporte",
+  "lede": [
+   "Póngase en marcha con un solo equipo responsable desde el diseño hasta el pase a producción, y siga en producción con ingenieros de guardia las 24 horas. Alepo entrega cada proyecto de principio a fin, sobre Kubernetes en su entorno, operado por su equipo o por Alepo."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/services/"
+  ]
+ },
+ "lang": "es"
+}

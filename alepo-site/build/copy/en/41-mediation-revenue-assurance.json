@@ -1,0 +1,242 @@
+{
+ "source": "41-mediation-revenue-assurance.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Primary keywords: **telecom mediation**, **telecom revenue assurance**"
+ ],
+ "sections": [
+  {
+   "h2": "What telecom mediation covers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mediation Studio is in development and available to order. It handles telecom mediation: it collects and cleans every usage record from the network before billing, and a ledger per file shows what the network sent and what billing received."
+    },
+    {
+     "t": "p",
+     "text": "Revenue leaks when usage records are lost or duplicated, or get stuck. Disputed bills have no per-file evidence. Every new feed becomes a services project. Mediation Studio brings telecom mediation and revenue assurance into one product, so every record from the network can be traced through to the bill."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Switches, the packet core, AAA and other network sources. Billing, settlement and the data warehouse downstream."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: mediation, billing mediation, CDR mediation, xDR mediation, Mediator, usage data collection"
+    }
+   ],
+   "id": "what-telecom-mediation-covers"
+  },
+  {
+   "h2": "Duplicates caught before billing",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Duplicate records are detected. Failed records are repaired and resubmitted."
+    },
+    {
+     "t": "p",
+     "text": "A gap or a duplicate in a file sequence is found before billing."
+    }
+   ],
+   "id": "duplicates-caught-before-billing"
+  },
+  {
+   "h2": "Evidence for every disputed bill",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "When a bill is disputed, the evidence is ready. A balancing ledger per file shows what the network sent and what billing received."
+    },
+    {
+     "t": "p",
+     "text": "Your billing team answers the dispute from the file itself."
+    }
+   ],
+   "id": "evidence-for-every-disputed-bill"
+  },
+  {
+   "h2": "Data masking",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Personal data is masked at delivery."
+    },
+    {
+     "t": "p",
+     "text": "Sources include switches, the packet core and AAA. Billing, settlement and the data warehouse receive the output."
+    }
+   ],
+   "id": "data-masking"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What does Mediation Studio do?",
+       "a": "It collects and cleans every usage record from the network before billing."
+      },
+      {
+       "q": "How do we show that nothing was lost?",
+       "a": "A balancing ledger per file shows what the network sent and what billing received. Each disputed bill has evidence behind it."
+      },
+      {
+       "q": "What happens to duplicate or failed records?",
+       "a": "Duplicates are detected and dropped. Failed records are repaired and resubmitted."
+      },
+      {
+       "q": "What is mediation in telecom?",
+       "a": "**Mediation in telecom** collects usage records from network elements, converts them into one format and passes them to billing, settlement and analytics."
+      },
+      {
+       "q": "What is telecom revenue assurance?",
+       "a": "**Telecom revenue assurance** checks that every billable event is captured and rated, then invoiced correctly, so revenue is not lost between the network and the bill. Read: What causes revenue leakage in telecom? →"
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Mediation Studio",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mediation Studio is being built so your team installs it like every Alepo product: in containers, one standard way, from the same automated guide. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Mediation Studio will run on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-mediation-studio"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ],
+      [
+       "Collections and Dunning",
+       "automated reminders, with barring and restoration tied to payment"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/online-charging/",
+      "/products/collections-dunning/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "41 · Mediation and Revenue Assurance",
+ "pagination": false,
+ "url": "/products/mediation-revenue-assurance/",
+ "title": "Telecom Mediation and Revenue Assurance | Alepo",
+ "titleMarked": "**Telecom Mediation and Revenue Assurance** | Alepo",
+ "desc": "Mediation Studio is a telecom mediation and revenue assurance product that collects and cleans every usage record and proves nothing was lost before billing.",
+ "descMarked": "Mediation Studio is a **telecom mediation** and **revenue assurance** product that collects and cleans every usage record and proves nothing was lost before billing.",
+ "secondary": "revenue assurance, mediation in telecom",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Mediation Studio"
+  ],
+  "eyebrow": null,
+  "badge": "In development · available to order",
+  "h1": "**Telecom mediation and revenue assurance**",
+  "lede": [
+   "Bill for every minute and megabyte your network carries, and answer billing disputes with evidence. Mediation Studio cleans each usage record before billing and shows that nothing was lost or double-counted."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment",
+   "Questions"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/mediation-revenue-assurance/"
+  ],
+  "subnavTargets": [
+   "what-telecom-mediation-covers",
+   "duplicates-caught-before-billing",
+   "installing-mediation-studio",
+   "common-questions"
+  ]
+ }
+}

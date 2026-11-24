@@ -1,0 +1,138 @@
+{
+ "source": "10-partners.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Partners today",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Nomios",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Carrier-grade AAA for operators in the Netherlands, including the VodafoneZiggo deployment."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Italtel",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "5G mobile private networks."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Blue Arcus",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Teletok's convergent billing launch."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "partners-today"
+  },
+  {
+   "h2": "Become a partner",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Four steps from application to first sale."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Apply with your company and target market.",
+      "The partner team reviews the application and sets up a first discussion.",
+      "Your team takes role-based training and certification.",
+      "You start selling, with support from the partner team."
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Apply",
+       "href": "/contact-us/?request=partner#demo"
+      }
+     ]
+    }
+   ],
+   "id": "become-a-partner"
+  },
+  {
+   "h2": "Partner contact",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us about your company and the market you serve."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Apply to partner",
+       "href": "/contact-us/?request=partner#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "partner-contact",
+   "role": "cta"
+  }
+ ],
+ "doc": "10 · Partners",
+ "pagination": false,
+ "url": "/company/partners/",
+ "title": "Partner Program for Resellers and Integrators | Alepo",
+ "titleMarked": "**Partner Program** for **Resellers and Integrators** | Alepo",
+ "desc": "The Alepo partner program for resellers and system integrators. Deliver Alepo AAA, BSS and AI software to operators in your markets, with partner training.",
+ "descMarked": "The **Alepo partner** program for resellers and system integrators. Deliver Alepo AAA, BSS and AI software to operators in your markets, with partner training.",
+ "primary": "alepo partners (brand)",
+ "hero": {
+  "crumbs": [
+   "Company",
+   "Partners"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Partner program**",
+  "lede": [
+   "Resellers and system integrators grow their own business by delivering Alepo products to operators in their markets."
+  ],
+  "buttons": [
+   {
+    "label": "Apply",
+    "href": "/contact-us/?request=partner#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/partners/"
+  ]
+ }
+}

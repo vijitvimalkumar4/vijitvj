@@ -1,0 +1,343 @@
+{
+ "source": "25-tacacs-server.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **tacacs server**"
+ ],
+ "sections": [
+  {
+   "h2": "Know who changed a production router",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo **TACACS+** puts every router, switch and firewall login behind one policy and one audit trail."
+    },
+    {
+     "t": "p",
+     "text": "On many networks, device logins still run on local passwords, so nobody can say who changed a production router at 2 a.m., and contractors keep admin rights after a project ends. Cisco ACS, which many operators used for this, is end of life."
+    },
+    {
+     "t": "p",
+     "text": "With Alepo **TACACS+ server**, each engineer gets their own login and only the access they need. It decides on each command. Every action is recorded."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Protocol",
+       "TACACS+"
+      ],
+      [
+       "Devices",
+       "Routers, switches, firewalls, BNG and BRAS, wireless controllers"
+      ],
+      [
+       "Audit trail",
+       "Forwarded to Splunk, Sentinel or QRadar"
+      ],
+      [
+       "Delivery",
+       "On Kubernetes, in your data center or your own cloud"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: **TACACS**, device administration AAA, network device access control, command authorization, admin AAA"
+    }
+   ],
+   "id": "know-who-changed-a-production-router"
+  },
+  {
+   "h2": "TACACS+ in brief",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**TACACS+** (Terminal Access Controller Access-Control System Plus) is the protocol network devices use to check engineer logins with a central server. It separates authentication from authorization and accounting, encrypts the whole exchange, and can authorize each command on its own."
+    },
+    {
+     "t": "more",
+     "text": "Read the full guide: What is TACACS+? →",
+     "href": "https://alepo.com/blog/what-is-tacacs-the-complete-guide-for-network-teams/"
+    }
+   ],
+   "id": "tacacs-in-brief"
+  },
+  {
+   "h2": "Least-privilege access for every engineer",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Each engineer signs in as themselves. The server decides which commands that person may run on which devices, one command at a time."
+    },
+    {
+     "t": "p",
+     "text": "Removing a contractor is one change in one place. No device has to be touched."
+    }
+   ],
+   "id": "least-privilege-access-for-every-engineer"
+  },
+  {
+   "h2": "Audit evidence where your security team works",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every login and every command is recorded in a tamper-evident trail. Your security team sees it in Splunk, Sentinel or QRadar, where it already works."
+    },
+    {
+     "t": "p",
+     "text": "Controls are mapped to NIST SP 800-53: MFA, lockout, password policy and audit. A control map is included for auditors."
+    }
+   ],
+   "id": "audit-evidence-where-your-security-team-works"
+  },
+  {
+   "h2": "Day-to-day admin without the command line",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A web console and a REST API replace the command line for day-to-day administration. AI answers questions about authorization decisions, so the team does not depend on one CLI expert."
+    },
+    {
+     "t": "p",
+     "text": "It sits beside Alepo AAA. Most operators run RADIUS for subscribers and **TACACS+** for staff."
+    }
+   ],
+   "id": "day-to-day-admin-without-the-command-line"
+  },
+  {
+   "h2": "Moving off Cisco Secure ACS",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cisco Secure ACS has reached end of life. Alepo **TACACS+** is a supported successor."
+    },
+    {
+     "t": "p",
+     "text": "Our engineers handle the migration and acceptance testing, then train your team, and GTAC engineers stay on call 24x7 after the cutover."
+    },
+    {
+     "t": "more",
+     "text": "See the enterprise and government solution →",
+     "href": "/solutions/enterprise-government-networks/"
+    }
+   ],
+   "id": "moving-off-cisco-secure-acs"
+  },
+  {
+   "h2": "AI in TACACS+ Server",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) in the TACACS+ console answers questions about who was allowed to do what, straight from the audit trail. Its recommendations are drafts only, and it passed QA in October 2026. Engineers get the answer without reading raw logs or waiting for the one person who knows the policy."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-tacacs-server",
+   "tone": "dark"
+  },
+  {
+   "h2": "Resources",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "All resources →",
+     "href": "/resources/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "News",
+       "Alepo launches a carrier-grade TACACS+ Server for secure network device administration"
+      ],
+      [
+       "Blog",
+       "RADIUS Two-Factor Authentication for Operator Staff and Enterprise Services"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+      "https://alepo.com/blog/radius-mfa-two-factor-authentication/"
+     ],
+     "kind": "resources"
+    }
+   ],
+   "id": "resources"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is TACACS+?",
+       "a": "**TACACS+** is a protocol for device administration. It signs in the engineers who manage network devices, from routers to firewalls, decides which commands each of them may run, and records what they did."
+      },
+      {
+       "q": "How is TACACS+ different from RADIUS?",
+       "a": "RADIUS controls subscriber access to the network and combines authentication with authorization. **TACACS+** controls staff access to devices, keeps the three AAA steps separate, encrypts the full exchange and authorizes each command."
+      },
+      {
+       "q": "Why not keep local accounts on each device?",
+       "a": "Local accounts are shared, hard to remove and leave no central record. A **TACACS server** gives every engineer their own login and one audit trail."
+      },
+      {
+       "q": "Can Alepo replace Cisco Secure ACS?",
+       "a": "Yes. Alepo engineers move your policies and device groups, test them against your own devices and support the cutover."
+      },
+      {
+       "q": "Which devices does it work with?",
+       "a": "Any device that supports **TACACS+**, including routers, switches, firewalls, BNG and BRAS, and wireless controllers from many vendors."
+      },
+      {
+       "q": "How is it deployed?",
+       "a": "On Kubernetes, in your data center or your own cloud, with 24x7 support from GTAC."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installation",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs the device administration server in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. It runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "RADIUS and Diameter AAA for broadband and mobile"
+      ],
+      [
+       "Fulfilment Manager",
+       "service activation and provisioning"
+      ],
+      [
+       "Wi-Fi Offload and Calling",
+       "carrier Wi-Fi and hotspots, plus Wi-Fi calling"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/wifi-offload-calling/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "25 · TACACS+ Server",
+ "pagination": false,
+ "url": "/products/tacacs-server/",
+ "title": "TACACS+ Server for Network Device Administration | Alepo",
+ "titleMarked": "**TACACS+ Server** for **Network Device Administration** | Alepo",
+ "desc": "Alepo TACACS+ server controls and records who logs into every network device, from core routers to firewalls, and every command they run, in one audit trail.",
+ "descMarked": "Alepo **TACACS+ server** controls and records who logs into every network device, from core routers to firewalls, and every command they run, in one audit trail.",
+ "primary": "tacacs+",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "Access control",
+   "TACACS+ Server"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**TACACS+ Server for network device administration**",
+  "lede": [
+   "Cut the risk of shared passwords on your network devices, and hand auditors their evidence without a project. One place controls and records every login and command, from core routers to firewalls."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI",
+   "Resources",
+   "Questions"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/tacacs-server/"
+  ],
+  "subnavTargets": [
+   "know-who-changed-a-production-router",
+   "tacacs-in-brief",
+   "ai-in-tacacs-server",
+   "resources",
+   "common-questions"
+  ]
+ }
+}

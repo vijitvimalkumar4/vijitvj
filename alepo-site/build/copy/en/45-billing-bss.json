@@ -1,0 +1,351 @@
+{
+ "source": "45-billing-bss.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Billing and revenue management, end to end",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Revenue in telecom moves through many hands before it reaches the bank. You get each step from one vendor, so nothing is lost between systems."
+    },
+    {
+     "t": "list",
+     "items": [
+      "**Sell:** build offers and bundles once, promotions included, and sell them in every channel",
+      "**Charge:** rate every session in real time, across data, voice and messaging",
+      "**Bill:** convergent invoices for every account and service, in any currency",
+      "**Assure:** collect usage, reconcile it and catch leakage before it reaches the invoice",
+      "**Collect:** automated reminders, with holds and restores tied to payment",
+      "**Settle:** pay partners, MVNOs and carriers what they are owed, and no more"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "billing-and-revenue-management-end-to-end"
+  },
+  {
+   "h2": "Billing",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Digital BSS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "The full **BSS** for large, complex operations: convergent billing and revenue management, with CRM built in on one platform."
+      },
+      {
+       "t": "more",
+       "text": "Explore Digital BSS →",
+       "href": "/products/digital-bss/"
+      }
+     ],
+     "href": "/products/digital-bss/"
+    },
+    {
+     "t": "sub",
+     "h3": "BSS in a Box",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "A defined launch package for new MVNOs: self-care, CRM, billing, charging and mobile POS in one offer."
+      },
+      {
+       "t": "more",
+       "text": "Explore BSS in a Box →",
+       "href": "/products/bss-in-a-box/"
+      }
+     ],
+     "href": "/products/bss-in-a-box/"
+    }
+   ],
+   "id": "billing"
+  },
+  {
+   "h2": "Charging and policy",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Online Charging",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Real-time convergent charging for prepaid and postpaid, so balances are always right."
+      },
+      {
+       "t": "more",
+       "text": "Explore Online Charging →",
+       "href": "/products/online-charging/"
+      }
+     ],
+     "href": "/products/online-charging/"
+    },
+    {
+     "t": "sub",
+     "h3": "Policy Control",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Policy for data plans and fair use, plus VoLTE quality, enforced on every session."
+      },
+      {
+       "t": "more",
+       "text": "Explore Policy Control →",
+       "href": "/products/policy-control/"
+      }
+     ],
+     "href": "/products/policy-control/"
+    },
+    {
+     "t": "sub",
+     "h3": "Prepaid Offers and Vouchers",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Prepaid plans, top-ups, vouchers and promotions that subscribers can buy anywhere."
+      },
+      {
+       "t": "more",
+       "text": "Explore Prepaid Offers and Vouchers →",
+       "href": "/products/prepaid-offers-vouchers/"
+      }
+     ],
+     "href": "/products/prepaid-offers-vouchers/"
+    }
+   ],
+   "id": "charging-and-policy"
+  },
+  {
+   "h2": "Revenue assurance",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Mediation Studio",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "In development"
+      },
+      {
+       "t": "p",
+       "text": "Collect, clean and correlate usage from every network element, and find revenue leakage early."
+      },
+      {
+       "t": "more",
+       "text": "Explore Mediation Studio →",
+       "href": "/products/mediation-revenue-assurance/"
+      }
+     ],
+     "href": "/products/mediation-revenue-assurance/"
+    },
+    {
+     "t": "sub",
+     "h3": "Collections and Dunning",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Reminders, barring and restoration that recover revenue without losing the customer."
+      },
+      {
+       "t": "more",
+       "text": "Explore Collections and Dunning →",
+       "href": "/products/collections-dunning/"
+      }
+     ],
+     "href": "/products/collections-dunning/"
+    }
+   ],
+   "id": "revenue-assurance"
+  },
+  {
+   "h2": "Wholesale",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Partner and MVNO Settlement",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Wholesale, MVNO and reseller billing with accurate revenue share."
+      },
+      {
+       "t": "more",
+       "text": "Explore Partner and MVNO Settlement →",
+       "href": "/products/partner-mvno-settlement/"
+      }
+     ],
+     "href": "/products/partner-mvno-settlement/"
+    },
+    {
+     "t": "sub",
+     "h3": "Interconnect and Roaming Settlement",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "In development"
+      },
+      {
+       "t": "p",
+       "text": "Carrier interconnect billing, with roaming settlement in development."
+      },
+      {
+       "t": "more",
+       "text": "Explore Interconnect and Roaming Settlement →",
+       "href": "/products/interconnect-roaming-settlement/"
+      }
+     ],
+     "href": "/products/interconnect-roaming-settlement/"
+    }
+   ],
+   "id": "wholesale"
+  },
+  {
+   "h2": "Where Alepo fits in your **OSS/BSS** stack",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Billing depends on the network. Alepo's **BSS telecom** suite connects directly to its own access and provisioning products, and to the **OSS** you already run, through open APIs. Services activate the moment they are sold, and usage arrives ready to rate."
+    },
+    {
+     "t": "sub",
+     "h3": "Alepo SCP (CAMEL Service Control Point)",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "First deployment under way"
+      },
+      {
+       "t": "p",
+       "text": "Live 2G and 3G prepaid charging."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "where-alepo-fits-in-your-oss-bss-stack"
+  },
+  {
+   "h2": "Why operators choose Alepo telecom billing software",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Convergent by design:** fixed, mobile, Wi-Fi and enterprise services on one bill",
+      "**Real time:** charging and policy decisions made in the session rather than at month end",
+      "**Modular:** start with one product, add the rest when you are ready",
+      "Deploy your way: cloud native on Kubernetes, in your environment or run for you by Alepo",
+      "**AI Agent Assist (beta):** explains bills and barring to care agents from the live account"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "why-operators-choose-alepo-telecom-billing-software"
+  },
+  {
+   "h2": "Frequently asked questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is telecom billing software?",
+       "a": "Telecom billing software rates usage and applies plans and discounts, then produces invoices for subscribers and partners. Current platforms also handle real-time charging and collections, plus settlement."
+      },
+      {
+       "q": "What is the difference between BSS and OSS?",
+       "a": "BSS runs the business side: products, orders, charging, billing and customer care. OSS runs the network side: inventory, activation and service assurance."
+      },
+      {
+       "q": "Does Alepo support prepaid and postpaid on one platform?",
+       "a": "Yes. Online Charging and Digital BSS handle prepaid, postpaid and hybrid plans on one platform."
+      },
+      {
+       "q": "Can Alepo replace our legacy billing system in stages?",
+       "a": "Yes. Each product runs on its own, so operators often migrate one function at a time."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you bill today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "45 · Billing & BSS",
+ "pagination": false,
+ "url": "/products/billing-bss/",
+ "title": "Telecom Billing Software for Operators and ISPs | Alepo",
+ "titleMarked": "**Telecom Billing Software for Operators and ISPs** | Alepo",
+ "desc": "Telecom billing software for operators and ISPs: convergent billing, real-time charging, policy, mediation, collections and settlement in one BSS.",
+ "descMarked": "**Telecom billing software** for operators and ISPs: convergent billing, real-time charging, policy, mediation, collections and settlement in one **BSS**.",
+ "primary": "telecom billing software",
+ "secondary": "billing and revenue management, telecom BSS, BSS telecom, OSS BSS",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Products",
+   "Billing & BSS"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Telecom billing software**",
+  "lede": [
+   "Bill accurately, and settle with every partner from the same records. Alepo **telecom billing software** is one **telecom BSS** for every way you earn, from prepaid and postpaid to retail and wholesale, for consumer and enterprise accounts."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   "/products/billing-bss/"
+  ]
+ }
+}

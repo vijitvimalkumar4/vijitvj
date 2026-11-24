@@ -1,0 +1,237 @@
+{
+ "source": "39-bss-in-a-box.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué incluye la plataforma de facturación para MVNO",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "BSS in a Box empaqueta Digital BSS para el lanzamiento de un nuevo MVNO: autogestión, CRM, facturación, tarificación y POS móvil en una oferta definida. Cada marca se ejecuta en su propio despliegue."
+    },
+    {
+     "t": "p",
+     "text": "Una nueva MVNO necesita facturación, tarificación, autogestión y un CRM desde el primer día. Un proyecto de BSS a medida tarda en definirse para una marca que aún no se ha lanzado, y una plataforma con un alcance fijo elimina esa espera."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "La red del operador anfitrión o un MVNE. Pasarelas de pago."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **BSS para MVNO**, MVNO in a box, paquete de lanzamiento"
+    }
+   ],
+   "id": "what-the-mvno-billing-platform-includes"
+  },
+  {
+   "h2": "Contenido del paquete",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Autogestión, CRM, facturación, tarificación y Mobile POS vienen en un solo paquete. Una nueva marca tiene lo que necesita desde el primer día."
+    },
+    {
+     "t": "p",
+     "text": "Se conecta a la red del operador anfitrión o a un MVNE, y a pasarelas de pago."
+    }
+   ],
+   "id": "package-contents"
+  },
+  {
+   "h2": "Sin proyecto a medida antes del lanzamiento",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El alcance está definido de antemano. No hay un proyecto de BSS a medida que especificar antes de que la marca exista."
+    },
+    {
+     "t": "p",
+     "text": "Cubre planes prepago, pospago e híbridos."
+    }
+   ],
+   "id": "no-custom-project-before-launch"
+  },
+  {
+   "h2": "Los datos y las interrupciones de cada marca se mantienen separados",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada una de sus marcas funciona en su propia implementación. Los datos, las actualizaciones y las interrupciones se mantienen separados."
+    },
+    {
+     "t": "p",
+     "text": "Un operador que reemplaza un BSS que ya opera corresponde a un proyecto de Digital BSS."
+    }
+   ],
+   "id": "each-brand-s-data-and-outages-stay-separate"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es una plataforma de facturación para MVNO?",
+       "a": "Una **plataforma de facturación para MVNO** tarifica el uso, aplica cargos a los saldos y factura a los suscriptores de un operador móvil virtual, que compra capacidad de red a un operador anfitrión."
+      },
+      {
+       "q": "¿Qué incluye BSS in a Box?",
+       "a": "Autogestión, CRM, facturación, tarificación en tiempo real y Mobile POS, en un paquete definido."
+      },
+      {
+       "q": "¿Puede conectarse a través de un MVNE?",
+       "a": "Sí. Se conecta a la red del operador anfitrión directamente o a través de un MVNE."
+      },
+      {
+       "q": "¿Planea un lanzamiento?",
+       "a": "Lea la guía: Cómo lanzar un MVNO →"
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de BSS in a Box",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala BSS in a Box en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, de modo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. BSS in a Box se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-bss-in-a-box"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ],
+      [
+       "Policy Control",
+       "control de políticas para planes de datos y VoLTE"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/online-charging/",
+      "/products/policy-control/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos sobre la marca que va a lanzar. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "39 · BSS in a Box",
+ "pagination": false,
+ "url": "/products/bss-in-a-box/",
+ "title": "BSS in a Box: plataforma de facturación para MVNO | Alepo",
+ "titleMarked": "BSS in a Box: **MVNO Billing Platform** | Alepo",
+ "desc": "BSS in a Box es una plataforma de facturación MVNO en una oferta: autogestión, CRM, facturación, tarificación y POS móvil, en despliegue propio.",
+ "descMarked": "BSS in a Box is an **MVNO billing platform** in one defined offer: self-care, CRM, billing, charging and mobile POS for a new brand, each on its own deployment.",
+ "primary": "mvno billing platform",
+ "secondary": "mvno billing, mvno bss",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "BSS in a Box"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "BSS in a Box para MVNO",
+  "lede": [
+   "Empiece a generar ingresos con un nuevo MVNO antes, sin pagar primero por un proyecto a medida. BSS in a Box es una **plataforma de facturación para MVNO** con autogestión, CRM, tarificación y POS móvil en una oferta definida, operativa desde el primer día."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/bss-in-a-box/"
+  ],
+  "subnavTargets": [
+   "what-the-mvno-billing-platform-includes",
+   "package-contents",
+   "installing-bss-in-a-box"
+  ]
+ },
+ "lang": "es"
+}

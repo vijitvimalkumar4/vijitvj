@@ -58,7 +58,7 @@
     var get = function (n) { var e = form.elements[n]; return e ? (e.value || '').trim() : ''; };
     var sel = form.elements.request;
     return {
-      fullname: get('fullname'), email: get('email'), company: get('company'),
+      fullname: get('fullname'), email: get('email'), company: get('company'), country: get('country'),
       request: get('request'), requestLabel: sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex].text : '',
       product: get('product'), operatorType: get('operatorType'), message: get('message'), website: get('website'),
       lang: get('lang'), page: location.href, title: document.title, consent: form.dataset.consentText,
@@ -99,7 +99,15 @@
   var demo = document.querySelector('form[data-form=demo]');
   if (q.get('form-error')) { var st = document.querySelector('form[data-form] [data-status]'); var fm = st && st.closest('form'); if (st) st.textContent = fm.dataset.msgError; }
   if (demo) {
-    if (q.get('product') && demo.elements.product) demo.elements.product.value = q.get('product');
+    var pq = (q.get('product') || '').replace(/[^a-z0-9-]/g, ''), ps = demo.elements.product;
+    if (pq && ps) {
+      // a product page the short list does not name (for example CRM): add it, named after the product page link that led here
+      if (ps.tagName === 'SELECT' && ![].some.call(ps.options, function (o) { return o.value === pq; })) {
+        var a = document.querySelector('header a.mt[href$="/products/' + pq + '/"]'), o = document.createElement('option');
+        o.value = pq; o.textContent = a ? a.querySelector('span:last-child > span').textContent : pq; ps.appendChild(o);
+      }
+      ps.value = pq;
+    }
     if (q.get('request') && demo.elements.request) demo.elements.request.value = q.get('request');
   }
 
@@ -366,4 +374,21 @@
   }
   window.__xSweepFn = sweep;
   if (!window.__xSweep) { window.__xSweep = true; var settle; window.addEventListener('scroll', function () { clearTimeout(settle); settle = setTimeout(function () { if (window.__xSweepFn) window.__xSweepFn(); }, 160); }, { passive: true }); }
+})();
+
+// ---- Blog and Library topic filters (copy deck): show the posts of one topic; on the blog, all pages' posts ----
+(function () {
+  var group = document.querySelector('[data-topics]'); if (!group) return;
+  var feed = document.querySelector('.c-feed'), status = document.querySelector('[data-topic-status]');
+  var btns = [].slice.call(group.querySelectorAll('[data-topic-btn]')); if (!feed || !btns.length) return;
+  function pick(k) {
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.topicBtn === k ? 'true' : 'false'); });
+    var n = 0;
+    [].forEach.call(feed.children, function (c) { var on = k === 'all' || c.dataset.topic === k; c.classList.toggle('is-match', on); if (on) n++; });
+    feed.classList.toggle('is-filtering', k !== 'all');
+    if (status) status.textContent = n + (document.documentElement.lang === 'es' ? ' resultados' : ' results');
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { pick(b.dataset.topicBtn); }); });
+  var q = new URLSearchParams(location.search).get('topic');
+  if (q && btns.some(function (b) { return b.dataset.topicBtn === q; })) pick(q);
 })();

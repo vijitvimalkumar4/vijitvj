@@ -1,0 +1,287 @@
+{
+ "source": "21-wifi-venues.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **carrier wifi**"
+ ],
+ "sections": [
+  {
+   "h2": "What captive portal software does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Automatic SIM login and calling over Wi-Fi for mobile subscribers. For venues, **captive portal software** with a branded login and paid passes."
+    },
+    {
+     "t": "p",
+     "text": "Mobile operators use Wi-Fi to cover the places radio does not reach, and venues use it as a service of their own, both on the access points already installed."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "For",
+       "Carrier Wi-Fi and public hotspots, for operators and venue providers"
+      ]
+     ],
+     "kind": "facts"
+    }
+   ],
+   "id": "what-captive-portal-software-does"
+  },
+  {
+   "h2": "Connected beyond radio coverage, by SIM",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Subscribers stay connected where radio coverage ends. They log on automatically with their SIM or eSIM, and calls continue over Wi-Fi."
+    },
+    {
+     "t": "product",
+     "text": "Wi-Fi Offload and Calling",
+     "href": "/products/wifi-offload-calling/"
+    }
+   ],
+   "id": "connected-beyond-radio-coverage-by-sim"
+  },
+  {
+   "h2": "Revenue from venue Wi-Fi",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your venue Wi-Fi earns after the free window, with a branded login page that sells paid passes."
+    },
+    {
+     "t": "product",
+     "text": "Wi-Fi Offload and Calling",
+     "href": "/products/wifi-offload-calling/"
+    }
+   ],
+   "id": "revenue-from-venue-wi-fi"
+  },
+  {
+   "h2": "No new access points to buy",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "No hardware is swapped. Hotspots run on the Meraki, Aruba, Ruckus and Cambium access points already installed."
+    },
+    {
+     "t": "p",
+     "text": "Products: Wi-Fi Offload and Calling · AAA Server"
+    }
+   ],
+   "id": "no-new-access-points-to-buy"
+  },
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) in the AAA console tells care agents and NOC engineers why a subscriber cannot connect, from live session data. The console assistant was built from a large fiber operator's top 18 support cases, and it is in beta."
+    },
+    {
+     "t": "p",
+     "text": "It is read-only and agents see only what their own permissions allow, so a person takes every action and the assistant never changes a setting on its own."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Where to start",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Wi-Fi Offload and Calling",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Offload, hotspots and Wi-Fi calling in one product."
+      },
+      {
+       "t": "p",
+       "text": "Lets mobile subscribers log on to Wi-Fi automatically and make calls over it. Venue hotspots get a branded login and paid passes."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/wifi-offload-calling/"
+      }
+     ],
+     "href": "/products/wifi-offload-calling/"
+    },
+    {
+     "t": "sub",
+     "h3": "AAA Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "The AAA server behind the Wi-Fi service, also used for fixed and mobile broadband."
+      },
+      {
+       "t": "p",
+       "text": "Decides who gets online and at what speed, so only paying customers use the network, at the tier they bought."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/aaa-server/"
+      }
+     ],
+     "href": "/products/aaa-server/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A Central American ISP launched nationwide public Wi-Fi under a government contract, on a ready-to-run, compliant platform."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "Central American ISP · Central America"
+      ],
+      [
+       "Result",
+       "1.3M users in the first three months"
+      ],
+      [
+       "Project",
+       "Public Wi-Fi"
+      ],
+      [
+       "Highlights",
+       "Full regulatory compliance · Cloud deployment"
+      ],
+      [
+       "Profile",
+       "Internet service provider. Wi-Fi Offload and Calling."
+      ],
+      [
+       "Profile",
+       "More Wi-Fi stories: MaxxSouth Broadband · ETB · Mauritius Telecom →"
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is captive portal software?",
+       "a": "**Captive portal software** shows a login or welcome page before a user gets Wi-Fi access. Venues use it for branded sign-in and terms acceptance, and to sell paid passes."
+      },
+      {
+       "q": "What is carrier Wi-Fi?",
+       "a": "**Carrier Wi-Fi** is Wi-Fi run by a telecom operator, where subscribers authenticate with their SIM and stay on the operator's service."
+      },
+      {
+       "q": "Do we need new access points?",
+       "a": "No. It runs on Meraki, Aruba, Ruckus and Cambium access points already in place."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "21 · Wi-Fi and Venues",
+ "pagination": false,
+ "url": "/solutions/wifi-venues/",
+ "title": "Captive Portal Software for Operators and Venues | Alepo",
+ "titleMarked": "**Captive Portal Software** for Operators and Venues | Alepo",
+ "desc": "Captive portal software and carrier Wi-Fi for operators and venues: automatic SIM login for mobile subscribers, plus branded login and paid passes for venues.",
+ "descMarked": "**Captive portal software** and **carrier Wi-Fi** for operators and venues: automatic SIM login for mobile subscribers, plus branded login and paid passes for venues.",
+ "primary": "captive portal software",
+ "hero": {
+  "crumbs": [
+   "Solutions",
+   "Wi-Fi and venues"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Captive portal and carrier Wi-Fi for venues and operators",
+  "lede": [
+   "Turn the Wi-Fi already on the wall into coverage and revenue. Mobile operators keep subscribers connected beyond radio coverage, and venues earn from paid passes on the access points they already run."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/wifi-venues/"
+  ]
+ }
+}

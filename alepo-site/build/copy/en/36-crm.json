@@ -1,0 +1,244 @@
+{
+ "source": "36-crm.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What a telecom CRM does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your care agents get one page per customer in Alepo CRM, with plans, billing, tickets and inventory together, and business processes are configurable steps with an assistant on the page."
+    },
+    {
+     "t": "p",
+     "text": "Legacy telecom CRMs are heavy. Agents hunt across tools for a customer's history, and every process change touches code. Alepo's **telecom CRM software** puts that history in one place."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Billing and charging, plus inventory. Self-care and Mobile POS. AI Agent Assist."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: CRM, **customer care software**, CSR console, agent desktop, customer management, order management, trouble ticketing"
+    }
+   ],
+   "id": "what-a-telecom-crm-does"
+  },
+  {
+   "h2": "Everything about a customer on one page",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Agents stop hunting across tools. Plans, billing, tickets and inventory sit on one customer page."
+    },
+    {
+     "t": "p",
+     "text": "The page connects to billing and charging systems and to inventory, as well as to self-care and Mobile POS."
+    }
+   ],
+   "id": "everything-about-a-customer-on-one-page"
+  },
+  {
+   "h2": "Fewer process changes waiting on developers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Process changes rarely wait for developers. Business processes are built as configurable steps."
+    },
+    {
+     "t": "p",
+     "text": "Most process changes are made in settings."
+    }
+   ],
+   "id": "fewer-process-changes-waiting-on-developers"
+  },
+  {
+   "h2": "Answers in English, French and Arabic",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "An assistant on the customer page answers from the live account, in English, French and Arabic."
+    },
+    {
+     "t": "p",
+     "text": "It explains a bill, a failure or a balance and suggests the next step."
+    }
+   ],
+   "id": "answers-in-english-french-and-arabic"
+  },
+  {
+   "h2": "AI in Alepo CRM",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) is docked on the customer page. It answers from the live account with 14 read-only tools, so agents get the answer without hunting across screens. It sees only what the signed-in agent is allowed to see."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-alepo-crm",
+   "tone": "dark"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is a telecom CRM?",
+       "a": "A **telecom CRM** manages subscriber accounts, orders, tickets and interactions for an operator, and connects to billing, charging and the network so agents see the full picture."
+      },
+      {
+       "q": "Can we change processes without code?",
+       "a": "Yes. Business processes are configurable steps, and most changes are made in settings."
+      },
+      {
+       "q": "Which languages does the AI assistant support?",
+       "a": "English, French and Arabic."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installation",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs the new CRM in containers, one standard way, from the same automated guide as every Alepo product."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short. It runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Selfcare Now",
+       "branded web self-care and onboarding"
+      ],
+      [
+       "Self-Care Mobile App",
+       "branded self-care app (beta)"
+      ],
+      [
+       "Mobile POS",
+       "customer sign-up and top-ups, plus bill payments, for dealers"
+      ]
+     ],
+     "hrefs": [
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/dealer-mobile-pos/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "36 · CRM and Customer Care",
+ "pagination": false,
+ "url": "/products/crm/",
+ "title": "Telecom CRM and Customer Care Software | Alepo",
+ "titleMarked": "**Telecom CRM** and **Customer Care Software** | Alepo",
+ "desc": "Alepo CRM is a telecom CRM that gives care agents one page per customer, with plans, billing, tickets and inventory together, and an AI assistant on the page.",
+ "descMarked": "Alepo CRM is a **telecom CRM** that gives care agents one page per customer, with plans, billing, tickets and inventory together, and an AI assistant on the page.",
+ "primary": "telecom crm",
+ "secondary": "telecom crm software, customer care software",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "Channels and care",
+   "Alepo CRM"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "**Telecom CRM** for customer care",
+  "lede": [
+   "Resolve calls faster, because care agents answer from one page per customer instead of hunting across tools, with an AI assistant beside them."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/crm/"
+  ],
+  "subnavTargets": [
+   "what-a-telecom-crm-does",
+   "everything-about-a-customer-on-one-page",
+   "ai-in-alepo-crm"
+  ]
+ }
+}

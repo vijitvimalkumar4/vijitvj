@@ -1,0 +1,207 @@
+{
+ "source": "47-customer-care-channels.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Productos",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Alepo CRM",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "Un espacio de trabajo de CRM para agentes de atención, con los planes, el uso, las facturas y los tickets de cada suscriptor en una sola pantalla, y AI Agent Assist a su lado."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Alepo CRM →",
+       "href": "/products/crm/"
+      }
+     ],
+     "href": "/products/crm/"
+    },
+    {
+     "t": "sub",
+     "h3": "Selfcare Now",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "Un **portal de autoservicio** con su marca donde los suscriptores se registran, pagan, cambian de plan y resuelven problemas por su cuenta."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Selfcare Now →",
+       "href": "/products/self-care-portal/"
+      }
+     ],
+     "href": "/products/self-care-portal/"
+    },
+    {
+     "t": "sub",
+     "h3": "Self-Care Mobile App",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "Una app **de marca blanca** para iOS y Android con su marca, conectada a los mismos datos de la cuenta."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Self-Care Mobile App →",
+       "href": "/products/self-care-app/"
+      }
+     ],
+     "href": "/products/self-care-app/"
+    },
+    {
+     "t": "sub",
+     "h3": "Mobile POS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Una app para distribuidores para registro, activación de SIM, recargas y pagos en campo."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Mobile POS →",
+       "href": "/products/dealer-mobile-pos/"
+      }
+     ],
+     "href": "/products/dealer-mobile-pos/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "Gestión de la experiencia del cliente, desde el primer contacto hasta la renovación",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Descubrir y comprar:** los suscriptores eligen y pagan planes en línea, en la app o con un distribuidor",
+      "**Usar y gestionar:** los saldos, el uso y las facturas se ven en todos los canales, en tiempo real",
+      "**Obtener ayuda:** el AI Customer Assistant responde primero. Un agente de atención toma el caso con el historial completo",
+      "**Permanecer:** las ofertas y renovaciones llegan al suscriptor indicado en el momento indicado"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "customer-experience-management-from-first-contact-to-renewal"
+  },
+  {
+   "h2": "Basado en sus datos del BSS en tiempo real",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Todos los canales leen los mismos datos de facturación y tarificación, y los mismos datos de red. Un plan cambiado en la app se refleja en el CRM de inmediato. Un pago realizado con un distribuidor actualiza el saldo en todas partes."
+    }
+   ],
+   "id": "built-on-your-live-bss-data"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la gestión de la experiencia del cliente en telecomunicaciones?",
+       "a": "Es la forma en que un operador gestiona cada interacción con un suscriptor, en atención, autoservicio, venta minorista y canales digitales, para que el servicio sea coherente y los problemas se resuelvan rápidamente."
+      },
+      {
+       "q": "¿Pueden los suscriptores ver nuestra marca en el portal y la app?",
+       "a": "Sí. Selfcare Now y su app (ambos en beta) llevan su marca, sus colores y su dominio."
+      },
+      {
+       "q": "¿Estos productos necesitan el BSS de Alepo?",
+       "a": "Funcionan mejor con él, y también se conectan a otros sistemas de facturación a través de API abiertas."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos cómo llegan a usted sus suscriptores hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "47 · Customer Care & Channels",
+ "pagination": false,
+ "url": "/products/customer-care-channels/",
+ "title": "Software de atención y autogestión para telecom | Alepo",
+ "titleMarked": "Telecom Customer Care and Self-Care Software | Alepo",
+ "desc": "Gestión de experiencia del cliente telecom: CRM para atención, portal y app de autoservicio con su marca, y Mobile POS para distribuidores, con IA.",
+ "descMarked": "**Customer experience management** for telecom: a CRM for care teams, a branded self-service portal and app, and mobile POS for dealers, with AI built in.",
+ "primary": "customer experience management telecom",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Productos",
+   "Atención al cliente y canales"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Atención al cliente y canales para telecomunicaciones",
+  "lede": [
+   "Gane y conserve suscriptores con una atención rápida y coherente en todos los canales. La **gestión de la experiencia del cliente** de Alepo ofrece a sus equipos de atención y distribuidores la misma vista en tiempo real de cada cuenta que ven los suscriptores, para que todos los canales cuenten la misma historia."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   null
+  ]
+ },
+ "lang": "es"
+}

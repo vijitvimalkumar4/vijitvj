@@ -1,0 +1,236 @@
+{
+ "source": "08-about.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Quiénes somos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Lo utilizan operadores de todos los tamaños, desde MVNO que preparan un lanzamiento hasta grupos tier-1 con millones de suscriptores en varios continentes."
+    },
+    {
+     "t": "p",
+     "text": "Desarrollamos software de telecomunicaciones desde hace más de dos décadas. La sede central está en Austin, Texas, con equipos en Denver, Ciudad de México, Río de Janeiro, Guayaquil, Mumbai y Mauricio."
+    }
+   ],
+   "id": "who-we-are"
+  },
+  {
+   "h2": "Cómo trabajamos",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Experiencia en telecomunicaciones",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Nuestro equipo ha pasado décadas en redes y facturación de operadores. Diseñamos para la integración con sistemas heredados y entornos multiproveedor, y para migraciones en redes en producción."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Estándares abiertos",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Nuestros productos funcionan con los equipos y sistemas que un operador ya tiene, mediante interfaces estándar."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Alianza a largo plazo",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Cada cliente tiene un gerente de éxito del cliente y soporte 24x7 atendido por ingenieros."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "how-we-work"
+  },
+  {
+   "h2": "Oficinas",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Norteamérica",
+       "Austin, Texas · Sede central. 1606 Headway Circle, Suite #9137, Austin, TX 78754"
+      ],
+      [
+       "Norteamérica",
+       "Denver, Colorado"
+      ],
+      [
+       "Latinoamérica",
+       "Mexico City, Mexico"
+      ],
+      [
+       "Latinoamérica",
+       "Rio de Janeiro, Brazil"
+      ],
+      [
+       "Latinoamérica",
+       "Guayaquil, Ecuador"
+      ],
+      [
+       "Asia-Pacífico",
+       "Mumbai, India"
+      ],
+      [
+       "África",
+       "Mauritius"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "kind": "offices"
+    }
+   ],
+   "id": "offices"
+  },
+  {
+   "h2": "Liderazgo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Catorce personas lideran **Alepo** en producto, entrega, ventas y soporte."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Conozca al equipo",
+       "href": "/company/leadership/"
+      }
+     ]
+    }
+   ],
+   "id": "leadership"
+  },
+  {
+   "h2": "Noticias y eventos",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Todas las noticias →",
+     "href": "/news/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "Un operador tier-1 de Indonesia elige Alepo AAA para reemplazar su plataforma heredada · Leer →"
+      ],
+      [
+       "Producto",
+       "Alepo lanza un TACACS+ Server de nivel operador para la administración segura de dispositivos de red · Leer →"
+      ],
+      [
+       "Cliente",
+       "Alepo y Nomios implementan una solución AAA avanzada para VodafoneZiggo · Leer →"
+      ],
+      [
+       "Evento",
+       "Africa Tech Festival · 17 al 19 de noviembre de 2026 · Ciudad del Cabo, Sudáfrica"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/news/tier-1-indonesia-operator-selects-alepo-aaa-broadband-transformation/",
+      "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+      "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/",
+      null
+     ],
+     "kind": "newsrows"
+    }
+   ],
+   "id": "news-and-events"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "08 · About Alepo",
+ "pagination": false,
+ "url": "/company/about/",
+ "title": "Acerca de Alepo Technologies",
+ "titleMarked": "About **Alepo Technologies**",
+ "desc": "Alepo Technologies crea software de control de acceso y BSS para proveedores de comunicaciones, con IA en ambos. Sede en Austin, Texas, desde 2004.",
+ "descMarked": "**Alepo Technologies** makes access control and BSS software for communication service providers, with AI built into both. Based in Austin, Texas, since 2004.",
+ "primary": "alepo technologies (brand; shared with Home)",
+ "hero": {
+  "crumbs": [
+   "Empresa",
+   "Acerca de Alepo"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Acerca de **Alepo**",
+  "lede": [
+   "**Alepo Technologies** desarrolla software que ayuda a los proveedores de servicios de comunicaciones a obtener más ingresos de sus redes con menos trabajo manual. Vendemos software de control de acceso y BSS, con IA integrada en ambos."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/about/"
+  ]
+ },
+ "lang": "es"
+}

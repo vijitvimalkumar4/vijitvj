@@ -1,0 +1,219 @@
+{
+ "source": "28-subscriber-data-management.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **home subscriber server**"
+ ],
+ "sections": [
+  {
+   "h2": "Una sola base de datos de suscriptores para ambos núcleos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus suscriptores de 4G y voz IMS permanecen en una sola base de datos, y una prueba de concepto la conecta con las funciones del núcleo 5G de otro proveedor, para que pueda planificar 5G en torno a los datos de suscriptores que ya tiene."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores y los fabricantes de equipos que migran a 5G necesitan que sus datos de suscriptores de 4G e IMS funcionen con las funciones 5G de otro proveedor. La **gestión de datos de suscriptores** de Alepo mantiene esos datos en un solo lugar. Ambos núcleos pueden usarlos."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "El núcleo de paquetes 4G e IMS. Las funciones del núcleo 5G de otro proveedor."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **servidor de suscriptores locales**, HLR/HSS, SDM, base de datos de suscriptores, IMS HSS"
+    }
+   ],
+   "id": "one-subscriber-database-for-both-cores"
+  },
+  {
+   "h2": "Agregue 5G sin reemplazar 4G",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su servidor de suscriptores 4G sigue en servicio cuando llega 5G, y los datos existentes de suscriptores de 4G e IMS permanecen donde están."
+    },
+    {
+     "t": "p",
+     "text": "El núcleo de paquetes 4G y el IMS siguen funcionando como antes."
+    }
+   ],
+   "id": "add-5g-without-replacing-4g"
+  },
+  {
+   "h2": "Interoperabilidad con 5G",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La interoperabilidad con las funciones 5G de un socio sigue la Release 17 de 3GPP. El núcleo 5G puede ser de otro proveedor."
+    },
+    {
+     "t": "p",
+     "text": "Es adecuado para operadores, MVNO y MVNE que operan su propio núcleo, para redes móviles privadas y para fabricantes de equipos."
+    }
+   ],
+   "id": "5g-interworking"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la gestión de datos de suscriptores en telecomunicaciones?",
+       "a": "La **gestión de datos de suscriptores** mantiene la identidad, las credenciales y el perfil de servicio de cada suscriptor móvil en una sola base de datos, para que la red central pueda autenticarlo y aplicar los servicios correctos."
+      },
+      {
+       "q": "¿Qué es un servidor de suscriptores locales?",
+       "a": "El **servidor de suscriptores locales (HSS)** es la base de datos maestra de suscriptores en las redes 4G e IMS. Autentica a los suscriptores y almacena sus perfiles de servicio, incluida la voz sobre LTE."
+      },
+      {
+       "q": "¿Tenemos que reemplazar nuestro HSS para lanzar 5G?",
+       "a": "No. Interopera con el núcleo 5G de otro proveedor según la Release 17 de 3GPP, en una prueba de concepto, por lo que los datos de 4G e IMS se quedan donde están."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Subscriber Data Management",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Subscriber Data Management en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve y no haya que actualizar nada más al mismo tiempo. Subscriber Data Management se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-subscriber-data-management"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "AAA RADIUS y Diameter para banda ancha y móvil"
+      ],
+      [
+       "Fulfilment Manager",
+       "activación y aprovisionamiento de servicios"
+      ],
+      [
+       "TACACS+ Server",
+       "administración de dispositivos y control de comandos"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "28 · Subscriber Data Management",
+ "pagination": false,
+ "url": "/products/subscriber-data-management/",
+ "title": "Subscriber Data Management (HSS) para 4G e IMS | Alepo",
+ "titleMarked": "**Subscriber Data Management (HSS)** for 4G and IMS | Alepo",
+ "desc": "Gestión de datos de suscriptores de Alepo: HSS para 4G y voz IMS, que interopera con el núcleo 5G de otro proveedor en una prueba de concepto.",
+ "descMarked": "Alepo **subscriber data management**: a **home subscriber server** for 4G and IMS voice, with interworking to another vendor's 5G core in a proof of concept.",
+ "primary": "subscriber data management",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Control de acceso",
+   "Subscriber Data Management"
+  ],
+  "eyebrow": null,
+  "badge": "Prueba de concepto",
+  "h1": "**Subscriber Data Management (HSS)**",
+  "lede": [
+   "Migre a 5G sin dar por perdida su inversión en 4G. Alepo SDM es una base de datos de suscriptores para 4G y voz IMS, y su conexión con el núcleo 5G de otro proveedor está en una prueba de concepto."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/subscriber-data-management/"
+  ],
+  "subnavTargets": [
+   "one-subscriber-database-for-both-cores",
+   "add-5g-without-replacing-4g",
+   "installing-subscriber-data-management"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,307 @@
+{
+ "source": "04-solutions.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "By operator",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Fiber and cable ISPs",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Authentication, activation and home-router management on the network side. Billing, collections and care on the business side."
+      },
+      {
+       "t": "more",
+       "text": "See ISP solutions →",
+       "href": "/solutions/fibre-cable-isps/"
+      }
+     ],
+     "href": "/solutions/fibre-cable-isps/"
+    },
+    {
+     "t": "sub",
+     "h3": "Mobile operators",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Real-time charging and policy, Wi-Fi where radio coverage ends, and one BSS for prepaid and postpaid."
+      },
+      {
+       "t": "more",
+       "text": "See mobile solutions →",
+       "href": "/solutions/mobile-operators/"
+      }
+     ],
+     "href": "/solutions/mobile-operators/"
+    },
+    {
+     "t": "sub",
+     "h3": "MVNOs and MVNEs",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "A defined launch package for a new brand. Real-time charging and settlement for an enabler that hosts several."
+      },
+      {
+       "t": "more",
+       "text": "See MVNO solutions →",
+       "href": "/solutions/mvnos-mvnes/"
+      }
+     ],
+     "href": "/solutions/mvnos-mvnes/"
+    },
+    {
+     "t": "sub",
+     "h3": "Wi-Fi and venues",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Automatic SIM login and calling over Wi-Fi for mobile subscribers. A branded login and paid passes for venues."
+      },
+      {
+       "t": "more",
+       "text": "See Wi-Fi solutions →",
+       "href": "/solutions/wifi-venues/"
+      }
+     ],
+     "href": "/solutions/wifi-venues/"
+    },
+    {
+     "t": "sub",
+     "h3": "Enterprise and government networks",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "One place that controls who logs into every network device, from core routers to firewalls, and records every command they run."
+      },
+      {
+       "t": "more",
+       "text": "See enterprise solutions →",
+       "href": "/solutions/enterprise-government-networks/"
+      }
+     ],
+     "href": "/solutions/enterprise-government-networks/"
+    }
+   ],
+   "id": "by-operator"
+  },
+  {
+   "h2": "By need",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "Replace an end-of-life AAA",
+       "AAA Server"
+      ],
+      [
+       "Modernize push-based provisioning",
+       "Fulfilment Manager"
+      ],
+      [
+       "Replace Cisco ACS",
+       "TACACS+ Server"
+      ],
+      [
+       "Launch an MVNO",
+       "BSS in a Box"
+      ],
+      [
+       "Offload mobile data to Wi-Fi",
+       "Wi-Fi Offload and Calling"
+      ],
+      [
+       "Stop revenue leakage",
+       "Mediation Studio"
+      ],
+      [
+       "Automate collections",
+       "Collections and Dunning"
+      ],
+      [
+       "Reduce contact center load",
+       "AI Customer Assistant"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/",
+      "/products/bss-in-a-box/",
+      "/products/wifi-offload-calling/",
+      "/products/mediation-revenue-assurance/",
+      "/products/collections-dunning/",
+      "/products/ai-virtual-agent/"
+     ],
+     "kind": "needs"
+    }
+   ],
+   "id": "by-need"
+  },
+  {
+   "h2": "Customers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Operators of every size run their access and revenue on Alepo."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "sub",
+     "h3": "STC · Saudi Arabia",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**3x** AAA performance and subscriber capacity"
+      },
+      {
+       "t": "p",
+       "text": "AAA upgrade"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "10x improvement in API response time",
+        "Zero downtime during data migration"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Tier-1 mobile network operator. AAA Server."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "Digicel · Caribbean",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**13** markets migrated with zero downtime"
+      },
+      {
+       "t": "p",
+       "text": "AAA consolidation"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "4x reduction in recurring costs in the first month",
+        "Central management across all markets"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Tier-1 communications service provider. AAA Server."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "Eswatini Mobile · Kingdom of Eswatini",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**109** days to migrate 235,000 subscribers"
+      },
+      {
+       "t": "p",
+       "text": "BSS migration"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Network disruptions eliminated",
+        "Digital self-care for customers"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Mobile operator. Digital BSS."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    }
+   ],
+   "id": "customers"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "04 · Solutions",
+ "pagination": false,
+ "url": "/solutions/",
+ "title": "Solutions for Telecom Operators and ISPs | Alepo",
+ "titleMarked": "**Solutions for Telecom Operators and ISPs** | Alepo",
+ "desc": "Alepo solutions for telecom operators and ISPs: fiber and cable, mobile, MVNOs and MVNEs, Wi-Fi and venues, and enterprise networks. Start with your network.",
+ "descMarked": "Alepo **solutions for telecom operators and ISPs**: fiber and cable, mobile, MVNOs and MVNEs, Wi-Fi and venues, and enterprise networks. Start with your network.",
+ "primary": "none (segment overview). Segment terms belong to each solution page.",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Solutions"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Solutions for telecom operators**",
+  "lede": [
+   "Every operator wants more revenue from its network and less manual work behind it. Start from the kind of network you run, or from the job in front of you."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/solutions/"
+  ]
+ }
+}

@@ -1,0 +1,377 @@
+{
+ "source": "18-fiber-cable-isps.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué cubre el software para ISP",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un proveedor de fibra o cable gestiona dos operaciones a la vez. Una es la red: líneas, OLT, inicios de sesión y routers domésticos. La otra es el negocio: planes, facturas, cobranza y atención."
+    },
+    {
+     "t": "p",
+     "text": "Con el **software para ISP** de Alepo, su red y su negocio funcionan como uno solo, mediante un **software de gestión para ISP** que abarca desde el alta hasta la suspensión. Un plan vendido en la mañana queda activo en la línea esa misma mañana, y un pago no realizado restringe la sesión hasta que un pago la restablece, sin visitas ni llamadas."
+    },
+    {
+     "t": "p",
+     "text": "Cada producto también funciona por sí solo. Muchos proveedores comienzan con uno, normalmente el servidor AAA o Fulfilment Manager, y agregan el resto con el tiempo."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Para",
+       "Proveedores de FTTH y cable, además de inalámbrico fijo"
+      ],
+      [
+       "Planes",
+       "Prepago y pospago"
+      ],
+      [
+       "Funciona con",
+       "Sus OLT y BNG, además de los routers domésticos. Su CRM y su facturación, o los de Alepo."
+      ]
+     ],
+     "kind": "facts"
+    }
+   ],
+   "id": "what-isp-software-covers"
+  },
+  {
+   "h2": "Cambios de plan sin reconexión",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un cliente que mejora su plan obtiene la nueva velocidad de inmediato, y un pago no realizado restringe la línea sin visitas. Alepo AAA aplica ambos cambios a la sesión que ya está en curso, por lo que nadie se reconecta."
+    },
+    {
+     "t": "product",
+     "text": "AAA Server",
+     "href": "/products/aaa-server/"
+    }
+   ],
+   "id": "plan-changes-without-a-reconnect"
+  },
+  {
+   "h2": "Día de facturación sin saturar sus OLT",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Las suspensiones y restablecimientos masivos después de cada ciclo de facturación ya no saturan la red. Fulfilment Manager los dosifica y confirma el resultado por cliente. La identificación automática de la OLT a la que está conectado cada suscriptor está en desarrollo."
+    },
+    {
+     "t": "product",
+     "text": "Fulfilment Manager",
+     "href": "/products/service-provisioning/"
+    }
+   ],
+   "id": "billing-day-without-flooding-your-olts"
+  },
+  {
+   "h2": "Quejas sobre routers resueltas sin visita técnica",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La gestión de routers domésticos está en beta."
+    },
+    {
+     "t": "p",
+     "text": "Su mesa de ayuda resuelve de forma remota las quejas sobre routers y Wi-Fi. Ve el router del suscriptor, revisa la señal y la configuración de Wi-Fi, y las corrige."
+    },
+    {
+     "t": "product",
+     "text": "Home Router and ONT Management",
+     "href": "/products/device-management/"
+    }
+   ],
+   "id": "router-complaints-fixed-without-a-truck-roll"
+  },
+  {
+   "h2": "Cobranza que funciona por sí sola",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los recordatorios, la restricción del servicio y el restablecimiento se ejecutan automáticamente para las facturas impagas, según las reglas que usted defina. El **software de facturación para ISP** y la cobranza comparten un mismo registro."
+    },
+    {
+     "t": "product",
+     "text": "Collections and Dunning",
+     "href": "/products/collections-dunning/"
+    }
+   ],
+   "id": "collections-that-run-on-their-own"
+  },
+  {
+   "h2": "Operaciones de red con IA",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta), en la consola de AAA, indica a los agentes de atención y a los ingenieros del NOC por qué un suscriptor no puede conectarse, a partir de los datos de sesiones activas. El asistente de la consola se creó a partir de los 18 casos de soporte más frecuentes de un gran operador de fibra, y está en beta."
+    },
+    {
+     "t": "p",
+     "text": "Es de solo lectura y los agentes ven únicamente lo que sus propios permisos permiten, de modo que una persona realiza cada acción y el asistente nunca cambia una configuración por su cuenta."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Por dónde empezar",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "AAA Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "El primer paso habitual. Reemplaza un AAA que llegó al fin de su vida útil o que se desarrolló internamente, e incluye la consola de operaciones."
+      },
+      {
+       "t": "p",
+       "text": "Decide quién se conecta y a qué velocidad, para que solo los clientes que pagan usen la red, en el nivel que contrataron."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/aaa-server/"
+      }
+     ],
+     "href": "/products/aaa-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "Fulfilment Manager",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Para proveedores que activan servicios enviando configuración a las OLT. Las órdenes se dosifican y se enrutan, y cada una se confirma."
+      },
+      {
+       "t": "p",
+       "text": "Ejecuta las órdenes de servicio en la red, de modo que cada activación, suspensión, restablecimiento y cambio de plan desde el CRM o la facturación llegue al elemento de red correcto y se confirme por cliente."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/service-provisioning/"
+      }
+     ],
+     "href": "/products/service-provisioning/"
+    },
+    {
+     "t": "sub",
+     "h3": "Digital BSS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Cuando la facturación, la cobranza y la atención deben avanzar juntas, en un solo sistema para fibra y banda ancha."
+      },
+      {
+       "t": "p",
+       "text": "Un sistema configurable para vender, tarificar, facturar, cobrar y atender a clientes de banda ancha móvil y fija, incluida la fibra."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/digital-bss/"
+      }
+     ],
+     "href": "/products/digital-bss/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Se suele agregar",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "TACACS+ Server",
+      "Wi-Fi Offload and Calling",
+      "Home Router and ONT Management",
+      "Policy Control",
+      "Prepaid Offers and Vouchers",
+      "Collections and Dunning",
+      "Mobile POS",
+      "Alepo CRM",
+      "Selfcare Now",
+      "Self-Care Mobile App",
+      "Interconnect and Roaming Settlement",
+      "Mediation Studio",
+      "AI Customer Assistant",
+      "AI Agent Assist"
+     ],
+     "hrefs": [
+      "/products/tacacs-server/",
+      "/products/wifi-offload-calling/",
+      "/products/device-management/",
+      "/products/policy-control/",
+      "/products/prepaid-offers-vouchers/",
+      "/products/collections-dunning/",
+      "/products/dealer-mobile-pos/",
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/mediation-revenue-assurance/",
+      "/products/ai-virtual-agent/",
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "often-added",
+   "role": "chips"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Wind Telecom duplicó su base de suscriptores con un AAA en la nube que siguió el ritmo del rápido crecimiento de FTTH sin trabajo manual."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "Wind Telecom · República Dominicana"
+      ],
+      [
+       "Resultado",
+       "2x la base de suscriptores en menos de dos años"
+      ],
+      [
+       "Proyecto",
+       "AAA en la nube"
+      ],
+      [
+       "Aspectos destacados",
+       "Migración sin tiempo de inactividad · Intervención manual eliminada mediante automatización"
+      ],
+      [
+       "Perfil",
+       "Proveedor de FTTH, VoIP e IPTV. AAA Server."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es el software para ISP?",
+       "a": "El **software para ISP** gestiona el acceso a la red y el negocio de un proveedor de internet: autenticación de suscriptores, activación de servicios, gestión de routers domésticos, facturación, cobranza y atención al cliente."
+      },
+      {
+       "q": "¿Qué hace el software de facturación para ISP?",
+       "a": "El **software de facturación para ISP** tarifica los planes, genera facturas, recibe pagos y restringe o restablece el servicio cuando las facturas quedan impagas."
+      },
+      {
+       "q": "¿Podemos comenzar con un solo producto?",
+       "a": "Sí. La mayoría de los proveedores comienza con el servidor AAA o Fulfilment Manager y agrega el resto con el tiempo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "18 · Fiber and Cable ISPs",
+ "pagination": false,
+ "url": "/solutions/fibre-cable-isps/",
+ "title": "Software para ISP de fibra y cable | Alepo",
+ "titleMarked": "**ISP Software** for Fiber and Cable Providers | Alepo",
+ "desc": "Software para ISP de fibra y cable: autenticación, activación, gestión de routers y software de facturación, cobranza y atención para ISP, conectados.",
+ "descMarked": "**ISP software** for fiber and cable providers: authentication, activation and home-router management, plus **ISP billing software**, collections and care, connected.",
+ "primary": "isp software",
+ "secondary": "isp billing software, isp management software",
+ "hero": {
+  "crumbs": [
+   "Soluciones",
+   "ISP de fibra y cable"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Software para ISP de fibra y cable",
+  "lede": [
+   "Genere ingresos con un nuevo plan desde la misma mañana en que se vende, y gaste menos en visitas técnicas y cobranza manual. Una sola plataforma cubre la red y el negocio, de modo que las cuentas impagas se restringen y se restablecen por sí solas, y la mesa de ayuda corrige los routers domésticos de forma remota."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/fibre-cable-isps/"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,232 @@
+{
+ "source": "33-collections-dunning.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **dunning telecom**"
+ ],
+ "sections": [
+  {
+   "h2": "What telecom collections software does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Collections and Dunning takes the chasing of unpaid bills off your team: reminders, late fees, barring and restoring service. Your policies can differ by segment."
+    },
+    {
+     "t": "p",
+     "text": "Postpaid operators still chase unpaid bills by hand, so reminders are inconsistent, barring and restoring service is manual, and collection policies can't differ by customer segment. **Telecom collections** software turns that into rules that run on their own."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Billing and payments. Fulfilment Manager and policy control, to bar and restore service in the network."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: dunning, credit control, collections management, debt management, credit management"
+    }
+   ],
+   "id": "what-telecom-collections-software-does"
+  },
+  {
+   "h2": "Barring and late fees without manual steps",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Barring and late fees are applied automatically for each account or invoice."
+    },
+    {
+     "t": "p",
+     "text": "Reminders go out on the schedule you set."
+    }
+   ],
+   "id": "barring-and-late-fees-without-manual-steps"
+  },
+  {
+   "h2": "Service back on payment",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Service is restored automatically on full payment. Nobody has to lift the bar by hand."
+    },
+    {
+     "t": "p",
+     "text": "Fulfilment Manager and policy control carry the change into the network."
+    }
+   ],
+   "id": "service-back-on-payment"
+  },
+  {
+   "h2": "Different rules for business and consumer accounts",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "You give each customer segment its own policy. A business account and a consumer line do not have to be treated alike."
+    },
+    {
+     "t": "p",
+     "text": "It is usually delivered inside Digital BSS."
+    }
+   ],
+   "id": "different-rules-for-business-and-consumer-accounts"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is dunning in telecom?",
+       "a": "**Dunning in telecom** is the step-by-step process of reminding customers about unpaid bills, then restricting and later restoring their service. Read: What is dunning management in telecom? →"
+      },
+      {
+       "q": "Is service restored automatically after payment?",
+       "a": "Yes. Full payment lifts the bar automatically through Fulfilment Manager and policy control."
+      },
+      {
+       "q": "Can business and consumer accounts follow different rules?",
+       "a": "Yes. Each customer segment can have its own reminder schedule, fees and barring policy."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Collections and Dunning",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Collections and Dunning in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Collections and Dunning runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-collections-and-dunning"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "BSS in a Box",
+       "launch package for new MVNOs"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "33 · Collections and Dunning",
+ "pagination": false,
+ "url": "/products/collections-dunning/",
+ "title": "Telecom Collections and Dunning Software | Alepo",
+ "titleMarked": "**Telecom Collections** and Dunning Software | Alepo",
+ "desc": "Alepo telecom collections software automates reminders, late fees, service barring and restoration for unpaid bills, with policies by customer segment.",
+ "descMarked": "Alepo **telecom collections** software automates reminders, late fees, service barring and restoration for unpaid bills, with policies by customer segment.",
+ "primary": "telecom collections",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Collections and Dunning"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Collections and Dunning for telecom",
+  "lede": [
+   "Collect more of what you're owed, with less effort. Reminders, barring and restoration run automatically for customers with unpaid bills."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/collections-dunning/"
+  ],
+  "subnavTargets": [
+   "what-telecom-collections-software-does",
+   "barring-and-late-fees-without-manual-steps",
+   "installing-collections-and-dunning"
+  ]
+ }
+}

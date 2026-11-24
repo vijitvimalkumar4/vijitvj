@@ -168,6 +168,58 @@ for (const lang of ['en', 'es']) {
     self: pre + '/contact-us/thank-you/', alt: { en: '/contact-us/thank-you/', es: '/es/contact-us/thank-you/' } } });
 }
 
+// ---------- the website copy deck (24 Nov 2026): page models made by copy/parse.py ----------
+const COPY = { en: {}, es: {} };
+for (const lang of ['en', 'es']) {
+  const dir = path.join(HERE, 'copy', lang);
+  if (!fs.existsSync(dir)) continue;
+  for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json') && f !== 'strings.json')) {
+    const m = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    COPY[lang][m.source.startsWith('02-') ? '_nav' : m.url] = m;
+  }
+}
+const plainCopy = t => String(t || '').replace(/\{\{link:[^|]*\|([^}]*)\}\}/g, '$1').replace(/\*\*/g, '').trim();
+const copyFor = (lang, enPath) => (COPY[lang] && COPY[lang][enPath]) || (lang === 'es' ? null : null);
+// the thank-you page is written inside 17 · Contact
+for (const lang of ['en', 'es']) {
+  const c = COPY[lang]['/contact-us/']; if (!c) continue;
+  const t = c.sections.find(s => s.role === 'thanks'); if (!t) continue;
+  const ps = t.blocks.filter(b => b.t === 'p');
+  COPY[lang]['/contact-us/thank-you/'] = { source: '17-contact-thanks', url: '/contact-us/thank-you/', sections: [],
+    hero: { crumbs: null, h1: plainCopy(ps[0].text).replace(/^H1:\s*/, ''), lede: ps.slice(1).map(b => b.text), buttons: [], subnav: [], extra: t.blocks.filter(b => b.t === 'more') } };
+}
+// every page and post the copy links to: dates, for the lists that show them; leadership photos by name
+const DATES = { news: {}, posts: {} };
+for (const x of JSON.parse(fs.readFileSync(path.join(HERE, 'news/items.json'), 'utf8'))) DATES.news[x.url] = x.date;
+for (const x of JSON.parse(fs.readFileSync(path.join(HERE, 'blog/posts.json'), 'utf8'))) DATES.posts[x.url] = x.date;
+const LEADERS = JSON.parse(fs.readFileSync(path.join(HERE, 'legal/leaders.json'), 'utf8'));
+const leaderPhoto = name => { const w = name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/\s+/); for (const k of [w.join('-'), w[0] + '-' + w[w.length - 1], w[0]]) if (LEADERS[k]) return '/assets/img/' + LEADERS[k]; return null; };
+
+// ---------- blog: the copy's titles for retitled posts, a topic per post, and crawlable pages of 24 ----------
+const POSTS_ALL = JSON.parse(fs.readFileSync(path.join(HERE, 'blog/posts.json'), 'utf8'));
+const BLOG_PER = 24;
+const TOPIC_RULES = [['tacacs', /TACACS/i], ['mvno', /\bMVN[OE]s?\b/i], ['wifi', /Wi-?Fi|hotspot|captive portal|offload/i],
+  ['prov', /provision|TR-?069|TR-?369|\bUSP\b|\bONTs?\b|router|\bCPE\b|device management|service activation/i],
+  ['charging', /charging|\bOCS\b|policy control|PCRF|\bPCF\b|prepaid|voucher|top-?up|rating/i],
+  ['bss', /\bBSS\b|billing|invoice|dunning|collections|settlement|\bCRM\b|self-care|revenue|mediation/i],
+  ['radius', /RADIUS|\bAAA\b|Diameter|authentication|\bHSS\b|subscriber data|\bEAP\b|802\.1X|\bNAS\b/i]];
+const CAT_TOPIC = { 'TACACS+': 'tacacs', 'WiFi Monetization': 'wifi', 'Converged Policy Control': 'charging', 'Business Support Systems': 'bss', 'Digital BSS': 'bss',
+  'AAA server': 'radius', 'Network Access Control': 'radius', 'RADIUS AAA Basics': 'radius', 'Subscriber Data Management': 'radius' };
+const topicOf = p => { for (const [k, rx] of TOPIC_RULES) if (rx.test(p.title)) return k; for (const c of p.categories || []) if (CAT_TOPIC[c]) return CAT_TOPIC[c]; return null; };
+const blogModel = COPY.en['/blog/'];
+const RETITLE = {};
+if (blogModel) for (const b of blogModel.sections.flatMap(s => s.blocks)) if (b.t === 'table' && b.kind === 'posts') b.rows.forEach((r, i) => { if (b.hrefs[i]) RETITLE[b.hrefs[i]] = plainCopy(r[1]); });
+const POSTS = POSTS_ALL.map(p => ({ ...p, title: RETITLE[p.url] || p.title, liveTitle: p.title, topic: topicOf(p) }));
+const BLOG_PAGES = Math.ceil(POSTS.length / BLOG_PER);
+for (const j of jobs.filter(j => j.file === 'blog.html' && !j.cfg.blogPage)) {
+  j.cfg.blogPage = 1;
+  for (let n = 2; n <= BLOG_PAGES; n++) {
+    const pre = j.lang === 'es' ? '/es' : '';
+    jobs.push({ file: 'blog.html', lang: j.lang, out: `${pre}/blog/page/${n}/`, cfg: { ...j.cfg, blogPage: n, paged: true,
+      self: `${pre}/blog/page/${n}/`, alt: { en: `/blog/page/${n}/`, es: `/es/blog/page/${n}/` } } });
+  }
+}
+
 // ---------- render ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
@@ -188,9 +240,10 @@ for (const j of jobs) {
   await page.addScriptTag({ path: path.join(HERE, 'uifixes.js') });
   await page.addScriptTag({ path: path.join(HERE, 'merge.js') });
   await page.addScriptTag({ path: path.join(HERE, 'polish.js') });
+  await page.addScriptTag({ path: path.join(HERE, 'copy', 'render.js') });
   // collected content from alepo.com (fetch_blog.py, fetch_resources.py)
   const data = f => { const p = path.join(HERE, f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : null; };
-  const blogPosts = j.file === 'blog.html' ? data('blog/posts.json') : null;
+  const blogPosts = j.file === 'blog.html' ? (j.cfg.blogPage > 1 ? POSTS.slice((j.cfg.blogPage - 1) * BLOG_PER, j.cfg.blogPage * BLOG_PER) : POSTS) : null;
   // every page: post dates and photos for "Latest posts" lists, the newest news item, leadership photos, legal text
   const blogIndex = Object.fromEntries((data('blog/posts.json') || []).map(p => [p.url, { date: p.date, image: p.image, w: p.w, h: p.h }]));
   const latestNews = (data('news/items.json') || []).filter(x => !/\bSE 14\b/.test(x.title))[0] || null;
@@ -205,10 +258,30 @@ for (const j of jobs) {
     edits: PKG.edits.filter(e => !e.files || (pkgKey && e.files.includes(pkgKey)) || e.files.includes('_header') || e.files.includes('_footer')),
     drops: PKG.drops.filter(d => d.g === 'datasheets' || (pkgKey && (!d.files || d.files.includes(pkgKey)))), prod: PKG.prod, groups: PKG.groups, spanish: PKG.spanish, qaHead: PKG.qaHead, guides: PKG.guides, guideHead: PKG.guideHead } : null;
   // team package: data sheets withdrawn until Sandeep Patel approves new versions; SE 14 held (multitenant claim)
-  const WITHDRAWN = ['AAA Server Datasheet', 'Subscriber Data Management Datasheet', 'Converged Policy Control Datasheet', 'WiFi Monetization Datasheet'];
-  const libraryItems = j.file === 'library.html' ? (data('library/items.json') || []).filter(x => !WITHDRAWN.includes(x.title)) : null;
+  const LIB_NEW_NAME = { 'Converged Policy Control Datasheet': 'Policy Control Datasheet', 'WiFi Monetization Datasheet': 'Wi-Fi Offload and Calling Datasheet' };
+  const libOrder = (COPY.en['/library/'] || { sections: [] }).sections.flatMap(s => s.blocks).filter(b => b.kind === 'library').flatMap(b => b.hrefs || []);
+  const libTitle = Object.fromEntries((COPY.en['/library/'] || { sections: [] }).sections.flatMap(s => s.blocks).filter(b => b.kind === 'library').flatMap(b => b.rows.map((r, i) => [b.hrefs[i], plainCopy(r[1]).replace(/\s*\(was .*\)$/, '')])));
+  const libraryItems = j.file === 'library.html' ? (data('library/items.json') || []).map(x => ({ ...x, title: libTitle[x.url] || LIB_NEW_NAME[x.title] || x.title }))
+    .sort((a, b) => (libOrder.includes(a.url) ? libOrder.indexOf(a.url) : 999) - (libOrder.includes(b.url) ? libOrder.indexOf(b.url) : 999)) : null;
   const newsItems = j.file === 'news.html' ? (data('news/items.json') || []).filter(x => !/\bSE 14\b/.test(x.title)) : null;
-  let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge });
+  // the copy deck replaces the page's words; the team package merge is no longer applied (the copy deck supersedes it)
+  const enPath = ((j.cfg.self || '').replace(/^\/es(?=\/)/, '') || (j.out || '').replace(/^\/es(?=\/)/, '')).replace(/^\/blog\/page\/\d+\/$/, '/blog/');
+  const model = COPY[j.lang][enPath] || null;
+  const nav = COPY[j.lang]._nav || COPY.en._nav || null;
+  if (model) {
+    if (model.title) j.cfg.title = plainCopy(model.title);
+    if (j.cfg.blogPage > 1) j.cfg.title = j.cfg.title.replace(/\s*\|\s*Alepo$/, '') + (j.lang === 'es' ? ` Página ${j.cfg.blogPage}` : ` Page ${j.cfg.blogPage}`) + ' | Alepo';
+    if (model.desc) j.cfg.meta = plainCopy(model.desc);
+    if (j.cfg.blogPage > 1) j.cfg.meta = (j.lang === 'es' ? `Página ${j.cfg.blogPage} de ${BLOG_PAGES}. ` : `Page ${j.cfg.blogPage} of ${BLOG_PAGES}. `) + j.cfg.meta.replace(/:.*$/, '.');
+    if (model.hero && model.hero.h1) j.cfg.h1 = plainCopy(model.hero.h1);
+  }
+  const home = COPY[j.lang]['/'] || COPY.en['/'];
+  const newsTable = home && home.sections.flatMap(s => s.blocks).find(b => b.t === 'table' && b.kind === 'newsrows');
+  const topNews = newsTable ? { title: plainCopy(newsTable.rows[0][1]).replace(/\s*·\s*(Read|Leer)\s*→$/, ''), href: newsTable.hrefs[0] } : null;
+  const leadersData = model && model.sections ? Object.fromEntries(model.sections.flatMap(s => s.blocks).filter(b => b.kind === 'people').flatMap(b => b.rows.map(r => [plainCopy(r[0]), leaderPhoto(plainCopy(r[0]))]))) : {};
+  const blog = j.file === 'blog.html' ? { page: j.cfg.blogPage, pages: BLOG_PAGES, per: BLOG_PER, topics: Object.fromEntries(POSTS.map(p => [p.url, p.topic])) } : null;
+  const copy = (model || nav) ? { page: model, nav, topNews, blog, data: { news: DATES.news, posts: DATES.posts, leaders: leadersData } } : null;
+  let html = await page.evaluate(c => window.__alepo(c), { ...shared, ...j.cfg, blogPosts, libraryItems, newsItems, blogIndex, latestNews, leaders, legalHtml, merge: copy ? null : merge, copy });
   const mr = html.match(/ data-merge="([^"]*)"/);
   if (mr) { const r = JSON.parse(mr[1].replace(/&quot;/g, '"')); for (const k in r) mergeTotals[k] = (mergeTotals[k] || 0) + r[k]; html = html.replace(mr[0], ''); }
   await page.close();
@@ -223,7 +296,7 @@ server.close();
 console.log('team package merged:', JSON.stringify(mergeTotals));
 
 // ---------- sitemap.xml, robots.txt, redirects, llms.txt ----------
-const indexable = jobs.filter(j => j.cfg.alt && !j.cfg.noindex && j.lang === 'en');
+const indexable = jobs.filter(j => j.cfg.alt && !j.cfg.noindex && !j.cfg.paged && j.lang === 'en');
 const sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'];
 for (const j of indexable) for (const loc of [j.cfg.alt.en, j.cfg.alt.es]) {
   sm.push(`  <url><loc>${ORIGIN}${loc}</loc><lastmod>${TODAY}</lastmod>` +
@@ -233,6 +306,10 @@ for (const j of indexable) for (const loc of [j.cfg.alt.en, j.cfg.alt.es]) {
 }
 sm.push('</urlset>');
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), sm.join('\n') + '\n');
+// security.txt, as the Security page (11 · Security) says it is published (RFC 9116); renew "Expires" within a year
+fs.mkdirSync(path.join(OUT, '.well-known'), { recursive: true });
+const secExp = new Date(Date.now() + 360 * 864e5).toISOString().replace(/\.\d+Z$/, 'Z');
+fs.writeFileSync(path.join(OUT, '.well-known', 'security.txt'), `Contact: mailto:security@alepo.com\nExpires: ${secExp}\nPreferred-Languages: en, es\nCanonical: ${ORIGIN}/.well-known/security.txt\nPolicy: ${ORIGIN}/company/security/#vulnerability-disclosure\n`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);
 fs.copyFileSync(path.join(HERE, 'redirects.csv'), path.join(OUT, 'redirects.csv'));
 const red = fs.readFileSync(path.join(HERE, 'redirects.csv'), 'utf8').trim().split('\n').slice(1).map(l => l.split(','))

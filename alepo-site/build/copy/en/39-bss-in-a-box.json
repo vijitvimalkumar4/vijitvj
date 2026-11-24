@@ -1,0 +1,236 @@
+{
+ "source": "39-bss-in-a-box.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What the MVNO billing platform includes",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "BSS in a Box packages Digital BSS for a new MVNO launch: self-care, CRM, billing, charging and mobile POS in one defined offer. Each brand runs on its own deployment."
+    },
+    {
+     "t": "p",
+     "text": "A new MVNO needs billing, charging, self-care and a CRM from day one. A custom BSS project is slow to scope for a brand that has not launched yet, and a platform with a fixed scope removes that wait."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "The host operator's network or an MVNE. Payment gateways."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: **MVNO BSS**, MVNO in a box, launch package"
+    }
+   ],
+   "id": "what-the-mvno-billing-platform-includes"
+  },
+  {
+   "h2": "Package contents",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Self-care, CRM, billing, charging and mobile POS come in one package. A new brand has what it needs from day one."
+    },
+    {
+     "t": "p",
+     "text": "It connects to the host operator's network or to an MVNE, and to payment gateways."
+    }
+   ],
+   "id": "package-contents"
+  },
+  {
+   "h2": "No custom project before launch",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "The scope is defined in advance. There is no custom BSS project to specify before the brand exists."
+    },
+    {
+     "t": "p",
+     "text": "Prepaid, postpaid and hybrid plans are covered."
+    }
+   ],
+   "id": "no-custom-project-before-launch"
+  },
+  {
+   "h2": "Each brand's data and outages stay separate",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Each of your brands runs on its own deployment. Data, upgrades and outages stay separate."
+    },
+    {
+     "t": "p",
+     "text": "An operator replacing a BSS it already runs is a Digital BSS project."
+    }
+   ],
+   "id": "each-brand-s-data-and-outages-stay-separate"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is an MVNO billing platform?",
+       "a": "An **MVNO billing platform** rates usage, charges balances and bills subscribers for a mobile virtual network operator, which buys network capacity from a host operator."
+      },
+      {
+       "q": "What does BSS in a Box include?",
+       "a": "Self-care, CRM, billing, real-time charging and mobile POS, in one defined package."
+      },
+      {
+       "q": "Can it connect through an MVNE?",
+       "a": "Yes. It connects to the host operator's network directly or through an MVNE."
+      },
+      {
+       "q": "Planning a launch?",
+       "a": "Read the guide: How to launch an MVNO →"
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing BSS in a Box",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs BSS in a Box in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. BSS in a Box runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-bss-in-a-box"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ],
+      [
+       "Policy Control",
+       "policy control for data plans and VoLTE"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/online-charging/",
+      "/products/policy-control/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us about the brand you're launching. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "39 · BSS in a Box",
+ "pagination": false,
+ "url": "/products/bss-in-a-box/",
+ "title": "BSS in a Box: MVNO Billing Platform | Alepo",
+ "titleMarked": "BSS in a Box: **MVNO Billing Platform** | Alepo",
+ "desc": "BSS in a Box is an MVNO billing platform in one defined offer: self-care, CRM, billing, charging and mobile POS for a new brand, each on its own deployment.",
+ "descMarked": "BSS in a Box is an **MVNO billing platform** in one defined offer: self-care, CRM, billing, charging and mobile POS for a new brand, each on its own deployment.",
+ "primary": "mvno billing platform",
+ "secondary": "mvno billing, mvno bss",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "BSS in a Box"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "BSS in a Box for MVNOs",
+  "lede": [
+   "Start earning from a new MVNO sooner, without paying for a custom project first. BSS in a Box is an **MVNO billing platform** with self-care, CRM, charging and mobile POS in one defined offer, working from day one."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/bss-in-a-box/"
+  ],
+  "subnavTargets": [
+   "what-the-mvno-billing-platform-includes",
+   "package-contents",
+   "installing-bss-in-a-box"
+  ]
+ }
+}

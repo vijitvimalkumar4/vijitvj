@@ -1,0 +1,192 @@
+{
+ "source": "14-resources.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Explorar",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Blog",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Guías de telecomunicaciones** para quienes operan redes de operadores."
+      },
+      {
+       "t": "more",
+       "text": "Abrir →",
+       "href": "/blog/"
+      }
+     ],
+     "href": "/blog/"
+    },
+    {
+     "t": "sub",
+     "h3": "Biblioteca",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Fichas técnicas**, casos de éxito y **documentos técnicos**."
+      },
+      {
+       "t": "more",
+       "text": "Abrir →",
+       "href": "/library/"
+      }
+     ],
+     "href": "/library/"
+    },
+    {
+     "t": "sub",
+     "h3": "Casos de éxito",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Lo que los operadores lograron con Alepo."
+      },
+      {
+       "t": "more",
+       "text": "Abrir →",
+       "href": "/customers/"
+      }
+     ],
+     "href": "/customers/"
+    },
+    {
+     "t": "sub",
+     "h3": "Noticias y eventos",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Anuncios y dónde encontrarnos."
+      },
+      {
+       "t": "more",
+       "text": "Abrir →",
+       "href": "/news/"
+      }
+     ],
+     "href": "/news/"
+    }
+   ],
+   "id": "browse"
+  },
+  {
+   "h2": "Últimas publicaciones",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Todas las publicaciones →",
+     "href": "/blog/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Blog",
+       "Autenticación de dos factores RADIUS para el personal del operador y servicios empresariales"
+      ],
+      [
+       "Blog",
+       "Proxy RADIUS explicado"
+      ],
+      [
+       "Blog",
+       "Puertos RADIUS explicados: 1812, 1813, 1645, 1646 y 3799 (UDP vs. TCP)"
+      ],
+      [
+       "Blog",
+       "Autenticación RADIUS por MAC para CPE, ONT y decodificadores"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/blog/radius-mfa-two-factor-authentication/",
+      "https://alepo.com/blog/radius-proxy-explained/",
+      "https://alepo.com/blog/radius-ports-explained/",
+      "https://alepo.com/blog/radius-mac-authentication/"
+     ],
+     "kind": "posts"
+    }
+   ],
+   "id": "latest-posts"
+  },
+  {
+   "h2": "Guías",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Cómo lanzar un MVNO: guía paso a paso →",
+     "href": "https://alepo.com/blog/how-to-launch-mvno-in-30-days/"
+    }
+   ],
+   "id": "guides"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "14 · Resources",
+ "pagination": false,
+ "url": "/resources/",
+ "title": "Recursos de software de telecomunicaciones | Alepo",
+ "titleMarked": "**Telecom Software Resources** | Alepo",
+ "desc": "Recursos de software telecom de Alepo: guías para equipos de red y BSS, fichas y documentos técnicos, casos de éxito y noticias de la empresa.",
+ "descMarked": "**Telecom software resources** from Alepo: guides for network and BSS teams, product datasheets and white papers, customer case studies and company news.",
+ "primary": "none",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Recursos"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Recursos",
+  "lede": [
+   "Guías, fichas técnicas, casos de éxito y noticias de Alepo."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/resources/"
+  ]
+ },
+ "lang": "es"
+}

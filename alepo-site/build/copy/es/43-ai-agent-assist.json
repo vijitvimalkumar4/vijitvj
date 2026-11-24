@@ -1,0 +1,207 @@
+{
+ "source": "43-ai-agent-assist.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace la asistencia con IA para agentes",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**Asistencia con IA para agentes** dentro de las consolas de atención y de red. Responde las preguntas del personal con datos en tiempo real. Las facturas y las fallas vienen con una explicación y un siguiente paso sugerido."
+    },
+    {
+     "t": "p",
+     "text": "Los agentes y los ingenieros buscan una respuesta en muchas pantallas y documentos, el personal nuevo tarda meses en ponerse al día y la respuesta correcta depende de unos pocos expertos. La **asistencia para agentes** pone esa experiencia al lado de cada agente e ingeniero."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Las consolas de Alepo CRM, AAA y TACACS+. Su propio modelo de lenguaje, si lo prefiere."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **asistencia para agentes**, copiloto de IA, operaciones de red con IA, asistente de NOC, asistente de conocimiento"
+    }
+   ],
+   "id": "what-ai-agent-assist-does"
+  },
+  {
+   "h2": "El personal nuevo responde como un experto",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su personal obtiene respuestas a partir de datos de la consola en tiempo real, dentro de sus propios permisos."
+    },
+    {
+     "t": "p",
+     "text": "El personal nuevo llega a la respuesta que daría un experto. Los expertos reciben menos interrupciones."
+    }
+   ],
+   "id": "new-staff-answer-like-an-expert"
+  },
+  {
+   "h2": "Acceso de solo lectura",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist es de solo lectura. En la consola de TACACS+, sus recomendaciones son solo borradores."
+    },
+    {
+     "t": "p",
+     "text": "Una persona realiza cada cambio."
+    }
+   ],
+   "id": "read-only-access"
+  },
+  {
+   "h2": "Una capacitación que se transfiere",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un solo asistente funciona en las consolas de CRM, AAA y TACACS+, así que la capacitación se transfiere de una a otra."
+    },
+    {
+     "t": "p",
+     "text": "Puede funcionar con su propio modelo de lenguaje, si así lo prefiere."
+    }
+   ],
+   "id": "training-that-carries-over"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la asistencia con IA para agentes?",
+       "a": "La **asistencia con IA para agentes** es un asistente que se ubica junto a un agente de atención o un ingeniero, responde sus preguntas con datos en tiempo real y sugiere el siguiente paso, mientras la persona mantiene el control."
+      },
+      {
+       "q": "¿Puede cambiar algo por sí solo?",
+       "a": "No. AI Agent Assist es de solo lectura. En la consola de TACACS+, las recomendaciones son solo borradores."
+      },
+      {
+       "q": "¿Ayuda a los ingenieros del NOC además de a los agentes de atención?",
+       "a": "Sí. El mismo asistente funciona en el CRM para los equipos de atención y en las consolas de AAA y TACACS+ para el trabajo de **NOC con IA**."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Dónde funciona",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist está integrado en tres consolas y está en beta en cada una de ellas. Solo lee datos de las consolas de Alepo. En la consola de TACACS+ explica quién tuvo permiso para hacer qué, con recomendaciones que son solo borradores. En la nueva página de cliente del CRM usa 14 herramientas de solo lectura, en inglés y francés además de árabe, para que un agente pueda responder una pregunta de facturación sin salir de la página. La versión para la consola de AAA se creó a partir de los 18 casos de soporte principales de un gran operador de fibra. También puede ejecutarse en el propio modelo de lenguaje del operador, con límites de rendimiento acordados previamente."
+    }
+   ],
+   "id": "where-it-runs"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "AI Customer Assistant: agente virtual para web y app"
+     ],
+     "hrefs": [
+      "/products/ai-virtual-agent/"
+     ]
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "43 · AI Agent Assist (AI Agent Assist)",
+ "pagination": false,
+ "url": "/products/ai-agent-assist/",
+ "title": "AI Agent Assist para atención y NOC en telecom | Alepo",
+ "titleMarked": "**AI Agent Assist** for Telecom Care and **NOC** Teams | Alepo",
+ "desc": "AI Agent Assist es asistencia con IA en sus consolas de atención y de red: responde al personal con datos en vivo y sugiere el siguiente paso.",
+ "descMarked": "AI Agent Assist is **AI agent assist** inside your care and network consoles: it answers staff questions from live data and suggests the next step.",
+ "primary": "ai agent assist",
+ "secondary": "ai noc, agent assist",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "IA",
+   "AI Agent Assist"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "**AI Agent Assist** para equipos de atención y **NOC**",
+  "lede": [
+   "Haga que el personal nuevo sea productivo antes y deje de enviar cada pregunta difícil a los mismos pocos expertos. AI Agent Assist responde con datos en tiempo real dentro de sus consolas de atención y de red, y sugiere el siguiente paso."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/ai-for-telecom/",
+   "/products/ai-agent-assist/"
+  ],
+  "subnavTargets": [
+   "what-ai-agent-assist-does",
+   "new-staff-answer-like-an-expert",
+   "what-ai-agent-assist-does"
+  ]
+ },
+ "lang": "es"
+}

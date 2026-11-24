@@ -1,0 +1,333 @@
+{
+ "source": "19-mobile-operators.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "One BSS for prepaid and postpaid",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Charging and policy in real time, Wi-Fi where radio coverage ends, and one **BSS for mobile operators** that handles prepaid and postpaid."
+    },
+    {
+     "t": "p",
+     "text": "You can take Alepo from the core to the customer, or one product at a time, beside other vendors' cores and the systems you already run."
+    },
+    {
+     "t": "p",
+     "text": "For: Mobile operators with prepaid or postpaid subscribers, or both"
+    }
+   ],
+   "id": "one-bss-for-prepaid-and-postpaid"
+  },
+  {
+   "h2": "New bundles without a release",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Marketing launches bundles without a code release. Data plans are built in the Policy Control portal, and bundles change in Online Charging by configuration."
+    },
+    {
+     "t": "p",
+     "text": "Products: Policy Control · Online Charging"
+    }
+   ],
+   "id": "new-bundles-without-a-release"
+  },
+  {
+   "h2": "Subscribers stay connected where radio ends",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Where radio coverage ends, subscribers move to Wi-Fi automatically with their SIM. Data and calls continue on the same AAA and the same usage record."
+    },
+    {
+     "t": "product",
+     "text": "Wi-Fi Offload and Calling",
+     "href": "/products/wifi-offload-calling/"
+    }
+   ],
+   "id": "subscribers-stay-connected-where-radio-ends"
+  },
+  {
+   "h2": "No usage record lost before the bill run",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every usage record is accounted for before the bill run. Mediation Studio keeps a balancing ledger per file, showing what the network sent and what billing received. Duplicates and gaps are found before the bill run."
+    },
+    {
+     "t": "product",
+     "text": "Mediation Studio",
+     "href": "/products/mediation-revenue-assurance/"
+    }
+   ],
+   "id": "no-usage-record-lost-before-the-bill-run"
+  },
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) answers care agents' questions about bills and connections from live data. The AI Customer Assistant answers subscribers on web and app around the clock. It completes account tasks through the BSS inside the signed-in customer's own account, and hands complex cases to people."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Where to start",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Online Charging",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "For prepaid-heavy operators that need bundles changed by configuration."
+      },
+      {
+       "t": "p",
+       "text": "Charges every call, message and megabyte against the customer's balance in real time. New bundles launch without a code release."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/online-charging/"
+      }
+     ],
+     "href": "/products/online-charging/"
+    },
+    {
+     "t": "sub",
+     "h3": "Policy Control",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "When policy from the core vendor makes every new plan a project."
+      },
+      {
+       "t": "p",
+       "text": "Sell data plans by speed, app, time or cap and enforce them in the network in real time, without lock-in to the core vendor."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/policy-control/"
+      }
+     ],
+     "href": "/products/policy-control/"
+    },
+    {
+     "t": "sub",
+     "h3": "Digital BSS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "One system for prepaid and postpaid, taken a module at a time."
+      },
+      {
+       "t": "p",
+       "text": "One configurable system to sell, charge, bill, collect and serve customers across mobile and fixed broadband, including fiber."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/digital-bss/"
+      }
+     ],
+     "href": "/products/digital-bss/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Often added",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "AAA Server",
+      "Fulfilment Manager",
+      "TACACS+ Server",
+      "Wi-Fi Offload and Calling",
+      "Subscriber Data Management",
+      "Prepaid Offers and Vouchers",
+      "Collections and Dunning",
+      "Partner and MVNO Settlement",
+      "Mobile POS",
+      "Alepo CRM",
+      "Selfcare Now",
+      "Self-Care Mobile App",
+      "Interconnect and Roaming Settlement",
+      "Mediation Studio",
+      "AI Customer Assistant",
+      "AI Agent Assist"
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/",
+      "/products/wifi-offload-calling/",
+      "/products/subscriber-data-management/",
+      "/products/prepaid-offers-vouchers/",
+      "/products/collections-dunning/",
+      "/products/partner-mvno-settlement/",
+      "/products/dealer-mobile-pos/",
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/mediation-revenue-assurance/",
+      "/products/ai-virtual-agent/",
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "often-added",
+   "role": "chips"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Eswatini Mobile left a legacy BSS behind and ended the disruptions that were hurting customer satisfaction as its subscriber base grew."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "Eswatini Mobile · Kingdom of Eswatini"
+      ],
+      [
+       "Result",
+       "109 days to migrate 235,000 subscribers"
+      ],
+      [
+       "Project",
+       "BSS migration"
+      ],
+      [
+       "Highlights",
+       "Network disruptions eliminated · Digital self-care for customers"
+      ],
+      [
+       "Profile",
+       "Mobile operator. Digital BSS."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Can one BSS handle prepaid and postpaid?",
+       "a": "Yes. Digital BSS and Online Charging run **prepaid, postpaid** and hybrid plans on one system."
+      },
+      {
+       "q": "Does it work with our existing core network?",
+       "a": "Yes. Each product runs beside other vendors' cores over standard interfaces such as Diameter."
+      },
+      {
+       "q": "Can we replace our BSS in stages?",
+       "a": "Yes. Digital BSS is modular, so you can take it one module at a time."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "19 · Mobile Operators",
+ "pagination": false,
+ "url": "/solutions/mobile-operators/",
+ "title": "BSS and Charging Software for Mobile Operators | Alepo",
+ "titleMarked": "**BSS and Charging Software for Mobile Operators** | Alepo",
+ "desc": "BSS and charging software for mobile operators: real-time charging and policy, Wi-Fi where radio coverage ends, and one BSS for prepaid and postpaid.",
+ "descMarked": "**BSS and charging software for mobile operators**: real-time charging and policy, Wi-Fi where radio coverage ends, and one BSS for prepaid and postpaid.",
+ "primary": "BSS for mobile operators (long-tail; prepaid and postpaid queries)",
+ "hero": {
+  "crumbs": [
+   "Solutions",
+   "Mobile operators"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Software for mobile operators**",
+  "lede": [
+   "Get new bundles to market sooner, and keep earning where radio coverage ends. Launch a bundle without a code release, move subscribers to Wi-Fi with their SIM, and run prepaid and postpaid on one BSS."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/mobile-operators/"
+  ]
+ }
+}

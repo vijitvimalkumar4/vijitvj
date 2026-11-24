@@ -1,0 +1,206 @@
+{
+ "source": "43-ai-agent-assist.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What AI agent assist does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**AI agent assist** inside the care and network consoles. It answers staff questions from live data. Bills and failures come with an explanation and a suggested next step."
+    },
+    {
+     "t": "p",
+     "text": "Agents and engineers search many screens and documents for an answer, new staff take months to ramp up, and the right answer depends on a few experts. **Agent assist** puts that expertise beside every agent and engineer."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "The Alepo CRM, AAA and TACACS+ consoles. Your own language model, if you prefer."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: **agent assist**, AI copilot, AI network operations, NOC assistant, knowledge assistant"
+    }
+   ],
+   "id": "what-ai-agent-assist-does"
+  },
+  {
+   "h2": "New staff answer like an expert",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your staff get answers from live console data, within their own permissions."
+    },
+    {
+     "t": "p",
+     "text": "New staff reach the answer an expert would give. Experts are interrupted less."
+    }
+   ],
+   "id": "new-staff-answer-like-an-expert"
+  },
+  {
+   "h2": "Read-only access",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist is read-only. In the TACACS+ console, its recommendations are drafts only."
+    },
+    {
+     "t": "p",
+     "text": "A person makes every change."
+    }
+   ],
+   "id": "read-only-access"
+  },
+  {
+   "h2": "Training that carries over",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "One assistant works across the CRM, AAA and TACACS+ consoles, so training carries over."
+    },
+    {
+     "t": "p",
+     "text": "It can run on your own language model, if you prefer."
+    }
+   ],
+   "id": "training-that-carries-over"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is AI agent assist?",
+       "a": "**AI agent assist** is an assistant that sits beside a care agent or engineer, answers their questions from live data and suggests the next step, while the person stays in control."
+      },
+      {
+       "q": "Can it change anything on its own?",
+       "a": "No. AI Agent Assist is read-only. In the TACACS+ console, recommendations are drafts only."
+      },
+      {
+       "q": "Does it help NOC engineers as well as care agents?",
+       "a": "Yes. The same assistant works in the CRM for care teams and in the AAA and TACACS+ consoles for **AI NOC** work."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Where it runs",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist is built into three consoles, and it is in beta in each of them. It reads Alepo console data only. In the TACACS+ console it explains who was allowed to do what, with draft-only recommendations. On the new CRM customer page it uses 14 read-only tools, in English and French as well as Arabic, so an agent can answer a billing question without leaving the page. The AAA console version was built from a large fiber operator's top 18 support cases. It can also run on the operator's own language model, with performance boundaries agreed first."
+    }
+   ],
+   "id": "where-it-runs"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "AI Customer Assistant: virtual agent for web and app"
+     ],
+     "hrefs": [
+      "/products/ai-virtual-agent/"
+     ]
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "43 · AI Agent Assist (AI Agent Assist)",
+ "pagination": false,
+ "url": "/products/ai-agent-assist/",
+ "title": "AI Agent Assist for Telecom Care and NOC Teams | Alepo",
+ "titleMarked": "**AI Agent Assist** for Telecom Care and **NOC** Teams | Alepo",
+ "desc": "AI Agent Assist is AI agent assist inside your care and network consoles: it answers staff questions from live data and suggests the next step.",
+ "descMarked": "AI Agent Assist is **AI agent assist** inside your care and network consoles: it answers staff questions from live data and suggests the next step.",
+ "primary": "ai agent assist",
+ "secondary": "ai noc, agent assist",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "AI",
+   "AI Agent Assist"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "**AI Agent Assist** for care and **NOC** teams",
+  "lede": [
+   "Get new staff productive sooner, and stop routing every hard question to the same few experts. AI Agent Assist answers from live data inside your care and network consoles and suggests the next step."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/ai-for-telecom/",
+   "/products/ai-agent-assist/"
+  ],
+  "subnavTargets": [
+   "what-ai-agent-assist-does",
+   "new-staff-answer-like-an-expert",
+   "what-ai-agent-assist-does"
+  ]
+ }
+}

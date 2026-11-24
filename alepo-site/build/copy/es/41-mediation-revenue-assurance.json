@@ -1,0 +1,243 @@
+{
+ "source": "41-mediation-revenue-assurance.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Primary keywords: **telecom mediation**, **telecom revenue assurance**"
+ ],
+ "sections": [
+  {
+   "h2": "Qué abarca la mediación de telecomunicaciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mediation Studio está en desarrollo y disponible para pedido. Se encarga de la mediación de telecomunicaciones: recopila y depura cada registro de uso de la red antes de la facturación, y un registro de conciliación por archivo muestra lo que envió la red y lo que recibió la facturación."
+    },
+    {
+     "t": "p",
+     "text": "Los ingresos se fugan cuando los registros de uso se pierden, se duplican o se quedan atascados. Las facturas en disputa no tienen evidencia por archivo. Cada nueva fuente de datos se convierte en un proyecto de servicios. Mediation Studio reúne la mediación de telecomunicaciones y el aseguramiento de ingresos en un solo producto, para que cada registro de la red pueda rastrearse hasta la factura."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Conmutadores, el núcleo de paquetes, AAA y otras fuentes de red. Facturación, liquidación y el almacén de datos, aguas abajo."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: mediación, mediación de facturación, mediación de CDR, mediación de xDR, Mediator, recopilación de datos de uso"
+    }
+   ],
+   "id": "what-telecom-mediation-covers"
+  },
+  {
+   "h2": "Duplicados detectados antes de la facturación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Se detectan los registros duplicados. Los registros fallidos se reparan y se vuelven a enviar."
+    },
+    {
+     "t": "p",
+     "text": "Un hueco o un duplicado en una secuencia de archivos se detecta antes de la facturación."
+    }
+   ],
+   "id": "duplicates-caught-before-billing"
+  },
+  {
+   "h2": "Evidencia para cada factura en disputa",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuando se disputa una factura, la evidencia está lista. Un registro de conciliación por archivo muestra lo que envió la red y lo que recibió la facturación."
+    },
+    {
+     "t": "p",
+     "text": "Su equipo de facturación responde la disputa a partir del propio archivo."
+    }
+   ],
+   "id": "evidence-for-every-disputed-bill"
+  },
+  {
+   "h2": "Enmascaramiento de datos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los datos personales se enmascaran en la entrega."
+    },
+    {
+     "t": "p",
+     "text": "Las fuentes incluyen conmutadores, el núcleo de paquetes y AAA. La facturación, la liquidación y el almacén de datos reciben la salida."
+    }
+   ],
+   "id": "data-masking"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué hace Mediation Studio?",
+       "a": "Recopila y depura cada registro de uso de la red antes de la facturación."
+      },
+      {
+       "q": "¿Cómo demostramos que no se perdió nada?",
+       "a": "Un registro de conciliación por archivo muestra lo que envió la red y lo que recibió la facturación. Cada factura en disputa tiene evidencia que la respalda."
+      },
+      {
+       "q": "¿Qué ocurre con los registros duplicados o fallidos?",
+       "a": "Los duplicados se detectan y se descartan. Los registros fallidos se reparan y se vuelven a enviar."
+      },
+      {
+       "q": "¿Qué es la mediación en telecomunicaciones?",
+       "a": "La **mediación en telecomunicaciones** recopila registros de uso de los elementos de red, los convierte a un formato único y los envía a facturación, liquidación y analítica."
+      },
+      {
+       "q": "¿Qué es el aseguramiento de ingresos en telecomunicaciones?",
+       "a": "El **aseguramiento de ingresos en telecomunicaciones** verifica que cada evento facturable se capture y se tarifique, y luego se facture correctamente, para que no se pierdan ingresos entre la red y la factura. Lea: ¿Qué causa la fuga de ingresos en telecomunicaciones? →"
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Mediation Studio",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mediation Studio se está desarrollando para que su equipo lo instale como cualquier producto de Alepo: en contenedores, de una única forma estándar, con la misma guía automatizada. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, de modo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Mediation Studio se ejecutará en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-mediation-studio"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ],
+      [
+       "Collections and Dunning",
+       "recordatorios automatizados, con bloqueo y restablecimiento vinculados al pago"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/online-charging/",
+      "/products/collections-dunning/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "41 · Mediation and Revenue Assurance",
+ "pagination": false,
+ "url": "/products/mediation-revenue-assurance/",
+ "title": "Mediación telecom y aseguramiento de ingresos | Alepo",
+ "titleMarked": "**Telecom Mediation and Revenue Assurance** | Alepo",
+ "desc": "Mediation Studio: mediación telecom y aseguramiento de ingresos que recopila y depura cada registro de uso y prueba que nada se pierde al facturar.",
+ "descMarked": "Mediation Studio is a **telecom mediation** and **revenue assurance** product that collects and cleans every usage record and proves nothing was lost before billing.",
+ "secondary": "revenue assurance, mediation in telecom",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Mediation Studio"
+  ],
+  "eyebrow": null,
+  "badge": "En desarrollo · disponible para pedido",
+  "h1": "**Mediación de telecomunicaciones y aseguramiento de ingresos**",
+  "lede": [
+   "Facture cada minuto y cada megabyte que transporta su red, y responda a las disputas de facturación con evidencia. Mediation Studio depura cada registro de uso antes de la facturación y demuestra que nada se perdió ni se contó dos veces."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación",
+   "Preguntas"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/mediation-revenue-assurance/"
+  ],
+  "subnavTargets": [
+   "what-telecom-mediation-covers",
+   "duplicates-caught-before-billing",
+   "installing-mediation-studio",
+   "common-questions"
+  ]
+ },
+ "lang": "es"
+}

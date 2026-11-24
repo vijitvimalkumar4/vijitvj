@@ -1,0 +1,232 @@
+{
+ "source": "35-dealer-mobile-pos.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace un POS para telecomunicaciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mobile POS lleva el alta de clientes, las recargas y el pago de facturas al teléfono de un distribuidor o agente de campo. Cada venta queda registrada en el CRM y la facturación."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores que venden a través de tiendas, distribuidores y agentes puerta a puerta pierden pedidos por los formularios en papel y las altas largas, y no pueden seguir las ventas y los pagos de los distribuidores en un solo lugar. Un **POS para telecomunicaciones** en el propio teléfono del distribuidor resuelve ambas cosas."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Alepo CRM y facturación, además de inventario. Recargas y canje de vouchers."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: mPOS, app para distribuidores, app para agentes, app de ventas de campo, app para minoristas, punto de venta"
+    }
+   ],
+   "id": "what-a-telecom-pos-does"
+  },
+  {
+   "h2": "Un solo registro para cada venta de distribuidor",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada venta de un distribuidor crea un solo registro en el CRM, la facturación y el inventario."
+    },
+    {
+     "t": "p",
+     "text": "Las ventas y los pagos por distribuidor se siguen en un solo lugar."
+    }
+   ],
+   "id": "one-record-for-every-dealer-sale"
+  },
+  {
+   "h2": "Ofertas vendidas en el punto de venta",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus distribuidores ven las promociones vigentes en el punto de venta. Recargan a un cliente con una oferta o canjean un voucher en nombre del cliente."
+    },
+    {
+     "t": "p",
+     "text": "El alta se realiza en el momento, sin formularios en papel."
+    }
+   ],
+   "id": "offers-sold-at-the-point-of-sale"
+  },
+  {
+   "h2": "Inicio de sesión de distribuidores",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los distribuidores inician sesión con el mismo inicio de sesión único que el resto de la plataforma, con sus propios roles."
+    },
+    {
+     "t": "p",
+     "text": "Atiende a tiendas y redes de distribuidores, además de agentes puerta a puerta."
+    }
+   ],
+   "id": "dealer-sign-on"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué hace una app para distribuidores de telecomunicaciones?",
+       "a": "Permite a los distribuidores y agentes de campo dar de alta a clientes, vender recargas y vouchers y recibir pagos de facturas en un teléfono, con cada venta registrada en los sistemas del operador."
+      },
+      {
+       "q": "¿Podemos seguir las ventas por distribuidor?",
+       "a": "Sí. Las ventas y los pagos por distribuidor se siguen en un solo lugar, en el CRM, la facturación y el inventario."
+      },
+      {
+       "q": "¿Cómo inician sesión los distribuidores?",
+       "a": "Mediante el mismo inicio de sesión único que el resto de la plataforma de Alepo, con roles para cada distribuidor."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Mobile POS",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Mobile POS en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, por lo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Mobile POS se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-mobile-pos"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Alepo CRM",
+       "espacio de trabajo de atención al cliente con IA"
+      ],
+      [
+       "Selfcare Now",
+       "autogestión web e incorporación con su marca"
+      ],
+      [
+       "Self-Care Mobile App",
+       "app de autogestión con su marca (beta)"
+      ]
+     ],
+     "hrefs": [
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "35 · Dealer App and Mobile POS",
+ "pagination": false,
+ "url": "/products/dealer-mobile-pos/",
+ "title": "App para distribuidores y Mobile POS para telecom | Alepo",
+ "titleMarked": "Telecom Dealer App and Mobile POS | Alepo",
+ "desc": "Alepo Mobile POS es un POS y app para distribuidores telecom: altas, recargas y pagos de facturas en el teléfono, con cada venta en CRM y facturación.",
+ "descMarked": "Alepo Mobile POS is a **telecom POS** and dealer app that puts customer sign-up, top-ups and bill payments on a dealer's phone, with every sale in CRM and billing.",
+ "primary": "telecom pos (long-tail)",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Canales y atención",
+   "Mobile POS"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "App para distribuidores de telecomunicaciones y Mobile POS",
+  "lede": [
+   "Dé de alta a clientes dondequiera que estén sus distribuidores y agentes de campo, y vea cada venta en el momento en que ocurre. Como **POS para telecomunicaciones**, Mobile POS lleva el alta, las recargas y el pago de facturas a su teléfono, con cada venta registrada en el CRM y la facturación."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/dealer-mobile-pos/"
+  ],
+  "subnavTargets": [
+   "what-a-telecom-pos-does",
+   "one-record-for-every-dealer-sale",
+   "installing-mobile-pos"
+  ]
+ },
+ "lang": "es"
+}

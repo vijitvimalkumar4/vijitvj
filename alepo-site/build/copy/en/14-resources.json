@@ -1,0 +1,191 @@
+{
+ "source": "14-resources.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Browse",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Blog",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Telecom guides** for people who run operator networks."
+      },
+      {
+       "t": "more",
+       "text": "Open →",
+       "href": "/blog/"
+      }
+     ],
+     "href": "/blog/"
+    },
+    {
+     "t": "sub",
+     "h3": "Library",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Datasheets**, case studies and **white papers**."
+      },
+      {
+       "t": "more",
+       "text": "Open →",
+       "href": "/library/"
+      }
+     ],
+     "href": "/library/"
+    },
+    {
+     "t": "sub",
+     "h3": "Case studies",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "What operators achieved with Alepo."
+      },
+      {
+       "t": "more",
+       "text": "Open →",
+       "href": "/customers/"
+      }
+     ],
+     "href": "/customers/"
+    },
+    {
+     "t": "sub",
+     "h3": "News and events",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Announcements and where to meet us."
+      },
+      {
+       "t": "more",
+       "text": "Open →",
+       "href": "/news/"
+      }
+     ],
+     "href": "/news/"
+    }
+   ],
+   "id": "browse"
+  },
+  {
+   "h2": "Latest posts",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "All posts →",
+     "href": "/blog/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "Blog",
+       "RADIUS Two-Factor Authentication for Operator Staff and Enterprise Services"
+      ],
+      [
+       "Blog",
+       "RADIUS Proxy Explained"
+      ],
+      [
+       "Blog",
+       "RADIUS Ports Explained: 1812, 1813, 1645, 1646 and 3799 (UDP vs TCP)"
+      ],
+      [
+       "Blog",
+       "RADIUS MAC Authentication for CPE, ONTs and Set-Top Boxes"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/blog/radius-mfa-two-factor-authentication/",
+      "https://alepo.com/blog/radius-proxy-explained/",
+      "https://alepo.com/blog/radius-ports-explained/",
+      "https://alepo.com/blog/radius-mac-authentication/"
+     ],
+     "kind": "posts"
+    }
+   ],
+   "id": "latest-posts"
+  },
+  {
+   "h2": "Guides",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "How to launch an MVNO: a step-by-step guide →",
+     "href": "https://alepo.com/blog/how-to-launch-mvno-in-30-days/"
+    }
+   ],
+   "id": "guides"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "14 · Resources",
+ "pagination": false,
+ "url": "/resources/",
+ "title": "Telecom Software Resources | Alepo",
+ "titleMarked": "**Telecom Software Resources** | Alepo",
+ "desc": "Telecom software resources from Alepo: guides for network and BSS teams, product datasheets and white papers, customer case studies and company news.",
+ "descMarked": "**Telecom software resources** from Alepo: guides for network and BSS teams, product datasheets and white papers, customer case studies and company news.",
+ "primary": "none",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Resources"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Resources",
+  "lede": [
+   "Guides, datasheets, case studies and news from Alepo."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/resources/"
+  ]
+ }
+}

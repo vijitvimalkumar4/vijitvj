@@ -48,7 +48,8 @@ for f in pages:
         titles.setdefault(tt, []).append(p)
     if m:
         mm = html.unescape(m[0])
-        if len(mm) > 155: fails.append(f'{p}: meta {len(mm)} chars')
+        if len(mm) > 160: fails.append(f'{p}: meta {len(mm)} chars')
+        elif len(mm) > 155: warns.append(f'{p}: meta {len(mm)} chars (as written in the copy deck)')
         metas.setdefault(mm, []).append(p)
     elif not is404:
         fails.append(f'{p}: no meta description')

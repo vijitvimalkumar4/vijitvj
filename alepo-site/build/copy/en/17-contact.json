@@ -1,0 +1,191 @@
+{
+ "source": "17-contact.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Form",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Request a demo",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Name",
+        "Work email",
+        "Company",
+        "Country\n| Type | Title |\n| --- | --- |\n| I want to: Request a demo | Talk to sales · Submit an RFP · Become a partner |\n| Product of interest: AAA Server | TACACS+ Server · Digital BSS · BSS in a Box · Online Charging · AI · Other |",
+        "What do you run today?"
+       ],
+       "hrefs": [
+        null,
+        null,
+        "/company/about/",
+        null,
+        null
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Consent: By sending this form you agree that Alepo may contact you about your request. See our Privacy policy."
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Send request",
+         "href": null
+        }
+       ]
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "form",
+   "role": "form"
+  },
+  {
+   "h2": "Customer support",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "For customers with a support agreement."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "United States",
+       "+1 737 313 3952"
+      ],
+      [
+       "India",
+       "+91 22 6108 5013"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null
+     ],
+     "kind": "phones"
+    }
+   ],
+   "id": "customer-support"
+  },
+  {
+   "h2": "Offices",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "Austin, Texas",
+       "Headquarters. 1606 Headway Circle, Suite #9137, Austin, TX 78754"
+      ],
+      [
+       "Denver, Colorado",
+       "North America"
+      ],
+      [
+       "Mexico City, Mexico",
+       "Latin America"
+      ],
+      [
+       "Rio de Janeiro, Brazil",
+       "Latin America"
+      ],
+      [
+       "Guayaquil, Ecuador",
+       "Latin America"
+      ],
+      [
+       "Mumbai, India",
+       "Asia Pacific"
+      ],
+      [
+       "Mauritius",
+       "Africa"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "kind": "offices"
+    }
+   ],
+   "id": "offices"
+  },
+  {
+   "h2": "Thank-you page (T4, noindex)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "H1: Thank you"
+    },
+    {
+     "t": "p",
+     "text": "We've received your request. Someone from our team will reply within one business day."
+    },
+    {
+     "t": "more",
+     "text": "While you wait, download the product datasheet →",
+     "href": "/library/"
+    }
+   ],
+   "id": "thank-you-page-t4-noindex",
+   "role": "thanks"
+  }
+ ],
+ "doc": "17 · Contact",
+ "pagination": false,
+ "url": "/contact-us/",
+ "title": "Contact Sales and Support | Alepo",
+ "titleMarked": "**Contact Sales and Support** | **Alepo**",
+ "desc": "Contact Alepo to request a demo, talk to sales, submit an RFP or reach 24x7 customer support. Offices in North America, Latin America, Asia Pacific and Africa.",
+ "descMarked": "**Contact Alepo** to request a demo, talk to sales, submit an RFP or reach 24x7 customer support. Offices in North America, Latin America, Asia Pacific and Africa.",
+ "primary": "brand (contact alepo)",
+ "hero": {
+  "crumbs": [
+   "Company",
+   "Contact"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Contact Alepo**",
+  "lede": [
+   "Ask for a demo, talk to sales, send an RFP or reach support."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/contact-us/"
+  ]
+ }
+}

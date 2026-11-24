@@ -1,0 +1,346 @@
+{
+ "source": "23-aaa-server.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Lo que le cuesta un servidor AAA obsoleto",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un **servidor AAA** que llegó al fin de su vida útil o que se desarrolló internamente convierte cada cambio de plan en una reconexión y cada falla de conexión en un ticket para uno de unos pocos expertos. También limita el crecimiento de suscriptores."
+    },
+    {
+     "t": "p",
+     "text": "Cada sesión de suscriptor en su red pasa por Alepo AAA, un **servidor AAA RADIUS** que verifica quién se conecta y define lo que puede hacer la sesión, y luego registra el uso para la facturación."
+    },
+    {
+     "t": "p",
+     "text": "Un solo servidor gestiona **RADIUS y Diameter** con una única base de datos de suscriptores para acceso fijo y móvil, incluido Wi-Fi, y los cambios de facturación llegan a las sesiones en tiempo real."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Protocolos",
+       "RADIUS y Diameter"
+      ],
+      [
+       "Redes",
+       "Fibra, cable, inalámbrico fijo, Wi-Fi y móvil"
+      ],
+      [
+       "Funciona con",
+       "BNG y BRAS, controladoras Wi-Fi y el núcleo de paquetes móvil. CRM y facturación."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **servidor RADIUS**, Diameter AAA, 3GPP AAA, AAA de banda ancha, autenticación de suscriptores, servidor de políticas de acceso"
+    }
+   ],
+   "id": "what-an-old-aaa-server-costs-you"
+  },
+  {
+   "h2": "Las mejoras de plan funcionan desde el momento de la venta",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un cliente que compra una mejora de velocidad la recibe en la sesión en la que ya está, sin reconectarse y sin llamar a la mesa de ayuda. El router no se reinicia."
+    },
+    {
+     "t": "p",
+     "text": "Las restricciones por falta de pago funcionan de la misma manera, y el pago restablece la velocidad completa por sí solo. El volumen y el tiempo prepago se contabilizan mientras la sesión está en curso, y cuando una cuota se agota, la sesión se ralentiza, se redirige a una página de recarga o se detiene, según lo indique el plan."
+    },
+    {
+     "t": "p",
+     "text": "El cambio viaja mediante RADIUS Change of Authorization desde facturación hasta la sesión activa."
+    }
+   ],
+   "id": "upgrades-work-the-moment-they-re-sold"
+  },
+  {
+   "h2": "Atención al cliente resuelve las llamadas de conexión sin escalarlas",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un agente de atención ve por qué se rechazó un inicio de sesión y actualiza la sesión desde la misma pantalla. Las llamadas de conexión dejan de quedar en espera de un ingeniero de red."
+    },
+    {
+     "t": "p",
+     "text": "Las sesiones activas y su historial están en una sola consola, con búsqueda por suscriptor. El NOC trabaja desde la misma vista, de modo que los equipos de atención y de red ven los mismos datos."
+    }
+   ],
+   "id": "care-answers-connection-calls-without-escalating"
+  },
+  {
+   "h2": "RADIUS y Diameter en un solo servidor",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los suscriptores de fibra, cable, inalámbrico fijo, Wi-Fi y móvil siguen un mismo conjunto de políticas en una sola base de datos. Un plan nuevo se crea una vez y funciona en todas las redes que usted opera."
+    },
+    {
+     "t": "p",
+     "text": "Las funciones de banda ancha fija vienen incluidas: inicio de sesión IPoE, identificación basada en VLAN y DHCP Option 82. Las interfaces REST y SOAP conectan su CRM y su plataforma de facturación, además del aprovisionamiento, ya sean de Alepo o propios."
+    }
+   ],
+   "id": "radius-and-diameter-on-one-server"
+  },
+  {
+   "h2": "Reemplace su AAA y conserve los sistemas que lo rodean",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus integraciones de CRM, facturación y red se quedan donde están. El tráfico en producción se migra solo después de superar las pruebas de aceptación con sus propios elementos de red."
+    },
+    {
+     "t": "p",
+     "text": "Los ingenieros de Alepo comienzan revisando sus políticas e integraciones actuales, y acuerdan el plan del cambio definitivo con su equipo antes de mover cualquier dato de suscriptores o tráfico en producción. Los ingenieros de GTAC dan soporte durante el cambio definitivo. Después, permanecen de guardia 24x7."
+    }
+   ],
+   "id": "replace-your-aaa-keep-the-systems-around-it"
+  },
+  {
+   "h2": "IA en AAA Server",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) está integrado en la consola de operaciones de AAA. Los agentes de atención y los ingenieros del NOC preguntan por qué un suscriptor no puede conectarse y obtienen el motivo a partir de los datos de sesión en tiempo real. Es de solo lectura, por lo que una persona realiza cada acción; el asistente de la consola se construyó a partir de los 18 casos de soporte más frecuentes de un gran operador de fibra, y se muestra en demos como un paso beta."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-aaa-server",
+   "tone": "dark"
+  },
+  {
+   "h2": "Instalación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Alepo AAA en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve. Se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "STC triplicó el rendimiento de AAA y la capacidad de suscriptores con Alepo AAA, sin tiempo de inactividad durante la migración de datos."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "STC · Arabia Saudita"
+      ],
+      [
+       "Resultado",
+       "3x en rendimiento de AAA y capacidad de suscriptores"
+      ],
+      [
+       "Proyecto",
+       "Actualización de AAA"
+      ],
+      [
+       "Aspectos destacados",
+       "Mejora de 10x en el tiempo de respuesta de la API · Cero tiempo de inactividad durante la migración de datos"
+      ],
+      [
+       "Perfil",
+       "Operador de red móvil tier-1. AAA Server."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Recursos",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Todos los recursos →",
+     "href": "/resources/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Ficha técnica",
+       "Ficha técnica de AAA Server"
+      ],
+      [
+       "Caso de éxito",
+       "Wind Telecom duplica su base de suscriptores con Alepo AAA Server"
+      ],
+      [
+       "Blog",
+       "Proxy RADIUS explicado"
+      ]
+     ],
+     "hrefs": [
+      "https://cdn.alepo.com/uploads/2025/09/Datasheet-AAA-Server.pdf",
+      "https://alepo.com/library/wind-telecom-doubles-subscriber-base-with-alepo-aaa-server/",
+      "https://alepo.com/blog/radius-proxy-explained/"
+     ],
+     "kind": "resources"
+    }
+   ],
+   "id": "resources"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué hace un servidor AAA?",
+       "a": "Autentica a cada suscriptor, decide qué puede hacer la sesión y registra el uso. Alepo AAA lo hace para redes de fibra, cable, inalámbricas fijas, Wi-Fi y móviles."
+      },
+      {
+       "q": "¿Puede reemplazar un AAA que llegó al fin de su vida útil o que fue desarrollado internamente?",
+       "a": "Sí. Los ingenieros de Alepo revisan sus políticas e integraciones actuales, migran los datos de suscriptores y realizan pruebas con su propia red antes del cambio definitivo. Las integraciones de CRM, facturación y red se mantienen."
+      },
+      {
+       "q": "¿Puede aplicarse un cambio de plan sin que el cliente se reconecte?",
+       "a": "Sí. Las mejoras de plan, los aumentos de velocidad y las restricciones por falta de pago llegan a la sesión activa mediante RADIUS Change of Authorization. El cliente no se reconecta."
+      },
+      {
+       "q": "¿Con qué equipos de red funciona?",
+       "a": "Alepo AAA utiliza **autenticación RADIUS** y el **protocolo Diameter** estándar, por lo que funciona con BNG y BRAS, controladoras Wi-Fi y núcleos de paquetes móviles de muchos proveedores."
+      },
+      {
+       "q": "¿Cómo se implementa?",
+       "a": "Sobre Kubernetes en su entorno, a partir de una instalación estándar en contenedores, con soporte 24x7 de GTAC. AAA 14 ya se ejecuta sobre Kubernetes en producción."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Traiga su configuración actual de AAA y el próximo plan que quiera lanzar. Le mostraremos cómo funcionaría el cambio en una red como la suya."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "23 · AAA Server",
+ "pagination": false,
+ "url": "/products/aaa-server/",
+ "title": "AAA Server para operadores: RADIUS y Diameter | Alepo",
+ "titleMarked": "**AAA Server** for Operators: **RADIUS and Diameter** | Alepo",
+ "desc": "El servidor AAA de Alepo da acceso solo a quien paga, a la velocidad contratada. Cambios de plan y bloqueos por impago aplican en vivo sin reconectar.",
+ "descMarked": "Alepo **AAA server** keeps only paying customers online, at the speed they bought. Plan changes and payment holds reach live sessions with no reconnect.",
+ "primary": "aaa server",
+ "secondary": "aaa radius server, radius server, radius authentication, diameter protocol",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Control de acceso",
+   "AAA Server"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**AAA Server para operadores de telecomunicaciones**",
+  "lede": [
+   "Proteja los ingresos en cada sesión y reduzca las llamadas por problemas de conexión que ocupan a sus ingenieros. Solo los clientes que pagan se conectan, a la velocidad que contrataron, y su mesa de ayuda ve por qué falló cualquier inicio de sesión."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA",
+   "Caso de éxito",
+   "Recursos",
+   "Preguntas"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/aaa-server/"
+  ],
+  "subnavTargets": [
+   "what-an-old-aaa-server-costs-you",
+   "upgrades-work-the-moment-they-re-sold",
+   "ai-in-aaa-server",
+   "customer-story",
+   "resources",
+   "common-questions"
+  ]
+ },
+ "lang": "es"
+}

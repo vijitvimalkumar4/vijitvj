@@ -1,0 +1,246 @@
+{
+ "source": "06-ai-for-telecom.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo calls this AI network operations: AI that reads the live data of the product it sits in and answers the person in front of it. The industry often calls this **agentic AI for telecom**. At Alepo, a person stays in charge of every decision."
+    },
+    {
+     "t": "p",
+     "text": "Where it runs today:"
+    },
+    {
+     "t": "list",
+     "items": [
+      "TACACS+ console: AI Agent Assist explains who was allowed to do what. Its recommendations are drafts only.",
+      "Alepo CRM: AI Agent Assist is docked on the customer page with 14 read-only tools.",
+      "AAA console: AI Agent Assist was built from a large fiber operator's top 18 support cases. It is in beta.",
+      "Web and app: the AI Customer Assistant has been live with subscribers since January 2024."
+     ],
+     "hrefs": [
+      null,
+      "/products/crm/",
+      null,
+      null
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Both run on the same live data as the products underneath them. All of it is read-only. It sees only what the signed-in person may see."
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "AI for subscribers and staff",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "AI Customer Assistant",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "A virtual agent on your website and app. It answers routine questions around the clock, completes account tasks through the BSS inside the signed-in customer's own account, and hands complex cases to people."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Speaks the customer's language on web and app",
+        "Makes offers inside the conversation, such as a travel-data pass or a speed boost"
+       ],
+       "hrefs": [
+        null,
+        null
+       ]
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/ai-virtual-agent/"
+      }
+     ],
+     "href": "/products/ai-virtual-agent/"
+    },
+    {
+     "t": "sub",
+     "h3": "AI Agent Assist",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "In beta. An assistant inside your care and network consoles. It answers staff questions from live data and explains bills and failures, with a suggested next step."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Answers from live console data, within each staff member's own permissions",
+        "Read-only",
+        "In the TACACS+ console, recommendations are drafts only",
+        "One assistant across the CRM, AAA and TACACS+ consoles, so training carries over"
+       ],
+       "hrefs": [
+        null,
+        null,
+        null,
+        null
+       ]
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/ai-agent-assist/"
+      }
+     ],
+     "href": "/products/ai-agent-assist/"
+    }
+   ],
+   "id": "ai-for-subscribers-and-staff"
+  },
+  {
+   "h2": "Clear limits for AI in telecom",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Responsible **AI in telecom** starts with clear limits."
+    },
+    {
+     "t": "list",
+     "items": [
+      "AI Agent Assist answers and suggests. A person takes every action.",
+      "AI Agent Assist answers within each staff member's own permissions.",
+      "It is read-only.",
+      "In the TACACS+ console, recommendations are drafts only.",
+      "It can run on your own language model, if you prefer.",
+      "It is switched on for each operator separately.",
+      "Answers show their sources, such as session history or account restrictions.",
+      "The AI Customer Assistant hands complex cases to people.",
+      "Your customer data is never used to train AI for other companies."
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "t": "table",
+     "head": [
+      "Speaker",
+      "Message"
+     ],
+     "rows": [
+      [
+       "NOC engineer",
+       "Why can't this subscriber connect?"
+      ],
+      [
+       "AI Agent Assist",
+       "The last three attempts were rejected. The account has a non-payment restriction. Next step: lift the restriction, or wait for payment and it restores on its own."
+      ],
+      [
+       "Sources",
+       "Session history · Account restrictions · Read-only"
+      ]
+     ],
+     "kind": "chat",
+     "title": "AAA operations console · AI Agent Assist",
+     "caption": "Illustration of AI Agent Assist in the AAA console."
+    }
+   ],
+   "id": "clear-limits-for-ai-in-telecom"
+  },
+  {
+   "h2": "AI by product",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "AAA Server: AI Agent Assist (beta) answers connection questions in the operations console.",
+      "TACACS+ Server: AI Agent Assist (beta) answers questions about authorization decisions.",
+      "Alepo CRM: AI Agent Assist (beta) sits on the customer page and explains bills.",
+      "Selfcare Now: carries the AI Customer Assistant, as does the Self-Care Mobile App."
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/tacacs-server/",
+      "/products/crm/",
+      "/products/self-care-portal/"
+     ]
+    }
+   ],
+   "id": "ai-by-product"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "06 · AI for Telecom",
+ "pagination": false,
+ "url": "/products/ai-for-telecom/",
+ "title": "AI in Telecom: AI Agents for Operators | Alepo",
+ "titleMarked": "**AI in Telecom**: **AI Agents** for **Operators** | Alepo",
+ "desc": "AI in telecom on your live data: AI Agent Assist for care and NOC staff in the AAA, TACACS+ and CRM consoles (beta), and a virtual agent for your subscribers.",
+ "descMarked": "**AI in telecom** on your live data: AI Agent Assist for care and NOC staff in the AAA, TACACS+ and CRM consoles (beta), and a virtual agent for your subscribers.",
+ "primary": "ai in telecom",
+ "secondary": "ai for telecom, agentic ai telecom",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "AI"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "AI for telecom operators",
+  "lede": [
+   "**AI in telecom** that saves your teams time and keeps your subscribers served at any hour. AI Agent Assist answers your staff's questions inside the consoles they use, and the AI Customer Assistant serves your subscribers around the clock, both from your live network and billing data."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/ai-for-telecom/"
+  ]
+ }
+}

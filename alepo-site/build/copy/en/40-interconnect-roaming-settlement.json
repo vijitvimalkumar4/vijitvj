@@ -1,0 +1,218 @@
+{
+ "source": "40-interconnect-roaming-settlement.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What an interconnect billing system does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Interconnect and Roaming Settlement will rate and settle carrier interconnect and roaming traffic, including roaming files, and is in development and builds on the interconnect invoicing in Partner and MVNO Settlement."
+    },
+    {
+     "t": "p",
+     "text": "Operators rely on aging third-party interconnect and roaming platforms, and some have not been upgraded in about ten years and are close to end of support. Modern **interconnect billing systems** remove that risk."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Mediation for usage records. Partner and MVNO Settlement for invoicing. Billing."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: **interconnect billing**, carrier billing, wholesale settlement, inter-operator settlement, roaming settlement"
+    }
+   ],
+   "id": "what-an-interconnect-billing-system-does"
+  },
+  {
+   "h2": "One vendor for BSS and settlement",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "BSS, charging and settlement come from one vendor. Usage records arrive from mediation."
+    },
+    {
+     "t": "p",
+     "text": "It replaces aging third-party interconnect and roaming platforms that are close to end of support."
+    }
+   ],
+   "id": "one-vendor-for-bss-and-settlement"
+  },
+  {
+   "h2": "Invoicing",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "It builds on the interconnect invoicing in Partner and MVNO Settlement."
+    },
+    {
+     "t": "p",
+     "text": "It is for mobile and fixed operators with carrier interconnect, and for MVNEs."
+    }
+   ],
+   "id": "invoicing"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is an interconnect billing system?",
+       "a": "An **interconnect billing system** rates the calls, messages and data that pass between operators' networks, and produces the invoices each carrier owes the other."
+      },
+      {
+       "q": "What is interconnect settlement?",
+       "a": "**Interconnect settlement** reconciles traffic records with partner carriers and agrees the final amounts each side pays."
+      },
+      {
+       "q": "Does it replace our current interconnect platform?",
+       "a": "Yes. It is in development to replace aging third-party interconnect and roaming platforms, with usage from Alepo mediation."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Interconnect and Roaming Settlement",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Interconnect and Roaming Settlement is being built so your team installs it like every Alepo product: in containers, one standard way, from the same automated guide. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Interconnect and Roaming Settlement will run on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-interconnect-and-roaming-settlement"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "Partner and MVNO Settlement",
+       "wholesale billing for MVNOs and resellers"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/partner-mvno-settlement/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "40 · Interconnect and Roaming Settlement",
+ "pagination": false,
+ "url": "/products/interconnect-roaming-settlement/",
+ "title": "Interconnect Billing System and Roaming Settlement | Alepo",
+ "titleMarked": "**Interconnect Billing System** and Roaming Settlement | Alepo",
+ "desc": "Alepo's interconnect billing system for interconnect and roaming settlement is in development. Interconnect invoicing works today in partner settlement.",
+ "descMarked": "Alepo's **interconnect billing system** for interconnect and roaming settlement is in development. Interconnect invoicing works today in partner settlement.",
+ "primary": "interconnect billing system",
+ "secondary": "interconnect billing, interconnect settlement",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Interconnect and Roaming Settlement"
+  ],
+  "eyebrow": null,
+  "badge": "In development",
+  "h1": "Interconnect and Roaming Settlement",
+  "lede": [
+   "Plan your way off an interconnect and roaming platform before its support ends. Interconnect invoicing works today in Partner and MVNO Settlement, and Alepo's **interconnect billing system** for interconnect and roaming settlement is in development."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/interconnect-roaming-settlement/"
+  ],
+  "subnavTargets": [
+   "what-an-interconnect-billing-system-does",
+   "one-vendor-for-bss-and-settlement",
+   "installing-interconnect-and-roaming-settlement"
+  ]
+ }
+}

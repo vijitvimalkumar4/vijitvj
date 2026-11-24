@@ -1,0 +1,165 @@
+{
+ "source": "13-news-events.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Each item shows its publication date beside the tag."
+ ],
+ "sections": [
+  {
+   "h2": "Eventos",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "17 al 19 de noviembre de 2026",
+       "Africa Tech Festival · Ciudad del Cabo, Sudáfrica"
+      ],
+      [
+       "10 al 11 de noviembre de 2026",
+       "Conecta Latam Peru · Lima, Perú"
+      ],
+      [
+       "2 al 5 de marzo de 2026",
+       "MWC Barcelona · Fira Gran Via, Barcelona"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null,
+      null
+     ],
+     "kind": "events"
+    }
+   ],
+   "id": "events"
+  },
+  {
+   "h2": "Noticias",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "Un operador tier-1 de Indonesia elige Alepo AAA para reemplazar su plataforma heredada"
+      ],
+      [
+       "Producto",
+       "Alepo lanza un TACACS+ Server de nivel operador para la administración segura de dispositivos de red"
+      ],
+      [
+       "Cliente",
+       "Alepo y Nomios implementan una solución AAA avanzada para VodafoneZiggo"
+      ],
+      [
+       "Socio",
+       "Alepo e Italtel colaboran para ofrecer redes móviles privadas 5G"
+      ],
+      [
+       "Cliente",
+       "Lum Mobile adopta la IA de Alepo para la atención al cliente"
+      ],
+      [
+       "Cliente",
+       "MaxxSouth Broadband lanza FreeNet sobre Alepo Carrier Wi-Fi"
+      ],
+      [
+       "Cliente",
+       "Teletok lanza su sistema de facturación convergente con Alepo y Blue Arcus"
+      ],
+      [
+       "Cliente",
+       "ETI Guinea elige Alepo Digital BSS para FTTH y su lanzamiento de LTE"
+      ],
+      [
+       "Cliente",
+       "Mauritius Telecom moderniza sus servicios Wi-Fi con Alepo"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/news/tier-1-indonesia-operator-selects-alepo-aaa-broadband-transformation/",
+      "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+      "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/",
+      "https://alepo.com/news/alepo-and-italtel-collaborate-to-deliver-5g-mobile-private-networks/",
+      "https://alepo.com/news/lum-mobile-taps-alepos-telcobot-ai-for-generative-ai-customer-service/",
+      "https://alepo.com/news/maxxsouth-broadband-launches-freenet-using-alepo-carrier-wifi-solution/",
+      "https://alepo.com/news/teletok-successfully-launches-its-convergent-billing-system-in-collaboration-with-alepo-and-blue-arcus/",
+      "https://alepo.com/news/eti-guinea-selects-alepo-digital-bss-to-transform-ftth-services-and-support-upcoming-lte-launch/",
+      "https://alepo.com/news/mauritius-telecom-modernizes-its-wifi-services-using-alepos-carrier-grade-wifi-solution/"
+     ],
+     "kind": "newsrows"
+    }
+   ],
+   "id": "news"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "13 · News and Events",
+ "pagination": false,
+ "url": "/news/",
+ "title": "Noticias y eventos | Alepo",
+ "titleMarked": "**News and Events** | **Alepo**",
+ "desc": "Noticias y eventos de Alepo: lanzamientos de clientes, anuncios de productos, noticias de socios y dónde ver a Alepo en eventos de telecom del mundo.",
+ "descMarked": "**Alepo news and events**: customer launches, product announcements and partner news, and where to meet the Alepo team at telecom events worldwide.",
+ "primary": "brand news (alepo news)",
+ "hero": {
+  "crumbs": [
+   "Empresa",
+   "Noticias y eventos"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Noticias y eventos",
+  "lede": [
+   "Anuncios de **Alepo** y dónde encontrar al equipo."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/news/"
+  ]
+ },
+ "lang": "es"
+}

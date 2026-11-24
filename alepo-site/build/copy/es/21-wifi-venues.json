@@ -1,0 +1,288 @@
+{
+ "source": "21-wifi-venues.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **carrier wifi**"
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace el software de portal cautivo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Inicio de sesión automático por SIM y llamadas por Wi-Fi para suscriptores móviles. Para recintos, **software de portal cautivo** con inicio de sesión de marca propia y pases de pago."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores móviles usan el Wi-Fi para cubrir los lugares a los que no llega la radio, y los recintos lo usan como un servicio propio, ambos en los puntos de acceso ya instalados."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Para",
+       "Wi-Fi de operador y hotspots públicos, para operadores y proveedores de recintos"
+      ]
+     ],
+     "kind": "facts"
+    }
+   ],
+   "id": "what-captive-portal-software-does"
+  },
+  {
+   "h2": "Conectados más allá de la cobertura de radio, por SIM",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los suscriptores siguen conectados donde termina la cobertura de radio. Inician sesión automáticamente con su SIM o eSIM, y las llamadas continúan por Wi-Fi."
+    },
+    {
+     "t": "product",
+     "text": "Wi-Fi Offload and Calling",
+     "href": "/products/wifi-offload-calling/"
+    }
+   ],
+   "id": "connected-beyond-radio-coverage-by-sim"
+  },
+  {
+   "h2": "Ingresos del Wi-Fi en recintos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El Wi-Fi de su recinto genera ingresos después del período gratuito, con una página de inicio de sesión de marca propia que vende pases de pago."
+    },
+    {
+     "t": "product",
+     "text": "Wi-Fi Offload and Calling",
+     "href": "/products/wifi-offload-calling/"
+    }
+   ],
+   "id": "revenue-from-venue-wi-fi"
+  },
+  {
+   "h2": "Sin nuevos puntos de acceso que comprar",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "No se reemplaza hardware. Los hotspots funcionan en los puntos de acceso Meraki, Aruba, Ruckus y Cambium ya instalados."
+    },
+    {
+     "t": "p",
+     "text": "Productos: Wi-Fi Offload and Calling · AAA Server"
+    }
+   ],
+   "id": "no-new-access-points-to-buy"
+  },
+  {
+   "h2": "Operaciones de red con IA",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta), en la consola de AAA, indica a los agentes de atención y a los ingenieros del NOC por qué un suscriptor no puede conectarse, a partir de los datos de sesiones activas. El asistente de la consola se creó a partir de los 18 casos de soporte más frecuentes de un gran operador de fibra, y está en beta."
+    },
+    {
+     "t": "p",
+     "text": "Es de solo lectura y los agentes ven únicamente lo que sus propios permisos permiten, de modo que una persona realiza cada acción y el asistente nunca cambia una configuración por su cuenta."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Por dónde empezar",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Wi-Fi Offload and Calling",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Offload, hotspots y llamadas por Wi-Fi en un solo producto."
+      },
+      {
+       "t": "p",
+       "text": "Permite que los suscriptores móviles inicien sesión en Wi-Fi automáticamente y hagan llamadas a través de él. Los hotspots de recintos obtienen un inicio de sesión de marca propia y pases de pago."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/wifi-offload-calling/"
+      }
+     ],
+     "href": "/products/wifi-offload-calling/"
+    },
+    {
+     "t": "sub",
+     "h3": "AAA Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "El servidor AAA detrás del servicio Wi-Fi, que también se usa para banda ancha fija y móvil."
+      },
+      {
+       "t": "p",
+       "text": "Decide quién se conecta y a qué velocidad, para que solo los clientes que pagan usen la red, en el nivel que contrataron."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/aaa-server/"
+      }
+     ],
+     "href": "/products/aaa-server/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un ISP centroamericano lanzó Wi-Fi público a nivel nacional bajo un contrato gubernamental, en una plataforma lista para operar y que cumple la normativa."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "ISP de Centroamérica · Centroamérica"
+      ],
+      [
+       "Resultado",
+       "1,3M de usuarios en los primeros tres meses"
+      ],
+      [
+       "Proyecto",
+       "Wi-Fi público"
+      ],
+      [
+       "Aspectos destacados",
+       "Cumplimiento normativo total · Despliegue en la nube"
+      ],
+      [
+       "Perfil",
+       "Proveedor de servicios de internet. Wi-Fi Offload and Calling."
+      ],
+      [
+       "Perfil",
+       "Más casos de éxito de Wi-Fi: MaxxSouth Broadband · ETB · Mauritius Telecom →"
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es el software de portal cautivo?",
+       "a": "El **software de portal cautivo** muestra una página de inicio de sesión o de bienvenida antes de que un usuario obtenga acceso a Wi-Fi. Los recintos lo usan para el inicio de sesión de marca propia y la aceptación de términos, y para vender pases de pago."
+      },
+      {
+       "q": "¿Qué es el Wi-Fi de operador?",
+       "a": "El **Wi-Fi de operador** es Wi-Fi gestionado por un operador de telecomunicaciones, donde los suscriptores se autentican con su SIM y permanecen en el servicio del operador."
+      },
+      {
+       "q": "¿Necesitamos nuevos puntos de acceso?",
+       "a": "No. Funciona en los puntos de acceso Meraki, Aruba, Ruckus y Cambium ya instalados."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "21 · Wi-Fi and Venues",
+ "pagination": false,
+ "url": "/solutions/wifi-venues/",
+ "title": "Software de portal cautivo: operadores y recintos | Alepo",
+ "titleMarked": "**Captive Portal Software** for Operators and Venues | Alepo",
+ "desc": "Software de portal cautivo y Wi-Fi de operador: inicio de sesión automático por SIM para suscriptores móviles, y acceso con marca y pases de pago en recintos.",
+ "descMarked": "**Captive portal software** and **carrier Wi-Fi** for operators and venues: automatic SIM login for mobile subscribers, plus branded login and paid passes for venues.",
+ "primary": "captive portal software",
+ "hero": {
+  "crumbs": [
+   "Soluciones",
+   "Wi-Fi y recintos"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Portal cautivo y Wi-Fi de operador para recintos y operadores",
+  "lede": [
+   "Convierta el Wi-Fi que ya está instalado en cobertura e ingresos. Los operadores móviles mantienen a los suscriptores conectados más allá de la cobertura de radio, y los recintos generan ingresos con pases de pago en los puntos de acceso que ya operan."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/wifi-venues/"
+  ]
+ },
+ "lang": "es"
+}

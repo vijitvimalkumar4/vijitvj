@@ -1,0 +1,352 @@
+{
+ "source": "45-billing-bss.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Facturación y gestión de ingresos, de punta a punta",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "En telecomunicaciones, los ingresos pasan por muchas manos antes de llegar al banco. Usted obtiene cada paso de un solo proveedor, así que nada se pierde entre sistemas."
+    },
+    {
+     "t": "list",
+     "items": [
+      "**Vender:** cree ofertas y paquetes una sola vez, promociones incluidas, y véndalos en todos los canales",
+      "**Tarificar:** tarifique cada sesión en tiempo real, en datos, voz y mensajería",
+      "**Facturar:** facturas convergentes para cada cuenta y servicio, en cualquier moneda",
+      "**Asegurar:** recopile el uso, concílielo y detecte las fugas antes de que lleguen a la factura",
+      "**Cobrar:** recordatorios automatizados, con suspensiones y reactivaciones vinculadas al pago",
+      "**Liquidar:** pague a socios, MVNO y operadores lo que se les debe, y nada más"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "billing-and-revenue-management-end-to-end"
+  },
+  {
+   "h2": "Facturación",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Digital BSS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "El **BSS** completo para operaciones grandes y complejas: facturación convergente y gestión de ingresos, con CRM integrado en una sola plataforma."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Digital BSS →",
+       "href": "/products/digital-bss/"
+      }
+     ],
+     "href": "/products/digital-bss/"
+    },
+    {
+     "t": "sub",
+     "h3": "BSS in a Box",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Un paquete de lanzamiento definido para nuevas MVNO: autogestión, CRM, facturación, tarificación y Mobile POS en una sola oferta."
+      },
+      {
+       "t": "more",
+       "text": "Explorar BSS in a Box →",
+       "href": "/products/bss-in-a-box/"
+      }
+     ],
+     "href": "/products/bss-in-a-box/"
+    }
+   ],
+   "id": "billing"
+  },
+  {
+   "h2": "Tarificación y políticas",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Online Charging",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Tarificación convergente en tiempo real para prepago y pospago, para que los saldos siempre sean correctos."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Online Charging →",
+       "href": "/products/online-charging/"
+      }
+     ],
+     "href": "/products/online-charging/"
+    },
+    {
+     "t": "sub",
+     "h3": "Policy Control",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Políticas para planes de datos y uso justo, además de calidad de VoLTE, aplicadas en cada sesión."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Policy Control →",
+       "href": "/products/policy-control/"
+      }
+     ],
+     "href": "/products/policy-control/"
+    },
+    {
+     "t": "sub",
+     "h3": "Prepaid Offers and Vouchers",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Planes prepago, recargas, vouchers y promociones que los suscriptores pueden comprar en cualquier lugar."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Prepaid Offers and Vouchers →",
+       "href": "/products/prepaid-offers-vouchers/"
+      }
+     ],
+     "href": "/products/prepaid-offers-vouchers/"
+    }
+   ],
+   "id": "charging-and-policy"
+  },
+  {
+   "h2": "Aseguramiento de ingresos",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Mediation Studio",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "En desarrollo"
+      },
+      {
+       "t": "p",
+       "text": "Recopile, depure y correlacione el uso de cada elemento de red, y detecte a tiempo las fugas de ingresos."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Mediation Studio →",
+       "href": "/products/mediation-revenue-assurance/"
+      }
+     ],
+     "href": "/products/mediation-revenue-assurance/"
+    },
+    {
+     "t": "sub",
+     "h3": "Collections and Dunning",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Recordatorios, bloqueo y restablecimiento que recuperan ingresos sin perder al cliente."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Collections and Dunning →",
+       "href": "/products/collections-dunning/"
+      }
+     ],
+     "href": "/products/collections-dunning/"
+    }
+   ],
+   "id": "revenue-assurance"
+  },
+  {
+   "h2": "Mayorista",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Partner and MVNO Settlement",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Facturación mayorista, de MVNO y de revendedores con una participación en los ingresos precisa."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Partner and MVNO Settlement →",
+       "href": "/products/partner-mvno-settlement/"
+      }
+     ],
+     "href": "/products/partner-mvno-settlement/"
+    },
+    {
+     "t": "sub",
+     "h3": "Interconnect and Roaming Settlement",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "En desarrollo"
+      },
+      {
+       "t": "p",
+       "text": "Facturación de interconexión entre operadores, con la liquidación de roaming en desarrollo."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Interconnect and Roaming Settlement →",
+       "href": "/products/interconnect-roaming-settlement/"
+      }
+     ],
+     "href": "/products/interconnect-roaming-settlement/"
+    }
+   ],
+   "id": "wholesale"
+  },
+  {
+   "h2": "Dónde encaja Alepo en su ecosistema **OSS/BSS**",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La facturación depende de la red. La suite de **BSS de telecomunicaciones** de Alepo se conecta directamente con sus propios productos de acceso y aprovisionamiento, y con el **OSS** que usted ya opera, a través de API abiertas. Los servicios se activan en el momento en que se venden, y el uso llega listo para tarificar."
+    },
+    {
+     "t": "sub",
+     "h3": "Alepo SCP (CAMEL Service Control Point)",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Primera implementación en curso"
+      },
+      {
+       "t": "p",
+       "text": "Tarificación prepago para 2G y 3G en producción."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "where-alepo-fits-in-your-oss-bss-stack"
+  },
+  {
+   "h2": "Por qué los operadores eligen el software de facturación de telecomunicaciones de Alepo",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Convergente por diseño:** servicios fijos, móviles, Wi-Fi y empresariales en una sola factura",
+      "**En tiempo real:** decisiones de tarificación y políticas que se toman durante la sesión y no a fin de mes",
+      "**Modular:** empiece con un producto y agregue el resto cuando esté listo",
+      "Implemente a su manera: nativo de la nube en Kubernetes, en su entorno u operado para usted por Alepo",
+      "**AI Agent Assist (beta):** explica facturas y bloqueos a los agentes de atención a partir de la cuenta en tiempo real"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "why-operators-choose-alepo-telecom-billing-software"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es el software de facturación de telecomunicaciones?",
+       "a": "El software de facturación de telecomunicaciones tarifica el uso y aplica planes y descuentos, y luego genera facturas para suscriptores y socios. Las plataformas actuales también se encargan de la tarificación en tiempo real y la cobranza, además de la liquidación."
+      },
+      {
+       "q": "¿Cuál es la diferencia entre BSS y OSS?",
+       "a": "El BSS gestiona el lado del negocio: productos, pedidos, tarificación, facturación y atención al cliente. El OSS gestiona el lado de la red: inventario, activación y aseguramiento del servicio."
+      },
+      {
+       "q": "¿Alepo admite prepago y pospago en una sola plataforma?",
+       "a": "Sí. Online Charging y Digital BSS manejan planes prepago, pospago e híbridos en una sola plataforma."
+      },
+      {
+       "q": "¿Puede Alepo reemplazar nuestro sistema de facturación heredado por etapas?",
+       "a": "Sí. Cada producto funciona por sí solo, por lo que los operadores suelen migrar una función a la vez."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué factura hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "45 · Billing & BSS",
+ "pagination": false,
+ "url": "/products/billing-bss/",
+ "title": "Software de facturación telecom: operadores e ISP | Alepo",
+ "titleMarked": "**Telecom Billing Software for Operators and ISPs** | Alepo",
+ "desc": "Software de facturación telecom convergente para operadores e ISP: tarificación en línea, políticas, mediación, cobranza y liquidación en un BSS.",
+ "descMarked": "**Telecom billing software** for operators and ISPs: convergent billing, real-time charging, policy, mediation, collections and settlement in one **BSS**.",
+ "primary": "telecom billing software",
+ "secondary": "billing and revenue management, telecom BSS, BSS telecom, OSS BSS",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Productos",
+   "Facturación y BSS"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Software de facturación de telecomunicaciones**",
+  "lede": [
+   "Facture con precisión y liquide con cada socio a partir de los mismos registros. El **software de facturación de telecomunicaciones** de Alepo es un solo **BSS de telecomunicaciones** para todas sus formas de generar ingresos, desde prepago y pospago hasta minorista y mayorista, para cuentas de consumo y empresariales."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   "/products/billing-bss/"
+  ]
+ },
+ "lang": "es"
+}

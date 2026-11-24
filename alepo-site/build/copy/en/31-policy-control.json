@@ -1,0 +1,232 @@
+{
+ "source": "31-policy-control.docx",
+ "notes": [
+  "Keywords are in **bold**. This version follows the design (PCRF only). If 5G PCF is confirmed, switch to the PCF title and H1 from the keyword map.",
+  "Primary keyword (PCRF version): **pcrf telecom**",
+  "Secondary keyword: **policy and charging rules function**"
+ ],
+ "sections": [
+  {
+   "h2": "PCRF policy control in telecom networks",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo **PCRF policy control** enforces data plans in the network in real time, by speed, application, time or cap. It runs beside other vendors' cores. Policy is not tied to the core supplier."
+    },
+    {
+     "t": "p",
+     "text": "Mobile and fixed-wireless operators need fair-usage throttling, app- and time-based offers and voice-over-LTE quality, but policy from the core vendor locks them in and every new plan becomes a project."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Packet gateways and DPI from other vendors. IMS for voice-over-LTE. Online charging for quotas. Self-care for boosts and passes."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: PCRF, **policy and charging rules function**, policy server, policy manager, fair-usage policy, QoS control, Diameter Gx"
+    }
+   ],
+   "id": "pcrf-policy-control-in-telecom-networks"
+  },
+  {
+   "h2": "Marketing launches plans itself",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Marketing builds and publishes data plans in a portal. No engine code changes."
+    },
+    {
+     "t": "p",
+     "text": "App-based and time-based offers are set up the same way."
+    }
+   ],
+   "id": "marketing-launches-plans-itself"
+  },
+  {
+   "h2": "Speed boosts and data passes on every plan",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your subscribers buy speed boosts and data passes through self-care. After a cap, the session is throttled or redirected."
+    },
+    {
+     "t": "p",
+     "text": "Fair-usage rules apply the same way on mobile and fixed wireless."
+    }
+   ],
+   "id": "speed-boosts-and-data-passes-on-every-plan"
+  },
+  {
+   "h2": "No lock-in to your core vendor",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Policy Control runs beside other vendors' packet gateways and DPI. You are not tied to the core vendor's policy engine."
+    },
+    {
+     "t": "p",
+     "text": "It connects to IMS for voice-over-LTE quality and to online charging for quotas."
+    }
+   ],
+   "id": "no-lock-in-to-your-core-vendor"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What does a PCRF do in telecom?",
+       "a": "The **policy and charging rules function** decides, in real time, the speed, quality and limits each data session gets, based on the subscriber's plan, usage and the network."
+      },
+      {
+       "q": "Can it work with our existing packet core?",
+       "a": "Yes. Alepo Policy Control runs beside packet gateways and DPI from other vendors over Diameter Gx."
+      },
+      {
+       "q": "Who sets up new data plans?",
+       "a": "Marketing teams build and publish plans in the plan portal, without engine code changes."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Policy Control",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Policy Control in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Policy Control runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-policy-control"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "BSS in a Box",
+       "launch package for new MVNOs"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "31 · Policy Control",
+ "pagination": false,
+ "url": "/products/policy-control/",
+ "title": "PCRF Policy Control for Telecom Operators | Alepo",
+ "titleMarked": "**PCRF Policy Control** for **Telecom Operators** | Alepo",
+ "desc": "Alepo PCRF policy control for telecom operators enforces data plans by speed, application, time or cap in real time, beside any vendor's core network.",
+ "descMarked": "Alepo **PCRF** policy control for telecom operators enforces data plans by speed, application, time or cap in real time, beside any vendor's core network.",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Policy Control"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Policy Control (**PCRF**)",
+  "lede": [
+   "Earn more from your data network with plans that marketing launches itself, by speed, app, time or cap. Policy is enforced in the network in real time, with no lock-in to your core vendor."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/policy-control/"
+  ],
+  "subnavTargets": [
+   "pcrf-policy-control-in-telecom-networks",
+   "marketing-launches-plans-itself",
+   "installing-policy-control"
+  ]
+ }
+}

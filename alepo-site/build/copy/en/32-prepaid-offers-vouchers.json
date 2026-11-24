@@ -1,0 +1,232 @@
+{
+ "source": "32-prepaid-offers-vouchers.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What mobile recharge software does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "With Alepo **mobile recharge software**, marketing creates prepaid plans, scratch-card and digital top-ups and recharge bonuses in one place. Each one reaches charging, policy, AAA and every sales channel at once."
+    },
+    {
+     "t": "p",
+     "text": "Prepaid operators lose revenue when promotions need IT projects and vouchers are open to fraud, and each plan has to be set up separately in charging and policy control, and again in AAA. One setup replaces all of that."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Online charging and policy control, plus AAA. Self-care, CRM, IVR, USSD and partner channels. Dealers through Mobile POS."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: voucher management system (VMS), recharge management, top-up, PIN management, e-voucher, promotions and bonus management"
+    }
+   ],
+   "id": "what-mobile-recharge-software-does"
+  },
+  {
+   "h2": "Promotions without IT",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Marketing sets up recharge bonuses, promo codes and eligibility rules without IT."
+    },
+    {
+     "t": "p",
+     "text": "A plan is set up once and applies in charging, policy and AAA."
+    }
+   ],
+   "id": "promotions-without-it"
+  },
+  {
+   "h2": "Vouchers tracked until they are used",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every voucher is tracked through the full recharge voucher lifecycle, including recalled, stolen and damaged cards."
+    },
+    {
+     "t": "p",
+     "text": "Your team blocks a card that should not be used before it is redeemed."
+    }
+   ],
+   "id": "vouchers-tracked-until-they-are-used"
+  },
+  {
+   "h2": "Top-up channels",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Customers top up through self-care, CRM, IVR, USSD and partners. Dealers top up customers electronically from Mobile POS, with no printed card."
+    },
+    {
+     "t": "p",
+     "text": "It is usually delivered inside Digital BSS."
+    }
+   ],
+   "id": "top-up-channels"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is mobile recharge software?",
+       "a": "**Mobile recharge software** manages how prepaid subscribers add credit or buy plans, through vouchers, digital top-ups, dealers and self-service channels."
+      },
+      {
+       "q": "What is an EVD system?",
+       "a": "An EVD system lets dealers sell top-ups electronically, without printed scratch cards. Alepo dealers do this from Mobile POS."
+      },
+      {
+       "q": "Can we stop fraud on stolen voucher batches?",
+       "a": "Yes. Recalled, stolen and damaged batches can be blocked before any card is redeemed."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Prepaid Offers and Vouchers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Prepaid Offers and Vouchers in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Prepaid Offers and Vouchers runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-prepaid-offers-and-vouchers"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "BSS in a Box",
+       "launch package for new MVNOs"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "32 · Prepaid Offers and Vouchers",
+ "pagination": false,
+ "url": "/products/prepaid-offers-vouchers/",
+ "title": "Mobile Recharge and Voucher Management Software | Alepo",
+ "titleMarked": "Mobile Recharge and Voucher Management Software | Alepo",
+ "desc": "Alepo mobile recharge software lets marketing create prepaid plans, scratch-card and digital top-ups and recharge bonuses, then push them to every channel.",
+ "descMarked": "Alepo **mobile recharge software** lets marketing create prepaid plans, scratch-card and digital top-ups and recharge bonuses, then push them to every channel.",
+ "primary": "mobile recharge software",
+ "secondary": "evd system, recharge voucher",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Prepaid Offers and Vouchers"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Prepaid Offers and Voucher Management",
+  "lede": [
+   "Grow prepaid revenue with offers that reach market without an IT project, and cut your losses from voucher fraud. Each offer reaches every channel and network system at once, and every voucher is tracked until it is used."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/prepaid-offers-vouchers/"
+  ],
+  "subnavTargets": [
+   "what-mobile-recharge-software-does",
+   "promotions-without-it",
+   "installing-prepaid-offers-and-vouchers"
+  ]
+ }
+}

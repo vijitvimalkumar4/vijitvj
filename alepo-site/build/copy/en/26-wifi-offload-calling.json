@@ -1,0 +1,286 @@
+{
+ "source": "26-wifi-offload-calling.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **wifi offloading**"
+ ],
+ "sections": [
+  {
+   "h2": "Coverage where radio ends",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mobile subscribers join Wi-Fi with their SIM. Calls continue where radio coverage ends. Venues get a branded login and paid passes on the access points they already own."
+    },
+    {
+     "t": "p",
+     "text": "A mobile operator without full radio coverage loses data and voice customers, and venue hotspots cost money because users will not pay after the free window ends. **Wi-Fi offloading** turns that existing Wi-Fi into coverage and revenue."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Access points and Wi-Fi controllers already in place. The operator's HSS and mobile core for SIM login and Wi-Fi calling. Alepo AAA."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: Wi-Fi AAA, EAP-SIM and EAP-AKA login, VoWiFi, hotspot portal, Wi-Fi monetization"
+    }
+   ],
+   "id": "coverage-where-radio-ends"
+  },
+  {
+   "h2": "One policy on Wi-Fi and mobile",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Each subscriber has one policy and one usage record, on Wi-Fi or mobile. Offload and Wi-Fi calling run on the same AAA used for fixed and mobile broadband."
+    },
+    {
+     "t": "p",
+     "text": "Your customers stay on your service when they leave radio coverage, for data and for voice."
+    }
+   ],
+   "id": "one-policy-on-wi-fi-and-mobile"
+  },
+  {
+   "h2": "Paid Wi-Fi on the access points venues own",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Hotspots run on the Meraki, Aruba, Ruckus and Cambium access points already installed. No hardware is swapped."
+    },
+    {
+     "t": "p",
+     "text": "Venues get a branded login and can sell paid passes after the free window."
+    }
+   ],
+   "id": "paid-wi-fi-on-the-access-points-venues-own"
+  },
+  {
+   "h2": "Voice calls over Wi-Fi",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Mobile subscribers log on automatically with their SIM or eSIM. Calls continue over Wi-Fi."
+    },
+    {
+     "t": "p",
+     "text": "The operator's HSS and mobile core handle the login, so there is no separate password."
+    }
+   ],
+   "id": "voice-calls-over-wi-fi"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A Central American ISP launched nationwide public Wi-Fi under a government contract, on a ready-to-run, compliant platform."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "Central American ISP · Central America"
+      ],
+      [
+       "Result",
+       "1.3M users in the first three months"
+      ],
+      [
+       "Project",
+       "Public Wi-Fi"
+      ],
+      [
+       "Highlights",
+       "Full regulatory compliance · Cloud deployment"
+      ],
+      [
+       "Profile",
+       "Internet service provider. Wi-Fi Offload and Calling."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is Wi-Fi offload?",
+       "a": "**Wi-Fi offload** moves mobile data traffic from the radio network onto Wi-Fi. Subscribers stay on their operator's service while the cellular network carries less load."
+      },
+      {
+       "q": "Do subscribers need an app or a password?",
+       "a": "No. They log on automatically with their SIM or eSIM, using EAP-SIM or EAP-AKA through your HSS."
+      },
+      {
+       "q": "Does it need new access points?",
+       "a": "No. It runs on the Meraki, Aruba, Ruckus and Cambium access points already in place."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Wi-Fi Offload and Calling",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Wi-Fi Offload and Calling in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small. Offload and Wi-Fi calling share one install."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Wi-Fi Offload and Calling runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-wi-fi-offload-and-calling"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "RADIUS and Diameter AAA for broadband and mobile"
+      ],
+      [
+       "Fulfilment Manager",
+       "service activation and provisioning"
+      ],
+      [
+       "TACACS+ Server",
+       "device administration and command control"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "26 · Wi-Fi Offload and Calling",
+ "pagination": false,
+ "url": "/products/wifi-offload-calling/",
+ "title": "Wi-Fi Offload and Wi-Fi Calling for Operators | Alepo",
+ "titleMarked": "Wi-Fi Offload and Wi-Fi Calling for Operators | Alepo",
+ "desc": "Wi-Fi offload for mobile operators: subscribers join Wi-Fi with their SIM and keep calling where radio coverage ends. Venues get branded login and paid passes.",
+ "descMarked": "**Wi-Fi offload** for mobile operators: subscribers join Wi-Fi with their SIM and keep calling where radio coverage ends. Venues get branded login and paid passes.",
+ "primary": "wifi offload",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "Access control",
+   "Wi-Fi Offload and Calling"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Wi-Fi Offload and Calling for mobile operators",
+  "lede": [
+   "Keep revenue from subscribers beyond radio coverage, and earn from venue hotspots. Subscribers join Wi-Fi with their SIM and keep calling, and venues sell paid passes."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment",
+   "Customer story"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/wifi-offload-calling/"
+  ],
+  "subnavTargets": [
+   "coverage-where-radio-ends",
+   "one-policy-on-wi-fi-and-mobile",
+   "installing-wi-fi-offload-and-calling",
+   "customer-story"
+  ]
+ }
+}

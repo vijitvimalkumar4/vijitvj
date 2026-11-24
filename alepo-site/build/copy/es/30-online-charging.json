@@ -1,0 +1,242 @@
+{
+ "source": "30-online-charging.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Primary keywords: **online charging system**, **ocs telecom**"
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace un sistema de tarificación en línea",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo Online Charging es un **sistema de tarificación en línea** que tarifica cada llamada, mensaje y megabyte contra el saldo en tiempo real. Los paquetes y las marcas cambian solo mediante configuración."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores con predominio de prepago y los MVNE deben tarificar saldos, paquetes y varias marcas en tiempo real, y las suites de tarificación heredadas que recibieron son costosas y lentas de cambiar. Un OCS moderno para telecomunicaciones convierte cada cambio en un ajuste."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "El núcleo de paquetes y la red de voz mediante Diameter. Control de políticas para cuotas. Vouchers, CRM y autogestión para recargas y saldos."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ],
+      [
+       "En implementación",
+       "Conmutación multi-IMSI"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: OCS, tarificación en tiempo real, **tarificación convergente**, tarificación prepago, tasación y gestión de saldos, Diameter Gy y Ro"
+    }
+   ],
+   "id": "what-an-online-charging-system-does"
+  },
+  {
+   "h2": "Nuevas ofertas sin una nueva versión",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo de marketing cambia los paquetes mediante configuración, sin código, por lo que una nueva oferta no espera una nueva versión."
+    },
+    {
+     "t": "p",
+     "text": "Los saldos, los paquetes y varias marcas se tarifican en tiempo real."
+    }
+   ],
+   "id": "new-offers-without-a-release"
+  },
+  {
+   "h2": "Conserve su sistema prepago actual",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La tarificación de políticas y del BSS pasa por el gateway de tarificación, por lo que su plataforma prepago actual sigue funcionando."
+    },
+    {
+     "t": "p",
+     "text": "El núcleo de paquetes y la red de voz se conectan mediante Diameter."
+    }
+   ],
+   "id": "keep-your-existing-prepaid-system"
+  },
+  {
+   "h2": "Recargas y saldos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los vouchers, el CRM y la autogestión se conectan para recargas y consultas de saldo. El control de políticas usa las mismas cuotas."
+    },
+    {
+     "t": "p",
+     "text": "Está diseñado para MVNO, MVNE y operadores con predominio de prepago."
+    }
+   ],
+   "id": "top-ups-and-balances"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es un sistema de tarificación en línea en telecomunicaciones?",
+       "a": "Un **sistema de tarificación en línea** verifica y actualiza el saldo de un suscriptor mientras el servicio está en uso, por lo que una llamada o sesión de datos solo se permite mientras quede crédito o cuota."
+      },
+      {
+       "q": "¿Qué es la tarificación convergente?",
+       "a": "La **tarificación convergente** tarifica el uso prepago y pospago de cada servicio y marca en un solo sistema y con un solo saldo."
+      },
+      {
+       "q": "¿Podemos conservar nuestro sistema prepago actual?",
+       "a": "Sí. El gateway de tarificación permite mantener un sistema prepago existente mientras los nuevos paquetes y marcas se ejecutan en Alepo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Online Charging",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Online Charging en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, por lo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Online Charging se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-online-charging"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Alepo SCP",
+       "Tarificación 2G y 3G (primer despliegue)"
+      ],
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "BSS in a Box",
+       "paquete de lanzamiento para nuevos MVNO"
+      ],
+      [
+       "Policy Control",
+       "control de políticas para planes de datos y VoLTE"
+      ]
+     ],
+     "hrefs": [
+      null,
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/policy-control/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "30 · Online Charging",
+ "pagination": false,
+ "url": "/products/online-charging/",
+ "title": "Tarificación en línea (OCS) para operadores telecom | Alepo",
+ "titleMarked": "**Online Charging System (OCS)** for Telecom Operators | Alepo",
+ "desc": "El sistema de tarificación en línea de Alepo tarifica llamadas, mensajes y datos contra el saldo en tiempo real. Convergente: prepago, pospago y MVNE.",
+ "descMarked": "Alepo **online charging system** charges every call, message and megabyte against the balance in real time. **Convergent charging** for prepaid, postpaid and MVNEs.",
+ "secondary": "convergent charging, 5g charging",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Online Charging"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Sistema de tarificación en línea (OCS)**",
+  "lede": [
+   "Genere ingresos con nuevas ofertas antes, sin una nueva versión de código, y tarifique cada llamada, mensaje y megabyte contra el saldo del cliente en tiempo real."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/online-charging/"
+  ],
+  "subnavTargets": [
+   "what-an-online-charging-system-does",
+   "new-offers-without-a-release",
+   "installing-online-charging"
+  ]
+ },
+ "lang": "es"
+}

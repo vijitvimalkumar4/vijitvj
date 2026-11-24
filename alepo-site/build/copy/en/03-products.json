@@ -1,0 +1,225 @@
+{
+ "source": "03-products.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Access control",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Authenticate subscribers and devices, activate services and keep every network login on record."
+    },
+    {
+     "t": "list",
+     "items": [
+      "AAA Server: **RADIUS and Diameter AAA** for broadband and mobile",
+      "Fulfilment Manager: service activation and provisioning",
+      "TACACS+ Server: **device administration** and command control",
+      "Wi-Fi Offload and Calling: mobile data and voice moved onto Wi-Fi",
+      "Home Router and ONT Management: **TR-069 and TR-369 USP device management** (beta)",
+      "Subscriber Data Management: HSS for 4G and IMS with 5G interworking in proof of concept"
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/",
+      "/products/wifi-offload-calling/",
+      "/products/device-management/",
+      "/products/subscriber-data-management/"
+     ]
+    }
+   ],
+   "id": "access-control"
+  },
+  {
+   "h2": "BSS and monetization",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Rate, charge, bill, collect and settle, in real time and at carrier scale."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Digital BSS: convergent billing and revenue management, with CRM built in",
+      "BSS in a Box: a launch package for new **MVNOs**",
+      "Online Charging: **real-time convergent charging**",
+      "Policy Control: **policy control** for data plans and VoLTE",
+      "Prepaid Offers and Vouchers: prepaid plans and promotions, plus top-ups",
+      "Mediation Studio: usage collection and **revenue assurance** (in development)",
+      "Collections and Dunning: automated reminders, with barring and restoration tied to payment",
+      "Partner and MVNO Settlement: wholesale billing for MVNOs and resellers",
+      "Interconnect and Roaming Settlement: carrier interconnect billing, with roaming settlement in development"
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/online-charging/",
+      "/products/policy-control/",
+      "/products/prepaid-offers-vouchers/",
+      "/products/mediation-revenue-assurance/",
+      "/products/collections-dunning/",
+      "/products/partner-mvno-settlement/",
+      "/products/interconnect-roaming-settlement/"
+     ]
+    }
+   ],
+   "id": "bss-and-monetization"
+  },
+  {
+   "h2": "Channels and care",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Give subscribers, dealers and care teams one consistent view of every account."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Alepo CRM: a **customer care** workspace with AI (beta)",
+      "Selfcare Now: branded **web self-care** and onboarding (beta)",
+      "Self-Care Mobile App: a branded self-care app (beta)",
+      "Mobile POS: customer sign-up and top-ups, plus bill payments, for dealers"
+     ],
+     "hrefs": [
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/dealer-mobile-pos/"
+     ]
+    }
+   ],
+   "id": "channels-and-care"
+  },
+  {
+   "h2": "AI",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI that works on your own live data, for subscribers and for staff."
+    },
+    {
+     "t": "list",
+     "items": [
+      "AI Customer Assistant: a **virtual agent** for web and app",
+      "AI Agent Assist: an **assistant for care agents and the NOC** (beta)"
+     ],
+     "hrefs": [
+      "/products/ai-virtual-agent/",
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "ai"
+  },
+  {
+   "h2": "How the telecom software fits together",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Each product works on its own, alongside other Alepo products, or with the systems you already run."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Layer",
+      "What sits there"
+     ],
+     "rows": [
+      [
+       "Customers and staff",
+       "Subscribers · Dealers and agents · Care agents · NOC engineers"
+      ],
+      [
+       "Channels and care",
+       "Selfcare Now · Self-Care Mobile App · Mobile POS · Alepo CRM · AI Customer Assistant · AI Agent Assist"
+      ],
+      [
+       "Business",
+       "Digital BSS · BSS in a Box · Collections and Dunning · Partner and MVNO Settlement · Interconnect and Roaming Settlement · Prepaid Offers and Vouchers"
+      ],
+      [
+       "Real time",
+       "Online Charging · Policy Control · Mediation Studio"
+      ],
+      [
+       "Access control",
+       "AAA Server · Fulfilment Manager · Wi-Fi Offload and Calling · Home Router and ONT Management · Subscriber Data Management · TACACS+ Server"
+      ],
+      [
+       "The operator's network",
+       "BNG and BRAS · OLTs · Packet core · Wi-Fi controllers · Home routers · Routers and switches"
+      ]
+     ],
+     "kind": "layers"
+    },
+    {
+     "t": "p",
+     "text": "Dashed boxes are systems the operator already has. Every product can also run on its own."
+    }
+   ],
+   "id": "how-the-telecom-software-fits-together"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "03 · Products",
+ "pagination": false,
+ "url": "/products/",
+ "title": "Telecom Software Products for Operators and ISPs | Alepo",
+ "titleMarked": "**Telecom Software Products** for **Operators and ISPs** | Alepo",
+ "desc": "Telecom software for operators and ISPs: AAA, provisioning, charging, billing, policy, CRM and self-care, with AI built in. Run one product or the full stack.",
+ "descMarked": "**Telecom software** for operators and ISPs: AAA, provisioning, charging, billing, policy, CRM and self-care, with AI built in. Run one product or the full stack.",
+ "primary": "telecom software",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Products"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Telecom software products**",
+  "lede": [
+   "**Telecom software** that helps operators and ISPs earn more from their networks with less manual work behind them. Access control and BSS work alone or together, with AI built into both."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/"
+  ]
+ }
+}

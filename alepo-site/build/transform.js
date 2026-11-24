@@ -145,6 +145,7 @@ window.__alepo = async function (cfg) {
   if (window.__alepoUI) await window.__alepoUI(cfg, doc); // UI audit fixes (uifixes.js)
   if (window.__alepoMerge) window.__alepoMerge(cfg, doc); // team package content and SEO (merge.js)
   if (window.__alepoPolish) window.__alepoPolish(cfg, doc); // visual polish (polish.js)
+  if (window.__alepoCopy) window.__alepoCopy(cfg, doc); // the website copy deck, 24 Nov 2026 (copy/render.js)
 
   return '<!doctype html>\n' + doc.documentElement.outerHTML;
 

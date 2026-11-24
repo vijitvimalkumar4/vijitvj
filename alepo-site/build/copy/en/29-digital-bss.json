@@ -1,0 +1,324 @@
+{
+ "source": "29-digital-bss.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **bss software**"
+ ],
+ "sections": [
+  {
+   "h2": "A BSS you can take in parts",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo **Digital BSS** is one configurable system to sell, charge, bill, collect and serve, across mobile and fixed broadband, including fiber."
+    },
+    {
+     "t": "p",
+     "text": "Mid-size operators, ISPs and new digital brands often run a BSS that is aging or split across several systems, where every plan change needs new development. Collections and barring are manual. A replacement looks like a multi-year program."
+    },
+    {
+     "t": "p",
+     "text": "**Digital BSS** is built to be taken in parts, so you buy the modules you need and keep the systems that still work."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "For",
+       "Mid-size MNOs, MVNOs, MVNEs and ISPs"
+      ],
+      [
+       "Plans",
+       "Prepaid, postpaid and hybrid"
+      ],
+      [
+       "Services",
+       "Mobile and fiber on one system"
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: BSS, BSS/OSS, convergent billing, customer care and billing, CRM and billing, revenue management, **BSS software**"
+    }
+   ],
+   "id": "a-bss-you-can-take-in-parts"
+  },
+  {
+   "h2": "Start with the module you need",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Buy only the modules you need. An existing CRM or billing system can stay, and **Digital BSS** works beside it."
+    },
+    {
+     "t": "p",
+     "text": "The network is reached through Fulfilment Manager, AAA, online charging and policy control. Payment gateways connect on the other side."
+    }
+   ],
+   "id": "start-with-the-module-you-need"
+  },
+  {
+   "h2": "Unpaid bills chased without manual work",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Dunning runs on rules you set for each account or invoice. Reminders, late fees and barring happen automatically."
+    },
+    {
+     "t": "p",
+     "text": "When the payment arrives, service is restored the same way."
+    }
+   ],
+   "id": "unpaid-bills-chased-without-manual-work"
+  },
+  {
+   "h2": "Upgrades that stay simple",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every customer runs the same release with their own settings, so your team carries no forked code."
+    },
+    {
+     "t": "p",
+     "text": "One module is patched at a time, without upgrading the rest."
+    }
+   ],
+   "id": "upgrades-that-stay-simple"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Eswatini Mobile left a legacy BSS behind and ended the disruptions that were hurting customer satisfaction as its subscriber base grew."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "Eswatini Mobile · Kingdom of Eswatini"
+      ],
+      [
+       "Result",
+       "109 days to migrate 235,000 subscribers"
+      ],
+      [
+       "Project",
+       "BSS migration"
+      ],
+      [
+       "Highlights",
+       "Network disruptions eliminated · Digital self-care for customers"
+      ],
+      [
+       "Profile",
+       "Mobile operator. Digital BSS."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Resources",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "All resources →",
+     "href": "/resources/"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Case study · Muni Achieves 10% Revenue Increase in 1 Month with Alepo BSS"
+     ],
+     "hrefs": [
+      null
+     ]
+    }
+   ],
+   "id": "resources"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is a digital BSS?",
+       "a": "A **digital BSS** is a business support system built to run online and in real time, with self-service for customers. It covers product catalog, orders, charging, billing, collections and customer care."
+      },
+      {
+       "q": "Can we keep our existing CRM or billing system?",
+       "a": "Yes. Digital BSS is modular. Buy the modules you need and keep the systems that still work."
+      },
+      {
+       "q": "Does it support prepaid and postpaid together?",
+       "a": "Yes. Prepaid, postpaid and hybrid plans run on one system, for mobile and fiber."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Digital BSS",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Digital BSS in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. It runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC. For several brands, each one runs on its own deployment, with its own data and upgrades, and its own outages."
+    },
+    {
+     "t": "p",
+     "text": "Customers on older releases move to release 14 as a scoped upgrade: the new version plus the change requests that still matter."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-digital-bss"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "BSS in a Box",
+       "launch package for new MVNOs"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ],
+      [
+       "Policy Control",
+       "policy control for data plans and VoLTE"
+      ]
+     ],
+     "hrefs": [
+      "/products/bss-in-a-box/",
+      "/products/online-charging/",
+      "/products/policy-control/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "29 · Digital BSS",
+ "pagination": false,
+ "url": "/products/digital-bss/",
+ "title": "Digital BSS for Telecom Operators | Alepo",
+ "titleMarked": "**Digital BSS** for **Telecom Operators** | Alepo",
+ "desc": "Alepo Digital BSS is one configurable system to sell, charge, bill, collect and serve customers on mobile and fixed broadband. Buy only the modules you need.",
+ "descMarked": "Alepo **Digital BSS** is one configurable system to sell, charge, bill, collect and serve customers on mobile and fixed broadband. Buy only the modules you need.",
+ "primary": "digital bss",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Digital BSS"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Digital BSS for telecom operators**",
+  "lede": [
+   "Modernize billing and care without the cost and risk of a multi-year program. Replace an aging BSS one module at a time, with one configurable system that sells, charges, bills, collects and serves customers across mobile and fixed broadband, including fiber."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment",
+   "Customer story",
+   "Resources"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/digital-bss/"
+  ],
+  "subnavTargets": [
+   "a-bss-you-can-take-in-parts",
+   "start-with-the-module-you-need",
+   "installing-digital-bss",
+   "customer-story",
+   "resources"
+  ]
+ }
+}

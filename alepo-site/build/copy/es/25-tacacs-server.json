@@ -1,0 +1,344 @@
+{
+ "source": "25-tacacs-server.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **tacacs server**"
+ ],
+ "sections": [
+  {
+   "h2": "Sepa quién modificó un router en producción",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo **TACACS+** coloca cada inicio de sesión en routers, switches y firewalls bajo una sola política y un solo registro de auditoría."
+    },
+    {
+     "t": "p",
+     "text": "En muchas redes, los inicios de sesión en los dispositivos todavía dependen de contraseñas locales, por lo que nadie puede decir quién modificó un router en producción a las 2 a. m., y los contratistas conservan derechos de administrador después de que termina un proyecto. Cisco ACS, que muchos operadores usaban para esto, llegó al fin de su vida útil."
+    },
+    {
+     "t": "p",
+     "text": "Con el **servidor TACACS+** de Alepo, cada ingeniero tiene su propio inicio de sesión y solo el acceso que necesita. El servidor decide sobre cada comando. Cada acción queda registrada."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Protocolo",
+       "TACACS+"
+      ],
+      [
+       "Dispositivos",
+       "Routers, switches, firewalls, BNG y BRAS, controladoras inalámbricas"
+      ],
+      [
+       "Registro de auditoría",
+       "Reenviado a Splunk, Sentinel o QRadar"
+      ],
+      [
+       "Entrega",
+       "Sobre Kubernetes, en su centro de datos o en su propia nube"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **TACACS**, AAA de administración de dispositivos, control de acceso a dispositivos de red, autorización de comandos, AAA administrativo"
+    }
+   ],
+   "id": "know-who-changed-a-production-router"
+  },
+  {
+   "h2": "TACACS+ en resumen",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**TACACS+** (Terminal Access Controller Access-Control System Plus) es el protocolo que usan los dispositivos de red para verificar los inicios de sesión de los ingenieros con un servidor central. Separa la autenticación de la autorización y la contabilidad, cifra todo el intercambio y puede autorizar cada comando por separado."
+    },
+    {
+     "t": "more",
+     "text": "Lea la guía completa: ¿Qué es TACACS+? →",
+     "href": "https://alepo.com/blog/what-is-tacacs-the-complete-guide-for-network-teams/"
+    }
+   ],
+   "id": "tacacs-in-brief"
+  },
+  {
+   "h2": "Acceso con mínimo privilegio para cada ingeniero",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada ingeniero inicia sesión con su propia identidad. El servidor decide qué comandos puede ejecutar esa persona en qué dispositivos, un comando a la vez."
+    },
+    {
+     "t": "p",
+     "text": "Dar de baja a un contratista es un solo cambio en un solo lugar. No hay que tocar ningún dispositivo."
+    }
+   ],
+   "id": "least-privilege-access-for-every-engineer"
+  },
+  {
+   "h2": "Evidencia de auditoría donde trabaja su equipo de seguridad",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada inicio de sesión y cada comando se registran en un historial que deja evidencia de cualquier manipulación. Su equipo de seguridad lo ve en Splunk, Sentinel o QRadar, donde ya trabaja."
+    },
+    {
+     "t": "p",
+     "text": "Los controles están alineados con NIST SP 800-53: MFA, bloqueo de cuentas, política de contraseñas y auditoría. Se incluye un mapa de controles para los auditores."
+    }
+   ],
+   "id": "audit-evidence-where-your-security-team-works"
+  },
+  {
+   "h2": "Administración diaria sin línea de comandos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Una consola web y una API REST reemplazan la línea de comandos en la administración diaria. La IA responde preguntas sobre las decisiones de autorización, por lo que el equipo no depende de un único experto en CLI."
+    },
+    {
+     "t": "p",
+     "text": "Funciona junto a Alepo AAA. La mayoría de los operadores usa RADIUS para los suscriptores y **TACACS+** para el personal."
+    }
+   ],
+   "id": "day-to-day-admin-without-the-command-line"
+  },
+  {
+   "h2": "Migración desde Cisco Secure ACS",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cisco Secure ACS llegó al fin de su vida útil. Alepo **TACACS+** es un sucesor con soporte."
+    },
+    {
+     "t": "p",
+     "text": "Nuestros ingenieros se encargan de la migración y de las pruebas de aceptación, luego capacitan a su equipo, y los ingenieros de GTAC permanecen de guardia 24x7 después del cambio definitivo."
+    },
+    {
+     "t": "more",
+     "text": "Vea la solución para empresas y gobierno →",
+     "href": "/solutions/enterprise-government-networks/"
+    }
+   ],
+   "id": "moving-off-cisco-secure-acs"
+  },
+  {
+   "h2": "IA en TACACS+ Server",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) en la consola de TACACS+ responde preguntas sobre quién tenía permiso para hacer qué, directamente a partir del registro de auditoría. Sus recomendaciones son solo borradores, y superó las pruebas de QA en octubre de 2026. Los ingenieros obtienen la respuesta sin leer registros sin procesar ni esperar a la única persona que conoce la política."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-tacacs-server",
+   "tone": "dark"
+  },
+  {
+   "h2": "Recursos",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Todos los recursos →",
+     "href": "/resources/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Noticias",
+       "Alepo lanza un TACACS+ Server de nivel operador para la administración segura de dispositivos de red"
+      ],
+      [
+       "Blog",
+       "Autenticación de dos factores RADIUS para el personal del operador y servicios empresariales"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+      "https://alepo.com/blog/radius-mfa-two-factor-authentication/"
+     ],
+     "kind": "resources"
+    }
+   ],
+   "id": "resources"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es TACACS+?",
+       "a": "**TACACS+** es un protocolo para la administración de dispositivos. Autentica a los ingenieros que gestionan los dispositivos de red, desde routers hasta firewalls, decide qué comandos puede ejecutar cada uno y registra lo que hicieron."
+      },
+      {
+       "q": "¿En qué se diferencia TACACS+ de RADIUS?",
+       "a": "RADIUS controla el acceso de los suscriptores a la red y combina la autenticación con la autorización. **TACACS+** controla el acceso del personal a los dispositivos, mantiene separados los tres pasos de AAA, cifra todo el intercambio y autoriza cada comando."
+      },
+      {
+       "q": "¿Por qué no mantener cuentas locales en cada dispositivo?",
+       "a": "Las cuentas locales son compartidas, difíciles de eliminar y no dejan un registro central. Un **servidor TACACS** le da a cada ingeniero su propio inicio de sesión y un único registro de auditoría."
+      },
+      {
+       "q": "¿Puede Alepo reemplazar Cisco Secure ACS?",
+       "a": "Sí. Los ingenieros de Alepo migran sus políticas y grupos de dispositivos, los prueban con sus propios dispositivos y dan soporte durante el cambio definitivo."
+      },
+      {
+       "q": "¿Con qué dispositivos funciona?",
+       "a": "Con cualquier dispositivo compatible con **TACACS+**, incluidos routers, switches, firewalls, BNG y BRAS, y controladoras inalámbricas de muchos proveedores."
+      },
+      {
+       "q": "¿Cómo se implementa?",
+       "a": "Sobre Kubernetes, en su centro de datos o en su propia nube, con soporte 24x7 de GTAC."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala el servidor de administración de dispositivos en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve y no haya que actualizar nada más al mismo tiempo. Se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "AAA RADIUS y Diameter para banda ancha y móvil"
+      ],
+      [
+       "Fulfilment Manager",
+       "activación y aprovisionamiento de servicios"
+      ],
+      [
+       "Wi-Fi Offload and Calling",
+       "Wi-Fi de operador y hotspots, además de llamadas por Wi-Fi"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/wifi-offload-calling/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "25 · TACACS+ Server",
+ "pagination": false,
+ "url": "/products/tacacs-server/",
+ "title": "TACACS+ Server para administrar dispositivos de red | Alepo",
+ "titleMarked": "**TACACS+ Server** for **Network Device Administration** | Alepo",
+ "desc": "El servidor TACACS+ de Alepo controla quién entra a cada equipo de red, de routers de núcleo a firewalls, y registra cada comando en una auditoría.",
+ "descMarked": "Alepo **TACACS+ server** controls and records who logs into every network device, from core routers to firewalls, and every command they run, in one audit trail.",
+ "primary": "tacacs+",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Control de acceso",
+   "TACACS+ Server"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**TACACS+ Server para la administración de dispositivos de red**",
+  "lede": [
+   "Reduzca el riesgo de las contraseñas compartidas en sus dispositivos de red y entregue a los auditores su evidencia sin necesidad de un proyecto. Un solo lugar controla y registra cada inicio de sesión y cada comando, desde routers de núcleo hasta firewalls."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA",
+   "Recursos",
+   "Preguntas"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/tacacs-server/"
+  ],
+  "subnavTargets": [
+   "know-who-changed-a-production-router",
+   "tacacs-in-brief",
+   "ai-in-tacacs-server",
+   "resources",
+   "common-questions"
+  ]
+ },
+ "lang": "es"
+}

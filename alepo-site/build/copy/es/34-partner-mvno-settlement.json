@@ -1,0 +1,233 @@
+{
+ "source": "34-partner-mvno-settlement.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué abarca la facturación mayorista de telecomunicaciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Con Partner and MVNO Settlement, usted incorpora socios, tarifica su tráfico y genera facturas e informes de liquidación."
+    },
+    {
+     "t": "p",
+     "text": "Hoy, la mayoría todavía liquida con operadores y marcas asociadas, además de revendedores, en hojas de cálculo, donde las disputas, los registros de uso tardíos y los cambios de tarifas causan fugas de ingresos. La **facturación mayorista de telecomunicaciones** en un solo sistema cierra esas brechas."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Registros de uso de mediación y tarificación. Facturación para el ciclo de facturación y las facturas."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **gestión de socios de telecomunicaciones**, reparto de ingresos, liquidación con revendedores, gestión de relaciones con socios (PRM)"
+    }
+   ],
+   "id": "what-telecom-wholesale-billing-covers"
+  },
+  {
+   "h2": "Registros de uso tardíos que igual se facturan",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los registros de uso tardíos se siguen tarificando y los ajustes se contabilizan. Las tablas de tarifas se mantienen por prefijo y destino, o por pulso."
+    },
+    {
+     "t": "p",
+     "text": "Los cambios de tarifas ya no viven en hojas de cálculo."
+    }
+   ],
+   "id": "late-usage-records-still-billed"
+  },
+  {
+   "h2": "Déficits facturados automáticamente",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los compromisos mensuales y las penalidades por déficit se aplican en el ciclo de facturación."
+    },
+    {
+     "t": "p",
+     "text": "Las marcas asociadas, los revendedores y los operadores se liquidan a partir de los mismos registros."
+    }
+   ],
+   "id": "shortfalls-billed-automatically"
+  },
+  {
+   "h2": "Facturación de interconexión",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La facturación de interconexión está incluida. Los registros de uso provienen de la mediación y la tarificación."
+    },
+    {
+     "t": "p",
+     "text": "Los MVNE y los operadores anfitriones lo usan para facturar a los MVNO que alojan."
+    }
+   ],
+   "id": "interconnect-invoicing"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la facturación mayorista de telecomunicaciones?",
+       "a": "La **facturación mayorista de telecomunicaciones** cobra a otros operadores, MVNO y revendedores por la capacidad de red y los servicios que usan, según las tarifas y los compromisos de cada acuerdo."
+      },
+      {
+       "q": "¿Qué es la liquidación con socios?",
+       "a": "La **liquidación con socios** calcula lo que un operador le debe a cada socio, y lo que cada socio le debe al operador, y luego genera las facturas y los informes para ambas partes."
+      },
+      {
+       "q": "¿Pueden los MVNE usarlo para facturar a los MVNO que alojan?",
+       "a": "Sí. Los MVNE y los operadores anfitriones facturan a los MVNO que alojan a partir de los mismos registros de uso."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Partner and MVNO Settlement",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Partner and MVNO Settlement en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, por lo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Partner and MVNO Settlement se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-partner-and-mvno-settlement"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "Interconnect and Roaming Settlement",
+       "facturación de interconexión entre operadores, con liquidación de roaming en desarrollo"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "34 · Partner and MVNO Settlement",
+ "pagination": false,
+ "url": "/products/partner-mvno-settlement/",
+ "title": "Facturación mayorista telecom y liquidación a socios | Alepo",
+ "titleMarked": "**Telecom Wholesale Billing** and **Partner Settlement** | Alepo",
+ "desc": "La facturación mayorista telecom de Alepo incorpora socios, tarifica su tráfico y genera facturas e informes de liquidación, sin hojas de cálculo.",
+ "descMarked": "Alepo **telecom wholesale billing** onboards partners, rates their traffic and produces invoices and settlement reports, so operators settle without spreadsheets.",
+ "primary": "telecom wholesale billing",
+ "secondary": "telecom partner management, partner settlement",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Partner and MVNO Settlement"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Partner and MVNO Settlement",
+  "lede": [
+   "Cierre las fugas de ingresos en los acuerdos con socios y termine cada mes sin hojas de cálculo. Incorpore socios, tarifique su tráfico y genere facturas e informes de liquidación, para pagar y cobrar correctamente."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/partner-mvno-settlement/"
+  ],
+  "subnavTargets": [
+   "what-telecom-wholesale-billing-covers",
+   "late-usage-records-still-billed",
+   "installing-partner-and-mvno-settlement"
+  ]
+ },
+ "lang": "es"
+}

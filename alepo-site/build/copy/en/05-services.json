@@ -1,0 +1,219 @@
+{
+ "source": "05-services.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Deployment",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every Alepo product ships in containers and installs one standard way, on Kubernetes in your environment."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Installs are an automated, repeatable run.",
+      "A fix goes to the one component that needs it, with rollback ready."
+     ],
+     "hrefs": [
+      null,
+      null
+     ]
+    },
+    {
+     "t": "diagram",
+     "text": "Diagram labels: In your environment: Alepo product · Kubernetes · Run by your team | In your environment: Alepo product · Kubernetes · Run by Alepo",
+     "boxes": [
+      [
+       "In your environment",
+       "Alepo product",
+       "Kubernetes",
+       "Run by your team"
+      ],
+      [
+       "In your environment",
+       "Alepo product",
+       "Kubernetes",
+       "Run by Alepo"
+      ]
+     ]
+    }
+   ],
+   "id": "deployment"
+  },
+  {
+   "h2": "Run by Alepo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "If you have no Kubernetes team, Alepo installs and runs the platform for you on a planned upgrade cycle, with no major-version jumps. Your team needs no platform decision and no Kubernetes skills."
+    }
+   ],
+   "id": "run-by-alepo"
+  },
+  {
+   "h2": "Professional services",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo delivers each project end to end, alongside your team."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Project management and governance",
+      "Customization to your needs",
+      "Data migration",
+      "Acceptance testing",
+      "Training",
+      "On-site installation"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "professional-services"
+  },
+  {
+   "h2": "Forward-deployed engineers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "For operators that want a deeper commitment, Alepo engineers work alongside your team, inside your own projects and change windows."
+    }
+   ],
+   "id": "forward-deployed-engineers"
+  },
+  {
+   "h2": "Support",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every offering is backed by 24x7 technical support from GTAC, Alepo's technical support team."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Technical support engineers with telecom experience",
+      "Escalation straight to the engineering team",
+      "A customer success manager for every customer",
+      "For customers with a support agreement"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "t": "p",
+     "text": "United States: +1 737 313 3952\nIndia: +91 22 6108 5013"
+    }
+   ],
+   "id": "support"
+  },
+  {
+   "h2": "Integration and single sign-on",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A shared layer connects your systems to Alepo and gives staff one secure login."
+    },
+    {
+     "t": "p",
+     "text": "The gateway accepts your existing SOAP or XML, so the provisioning stack needs no rework. Single sign-on works with Okta or Keycloak, and customer messages go out on the right channel."
+    }
+   ],
+   "id": "integration-and-single-sign-on"
+  },
+  {
+   "h2": "Customer success",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every customer has a named customer success manager who knows your network and your contracts and meets your team on a regular cadence to review the roadmap."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Regular reviews of service health and open cases, plus upcoming changes",
+      "A direct line to Alepo product and engineering teams"
+     ],
+     "hrefs": [
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "customer-success"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "05 · Services and Support",
+ "pagination": false,
+ "url": "/services/",
+ "title": "Telecom Software Deployment and Support Services | Alepo",
+ "titleMarked": "**Telecom Software Deployment and Support Services** | Alepo",
+ "desc": "Alepo telecom software deployment and support services: Kubernetes installs run by you or by Alepo, professional services and 24x7 GTAC support.",
+ "descMarked": "Alepo **telecom software deployment and support services**: Kubernetes installs run by you or by Alepo, professional services and 24x7 GTAC support.",
+ "primary": "none (brand and service queries)",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Services"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Services and support",
+  "lede": [
+   "Go live with one team accountable from design to cutover, and stay live with engineers on call around the clock. Alepo delivers each project end to end, on Kubernetes in your environment, operated by your team or by Alepo."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/services/"
+  ]
+ }
+}

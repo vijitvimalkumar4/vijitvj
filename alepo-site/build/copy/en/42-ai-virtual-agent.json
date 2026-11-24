@@ -1,0 +1,260 @@
+{
+ "source": "42-ai-virtual-agent.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What AI customer service should do",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "An **AI customer service agent** on your website and app that answers routine questions around the clock, completes account tasks through the BSS and hands complex cases to people."
+    },
+    {
+     "t": "p",
+     "text": "Contact centers are flooded with routine modem, billing and plan questions. Support stops at office hours. Markets are multilingual. **AI customer service for telecom** has to answer from the customer's own account and plan, which an FAQ page cannot do."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Alepo BSS for account tasks. Selfcare Now and the Self-Care Mobile App. Contact-center agents for hand-off."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: chatbot, virtual agent, virtual assistant, conversational AI, digital assistant, AI self-service, **AI customer service agent**"
+    }
+   ],
+   "id": "what-ai-customer-service-should-do"
+  },
+  {
+   "h2": "Account tasks done without an agent",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "The assistant completes account tasks through the BSS, inside the signed-in customer's own account."
+    },
+    {
+     "t": "p",
+     "text": "Routine modem, billing and plan questions are answered without an agent."
+    }
+   ],
+   "id": "account-tasks-done-without-an-agent"
+  },
+  {
+   "h2": "Help in the customer's language, at any hour",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Support is given in the customer's language, on web and app, around the clock."
+    },
+    {
+     "t": "p",
+     "text": "Complex cases are handed to contact-center agents."
+    }
+   ],
+   "id": "help-in-the-customer-s-language-at-any-hour"
+  },
+  {
+   "h2": "Sales inside the conversation",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your offers appear inside the conversation, such as a travel-data pass or a speed boost."
+    },
+    {
+     "t": "p",
+     "text": "It runs in Selfcare Now and the Self-Care Mobile App."
+    }
+   ],
+   "id": "sales-inside-the-conversation"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "SaskTel launched Lum Mobile as a fully digital brand, with flexible plans and self-service from the start."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "SaskTel · Canada"
+      ],
+      [
+       "Result",
+       "100% digital mobile brand"
+      ],
+      [
+       "Project",
+       "Digital mobile brand"
+      ],
+      [
+       "Highlights",
+       "AI assistant for customer service · Launched as a separate brand"
+      ],
+      [
+       "Profile",
+       "Digital MVNO brand: Lum Mobile. AI Customer Assistant."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is an AI virtual agent?",
+       "a": "An **AI virtual agent** answers customer questions in natural language, on web or app, and can complete simple tasks on the customer's behalf."
+      },
+      {
+       "q": "Can it make changes to a customer's account?",
+       "a": "Yes, through the BSS and only inside the signed-in customer's own account."
+      },
+      {
+       "q": "What happens with complex cases?",
+       "a": "The assistant hands them to a contact-center agent, with the conversation so far."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Where it runs",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "The AI Customer Assistant has been live with subscribers since January 2024. It is built into Selfcare Now (beta) and sold with Alepo self-care and BSS. Complex cases go to people. It works on web and app alike, and answers come from the signed-in customer's own account. When a case goes to a care agent, the full conversation goes with it, so the subscriber does not repeat the question and the agent starts from the same account data. In-chat offers, such as a speed boost, come only from the plans the operator sells."
+    }
+   ],
+   "id": "where-it-runs"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "AI Agent Assist: assistant for care agents and the NOC"
+     ],
+     "hrefs": [
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "42 · AI Virtual Agent (AI Customer Assistant)",
+ "pagination": false,
+ "url": "/products/ai-virtual-agent/",
+ "title": "AI Virtual Agent for Telecom Customer Service | Alepo",
+ "titleMarked": "AI Virtual Agent for Telecom Customer Service | Alepo",
+ "desc": "AI customer service for telecom: an AI virtual agent that answers around the clock, completes account tasks and hands complex cases to people.",
+ "descMarked": "**AI customer service** for telecom: an **AI virtual agent** that answers around the clock, completes account tasks and hands complex cases to people.",
+ "primary": "ai customer service telecom",
+ "secondary": "ai virtual agent, ai customer service agent",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "AI",
+   "AI Customer Assistant"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "AI Virtual Agent for telecom",
+  "lede": [
+   "Serve subscribers at any hour, and save your agents for the cases that need a person. The AI Customer Assistant answers routine questions on web and app and completes account tasks through the BSS."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI",
+   "Customer story"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/ai-for-telecom/",
+   "/products/ai-virtual-agent/"
+  ],
+  "subnavTargets": [
+   "what-ai-customer-service-should-do",
+   "account-tasks-done-without-an-agent",
+   "what-ai-customer-service-should-do",
+   "customer-story"
+  ]
+ }
+}

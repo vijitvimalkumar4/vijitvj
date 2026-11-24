@@ -1,0 +1,177 @@
+{
+ "source": "46-provisioning-devices.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Products",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Fulfilment Manager",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Service provisioning and activation** across every network element, from one order. Every step is tracked, retried on failure and recorded."
+      },
+      {
+       "t": "more",
+       "text": "Explore Fulfilment Manager →",
+       "href": "/products/service-provisioning/"
+      }
+     ],
+     "href": "/products/service-provisioning/"
+    },
+    {
+     "t": "sub",
+     "h3": "Home Router and ONT Management",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "Remote setup, firmware upgrades and diagnostics for home routers and ONTs, through a **TR-069 ACS** and a **TR-369 USP** controller."
+      },
+      {
+       "t": "more",
+       "text": "Explore Home Router and ONT Management →",
+       "href": "/products/device-management/"
+      }
+     ],
+     "href": "/products/device-management/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "From order to working service",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Order:** the BSS or CRM sends one order",
+      "**Activate:** Fulfilment Manager configures the AAA, policy, OLT and other network elements",
+      "Configure: the home router or ONT receives its baseline settings on first contact (beta)",
+      "**Confirm:** the service is tested and the subscriber is told it is live"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "from-order-to-working-service"
+  },
+  {
+   "h2": "What changes for your team",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Fewer truck rolls:** routers take their baseline settings on first contact and are fixed remotely (beta)",
+      "**Fewer stuck orders:** failed steps retry and surface with a reason",
+      "**One place to look:** care and NOC teams see every order and every device",
+      "**Standard install:** containers and one automated install guide, with rollback ready"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "what-changes-for-your-team"
+  },
+  {
+   "h2": "Frequently asked questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is service provisioning in telecom?",
+       "a": "Service provisioning sets up a subscriber's service on every network system it depends on, so the service works as soon as it is sold."
+      },
+      {
+       "q": "What is the difference between TR-069 and TR-369?",
+       "a": "TR-069 is the established protocol for remote management of home devices. TR-369, also called USP, is its successor and adds real-time control and better scale. Alepo supports both."
+      },
+      {
+       "q": "Do you work with our existing routers and network equipment?",
+       "a": "Yes. Both products use standard protocols and connect to equipment from many vendors."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us how you activate services today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "46 · Provisioning & Devices",
+ "pagination": false,
+ "url": "/products/provisioning-devices/",
+ "title": "Service Provisioning and Device Management | Alepo",
+ "titleMarked": "**Service Provisioning and Device Management** | Alepo",
+ "desc": "Service provisioning and device management for operators: automated service activation and TR-069 and TR-369 management of home routers and ONTs.",
+ "descMarked": "**Service provisioning** and **device management** for operators: automated service activation and **TR-069 and TR-369** management of home routers and ONTs.",
+ "primary": "none (category overview). Product terms link to their own pages.",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Products",
+   "Provisioning & Devices"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Service provisioning and device management**",
+  "lede": [
+   "Start earning the moment the service works in the subscriber's home. You activate the service across your network and configure the router that delivers it, without a truck roll."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   null
+  ]
+ }
+}

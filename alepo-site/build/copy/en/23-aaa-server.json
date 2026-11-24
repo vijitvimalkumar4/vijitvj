@@ -1,0 +1,345 @@
+{
+ "source": "23-aaa-server.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What an old AAA server costs you",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "An **AAA server** that is end of life or built in-house turns every plan change into a reconnect and every connection fault into a ticket for one of a few experts. It also caps subscriber growth."
+    },
+    {
+     "t": "p",
+     "text": "Every subscriber session on your network passes through Alepo AAA, an **AAA RADIUS server** that checks who is connecting and sets what the session may do, then records the usage for billing."
+    },
+    {
+     "t": "p",
+     "text": "One server handles **RADIUS and Diameter** with one subscriber database for fixed and mobile access, Wi-Fi included, and billing changes reach sessions in real time."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Protocols",
+       "RADIUS and Diameter"
+      ],
+      [
+       "Networks",
+       "Fiber, cable, fixed wireless, Wi-Fi and mobile"
+      ],
+      [
+       "Works with",
+       "BNG and BRAS, Wi-Fi controllers and the mobile packet core. CRM and billing."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: **RADIUS server**, Diameter AAA, 3GPP AAA, broadband AAA, subscriber authentication, access policy server"
+    }
+   ],
+   "id": "what-an-old-aaa-server-costs-you"
+  },
+  {
+   "h2": "Upgrades work the moment they're sold",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A customer who buys a speed upgrade gets it in the session they are already in, with no reconnect and no call to the helpdesk. The router does not restart."
+    },
+    {
+     "t": "p",
+     "text": "Non-payment holds work the same way, and payment restores full speed on its own. Prepaid volume and time are counted while the session runs, and when a quota ends, the session is slowed, sent to a top-up page or stopped, as the plan says."
+    },
+    {
+     "t": "p",
+     "text": "The change travels over RADIUS Change of Authorization from billing to the live session."
+    }
+   ],
+   "id": "upgrades-work-the-moment-they-re-sold"
+  },
+  {
+   "h2": "Care answers connection calls without escalating",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A care agent sees why a sign-in was rejected and refreshes the session from the same screen. Connection calls stop queuing for a network engineer."
+    },
+    {
+     "t": "p",
+     "text": "Live sessions and their history sit in one console, searchable by subscriber. The NOC works from the same view, so care and network teams look at the same facts."
+    }
+   ],
+   "id": "care-answers-connection-calls-without-escalating"
+  },
+  {
+   "h2": "RADIUS and Diameter on one server",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Fiber, cable, fixed wireless, Wi-Fi and mobile subscribers follow one set of policies in one database. A new plan is built once and works on every network you run."
+    },
+    {
+     "t": "p",
+     "text": "Fixed broadband features are built in: IPoE sign-in, VLAN-based identification and DHCP Option 82. REST and SOAP interfaces connect your CRM and billing stack, plus provisioning, whether Alepo's or your own."
+    }
+   ],
+   "id": "radius-and-diameter-on-one-server"
+  },
+  {
+   "h2": "Replace your AAA, keep the systems around it",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your CRM, billing and network integrations stay where they are. Live traffic moves only after acceptance tests pass against your own network elements."
+    },
+    {
+     "t": "p",
+     "text": "Alepo engineers start by reviewing your current policies and integrations, and they agree the cutover plan with your team before any subscriber data or live traffic moves. GTAC engineers support the cutover. They stay on call 24x7 afterward."
+    }
+   ],
+   "id": "replace-your-aaa-keep-the-systems-around-it"
+  },
+  {
+   "h2": "AI in AAA Server",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) sits in the AAA operations console. Care agents and NOC engineers ask why a subscriber cannot connect, and get the reason from live session data. It is read-only, so a person takes every action, and the console assistant was built from a large fiber operator's top 18 support cases, and it is shown in demos as a beta step."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-aaa-server",
+   "tone": "dark"
+  },
+  {
+   "h2": "Installation",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Alepo AAA in containers, one standard way, from the same automated guide as every Alepo product."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short. It runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "STC tripled AAA performance and subscriber capacity on Alepo AAA, with no downtime during the data migration."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "STC · Saudi Arabia"
+      ],
+      [
+       "Result",
+       "3x AAA performance and subscriber capacity"
+      ],
+      [
+       "Project",
+       "AAA upgrade"
+      ],
+      [
+       "Highlights",
+       "10x improvement in API response time · Zero downtime during data migration"
+      ],
+      [
+       "Profile",
+       "Tier-1 mobile network operator. AAA Server."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Resources",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "All resources →",
+     "href": "/resources/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "Datasheet",
+       "AAA Server Datasheet"
+      ],
+      [
+       "Case study",
+       "Wind Telecom Doubles Subscriber Base with Alepo AAA Server"
+      ],
+      [
+       "Blog",
+       "RADIUS Proxy Explained"
+      ]
+     ],
+     "hrefs": [
+      "https://cdn.alepo.com/uploads/2025/09/Datasheet-AAA-Server.pdf",
+      "https://alepo.com/library/wind-telecom-doubles-subscriber-base-with-alepo-aaa-server/",
+      "https://alepo.com/blog/radius-proxy-explained/"
+     ],
+     "kind": "resources"
+    }
+   ],
+   "id": "resources"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What does an AAA server do?",
+       "a": "It authenticates each subscriber, decides what the session is allowed to do, and records the usage. Alepo AAA does this for fiber, cable, fixed-wireless, Wi-Fi and mobile networks."
+      },
+      {
+       "q": "Can it replace an AAA that is end of life or built in-house?",
+       "a": "Yes. Alepo engineers review your current policies and integrations, move subscriber data and test against your own network before cutover. CRM, billing and network integrations stay in place."
+      },
+      {
+       "q": "Can a plan change apply without the customer reconnecting?",
+       "a": "Yes. Plan upgrades, speed boosts and non-payment restrictions reach the live session through RADIUS Change of Authorization. The customer does not reconnect."
+      },
+      {
+       "q": "Which network equipment does it work with?",
+       "a": "Alepo AAA uses standard **RADIUS authentication** and the **Diameter protocol**, so it works with BNG and BRAS, Wi-Fi controllers and mobile packet cores from many vendors."
+      },
+      {
+       "q": "How is it deployed?",
+       "a": "On Kubernetes in your environment, from one standard container install, with 24x7 support from GTAC. AAA 14 already runs on Kubernetes in production."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Bring your current AAA setup and the next plan you want to launch. We'll show you how the switch would run on a network like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "23 · AAA Server",
+ "pagination": false,
+ "url": "/products/aaa-server/",
+ "title": "AAA Server for Operators: RADIUS and Diameter | Alepo",
+ "titleMarked": "**AAA Server** for Operators: **RADIUS and Diameter** | Alepo",
+ "desc": "Alepo AAA server keeps only paying customers online, at the speed they bought. Plan changes and payment holds reach live sessions with no reconnect.",
+ "descMarked": "Alepo **AAA server** keeps only paying customers online, at the speed they bought. Plan changes and payment holds reach live sessions with no reconnect.",
+ "primary": "aaa server",
+ "secondary": "aaa radius server, radius server, radius authentication, diameter protocol",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "Access control",
+   "AAA Server"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**AAA Server for telecom operators**",
+  "lede": [
+   "Protect revenue on every session and cut the connection calls that tie up your engineers. Only paying customers get online, at the speed they bought, and your helpdesk sees why any sign-in failed."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI",
+   "Customer story",
+   "Resources",
+   "Questions"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/aaa-server/"
+  ],
+  "subnavTargets": [
+   "what-an-old-aaa-server-costs-you",
+   "upgrades-work-the-moment-they-re-sold",
+   "ai-in-aaa-server",
+   "customer-story",
+   "resources",
+   "common-questions"
+  ]
+ }
+}

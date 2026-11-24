@@ -1,0 +1,240 @@
+{
+ "source": "37-self-care-portal.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **customer portal software**"
+ ],
+ "sections": [
+  {
+   "h2": "What self-service portal software does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Selfcare Now is a white-label website where customers sign up and pay, and get help when they need it. It connects to Alepo CRM and the AI Customer Assistant. A mobile app is in beta."
+    },
+    {
+     "t": "p",
+     "text": "Self-care at many operators is dated, and slow sign-up and payment flows push customers to the call center and make the operator look behind its competitors. Selfcare Now turns those visits into completed tasks."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Alepo CRM and billing, plus online charging. Payment gateways. The AI Customer Assistant."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: self-care portal, web self-care, **customer portal software**, My Account, eCare, digital onboarding"
+    }
+   ],
+   "id": "what-self-service-portal-software-does"
+  },
+  {
+   "h2": "Your brand in more than 30 languages",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A white-label website in more than 30 languages, including right-to-left."
+    },
+    {
+     "t": "p",
+     "text": "It carries your brand."
+    }
+   ],
+   "id": "your-brand-in-more-than-30-languages"
+  },
+  {
+   "h2": "Bills paid without a call",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Customers pay by card, set up auto-pay and get payment reminders."
+    },
+    {
+     "t": "p",
+     "text": "Sign-up and payment are short, so fewer customers end up in the call center."
+    }
+   ],
+   "id": "bills-paid-without-a-call"
+  },
+  {
+   "h2": "Flows tailored to your operation",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your flows are tailored to how you work and connected to Alepo CRM."
+    },
+    {
+     "t": "p",
+     "text": "The AI Customer Assistant answers inside the same pages."
+    }
+   ],
+   "id": "flows-tailored-to-your-operation"
+  },
+  {
+   "h2": "AI in Selfcare Now",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "The AI Customer Assistant is built in. It answers routine questions around the clock and completes account tasks inside the signed-in customer's own account. Complex cases go to a care agent, and offers such as a travel-data pass can appear inside the conversation."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-selfcare-now",
+   "tone": "dark"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is self-service portal software?",
+       "a": "**Self-service portal software** lets customers manage their own accounts online: sign up, pay bills, change plans and solve common problems without calling."
+      },
+      {
+       "q": "Is there a mobile app as well?",
+       "a": "Yes, in beta. The Selfcare Now app offers the same tasks, and is not yet published in the app stores."
+      },
+      {
+       "q": "Which languages are supported?",
+       "a": "More than 30, including right-to-left languages."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installation",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Selfcare Now in containers, one standard way, like every Alepo product. When something needs fixing, the patch goes only to the component affected, with rollback ready. It runs in your environment, with 24x7 support from GTAC."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Alepo CRM",
+       "customer care workspace with AI"
+      ],
+      [
+       "Self-Care Mobile App",
+       "branded self-care app (beta)"
+      ],
+      [
+       "Mobile POS",
+       "customer sign-up and top-ups, plus bill payments, for dealers"
+      ]
+     ],
+     "hrefs": [
+      "/products/crm/",
+      "/products/self-care-app/",
+      "/products/dealer-mobile-pos/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "37 · Self-Care Portal (Selfcare Now)",
+ "pagination": false,
+ "url": "/products/self-care-portal/",
+ "title": "Self-Service Portal Software for Telecom | Alepo",
+ "titleMarked": "**Self-Service Portal Software** for Telecom | Alepo",
+ "desc": "Selfcare Now is Alepo's self-service portal software for telecom: a branded website where customers sign up, pay and get help, in more than 30 languages.",
+ "descMarked": "Selfcare Now is Alepo's **self-service portal software** for telecom: a branded website where customers sign up, pay and get help, in more than 30 languages.",
+ "primary": "self service portal software",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "Channels and care",
+   "Selfcare Now"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "Telecom Self-Care Portal",
+  "lede": [
+   "Take routine calls out of your call center as customers sign up and pay online, and get help when they need it. Selfcare Now is **self-service portal software** under your brand."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/self-care-portal/"
+  ],
+  "subnavTargets": [
+   "what-self-service-portal-software-does",
+   "your-brand-in-more-than-30-languages",
+   "ai-in-selfcare-now"
+  ]
+ }
+}

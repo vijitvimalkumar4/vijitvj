@@ -46,7 +46,7 @@ const KINDS = {
   datasheet: { required: ['email'], label: 'Data sheet request' },
   newsletter: { required: ['email'], label: 'Newsletter sign-up' },
 };
-const FIELDS = { fullname: 120, email: 254, company: 160, request: 40, requestLabel: 80, product: 80, operatorType: 80, message: 4000, lang: 5, page: 500, title: 200, consent: 400, thanks: 200, website: 200,
+const FIELDS = { fullname: 120, email: 254, company: 160, country: 80, request: 40, requestLabel: 80, product: 80, operatorType: 80, message: 4000, lang: 5, page: 500, title: 200, consent: 400, thanks: 200, website: 200,
   docTitle: 200, docUrl: 500, utmSource: 120, utmMedium: 120, utmCampaign: 160, utmTerm: 160, utmContent: 160, referrer: 500, landing: 500 };
 // personal mailboxes: accepted, but flagged so sales can triage
 const FREE_MAIL = new Set(['gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.in', 'hotmail.com', 'outlook.com', 'live.com', 'msn.com', 'icloud.com', 'me.com', 'aol.com', 'proton.me', 'protonmail.com', 'gmx.com', 'gmx.de', 'mail.com', 'yandex.com', 'yandex.ru', 'zoho.com', 'rediffmail.com', 'qq.com', '163.com', 'web.de', 'hotmail.es', 'yahoo.es', 'outlook.es']);
@@ -89,7 +89,7 @@ const clientIp = req => (process.env.TRUST_PROXY && req.headers['x-forwarded-for
 function store(kind, f, req) {
   const lead = {
     id: crypto.randomUUID(), receivedAt: new Date().toISOString(), form: kind,
-    fullname: f.fullname, email: f.email, company: f.company, request: f.request, requestLabel: f.requestLabel,
+    fullname: f.fullname, email: f.email, company: f.company, country: f.country, request: f.request, requestLabel: f.requestLabel,
     product: f.product || f.docTitle, operatorType: f.operatorType, message: f.message, lang: f.lang, page: f.page, consentText: f.consent,
     freeMail: FREE_MAIL.has(String(f.email).split('@')[1]?.toLowerCase() || ''),
     utmSource: f.utmSource, utmMedium: f.utmMedium, utmCampaign: f.utmCampaign, utmTerm: f.utmTerm, utmContent: f.utmContent,
@@ -104,6 +104,7 @@ function notify(lead, delivery) {
   const lines = [`New ${KINDS[lead.form].label} from alepo.com`, `${lead.fullname || '(no name)'} <${lead.email}>${lead.company ? ', ' + lead.company : ''}`];
   if (lead.requestLabel) lines.push(`Request: ${lead.requestLabel}`);
   if (lead.product) lines.push(`Product: ${lead.product}`);
+  if (lead.country) lines.push(`Country: ${lead.country}`);
   if (lead.operatorType) lines.push(`Operator type: ${lead.operatorType}`);
   if (lead.freeMail) lines.push('Note: personal email address');
   const src = [lead.utmSource, lead.utmMedium, lead.utmCampaign].filter(Boolean).join(' / ');
@@ -114,7 +115,7 @@ function notify(lead, delivery) {
   postWebhook(lines.join('\n'));
 }
 function csv() {
-  const cols = ['receivedAt', 'form', 'fullname', 'email', 'freeMail', 'company', 'operatorType', 'requestLabel', 'product', 'message', 'lang', 'page', 'landing', 'referrer', 'utmSource', 'utmMedium', 'utmCampaign', 'utmTerm', 'utmContent', 'consentText', 'id'];
+  const cols = ['receivedAt', 'form', 'fullname', 'email', 'freeMail', 'company', 'country', 'operatorType', 'requestLabel', 'product', 'message', 'lang', 'page', 'landing', 'referrer', 'utmSource', 'utmMedium', 'utmCampaign', 'utmTerm', 'utmContent', 'consentText', 'id'];
   // values starting with = + - @ are prefixed with ' so spreadsheets never run them as formulas
   const esc = v => { let s = String(v ?? ''); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
   const rows = readLeads();

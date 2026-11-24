@@ -1,0 +1,287 @@
+{
+ "source": "26-wifi-offload-calling.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **wifi offloading**"
+ ],
+ "sections": [
+  {
+   "h2": "Cobertura donde termina la radio",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los suscriptores móviles se conectan al Wi-Fi con su SIM. Las llamadas continúan donde termina la cobertura de radio. Los establecimientos obtienen un inicio de sesión con su marca y pases de pago en los puntos de acceso que ya tienen."
+    },
+    {
+     "t": "p",
+     "text": "Un operador móvil sin cobertura de radio completa pierde clientes de datos y de voz, y los hotspots de los establecimientos cuestan dinero porque los usuarios no pagan cuando termina el período gratuito. La **descarga de tráfico a Wi-Fi** convierte ese Wi-Fi existente en cobertura e ingresos."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Puntos de acceso y controladoras Wi-Fi ya instalados. El HSS y el núcleo móvil del operador para el inicio de sesión con SIM y las llamadas por Wi-Fi. Alepo AAA."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: Wi-Fi AAA, inicio de sesión EAP-SIM y EAP-AKA, VoWiFi, portal de hotspot, monetización de Wi-Fi"
+    }
+   ],
+   "id": "coverage-where-radio-ends"
+  },
+  {
+   "h2": "Una sola política en Wi-Fi y móvil",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada suscriptor tiene una sola política y un solo registro de uso, en Wi-Fi o en la red móvil. La descarga y las llamadas por Wi-Fi funcionan sobre el mismo AAA que se usa para la banda ancha fija y móvil."
+    },
+    {
+     "t": "p",
+     "text": "Sus clientes permanecen en su servicio cuando salen de la cobertura de radio, tanto para datos como para voz."
+    }
+   ],
+   "id": "one-policy-on-wi-fi-and-mobile"
+  },
+  {
+   "h2": "Wi-Fi de pago en los puntos de acceso de los establecimientos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los hotspots funcionan en los puntos de acceso Meraki, Aruba, Ruckus y Cambium ya instalados. No se reemplaza ningún hardware."
+    },
+    {
+     "t": "p",
+     "text": "Los establecimientos obtienen un inicio de sesión con su marca y pueden vender pases de pago después del período gratuito."
+    }
+   ],
+   "id": "paid-wi-fi-on-the-access-points-venues-own"
+  },
+  {
+   "h2": "Llamadas de voz por Wi-Fi",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los suscriptores móviles inician sesión automáticamente con su SIM o eSIM. Las llamadas continúan por Wi-Fi."
+    },
+    {
+     "t": "p",
+     "text": "El HSS y el núcleo móvil del operador gestionan el inicio de sesión, por lo que no hay una contraseña aparte."
+    }
+   ],
+   "id": "voice-calls-over-wi-fi"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un ISP centroamericano lanzó Wi-Fi público a nivel nacional bajo un contrato gubernamental, en una plataforma lista para operar y que cumple la normativa."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "ISP de Centroamérica · Centroamérica"
+      ],
+      [
+       "Resultado",
+       "1,3M de usuarios en los primeros tres meses"
+      ],
+      [
+       "Proyecto",
+       "Wi-Fi público"
+      ],
+      [
+       "Aspectos destacados",
+       "Cumplimiento normativo total · Despliegue en la nube"
+      ],
+      [
+       "Perfil",
+       "Proveedor de servicios de internet. Wi-Fi Offload and Calling."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la descarga Wi-Fi?",
+       "a": "La **descarga Wi-Fi** traslada el tráfico de datos móviles de la red de radio al Wi-Fi. Los suscriptores permanecen en el servicio de su operador mientras la red celular soporta menos carga."
+      },
+      {
+       "q": "¿Los suscriptores necesitan una app o una contraseña?",
+       "a": "No. Inician sesión automáticamente con su SIM o eSIM, mediante EAP-SIM o EAP-AKA a través de su HSS."
+      },
+      {
+       "q": "¿Se necesitan puntos de acceso nuevos?",
+       "a": "No. Funciona en los puntos de acceso Meraki, Aruba, Ruckus y Cambium ya instalados."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Wi-Fi Offload and Calling",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Wi-Fi Offload and Calling en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas. La descarga y las llamadas por Wi-Fi comparten una sola instalación."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve y no haya que actualizar nada más al mismo tiempo. Wi-Fi Offload and Calling se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-wi-fi-offload-and-calling"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "AAA RADIUS y Diameter para banda ancha y móvil"
+      ],
+      [
+       "Fulfilment Manager",
+       "activación y aprovisionamiento de servicios"
+      ],
+      [
+       "TACACS+ Server",
+       "administración de dispositivos y control de comandos"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/service-provisioning/",
+      "/products/tacacs-server/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "26 · Wi-Fi Offload and Calling",
+ "pagination": false,
+ "url": "/products/wifi-offload-calling/",
+ "title": "Descarga Wi-Fi y llamadas por Wi-Fi para operadores | Alepo",
+ "titleMarked": "Wi-Fi Offload and Wi-Fi Calling for Operators | Alepo",
+ "desc": "Descarga Wi-Fi para operadores móviles: el suscriptor entra con su SIM y llama donde acaba la radio. Los recintos tienen login de marca y pases pagos.",
+ "descMarked": "**Wi-Fi offload** for mobile operators: subscribers join Wi-Fi with their SIM and keep calling where radio coverage ends. Venues get branded login and paid passes.",
+ "primary": "wifi offload",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Control de acceso",
+   "Wi-Fi Offload and Calling"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Wi-Fi Offload and Calling para operadores móviles",
+  "lede": [
+   "Conserve los ingresos de los suscriptores fuera de la cobertura de radio y genere ingresos con los hotspots de los establecimientos. Los suscriptores se conectan al Wi-Fi con su SIM y siguen llamando, y los establecimientos venden pases de pago."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación",
+   "Caso de éxito"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/wifi-offload-calling/"
+  ],
+  "subnavTargets": [
+   "coverage-where-radio-ends",
+   "one-policy-on-wi-fi-and-mobile",
+   "installing-wi-fi-offload-and-calling",
+   "customer-story"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,474 @@
+{
+ "source": "01-home.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Resultados en redes en producción",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Estos resultados provienen de actualizaciones y migraciones realizadas en redes en producción que no podían detenerse, y de lanzamientos que tenían que funcionar para los suscriptores desde el primer día."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Cifra",
+      "Resultado",
+      "Cliente"
+     ],
+     "rows": [
+      [
+       "3x",
+       "Rendimiento de AAA y capacidad de suscriptores",
+       "STC"
+      ],
+      [
+       "13",
+       "Mercados migrados sin tiempo de inactividad",
+       "Digicel"
+      ],
+      [
+       "109",
+       "Días para migrar 235.000 suscriptores",
+       "Eswatini Mobile"
+      ],
+      [
+       "1,3M",
+       "Usuarios en los primeros tres meses",
+       "ISP de Centroamérica"
+      ]
+     ],
+     "kind": "stats"
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    }
+   ],
+   "id": "results-on-live-networks"
+  },
+  {
+   "h2": "Productos",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Software de control de acceso y BSS para operadores. Utilice la plataforma completa o comience con el único producto que necesita."
+    },
+    {
+     "t": "more",
+     "text": "Todos los productos →",
+     "href": "/products/"
+    },
+    {
+     "t": "sub",
+     "h3": "Control de acceso",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Decida quién entra a su red y qué puede hacer una vez dentro."
+      },
+      {
+       "t": "list",
+       "items": [
+        "AAA Server: autenticación **RADIUS y Diameter** a escala de operador",
+        "TACACS+ Server: control por comando de cada inicio de sesión en dispositivos de red",
+        "Home Router and ONT Management: gestión de dispositivos con **ACS TR-069 y USP TR-369** (beta)",
+        "Fulfilment Manager: **aprovisionamiento de servicios** y activación",
+        "Wi-Fi Offload and Calling: traslade los datos móviles y la voz a Wi-Fi",
+        "Subscriber Data Management: **HSS para 4G e IMS**"
+       ],
+       "hrefs": [
+        "/products/aaa-server/",
+        "/products/tacacs-server/",
+        "/products/device-management/",
+        "/products/service-provisioning/",
+        "/products/wifi-offload-calling/",
+        "/products/subscriber-data-management/"
+       ]
+      }
+     ],
+     "href": "/products/network-access-aaa/"
+    },
+    {
+     "t": "sub",
+     "h3": "BSS y monetización",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Venda, tarifique, facture, cobre y atienda a cada suscriptor, en tiempo real."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Digital BSS: el BSS completo para operaciones grandes y complejas",
+        "BSS in a Box: un BSS listo para usar para lanzamientos de **MVNO**",
+        "Online Charging: tarificación en tiempo real para prepago y pospago",
+        "Policy Control: políticas **PCRF y PCF** para cada sesión",
+        "Prepaid Offers and Vouchers: vouchers de recarga y paquetes prepago",
+        "Mediation Studio: **mediación de telecomunicaciones y aseguramiento de ingresos** (en desarrollo)",
+        "Collections and Dunning: recordatorios automatizados, con suspensiones y restablecimientos vinculados al pago",
+        "Partner and MVNO Settlement: **facturación mayorista** y reparto de ingresos con socios",
+        "Interconnect and Roaming Settlement: facturación de interconexión, con liquidación de roaming en desarrollo",
+        "Alepo CRM: **CRM de telecomunicaciones** para atención al cliente (beta)",
+        "Selfcare Now: **portal de autoservicio** para suscriptores (beta)",
+        "Self-Care Mobile App: una app de autogestión con su marca (beta)",
+        "Mobile POS: una app para distribuidores para ventas y activación de SIM"
+       ],
+       "hrefs": [
+        "/products/digital-bss/",
+        "/products/bss-in-a-box/",
+        "/products/online-charging/",
+        "/products/policy-control/",
+        "/products/prepaid-offers-vouchers/",
+        "/products/mediation-revenue-assurance/",
+        "/products/collections-dunning/",
+        "/products/partner-mvno-settlement/",
+        "/products/interconnect-roaming-settlement/",
+        "/products/crm/",
+        "/products/self-care-portal/",
+        "/products/self-care-app/",
+        "/products/dealer-mobile-pos/"
+       ]
+      }
+     ],
+     "href": "/products/billing-bss/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "Operaciones de red con IA",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La IA está dentro de las consolas y los canales de Alepo que usan sus equipos y sus suscriptores, y responde a partir de datos en tiempo real."
+    },
+    {
+     "t": "p",
+     "text": "Su personal consulta a AI Agent Assist (beta) en las consolas de AAA, TACACS+ y CRM. Sus suscriptores consultan al AI Customer Assistant en la web y la app."
+    },
+    {
+     "t": "list",
+     "items": [
+      "AI Agent Assist: un asistente para agentes de atención y el NOC (beta)",
+      "AI Customer Assistant: un agente virtual para sus canales web y app"
+     ],
+     "hrefs": [
+      "/products/ai-agent-assist/",
+      "/products/ai-virtual-agent/"
+     ]
+    },
+    {
+     "t": "more",
+     "text": "**IA en los productos de Alepo** →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Soluciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Comience por la red que opera."
+    },
+    {
+     "t": "more",
+     "text": "Todas las soluciones →",
+     "href": "/solutions/"
+    },
+    {
+     "t": "sub",
+     "h3": "ISP de fibra y cable",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Autenticación, activación y gestión de routers domésticos del lado de la red. Facturación, cobranza y atención del lado del negocio."
+      },
+      {
+       "t": "more",
+       "text": "Ver soluciones para ISP →",
+       "href": "/solutions/fibre-cable-isps/"
+      }
+     ],
+     "href": "/solutions/fibre-cable-isps/"
+    },
+    {
+     "t": "sub",
+     "h3": "Operadores móviles",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Tarificación y políticas en tiempo real, Wi-Fi donde termina la cobertura de radio y un solo BSS para prepago y pospago."
+      },
+      {
+       "t": "more",
+       "text": "Ver soluciones móviles →",
+       "href": "/solutions/mobile-operators/"
+      }
+     ],
+     "href": "/solutions/mobile-operators/"
+    },
+    {
+     "t": "sub",
+     "h3": "MVNO y MVNE",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Un paquete de lanzamiento definido para una nueva marca. Tarificación en tiempo real y liquidación para un habilitador que aloja varias."
+      },
+      {
+       "t": "more",
+       "text": "Ver soluciones para MVNO →",
+       "href": "/solutions/mvnos-mvnes/"
+      }
+     ],
+     "href": "/solutions/mvnos-mvnes/"
+    },
+    {
+     "t": "sub",
+     "h3": "Wi-Fi y recintos",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Inicio de sesión automático con SIM y llamadas por Wi-Fi para suscriptores móviles. Un inicio de sesión con su marca y pases de pago para recintos."
+      },
+      {
+       "t": "more",
+       "text": "Ver soluciones Wi-Fi →",
+       "href": "/solutions/wifi-venues/"
+      }
+     ],
+     "href": "/solutions/wifi-venues/"
+    },
+    {
+     "t": "sub",
+     "h3": "Redes empresariales y gubernamentales",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Un solo lugar que controla quién inicia sesión en cada dispositivo de red, desde routers de núcleo hasta firewalls, y registra cada comando que ejecuta."
+      },
+      {
+       "t": "more",
+       "text": "Ver soluciones empresariales →",
+       "href": "/solutions/enterprise-government-networks/"
+      }
+     ],
+     "href": "/solutions/enterprise-government-networks/"
+    }
+   ],
+   "id": "solutions"
+  },
+  {
+   "h2": "Testimonio de cliente",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "“Alepo ha sido un socio flexible para nosotros, que se esfuerza por comprender nuestras necesidades particulares y entrega soluciones que ofrecen un ROI rápido.”"
+    },
+    {
+     "t": "p",
+     "text": "Buckeye Broadband"
+    }
+   ],
+   "id": "customer-quote",
+   "role": "quote"
+  },
+  {
+   "h2": "Por qué los operadores eligen **Alepo Technologies**",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**Alepo Technologies** desarrolla software de control de acceso y BSS para proveedores de servicios de comunicaciones, con IA integrada en ambos. Lo utilizan operadores de todos los tamaños, desde MVNO que preparan un lanzamiento hasta grupos tier-1 que atienden a millones de suscriptores en varios continentes."
+    },
+    {
+     "t": "more",
+     "text": "Acerca de Alepo →",
+     "href": "/company/about/"
+    },
+    {
+     "t": "sub",
+     "h3": "Integración",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Cada producto funciona por sí solo, junto con otros productos de **Alepo** o con los sistemas que ya tiene. La mayoría de los clientes comienza con uno."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Implementación",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Nativo de la nube sobre Kubernetes, instalado en su entorno con una única instalación estándar de contenedores, y operado por su equipo o por Alepo."
+      }
+     ],
+     "href": "/services/#deployment"
+    },
+    {
+     "t": "sub",
+     "h3": "Entrega",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Los ingenieros de **Alepo** se encargan de la migración y las pruebas de aceptación, y luego capacitan a su equipo, en sitio cuando es necesario."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Soporte",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Soporte técnico las 24 horas desde nuestro GTAC, atendido por ingenieros, además de un gerente de éxito del cliente para cada cliente."
+      }
+     ],
+     "href": "/services/#support"
+    }
+   ],
+   "id": "why-operators-choose-alepo-technologies"
+  },
+  {
+   "h2": "Noticias y eventos",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Todas las noticias →",
+     "href": "/news/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Elemento"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "Un operador tier-1 de Indonesia elige Alepo AAA para reemplazar su plataforma heredada · Leer →"
+      ],
+      [
+       "Producto",
+       "Alepo lanza un TACACS+ Server de nivel operador para la administración segura de dispositivos de red · Leer →"
+      ],
+      [
+       "Cliente",
+       "Alepo y Nomios implementan una solución AAA avanzada para VodafoneZiggo · Leer →"
+      ],
+      [
+       "Evento",
+       "Africa Tech Festival · 17 al 19 de noviembre de 2026 · Ciudad del Cabo, Sudáfrica"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/news/tier-1-indonesia-operator-selects-alepo-aaa-broadband-transformation/",
+      "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+      "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/",
+      null
+     ],
+     "kind": "newsrows"
+    }
+   ],
+   "id": "news-and-events"
+  },
+  {
+   "h2": "Hable con nosotros",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos sobre su red. Le mostraremos los productos en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "talk-to-us",
+   "role": "cta"
+  }
+ ],
+ "doc": "01 · Home",
+ "title": "Software AAA y BSS para operadores de telecom | Alepo",
+ "titleMarked": "**AAA and BSS Software for Telecom Operators** | **Alepo**",
+ "desc": "Alepo crea software de AAA, tarificación, facturación e IA para operadores, ISP y MVNO. Nativo de la nube, de nivel operador, operando desde 2004.",
+ "descMarked": "**Alepo Technologies** builds **AAA**, charging, billing and AI software for **telecom operators**, ISPs and MVNOs. Cloud-native, carrier-grade, in production since 2004.",
+ "primary": "alepo technologies",
+ "url": "/",
+ "hero": {
+  "crumbs": null,
+  "eyebrow": "Alepo Technologies",
+  "badge": null,
+  "h1": "**Software AAA y BSS para operadores de telecomunicaciones** con IA nativa",
+  "lede": [
+   "Obtenga más ingresos de cada suscriptor y gestione su red y su negocio con menos trabajo manual. Alepo conecta su red con sus ingresos en una sola plataforma, desde el primer inicio de sesión hasta la factura pagada, con IA integrada donde trabajan sus equipos y sus suscriptores."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "href": "/contact-us/#demo"
+   },
+   {
+    "label": "Vea la IA en acción",
+    "href": "/products/ai-for-telecom/"
+   }
+  ],
+  "subnav": [],
+  "customers": [
+   "STC",
+   "Digicel",
+   "SaskTel",
+   "Zain",
+   "Wind Telecom",
+   "Buckeye Broadband",
+   "Mauritius Telecom"
+  ],
+  "extra": [
+   {
+    "t": "table",
+    "head": [
+     "Asistente",
+     "Pregunta",
+     "Respuesta",
+     "Estado"
+    ],
+    "rows": [
+     [
+      "AI Agent Assist · consola AAA",
+      "¿Por qué este suscriptor no puede conectarse?",
+      "Los últimos tres intentos fueron rechazados. La cuenta tiene una restricción por falta de pago.",
+      "Beta"
+     ],
+     [
+      "AI Customer Assistant · web y app",
+      "¿Puedo agregar un pase de datos para viajes?",
+      "El pase se agrega a la cuenta con sesión iniciada a través del BSS.",
+      "En producción"
+     ]
+    ],
+    "kind": "assistants",
+    "caption": "Ilustración. Los nombres y las cifras son ficticios."
+   }
+  ]
+ },
+ "lang": "es"
+}

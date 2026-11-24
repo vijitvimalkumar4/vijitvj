@@ -1,0 +1,178 @@
+{
+ "source": "46-provisioning-devices.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Productos",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Fulfilment Manager",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Aprovisionamiento y activación de servicios** en cada elemento de red, a partir de un solo pedido. Cada paso se rastrea, se reintenta si falla y queda registrado."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Fulfilment Manager →",
+       "href": "/products/service-provisioning/"
+      }
+     ],
+     "href": "/products/service-provisioning/"
+    },
+    {
+     "t": "sub",
+     "h3": "Home Router and ONT Management",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Beta"
+      },
+      {
+       "t": "p",
+       "text": "Configuración remota, actualizaciones de firmware y diagnósticos para routers domésticos y ONT, mediante un **ACS TR-069** y un controlador **USP TR-369**."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Home Router and ONT Management →",
+       "href": "/products/device-management/"
+      }
+     ],
+     "href": "/products/device-management/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "Del pedido al servicio en funcionamiento",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Pedido:** el BSS o el CRM envía un solo pedido",
+      "**Activación:** Fulfilment Manager configura AAA, políticas, OLT y otros elementos de red",
+      "Configuración: el router doméstico o la ONT recibe su configuración base en el primer contacto (beta)",
+      "**Confirmación:** se prueba el servicio y se informa al suscriptor que está activo"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "from-order-to-working-service"
+  },
+  {
+   "h2": "Qué cambia para su equipo",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Menos visitas técnicas:** los routers reciben su configuración base en el primer contacto y se reparan de forma remota (beta)",
+      "**Menos pedidos atascados:** los pasos fallidos se reintentan y se muestran con un motivo",
+      "**Un solo lugar donde mirar:** los equipos de atención y NOC ven cada pedido y cada dispositivo",
+      "**Instalación estándar:** contenedores y una sola guía de instalación automatizada, con la reversión lista"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "what-changes-for-your-team"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es el aprovisionamiento de servicios en telecomunicaciones?",
+       "a": "El aprovisionamiento de servicios configura el servicio de un suscriptor en cada sistema de red del que depende, para que el servicio funcione en cuanto se vende."
+      },
+      {
+       "q": "¿Cuál es la diferencia entre TR-069 y TR-369?",
+       "a": "TR-069 es el protocolo establecido para la gestión remota de dispositivos domésticos. TR-369, también llamado USP, es su sucesor y agrega control en tiempo real y mejor escalabilidad. Alepo admite ambos."
+      },
+      {
+       "q": "¿Trabajan con nuestros routers y equipos de red existentes?",
+       "a": "Sí. Ambos productos usan protocolos estándar y se conectan a equipos de muchos proveedores."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos cómo activa los servicios hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "46 · Provisioning & Devices",
+ "pagination": false,
+ "url": "/products/provisioning-devices/",
+ "title": "Aprovisionamiento de servicios y gestión de equipos | Alepo",
+ "titleMarked": "**Service Provisioning and Device Management** | Alepo",
+ "desc": "Aprovisionamiento de servicios y gestión de dispositivos para operadores: activación automatizada y gestión de routers y ONT mediante TR-069 y TR-369.",
+ "descMarked": "**Service provisioning** and **device management** for operators: automated service activation and **TR-069 and TR-369** management of home routers and ONTs.",
+ "primary": "none (category overview). Product terms link to their own pages.",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Productos",
+   "Aprovisionamiento y dispositivos"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Aprovisionamiento de servicios y gestión de dispositivos**",
+  "lede": [
+   "Empiece a generar ingresos en el momento en que el servicio funciona en el hogar del suscriptor. Usted activa el servicio en toda su red y configura el router que lo entrega, sin una visita técnica."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   null
+  ]
+ },
+ "lang": "es"
+}

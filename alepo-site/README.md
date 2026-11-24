@@ -435,3 +435,39 @@ The team package `alepo-website-v1-2026-11-23-final` (Jonathan's copy checked ag
 
 - Data sheets: this build asks for name and work email before a download; the package links straight to the PDF. The PDFs are not in the repo yet (`build/static/datasheets/en/<slug>.pdf`).
 - The accessibility statement wording needs sign-off.
+
+## New copy, 24 Nov 2026 (copy deck replaces the page words)
+
+The website copy deck (48 Word files, US English, "Website new 24.11" on the Marketing SharePoint) is now the source of every page's words, title tag, meta description and H1, and of the menus and footer. It supersedes the team package merge, which is no longer applied (`merge.js` stays in the repo but receives no data).
+
+**How it works**
+
+1. `build/copy/source/NN-page.docx`: the Word files as received.
+2. `python3 alepo-site/build/copy/parse.py` turns them into page models, `build/copy/en/NN-page.json`: hero, sections, lists, tables, questions, buttons. Every link is resolved here (product and page names, "→" links, posts, news, library items), so the Spanish pages keep the same links and anchors.
+3. `python3 alepo-site/build/copy/i18n.py extract` lists every visible English string in `build/copy/es/strings.json` (existing translations are kept); `i18n.py apply` writes the Spanish models, `build/copy/es/*.json`.
+4. The build runs `build/copy/render.js` after the visual polish: `<main>` is rebuilt from the model in the site's own classes (motion, odometer, sweep and demo band keep working), and the menus, top bar and footer come from `02-navigation`. Styles: `static/css/site-copy.css`.
+5. `python3 alepo-site/build/copy/verify.py en` and `... es` check that every line of the copy is on its page. Last run: English 2,294 lines, Spanish 2,278 lines, 0 missing.
+
+To update the copy: replace the Word files, run `parse.py`, `i18n.py extract`, translate the new strings in `strings.json`, `i18n.py apply`, then build and run `verify.py`.
+
+**Decisions taken on 24 Nov 2026**
+
+- Product names: "AI Agent Assist" everywhere (it replaces "AI Assist for Staff", "AI Assist" and "AI Agent Assistant"); "Alepo CRM" everywhere (it replaces "New CRM").
+- Customer names and figures (STC 3x and 10x, Digicel 13 markets, Central American ISP 1.3M, Zain, SaskTel and Lum "100% digital", and the others in the verify note) are published as written; account owners still confirm them.
+- Keyword bold is not shown (the copy deck's own instruction).
+- Sections and lines that are not in the copy were removed, including the team package's questions and answers.
+- Spanish: the new copy was translated for every Spanish page; it needs a native review before go-live.
+
+**Instructions in the copy that the build carries out**
+
+- Past events are hidden by date: the Africa Tech Festival line in the top bar becomes the newest news item in the copy; the Company menu's event card, the Home and About event rows and the Events block on News go while the events are past.
+- Status badges (Beta, Proof of concept, In development) sit above the H1. Leadership photos use the alt text "[Name], [Title] at Alepo Technologies".
+- News items show their publication date beside the tag. Blog, Library and News lists use the copy's titles for the posts and items it retitles; the data sheets use the new product names ("Policy Control Datasheet", "Wi-Fi Offload and Calling Datasheet"), and the four data sheets the team package withdrew are back because the copy lists them.
+- Blog: topic filters as in the copy (All, RADIUS and AAA, TACACS+, Charging and policy, BSS and billing, Provisioning and devices, Wi-Fi, MVNO) and crawlable pages `/blog/page/2/` to `/blog/page/9/` (24 posts each, Previous · 1 · 2 · ... · Next). `/blog/` holds every post so the filters search all of them; the paged pages link back to `/blog/?topic=...`.
+- Careers: each role links to its page on the current site (`/careers/<role>/`), and "Send your resume" to `/company/careers/apply-now/`; the redirects that sent those addresses to `/company/careers/` were removed. Role pages under `/company/careers/<role>/` need their own copy.
+- Security: `/.well-known/security.txt` is published (contact security@alepo.com).
+- Contact form: the fields in the copy (Name, Work email, Company, Country, I want to, Product of interest, What do you run today?). The server stores the country.
+- Thank-you page: the copy in 17 · Contact ("reply within one business day").
+- The blog article template (48) applies to posts, which are still served by WordPress; it is not used yet.
+
+**Kept although the copy does not mention it**: the social icons in the footer, and the Cookie policy and Accessibility links in the legal bar.

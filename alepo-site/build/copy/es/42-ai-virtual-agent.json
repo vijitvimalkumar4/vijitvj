@@ -1,0 +1,261 @@
+{
+ "source": "42-ai-virtual-agent.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Lo que debe hacer la atención al cliente con IA",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un **agente de atención al cliente con IA** en su sitio web y su app que responde preguntas de rutina a toda hora, completa tareas de la cuenta a través del BSS y deriva los casos complejos a personas."
+    },
+    {
+     "t": "p",
+     "text": "Los centros de contacto están saturados de preguntas de rutina sobre módems, facturación y planes. El soporte se detiene fuera del horario de oficina. Los mercados son multilingües. La **atención al cliente con IA para telecomunicaciones** tiene que responder a partir de la propia cuenta y el plan del cliente, algo que una página de preguntas frecuentes no puede hacer."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Alepo BSS para las tareas de la cuenta. Selfcare Now y la Self-Care Mobile App. Agentes del centro de contacto para la derivación."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: chatbot, agente virtual, asistente virtual, IA conversacional, asistente digital, autoservicio con IA, **agente de atención al cliente con IA**"
+    }
+   ],
+   "id": "what-ai-customer-service-should-do"
+  },
+  {
+   "h2": "Tareas de la cuenta resueltas sin un agente",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El asistente completa tareas de la cuenta a través del BSS, dentro de la propia cuenta del cliente que inició sesión."
+    },
+    {
+     "t": "p",
+     "text": "Las preguntas de rutina sobre módems, facturación y planes se responden sin un agente."
+    }
+   ],
+   "id": "account-tasks-done-without-an-agent"
+  },
+  {
+   "h2": "Ayuda en el idioma del cliente, a cualquier hora",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El soporte se brinda en el idioma del cliente, en la web y la app, a toda hora."
+    },
+    {
+     "t": "p",
+     "text": "Los casos complejos se derivan a agentes del centro de contacto."
+    }
+   ],
+   "id": "help-in-the-customer-s-language-at-any-hour"
+  },
+  {
+   "h2": "Ventas dentro de la conversación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus ofertas aparecen dentro de la conversación, como un pase de datos para viajes o un aumento de velocidad."
+    },
+    {
+     "t": "p",
+     "text": "Funciona en Selfcare Now y en la Self-Care Mobile App."
+    }
+   ],
+   "id": "sales-inside-the-conversation"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "SaskTel lanzó Lum Mobile como una marca totalmente digital, con planes flexibles y autoservicio desde el inicio."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "SaskTel · Canadá"
+      ],
+      [
+       "Resultado",
+       "Marca móvil 100% digital"
+      ],
+      [
+       "Proyecto",
+       "Marca móvil digital"
+      ],
+      [
+       "Aspectos destacados",
+       "Asistente de IA para la atención al cliente · Lanzada como marca independiente"
+      ],
+      [
+       "Perfil",
+       "Marca MVNO digital: Lum Mobile. AI Customer Assistant."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es un agente virtual con IA?",
+       "a": "Un **agente virtual con IA** responde las preguntas de los clientes en lenguaje natural, en la web o la app, y puede completar tareas sencillas en nombre del cliente."
+      },
+      {
+       "q": "¿Puede hacer cambios en la cuenta de un cliente?",
+       "a": "Sí, a través del BSS y solo dentro de la propia cuenta del cliente que inició sesión."
+      },
+      {
+       "q": "¿Qué ocurre con los casos complejos?",
+       "a": "El asistente los deriva a un agente del centro de contacto, junto con la conversación hasta ese momento."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Dónde funciona",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El AI Customer Assistant está en producción con suscriptores desde enero de 2024. Está integrado en Selfcare Now (beta) y se vende con la autogestión y el BSS de Alepo. Los casos complejos pasan a personas. Funciona igual en la web y en la app, y las respuestas provienen de la propia cuenta del cliente que inició sesión. Cuando un caso pasa a un agente de atención, la conversación completa lo acompaña, de modo que el suscriptor no repite la pregunta y el agente parte de los mismos datos de la cuenta. Las ofertas dentro del chat, como un aumento de velocidad, provienen solo de los planes que vende el operador."
+    }
+   ],
+   "id": "where-it-runs"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "AI Agent Assist: asistente para agentes de atención y el NOC"
+     ],
+     "hrefs": [
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "42 · AI Virtual Agent (AI Customer Assistant)",
+ "pagination": false,
+ "url": "/products/ai-virtual-agent/",
+ "title": "Agente virtual IA para atención al cliente telecom | Alepo",
+ "titleMarked": "AI Virtual Agent for Telecom Customer Service | Alepo",
+ "desc": "Atención al cliente con IA para telecom: un agente virtual que responde a toda hora, completa tareas de cuenta y deriva casos complejos a personas.",
+ "descMarked": "**AI customer service** for telecom: an **AI virtual agent** that answers around the clock, completes account tasks and hands complex cases to people.",
+ "primary": "ai customer service telecom",
+ "secondary": "ai virtual agent, ai customer service agent",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "IA",
+   "AI Customer Assistant"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Agente virtual con IA para telecomunicaciones",
+  "lede": [
+   "Atienda a los suscriptores a cualquier hora y reserve a sus agentes para los casos que necesitan a una persona. El AI Customer Assistant responde preguntas de rutina en la web y la app y completa tareas de la cuenta a través del BSS."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA",
+   "Caso de éxito"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/ai-for-telecom/",
+   "/products/ai-virtual-agent/"
+  ],
+  "subnavTargets": [
+   "what-ai-customer-service-should-do",
+   "account-tasks-done-without-an-agent",
+   "what-ai-customer-service-should-do",
+   "customer-story"
+  ]
+ },
+ "lang": "es"
+}

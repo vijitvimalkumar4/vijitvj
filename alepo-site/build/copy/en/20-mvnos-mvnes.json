@@ -1,0 +1,358 @@
+{
+ "source": "20-mvnos-mvnes.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Launch a brand, or host several",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A defined launch package for a new brand. Real-time charging and settlement for the enabler that hosts several."
+    },
+    {
+     "t": "p",
+     "text": "A new brand needs a working BSS before it has customers, while the enabler that hosts several brands needs to keep them apart and settle with each one. Alepo's **MVNO software** serves you either way."
+    },
+    {
+     "t": "p",
+     "text": "For: New brands, sub-brands and the enablers that host them"
+    }
+   ],
+   "id": "launch-a-brand-or-host-several"
+  },
+  {
+   "h2": "What is an MVNE?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "An **MVNE** (mobile virtual network enabler) provides the systems an MVNO needs to run: charging, billing, provisioning and often the core network connection to the host operator. One MVNE can host many MVNO brands, each with its own plans and customers."
+    },
+    {
+     "t": "p",
+     "text": "An MVNO owns the brand and the customer. Behind it, an MVNE runs the technology. The host operator owns the radio network."
+    }
+   ],
+   "id": "what-is-an-mvne"
+  },
+  {
+   "h2": "Ready to sell from day one",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A new brand has what it needs from day one. BSS in a Box brings self-care, CRM, billing, charging and mobile POS in one defined offer."
+    },
+    {
+     "t": "product",
+     "text": "BSS in a Box",
+     "href": "/products/bss-in-a-box/"
+    }
+   ],
+   "id": "ready-to-sell-from-day-one"
+  },
+  {
+   "h2": "One brand's outage stays with that brand",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "An upgrade or an outage at one brand never reaches the others. Each brand runs on its own deployment, with its own data."
+    },
+    {
+     "t": "p",
+     "text": "Products: BSS in a Box · Digital BSS"
+    }
+   ],
+   "id": "one-brand-s-outage-stays-with-that-brand"
+  },
+  {
+   "h2": "Partners settled without spreadsheets",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team stops reconciling the host operator and partners by hand. Rate sheets, monthly commitments and shortfall penalties are applied in the bill run."
+    },
+    {
+     "t": "p",
+     "text": "Products: Partner and MVNO Settlement · Online Charging"
+    }
+   ],
+   "id": "partners-settled-without-spreadsheets"
+  },
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) answers care agents' questions about bills and accounts from live data. The AI Customer Assistant answers each brand's subscribers on web and app around the clock, completes account tasks through the BSS inside the signed-in customer's own account and hands complex cases to people."
+    },
+    {
+     "t": "p",
+     "text": "Agents see only what their own permissions allow, and the assistant never changes a setting on its own."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Where to start",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "BSS in a Box",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "For a new MVNO or sub-brand that has not launched yet."
+      },
+      {
+       "t": "p",
+       "text": "Digital BSS packaged for a new MVNO launch. Self-care, CRM, billing, charging and mobile POS in one defined offer."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/bss-in-a-box/"
+      }
+     ],
+     "href": "/products/bss-in-a-box/"
+    },
+    {
+     "t": "sub",
+     "h3": "Online Charging",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "For enablers that charge several brands in real time."
+      },
+      {
+       "t": "p",
+       "text": "Charges every call, message and megabyte against the customer's balance in real time. New bundles launch without a code release."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/online-charging/"
+      }
+     ],
+     "href": "/products/online-charging/"
+    },
+    {
+     "t": "sub",
+     "h3": "Partner and MVNO Settlement",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "For host operators and MVNEs that bill the MVNOs they carry."
+      },
+      {
+       "t": "p",
+       "text": "Onboards partners, rates their traffic and produces invoices and settlement reports, so the operator pays and gets paid correctly without spreadsheets."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/partner-mvno-settlement/"
+      }
+     ],
+     "href": "/products/partner-mvno-settlement/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Often added",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "Fulfilment Manager",
+      "Subscriber Data Management",
+      "Digital BSS",
+      "Policy Control",
+      "Prepaid Offers and Vouchers",
+      "Collections and Dunning",
+      "Mobile POS",
+      "Alepo CRM",
+      "Selfcare Now",
+      "Self-Care Mobile App",
+      "Interconnect and Roaming Settlement",
+      "Mediation Studio",
+      "AI Customer Assistant",
+      "AI Agent Assist"
+     ],
+     "hrefs": [
+      "/products/service-provisioning/",
+      "/products/subscriber-data-management/",
+      "/products/digital-bss/",
+      "/products/policy-control/",
+      "/products/prepaid-offers-vouchers/",
+      "/products/collections-dunning/",
+      "/products/dealer-mobile-pos/",
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/mediation-revenue-assurance/",
+      "/products/ai-virtual-agent/",
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "often-added",
+   "role": "chips"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "SaskTel launched Lum Mobile as a fully digital brand, with flexible plans and self-service from the start."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "Lum Mobile (SaskTel) · Canada"
+      ],
+      [
+       "Result",
+       "100% digital mobile brand"
+      ],
+      [
+       "Project",
+       "Digital mobile brand"
+      ],
+      [
+       "Highlights",
+       "AI assistant for customer service · Launched as a separate brand"
+      ],
+      [
+       "Profile",
+       "Digital MVNO brand: Lum Mobile. Digital BSS and AI Customer Assistant."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Planning a launch?",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Read the guide: How to launch an MVNO →",
+     "href": "https://alepo.com/blog/how-to-launch-mvno-in-30-days/"
+    }
+   ],
+   "id": "planning-a-launch"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is the difference between an MVNO and an MVNE?",
+       "a": "An MVNO sells mobile service under its own brand. An **MVNE** provides the platform that MVNOs run on, including charging, billing and provisioning."
+      },
+      {
+       "q": "What does an MVNO platform include?",
+       "a": "An **MVNO platform** covers self-care, CRM, billing, real-time charging and sales channels. You get these together as BSS in a Box."
+      },
+      {
+       "q": "Can one MVNE host several brands on Alepo?",
+       "a": "Yes. Each brand runs on its own deployment, and settlement handles each brand separately."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "20 · MVNOs and MVNEs",
+ "pagination": false,
+ "url": "/solutions/mvnos-mvnes/",
+ "title": "MVNO and MVNE Platform Software | Alepo",
+ "titleMarked": "**MVNO and MVNE Platform Software** | Alepo",
+ "desc": "MVNO platform and MVNE software from Alepo: a defined launch package for a new brand, and real-time charging and settlement for the enabler that hosts several.",
+ "descMarked": "**MVNO platform** and **MVNE** software from Alepo: a defined launch package for a new brand, and real-time charging and settlement for the enabler that hosts several.",
+ "primary": "mvne",
+ "secondary": "mvno platform, mvno software",
+ "hero": {
+  "crumbs": [
+   "Solutions",
+   "MVNOs and MVNEs"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Software for MVNOs and MVNEs**",
+  "lede": [
+   "Start earning from a new brand sooner, and host more brands without one brand's problems reaching another. A new MVNO launches with a working BSS from day one, and an enabler keeps every brand it hosts separate and settled."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/mvnos-mvnes/"
+  ]
+ }
+}

@@ -1,0 +1,759 @@
+{
+ "source": "02-navigation.docx",
+ "notes": [
+  "Keywords are in **bold**. Navigation carries no title tag or H1. Its descriptors use each product page's own keyword as link context."
+ ],
+ "sections": [
+  {
+   "h2": "Utility bar",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Africa Tech Festival, 17 to 19 November 2026, Cape Town"
+    },
+    {
+     "t": "p",
+     "text": "Customer support · Partners · Careers · Contact",
+     "hrefs": [
+      "/services/#support",
+      "/company/partners/",
+      "/company/careers/",
+      "/contact-us/"
+     ]
+    }
+   ],
+   "id": "utility-bar"
+  },
+  {
+   "h2": "Header",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "alepo (logo, alt text: \"Alepo Technologies home\")"
+    },
+    {
+     "t": "p",
+     "text": "Products · Solutions · Services · Resources · Company",
+     "hrefs": [
+      "/products/",
+      "/solutions/",
+      "/services/",
+      "/resources/",
+      "/company/about/"
+     ]
+    },
+    {
+     "t": "p",
+     "text": "Search · EN · ES",
+     "hrefs": [
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "href": "/contact-us/#demo"
+      }
+     ]
+    }
+   ],
+   "id": "header"
+  },
+  {
+   "h2": "Products menu",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Access control",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "AAA Server: **RADIUS and Diameter AAA** for broadband and mobile",
+        "Fulfilment Manager: service activation and provisioning",
+        "TACACS+ Server: **device administration** and command control",
+        "Wi-Fi Offload and Calling: mobile data and voice moved onto Wi-Fi",
+        "Home Router and ONT Management: **TR-069 and TR-369 USP device management** (beta)",
+        "Subscriber Data Management: HSS for 4G and IMS with 5G interworking in proof of concept"
+       ],
+       "hrefs": [
+        "/products/aaa-server/",
+        "/products/service-provisioning/",
+        "/products/tacacs-server/",
+        "/products/wifi-offload-calling/",
+        "/products/device-management/",
+        "/products/subscriber-data-management/"
+       ]
+      }
+     ],
+     "href": "/products/network-access-aaa/"
+    },
+    {
+     "t": "sub",
+     "h3": "BSS and monetization",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Digital BSS: convergent billing and revenue management, with CRM built in",
+        "BSS in a Box: a launch package for new **MVNOs**",
+        "Online Charging: **real-time convergent charging**",
+        "Policy Control: **policy control** for data plans and VoLTE",
+        "Prepaid Offers and Vouchers: prepaid plans and promotions, plus top-ups",
+        "Mediation Studio: usage collection and **revenue assurance** (in development)",
+        "Collections and Dunning: automated reminders, with barring and restoration tied to payment",
+        "Partner and MVNO Settlement: wholesale billing for MVNOs and resellers",
+        "Interconnect and Roaming Settlement: carrier interconnect billing, with roaming settlement in development"
+       ],
+       "hrefs": [
+        "/products/digital-bss/",
+        "/products/bss-in-a-box/",
+        "/products/online-charging/",
+        "/products/policy-control/",
+        "/products/prepaid-offers-vouchers/",
+        "/products/mediation-revenue-assurance/",
+        "/products/collections-dunning/",
+        "/products/partner-mvno-settlement/",
+        "/products/interconnect-roaming-settlement/"
+       ]
+      }
+     ],
+     "href": "/products/billing-bss/"
+    },
+    {
+     "t": "sub",
+     "h3": "Channels and care",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Alepo CRM: a **customer care** workspace with AI (beta)",
+        "Selfcare Now: branded **web self-care** and onboarding (beta)",
+        "Self-Care Mobile App: a branded self-care app (beta)",
+        "Mobile POS: customer sign-up and top-ups, plus bill payments, for dealers"
+       ],
+       "hrefs": [
+        "/products/crm/",
+        "/products/self-care-portal/",
+        "/products/self-care-app/",
+        "/products/dealer-mobile-pos/"
+       ]
+      }
+     ],
+     "href": "/products/customer-care-channels/"
+    },
+    {
+     "t": "sub",
+     "h3": "AI",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "AI Customer Assistant: a **virtual agent** for web and app",
+        "AI Agent Assist: an **assistant for care agents and the NOC** (beta)"
+       ],
+       "hrefs": [
+        "/products/ai-virtual-agent/",
+        "/products/ai-agent-assist/"
+       ]
+      }
+     ],
+     "href": "/products/ai-for-telecom/"
+    },
+    {
+     "t": "sub",
+     "h3": "Promo card",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "Field",
+        "Copy"
+       ],
+       "rows": [
+        [
+         "Eyebrow",
+         "New brand"
+        ],
+        [
+         "Title",
+         "BSS in a Box for MVNOs"
+        ],
+        [
+         "Text",
+         "Self-care, CRM, billing, charging and mobile POS in one defined offer."
+        ],
+        [
+         "Link",
+         "See the package →"
+        ]
+       ],
+       "kind": "promo"
+      },
+      {
+       "t": "more",
+       "text": "All products →",
+       "href": "/products/"
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "products-menu"
+  },
+  {
+   "h2": "Solutions menu",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "By operator",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Fiber and cable ISPs: FTTH and cable providers, plus fixed wireless",
+        "Mobile operators: MNOs with prepaid or postpaid subscribers, or both",
+        "MVNOs and MVNEs: new brands, sub-brands and the **enablers** that host them",
+        "Wi-Fi and venues: carrier Wi-Fi and public hotspots, for operators and venue providers",
+        "Enterprise and government networks: network and security teams with large device estates"
+       ],
+       "hrefs": [
+        "/solutions/fibre-cable-isps/",
+        "/solutions/mobile-operators/",
+        "/solutions/mvnos-mvnes/",
+        "/solutions/wifi-venues/",
+        "/solutions/enterprise-government-networks/"
+       ]
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "By need",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "Type",
+        "Title"
+       ],
+       "rows": [
+        [
+         "Replace an end-of-life AAA",
+         "AAA Server"
+        ],
+        [
+         "Modernize push-based provisioning",
+         "Fulfilment Manager"
+        ],
+        [
+         "Replace Cisco ACS",
+         "TACACS+ Server"
+        ],
+        [
+         "Launch an MVNO",
+         "BSS in a Box"
+        ],
+        [
+         "Offload mobile data to Wi-Fi",
+         "Wi-Fi Offload and Calling"
+        ],
+        [
+         "Stop revenue leakage",
+         "Mediation Studio"
+        ],
+        [
+         "Automate collections",
+         "Collections and Dunning"
+        ],
+        [
+         "Reduce contact center load",
+         "AI Customer Assistant"
+        ]
+       ],
+       "hrefs": [
+        "/products/aaa-server/",
+        "/products/service-provisioning/",
+        "/products/tacacs-server/",
+        "/products/bss-in-a-box/",
+        "/products/wifi-offload-calling/",
+        "/products/mediation-revenue-assurance/",
+        "/products/collections-dunning/",
+        "/products/ai-virtual-agent/"
+       ],
+       "kind": "rows"
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Promo card",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Customer story"
+      },
+      {
+       "t": "p",
+       "text": "**STC: AAA upgrade**"
+      },
+      {
+       "t": "p",
+       "text": "A 3x increase in AAA performance and subscriber capacity."
+      },
+      {
+       "t": "more",
+       "text": "Read customer stories →",
+       "href": "/customers/"
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "solutions-menu"
+  },
+  {
+   "h2": "Services menu",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Services and support",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Deployment: cloud native on Kubernetes, in your environment",
+        "Run by Alepo: Alepo installs and runs it for you",
+        "Professional services: project delivery, migration, testing and training",
+        "Forward-deployed engineers: **Alepo** engineers working inside your team",
+        "Support: 24x7 technical support from GTAC",
+        "Integration and single sign-on: one gateway to your systems and one login for staff"
+       ],
+       "hrefs": [
+        "/services/#deployment",
+        "/services/#run-by-alepo",
+        "/services/#professional-services",
+        "/services/#forward-deployed-engineers",
+        "/services/#support",
+        "/services/#integration-and-single-sign-on"
+       ]
+      }
+     ],
+     "href": "/services/"
+    },
+    {
+     "t": "sub",
+     "h3": "Trust",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Security: how we protect your data",
+        "Customer success: a named manager for every customer"
+       ],
+       "hrefs": [
+        "/company/security/",
+        "/services/#customer-success"
+       ]
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Promo card",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "Field",
+        "Copy"
+       ],
+       "rows": [
+        [
+         "Eyebrow",
+         "Customer support"
+        ],
+        [
+         "Title",
+         "24x7 from GTAC"
+        ],
+        [
+         "Text",
+         "For customers with a support agreement. United States +1 737 313 3952. India +91 22 6108 5013."
+        ],
+        [
+         "Link",
+         "Support details →"
+        ]
+       ],
+       "kind": "promo"
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "services-menu"
+  },
+  {
+   "h2": "Resources menu",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Resources",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Blog: **telecom guides** for people who run operator networks",
+        "Library: datasheets and white papers, plus case studies",
+        "Case studies: what operators achieved with **Alepo**",
+        "News and events: announcements and where to meet us"
+       ],
+       "hrefs": [
+        "/blog/",
+        "/library/",
+        "/customers/",
+        "/news/"
+       ]
+      }
+     ],
+     "href": "/resources/"
+    },
+    {
+     "t": "sub",
+     "h3": "Latest posts",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "Type",
+        "Title"
+       ],
+       "rows": [
+        [
+         "RADIUS Two-Factor Authentication for Operator Staff and Enterprise Services",
+         "Blog"
+        ],
+        [
+         "RADIUS Proxy Explained",
+         "Blog"
+        ],
+        [
+         "RADIUS Ports Explained: 1812, 1813, 1645, 1646 and 3799 (UDP vs TCP)",
+         "Blog"
+        ]
+       ],
+       "hrefs": [
+        "/blog/",
+        "/blog/",
+        "/blog/"
+       ],
+       "kind": "rows"
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Promo card",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "Field",
+        "Copy"
+       ],
+       "rows": [
+        [
+         "Eyebrow",
+         "Case study"
+        ],
+        [
+         "Title",
+         "STC: AAA upgrade"
+        ],
+        [
+         "Text",
+         "A 3x increase in AAA performance and subscriber capacity."
+        ],
+        [
+         "Link",
+         "All case studies →"
+        ]
+       ],
+       "kind": "promo"
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "resources-menu"
+  },
+  {
+   "h2": "Company menu",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Company",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "About Alepo: who we are and where we work",
+        "Leadership: the team that runs **Alepo**",
+        "Customers: operators running **Alepo**",
+        "Partners: resellers and system integrators",
+        "Careers: open roles",
+        "News and events: announcements and where to meet us",
+        "Security: how we protect your data",
+        "Contact: sales and support contacts, plus office addresses"
+       ],
+       "hrefs": [
+        "/company/about/",
+        "/company/leadership/",
+        "/customers/",
+        "/company/partners/",
+        "/company/careers/",
+        "/news/",
+        "/company/security/",
+        "/contact-us/"
+       ]
+      }
+     ],
+     "href": "/company/about/"
+    },
+    {
+     "t": "sub",
+     "h3": "Latest news",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "News"
+       ],
+       "rows": [
+        [
+         "A tier-1 operator in Indonesia selects Alepo AAA to replace its legacy platform"
+        ],
+        [
+         "Alepo launches a carrier-grade TACACS+ Server for secure network device administration"
+        ],
+        [
+         "Alepo and Nomios deploy an advanced AAA solution for VodafoneZiggo"
+        ]
+       ],
+       "hrefs": [
+        "https://alepo.com/news/tier-1-indonesia-operator-selects-alepo-aaa-broadband-transformation/",
+        "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+        "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/"
+       ],
+       "kind": "newslist"
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Promo card",
+     "blocks": [
+      {
+       "t": "table",
+       "head": [
+        "Field",
+        "Copy"
+       ],
+       "rows": [
+        [
+         "Eyebrow",
+         "Meet us"
+        ],
+        [
+         "Title",
+         "Africa Tech Festival"
+        ],
+        [
+         "Text",
+         "17 to 19 November 2026. Cape Town, South Africa."
+        ],
+        [
+         "Link",
+         "All events →"
+        ]
+       ],
+       "kind": "promo"
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "company-menu"
+  },
+  {
+   "h2": "Footer",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Access control",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "AAA Server · Fulfilment Manager · TACACS+ Server · Wi-Fi Offload and Calling · Home Router and ONT Management · Subscriber Data Management",
+       "hrefs": [
+        "/products/aaa-server/",
+        "/products/service-provisioning/",
+        "/products/tacacs-server/",
+        "/products/wifi-offload-calling/",
+        "/products/device-management/",
+        "/products/subscriber-data-management/"
+       ]
+      }
+     ],
+     "href": "/products/network-access-aaa/"
+    },
+    {
+     "t": "sub",
+     "h3": "BSS and monetization",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Digital BSS · BSS in a Box · Online Charging · Policy Control · Prepaid Offers and Vouchers · Mediation Studio · Collections and Dunning · Partner and MVNO Settlement · Interconnect and Roaming Settlement",
+       "hrefs": [
+        "/products/digital-bss/",
+        "/products/bss-in-a-box/",
+        "/products/online-charging/",
+        "/products/policy-control/",
+        "/products/prepaid-offers-vouchers/",
+        "/products/mediation-revenue-assurance/",
+        "/products/collections-dunning/",
+        "/products/partner-mvno-settlement/",
+        "/products/interconnect-roaming-settlement/"
+       ]
+      }
+     ],
+     "href": "/products/billing-bss/"
+    },
+    {
+     "t": "sub",
+     "h3": "Care and AI",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Alepo CRM · Selfcare Now · Self-Care Mobile App · Mobile POS · AI Customer Assistant · AI Agent Assist",
+       "hrefs": [
+        "/products/crm/",
+        "/products/self-care-portal/",
+        "/products/self-care-app/",
+        "/products/dealer-mobile-pos/",
+        "/products/ai-virtual-agent/",
+        "/products/ai-agent-assist/"
+       ]
+      }
+     ],
+     "href": "/products/customer-care-channels/"
+    },
+    {
+     "t": "sub",
+     "h3": "Solutions",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Fiber and cable · Mobile operators · MVNOs and MVNEs · Wi-Fi and venues · Enterprise networks · Services and support",
+       "hrefs": [
+        "/solutions/fibre-cable-isps/",
+        "/solutions/mobile-operators/",
+        "/solutions/mvnos-mvnes/",
+        "/solutions/wifi-venues/",
+        "/solutions/enterprise-government-networks/",
+        "/services/"
+       ]
+      }
+     ],
+     "href": "/solutions/"
+    },
+    {
+     "t": "sub",
+     "h3": "Company",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "About Alepo · Leadership · Customers · Partners · Careers · News and events · Security · Contact",
+       "hrefs": [
+        "/company/about/",
+        "/company/leadership/",
+        "/customers/",
+        "/company/partners/",
+        "/company/careers/",
+        "/news/",
+        "/company/security/",
+        "/contact-us/"
+       ]
+      }
+     ],
+     "href": "/company/about/"
+    },
+    {
+     "t": "sub",
+     "h3": "Newsletter",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Work email [Subscribe]"
+      },
+      {
+       "t": "p",
+       "text": "Customer support: +1 737 313 3952 (US), +91 22 6108 5013 (India)"
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Offices",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Austin, Texas · Denver, Colorado · Mexico City, Mexico · Rio de Janeiro, Brazil · Guayaquil, Ecuador · Mumbai, India · Mauritius",
+       "hrefs": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+       ]
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Legal bar",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "alepo · Security · Privacy policy · Sitemap · © 2026 **Alepo Technologies**",
+       "hrefs": [
+        null,
+        "/company/security/",
+        "/privacy-policy/",
+        "/sitemap/",
+        null
+       ]
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "footer"
+  }
+ ],
+ "doc": "02 · Navigation"
+}

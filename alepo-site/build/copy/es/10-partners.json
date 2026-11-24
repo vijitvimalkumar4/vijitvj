@@ -1,0 +1,139 @@
+{
+ "source": "10-partners.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Socios actuales",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Nomios",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "AAA de nivel operador para operadores en los Países Bajos, incluida la implementación de VodafoneZiggo."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Italtel",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Redes privadas móviles 5G."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Blue Arcus",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "El lanzamiento de facturación convergente de Teletok."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "partners-today"
+  },
+  {
+   "h2": "Conviértase en socio",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuatro pasos desde la solicitud hasta la primera venta."
+    },
+    {
+     "t": "list",
+     "items": [
+      "Postúlese con los datos de su empresa y su mercado objetivo.",
+      "El equipo de socios revisa la solicitud y organiza una primera conversación.",
+      "Su equipo realiza la capacitación y la certificación por rol.",
+      "Usted comienza a vender, con el apoyo del equipo de socios."
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Postularse",
+       "href": "/contact-us/?request=partner#demo"
+      }
+     ]
+    }
+   ],
+   "id": "become-a-partner"
+  },
+  {
+   "h2": "Contacto para socios",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos sobre su empresa y el mercado que atiende."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar ser socio",
+       "href": "/contact-us/?request=partner#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "partner-contact",
+   "role": "cta"
+  }
+ ],
+ "doc": "10 · Partners",
+ "pagination": false,
+ "url": "/company/partners/",
+ "title": "Programa de socios para revendedores e integradores | Alepo",
+ "titleMarked": "**Partner Program** for **Resellers and Integrators** | Alepo",
+ "desc": "Programa de socios de Alepo para revendedores e integradores. Lleve el software AAA, BSS e IA de Alepo a operadores de sus mercados, con capacitación.",
+ "descMarked": "The **Alepo partner** program for resellers and system integrators. Deliver Alepo AAA, BSS and AI software to operators in your markets, with partner training.",
+ "primary": "alepo partners (brand)",
+ "hero": {
+  "crumbs": [
+   "Empresa",
+   "Socios"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Programa de socios**",
+  "lede": [
+   "Los revendedores e integradores de sistemas hacen crecer su propio negocio ofreciendo productos de Alepo a operadores de sus mercados."
+  ],
+  "buttons": [
+   {
+    "label": "Postularse",
+    "href": "/contact-us/?request=partner#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/partners/"
+  ]
+ },
+ "lang": "es"
+}

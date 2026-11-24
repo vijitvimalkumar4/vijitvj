@@ -1,0 +1,242 @@
+{
+ "source": "22-enterprise-government-networks.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **enterprise device administration**"
+ ],
+ "sections": [
+  {
+   "h2": "Sepa quién cambió cualquier dispositivo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Como **reemplazo de Cisco ACS**, le ofrece un solo lugar que controla quién inicia sesión en cada dispositivo de red, desde los routers del núcleo hasta los firewalls, y registra cada comando que ejecutan."
+    },
+    {
+     "t": "p",
+     "text": "Las redes grandes son administradas por muchos ingenieros y contratistas. Alepo TACACS+ le da a cada uno su propio inicio de sesión, decide sobre cada comando y registra lo que se hizo. Eso es **administración de dispositivos empresariales** con una sola política y un solo registro de auditoría."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Para",
+       "Equipos de red y seguridad con grandes parques de dispositivos"
+      ]
+     ],
+     "kind": "facts"
+    }
+   ],
+   "id": "know-who-changed-any-device"
+  },
+  {
+   "h2": "Reemplazo de Cisco ACS",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cisco Secure ACS llegó al fin de su vida útil. Alepo TACACS+ es un **reemplazo de Cisco ACS** con soporte, y también reemplaza las contraseñas locales de los dispositivos."
+    },
+    {
+     "t": "p",
+     "text": "Nuestros ingenieros migran sus políticas y grupos de dispositivos, los prueban con sus propios dispositivos y dan soporte a la transición, y los ingenieros de GTAC permanecen de guardia 24x7 después."
+    },
+    {
+     "t": "product",
+     "text": "TACACS+ Server",
+     "href": "/products/tacacs-server/"
+    }
+   ],
+   "id": "cisco-acs-replacement"
+  },
+  {
+   "h2": "Evidencia para cada auditoría",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los auditores obtienen la evidencia sin necesidad de un proyecto. Un registro a prueba de manipulaciones guarda cada inicio de sesión y comando, y se reenvía a Splunk, Sentinel o QRadar. Se incluye un mapa de controles según NIST SP 800-53 para los auditores."
+    },
+    {
+     "t": "product",
+     "text": "TACACS+ Server",
+     "href": "/products/tacacs-server/"
+    }
+   ],
+   "id": "evidence-for-every-audit"
+  },
+  {
+   "h2": "Acceso de contratistas eliminado en un solo paso",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuando termina un contrato, su equipo elimina a esa persona en un solo lugar. No hay que tocar ningún dispositivo."
+    },
+    {
+     "t": "product",
+     "text": "TACACS+ Server",
+     "href": "/products/tacacs-server/"
+    }
+   ],
+   "id": "contractor-access-removed-in-one-step"
+  },
+  {
+   "h2": "Operaciones de red con IA",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta), en la consola de TACACS+, responde preguntas sobre quién tenía permiso para hacer qué, directamente desde el registro de auditoría. Sus recomendaciones son solo borradores. Los ingenieros obtienen la respuesta sin leer registros sin procesar ni esperar a la única persona que conoce la política."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Por dónde empezar",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "TACACS+ Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Administración de dispositivos de red, desde routers hasta firewalls."
+      },
+      {
+       "t": "p",
+       "text": "Un solo lugar que controla y registra quién inicia sesión en cada dispositivo de red, desde los routers del núcleo hasta los firewalls, y cada comando que ejecutan."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/tacacs-server/"
+      }
+     ],
+     "href": "/products/tacacs-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "AI Agent Assist",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "El personal pregunta por qué se denegó un comando y obtiene la respuesta del registro de auditoría."
+      },
+      {
+       "t": "p",
+       "text": "Un asistente dentro de las consolas de atención y de red. Responde las preguntas del personal a partir de datos en tiempo real, explica facturas y fallas, y sugiere el siguiente paso."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/ai-agent-assist/"
+      }
+     ],
+     "href": "/products/ai-agent-assist/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Prueba de concepto",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo TACACS+ Server 1.1.0 se lanzó en agosto de 2026. Una prueba de concepto acotada en laboratorio, con sus propios dispositivos, muestra cómo gestiona los inicios de sesión y comandos de sus ingenieros antes de que usted se comprometa. Traiga sus grupos de dispositivos, su lista de contratistas y una pregunta de auditoría que no pudo responder el año pasado. Nuestros ingenieros la configuran en su laboratorio, con sus propios modelos de dispositivos, y guían a su equipo por el registro de auditoría."
+    }
+   ],
+   "id": "proof-of-concept"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Cisco Secure ACS llegó al fin de su vida útil?",
+       "a": "Sí. Cisco dejó de dar soporte a Secure ACS. Lea: Fin de vida útil de Cisco ACS y con qué reemplazarlo →"
+      },
+      {
+       "q": "¿Qué hace que un reemplazo de Cisco ACS sea bueno?",
+       "a": "Un **reemplazo de Cisco ACS** debe mantener la administración de dispositivos con TACACS+, la autorización por comando y un registro de auditoría completo, y agregar integraciones modernas como el reenvío a SIEM y una API REST."
+      },
+      {
+       "q": "¿Cuánto tiempo toma la migración?",
+       "a": "Depende del tamaño de su conjunto de políticas y de su parque de dispositivos. Los ingenieros de Alepo planifican la transición con su equipo y primero realizan pruebas con sus propios dispositivos."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "22 · Enterprise and Government Networks",
+ "pagination": false,
+ "url": "/solutions/enterprise-government-networks/",
+ "title": "Reemplazo de Cisco ACS para redes empresariales | Alepo",
+ "titleMarked": "**Cisco ACS Replacement** for Enterprise Networks | Alepo",
+ "desc": "Reemplazo de Cisco ACS con soporte para redes empresariales y de gobierno: controle en un lugar quién entra a cada equipo y registre cada comando.",
+ "descMarked": "A supported **Cisco ACS replacement** for enterprise and government networks: one place to control who logs into every network device, with every command recorded.",
+ "primary": "cisco acs replacement",
+ "hero": {
+  "crumbs": [
+   "Soluciones",
+   "Redes empresariales y gubernamentales"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Administración de dispositivos para redes empresariales y gubernamentales",
+  "lede": [
+   "Reduzca el riesgo de las contraseñas compartidas de dispositivos y el esfuerzo detrás de cada auditoría. Usted sabe quién cambió cualquier dispositivo de red y qué ejecutó, y el acceso de un contratista se elimina en un solo paso, desde los routers del núcleo hasta los firewalls."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/enterprise-government-networks/"
+  ]
+ },
+ "lang": "es"
+}

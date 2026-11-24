@@ -1,0 +1,245 @@
+{
+ "source": "36-crm.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace un CRM para telecomunicaciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Sus agentes de atención obtienen una página por cliente en Alepo CRM, con planes, facturación, tickets e inventario juntos, y los procesos de negocio son pasos configurables con un asistente en la página."
+    },
+    {
+     "t": "p",
+     "text": "Los CRM heredados de telecomunicaciones son pesados. Los agentes buscan el historial de un cliente entre varias herramientas, y cada cambio de proceso afecta el código. El **software de CRM para telecomunicaciones** de Alepo reúne ese historial en un solo lugar."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Facturación y tarificación, además de inventario. Autogestión y Mobile POS. AI Agent Assist."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: CRM, **software de atención al cliente**, consola de CSR, escritorio del agente, gestión de clientes, gestión de pedidos, gestión de incidencias"
+    }
+   ],
+   "id": "what-a-telecom-crm-does"
+  },
+  {
+   "h2": "Todo sobre un cliente en una sola página",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los agentes dejan de buscar entre herramientas. Los planes, la facturación, los tickets y el inventario están en una sola página del cliente."
+    },
+    {
+     "t": "p",
+     "text": "La página se conecta a los sistemas de facturación y tarificación y al inventario, así como a la autogestión y a Mobile POS."
+    }
+   ],
+   "id": "everything-about-a-customer-on-one-page"
+  },
+  {
+   "h2": "Menos cambios de proceso a la espera de los desarrolladores",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los cambios de proceso rara vez esperan a los desarrolladores. Los procesos de negocio se crean como pasos configurables."
+    },
+    {
+     "t": "p",
+     "text": "La mayoría de los cambios de proceso se realizan en la configuración."
+    }
+   ],
+   "id": "fewer-process-changes-waiting-on-developers"
+  },
+  {
+   "h2": "Respuestas en inglés, francés y árabe",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un asistente en la página del cliente responde con los datos en tiempo real de la cuenta, en inglés, francés y árabe."
+    },
+    {
+     "t": "p",
+     "text": "Explica una factura, una falla o un saldo y sugiere el siguiente paso."
+    }
+   ],
+   "id": "answers-in-english-french-and-arabic"
+  },
+  {
+   "h2": "IA en Alepo CRM",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) está integrado en la página del cliente. Responde con los datos en tiempo real de la cuenta mediante 14 herramientas de solo lectura, para que los agentes obtengan la respuesta sin buscar entre pantallas. Solo ve lo que el agente que inició sesión tiene permitido ver."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-alepo-crm",
+   "tone": "dark"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es un CRM para telecomunicaciones?",
+       "a": "Un **CRM para telecomunicaciones** gestiona las cuentas de suscriptores, los pedidos, los tickets y las interacciones de un operador, y se conecta a la facturación, la tarificación y la red para que los agentes vean el panorama completo."
+      },
+      {
+       "q": "¿Podemos cambiar los procesos sin código?",
+       "a": "Sí. Los procesos de negocio son pasos configurables, y la mayoría de los cambios se realizan en la configuración."
+      },
+      {
+       "q": "¿Qué idiomas admite el asistente de IA?",
+       "a": "Inglés, francés y árabe."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala el nuevo CRM en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve. Se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    }
+   ],
+   "id": "installation"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Selfcare Now",
+       "autogestión web e incorporación con su marca"
+      ],
+      [
+       "Self-Care Mobile App",
+       "app de autogestión con su marca (beta)"
+      ],
+      [
+       "Mobile POS",
+       "alta de clientes y recargas, además de pago de facturas, para distribuidores"
+      ]
+     ],
+     "hrefs": [
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/dealer-mobile-pos/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "36 · CRM and Customer Care",
+ "pagination": false,
+ "url": "/products/crm/",
+ "title": "CRM y software de atención al cliente para telecom | Alepo",
+ "titleMarked": "**Telecom CRM** and **Customer Care Software** | Alepo",
+ "desc": "Alepo CRM es un CRM telecom que da a los agentes una página por cliente con planes, facturación, tickets e inventario, más un asistente de IA.",
+ "descMarked": "Alepo CRM is a **telecom CRM** that gives care agents one page per customer, with plans, billing, tickets and inventory together, and an AI assistant on the page.",
+ "primary": "telecom crm",
+ "secondary": "telecom crm software, customer care software",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Canales y atención",
+   "Alepo CRM"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "**CRM para telecomunicaciones** para atención al cliente",
+  "lede": [
+   "Resuelva las llamadas más rápido, porque los agentes de atención responden desde una página por cliente en lugar de buscar entre herramientas, con un asistente de IA a su lado."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "IA"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/crm/"
+  ],
+  "subnavTargets": [
+   "what-a-telecom-crm-does",
+   "everything-about-a-customer-on-one-page",
+   "ai-in-alepo-crm"
+  ]
+ },
+ "lang": "es"
+}

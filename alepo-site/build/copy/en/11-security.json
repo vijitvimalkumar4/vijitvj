@@ -1,0 +1,167 @@
+{
+ "source": "11-security.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "How we protect data",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Encryption",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Data is encrypted at rest and in transit. Only authorized people can reach it, with the right keys."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Access control",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Every system access is verified and tracked, so the right people see the right information."
+      }
+     ],
+     "href": "/products/network-access-aaa/"
+    },
+    {
+     "t": "sub",
+     "h3": "Privacy",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Sensitive information such as phone numbers and payment details is detected and protected. Systems are built to meet privacy laws such as GDPR."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Monitoring",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "A security team watches systems around the clock and responds to suspicious activity."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "AI safeguards",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Personal information in customer conversations is protected. Your customer data is never used to train AI for other companies, and important decisions can be reviewed by a person."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Incident response",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "If there is an incident, Alepo investigates, contains it and tells you what happened and what changes."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "how-we-protect-data"
+  },
+  {
+   "h2": "Data location",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Every Alepo product is installed in your own environment, so your data stays in your data center or your own cloud, under your own controls. Where Alepo runs the platform for you, it does so inside that environment."
+    }
+   ],
+   "id": "data-location"
+  },
+  {
+   "h2": "Certifications",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo holds TMForum Open APIs certification. Current certificates and audit reports are available on request under NDA."
+    }
+   ],
+   "id": "certifications"
+  },
+  {
+   "h2": "Vulnerability disclosure",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Found a security issue in an Alepo product or website? Report it to security@alepo.com. We acknowledge every report, investigate it and keep you informed until it is resolved. Our security.txt file is published at /.well-known/security.txt."
+    }
+   ],
+   "id": "vulnerability-disclosure"
+  },
+  {
+   "h2": "Security contact",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Ask for the details your review needs."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "security-contact",
+   "role": "cta"
+  }
+ ],
+ "doc": "11 · Security",
+ "pagination": false,
+ "url": "/company/security/",
+ "title": "Security and Data Protection | Alepo",
+ "titleMarked": "**Security and Data Protection** | Alepo",
+ "desc": "How Alepo protects operator and subscriber data: encryption, access control, monitoring, AI safeguards, incident response and your choice of data location.",
+ "descMarked": "How **Alepo** protects operator and subscriber data: encryption, access control, monitoring, AI safeguards, incident response and your choice of data location.",
+ "primary": "brand and trust queries (alepo security)",
+ "hero": {
+  "crumbs": [
+   "Company",
+   "Security"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Security",
+  "lede": [
+   "Operators hold some of the most sensitive data there is. This is how **Alepo** protects it."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/security/"
+  ]
+ }
+}

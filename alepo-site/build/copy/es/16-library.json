@@ -1,0 +1,139 @@
+{
+ "source": "16-library.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Datasheet names use the new product names; each shows its publication date."
+ ],
+ "sections": [
+  {
+   "h2": "Filtros",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Todos · Fichas técnicas · Casos de éxito · Documentos técnicos"
+    }
+   ],
+   "id": "filters",
+   "role": "filters"
+  },
+  {
+   "h2": "Elementos",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Ficha técnica",
+       "Ficha técnica de AAA Server"
+      ],
+      [
+       "Ficha técnica",
+       "Ficha técnica de Subscriber Data Management"
+      ],
+      [
+       "Ficha técnica",
+       "Ficha técnica de Policy Control (antes Converged Policy Control)"
+      ],
+      [
+       "Ficha técnica",
+       "Ficha técnica de Wi-Fi Offload and Calling (antes Wi-Fi Monetization)"
+      ],
+      [
+       "Caso de éxito",
+       "Digicel centraliza su red del Caribe con una reducción de costos de 4x"
+      ],
+      [
+       "Caso de éxito",
+       "Muni logra un aumento de ingresos del 10% en 1 mes con Alepo BSS"
+      ],
+      [
+       "Caso de éxito",
+       "Wind Telecom duplica su base de suscriptores con Alepo AAA Server"
+      ],
+      [
+       "Caso de éxito",
+       "Celsia Colombia reduce en un 50% el tiempo de aprovisionamiento de servicios con Alepo AAA"
+      ]
+     ],
+     "hrefs": [
+      "https://cdn.alepo.com/uploads/2025/09/Datasheet-AAA-Server.pdf",
+      "https://cdn.alepo.com/uploads/2025/09/Datasheet-Subscriber-Data-Management.pdf",
+      "https://cdn.alepo.com/uploads/2025/09/Datasheet-Converged-Policy-Control.pdf",
+      "https://cdn.alepo.com/uploads/2025/09/Datasheet-WiFi_Monetization.pdf",
+      "https://alepo.com/library/digicel-centralizes-caribbean-network-with-4x-cost-reduction/",
+      "https://alepo.com/library/muni-achieves-10-revenue-increase-in-1-months-with-alepo-bss/",
+      "https://alepo.com/library/wind-telecom-doubles-subscriber-base-with-alepo-aaa-server/",
+      "https://alepo.com/library/celsia-colombia-reduces-service-provisioning-time-by-50-with-aaa-transformation/"
+     ],
+     "kind": "library"
+    }
+   ],
+   "id": "items",
+   "role": "feed"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "16 · Library",
+ "pagination": false,
+ "url": "/library/",
+ "title": "Fichas técnicas y documentos técnicos de productos | Alepo",
+ "titleMarked": "**Telecom Product Datasheets and White Papers** | Alepo",
+ "desc": "Fichas y documentos técnicos de Alepo, más casos de éxito de AAA, TACACS+, tarificación, políticas, BSS e IA. Descargue lo que su evaluación pide.",
+ "descMarked": "Alepo **telecom product datasheets and white papers, plus case studies for AAA, TACACS+, charging, policy, BSS and AI. Download the details your evaluation needs.",
+ "primary": "none",
+ "hero": {
+  "crumbs": [
+   "Recursos",
+   "Biblioteca"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Biblioteca",
+  "lede": [
+   "**Fichas técnicas**, casos de éxito y **documentos técnicos**."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/resources/",
+   "/library/"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,213 @@
+{
+ "source": "44-network-access-aaa.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Products",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "AAA Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "AAA for fixed and mobile broadband, Wi-Fi included. **RADIUS and Diameter** in one carrier-grade platform, with policy at the point of login."
+      },
+      {
+       "t": "more",
+       "text": "Explore AAA Server →",
+       "href": "/products/aaa-server/"
+      }
+     ],
+     "href": "/products/aaa-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "TACACS+ Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Central control of who logs into every network device, from core routers to firewalls, and a record of every command they run."
+      },
+      {
+       "t": "more",
+       "text": "Explore TACACS+ Server →",
+       "href": "/products/tacacs-server/"
+      }
+     ],
+     "href": "/products/tacacs-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "Wi-Fi Offload and Calling",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Move mobile data and voice onto **carrier Wi-Fi** where radio coverage ends, with automatic SIM login and no app to install."
+      },
+      {
+       "t": "more",
+       "text": "Explore Wi-Fi Offload and Calling →",
+       "href": "/products/wifi-offload-calling/"
+      }
+     ],
+     "href": "/products/wifi-offload-calling/"
+    },
+    {
+     "t": "sub",
+     "h3": "Subscriber Data Management",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Proof of concept"
+      },
+      {
+       "t": "p",
+       "text": "One trusted record of every subscriber's identity and profile. **HSS for 4G and IMS**."
+      },
+      {
+       "t": "more",
+       "text": "Explore Subscriber Data Management →",
+       "href": "/products/subscriber-data-management/"
+      }
+     ],
+     "href": "/products/subscriber-data-management/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "One access layer, three networks",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Fiber and cable, Wi-Fi and mobile subscribers authenticate through the same platform. Plans, policies and usage stay consistent wherever the subscriber connects."
+    },
+    {
+     "t": "list",
+     "items": [
+      "**Fixed broadband:** PPPoE and IPoE sessions from BNG and BRAS",
+      "**Wi-Fi:** SIM-based and portal logins from Wi-Fi controllers",
+      "**Mobile:** Diameter signaling from the packet core",
+      "**Network devices:** TACACS+ logins from network devices, routers to firewalls"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "one-access-layer-three-networks"
+  },
+  {
+   "h2": "Built for the access network you run next",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**Carrier-grade:** active-active clustering and geographic redundancy",
+      "Cloud native: on Kubernetes, in your environment",
+      "**Open:** standard protocols and APIs that work with your existing network equipment",
+      "**AI Agent Assist (beta):** answers connection and device-access questions in the AAA and TACACS+ consoles"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "built-for-the-access-network-you-run-next"
+  },
+  {
+   "h2": "Frequently asked questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What does AAA mean in telecom?",
+       "a": "AAA stands for authentication, authorization and accounting. It confirms who a subscriber is, decides what they may use, and records what they used for billing."
+      },
+      {
+       "q": "What is the difference between RADIUS and TACACS+?",
+       "a": "RADIUS controls subscriber access to the network. TACACS+ controls engineer access to network devices, down to each command."
+      },
+      {
+       "q": "Can you start with one product?",
+       "a": "Yes. Each product runs on its own or alongside the systems you already have. Most operators start with one."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "44 · Network Access & AAA",
+ "pagination": false,
+ "url": "/products/network-access-aaa/",
+ "title": "Network Access and AAA Software for Operators | Alepo",
+ "titleMarked": "**Network Access and AAA Software for Operators** | Alepo",
+ "desc": "Network access and AAA software for operators: subscriber authentication over RADIUS and Diameter, device administration, Wi-Fi offload and subscriber data.",
+ "descMarked": "**Network access and AAA software** for operators: subscriber authentication over **RADIUS and Diameter**, device administration, Wi-Fi offload and subscriber data.",
+ "primary": "none (category overview). Product terms link to their own pages.",
+ "hero": {
+  "crumbs": [
+   "Home",
+   "Products",
+   "Network Access & AAA"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Network access and AAA for operators**",
+  "lede": [
+   "Get paid for every session on your network, and keep the wrong people off it. Every session starts with a decision: who is this, what may they use, and what did they use. You get that decision in real time, for every subscriber, device and engineer."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   "/products/network-access-aaa/"
+  ]
+ }
+}

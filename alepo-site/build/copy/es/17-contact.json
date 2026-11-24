@@ -1,0 +1,192 @@
+{
+ "source": "17-contact.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Formulario",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Solicitar una demo",
+     "blocks": [
+      {
+       "t": "list",
+       "items": [
+        "Nombre",
+        "Correo electrónico laboral",
+        "Empresa",
+        "País\n| Tipo | Título |\n| --- | --- |\n| Quiero: Solicitar una demo | Hablar con ventas · Enviar un RFP · Ser socio |\n| Producto de interés: AAA Server | TACACS+ Server · Digital BSS · BSS in a Box · Online Charging · IA · Otro |",
+        "¿Qué utiliza actualmente?"
+       ],
+       "hrefs": [
+        null,
+        null,
+        "/company/about/",
+        null,
+        null
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Consentimiento: Al enviar este formulario, usted acepta que Alepo pueda contactarlo en relación con su solicitud. Consulte nuestra Política de privacidad."
+      },
+      {
+       "t": "buttons",
+       "items": [
+        {
+         "label": "Enviar solicitud",
+         "href": null
+        }
+       ]
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "form",
+   "role": "form"
+  },
+  {
+   "h2": "Soporte al cliente",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Para clientes con un contrato de soporte."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Estados Unidos",
+       "+1 737 313 3952"
+      ],
+      [
+       "India",
+       "+91 22 6108 5013"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null
+     ],
+     "kind": "phones"
+    }
+   ],
+   "id": "customer-support"
+  },
+  {
+   "h2": "Oficinas",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "Austin, Texas",
+       "Sede central. 1606 Headway Circle, Suite #9137, Austin, TX 78754"
+      ],
+      [
+       "Denver, Colorado",
+       "Norteamérica"
+      ],
+      [
+       "Mexico City, Mexico",
+       "Latinoamérica"
+      ],
+      [
+       "Rio de Janeiro, Brazil",
+       "Latinoamérica"
+      ],
+      [
+       "Guayaquil, Ecuador",
+       "Latinoamérica"
+      ],
+      [
+       "Mumbai, India",
+       "Asia-Pacífico"
+      ],
+      [
+       "Mauritius",
+       "África"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "kind": "offices"
+    }
+   ],
+   "id": "offices"
+  },
+  {
+   "h2": "Página de agradecimiento (T4, noindex)",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "H1: Gracias"
+    },
+    {
+     "t": "p",
+     "text": "Hemos recibido su solicitud. Alguien de nuestro equipo le responderá dentro de un día hábil."
+    },
+    {
+     "t": "more",
+     "text": "Mientras tanto, descargue la ficha técnica del producto →",
+     "href": "/library/"
+    }
+   ],
+   "id": "thank-you-page-t4-noindex",
+   "role": "thanks"
+  }
+ ],
+ "doc": "17 · Contact",
+ "pagination": false,
+ "url": "/contact-us/",
+ "title": "Contactar a ventas y soporte | Alepo",
+ "titleMarked": "**Contact Sales and Support** | **Alepo**",
+ "desc": "Pida una demo, hable con ventas, envíe un RFP o acceda al soporte 24x7 de Alepo. Oficinas en Norteamérica, Latinoamérica, Asia Pacífico y África.",
+ "descMarked": "**Contact Alepo** to request a demo, talk to sales, submit an RFP or reach 24x7 customer support. Offices in North America, Latin America, Asia Pacific and Africa.",
+ "primary": "brand (contact alepo)",
+ "hero": {
+  "crumbs": [
+   "Empresa",
+   "Contacto"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Contacte a Alepo**",
+  "lede": [
+   "Solicite una demo, hable con ventas, envíe un RFP o comuníquese con soporte."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/contact-us/"
+  ]
+ },
+ "lang": "es"
+}

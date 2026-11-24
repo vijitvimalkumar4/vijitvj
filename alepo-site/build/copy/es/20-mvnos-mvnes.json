@@ -1,0 +1,359 @@
+{
+ "source": "20-mvnos-mvnes.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Lance una marca o aloje varias",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un paquete de lanzamiento definido para una nueva marca. Tarificación en tiempo real y liquidación para el habilitador que aloja varias."
+    },
+    {
+     "t": "p",
+     "text": "Una nueva marca necesita un BSS operativo antes de tener clientes, mientras que el habilitador que aloja varias marcas necesita mantenerlas separadas y liquidar con cada una. El **software para MVNO** de Alepo le sirve en ambos casos."
+    },
+    {
+     "t": "p",
+     "text": "Para: Nuevas marcas, submarcas y los habilitadores que las alojan"
+    }
+   ],
+   "id": "launch-a-brand-or-host-several"
+  },
+  {
+   "h2": "¿Qué es un MVNE?",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Un **MVNE** (habilitador de red virtual móvil) proporciona los sistemas que un MVNO necesita para operar: tarificación, facturación, aprovisionamiento y, a menudo, la conexión de red núcleo con el operador anfitrión. Un MVNE puede alojar muchas marcas MVNO, cada una con sus propios planes y clientes."
+    },
+    {
+     "t": "p",
+     "text": "Un MVNO es dueño de la marca y del cliente. Detrás de él, un MVNE opera la tecnología. El operador anfitrión es dueño de la red de radio."
+    }
+   ],
+   "id": "what-is-an-mvne"
+  },
+  {
+   "h2": "Listo para vender desde el primer día",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Una nueva marca tiene lo que necesita desde el primer día. BSS in a Box reúne autogestión, CRM, facturación, tarificación y POS móvil en una oferta definida."
+    },
+    {
+     "t": "product",
+     "text": "BSS in a Box",
+     "href": "/products/bss-in-a-box/"
+    }
+   ],
+   "id": "ready-to-sell-from-day-one"
+  },
+  {
+   "h2": "La caída de una marca se queda en esa marca",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Una actualización o una caída en una marca nunca afecta a las demás. Cada marca funciona en su propio despliegue, con sus propios datos."
+    },
+    {
+     "t": "p",
+     "text": "Productos: BSS in a Box · Digital BSS"
+    }
+   ],
+   "id": "one-brand-s-outage-stays-with-that-brand"
+  },
+  {
+   "h2": "Socios liquidados sin hojas de cálculo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo deja de conciliar manualmente con el operador anfitrión y los socios. Las tablas de tarifas, los compromisos mensuales y las penalidades por incumplimiento se aplican en el ciclo de facturación."
+    },
+    {
+     "t": "p",
+     "text": "Productos: Partner and MVNO Settlement · Online Charging"
+    }
+   ],
+   "id": "partners-settled-without-spreadsheets"
+  },
+  {
+   "h2": "Operaciones de red con IA",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) responde las preguntas de los agentes de atención sobre facturas y cuentas a partir de datos en tiempo real. El AI Customer Assistant atiende a los suscriptores de cada marca en la web y la app las 24 horas, completa tareas de cuenta a través del BSS dentro de la propia cuenta del cliente que inició sesión y deriva los casos complejos a personas."
+    },
+    {
+     "t": "p",
+     "text": "Los agentes ven únicamente lo que sus propios permisos permiten, y el asistente nunca cambia una configuración por su cuenta."
+    },
+    {
+     "t": "more",
+     "text": "Vea cómo funciona la IA en los productos de Alepo →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Por dónde empezar",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "BSS in a Box",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Para un nuevo MVNO o submarca que aún no se ha lanzado."
+      },
+      {
+       "t": "p",
+       "text": "Digital BSS empaquetado para el lanzamiento de un nuevo MVNO. Autogestión, CRM, facturación, tarificación y POS móvil en una oferta definida."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/bss-in-a-box/"
+      }
+     ],
+     "href": "/products/bss-in-a-box/"
+    },
+    {
+     "t": "sub",
+     "h3": "Online Charging",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Para habilitadores que tarifican varias marcas en tiempo real."
+      },
+      {
+       "t": "p",
+       "text": "Tarifica cada llamada, mensaje y megabyte contra el saldo del cliente en tiempo real. Los nuevos paquetes se lanzan sin una nueva versión de código."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/online-charging/"
+      }
+     ],
+     "href": "/products/online-charging/"
+    },
+    {
+     "t": "sub",
+     "h3": "Partner and MVNO Settlement",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Para operadores anfitriones y MVNE que facturan a los MVNO que alojan."
+      },
+      {
+       "t": "p",
+       "text": "Incorpora socios, tarifica su tráfico y genera facturas e informes de liquidación, para que el operador pague y cobre correctamente sin hojas de cálculo."
+      },
+      {
+       "t": "more",
+       "text": "Página del producto →",
+       "href": "/products/partner-mvno-settlement/"
+      }
+     ],
+     "href": "/products/partner-mvno-settlement/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Se suele agregar",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "Fulfilment Manager",
+      "Subscriber Data Management",
+      "Digital BSS",
+      "Policy Control",
+      "Prepaid Offers and Vouchers",
+      "Collections and Dunning",
+      "Mobile POS",
+      "Alepo CRM",
+      "Selfcare Now",
+      "Self-Care Mobile App",
+      "Interconnect and Roaming Settlement",
+      "Mediation Studio",
+      "AI Customer Assistant",
+      "AI Agent Assist"
+     ],
+     "hrefs": [
+      "/products/service-provisioning/",
+      "/products/subscriber-data-management/",
+      "/products/digital-bss/",
+      "/products/policy-control/",
+      "/products/prepaid-offers-vouchers/",
+      "/products/collections-dunning/",
+      "/products/dealer-mobile-pos/",
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/mediation-revenue-assurance/",
+      "/products/ai-virtual-agent/",
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "often-added",
+   "role": "chips"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "SaskTel lanzó Lum Mobile como una marca totalmente digital, con planes flexibles y autoservicio desde el inicio."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "Lum Mobile (SaskTel) · Canadá"
+      ],
+      [
+       "Resultado",
+       "Marca móvil 100% digital"
+      ],
+      [
+       "Proyecto",
+       "Marca móvil digital"
+      ],
+      [
+       "Aspectos destacados",
+       "Asistente de IA para la atención al cliente · Lanzada como marca independiente"
+      ],
+      [
+       "Perfil",
+       "Marca MVNO digital: Lum Mobile. Digital BSS y AI Customer Assistant."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "¿Planea un lanzamiento?",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Lea la guía: Cómo lanzar un MVNO →",
+     "href": "https://alepo.com/blog/how-to-launch-mvno-in-30-days/"
+    }
+   ],
+   "id": "planning-a-launch"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Cuál es la diferencia entre un MVNO y un MVNE?",
+       "a": "Un MVNO vende servicio móvil con su propia marca. Un **MVNE** proporciona la plataforma sobre la que operan los MVNO, incluidas la tarificación, la facturación y el aprovisionamiento."
+      },
+      {
+       "q": "¿Qué incluye una plataforma MVNO?",
+       "a": "Una **plataforma MVNO** abarca autogestión, CRM, facturación, tarificación en tiempo real y canales de venta. Usted los obtiene en conjunto con BSS in a Box."
+      },
+      {
+       "q": "¿Puede un MVNE alojar varias marcas en Alepo?",
+       "a": "Sí. Cada marca funciona en su propio despliegue, y la liquidación gestiona cada marca por separado."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "20 · MVNOs and MVNEs",
+ "pagination": false,
+ "url": "/solutions/mvnos-mvnes/",
+ "title": "Software de plataforma MVNO y MVNE | Alepo",
+ "titleMarked": "**MVNO and MVNE Platform Software** | Alepo",
+ "desc": "Plataforma MVNO y software MVNE: un paquete para lanzar una marca nueva, y tarificación en tiempo real y liquidación para el MVNE que aloja varias.",
+ "descMarked": "**MVNO platform** and **MVNE** software from Alepo: a defined launch package for a new brand, and real-time charging and settlement for the enabler that hosts several.",
+ "primary": "mvne",
+ "secondary": "mvno platform, mvno software",
+ "hero": {
+  "crumbs": [
+   "Soluciones",
+   "MVNO y MVNE"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Software para MVNO y MVNE**",
+  "lede": [
+   "Comience a generar ingresos antes con una nueva marca, y aloje más marcas sin que los problemas de una afecten a otra. Un nuevo MVNO se lanza con un BSS operativo desde el primer día, y un habilitador mantiene cada marca que aloja separada y liquidada."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/mvnos-mvnes/"
+  ]
+ },
+ "lang": "es"
+}

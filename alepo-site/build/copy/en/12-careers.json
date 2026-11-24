@@ -1,0 +1,137 @@
+{
+ "source": "12-careers.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Each role links to its own page at /company/careers/[role]/."
+ ],
+ "sections": [
+  {
+   "h2": "Why Alepo",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Impact",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "The software you build connects and bills subscribers on live networks."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Team",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Many of the team have spent their careers in operator networks and billing, and in customer support."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Learning",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Conferences and certification, plus work across teams."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "why-alepo"
+  },
+  {
+   "h2": "Open roles",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "No role that fits? Send your resume anyway."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "Senior Sales Engineering Solutions Architect",
+       "Remote, United States"
+      ],
+      [
+       "Team Lead, Delivery and Support",
+       "Remote, LATAM"
+      ],
+      [
+       "Senior Engineer, Technical Support",
+       "Navi Mumbai"
+      ],
+      [
+       "Lead Java Developer, Research and Development",
+       "Navi Mumbai or Pune"
+      ],
+      [
+       "Sales Director",
+       "Remote, North America"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/careers/senior-sales-engineering-solutions-architect/",
+      "https://alepo.com/careers/team-lead-delivery-support/",
+      "https://alepo.com/careers/senior-engineer-technical-support/",
+      "https://alepo.com/careers/lead-java-developer-research-development/",
+      "https://alepo.com/careers/sales-director/"
+     ],
+     "kind": "roles"
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Send your resume",
+       "href": "https://alepo.com/company/careers/apply-now/"
+      }
+     ]
+    }
+   ],
+   "id": "open-roles"
+  }
+ ],
+ "doc": "12 · Careers",
+ "pagination": false,
+ "url": "/company/careers/",
+ "title": "Telecom Software Jobs at Alepo Technologies",
+ "titleMarked": "**Telecom Software Jobs** at **Alepo Technologies**",
+ "desc": "Careers at Alepo Technologies. Build telecom software that connects and bills subscribers on live networks, with a team that has done it for two decades.",
+ "descMarked": "Careers at **Alepo Technologies**. Build telecom software that connects and bills subscribers on live networks, with a team that has done it for two decades.",
+ "primary": "alepo technologies careers (brand)",
+ "hero": {
+  "crumbs": [
+   "Company",
+   "Careers"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Careers at Alepo**",
+  "lede": [
+   "Build **telecom software** that runs live operator networks, with a team that has done it for more than two decades."
+  ],
+  "buttons": [
+   {
+    "label": "See open roles",
+    "href": "#open-roles"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/careers/"
+  ]
+ }
+}

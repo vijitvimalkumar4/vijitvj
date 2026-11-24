@@ -1,0 +1,229 @@
+{
+ "source": "38-self-care-app.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Fewer calls and shop visits",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A white-label iOS and Android app. It is part of Selfcare Now (beta). From their phone, subscribers check usage, recharge, pay bills and change plans."
+    },
+    {
+     "t": "p",
+     "text": "Subscribers call or visit a shop for a balance check, a top-up or a plan change, and many of them never open a web portal at all. A **telecom self-care app** meets them where they already are."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Alepo CRM and billing, plus online charging. Payment gateways. Vouchers. The AI Customer Assistant."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: mobile self-care, subscriber app, customer app, My Account app, iOS and Android app"
+    }
+   ],
+   "id": "fewer-calls-and-shop-visits"
+  },
+  {
+   "h2": "Low-balance alerts in real time",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Usage, balances and invoices are shown in real time. Push notifications tell the customer about a low balance or a new bill."
+    },
+    {
+     "t": "p",
+     "text": "A balance check no longer needs a call or a shop visit."
+    }
+   ],
+   "id": "low-balance-alerts-in-real-time"
+  },
+  {
+   "h2": "Recharge and pay from the app",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Customers recharge by card, wallet or voucher, pay bills and set up auto-pay."
+    },
+    {
+     "t": "p",
+     "text": "Plan changes, add-ons and support tickets are done from the app."
+    }
+   ],
+   "id": "recharge-and-pay-from-the-app"
+  },
+  {
+   "h2": "Branding",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your subscribers see your own name and logo, in your colors."
+    },
+    {
+     "t": "p",
+     "text": "It runs on iOS and Android."
+    }
+   ],
+   "id": "branding"
+  },
+  {
+   "h2": "AI in the app",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "The AI Customer Assistant is built in. It answers routine questions around the clock and completes account tasks inside the signed-in customer's own account. Complex cases go to a care agent, and offers such as a travel-data pass can appear inside the conversation."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-in-the-app",
+   "tone": "dark"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Is the app published under our brand?",
+       "a": "Yes. Each operator's app carries its own name and logo, in its own colors. The Selfcare Now app is in beta and not yet published in the app stores."
+      },
+      {
+       "q": "What can subscribers do in the app?",
+       "a": "Check usage and balance, recharge by card, wallet or voucher, pay bills, set up auto-pay, change plans and open support tickets."
+      },
+      {
+       "q": "Does it share data with the web portal?",
+       "a": "Yes. The app and Selfcare Now read from the same account data, so every channel shows the same balance."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Alepo CRM",
+       "customer care workspace with AI"
+      ],
+      [
+       "Selfcare Now",
+       "branded web self-care and onboarding"
+      ],
+      [
+       "Mobile POS",
+       "customer sign-up and top-ups, plus bill payments, for dealers"
+      ]
+     ],
+     "hrefs": [
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/dealer-mobile-pos/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "38 · Self-Care Mobile App",
+ "pagination": false,
+ "url": "/products/self-care-app/",
+ "title": "White-Label Telecom Self-Care App | Alepo",
+ "titleMarked": "**White-Label Telecom Self-Care App** | Alepo",
+ "desc": "A white-label telecom self-care app for iOS and Android under your brand. Subscribers check usage, recharge, pay bills and change plans from their phone.",
+ "descMarked": "A **white-label telecom self-care app** for iOS and Android under your brand. Subscribers check usage, recharge, pay bills and change plans from their phone.",
+ "primary": "long-tail operator queries (white-label telecom app, telecom self-care app)",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "Channels and care",
+   "Self-Care Mobile App"
+  ],
+  "eyebrow": null,
+  "badge": "Beta",
+  "h1": "**White-label telecom self-care app**",
+  "lede": [
+   "Take balance checks and top-ups off your call center and out of your shops. Subscribers handle them in an app under your brand, on the phone they already carry, along with bill payments and plan changes."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "AI"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/customer-care-channels/",
+   "/products/self-care-app/"
+  ],
+  "subnavTargets": [
+   "fewer-calls-and-shop-visits",
+   "low-balance-alerts-in-real-time",
+   "ai-in-the-app"
+  ]
+ }
+}

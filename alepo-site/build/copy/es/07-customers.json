@@ -1,0 +1,323 @@
+{
+ "source": "07-customers.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Casos destacados",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "STC · Arabia Saudita",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**3x** en rendimiento de AAA y capacidad de suscriptores"
+      },
+      {
+       "t": "p",
+       "text": "Actualización de AAA"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Mejora de 10x en el tiempo de respuesta de la API",
+        "Cero tiempo de inactividad durante la migración de datos"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Operador de red móvil tier-1. AAA Server."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "Digicel · Caribe",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**13** mercados migrados sin tiempo de inactividad"
+      },
+      {
+       "t": "p",
+       "text": "Consolidación de AAA"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Reducción de 4x en los costos recurrentes en el primer mes",
+        "Gestión centralizada en todos los mercados"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Proveedor de servicios de comunicaciones tier-1. AAA Server."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "Eswatini Mobile · Reino de Eswatini",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**109** días para migrar 235.000 suscriptores"
+      },
+      {
+       "t": "p",
+       "text": "Migración de BSS"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Interrupciones de red eliminadas",
+        "Autogestión digital para clientes"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Operador móvil. Digital BSS."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "SaskTel · Canadá",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Marca móvil **100%** digital"
+      },
+      {
+       "t": "p",
+       "text": "Marca móvil digital"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Una marca separada y totalmente digital sobre Alepo Digital BSS",
+        "Asistente de IA para el servicio al cliente"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Marca MVNO digital: Lum Mobile. AI Customer Assistant."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "Wind Telecom · República Dominicana",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**2x** la base de suscriptores en menos de dos años"
+      },
+      {
+       "t": "p",
+       "text": "AAA en la nube"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Migración sin tiempo de inactividad",
+        "Intervención manual eliminada mediante automatización"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Proveedor de FTTH, VoIP e IPTV. AAA Server."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    },
+    {
+     "t": "sub",
+     "h3": "ISP de Centroamérica · Centroamérica",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**1,3M** usuarios en los primeros tres meses"
+      },
+      {
+       "t": "p",
+       "text": "Wi-Fi público"
+      },
+      {
+       "t": "ul",
+       "items": [
+        "Cumplimiento regulatorio total",
+        "Implementación en la nube"
+       ]
+      },
+      {
+       "t": "p",
+       "text": "Proveedor de servicios de internet. Wi-Fi Offload and Calling."
+      }
+     ],
+     "href": null,
+     "kind": "story"
+    }
+   ],
+   "id": "featured-stories"
+  },
+  {
+   "h2": "Más casos",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "Zain Jordan duplica la capacidad de red y la base de suscriptores con Alepo AAA",
+      "WOM aumenta sus suscriptores de FTTH con Alepo AAA",
+      "Celsia Colombia reduce el tiempo de aprovisionamiento de servicios con Alepo AAA",
+      "ETB Colombia amplía la cobertura de datos con descarga de datos a Wi-Fi",
+      "NTA Marshall Islands lanza 4G LTE con Alepo",
+      "ACS lanza un servicio solo LTE en Myanmar en un mes"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "more-stories"
+  },
+  {
+   "h2": "Testimonio de cliente",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "“Alepo ha sido un socio flexible para nosotros, que se esfuerza por comprender nuestras necesidades particulares y entrega soluciones que ofrecen un ROI rápido.”"
+    },
+    {
+     "t": "p",
+     "text": "Buckeye Broadband"
+    }
+   ],
+   "id": "customer-quote",
+   "role": "quote"
+  },
+  {
+   "h2": "Después de la puesta en producción",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "Soporte 24x7",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Ingenieros de soporte técnico con experiencia en telecomunicaciones, de guardia las 24 horas."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Gerente de éxito del cliente",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Un gerente asignado que realiza revisiones periódicas y es su vía de escalamiento."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Capacitación",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Capacitación por rol durante la implementación y una biblioteca a demanda después."
+      }
+     ],
+     "href": null
+    }
+   ],
+   "id": "after-go-live"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "07 · Customers",
+ "pagination": false,
+ "url": "/customers/",
+ "title": "Casos de éxito de operadores de telecomunicaciones | Alepo",
+ "titleMarked": "**Customer Stories** from **Telecom Operators** | Alepo",
+ "desc": "Casos de éxito de Alepo con operadores de todo tamaño: actualizaciones AAA, migraciones BSS, lanzamientos MVNO y Wi-Fi público, con sus resultados.",
+ "descMarked": "Alepo case studies from telecom operators of every size: AAA upgrades, BSS migrations, MVNO launches and public Wi-Fi, with the results each one achieved.",
+ "primary": "alepo case studies",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Clientes"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Casos de éxito**",
+  "lede": [
+   "Operadores de todos los tamaños gestionan su acceso y sus ingresos con Alepo. Esto es lo que cambió para ellos después de la puesta en producción."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": [
+   "STC",
+   "Digicel",
+   "SaskTel",
+   "Zain",
+   "Wind Telecom",
+   "Buckeye Broadband",
+   "Mauritius Telecom"
+  ],
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/customers/"
+  ]
+ },
+ "lang": "es"
+}

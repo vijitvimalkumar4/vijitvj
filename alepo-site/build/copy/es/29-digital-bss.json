@@ -1,0 +1,325 @@
+{
+ "source": "29-digital-bss.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **bss software**"
+ ],
+ "sections": [
+  {
+   "h2": "Un BSS que puede adoptar por partes",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo **Digital BSS** es un único sistema configurable para vender, tarificar, facturar, cobrar y atender, en redes móviles y de banda ancha fija, incluida la fibra."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores medianos, los ISP y las nuevas marcas digitales suelen usar un BSS obsoleto o dividido en varios sistemas, donde cada cambio de plan requiere nuevo desarrollo. La cobranza y el bloqueo son manuales. Un reemplazo parece un programa de varios años."
+    },
+    {
+     "t": "p",
+     "text": "**Digital BSS** está diseñado para adoptarse por partes, de modo que usted compra los módulos que necesita y conserva los sistemas que todavía funcionan."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Para",
+       "MNO, MVNO, MVNE e ISP medianos"
+      ],
+      [
+       "Planes",
+       "Prepago, pospago e híbrido"
+      ],
+      [
+       "Servicios",
+       "Móvil y fibra en un solo sistema"
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: BSS, BSS/OSS, facturación convergente, atención al cliente y facturación, CRM y facturación, gestión de ingresos, **software BSS**"
+    }
+   ],
+   "id": "a-bss-you-can-take-in-parts"
+  },
+  {
+   "h2": "Comience con el módulo que necesita",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Compre solo los módulos que necesita. Un CRM o un sistema de facturación existente puede mantenerse, y **Digital BSS** funciona junto a él."
+    },
+    {
+     "t": "p",
+     "text": "La red se alcanza a través de Fulfilment Manager, AAA, tarificación en línea y control de políticas. Las pasarelas de pago se conectan del otro lado."
+    }
+   ],
+   "id": "start-with-the-module-you-need"
+  },
+  {
+   "h2": "Seguimiento de facturas impagas sin trabajo manual",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "La gestión de cobranza funciona con reglas que usted define para cada cuenta o factura. Los recordatorios, los cargos por mora y el bloqueo se aplican automáticamente."
+    },
+    {
+     "t": "p",
+     "text": "Cuando llega el pago, el servicio se restablece de la misma manera."
+    }
+   ],
+   "id": "unpaid-bills-chased-without-manual-work"
+  },
+  {
+   "h2": "Actualizaciones que siguen siendo simples",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada cliente usa la misma versión con su propia configuración, por lo que su equipo no mantiene código bifurcado."
+    },
+    {
+     "t": "p",
+     "text": "Se aplica el parche a un módulo a la vez, sin actualizar el resto."
+    }
+   ],
+   "id": "upgrades-that-stay-simple"
+  },
+  {
+   "h2": "Caso de éxito",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Eswatini Mobile dejó atrás un BSS heredado y eliminó las interrupciones que afectaban la satisfacción de los clientes a medida que crecía su base de suscriptores."
+    },
+    {
+     "t": "more",
+     "text": "Todos los casos de éxito →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Campo",
+      "Texto"
+     ],
+     "rows": [
+      [
+       "Cliente",
+       "Eswatini Mobile · Reino de Eswatini"
+      ],
+      [
+       "Resultado",
+       "109 días para migrar 235.000 suscriptores"
+      ],
+      [
+       "Proyecto",
+       "Migración de BSS"
+      ],
+      [
+       "Aspectos destacados",
+       "Interrupciones de red eliminadas · Autogestión digital para los clientes"
+      ],
+      [
+       "Perfil",
+       "Operador móvil. Digital BSS."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Recursos",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "Todos los recursos →",
+     "href": "/resources/"
+    },
+    {
+     "t": "list",
+     "items": [
+      "Caso de éxito · Muni logra un aumento del 10% en sus ingresos en 1 mes con Alepo BSS"
+     ],
+     "hrefs": [
+      null
+     ]
+    }
+   ],
+   "id": "resources"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es un BSS digital?",
+       "a": "Un **BSS digital** es un sistema de soporte de negocio diseñado para funcionar en línea y en tiempo real, con autoservicio para los clientes. Abarca el catálogo de productos, las órdenes, la tarificación, la facturación, la cobranza y la atención al cliente."
+      },
+      {
+       "q": "¿Podemos conservar nuestro CRM o sistema de facturación actual?",
+       "a": "Sí. Digital BSS es modular. Compre los módulos que necesita y conserve los sistemas que todavía funcionan."
+      },
+      {
+       "q": "¿Admite prepago y pospago a la vez?",
+       "a": "Sí. Los planes prepago, pospago e híbridos funcionan en un solo sistema, para móvil y fibra."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Digital BSS",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Digital BSS en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, por lo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC. Con varias marcas, cada una se ejecuta en su propio despliegue, con sus propios datos y actualizaciones, y sus propias interrupciones."
+    },
+    {
+     "t": "p",
+     "text": "Los clientes con versiones anteriores pasan a la versión 14 mediante una actualización acotada: la nueva versión más las solicitudes de cambio que aún importan."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-digital-bss"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "BSS in a Box",
+       "paquete de lanzamiento para nuevos MVNO"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ],
+      [
+       "Policy Control",
+       "control de políticas para planes de datos y VoLTE"
+      ]
+     ],
+     "hrefs": [
+      "/products/bss-in-a-box/",
+      "/products/online-charging/",
+      "/products/policy-control/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "29 · Digital BSS",
+ "pagination": false,
+ "url": "/products/digital-bss/",
+ "title": "Digital BSS para operadores de telecomunicaciones | Alepo",
+ "titleMarked": "**Digital BSS** for **Telecom Operators** | Alepo",
+ "desc": "Alepo Digital BSS: un sistema configurable para vender, tarificar, facturar, cobrar y atender en móvil y fijo. Compre solo los módulos que necesite.",
+ "descMarked": "Alepo **Digital BSS** is one configurable system to sell, charge, bill, collect and serve customers on mobile and fixed broadband. Buy only the modules you need.",
+ "primary": "digital bss",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Digital BSS"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Digital BSS para operadores de telecomunicaciones**",
+  "lede": [
+   "Modernice la facturación y la atención al cliente sin el costo ni el riesgo de un programa de varios años. Reemplace un BSS obsoleto módulo por módulo, con un único sistema configurable que vende, tarifica, factura, cobra y atiende a los clientes en redes móviles y de banda ancha fija, incluida la fibra."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación",
+   "Caso de éxito",
+   "Recursos"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/digital-bss/"
+  ],
+  "subnavTargets": [
+   "a-bss-you-can-take-in-parts",
+   "start-with-the-module-you-need",
+   "installing-digital-bss",
+   "customer-story",
+   "resources"
+  ]
+ },
+ "lang": "es"
+}

@@ -1,0 +1,273 @@
+{
+ "source": "24-service-provisioning.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Aprovisionamiento de telecomunicaciones en un solo lugar",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Fulfilment Manager se encarga del **aprovisionamiento de telecomunicaciones**: ejecuta las órdenes de servicio en la red. Una activación, una suspensión o un cambio de plan sale del CRM o de facturación, llega al elemento de red correcto y vuelve confirmado."
+    },
+    {
+     "t": "p",
+     "text": "En la mayoría de los operadores, el **aprovisionamiento en telecomunicaciones** se realiza con scripts y middleware desarrollados internamente, y muchos operadores de fibra envían los cambios directamente a sus OLT de esa forma. Las suspensiones del día de facturación saturan la red. Nadie puede demostrar qué órdenes se completaron, y la facturación y la red se desincronizan."
+    },
+    {
+     "t": "p",
+     "text": "Fulfilment Manager reemplaza esos scripts con un solo producto. Recibe órdenes del CRM y de facturación y las ejecuta en OLT, bases de datos de suscriptores (HLR y HSS), tarificación en línea, control de políticas y AAA."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Órdenes",
+       "Activación, suspensión, restablecimiento y cambio de plan"
+      ],
+      [
+       "Elementos de red",
+       "OLT, bases de datos de suscriptores (HLR y HSS), tarificación en línea, control de políticas, AAA y plataformas de servicio"
+      ],
+      [
+       "Interfaces",
+       "REST y SOAP"
+      ],
+      [
+       "En desarrollo",
+       "Identificación automática de la OLT a la que está conectado cada suscriptor"
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: FFM, Activator, **activación de servicios**, **aprovisionamiento de servicios**, control de acceso basado en push"
+    }
+   ],
+   "id": "telecom-provisioning-done-in-one-place"
+  },
+  {
+   "h2": "Prueba de que cada orden se ejecutó",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada orden se confirma por cliente. Facturación sabe que una suspensión llegó a la línea, y atención al cliente sabe que una activación finalizó."
+    },
+    {
+     "t": "p",
+     "text": "Un comando que falla se reintenta automáticamente. Los operadores pueden revisar, pausar y reintentar cualquier elemento pendiente."
+    }
+   ],
+   "id": "proof-that-every-order-landed"
+  },
+  {
+   "h2": "Día de facturación sin saturar la red",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Las suspensiones y los restablecimientos llegan de forma masiva después de cada ciclo de facturación. Fulfilment Manager regula su ritmo para que su red pueda procesarlos."
+    },
+    {
+     "t": "p",
+     "text": "Cada orden sigue llegando al elemento de red correcto y vuelve con su propio resultado."
+    }
+   ],
+   "id": "billing-day-without-flooding-the-network"
+  },
+  {
+   "h2": "Siga enviando la configuración a sus OLT",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Si usted aprovisiona enviando la configuración a la OLT, puede seguir haciéndolo. No hay que rediseñar la red en torno a un BNG."
+    },
+    {
+     "t": "p",
+     "text": "Un AAA basado en pull puede agregarse más adelante detrás de la misma interfaz, cuando usted esté listo."
+    }
+   ],
+   "id": "keep-pushing-configuration-to-your-olts"
+  },
+  {
+   "h2": "Conexiones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Por encima se ubican el CRM, la gestión de órdenes y la facturación, de Alepo o propios. Por debajo se ubican las OLT, las bases de datos de suscriptores (HLR y HSS), la tarificación en línea, el control de políticas, el AAA y las plataformas de servicio, mediante REST y SOAP."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores móviles, MVNO y MVNE lo usan de la misma manera, para activar un servicio en varios elementos de red."
+    }
+   ],
+   "id": "connections"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué hace Fulfilment Manager?",
+       "a": "Ejecuta las órdenes de servicio en la red. Las activaciones, suspensiones, restablecimientos y cambios de plan provenientes del CRM o de facturación llegan al elemento de red correcto, y cada uno se confirma por cliente."
+      },
+      {
+       "q": "¿Tenemos que rediseñar la red en torno a un BNG?",
+       "a": "No. Los operadores de fibra que envían la configuración a la OLT pueden seguir haciéndolo. Un AAA basado en pull puede agregarse más adelante detrás de la misma interfaz."
+      },
+      {
+       "q": "¿Qué sucede cuando un comando falla?",
+       "a": "Se reintenta automáticamente. Los operadores pueden revisar, pausar y reintentar cualquier elemento pendiente."
+      },
+      {
+       "q": "¿Cómo gestiona el día de facturación?",
+       "a": "Regula el ritmo de las suspensiones y los restablecimientos masivos para no saturar la red, y devuelve un resultado por cada orden."
+      },
+      {
+       "q": "¿Con qué sistemas se conecta?",
+       "a": "Por encima, el CRM y la gestión de órdenes, además de la facturación. Por debajo, OLT, bases de datos de suscriptores (HLR y HSS), tarificación en línea, control de políticas, AAA y plataformas de servicio, mediante REST y SOAP."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Fulfilment Manager",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Fulfilment Manager en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, para que su ventana de mantenimiento sea breve y no haya que actualizar nada más al mismo tiempo. Fulfilment Manager se ejecuta sobre Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-fulfilment-manager"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "AAA Server",
+       "AAA RADIUS y Diameter para banda ancha y móvil"
+      ],
+      [
+       "TACACS+ Server",
+       "administración de dispositivos y control de comandos"
+      ],
+      [
+       "Wi-Fi Offload and Calling",
+       "Wi-Fi de operador y hotspots, además de llamadas por Wi-Fi"
+      ]
+     ],
+     "hrefs": [
+      "/products/aaa-server/",
+      "/products/tacacs-server/",
+      "/products/wifi-offload-calling/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "24 · Service Provisioning (Fulfilment Manager)",
+ "pagination": false,
+ "url": "/products/service-provisioning/",
+ "title": "Aprovisionamiento y activación de servicios telecom | Alepo",
+ "titleMarked": "**Telecom Provisioning** and **Service Activation** | Alepo",
+ "desc": "Fulfilment Manager es el aprovisionamiento telecom de Alepo: cada activación, suspensión y cambio de plan llega al elemento de red y se confirma.",
+ "descMarked": "Fulfilment Manager is Alepo's **telecom provisioning** product. Every activation, suspension and plan change reaches the right network element and is confirmed.",
+ "primary": "telecom provisioning",
+ "secondary": "provisioning in telecom, service provisioning, service activation",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "Control de acceso",
+   "Fulfilment Manager"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Aprovisionamiento y activación de servicios",
+  "lede": [
+   "Facture solo el servicio que realmente funciona y evite que el día de facturación sature su red. Cada orden del CRM o de facturación llega al elemento de red correcto y vuelve confirmada por cliente."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación",
+   "Preguntas"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/network-access-aaa/",
+   "/products/service-provisioning/"
+  ],
+  "subnavTargets": [
+   "telecom-provisioning-done-in-one-place",
+   "proof-that-every-order-landed",
+   "installing-fulfilment-manager",
+   "common-questions"
+  ]
+ },
+ "lang": "es"
+}

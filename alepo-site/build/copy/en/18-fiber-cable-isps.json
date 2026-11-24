@@ -1,0 +1,376 @@
+{
+ "source": "18-fiber-cable-isps.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What ISP software covers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A fiber or cable provider runs two operations at once. One is the network: lines, OLTs, sign-ins and home routers. The other is the business: plans, invoices, collections and care."
+    },
+    {
+     "t": "p",
+     "text": "With Alepo **ISP software**, your network and your business run as one, through **ISP management software** that runs from sign-up to suspension. A plan sold in the morning is active on the line the same morning, and a missed payment restricts the session until a payment restores it, with no visit and no call."
+    },
+    {
+     "t": "p",
+     "text": "Each product also works on its own. Many providers start with one, usually the AAA server or Fulfilment Manager, and add the rest over time."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "For",
+       "FTTH and cable providers, plus fixed wireless"
+      ],
+      [
+       "Plans",
+       "Prepaid and postpaid"
+      ],
+      [
+       "Works with",
+       "Your OLTs and BNGs, plus home routers. Your CRM and billing, or Alepo's."
+      ]
+     ],
+     "kind": "facts"
+    }
+   ],
+   "id": "what-isp-software-covers"
+  },
+  {
+   "h2": "Plan changes without a reconnect",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "A customer who upgrades gets the new speed straight away, and a missed payment restricts the line without a visit. Alepo AAA applies both to the session that is already running, so nobody reconnects."
+    },
+    {
+     "t": "product",
+     "text": "AAA Server",
+     "href": "/products/aaa-server/"
+    }
+   ],
+   "id": "plan-changes-without-a-reconnect"
+  },
+  {
+   "h2": "Billing day without flooding your OLTs",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Bulk suspensions and restores after each billing run no longer flood the network. Fulfilment Manager paces them and confirms the result per customer. Automatic lookup of the OLT each subscriber is on is in development."
+    },
+    {
+     "t": "product",
+     "text": "Fulfilment Manager",
+     "href": "/products/service-provisioning/"
+    }
+   ],
+   "id": "billing-day-without-flooding-your-olts"
+  },
+  {
+   "h2": "Router complaints fixed without a truck roll",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Home router management is in beta."
+    },
+    {
+     "t": "p",
+     "text": "Your helpdesk solves router and Wi-Fi complaints remotely. It sees the subscriber's router, checks the signal and the Wi-Fi settings and fixes them."
+    },
+    {
+     "t": "product",
+     "text": "Home Router and ONT Management",
+     "href": "/products/device-management/"
+    }
+   ],
+   "id": "router-complaints-fixed-without-a-truck-roll"
+  },
+  {
+   "h2": "Collections that run on their own",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Reminders, service restriction and restoration run automatically for unpaid bills, on rules you set. **ISP billing software** and collections share one record."
+    },
+    {
+     "t": "product",
+     "text": "Collections and Dunning",
+     "href": "/products/collections-dunning/"
+    }
+   ],
+   "id": "collections-that-run-on-their-own"
+  },
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) in the AAA console tells care agents and NOC engineers why a subscriber cannot connect, from live session data. The console assistant was built from a large fiber operator's top 18 support cases, and it is in beta."
+    },
+    {
+     "t": "p",
+     "text": "It is read-only and agents see only what their own permissions allow, so a person takes every action and the assistant never changes a setting on its own."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Where to start",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "AAA Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "The usual first step. It replaces an AAA that is end of life or built in-house, and brings the operations console with it."
+      },
+      {
+       "t": "p",
+       "text": "Decides who gets online and at what speed, so only paying customers use the network, at the tier they bought."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/aaa-server/"
+      }
+     ],
+     "href": "/products/aaa-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "Fulfilment Manager",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "For providers that activate services by pushing configuration to the OLTs. Orders are paced and routed, and each one is confirmed."
+      },
+      {
+       "t": "p",
+       "text": "Carries out service orders in the network, so every activation, suspension, restoration and plan change from CRM or billing reaches the right network element and is confirmed per customer."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/service-provisioning/"
+      }
+     ],
+     "href": "/products/service-provisioning/"
+    },
+    {
+     "t": "sub",
+     "h3": "Digital BSS",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "When billing, collections and care need to move together, on one system for fiber and broadband."
+      },
+      {
+       "t": "p",
+       "text": "One configurable system to sell, charge, bill, collect and serve customers across mobile and fixed broadband, including fiber."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/digital-bss/"
+      }
+     ],
+     "href": "/products/digital-bss/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Often added",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "TACACS+ Server",
+      "Wi-Fi Offload and Calling",
+      "Home Router and ONT Management",
+      "Policy Control",
+      "Prepaid Offers and Vouchers",
+      "Collections and Dunning",
+      "Mobile POS",
+      "Alepo CRM",
+      "Selfcare Now",
+      "Self-Care Mobile App",
+      "Interconnect and Roaming Settlement",
+      "Mediation Studio",
+      "AI Customer Assistant",
+      "AI Agent Assist"
+     ],
+     "hrefs": [
+      "/products/tacacs-server/",
+      "/products/wifi-offload-calling/",
+      "/products/device-management/",
+      "/products/policy-control/",
+      "/products/prepaid-offers-vouchers/",
+      "/products/collections-dunning/",
+      "/products/dealer-mobile-pos/",
+      "/products/crm/",
+      "/products/self-care-portal/",
+      "/products/self-care-app/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/mediation-revenue-assurance/",
+      "/products/ai-virtual-agent/",
+      "/products/ai-agent-assist/"
+     ]
+    }
+   ],
+   "id": "often-added",
+   "role": "chips"
+  },
+  {
+   "h2": "Customer story",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Wind Telecom doubled its subscriber base on cloud AAA that kept up with fast FTTH growth without manual work."
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Field",
+      "Copy"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "Wind Telecom · Dominican Republic"
+      ],
+      [
+       "Result",
+       "2x subscriber base in under two years"
+      ],
+      [
+       "Project",
+       "Cloud AAA"
+      ],
+      [
+       "Highlights",
+       "Zero downtime migration · Manual intervention removed through automation"
+      ],
+      [
+       "Profile",
+       "FTTH, VoIP and IPTV provider. AAA Server."
+      ]
+     ],
+     "kind": "story",
+     "fields": [
+      "Customer",
+      "Result",
+      "Project",
+      "Highlights",
+      "Profile"
+     ]
+    }
+   ],
+   "id": "customer-story"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is ISP software?",
+       "a": "**ISP software** runs an internet provider's network access and business: subscriber authentication, service activation, home-router management, billing, collections and customer care."
+      },
+      {
+       "q": "What does ISP billing software do?",
+       "a": "**ISP billing software** rates plans, produces invoices, takes payments and restricts or restores service when bills go unpaid."
+      },
+      {
+       "q": "Can we start with one product?",
+       "a": "Yes. Most providers start with the AAA server or Fulfilment Manager and add the rest over time."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "18 · Fiber and Cable ISPs",
+ "pagination": false,
+ "url": "/solutions/fibre-cable-isps/",
+ "title": "ISP Software for Fiber and Cable Providers | Alepo",
+ "titleMarked": "**ISP Software** for Fiber and Cable Providers | Alepo",
+ "desc": "ISP software for fiber and cable providers: authentication, activation and home-router management, plus ISP billing software, collections and care, connected.",
+ "descMarked": "**ISP software** for fiber and cable providers: authentication, activation and home-router management, plus **ISP billing software**, collections and care, connected.",
+ "primary": "isp software",
+ "secondary": "isp billing software, isp management software",
+ "hero": {
+  "crumbs": [
+   "Solutions",
+   "Fiber and cable ISPs"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Software for fiber and cable ISPs",
+  "lede": [
+   "Earn from a new plan the morning it's sold, and spend less on truck rolls and manual collections. One stack covers the network and the business, so unpaid accounts restrict and restore on their own and the helpdesk fixes home routers remotely."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/fibre-cable-isps/"
+  ]
+ }
+}

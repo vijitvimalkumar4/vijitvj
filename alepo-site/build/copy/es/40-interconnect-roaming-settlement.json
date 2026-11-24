@@ -1,0 +1,219 @@
+{
+ "source": "40-interconnect-roaming-settlement.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace un sistema de facturación de interconexión",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Interconnect and Roaming Settlement tarificará y liquidará el tráfico de interconexión y roaming entre operadores, incluidos los archivos de roaming; está en desarrollo y se basa en la emisión de facturas de interconexión de Partner and MVNO Settlement."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores dependen de plataformas de interconexión y roaming de terceros que están envejeciendo; algunas no se han actualizado en unos diez años y están cerca del fin de su soporte. Los **sistemas de facturación de interconexión** modernos eliminan ese riesgo."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Mediación para los registros de uso. Partner and MVNO Settlement para la emisión de facturas. Facturación."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: **facturación de interconexión**, facturación de operadores, liquidación mayorista, liquidación entre operadores, liquidación de roaming"
+    }
+   ],
+   "id": "what-an-interconnect-billing-system-does"
+  },
+  {
+   "h2": "Un solo proveedor para BSS y liquidación",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "BSS, tarificación y liquidación provienen de un solo proveedor. Los registros de uso llegan desde la mediación."
+    },
+    {
+     "t": "p",
+     "text": "Reemplaza plataformas de interconexión y roaming de terceros que están envejeciendo y se acercan al fin de su soporte."
+    }
+   ],
+   "id": "one-vendor-for-bss-and-settlement"
+  },
+  {
+   "h2": "Emisión de facturas",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Se basa en la emisión de facturas de interconexión de Partner and MVNO Settlement."
+    },
+    {
+     "t": "p",
+     "text": "Está dirigido a operadores móviles y fijos con interconexión entre operadores, y a MVNE."
+    }
+   ],
+   "id": "invoicing"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es un sistema de facturación de interconexión?",
+       "a": "Un **sistema de facturación de interconexión** tarifica las llamadas, los mensajes y los datos que pasan entre las redes de los operadores, y genera las facturas que cada operador le debe al otro."
+      },
+      {
+       "q": "¿Qué es la liquidación de interconexión?",
+       "a": "La **liquidación de interconexión** concilia los registros de tráfico con los operadores socios y acuerda los montos finales que paga cada parte."
+      },
+      {
+       "q": "¿Reemplaza nuestra plataforma de interconexión actual?",
+       "a": "Sí. Está en desarrollo para reemplazar plataformas de interconexión y roaming de terceros que están envejeciendo, con el uso proveniente de la mediación de Alepo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Interconnect and Roaming Settlement",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Interconnect and Roaming Settlement se está desarrollando para que su equipo lo instale como cualquier producto de Alepo: en contenedores, de una única forma estándar, con la misma guía automatizada. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, de modo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Interconnect and Roaming Settlement se ejecutará en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-interconnect-and-roaming-settlement"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "Partner and MVNO Settlement",
+       "facturación mayorista para MVNO y revendedores"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/partner-mvno-settlement/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "40 · Interconnect and Roaming Settlement",
+ "pagination": false,
+ "url": "/products/interconnect-roaming-settlement/",
+ "title": "Sistema de facturación de interconexión y roaming | Alepo",
+ "titleMarked": "**Interconnect Billing System** and Roaming Settlement | Alepo",
+ "desc": "El sistema de facturación de interconexión y liquidación de roaming de Alepo está en desarrollo. La liquidación con socios ya factura interconexión.",
+ "descMarked": "Alepo's **interconnect billing system** for interconnect and roaming settlement is in development. Interconnect invoicing works today in partner settlement.",
+ "primary": "interconnect billing system",
+ "secondary": "interconnect billing, interconnect settlement",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Interconnect and Roaming Settlement"
+  ],
+  "eyebrow": null,
+  "badge": "En desarrollo",
+  "h1": "Interconnect and Roaming Settlement",
+  "lede": [
+   "Planifique su salida de una plataforma de interconexión y roaming antes de que termine su soporte. La emisión de facturas de interconexión funciona hoy en Partner and MVNO Settlement, y el **sistema de facturación de interconexión** de Alepo para la liquidación de interconexión y roaming está en desarrollo."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/interconnect-roaming-settlement/"
+  ],
+  "subnavTargets": [
+   "what-an-interconnect-billing-system-does",
+   "one-vendor-for-bss-and-settlement",
+   "installing-interconnect-and-roaming-settlement"
+  ]
+ },
+ "lang": "es"
+}

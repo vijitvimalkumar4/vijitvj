@@ -1,0 +1,241 @@
+{
+ "source": "22-enterprise-government-networks.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **enterprise device administration**"
+ ],
+ "sections": [
+  {
+   "h2": "Know who changed any device",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "As a **Cisco ACS replacement**, it gives you one place that controls who logs into every network device, from core routers to firewalls, and records every command they run."
+    },
+    {
+     "t": "p",
+     "text": "Large networks are administered by many engineers and contractors. Alepo TACACS+ gives each of them their own login, decides on each command and records what was done. That is **enterprise device administration** with one policy and one audit trail."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "For",
+       "Network and security teams with large device estates"
+      ]
+     ],
+     "kind": "facts"
+    }
+   ],
+   "id": "know-who-changed-any-device"
+  },
+  {
+   "h2": "Cisco ACS replacement",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cisco Secure ACS has reached end of life. Alepo TACACS+ is a supported **Cisco ACS replacement**, and it also replaces local device passwords."
+    },
+    {
+     "t": "p",
+     "text": "Our engineers move your policies and device groups, test them against your own devices and support the cutover, and GTAC engineers stay on call 24x7 afterward."
+    },
+    {
+     "t": "product",
+     "text": "TACACS+ Server",
+     "href": "/products/tacacs-server/"
+    }
+   ],
+   "id": "cisco-acs-replacement"
+  },
+  {
+   "h2": "Evidence for every audit",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Auditors get the evidence without a project. A tamper-evident trail records every login and command and is forwarded to Splunk, Sentinel or QRadar. A control map to NIST SP 800-53 is included for auditors."
+    },
+    {
+     "t": "product",
+     "text": "TACACS+ Server",
+     "href": "/products/tacacs-server/"
+    }
+   ],
+   "id": "evidence-for-every-audit"
+  },
+  {
+   "h2": "Contractor access removed in one step",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "When a contract ends, your team removes that person in one place. No device has to be touched."
+    },
+    {
+     "t": "product",
+     "text": "TACACS+ Server",
+     "href": "/products/tacacs-server/"
+    }
+   ],
+   "id": "contractor-access-removed-in-one-step"
+  },
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI Agent Assist (beta) in the TACACS+ console answers questions about who was allowed to do what, straight from the audit trail. Its recommendations are drafts only. Engineers get the answer without reading raw logs or waiting for the one person who knows the policy."
+    },
+    {
+     "t": "more",
+     "text": "See how AI works across Alepo products →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Where to start",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "TACACS+ Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Device administration for network devices, from routers to firewalls."
+      },
+      {
+       "t": "p",
+       "text": "One place that controls and records who logs into every network device, from core routers to firewalls, and every command they run."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/tacacs-server/"
+      }
+     ],
+     "href": "/products/tacacs-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "AI Agent Assist",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Staff ask why a command was denied and get the answer from the audit trail."
+      },
+      {
+       "t": "p",
+       "text": "An assistant inside the care and network consoles. It answers staff questions from live data, explains bills and failures and suggests the next step."
+      },
+      {
+       "t": "more",
+       "text": "Product page →",
+       "href": "/products/ai-agent-assist/"
+      }
+     ],
+     "href": "/products/ai-agent-assist/"
+    }
+   ],
+   "id": "where-to-start"
+  },
+  {
+   "h2": "Proof of concept",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo TACACS+ Server 1.1.0 was released in August 2026. A scoped lab proof of concept on your own devices shows how it handles your engineers' logins and commands before you commit. Bring your device groups, your contractor list and one audit question you could not answer last year. Our engineers set it up in your lab, on your own device models, and walk your team through the audit trail."
+    }
+   ],
+   "id": "proof-of-concept"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "Is Cisco Secure ACS end of life?",
+       "a": "Yes. Cisco has ended support for Secure ACS. Read: Cisco ACS end of life and what to replace it with →"
+      },
+      {
+       "q": "What makes a good Cisco ACS replacement?",
+       "a": "A **Cisco ACS replacement** should keep TACACS+ device administration, per-command authorization and a full audit trail, and add modern integrations such as SIEM forwarding and a REST API."
+      },
+      {
+       "q": "How long does migration take?",
+       "a": "It depends on the size of your policy set and device estate. Alepo engineers plan the cutover with your team and test against your own devices first."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "22 · Enterprise and Government Networks",
+ "pagination": false,
+ "url": "/solutions/enterprise-government-networks/",
+ "title": "Cisco ACS Replacement for Enterprise Networks | Alepo",
+ "titleMarked": "**Cisco ACS Replacement** for Enterprise Networks | Alepo",
+ "desc": "A supported Cisco ACS replacement for enterprise and government networks: one place to control who logs into every network device, with every command recorded.",
+ "descMarked": "A supported **Cisco ACS replacement** for enterprise and government networks: one place to control who logs into every network device, with every command recorded.",
+ "primary": "cisco acs replacement",
+ "hero": {
+  "crumbs": [
+   "Solutions",
+   "Enterprise and government networks"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Device administration for enterprise and government networks",
+  "lede": [
+   "Cut the risk of shared device passwords and the effort behind every audit. You know who changed any network device and what they ran, and a contractor's access is removed in one step, from core routers to firewalls."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/solutions/",
+   "/solutions/enterprise-government-networks/"
+  ]
+ }
+}

@@ -1,0 +1,214 @@
+{
+ "source": "44-network-access-aaa.docx",
+ "notes": [
+  "Keywords are in **bold**. No design board exists for this page; the layout follows the Products hub."
+ ],
+ "sections": [
+  {
+   "h2": "Productos",
+   "blocks": [
+    {
+     "t": "sub",
+     "h3": "AAA Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "AAA para banda ancha fija y móvil, Wi-Fi incluido. **RADIUS y Diameter** en una plataforma de nivel operador, con políticas en el momento del inicio de sesión."
+      },
+      {
+       "t": "more",
+       "text": "Explorar AAA Server →",
+       "href": "/products/aaa-server/"
+      }
+     ],
+     "href": "/products/aaa-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "TACACS+ Server",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Control central de quién inicia sesión en cada dispositivo de red, desde los routers de núcleo hasta los firewalls, y un registro de cada comando que ejecutan."
+      },
+      {
+       "t": "more",
+       "text": "Explorar TACACS+ Server →",
+       "href": "/products/tacacs-server/"
+      }
+     ],
+     "href": "/products/tacacs-server/"
+    },
+    {
+     "t": "sub",
+     "h3": "Wi-Fi Offload and Calling",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Traslade los datos y la voz móviles a **Wi-Fi de operador** donde termina la cobertura de radio, con inicio de sesión automático con la SIM y sin ninguna app que instalar."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Wi-Fi Offload and Calling →",
+       "href": "/products/wifi-offload-calling/"
+      }
+     ],
+     "href": "/products/wifi-offload-calling/"
+    },
+    {
+     "t": "sub",
+     "h3": "Subscriber Data Management",
+     "blocks": [
+      {
+       "t": "status",
+       "text": "Prueba de concepto"
+      },
+      {
+       "t": "p",
+       "text": "Un registro único y confiable de la identidad y el perfil de cada suscriptor. **HSS para 4G e IMS**."
+      },
+      {
+       "t": "more",
+       "text": "Explorar Subscriber Data Management →",
+       "href": "/products/subscriber-data-management/"
+      }
+     ],
+     "href": "/products/subscriber-data-management/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "Una capa de acceso, tres redes",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los suscriptores de fibra y cable, Wi-Fi y móvil se autentican en la misma plataforma. Los planes, las políticas y el uso se mantienen coherentes dondequiera que se conecte el suscriptor."
+    },
+    {
+     "t": "list",
+     "items": [
+      "**Banda ancha fija:** sesiones PPPoE e IPoE desde BNG y BRAS",
+      "**Wi-Fi:** inicios de sesión con SIM y por portal desde controladores Wi-Fi",
+      "**Móvil:** señalización Diameter desde el núcleo de paquetes",
+      "**Dispositivos de red:** inicios de sesión TACACS+ desde dispositivos de red, de routers a firewalls"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "one-access-layer-three-networks"
+  },
+  {
+   "h2": "Diseñado para la red de acceso que operará a continuación",
+   "blocks": [
+    {
+     "t": "list",
+     "items": [
+      "**De nivel operador:** clústeres activo-activo y redundancia geográfica",
+      "Nativo de la nube: en Kubernetes, en su entorno",
+      "**Abierto:** protocolos estándar y API que funcionan con su equipamiento de red actual",
+      "**AI Agent Assist (beta):** responde preguntas sobre conexiones y acceso a dispositivos en las consolas de AAA y TACACS+"
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   ],
+   "id": "built-for-the-access-network-you-run-next"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué significa AAA en telecomunicaciones?",
+       "a": "AAA significa autenticación, autorización y contabilidad. Confirma quién es un suscriptor, decide qué puede usar y registra lo que usó para la facturación."
+      },
+      {
+       "q": "¿Cuál es la diferencia entre RADIUS y TACACS+?",
+       "a": "RADIUS controla el acceso de los suscriptores a la red. TACACS+ controla el acceso de los ingenieros a los dispositivos de red, hasta cada comando."
+      },
+      {
+       "q": "¿Se puede empezar con un solo producto?",
+       "a": "Sí. Cada producto funciona por sí solo o junto con los sistemas que ya tiene. La mayoría de los operadores empieza con uno."
+      }
+     ]
+    }
+   ],
+   "id": "frequently-asked-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "44 · Network Access & AAA",
+ "pagination": false,
+ "url": "/products/network-access-aaa/",
+ "title": "Acceso a la red y software AAA para operadores | Alepo",
+ "titleMarked": "**Network Access and AAA Software for Operators** | Alepo",
+ "desc": "Software AAA de acceso a red para operadores: autenticación RADIUS y Diameter, administración de dispositivos, descarga Wi-Fi y datos de suscriptores.",
+ "descMarked": "**Network access and AAA software** for operators: subscriber authentication over **RADIUS and Diameter**, device administration, Wi-Fi offload and subscriber data.",
+ "primary": "none (category overview). Product terms link to their own pages.",
+ "hero": {
+  "crumbs": [
+   "Inicio",
+   "Productos",
+   "Acceso a la red y AAA"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Acceso a la red y AAA para operadores**",
+  "lede": [
+   "Cobre por cada sesión en su red y mantenga fuera a quienes no deben estar. Cada sesión comienza con una decisión: quién es, qué puede usar y qué usó. Usted obtiene esa decisión en tiempo real, para cada suscriptor, dispositivo e ingeniero."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/",
+   "/products/",
+   "/products/network-access-aaa/"
+  ]
+ },
+ "lang": "es"
+}

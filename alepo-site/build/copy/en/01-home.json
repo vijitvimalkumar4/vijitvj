@@ -1,0 +1,473 @@
+{
+ "source": "01-home.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Results on live networks",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "These results come from upgrades and migrations carried out on live networks that could not stop, and from launches that had to work for subscribers on day one."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Figure",
+      "Result",
+      "Customer"
+     ],
+     "rows": [
+      [
+       "3x",
+       "AAA performance and subscriber capacity",
+       "STC"
+      ],
+      [
+       "13",
+       "Markets migrated with zero downtime",
+       "Digicel"
+      ],
+      [
+       "109",
+       "Days to migrate 235,000 subscribers",
+       "Eswatini Mobile"
+      ],
+      [
+       "1.3M",
+       "Users in the first three months",
+       "Central American ISP"
+      ]
+     ],
+     "kind": "stats"
+    },
+    {
+     "t": "more",
+     "text": "All customer stories →",
+     "href": "/customers/"
+    }
+   ],
+   "id": "results-on-live-networks"
+  },
+  {
+   "h2": "Products",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Access control and BSS software for operators. Run the full platform, or start with the one product you need."
+    },
+    {
+     "t": "more",
+     "text": "All products →",
+     "href": "/products/"
+    },
+    {
+     "t": "sub",
+     "h3": "Access control",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Decide who gets onto your network, and what they can do once they are there."
+      },
+      {
+       "t": "list",
+       "items": [
+        "AAA Server: **RADIUS and Diameter** authentication at carrier scale",
+        "TACACS+ Server: per-command control of every network device login",
+        "Home Router and ONT Management: **TR-069 ACS and TR-369 USP** device management (beta)",
+        "Fulfilment Manager: **service provisioning** and activation",
+        "Wi-Fi Offload and Calling: move mobile data and voice onto Wi-Fi",
+        "Subscriber Data Management: **HSS for 4G and IMS**"
+       ],
+       "hrefs": [
+        "/products/aaa-server/",
+        "/products/tacacs-server/",
+        "/products/device-management/",
+        "/products/service-provisioning/",
+        "/products/wifi-offload-calling/",
+        "/products/subscriber-data-management/"
+       ]
+      }
+     ],
+     "href": "/products/network-access-aaa/"
+    },
+    {
+     "t": "sub",
+     "h3": "BSS and monetization",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Sell, charge, bill, collect and care for every subscriber, in real time."
+      },
+      {
+       "t": "list",
+       "items": [
+        "Digital BSS: the full BSS for large, complex operations",
+        "BSS in a Box: a ready-built BSS for **MVNO** launches",
+        "Online Charging: real-time charging for prepaid and postpaid",
+        "Policy Control: **PCRF and PCF** policy for every session",
+        "Prepaid Offers and Vouchers: recharge vouchers and prepaid bundles",
+        "Mediation Studio: **telecom mediation and revenue assurance** (in development)",
+        "Collections and Dunning: automated reminders, with holds and restores tied to payment",
+        "Partner and MVNO Settlement: **wholesale billing** and partner revenue share",
+        "Interconnect and Roaming Settlement: interconnect billing, with roaming settlement in development",
+        "Alepo CRM: **telecom CRM** for customer care (beta)",
+        "Selfcare Now: **self-service portal** for subscribers (beta)",
+        "Self-Care Mobile App: a branded self-care app (beta)",
+        "Mobile POS: a dealer app for sales and SIM activation"
+       ],
+       "hrefs": [
+        "/products/digital-bss/",
+        "/products/bss-in-a-box/",
+        "/products/online-charging/",
+        "/products/policy-control/",
+        "/products/prepaid-offers-vouchers/",
+        "/products/mediation-revenue-assurance/",
+        "/products/collections-dunning/",
+        "/products/partner-mvno-settlement/",
+        "/products/interconnect-roaming-settlement/",
+        "/products/crm/",
+        "/products/self-care-portal/",
+        "/products/self-care-app/",
+        "/products/dealer-mobile-pos/"
+       ]
+      }
+     ],
+     "href": "/products/billing-bss/"
+    }
+   ],
+   "id": "products"
+  },
+  {
+   "h2": "AI network operations",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "AI sits inside the Alepo consoles and channels your teams and subscribers use, and it answers from live data."
+    },
+    {
+     "t": "p",
+     "text": "Your staff ask AI Agent Assist (beta) in the AAA, TACACS+ and CRM consoles. Your subscribers ask the AI Customer Assistant on web and app."
+    },
+    {
+     "t": "list",
+     "items": [
+      "AI Agent Assist: an assistant for care agents and the NOC (beta)",
+      "AI Customer Assistant: a virtual agent for your web and app channels"
+     ],
+     "hrefs": [
+      "/products/ai-agent-assist/",
+      "/products/ai-virtual-agent/"
+     ]
+    },
+    {
+     "t": "more",
+     "text": "**AI in Alepo products** →",
+     "href": "/products/ai-for-telecom/"
+    }
+   ],
+   "id": "ai-network-operations",
+   "tone": "dark"
+  },
+  {
+   "h2": "Solutions",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Start with the network you run."
+    },
+    {
+     "t": "more",
+     "text": "All solutions →",
+     "href": "/solutions/"
+    },
+    {
+     "t": "sub",
+     "h3": "Fiber and cable ISPs",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Authentication, activation and home-router management on the network side. Billing, collections and care on the business side."
+      },
+      {
+       "t": "more",
+       "text": "See ISP solutions →",
+       "href": "/solutions/fibre-cable-isps/"
+      }
+     ],
+     "href": "/solutions/fibre-cable-isps/"
+    },
+    {
+     "t": "sub",
+     "h3": "Mobile operators",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Real-time charging and policy, Wi-Fi where radio coverage ends, and one BSS for prepaid and postpaid."
+      },
+      {
+       "t": "more",
+       "text": "See mobile solutions →",
+       "href": "/solutions/mobile-operators/"
+      }
+     ],
+     "href": "/solutions/mobile-operators/"
+    },
+    {
+     "t": "sub",
+     "h3": "MVNOs and MVNEs",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "A defined launch package for a new brand. Real-time charging and settlement for an enabler that hosts several."
+      },
+      {
+       "t": "more",
+       "text": "See MVNO solutions →",
+       "href": "/solutions/mvnos-mvnes/"
+      }
+     ],
+     "href": "/solutions/mvnos-mvnes/"
+    },
+    {
+     "t": "sub",
+     "h3": "Wi-Fi and venues",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Automatic SIM login and calling over Wi-Fi for mobile subscribers. A branded login and paid passes for venues."
+      },
+      {
+       "t": "more",
+       "text": "See Wi-Fi solutions →",
+       "href": "/solutions/wifi-venues/"
+      }
+     ],
+     "href": "/solutions/wifi-venues/"
+    },
+    {
+     "t": "sub",
+     "h3": "Enterprise and government networks",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "One place that controls who logs into every network device, from core routers to firewalls, and records every command they run."
+      },
+      {
+       "t": "more",
+       "text": "See enterprise solutions →",
+       "href": "/solutions/enterprise-government-networks/"
+      }
+     ],
+     "href": "/solutions/enterprise-government-networks/"
+    }
+   ],
+   "id": "solutions"
+  },
+  {
+   "h2": "Customer quote",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "“Alepo has been a flexible partner for us, working to understand our unique needs and delivering solutions that provide swift ROI.”"
+    },
+    {
+     "t": "p",
+     "text": "Buckeye Broadband"
+    }
+   ],
+   "id": "customer-quote",
+   "role": "quote"
+  },
+  {
+   "h2": "Why operators choose **Alepo Technologies**",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "**Alepo Technologies** builds access control software and BSS for communication service providers, with AI built into both. Operators of every size run it, from MVNOs preparing a launch to tier-1 groups serving millions of subscribers across several continents."
+    },
+    {
+     "t": "more",
+     "text": "About Alepo →",
+     "href": "/company/about/"
+    },
+    {
+     "t": "sub",
+     "h3": "Integration",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Each product runs on its own, alongside other **Alepo** products, or with the systems you already have. Most customers start with one."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Deployment",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Cloud native on Kubernetes, installed in your environment from one standard container install, and run by your team or by Alepo."
+      }
+     ],
+     "href": "/services/#deployment"
+    },
+    {
+     "t": "sub",
+     "h3": "Delivery",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "**Alepo** engineers handle the migration and acceptance testing, then train your team, on site when needed."
+      }
+     ],
+     "href": null
+    },
+    {
+     "t": "sub",
+     "h3": "Support",
+     "blocks": [
+      {
+       "t": "p",
+       "text": "Around-the-clock technical support from our GTAC, staffed by engineers, plus a customer success manager for every customer."
+      }
+     ],
+     "href": "/services/#support"
+    }
+   ],
+   "id": "why-operators-choose-alepo-technologies"
+  },
+  {
+   "h2": "News and events",
+   "blocks": [
+    {
+     "t": "more",
+     "text": "All news →",
+     "href": "/news/"
+    },
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Item"
+     ],
+     "rows": [
+      [
+       "Customer",
+       "A tier-1 operator in Indonesia selects Alepo AAA to replace its legacy platform · Read →"
+      ],
+      [
+       "Product",
+       "Alepo launches a carrier-grade TACACS+ Server for secure network device administration · Read →"
+      ],
+      [
+       "Customer",
+       "Alepo and Nomios deploy an advanced AAA solution for VodafoneZiggo · Read →"
+      ],
+      [
+       "Event",
+       "Africa Tech Festival · 17 to 19 November 2026 · Cape Town, South Africa"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/news/tier-1-indonesia-operator-selects-alepo-aaa-broadband-transformation/",
+      "https://alepo.com/news/alepo-launches-carrier-grade-tacacs-server-solution-for-secure-network-device-administration/",
+      "https://alepo.com/news/alepo-and-nomios-deployed-advanced-aaa-solution-for-vodafoneziggo/",
+      null
+     ],
+     "kind": "newsrows"
+    }
+   ],
+   "id": "news-and-events"
+  },
+  {
+   "h2": "Talk to us",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us about your network. We'll walk you through the products on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "talk-to-us",
+   "role": "cta"
+  }
+ ],
+ "doc": "01 · Home",
+ "title": "AAA and BSS Software for Telecom Operators | Alepo",
+ "titleMarked": "**AAA and BSS Software for Telecom Operators** | **Alepo**",
+ "desc": "Alepo Technologies builds AAA, charging, billing and AI software for telecom operators, ISPs and MVNOs. Cloud-native, carrier-grade, in production since 2004.",
+ "descMarked": "**Alepo Technologies** builds **AAA**, charging, billing and AI software for **telecom operators**, ISPs and MVNOs. Cloud-native, carrier-grade, in production since 2004.",
+ "primary": "alepo technologies",
+ "url": "/",
+ "hero": {
+  "crumbs": null,
+  "eyebrow": "Alepo Technologies",
+  "badge": null,
+  "h1": "AI-native **AAA and BSS software for telecom operators**",
+  "lede": [
+   "Earn more from every subscriber, and run your network and your business with less manual work. Alepo connects your network to your revenue on one platform, from first sign-in to paid invoice, with AI built in where your teams and your subscribers work."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "href": "/contact-us/#demo"
+   },
+   {
+    "label": "See the AI at work",
+    "href": "/products/ai-for-telecom/"
+   }
+  ],
+  "subnav": [],
+  "customers": [
+   "STC",
+   "Digicel",
+   "SaskTel",
+   "Zain",
+   "Wind Telecom",
+   "Buckeye Broadband",
+   "Mauritius Telecom"
+  ],
+  "extra": [
+   {
+    "t": "table",
+    "head": [
+     "Assistant",
+     "Question",
+     "Answer",
+     "Status"
+    ],
+    "rows": [
+     [
+      "AI Agent Assist · AAA console",
+      "Why can't this subscriber connect?",
+      "The last three attempts were rejected. The account has a non-payment restriction.",
+      "Beta"
+     ],
+     [
+      "AI Customer Assistant · web and app",
+      "Can I add a travel data pass?",
+      "The pass is added to the signed-in account through the BSS.",
+      "Live"
+     ]
+    ],
+    "kind": "assistants",
+    "caption": "Illustration. Names and figures are fictional."
+   }
+  ]
+ }
+}

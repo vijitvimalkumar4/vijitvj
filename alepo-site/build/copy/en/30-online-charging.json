@@ -1,0 +1,241 @@
+{
+ "source": "30-online-charging.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Primary keywords: **online charging system**, **ocs telecom**"
+ ],
+ "sections": [
+  {
+   "h2": "What an online charging system does",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Alepo Online Charging is an **online charging system** that charges every call, message and megabyte against the balance in real time. Bundles and brands change by configuration alone."
+    },
+    {
+     "t": "p",
+     "text": "Prepaid-heavy operators and MVNEs must charge balances, bundles and several brands in real time, and the legacy charging suites they inherited are costly and slow to change. A modern OCS for telecom turns each change into a setting."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "The packet core and voice network over Diameter. Policy control for quotas. Vouchers, CRM and self-care for top-ups and balances."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ],
+      [
+       "In delivery",
+       "Multi-IMSI switching"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: OCS, real-time charging, **convergent charging**, prepaid charging, rating and balance management, Diameter Gy and Ro"
+    }
+   ],
+   "id": "what-an-online-charging-system-does"
+  },
+  {
+   "h2": "New offers without a release",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your marketing team changes bundles by configuration, without code, so a new offer does not wait for a release."
+    },
+    {
+     "t": "p",
+     "text": "Balances, bundles and several brands are charged in real time."
+    }
+   ],
+   "id": "new-offers-without-a-release"
+  },
+  {
+   "h2": "Keep your existing prepaid system",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Policy and BSS charging go through the charging gateway, so your current prepaid platform keeps running."
+    },
+    {
+     "t": "p",
+     "text": "The packet core and the voice network connect over Diameter."
+    }
+   ],
+   "id": "keep-your-existing-prepaid-system"
+  },
+  {
+   "h2": "Top-ups and balances",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Vouchers, CRM and self-care connect for top-ups and balance checks. Policy control uses the same quotas."
+    },
+    {
+     "t": "p",
+     "text": "It is built for MVNOs, MVNEs and prepaid-heavy operators."
+    }
+   ],
+   "id": "top-ups-and-balances"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is an online charging system in telecom?",
+       "a": "An **online charging system** checks and updates a subscriber's balance while the service is in use, so a call or data session is allowed only while credit or quota remains."
+      },
+      {
+       "q": "What is convergent charging?",
+       "a": "**Convergent charging** rates prepaid and postpaid usage for every service and brand on one system and one balance."
+      },
+      {
+       "q": "Can we keep our existing prepaid system?",
+       "a": "Yes. The charging gateway lets an existing prepaid system stay while new bundles and brands run on Alepo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Online Charging",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Online Charging in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Online Charging runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-online-charging"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Alepo SCP",
+       "2G and 3G charging (first deployment)"
+      ],
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "BSS in a Box",
+       "launch package for new MVNOs"
+      ],
+      [
+       "Policy Control",
+       "policy control for data plans and VoLTE"
+      ]
+     ],
+     "hrefs": [
+      null,
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/policy-control/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "30 · Online Charging",
+ "pagination": false,
+ "url": "/products/online-charging/",
+ "title": "Online Charging System (OCS) for Telecom Operators | Alepo",
+ "titleMarked": "**Online Charging System (OCS)** for Telecom Operators | Alepo",
+ "desc": "Alepo online charging system charges every call, message and megabyte against the balance in real time. Convergent charging for prepaid, postpaid and MVNEs.",
+ "descMarked": "Alepo **online charging system** charges every call, message and megabyte against the balance in real time. **Convergent charging** for prepaid, postpaid and MVNEs.",
+ "secondary": "convergent charging, 5g charging",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Online Charging"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "**Online Charging System (OCS)**",
+  "lede": [
+   "Earn from new offers sooner, without a code release, and charge every call, message and megabyte against the customer's balance in real time."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/online-charging/"
+  ],
+  "subnavTargets": [
+   "what-an-online-charging-system-does",
+   "new-offers-without-a-release",
+   "installing-online-charging"
+  ]
+ }
+}

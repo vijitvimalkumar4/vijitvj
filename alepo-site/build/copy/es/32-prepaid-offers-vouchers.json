@@ -1,0 +1,233 @@
+{
+ "source": "32-prepaid-offers-vouchers.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace el software de recargas móviles",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Con el **software de recargas móviles** de Alepo, marketing crea planes prepago, recargas con tarjeta raspable y digitales, y bonos de recarga en un solo lugar. Cada uno llega a la tarificación, el control de políticas, el AAA y todos los canales de venta a la vez."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores prepago pierden ingresos cuando las promociones requieren proyectos de TI y los vouchers están expuestos al fraude, y cada plan debe configurarse por separado en la tarificación y en el control de políticas, y otra vez en el AAA. Una sola configuración reemplaza todo eso."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Tarificación en línea y control de políticas, además de AAA. Autogestión, CRM, IVR, USSD y canales de socios. Distribuidores mediante Mobile POS."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: sistema de gestión de vouchers (VMS), gestión de recargas, recarga, gestión de PIN, e-voucher, gestión de promociones y bonos"
+    }
+   ],
+   "id": "what-mobile-recharge-software-does"
+  },
+  {
+   "h2": "Promociones sin TI",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Marketing configura bonos de recarga, códigos promocionales y reglas de elegibilidad sin TI."
+    },
+    {
+     "t": "p",
+     "text": "Un plan se configura una sola vez y se aplica en tarificación, control de políticas y AAA."
+    }
+   ],
+   "id": "promotions-without-it"
+  },
+  {
+   "h2": "Vouchers rastreados hasta que se usan",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cada voucher se rastrea durante todo el ciclo de vida del voucher de recarga, incluidas las tarjetas retiradas, robadas y dañadas."
+    },
+    {
+     "t": "p",
+     "text": "Su equipo bloquea una tarjeta que no debe usarse antes de que se canjee."
+    }
+   ],
+   "id": "vouchers-tracked-until-they-are-used"
+  },
+  {
+   "h2": "Canales de recarga",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Los clientes recargan mediante autogestión, CRM, IVR, USSD y socios. Los distribuidores recargan a los clientes electrónicamente desde Mobile POS, sin tarjeta impresa."
+    },
+    {
+     "t": "p",
+     "text": "Normalmente se entrega dentro de Digital BSS."
+    }
+   ],
+   "id": "top-up-channels"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es el software de recargas móviles?",
+       "a": "El **software de recargas móviles** gestiona cómo los suscriptores prepago agregan crédito o compran planes, mediante vouchers, recargas digitales, distribuidores y canales de autoservicio."
+      },
+      {
+       "q": "¿Qué es un sistema EVD?",
+       "a": "Un sistema EVD permite a los distribuidores vender recargas electrónicamente, sin tarjetas raspables impresas. Los distribuidores de Alepo lo hacen desde Mobile POS."
+      },
+      {
+       "q": "¿Podemos detener el fraude con lotes de vouchers robados?",
+       "a": "Sí. Los lotes retirados, robados y dañados pueden bloquearse antes de que se canjee cualquier tarjeta."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Prepaid Offers and Vouchers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Prepaid Offers and Vouchers en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, por lo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Prepaid Offers and Vouchers se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-prepaid-offers-and-vouchers"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "BSS in a Box",
+       "paquete de lanzamiento para nuevos MVNO"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "32 · Prepaid Offers and Vouchers",
+ "pagination": false,
+ "url": "/products/prepaid-offers-vouchers/",
+ "title": "Software de recargas móviles y gestión de vouchers | Alepo",
+ "titleMarked": "Mobile Recharge and Voucher Management Software | Alepo",
+ "desc": "Con el software de recargas móviles de Alepo, marketing crea planes prepago, recargas con tarjeta raspable o digitales y bonos para cada canal.",
+ "descMarked": "Alepo **mobile recharge software** lets marketing create prepaid plans, scratch-card and digital top-ups and recharge bonuses, then push them to every channel.",
+ "primary": "mobile recharge software",
+ "secondary": "evd system, recharge voucher",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Prepaid Offers and Vouchers"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Ofertas prepago y gestión de vouchers",
+  "lede": [
+   "Aumente los ingresos de prepago con ofertas que llegan al mercado sin un proyecto de TI, y reduzca sus pérdidas por fraude de vouchers. Cada oferta llega a todos los canales y sistemas de red a la vez, y cada voucher se rastrea hasta que se usa."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/prepaid-offers-vouchers/"
+  ],
+  "subnavTargets": [
+   "what-mobile-recharge-software-does",
+   "promotions-without-it",
+   "installing-prepaid-offers-and-vouchers"
+  ]
+ },
+ "lang": "es"
+}

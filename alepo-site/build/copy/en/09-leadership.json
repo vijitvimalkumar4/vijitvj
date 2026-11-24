@@ -1,0 +1,151 @@
+{
+ "source": "09-leadership.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "(No demo button in this hero, per the keyword map.)",
+  "Photo alt text pattern: \"[Name], [Title] at Alepo Technologies\""
+ ],
+ "sections": [
+  {
+   "h2": "Leadership team",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Type",
+      "Title"
+     ],
+     "rows": [
+      [
+       "Jonathan Garini",
+       "Founder and CEO"
+      ],
+      [
+       "Dallas Nash",
+       "Chief Revenue Officer"
+      ],
+      [
+       "Vishal Mathur",
+       "Executive Vice President"
+      ],
+      [
+       "Sandeep Patel",
+       "Chief Technology Officer"
+      ],
+      [
+       "Sandeep Kalekar",
+       "Vice President, Sales Engineering"
+      ],
+      [
+       "Vijay Honyalkar",
+       "Vice President, Finance"
+      ],
+      [
+       "Priyam Mitra",
+       "Vice President, Human Resources"
+      ],
+      [
+       "Basharat Ashai",
+       "Vice President, Sales, APAC and Middle East"
+      ],
+      [
+       "Arvind Kumar",
+       "Sales, Europe"
+      ],
+      [
+       "Sameer Bhuttoo",
+       "Director, Sales, Africa"
+      ],
+      [
+       "Faheem Ahmed Shaikh",
+       "Director, Solution Integration"
+      ],
+      [
+       "Vikram Damle",
+       "Director, IT"
+      ],
+      [
+       "Nishit Saurav",
+       "Director, GTAC"
+      ],
+      [
+       "Jitendra Jaware",
+       "Director, Research and Development"
+      ]
+     ],
+     "hrefs": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "kind": "people"
+    }
+   ],
+   "id": "leadership-team"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "09 · Leadership",
+ "pagination": false,
+ "url": "/company/leadership/",
+ "title": "Leadership Team | Alepo",
+ "titleMarked": "**Leadership Team** | **Alepo**",
+ "desc": "Meet the Alepo leadership team: the people who lead Alepo Technologies across product, technology, delivery, sales and support for operators worldwide.",
+ "descMarked": "Meet the **Alepo leadership team**: the people who lead Alepo Technologies across product, technology, delivery, sales and support for operators worldwide.",
+ "primary": "brand (alepo leadership)",
+ "hero": {
+  "crumbs": [
+   "Company",
+   "Leadership"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Leadership",
+  "lede": [
+   "The team that runs **Alepo**."
+  ],
+  "buttons": [],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/company/about/",
+   "/company/leadership/"
+  ]
+ }
+}

@@ -1,0 +1,139 @@
+{
+ "source": "15-blog.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Pagination: Previous · 1 · 2 · 3 · Next (plain crawlable links)"
+ ],
+ "sections": [
+  {
+   "h2": "Filtros de tema",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Todos · RADIUS y AAA · TACACS+ · Tarificación y políticas · BSS y facturación · Aprovisionamiento y dispositivos · Wi-Fi · MVNO"
+    }
+   ],
+   "id": "topic-filters",
+   "role": "filters"
+  },
+  {
+   "h2": "Publicaciones",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Tipo",
+      "Título"
+     ],
+     "rows": [
+      [
+       "RADIUS",
+       "Autenticación de dos factores RADIUS para el personal del operador y servicios empresariales"
+      ],
+      [
+       "RADIUS",
+       "Proxy RADIUS explicado"
+      ],
+      [
+       "RADIUS",
+       "Puertos RADIUS explicados: 1812, 1813, 1645, 1646 y 3799 (UDP vs. TCP)"
+      ],
+      [
+       "RADIUS",
+       "Autenticación RADIUS por MAC para CPE, ONT y decodificadores"
+      ],
+      [
+       "RADIUS",
+       "RADIUS para Wi-Fi de operador: cómo autenticar usuarios de hotspots a escala"
+      ],
+      [
+       "RADIUS",
+       "RADIUS a través de firewalls y NAT: qué puertos abrir y dónde"
+      ],
+      [
+       "RADIUS",
+       "Configuración de RADIUS para BNG y BRAS: realms, clientes y secretos compartidos"
+      ],
+      [
+       "RADIUS",
+       "RADIUS y el portal cautivo: cómo se traspasan una sesión el portal, el NAS y el AAA"
+      ]
+     ],
+     "hrefs": [
+      "https://alepo.com/blog/radius-mfa-two-factor-authentication/",
+      "https://alepo.com/blog/radius-proxy-explained/",
+      "https://alepo.com/blog/radius-ports-explained/",
+      "https://alepo.com/blog/radius-mac-authentication/",
+      "https://alepo.com/blog/radius-carrier-wifi-authentication/",
+      "https://alepo.com/blog/radius-firewall-nat-rules/",
+      "https://alepo.com/blog/radius-configuration-bng-bras/",
+      "https://alepo.com/blog/radius-captive-portal-handoff/"
+     ],
+     "kind": "posts"
+    }
+   ],
+   "id": "posts",
+   "role": "feed"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "15 · Blog",
+ "pagination": true,
+ "url": "/blog/",
+ "title": "Guías de telecom para equipos de red y BSS | Alepo",
+ "titleMarked": "**Telecom Guides** for **Network and BSS Teams** | Alepo",
+ "desc": "Guías de telecom para equipos de red y BSS: RADIUS, AAA, TACACS+, tarificación, políticas, aprovisionamiento y facturación, por ingenieros de Alepo.",
+ "descMarked": "Telecom guides for network and BSS teams: RADIUS, AAA, TACACS+, charging, policy, provisioning and billing, explained by the engineers behind Alepo's software.",
+ "primary": "none (each explainer owns its own term)",
+ "hero": {
+  "crumbs": [
+   "Recursos",
+   "Blog"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Blog",
+  "lede": [
+   "**Guías para quienes operan redes de operadores.**"
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/resources/",
+   "/blog/"
+  ]
+ },
+ "lang": "es"
+}

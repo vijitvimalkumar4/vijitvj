@@ -1,0 +1,233 @@
+{
+ "source": "33-collections-dunning.docx",
+ "notes": [
+  "Keywords are in **bold**.",
+  "Secondary keyword: **dunning telecom**"
+ ],
+ "sections": [
+  {
+   "h2": "Qué hace el software de cobranza para telecomunicaciones",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Collections and Dunning libera a su equipo del seguimiento de facturas impagas: recordatorios, cargos por mora, bloqueo y restablecimiento del servicio. Sus políticas pueden variar según el segmento."
+    },
+    {
+     "t": "p",
+     "text": "Los operadores pospago todavía persiguen las facturas impagas a mano, por lo que los recordatorios son inconsistentes, el bloqueo y el restablecimiento del servicio son manuales, y las políticas de cobranza no pueden variar según el segmento de clientes. El software de **cobranza para telecomunicaciones** convierte eso en reglas que se ejecutan solas."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Dato",
+      "Detalle"
+     ],
+     "rows": [
+      [
+       "Funciona con",
+       "Facturación y pagos. Fulfilment Manager y control de políticas, para bloquear y restablecer el servicio en la red."
+      ],
+      [
+       "Entrega",
+       "En su entorno, sobre Kubernetes, con soporte 24x7"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "También conocido como: gestión de cobranza, control de crédito, gestión de cobros, gestión de deuda, gestión de crédito"
+    }
+   ],
+   "id": "what-telecom-collections-software-does"
+  },
+  {
+   "h2": "Bloqueo y cargos por mora sin pasos manuales",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El bloqueo y los cargos por mora se aplican automáticamente por cuenta o por factura."
+    },
+    {
+     "t": "p",
+     "text": "Los recordatorios se envían según el calendario que usted defina."
+    }
+   ],
+   "id": "barring-and-late-fees-without-manual-steps"
+  },
+  {
+   "h2": "Servicio restablecido al pagar",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "El servicio se restablece automáticamente con el pago total. Nadie tiene que levantar el bloqueo a mano."
+    },
+    {
+     "t": "p",
+     "text": "Fulfilment Manager y el control de políticas llevan el cambio a la red."
+    }
+   ],
+   "id": "service-back-on-payment"
+  },
+  {
+   "h2": "Reglas distintas para cuentas empresariales y de consumo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Usted asigna a cada segmento de clientes su propia política. Una cuenta empresarial y una línea de consumo no tienen que tratarse igual."
+    },
+    {
+     "t": "p",
+     "text": "Normalmente se entrega dentro de Digital BSS."
+    }
+   ],
+   "id": "different-rules-for-business-and-consumer-accounts"
+  },
+  {
+   "h2": "Preguntas frecuentes",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "¿Qué es la gestión de cobranza en telecomunicaciones?",
+       "a": "La **gestión de cobranza en telecomunicaciones** es el proceso paso a paso de recordar a los clientes sus facturas impagas, y luego restringir y más tarde restablecer su servicio. Lea: ¿Qué es la gestión de cobranza en telecomunicaciones? →"
+      },
+      {
+       "q": "¿Se restablece el servicio automáticamente después del pago?",
+       "a": "Sí. El pago total levanta el bloqueo automáticamente mediante Fulfilment Manager y el control de políticas."
+      },
+      {
+       "q": "¿Pueden las cuentas empresariales y de consumo seguir reglas distintas?",
+       "a": "Sí. Cada segmento de clientes puede tener su propio calendario de recordatorios, sus cargos y su política de bloqueo."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Instalación de Collections and Dunning",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Su equipo instala Collections and Dunning en contenedores, de una única forma estándar, con la misma guía automatizada que todos los productos de Alepo. Las actualizaciones se mantienen pequeñas."
+    },
+    {
+     "t": "p",
+     "text": "Cuando algo necesita corregirse, el parche se aplica solo al componente afectado, con la reversión lista, por lo que su ventana de mantenimiento sigue siendo corta y no hay que actualizar nada más al mismo tiempo. Collections and Dunning se ejecuta en Kubernetes en su entorno, operado por su equipo o por Alepo, con soporte 24x7 de GTAC."
+    },
+    {
+     "t": "p",
+     "text": "La versión que usted prueba y ve en la demo es la misma que pasa a producción."
+    }
+   ],
+   "id": "installing-collections-and-dunning"
+  },
+  {
+   "h2": "Productos relacionados",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Producto",
+      "Qué hace"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "facturación convergente y gestión de ingresos, con CRM integrado"
+      ],
+      [
+       "BSS in a Box",
+       "paquete de lanzamiento para nuevos MVNO"
+      ],
+      [
+       "Online Charging",
+       "tarificación convergente en tiempo real"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/bss-in-a-box/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Solicitar una demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Cuéntenos qué opera hoy. Le mostraremos el producto en un caso como el suyo."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Solicitar una demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contactar a ventas",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "33 · Collections and Dunning",
+ "pagination": false,
+ "url": "/products/collections-dunning/",
+ "title": "Software de cobranza y gestión de mora para telecom | Alepo",
+ "titleMarked": "**Telecom Collections** and Dunning Software | Alepo",
+ "desc": "El software de cobranza telecom de Alepo automatiza avisos, recargos por mora, bloqueo y restablecimiento del servicio, con políticas por segmento.",
+ "descMarked": "Alepo **telecom collections** software automates reminders, late fees, service barring and restoration for unpaid bills, with policies by customer segment.",
+ "primary": "telecom collections",
+ "hero": {
+  "crumbs": [
+   "Productos",
+   "BSS y monetización",
+   "Collections and Dunning"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Collections and Dunning para telecomunicaciones",
+  "lede": [
+   "Cobre más de lo que se le debe, con menos esfuerzo. Los recordatorios, el bloqueo y el restablecimiento se ejecutan automáticamente para los clientes con facturas impagas."
+  ],
+  "buttons": [
+   {
+    "label": "Solicitar una demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Descripción general",
+   "Capacidades",
+   "Implementación"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/collections-dunning/"
+  ],
+  "subnavTargets": [
+   "what-telecom-collections-software-does",
+   "barring-and-late-fees-without-manual-steps",
+   "installing-collections-and-dunning"
+  ]
+ },
+ "lang": "es"
+}

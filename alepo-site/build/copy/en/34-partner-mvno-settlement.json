@@ -1,0 +1,232 @@
+{
+ "source": "34-partner-mvno-settlement.docx",
+ "notes": [
+  "Keywords are in **bold**."
+ ],
+ "sections": [
+  {
+   "h2": "What telecom wholesale billing covers",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "With Partner and MVNO Settlement, you onboard partners, rate their traffic and produce invoices and settlement reports."
+    },
+    {
+     "t": "p",
+     "text": "Today, most of them still settle with carriers and partner brands, plus resellers, in spreadsheets, where disputes, late usage records and rate changes cause revenue leakage. **Telecom wholesale billing** on one system closes those gaps."
+    },
+    {
+     "t": "table",
+     "head": [
+      "Fact",
+      "Detail"
+     ],
+     "rows": [
+      [
+       "Works with",
+       "Usage records from mediation and charging. Billing for the bill run and invoices."
+      ],
+      [
+       "Delivery",
+       "In your environment, on Kubernetes, with 24x7 support"
+      ]
+     ],
+     "kind": "facts"
+    },
+    {
+     "t": "p",
+     "text": "Also known as: **telecom partner management**, revenue share, reseller settlement, partner relationship management (PRM)"
+    }
+   ],
+   "id": "what-telecom-wholesale-billing-covers"
+  },
+  {
+   "h2": "Late usage records still billed",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Late usage records are still rated, and the adjustments are posted. Rate sheets are kept by prefix and destination, or by pulse."
+    },
+    {
+     "t": "p",
+     "text": "Rate changes no longer live in spreadsheets."
+    }
+   ],
+   "id": "late-usage-records-still-billed"
+  },
+  {
+   "h2": "Shortfalls billed automatically",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Monthly commitments and shortfall penalties are applied in the bill run."
+    },
+    {
+     "t": "p",
+     "text": "Partner brands, resellers and carriers are settled from the same records."
+    }
+   ],
+   "id": "shortfalls-billed-automatically"
+  },
+  {
+   "h2": "Interconnect invoicing",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Interconnect invoicing is included. Usage records come from mediation and charging."
+    },
+    {
+     "t": "p",
+     "text": "MVNEs and host operators use it to bill the MVNOs they carry."
+    }
+   ],
+   "id": "interconnect-invoicing"
+  },
+  {
+   "h2": "Common questions",
+   "blocks": [
+    {
+     "t": "faq",
+     "items": [
+      {
+       "q": "What is telecom wholesale billing?",
+       "a": "**Telecom wholesale billing** charges other carriers, MVNOs and resellers for the network capacity and services they use, under the rates and commitments in each agreement."
+      },
+      {
+       "q": "What is partner settlement?",
+       "a": "**Partner settlement** calculates what an operator owes each partner, and what each partner owes the operator, then produces the invoices and reports for both sides."
+      },
+      {
+       "q": "Can MVNEs use it to bill the MVNOs they host?",
+       "a": "Yes. MVNEs and host operators bill the MVNOs they carry from the same usage records."
+      }
+     ]
+    }
+   ],
+   "id": "common-questions",
+   "role": "faq"
+  },
+  {
+   "h2": "Installing Partner and MVNO Settlement",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Your team installs Partner and MVNO Settlement in containers, one standard way, from the same automated guide as every Alepo product. Upgrades stay small."
+    },
+    {
+     "t": "p",
+     "text": "When something needs fixing, the patch goes only to the component affected, with rollback ready, so your maintenance window stays short and nothing else has to be upgraded at the same time. Partner and MVNO Settlement runs on Kubernetes in your environment, operated by your team or by Alepo, with 24x7 support from GTAC."
+    },
+    {
+     "t": "p",
+     "text": "The build you test and see demoed is the build that goes live."
+    }
+   ],
+   "id": "installing-partner-and-mvno-settlement"
+  },
+  {
+   "h2": "Related products",
+   "blocks": [
+    {
+     "t": "table",
+     "head": [
+      "Product",
+      "What it does"
+     ],
+     "rows": [
+      [
+       "Digital BSS",
+       "convergent billing and revenue management, with CRM built in"
+      ],
+      [
+       "Interconnect and Roaming Settlement",
+       "carrier interconnect billing, with roaming settlement in development"
+      ],
+      [
+       "Online Charging",
+       "real-time convergent charging"
+      ]
+     ],
+     "hrefs": [
+      "/products/digital-bss/",
+      "/products/interconnect-roaming-settlement/",
+      "/products/online-charging/"
+     ],
+     "kind": "products"
+    }
+   ],
+   "id": "related-products"
+  },
+  {
+   "h2": "Request a demo",
+   "blocks": [
+    {
+     "t": "p",
+     "text": "Tell us what you run today. We'll show you the product on a case like yours."
+    },
+    {
+     "t": "buttons",
+     "items": [
+      {
+       "label": "Request a demo",
+       "to": "request-a-demo",
+       "href": "/contact-us/#demo"
+      },
+      {
+       "label": "Contact sales",
+       "href": "/contact-us/?request=sales#demo"
+      }
+     ]
+    }
+   ],
+   "id": "request-a-demo",
+   "role": "cta"
+  }
+ ],
+ "doc": "34 · Partner and MVNO Settlement",
+ "pagination": false,
+ "url": "/products/partner-mvno-settlement/",
+ "title": "Telecom Wholesale Billing and Partner Settlement | Alepo",
+ "titleMarked": "**Telecom Wholesale Billing** and **Partner Settlement** | Alepo",
+ "desc": "Alepo telecom wholesale billing onboards partners, rates their traffic and produces invoices and settlement reports, so operators settle without spreadsheets.",
+ "descMarked": "Alepo **telecom wholesale billing** onboards partners, rates their traffic and produces invoices and settlement reports, so operators settle without spreadsheets.",
+ "primary": "telecom wholesale billing",
+ "secondary": "telecom partner management, partner settlement",
+ "hero": {
+  "crumbs": [
+   "Products",
+   "BSS and monetization",
+   "Partner and MVNO Settlement"
+  ],
+  "eyebrow": null,
+  "badge": null,
+  "h1": "Partner and MVNO Settlement",
+  "lede": [
+   "Close revenue leaks in partner deals, and finish each month without spreadsheets. Onboard partners, rate their traffic and produce invoices and settlement reports, so you pay and get paid correctly."
+  ],
+  "buttons": [
+   {
+    "label": "Request a demo",
+    "to": "request-a-demo",
+    "href": "/contact-us/#demo"
+   }
+  ],
+  "subnav": [
+   "Overview",
+   "Capabilities",
+   "Deployment"
+  ],
+  "customers": null,
+  "extra": [],
+  "crumbHrefs": [
+   "/products/",
+   "/products/billing-bss/",
+   "/products/partner-mvno-settlement/"
+  ],
+  "subnavTargets": [
+   "what-telecom-wholesale-billing-covers",
+   "late-usage-records-still-billed",
+   "installing-partner-and-mvno-settlement"
+  ]
+ }
+}
